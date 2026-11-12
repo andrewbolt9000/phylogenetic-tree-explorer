@@ -91,8 +91,8 @@ test('Silhouette Assets Integration', async (t) => {
       const filepath = path.join(silhouettesDir, spec.filename);
       const stats = fs.statSync(filepath);
       
-      // Each silhouette should be less than 5KB (reasonable SVG size)
-      assert.ok(stats.size < 5000, `${spec.filename} size ${stats.size} should be less than 5KB`);
+      // PhyloPic SVGs can be quite large (up to 400KB+), but should be less than 500KB
+      assert.ok(stats.size < 500000, `${spec.filename} size ${stats.size} should be less than 500KB`);
       assert.ok(stats.size > 100, `${spec.filename} size ${stats.size} should be greater than 100 bytes`);
     });
   });

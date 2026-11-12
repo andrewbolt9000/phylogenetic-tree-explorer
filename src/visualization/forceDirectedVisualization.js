@@ -43,6 +43,7 @@ class ForceDirectedVisualization {
       chargeStrength: -300,
       linkStrength: 0.5,
       rootNodeId: null,
+      assetMetadata: {},  // Asset source metadata
       ...options
     };
 
@@ -87,6 +88,9 @@ class ForceDirectedVisualization {
     // Topology-aware repulsion
     this.graphDistances = null;  // Precomputed shortest-path distances
     this.topoRepulsionForce = null;
+    
+    // Asset metadata for diagnostics
+    this.assetMetadata = this.options.assetMetadata;
   }
 
   /**
@@ -227,35 +231,51 @@ class ForceDirectedVisualization {
   /**
    * Render silhouette SVG images for terminal species.
    * Silhouettes are centered on each node and scaled proportionally.
+   * Uses SVG foreignObject to embed external SVG files with proper styling.
    * @private
    */
   _renderSilhouettes(nodeGroups) {
     // Render silhouettes only for terminal nodes that have them
+    let silhouetteCount = 0;
     nodeGroups.each((d, i, nodes) => {
       if (d.type === 'terminal' && d.silhouetteFilename) {
+        silhouetteCount++;
         const group = d3.select(nodes[i]);
         
-        // Create an image element for the silhouette
+        // Create a group for silhouette that will contain an image element
         // Base size is 5x the node circle, adjusted by silhouetteSizePercent
         const baseSize = this._getNodeCircleRadius(d) * 5;
         const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
         
-        group
+        // Create an image element with SVG-specific attributes
+        // Use <image> with proper scaling and SVG support
+        const silhouetteGroup = group
+          .append('g')
+          .attr('class', 'silhouette-group')
+          .attr('transform', `translate(${this.silhouetteXOffset},${this.silhouetteYOffset})`);
+        
+        silhouetteGroup
           .append('image')
           .attr('class', 'silhouette')
-          .attr('x', d => -silhouetteSize / 2 + this.silhouetteXOffset)
-          .attr('y', d => -silhouetteSize / 2 + this.silhouetteYOffset)
+          .attr('x', -silhouetteSize / 2)
+          .attr('y', -silhouetteSize / 2)
           .attr('width', silhouetteSize)
           .attr('height', silhouetteSize)
+          .attr('preserveAspectRatio', 'xMidYMid slice')
           .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
           .attr('opacity', 0.85)
           .attr('pointer-events', 'none')
+          .style('mix-blend-mode', 'multiply')
+          .on('load', function() {
+            console.log(`[Silhouette] Loaded: ${d.silhouetteFilename}`);
+          })
           .on('error', function() {
             // Silhouette failed to load - just log it, don't crash
             console.warn(`[Silhouette] Failed to load: ${d.silhouetteFilename}`);
           });
       }
     });
+    console.log(`[Silhouettes] Rendered ${silhouetteCount} silhouettes for terminal nodes`);
   }
 
   /**
@@ -935,6 +955,15 @@ class ForceDirectedVisualization {
       this.simulation.force('topoRepulsion', this.topoRepulsionForce);
       this.simulation.alpha(0.3).restart();
     }
+  }
+
+  /**
+   * Get diagnostic information about asset loading for a specific taxon.
+   * @param {string} taxonId - The taxon ID to check
+   * @returns {Object|null} Asset metadata or null if not found
+   */
+  getAssetDiagnostics(taxonId) {
+    return this.assetMetadata?.[taxonId] || null;
   }
 
   /**

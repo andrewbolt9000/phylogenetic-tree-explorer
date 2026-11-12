@@ -242,6 +242,11 @@
       line-height: 1.5;
       margin-top: 8px;
     }
+
+    /* Silhouette image styling */
+    image.silhouette {
+      filter: drop-shadow(0 0 1px rgba(0, 0, 0, 0.3));
+    }
   </style>
 </head>
 <body>
@@ -506,23 +511,37 @@
 
         const graph = graphBuilder.build(taxonomyData.taxa);
 
-        // Load silhouette mapping and create reverse lookup (taxonId -> filename)
+        // Load production silhouette manifest with PhyloPic metadata
         let silhouetteMappingByTaxonId = {};
+        let silhouetteMetadata = {};  // Metadata for each taxonId
         try {
-          const silhouetteResponse = await fetch('./assets/silhouettes/SILHOUETTE_MAPPING.json');
-          const silhouetteData = await silhouetteResponse.json();
+          const manifestResponse = await fetch('./assets/silhouettes/PRODUCTION_MANIFEST.json');
+          const manifestData = await manifestResponse.json();
           
-          // Create reverse mapping: taxonomyId -> filename
-          if (silhouetteData.silhouetteMappings) {
-            for (const [key, mapping] of Object.entries(silhouetteData.silhouetteMappings)) {
+          // Create reverse mapping: taxonomyId -> filename, plus metadata
+          if (manifestData.silhouetteMappings) {
+            for (const [key, mapping] of Object.entries(manifestData.silhouetteMappings)) {
               if (mapping.taxonomyId && mapping.filename) {
                 silhouetteMappingByTaxonId[mapping.taxonomyId] = mapping.filename;
+                
+                // Store metadata for diagnostic display
+                silhouetteMetadata[mapping.taxonomyId] = {
+                  commonName: mapping.commonName,
+                  filename: mapping.filename,
+                  status: mapping.status || 'PHYLOPIC',
+                  reason: mapping.reason,
+                  taxonomicLevel: mapping.phylopicSource?.taxonomicLevel || 'unknown',
+                  contributor: mapping.phylopicSource?.contributor || 'unknown',
+                  license: mapping.phylopicSource?.license?.title || 'unknown',
+                  phylopicUrl: mapping.phylopicSource?.phylopicUrl || null,
+                  fileSizeBytes: mapping.phylopicSource?.fileSizeBytes || 0
+                };
               }
             }
           }
-          console.log('[PhyloExplorer] Silhouette mapping loaded, taxa with silhouettes:', Object.keys(silhouetteMappingByTaxonId).length);
+          console.log('[PhyloExplorer] Production manifest loaded, assets available:', manifestData.speciesWithAssets, '/ 21');
         } catch (e) {
-          console.warn('[PhyloExplorer] Silhouette mapping could not be loaded:', e.message);
+          console.warn('[PhyloExplorer] Production manifest could not be loaded:', e.message);
         }
 
         // Create visualization adapter with silhouette mapping
@@ -533,10 +552,45 @@
         const viz = new ForceDirectedVisualization('graph', nodes, links, {
           width: document.getElementById('graph').clientWidth,
           height: document.getElementById('graph').clientHeight,
-          rootNodeId: hypothesisData.rootNodeId
+          rootNodeId: hypothesisData.rootNodeId,
+          assetMetadata: silhouetteMetadata  // Pass asset metadata for diagnostics
         });
 
         viz.render();
+
+        // Diagnostic: Report on asset loading
+        console.log('\n=== PhyloExplorer Asset Loading Diagnostic ===');
+        console.log(`Total terminal species: ${adapter.getTerminalCount()}`);
+        
+        let assetsWithPhylo = 0;
+        let assetsMissing = 0;
+        
+        nodes.forEach(node => {
+          if (node.type === 'terminal') {
+            const metadata = silhouetteMetadata[node.taxonId];
+            if (metadata) {
+              if (metadata.status === 'MISSING') {
+                console.log(`  ✗ ${metadata.commonName} - ${metadata.reason}`);
+                assetsMissing++;
+              } else {
+                console.log(`  ✓ ${metadata.commonName} (${metadata.taxonomicLevel}) - ${(metadata.fileSizeBytes / 1024).toFixed(1)} KB`);
+                assetsWithPhylo++;
+              }
+            }
+          }
+        });
+        
+        console.log(`\nAssets with PhyloPic sources: ${assetsWithPhylo}/${adapter.getTerminalCount()}`);
+        console.log(`Assets missing: ${assetsMissing}/${adapter.getTerminalCount()}`);
+        
+        // Store for runtime checking
+        window.phyloExplorerAssets = {
+          metadata: silhouetteMetadata,
+          manifest: silhouetteMappingByTaxonId,
+          nodes: nodes
+        };
+        console.log('Asset metadata available at: window.phyloExplorerAssets');
+        console.log('==============================================\n');
 
         // Update statistics
         document.getElementById('species-count').textContent = adapter.getTerminalCount();

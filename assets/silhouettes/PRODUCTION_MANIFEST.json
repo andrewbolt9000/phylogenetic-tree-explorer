@@ -1,0 +1,377 @@
+{
+  "version": "2.0",
+  "description": "Production silhouette assets with PhyloPic metadata",
+  "totalSpecies": 21,
+  "speciesWithAssets": 18,
+  "speciesMissing": 3,
+  "generatedAt": "2024-11-11",
+  "silhouetteMappings": {
+    "homo-sapiens": {
+      "taxonomyId": "tax_homo_sapiens",
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "filename": "homo-sapiens.svg",
+      "phylopicSource": {
+        "imageUuid": "9c6af553-390c-4bdd-baeb-6992cbc540b1",
+        "phylopicUrl": "https://www.phylopic.org/images/9c6af553-390c-4bdd-baeb-6992cbc540b1",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 422050
+      }
+    },
+    "pan-troglodytes": {
+      "taxonomyId": "tax_pan_troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Common Chimpanzee",
+      "filename": "pan-troglodytes.svg",
+      "status": "MISSING",
+      "reason": "No PhyloPic SVG available (PNG-only or not found)"
+    },
+    "pan-paniscus": {
+      "taxonomyId": "tax_pan_paniscus",
+      "scientificName": "Pan paniscus",
+      "commonName": "Bonobo",
+      "filename": "pan-paniscus.svg",
+      "phylopicSource": {
+        "imageUuid": "9cc16c5e-cba4-43ce-93d2-0e042139dcd2",
+        "phylopicUrl": "https://www.phylopic.org/images/9cc16c5e-cba4-43ce-93d2-0e042139dcd2",
+        "taxonomicLevel": "species",
+        "contributor": "Guillaume Dera",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 8906
+      }
+    },
+    "gorilla-gorilla": {
+      "taxonomyId": "tax_gorilla_gorilla",
+      "scientificName": "Gorilla gorilla",
+      "commonName": "Western Lowland Gorilla",
+      "filename": "gorilla-gorilla.svg",
+      "phylopicSource": {
+        "imageUuid": "d9af529d-e426-4c7a-922a-562d57a7872e",
+        "phylopicUrl": "https://www.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 91492
+      }
+    },
+    "pongo-pygmaeus": {
+      "taxonomyId": "tax_pongo_pygmaeus",
+      "scientificName": "Pongo pygmaeus",
+      "commonName": "Bornean Orangutan",
+      "filename": "pongo-pygmaeus.svg",
+      "phylopicSource": {
+        "imageUuid": "63c557ce-d82c-42e6-a26a-a9f0f05c2c18",
+        "phylopicUrl": "https://www.phylopic.org/images/63c557ce-d82c-42e6-a26a-a9f0f05c2c18",
+        "taxonomicLevel": "species",
+        "contributor": "Gareth Monger",
+        "license": {
+          "title": "CC-BY",
+          "url": "https://creativecommons.org/licenses/by/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 7030
+      }
+    },
+    "macaca-mulatta": {
+      "taxonomyId": "tax_macaca_mulatta",
+      "scientificName": "Macaca mulatta",
+      "commonName": "Rhesus Macaque",
+      "filename": "macaca-mulatta.svg",
+      "phylopicSource": {
+        "imageUuid": "4e9c5666-79cc-4766-a7d3-d547514b0d77",
+        "phylopicUrl": "https://www.phylopic.org/images/4e9c5666-79cc-4766-a7d3-d547514b0d77",
+        "taxonomicLevel": "species",
+        "contributor": "Matthew Schmitz",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 7387
+      }
+    },
+    "mus-musculus": {
+      "taxonomyId": "tax_mus_musculus",
+      "scientificName": "Mus musculus",
+      "commonName": "House Mouse",
+      "filename": "mus-musculus.svg",
+      "phylopicSource": {
+        "imageUuid": "0f6af3d8-49d2-4d75-8edf-08598387afde",
+        "phylopicUrl": "https://www.phylopic.org/images/0f6af3d8-49d2-4d75-8edf-08598387afde",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "Unknown",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 29421
+      }
+    },
+    "rattus-norvegicus": {
+      "taxonomyId": "tax_rattus_norvegicus",
+      "scientificName": "Rattus norvegicus",
+      "commonName": "Brown Rat",
+      "filename": "rattus-norvegicus.svg",
+      "phylopicSource": {
+        "imageUuid": "43bb7956-1630-4ef4-928e-f129c5722f20",
+        "phylopicUrl": "https://www.phylopic.org/images/43bb7956-1630-4ef4-928e-f129c5722f20",
+        "taxonomicLevel": "species",
+        "contributor": "Mozillian",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 15181
+      }
+    },
+    "canis-lupus": {
+      "taxonomyId": "tax_canis_lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray Wolf",
+      "filename": "canis-lupus.svg",
+      "phylopicSource": {
+        "imageUuid": "171a1fd1-797b-404c-b942-604cc2c508af",
+        "phylopicUrl": "https://www.phylopic.org/images/171a1fd1-797b-404c-b942-604cc2c508af",
+        "taxonomicLevel": "species",
+        "contributor": "Richard Rich",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 27718
+      }
+    },
+    "felis-catus": {
+      "taxonomyId": "tax_felis_catus",
+      "scientificName": "Felis catus",
+      "commonName": "Domestic Cat",
+      "filename": "felis-catus.svg",
+      "phylopicSource": {
+        "imageUuid": "08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+        "phylopicUrl": "https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+        "taxonomicLevel": "species",
+        "contributor": "Margot Michaud",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 15113
+      }
+    },
+    "panthera-leo": {
+      "taxonomyId": "tax_panthera_leo",
+      "scientificName": "Panthera leo",
+      "commonName": "Lion",
+      "filename": "panthera-leo.svg",
+      "phylopicSource": {
+        "imageUuid": "5e900306-3a5e-4193-8a94-74cc765f0aaf",
+        "phylopicUrl": "https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "Unknown",
+          "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 5121
+      }
+    },
+    "panthera-pardus": {
+      "taxonomyId": "tax_panthera_pardus",
+      "scientificName": "Panthera pardus",
+      "commonName": "Leopard",
+      "filename": "panthera-pardus.svg",
+      "phylopicSource": {
+        "imageUuid": "5e900306-3a5e-4193-8a94-74cc765f0aaf",
+        "phylopicUrl": "https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "Unknown",
+          "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 5121
+      }
+    },
+    "balaenoptera-musculus": {
+      "taxonomyId": "tax_balaenoptera_musculus",
+      "scientificName": "Balaenoptera musculus",
+      "commonName": "Blue Whale",
+      "filename": "balaenoptera-musculus.svg",
+      "phylopicSource": {
+        "imageUuid": "16969246-31e0-48e3-90ff-cad9a8746073",
+        "phylopicUrl": "https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "Unknown",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 6042
+      }
+    },
+    "tursiops-truncatus": {
+      "taxonomyId": "tax_tursiops_truncatus",
+      "scientificName": "Tursiops truncatus",
+      "commonName": "Bottlenose Dolphin",
+      "filename": "tursiops-truncatus.svg",
+      "phylopicSource": {
+        "imageUuid": "0b5c6b41-3a44-4c9e-869a-63ed54bf7c65",
+        "phylopicUrl": "https://www.phylopic.org/images/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65",
+        "taxonomicLevel": "species",
+        "contributor": "T. Michael Keesey",
+        "license": {
+          "title": "Unknown",
+          "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 4757
+      }
+    },
+    "cervus-elaphus": {
+      "taxonomyId": "tax_cervus_elaphus",
+      "scientificName": "Cervus elaphus",
+      "commonName": "Red Deer",
+      "filename": "cervus-elaphus.svg",
+      "phylopicSource": {
+        "imageUuid": "61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9",
+        "phylopicUrl": "https://www.phylopic.org/images/61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9",
+        "taxonomicLevel": "species",
+        "contributor": "Abby Weber",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 5665
+      }
+    },
+    "bos-taurus": {
+      "taxonomyId": "tax_bos_taurus",
+      "scientificName": "Bos taurus",
+      "commonName": "Domestic Cattle",
+      "filename": "bos-taurus.svg",
+      "status": "MISSING",
+      "reason": "No PhyloPic SVG available (PNG-only or not found)"
+    },
+    "artibeus-lituratus": {
+      "taxonomyId": "tax_artibeus_lituratus",
+      "scientificName": "Artibeus lituratus",
+      "commonName": "Great Fruit Bat",
+      "filename": "artibeus-lituratus.svg",
+      "phylopicSource": {
+        "imageUuid": "5024b63d-e684-45bf-8638-dbf863f43e35",
+        "phylopicUrl": "https://www.phylopic.org/images/5024b63d-e684-45bf-8638-dbf863f43e35",
+        "taxonomicLevel": "species",
+        "contributor": "Jorge D. Carballo Morales",
+        "license": {
+          "title": "CC-BY",
+          "url": "https://creativecommons.org/licenses/by/4.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 3580
+      }
+    },
+    "macropus-rufus": {
+      "taxonomyId": "tax_macropus_rufus",
+      "scientificName": "Macropus rufus",
+      "commonName": "Red Kangaroo",
+      "filename": "macropus-rufus.svg",
+      "phylopicSource": {
+        "imageUuid": "87ffd414-da20-4692-8e7b-2407e060904d",
+        "phylopicUrl": "https://www.phylopic.org/images/87ffd414-da20-4692-8e7b-2407e060904d",
+        "taxonomicLevel": "species",
+        "contributor": "Pascal Abel",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 225083
+      }
+    },
+    "phalanger-orientalis": {
+      "taxonomyId": "tax_phalanger_orientalis",
+      "scientificName": "Phalanger orientalis",
+      "commonName": "Common Cuscus",
+      "filename": "phalanger-orientalis.svg",
+      "status": "MISSING",
+      "reason": "No PhyloPic SVG available (PNG-only or not found)"
+    },
+    "ornithorhynchus-anatinus": {
+      "taxonomyId": "tax_ornithorhynchus_anatinus",
+      "scientificName": "Ornithorhynchus anatinus",
+      "commonName": "Platypus",
+      "filename": "ornithorhynchus-anatinus.svg",
+      "phylopicSource": {
+        "imageUuid": "162021b6-349b-4a64-906f-33d4a191b30e",
+        "phylopicUrl": "https://www.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e",
+        "taxonomicLevel": "species",
+        "contributor": "Rachel T Mason",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 6647
+      }
+    },
+    "sciurus-vulgaris": {
+      "taxonomyId": "tax_sciurus_vulgaris",
+      "scientificName": "Sciurus vulgaris",
+      "commonName": "Red Squirrel",
+      "filename": "sciurus-vulgaris.svg",
+      "phylopicSource": {
+        "imageUuid": "23c700c9-e695-404a-8d0c-146e1fc4bada",
+        "phylopicUrl": "https://www.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada",
+        "taxonomicLevel": "species",
+        "contributor": "Ferran Sayol",
+        "license": {
+          "title": "CC0 1.0 / Public Domain",
+          "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+          "has_restrictions": false,
+          "restrictions": []
+        },
+        "fileSizeBytes": 7805
+      }
+    }
+  },
+  "assetSources": {}
+}
