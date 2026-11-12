@@ -102,30 +102,48 @@ class SettingsUI {
       'show-ancestral-labels-toggle': { setting: 'showAncestralLabels', transform: v => v.checked, isToggle: true },
     };
     
+    let wiredCount = 0;
+    let skippedCount = 0;
+    
     Object.entries(controlMap).forEach(([elementId, config]) => {
       const element = document.getElementById(elementId);
       if (!element) {
         // Control doesn't exist in this version - skip it
+        skippedCount++;
         return;
       }
       
+      wiredCount++;
+      
       // Wire control to settings
       element.addEventListener('input', (e) => {
-        this.updatingUI = true;
-        const value = config.transform(e.target);
-        this.settings.setSetting(config.setting, value);
-        this.updatingUI = false;
-        
-        // Update display if this control has a value display
-        if (config.display) {
-          const displayElement = document.getElementById(config.display);
-          if (displayElement) {
-            const displayValue = config.suffix ? value + config.suffix : value;
-            displayElement.textContent = displayValue;
+        try {
+          this.updatingUI = true;
+          const value = config.transform(e.target);
+          this.settings.setSetting(config.setting, value);
+          this.updatingUI = false;
+          
+          // Update display if this control has a value display
+          if (config.display) {
+            const displayElement = document.getElementById(config.display);
+            if (displayElement) {
+              // For display, use the raw slider value (not the transformed value)
+              // This ensures users see "300" not "-300" for charge
+              let displayValue = e.target.value;
+              if (config.suffix) {
+                displayValue = displayValue + config.suffix;
+              }
+              displayElement.textContent = displayValue;
+            }
           }
+        } catch (error) {
+          console.error(`[SettingsUI] Error handling control '${elementId}':`, error);
+          this.updatingUI = false;
         }
       });
     });
+    
+    console.log(`[SettingsUI] Wired ${wiredCount} controls, skipped ${skippedCount} missing controls`);
   }
 
   /**

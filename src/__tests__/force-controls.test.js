@@ -38,15 +38,17 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(html.includes('Topology Strength'), 'Topology Strength (X) label present');
   });
 
-  // Test 3: Verify initialization code syncs slider with force
-  await t.test('HTML initialization code synchronizes charge slider with visualization', () => {
-    const htmlPath = path.join(process.cwd(), 'index.html');
-    const html = fs.readFileSync(htmlPath, 'utf8');
+  // Test 3: Verify SettingsUI wires controls correctly
+  await t.test('SettingsUI wires all controls to settings', () => {
+    const uiPath = path.join(process.cwd(), 'src/ui/SettingsUI.js');
+    const code = fs.readFileSync(uiPath, 'utf8');
     
-    // Check that initialization code exists to set initial charge strength
-    assert.ok(html.includes('initialChargeValue'), 'Initialization reads slider value');
-    assert.ok(html.includes('setChargeStrength'), 'Initialization calls setChargeStrength');
-    assert.ok(html.includes('initialChargeD3Value'), 'Initialization maps UI value to D3 value');
+    // Check that control wiring happens
+    assert.ok(code.includes('_wireControls'), 'SettingsUI has _wireControls method');
+    assert.ok(code.includes('charge-slider'), 'charge-slider is wired');
+    assert.ok(code.includes('link-slider'), 'link-slider is wired');
+    assert.ok(code.includes("'input'"), 'Input events are handled');
+    assert.ok(code.includes('settings.setSetting'), 'Settings are updated');
   });
 
   // Test 4: Verify topology repulsion A/B/X initialization

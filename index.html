@@ -696,74 +696,32 @@
 
         // Setup controls
         // Note: SettingsUI.initialize() (called above) already wired all controls
-        // including topology repulsion A/B/X sliders, charge, link, and appearance controls.
-        // We just need references for manual initialization of forces before SettingsUI applies them.
-        const chargeSlider = document.getElementById('charge-slider');
-        const linkSlider = document.getElementById('link-slider');
+        // including topology repulsion A/B/X sliders, charge, link, appearance, and silhouette controls.
+        // All settings updates go through SettingsUI -> VisualizationSettings -> onChange callbacks.
         const resetButton = document.getElementById('reset-button');
+        if (resetButton) {
+          resetButton.addEventListener('click', () => {
+            viz.resetView();
+          });
+        }
 
-        // Initialize charge strength to match the slider's current value
-        // This prevents a jump when the user first touches the slider
-        const initialChargeValue = parseInt(chargeSlider.value);
-        const initialChargeD3Value = initialChargeValue === 0 ? 0 : -initialChargeValue;
-        viz.setChargeStrength(initialChargeD3Value);
-
-        // Initialize link strength to match the slider's current value
-        const initialLinkValue = parseFloat(linkSlider.value);
-        viz.setLinkStrength(initialLinkValue);
-
-        // Note: Topology repulsion A/B/X parameters are now initialized by SettingsUI
-        // which loads defaults from config/default-settings.yaml and wires the three new A/B/X sliders.
-
-        // Appearance control sliders
-        const edgeThicknessSlider = document.getElementById('edge-thickness-slider');
-        const nodeCircleSlider = document.getElementById('node-circle-slider');
-        const fontSizeSlider = document.getElementById('font-size-slider');
-
-        edgeThicknessSlider.addEventListener('input', (e) => {
-          const value = parseFloat(e.target.value);
-          document.getElementById('edge-thickness-value').textContent = value.toFixed(2);
-          viz.setEdgeThickness(value);
-        });
-
-        nodeCircleSlider.addEventListener('input', (e) => {
-          const value = parseFloat(e.target.value);
-          document.getElementById('node-circle-value').textContent = value.toFixed(1);
-          viz.setNodeCircleSize(value);
-        });
-
-        fontSizeSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('font-size-value').textContent = value + 'px';
-          viz.setGraphFontSize(value);
-        });
-
-        // Sidebar font size slider
-        const sidebarFontSizeSlider = document.getElementById('sidebar-font-size-slider');
-        sidebarFontSizeSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('sidebar-font-size-value').textContent = value + 'px';
-          document.documentElement.style.setProperty('--sidebar-font-size', value + 'px');
-        });
-
-        // Note: Silhouette controls are wired through SettingsUI and do not need manual event listeners.
-        // Changes to silhouette size, position, opacity, and grayscale are handled automatically.
-
-        // Show node dates toggle
+        // Show node dates toggle (requires divergenceData)
         const showNodeDatesToggle = document.getElementById('show-node-dates-toggle');
-        showNodeDatesToggle.addEventListener('input', (e) => {
-          viz.setShowNodeDates(e.target.checked, divergenceData);
-        });
+        if (showNodeDatesToggle) {
+          showNodeDatesToggle.addEventListener('input', (e) => {
+            settings.setSetting('showNodeDates', e.target.checked);
+            viz.setShowNodeDates(e.target.checked, divergenceData);
+          });
+        }
 
-        // Show ancestral labels toggle
+        // Show ancestral labels toggle (requires hypothesisData and graph)
         const showAncestralLabelsToggle = document.getElementById('show-ancestral-labels-toggle');
-        showAncestralLabelsToggle.addEventListener('input', (e) => {
-          viz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
-        });
-
-        resetButton.addEventListener('click', () => {
-          viz.resetView();
-        });
+        if (showAncestralLabelsToggle) {
+          showAncestralLabelsToggle.addEventListener('input', (e) => {
+            settings.setSetting('showAncestralLabels', e.target.checked);
+            viz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
+          });
+        }
 
         // Handle window resize
         window.addEventListener('resize', () => {
