@@ -263,7 +263,7 @@ class ForceDirectedVisualization {
           .attr('y', -silhouetteSize / 2)
           .attr('width', silhouetteSize)
           .attr('height', silhouetteSize)
-          .attr('preserveAspectRatio', 'xMidYMid slice')
+          .attr('preserveAspectRatio', 'xMidYMid meet')
           .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
           .attr('opacity', 0.85)
           .attr('pointer-events', 'none')
