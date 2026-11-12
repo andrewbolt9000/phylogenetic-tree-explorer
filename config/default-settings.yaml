@@ -1,0 +1,45 @@
+# PhyloExplorer Default Visualization Settings
+# Version: 1.0
+# This file is loaded when the application starts.
+# Users can export and import their own settings using the UI controls.
+
+# FORCES
+# Controls for node repulsion, edge stiffness, and topology-aware forces
+
+charge: 300  # Repulsion strength (0-1500)
+linkStrength: 0.50  # Link stiffness (0-1)
+
+# Topology repulsion equation: F_topology = B * (A + X) / D
+# Where D is shortest-path graph distance, X is the master control
+topologyRepulsionX: 0  # Master control; 0 disables all topology repulsion (0-200)
+topologyRepulsionA: 1  # Baseline/offset parameter (0-10)
+topologyRepulsionB: 1  # Force scale multiplier (0-10)
+
+edgeElasticityC: 0  # Root elasticity adjustment (0-10)
+
+# APPEARANCE
+# Controls for visual styling of edges, nodes, and text
+
+edgeThickness: 1.5  # Stroke width of phylogenetic edges (0.5-3)
+nodeCircleSize: 1.0  # Radius multiplier for node background circles (0.5-2)
+graphFontSize: 11  # Font size for node labels (8-20px)
+sidebarFontSize: 14  # Font size for sidebar controls (10-20px)
+
+# Root proximity weighting equation: W_edge = W_base * (1 + S * (1 - d / D_max))
+# Where d is depth, D_max is maximum depth
+rootProximityWeighting: 0  # Edge thickness weighting near root (0-1)
+
+# SILHOUETTES
+# Controls for animal silhouette appearance
+
+silhouetteSizePercent: 100  # Size relative to default (30-300%)
+silhouetteXOffset: 0  # Horizontal offset in pixels (-50 to 50)
+silhouetteYOffset: 0  # Vertical offset in pixels (-50 to 50)
+silhouetteGrayscale: 50  # Grayscale amount (0=black, 50=gray, 100=white)
+silhouetteOpacity: 1.0  # Opacity (0-1)
+
+# TOGGLES
+# Enable or disable optional features
+
+showNodeDates: false  # Display divergence age estimates
+showAncestralLabels: false  # Display clade names on ancestral nodes
