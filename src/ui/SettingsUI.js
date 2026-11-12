@@ -8,6 +8,8 @@
  * - Handle YAML import/export
  */
 
+import { VisualizationSettings } from '../settings/VisualizationSettings.js';
+
 class SettingsUI {
   constructor(settings, visualization) {
     this.settings = settings;  // VisualizationSettings instance
@@ -53,7 +55,7 @@ class SettingsUI {
       }
       
       const yamlText = await response.text();
-      const defaultSettings = this.settings.parseYAML(yamlText);
+      const defaultSettings = VisualizationSettings.parseYAML(yamlText);
       
       // Apply defaults (but don't overwrite any user-provided settings)
       Object.entries(defaultSettings).forEach(([key, value]) => {
