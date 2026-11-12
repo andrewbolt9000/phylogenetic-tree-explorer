@@ -1,0 +1,1322 @@
+{
+  "timestamp": "2026-11-12T03:15:23Z",
+  "build": "562",
+  "total_species": 21,
+  "found": 20,
+  "not_found": 1,
+  "taxa": {
+    "Homo sapiens": {
+      "common_name": "Human",
+      "scientific_name": "Homo sapiens",
+      "candidates": [
+        {
+          "uuid": "9c6af553-390c-4bdd-baeb-6992cbc540b1",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/9c6af553-390c-4bdd-baeb-6992cbc540b1/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/9c6af553-390c-4bdd-baeb-6992cbc540b1",
+          "specific_node": "Homo rhodesiensis rhodesiensis",
+          "general_node": "Homo (sapiens)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "f36c3c31-8b66-4413-a39f-a2b2b422e7ff",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/f36c3c31-8b66-4413-a39f-a2b2b422e7ff/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/f36c3c31-8b66-4413-a39f-a2b2b422e7ff",
+          "specific_node": "Homo antecessor",
+          "general_node": "Homo (sapiens)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "f46f28c7-b3da-485e-9af0-9839b63138e0",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/f46f28c7-b3da-485e-9af0-9839b63138e0/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/f46f28c7-b3da-485e-9af0-9839b63138e0",
+          "specific_node": "Homo longi",
+          "general_node": "Homo (sapiens)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "f46f28c7-b3da-485e-9af0-9839b63138e0.svg",
+          "file_size": 7424
+        },
+        {
+          "uuid": "1e3a5ba7-aeef-458e-9f08-cb10d3c896b8",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/1e3a5ba7-aeef-458e-9f08-cb10d3c896b8/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/1e3a5ba7-aeef-458e-9f08-cb10d3c896b8",
+          "specific_node": "Homo neanderthalensis neanderthalensis",
+          "general_node": "Homo neanderthalensis",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "312a3222-7e8d-4fe0-91e7-2923dde20389",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/312a3222-7e8d-4fe0-91e7-2923dde20389/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/312a3222-7e8d-4fe0-91e7-2923dde20389",
+          "specific_node": "Homo neanderthalensis neanderthalensis",
+          "general_node": "Homo neanderthalensis",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Pan troglodytes": {
+      "common_name": "Common Chimpanzee",
+      "scientific_name": "Pan troglodytes",
+      "candidates": [
+        {
+          "uuid": "34f93016-ee49-428c-8504-c7c4739232bc",
+          "title": "Untitled",
+          "contributor": "Kai Caspar",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/34f93016-ee49-428c-8504-c7c4739232bc/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/34f93016-ee49-428c-8504-c7c4739232bc",
+          "specific_node": "Pan troglodytes",
+          "general_node": "Pan",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Pan paniscus": {
+      "common_name": "Bonobo",
+      "scientific_name": "Pan paniscus",
+      "candidates": [
+        {
+          "uuid": "9cc16c5e-cba4-43ce-93d2-0e042139dcd2",
+          "title": "Untitled",
+          "contributor": "Guillaume Dera",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/9cc16c5e-cba4-43ce-93d2-0e042139dcd2/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/9cc16c5e-cba4-43ce-93d2-0e042139dcd2",
+          "specific_node": "Pan paniscus",
+          "general_node": "Pan",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "9cc16c5e-cba4-43ce-93d2-0e042139dcd2.svg",
+          "file_size": 8906
+        },
+        {
+          "uuid": "f06b4dd0-094e-4f37-9105-25fdb4eb1b02",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/f06b4dd0-094e-4f37-9105-25fdb4eb1b02/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/f06b4dd0-094e-4f37-9105-25fdb4eb1b02",
+          "specific_node": "Pan paniscus",
+          "general_node": "Pan",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Gorilla gorilla": {
+      "common_name": "Western Lowland Gorilla",
+      "scientific_name": "Gorilla gorilla",
+      "candidates": [
+        {
+          "uuid": "142e0571-3b5f-443d-a887-b572a224ea22",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/142e0571-3b5f-443d-a887-b572a224ea22/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/142e0571-3b5f-443d-a887-b572a224ea22",
+          "specific_node": "Gorilla gorilla",
+          "general_node": "Gorilla",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "d9af529d-e426-4c7a-922a-562d57a7872e",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e",
+          "specific_node": "Gorilla gorilla gorilla",
+          "general_node": "Gorilla",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "dd10acd5-fef8-41b4-b7af-fd8f651cc8b3",
+          "title": "Untitled",
+          "contributor": "Andy Wilson",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/dd10acd5-fef8-41b4-b7af-fd8f651cc8b3/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/dd10acd5-fef8-41b4-b7af-fd8f651cc8b3",
+          "specific_node": "Gorilla gorilla",
+          "general_node": "Gorilla",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "dd10acd5-fef8-41b4-b7af-fd8f651cc8b3.svg",
+          "file_size": 19884
+        },
+        {
+          "uuid": "f9bb81be-bd1e-4513-a92e-2cee296fb357",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/f9bb81be-bd1e-4513-a92e-2cee296fb357/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/f9bb81be-bd1e-4513-a92e-2cee296fb357",
+          "specific_node": "Gorilla gorilla",
+          "general_node": "Gorilla",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Pongo pygmaeus": {
+      "common_name": "Bornean Orangutan",
+      "scientific_name": "Pongo pygmaeus",
+      "candidates": [
+        {
+          "uuid": "63c557ce-d82c-42e6-a26a-a9f0f05c2c18",
+          "title": "Untitled",
+          "contributor": "Gareth Monger",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/63c557ce-d82c-42e6-a26a-a9f0f05c2c18/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/63c557ce-d82c-42e6-a26a-a9f0f05c2c18",
+          "specific_node": "Pongo pygmaeus",
+          "general_node": "Pongini",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "63c557ce-d82c-42e6-a26a-a9f0f05c2c18.svg",
+          "file_size": 7030
+        },
+        {
+          "uuid": "2f701a27-2f0b-4a97-9caa-206251edfe90",
+          "title": "Untitled",
+          "contributor": "Rowan Sherwood",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90",
+          "specific_node": "Pongo pygmaeus",
+          "general_node": "Pongo",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "2f701a27-2f0b-4a97-9caa-206251edfe90.svg",
+          "file_size": 9118
+        },
+        {
+          "uuid": "4a27dce0-012a-41ec-b831-a46e88108f3e",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/4a27dce0-012a-41ec-b831-a46e88108f3e/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/4a27dce0-012a-41ec-b831-a46e88108f3e",
+          "specific_node": "Pongo pygmaeus",
+          "general_node": "Pongo",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "4a27dce0-012a-41ec-b831-a46e88108f3e.svg",
+          "file_size": 12587
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Macaca mulatta": {
+      "common_name": "Rhesus Macaque",
+      "scientific_name": "Macaca mulatta",
+      "candidates": [
+        {
+          "uuid": "4e9c5666-79cc-4766-a7d3-d547514b0d77",
+          "title": "Untitled",
+          "contributor": "Matthew Schmitz",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/4e9c5666-79cc-4766-a7d3-d547514b0d77/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/4e9c5666-79cc-4766-a7d3-d547514b0d77",
+          "specific_node": "Macaca mulatta",
+          "general_node": "Cercopithecidae",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "4e9c5666-79cc-4766-a7d3-d547514b0d77.svg",
+          "file_size": 7387
+        },
+        {
+          "uuid": "63169c26-e130-4f3b-8c34-02ec8b0862c7",
+          "title": "Untitled",
+          "contributor": "Ben Murrell",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/63169c26-e130-4f3b-8c34-02ec8b0862c7/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/63169c26-e130-4f3b-8c34-02ec8b0862c7",
+          "specific_node": "Macaca mulatta",
+          "general_node": "Cercopithecidae",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "63169c26-e130-4f3b-8c34-02ec8b0862c7.svg",
+          "file_size": 8148
+        },
+        {
+          "uuid": "eedde61f-3402-4f7c-9350-49b74f5e1dba",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba",
+          "specific_node": "Macaca mulatta",
+          "general_node": "Cercopithecidae",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Sciurus vulgaris": {
+      "common_name": "Red Squirrel",
+      "scientific_name": "Sciurus vulgaris",
+      "candidates": [
+        {
+          "uuid": "23c700c9-e695-404a-8d0c-146e1fc4bada",
+          "title": "Untitled",
+          "contributor": "Ferran Sayol",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada",
+          "specific_node": "Sciurus vulgaris",
+          "general_node": "tree squirrels",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Mus musculus": {
+      "common_name": "House Mouse",
+      "scientific_name": "Mus musculus",
+      "candidates": [
+        {
+          "uuid": "0f6af3d8-49d2-4d75-8edf-08598387afde",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/0f6af3d8-49d2-4d75-8edf-08598387afde/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/0f6af3d8-49d2-4d75-8edf-08598387afde",
+          "specific_node": "Mus musculus domesticus",
+          "general_node": "Murini",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "36dc0476-ae7d-49ed-85c4-220139930bfc",
+          "title": "Untitled",
+          "contributor": "Cagri CEVRIM",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/36dc0476-ae7d-49ed-85c4-220139930bfc/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/36dc0476-ae7d-49ed-85c4-220139930bfc",
+          "specific_node": "Mus musculus",
+          "general_node": "Murini",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "36dc0476-ae7d-49ed-85c4-220139930bfc.svg",
+          "file_size": 4342
+        },
+        {
+          "uuid": "6b2b98f6-f879-445f-9ac2-2c2563157025",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/mark/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/6b2b98f6-f879-445f-9ac2-2c2563157025/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/6b2b98f6-f879-445f-9ac2-2c2563157025",
+          "specific_node": "Mus musculus domesticus",
+          "general_node": "Murini",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "92989e35-4e68-4a2d-b3a2-191ba9da671a",
+          "title": "Untitled",
+          "contributor": "Kamil S. Jaron",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/92989e35-4e68-4a2d-b3a2-191ba9da671a/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/92989e35-4e68-4a2d-b3a2-191ba9da671a",
+          "specific_node": "Mus musculus",
+          "general_node": "Murini",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "b1e0d893-a8e2-48e9-9850-4045d29ec2be",
+          "title": "Untitled",
+          "contributor": "Arcadia Science",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/b1e0d893-a8e2-48e9-9850-4045d29ec2be/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/b1e0d893-a8e2-48e9-9850-4045d29ec2be",
+          "specific_node": "Mus musculus",
+          "general_node": "Murini",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "b1e0d893-a8e2-48e9-9850-4045d29ec2be.svg",
+          "file_size": 2336
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Rattus norvegicus": {
+      "common_name": "Brown Rat",
+      "scientific_name": "Rattus norvegicus",
+      "candidates": [
+        {
+          "uuid": "43bb7956-1630-4ef4-928e-f129c5722f20",
+          "title": "Untitled",
+          "contributor": "Mozillian",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/43bb7956-1630-4ef4-928e-f129c5722f20/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/43bb7956-1630-4ef4-928e-f129c5722f20",
+          "specific_node": "Rattus norvegicus",
+          "general_node": "Rattini",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "43bb7956-1630-4ef4-928e-f129c5722f20.svg",
+          "file_size": 15173
+        },
+        {
+          "uuid": "6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4",
+          "title": "Untitled",
+          "contributor": "Arcadia Science",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4",
+          "specific_node": "Rattus norvegicus",
+          "general_node": "Rattini",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4.svg",
+          "file_size": 2283
+        },
+        {
+          "uuid": "00d12cef-0904-4bf8-a915-901feeecbb2e",
+          "title": "Untitled",
+          "contributor": "Rebecca Groom",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/00d12cef-0904-4bf8-a915-901feeecbb2e/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/00d12cef-0904-4bf8-a915-901feeecbb2e",
+          "specific_node": "Rattus norvegicus",
+          "general_node": "Rattus",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "53f8f372-adc0-4247-bc66-0075e241fc95",
+          "title": "Untitled",
+          "contributor": "Ryan Cupo",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/53f8f372-adc0-4247-bc66-0075e241fc95/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/53f8f372-adc0-4247-bc66-0075e241fc95",
+          "specific_node": "Rattus norvegicus",
+          "general_node": "Rattus",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "726683a1-78ed-4371-9c10-c220b8716c54",
+          "title": "Untitled",
+          "contributor": "Rebecca Groom",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/726683a1-78ed-4371-9c10-c220b8716c54/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/726683a1-78ed-4371-9c10-c220b8716c54",
+          "specific_node": "Rattus norvegicus",
+          "general_node": "Rattus",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Canis lupus": {
+      "common_name": "Gray Wolf",
+      "scientific_name": "Canis lupus",
+      "candidates": [
+        {
+          "uuid": "113d2520-9f92-456f-b305-52ee3986172d",
+          "title": "Untitled",
+          "contributor": "Gabriela Palomo-Munoz",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-nc/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/113d2520-9f92-456f-b305-52ee3986172d/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/113d2520-9f92-456f-b305-52ee3986172d",
+          "specific_node": "Canis latrans",
+          "general_node": "Canis (lupus)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "171a1fd1-797b-404c-b942-604cc2c508af",
+          "title": "Untitled",
+          "contributor": "Richard Rich",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/171a1fd1-797b-404c-b942-604cc2c508af/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/171a1fd1-797b-404c-b942-604cc2c508af",
+          "specific_node": "Canis latrans",
+          "general_node": "Canis (lupus)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "171a1fd1-797b-404c-b942-604cc2c508af.svg",
+          "file_size": 27718
+        },
+        {
+          "uuid": "3492f4ca-01f0-4609-a84f-084a84bf4e95",
+          "title": "Untitled",
+          "contributor": "C\u00e9sar Camilo Juli\u00e1n Caballero",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/3492f4ca-01f0-4609-a84f-084a84bf4e95/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/3492f4ca-01f0-4609-a84f-084a84bf4e95",
+          "specific_node": "Canis latrans",
+          "general_node": "Canis (lupus)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "5a0398e3-a455-4ca6-ba86-cf3f1b25977a",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/5a0398e3-a455-4ca6-ba86-cf3f1b25977a/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/5a0398e3-a455-4ca6-ba86-cf3f1b25977a",
+          "specific_node": "Canis latrans",
+          "general_node": "Canis (lupus)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Felis catus": {
+      "common_name": "Domestic Cat",
+      "scientific_name": "Felis catus",
+      "candidates": [
+        {
+          "uuid": "08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+          "specific_node": "Felis lybica",
+          "general_node": "Felis (lybica)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "08db8ea0-95b9-4729-8bdb-ee03f86f8464.svg",
+          "file_size": 15113
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Panthera leo": {
+      "common_name": "Lion",
+      "scientific_name": "Panthera leo",
+      "candidates": [
+        {
+          "uuid": "5e900306-3a5e-4193-8a94-74cc765f0aaf",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "78dbe564-bcba-4dc3-8bdc-fb95fc288580",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "9f33e613-944c-483d-8275-cc59a1b470c2",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "9f33e613-944c-483d-8275-cc59a1b470c2.svg",
+          "file_size": 8427
+        },
+        {
+          "uuid": "a8be3867-83d4-4614-9fed-9bcd2546dd5b",
+          "title": "Untitled",
+          "contributor": "Kai Caspar",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b",
+          "specific_node": "Panthera pardus japonensis",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg",
+          "file_size": 22833
+        },
+        {
+          "uuid": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
+          "title": "Untitled",
+          "contributor": "Ivan Iofrida",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg",
+          "file_size": 9854
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Panthera pardus": {
+      "common_name": "Leopard",
+      "scientific_name": "Panthera pardus",
+      "candidates": [
+        {
+          "uuid": "5e900306-3a5e-4193-8a94-74cc765f0aaf",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "78dbe564-bcba-4dc3-8bdc-fb95fc288580",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "9f33e613-944c-483d-8275-cc59a1b470c2",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "9f33e613-944c-483d-8275-cc59a1b470c2.svg",
+          "file_size": 8427
+        },
+        {
+          "uuid": "a8be3867-83d4-4614-9fed-9bcd2546dd5b",
+          "title": "Untitled",
+          "contributor": "Kai Caspar",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b",
+          "specific_node": "Panthera pardus japonensis",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg",
+          "file_size": 22833
+        },
+        {
+          "uuid": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
+          "title": "Untitled",
+          "contributor": "Ivan Iofrida",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
+          "specific_node": "Panthera pardus",
+          "general_node": "Panthera (Panthera)",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg",
+          "file_size": 9854
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Balaenoptera musculus": {
+      "common_name": "Blue Whale",
+      "scientific_name": "Balaenoptera musculus",
+      "candidates": [
+        {
+          "uuid": "16969246-31e0-48e3-90ff-cad9a8746073",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073",
+          "specific_node": "Balaenoptera musculus",
+          "general_node": "Balaenoptera (Rorqualus)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "69855d40-36ce-445b-bd8f-90cc7d0cca96",
+          "title": "Untitled",
+          "contributor": "Scott Hartman",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/69855d40-36ce-445b-bd8f-90cc7d0cca96/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/69855d40-36ce-445b-bd8f-90cc7d0cca96",
+          "specific_node": "Balaenoptera musculus",
+          "general_node": "Balaenoptera (Rorqualus)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Tursiops truncatus": {
+      "common_name": "Bottlenose Dolphin",
+      "scientific_name": "Tursiops truncatus",
+      "candidates": [
+        {
+          "uuid": "0b5c6b41-3a44-4c9e-869a-63ed54bf7c65",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65",
+          "specific_node": "Tursiops truncatus",
+          "general_node": "Tursiops",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "10af79a9-36b4-4be3-8a5d-dadea9cea810",
+          "title": "Untitled",
+          "contributor": "Guillaume Dera",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/10af79a9-36b4-4be3-8a5d-dadea9cea810/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/10af79a9-36b4-4be3-8a5d-dadea9cea810",
+          "specific_node": "Tursiops truncatus",
+          "general_node": "Tursiops",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "10af79a9-36b4-4be3-8a5d-dadea9cea810.svg",
+          "file_size": 4170
+        },
+        {
+          "uuid": "4ac248c2-da47-4c20-ad5a-30c45dc38fa0",
+          "title": "Untitled",
+          "contributor": "Amy Beauvois",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/4ac248c2-da47-4c20-ad5a-30c45dc38fa0/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/4ac248c2-da47-4c20-ad5a-30c45dc38fa0",
+          "specific_node": "Tursiops truncatus",
+          "general_node": "Tursiops",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "4ac248c2-da47-4c20-ad5a-30c45dc38fa0.svg",
+          "file_size": 61654
+        },
+        {
+          "uuid": "6260355c-1f7b-491c-baa5-4268710276d6",
+          "title": "Untitled",
+          "contributor": "Olesja Bogomaz",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/6260355c-1f7b-491c-baa5-4268710276d6/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/6260355c-1f7b-491c-baa5-4268710276d6",
+          "specific_node": "Tursiops truncatus",
+          "general_node": "Tursiops",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "6260355c-1f7b-491c-baa5-4268710276d6.svg",
+          "file_size": 2874
+        },
+        {
+          "uuid": "6682f694-1c10-4386-a6e5-361581400f15",
+          "title": "Untitled",
+          "contributor": "Steven Traver",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/6682f694-1c10-4386-a6e5-361581400f15/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/6682f694-1c10-4386-a6e5-361581400f15",
+          "specific_node": "Tursiops truncatus",
+          "general_node": "Tursiops",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Cervus elaphus": {
+      "common_name": "Red Deer",
+      "scientific_name": "Cervus elaphus",
+      "candidates": [
+        {
+          "uuid": "61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9",
+          "title": "Untitled",
+          "contributor": "Abby Weber",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9",
+          "specific_node": "Cervus elaphus",
+          "general_node": "Plesiometacarpi",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9.svg",
+          "file_size": 5665
+        },
+        {
+          "uuid": "72f2f997-e474-4caf-bbd5-72fc8dbcc40d",
+          "title": "Untitled",
+          "contributor": "Steven Traver",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/72f2f997-e474-4caf-bbd5-72fc8dbcc40d/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/72f2f997-e474-4caf-bbd5-72fc8dbcc40d",
+          "specific_node": "Cervus elaphus",
+          "general_node": "Plesiometacarpi",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Bos taurus": {
+      "common_name": "Domestic Cattle",
+      "scientific_name": "Bos taurus",
+      "candidates": [
+        {
+          "uuid": "dc5c561e-e030-444d-ba22-3d427b60e58a",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/dc5c561e-e030-444d-ba22-3d427b60e58a/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/dc5c561e-e030-444d-ba22-3d427b60e58a",
+          "specific_node": "Bos primigenius primigenius",
+          "general_node": "Bos (Bos)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "ea92020a-298a-4977-b6d3-dccbe816bb5e",
+          "title": "Untitled",
+          "contributor": "T. Michael Keesey",
+          "license": {
+            "title": "Unknown",
+            "url": "https://creativecommons.org/licenses/by-sa/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/ea92020a-298a-4977-b6d3-dccbe816bb5e/source.png",
+          "phylopic_url": "https://www.phylopic.org/images/ea92020a-298a-4977-b6d3-dccbe816bb5e",
+          "specific_node": "Bos primigenius primigenius",
+          "general_node": "Bos (Bos)",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    },
+    "Artibeus lituratus": {
+      "common_name": "Great Fruit Bat",
+      "scientific_name": "Artibeus lituratus",
+      "candidates": [
+        {
+          "uuid": "5024b63d-e684-45bf-8638-dbf863f43e35",
+          "title": "Untitled",
+          "contributor": "Jorge D. Carballo Morales",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/4.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/5024b63d-e684-45bf-8638-dbf863f43e35/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/5024b63d-e684-45bf-8638-dbf863f43e35",
+          "specific_node": "Artibeus planirostris",
+          "general_node": "Phyllostomidae",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "5024b63d-e684-45bf-8638-dbf863f43e35.svg",
+          "file_size": 3580
+        }
+      ],
+      "status": "FOUND_GENUS",
+      "notes": []
+    },
+    "Macropus rufus": {
+      "common_name": "Red Kangaroo",
+      "scientific_name": "Macropus rufus",
+      "candidates": [
+        {
+          "uuid": "87ffd414-da20-4692-8e7b-2407e060904d",
+          "title": "Untitled",
+          "contributor": "Pascal Abel",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/87ffd414-da20-4692-8e7b-2407e060904d/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/87ffd414-da20-4692-8e7b-2407e060904d",
+          "specific_node": "Macropodus opercularis",
+          "general_node": "Macropodusinae",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        }
+      ],
+      "status": "FOUND_GENUS",
+      "notes": []
+    },
+    "Phalanger orientalis": {
+      "common_name": "Common Cuscus",
+      "scientific_name": "Phalanger orientalis",
+      "candidates": [],
+      "status": "NOT_FOUND",
+      "notes": [
+        "No suitable images found in PhyloPic for Phalanger orientalis"
+      ]
+    },
+    "Ornithorhynchus anatinus": {
+      "common_name": "Platypus",
+      "scientific_name": "Ornithorhynchus anatinus",
+      "candidates": [
+        {
+          "uuid": "162021b6-349b-4a64-906f-33d4a191b30e",
+          "title": "Untitled",
+          "contributor": "Rachel T Mason",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e",
+          "specific_node": "Ornithorhynchus anatinus",
+          "general_node": "Ornithorhynchus anatinus",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "162021b6-349b-4a64-906f-33d4a191b30e.svg",
+          "file_size": 6647
+        },
+        {
+          "uuid": "3ca524e8-74c5-45ad-a267-9f599ab7d751",
+          "title": "Untitled",
+          "contributor": "Margot Michaud",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/3ca524e8-74c5-45ad-a267-9f599ab7d751/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/3ca524e8-74c5-45ad-a267-9f599ab7d751",
+          "specific_node": "Ornithorhynchus anatinus",
+          "general_node": "Ornithorhynchus anatinus",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "3ca524e8-74c5-45ad-a267-9f599ab7d751.svg",
+          "file_size": 9257
+        },
+        {
+          "uuid": "61932f57-1fd2-49d9-bb86-042d6005581a",
+          "title": "Untitled",
+          "contributor": "Steven Traver",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/61932f57-1fd2-49d9-bb86-042d6005581a/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/61932f57-1fd2-49d9-bb86-042d6005581a",
+          "specific_node": "Ornithorhynchus anatinus",
+          "general_node": "Ornithorhynchus anatinus",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "b406c409-2735-4a3d-a7aa-8afe0b6e72dc",
+          "title": "Untitled",
+          "contributor": "Sarah Werning",
+          "license": {
+            "title": "CC-BY",
+            "url": "https://creativecommons.org/licenses/by/3.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/b406c409-2735-4a3d-a7aa-8afe0b6e72dc/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/b406c409-2735-4a3d-a7aa-8afe0b6e72dc",
+          "specific_node": "Ornithorhynchus anatinus",
+          "general_node": "Ornithorhynchus anatinus",
+          "taxonomic_level": "species",
+          "downloaded": false,
+          "download_filename": null
+        },
+        {
+          "uuid": "f11ede6b-240d-487c-bdea-f2eb082c479f",
+          "title": "Untitled",
+          "contributor": "Guillaume Dera",
+          "license": {
+            "title": "CC0 1.0 / Public Domain",
+            "url": "https://creativecommons.org/publicdomain/zero/1.0/",
+            "has_restrictions": false,
+            "restrictions": []
+          },
+          "vector_url": "https://images.phylopic.org/images/f11ede6b-240d-487c-bdea-f2eb082c479f/source.svg",
+          "phylopic_url": "https://www.phylopic.org/images/f11ede6b-240d-487c-bdea-f2eb082c479f",
+          "specific_node": "Ornithorhynchus anatinus",
+          "general_node": "Ornithorhynchus anatinus",
+          "taxonomic_level": "species",
+          "downloaded": true,
+          "download_filename": "f11ede6b-240d-487c-bdea-f2eb082c479f.svg",
+          "file_size": 7449
+        }
+      ],
+      "status": "FOUND_SPECIES",
+      "notes": []
+    }
+  }
+}
