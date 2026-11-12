@@ -72,6 +72,8 @@ class ForceDirectedVisualization {
     this.silhouetteXOffset = 0;
     this.silhouetteYOffset = 0;
     this.silhouetteSizePercent = 100;  // Size as percentage of default (100 = 5x node radius)
+    this.silhouetteOpacity = 1.0;  // Opacity (0-1)
+    this.silhouetteGrayscale = 50;  // Grayscale (0=black, 50=gray, 100=white)
 
     // Node date display
     this.showNodeDates = false;
@@ -604,17 +606,27 @@ class ForceDirectedVisualization {
     this.g.selectAll('g.node-group')
       .attr('transform', d => `translate(${d.x},${d.y})`);
 
-    // Update silhouette positions if offsets have changed
+    // Update silhouette-group transforms (size and offset)
+    // The group contains the image element and controls overall sizing and positioning
+    this.g.selectAll('g.silhouette-group')
+      .attr('transform', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        // Note: offset is applied via translate, not by moving the image x/y
+        return `translate(${this.silhouetteXOffset},${this.silhouetteYOffset})`;
+      });
+
+    // Update silhouette image sizes within the group
     this.g.selectAll('image.silhouette')
       .attr('x', d => {
         const baseSize = this._getNodeCircleRadius(d) * 5;
         const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
-        return -silhouetteSize / 2 + this.silhouetteXOffset;
+        return -silhouetteSize / 2;
       })
       .attr('y', d => {
         const baseSize = this._getNodeCircleRadius(d) * 5;
         const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
-        return -silhouetteSize / 2 + this.silhouetteYOffset;
+        return -silhouetteSize / 2;
       })
       .attr('width', d => {
         const baseSize = this._getNodeCircleRadius(d) * 5;
@@ -623,7 +635,9 @@ class ForceDirectedVisualization {
       .attr('height', d => {
         const baseSize = this._getNodeCircleRadius(d) * 5;
         return baseSize * (this.silhouetteSizePercent / 100);
-      });
+      })
+      .attr('opacity', this.silhouetteOpacity)
+      .style('filter', this._getSilhouetteGrayscaleFilter(this.silhouetteGrayscale));
   }
 
   /**
@@ -749,6 +763,44 @@ class ForceDirectedVisualization {
   setSilhouetteSize(sizePercent) {
     this.silhouetteSizePercent = Math.max(30, Math.min(300, sizePercent));
     // Silhouettes will be updated in the next tick
+  }
+
+  /**
+   * Set silhouette opacity (0-1).
+   */
+  setSilhouetteOpacity(opacity) {
+    this.silhouetteOpacity = Math.max(0, Math.min(1, opacity));
+    // Silhouettes will be updated in the next tick
+  }
+
+  /**
+   * Set silhouette grayscale amount (0-100, 0=black, 50=gray, 100=white).
+   */
+  setSilhouetteGrayscale(grayscale) {
+    this.silhouetteGrayscale = Math.max(0, Math.min(100, grayscale));
+    // Silhouettes will be updated in the next tick
+  }
+
+  /**
+   * Generate CSS filter string for silhouette grayscale.
+   * At 0%, the image is fully black (saturate 0%, brightness 0%).
+   * At 50%, the image is medium gray (saturate 0%, brightness 50%).
+   * At 100%, the image is fully white (saturate 0%, brightness 100%).
+   * @private
+   */
+  _getSilhouetteGrayscaleFilter(grayscalePercent) {
+    if (grayscalePercent === 50) {
+      // Middle gray: desaturate and set to 50% brightness
+      return 'grayscale(100%) brightness(0.5)';
+    } else if (grayscalePercent < 50) {
+      // Darker: interpolate from black (0%) to gray (50%)
+      const brightness = grayscalePercent / 50;  // 0 to 1
+      return `grayscale(100%) brightness(${brightness})`;
+    } else {
+      // Lighter: interpolate from gray (50%) to white (100%)
+      const brightness = grayscalePercent / 100;  // 0.5 to 1
+      return `grayscale(100%) brightness(${brightness})`;
+    }
   }
 
   /**

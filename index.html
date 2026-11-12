@@ -387,6 +387,30 @@
           </p>
         </div>
 
+        <div class="control-group">
+          <div class="control-label">
+            <span>Silhouette Grayscale</span>
+            <span class="control-value" id="silhouette-grayscale-value">50%</span>
+          </div>
+          <input type="range" id="silhouette-grayscale-slider" 
+                 min="0" max="100" value="50" step="5">
+          <p class="info-text">
+            Controls grayscale: 0% = black, 50% = gray, 100% = white.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Silhouette Opacity</span>
+            <span class="control-value" id="silhouette-opacity-value">100%</span>
+          </div>
+          <input type="range" id="silhouette-opacity-slider" 
+                 min="0" max="100" value="100" step="5">
+          <p class="info-text">
+            Controls transparency: 0% = invisible, 100% = fully opaque.
+          </p>
+        </div>
+
         <h2>Controls</h2>
 
         <div class="control-group">
@@ -695,6 +719,22 @@
           const value = parseInt(e.target.value);
           document.getElementById('silhouette-y-offset-value').textContent = value + 'px';
           viz.setSilhouetteYOffset(value);
+        });
+
+        // Silhouette grayscale slider
+        const silhouetteGrayscaleSlider = document.getElementById('silhouette-grayscale-slider');
+        silhouetteGrayscaleSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('silhouette-grayscale-value').textContent = value + '%';
+          viz.setSilhouetteGrayscale(value);
+        });
+
+        // Silhouette opacity slider
+        const silhouetteOpacitySlider = document.getElementById('silhouette-opacity-slider');
+        silhouetteOpacitySlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('silhouette-opacity-value').textContent = value + '%';
+          viz.setSilhouetteOpacity(value / 100);
         });
 
         // Show node dates toggle
