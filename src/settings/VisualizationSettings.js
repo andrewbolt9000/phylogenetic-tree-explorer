@@ -27,8 +27,8 @@ class VisualizationSettings {
       // Force parameters
       charge: 300,                    // Repulsion strength (0-1500)
       linkStrength: 0.5,              // Link/edge stiffness (0-1)
-      rootLinkStrength: 0, // Root-proximity link strength modifier (UI 0-1000, internal 0-10 via /100)
-      ageLinkStrength: 0,             // Age-based link strength modifier (per Ma)
+      rootLinkStrength: 0, // Root-proximity link strength modifier (UI 0-2000, internal 0-20 via /100)
+      ageLinkStrength: 0,             // Age-based link strength modifier (UI 0-500, per Ma)
       topologyRepulsionX: 0,           // Topology repulsion master control (UI 0-100, internal 0-10)
       topologyRepulsionA: 10,          // Topology repulsion baseline/offset (UI 0-100, internal 0-10)
       topologyRepulsionB: 10,          // Topology repulsion force scale (UI 0-100, internal 0-10)
@@ -203,17 +203,17 @@ class VisualizationSettings {
       rootLinkStrength: {
         type: 'integer',
         min: 0,
-        max: 1000,
+        max: 2000,
         default: 0,
-        description: 'Root-proximity link strength modifier (UI 0-1000, internal 0-10 via /100 conversion; 0 disables)',
+        description: 'Root-proximity link strength modifier (UI 0-2000, internal 0-20 via /100 conversion; 0 disables)',
         category: 'forces',
       },
       ageLinkStrength: {
         type: 'number',
         min: 0,
-        max: 100,
+        max: 500,
         default: 0,
-        description: 'Age-based link strength modifier (UI 0-100; produces ageLinkStrength/1000 * divergenceAgeMa contribution; 0 disables)',
+        description: 'Age-based link strength modifier (UI 0-500; produces ageLinkStrength/1000 * divergenceAgeMa contribution; 0 disables)',
         category: 'forces',
       },
       topologyRepulsionX: {
@@ -369,9 +369,9 @@ class VisualizationSettings {
       windStrength: {
         type: 'integer',
         min: 0,
-        max: 100,
+        max: 2000,
         default: 0,
-        description: 'Directional wind force; 0 disables wind',
+        description: 'Directional wind force (UI 0-2000, internal 0-1.0 via /2000 conversion; 0 disables wind). Wind applies constant acceleration independent of simulation cooling.',
         category: 'forces',
       },
     };
@@ -397,14 +397,14 @@ class VisualizationSettings {
       '# FORCES',
       `charge: ${this.settings.charge}  # Repulsion strength (0-1500)`,
       `linkStrength: ${this.settings.linkStrength.toFixed(2)}  # Link stiffness (0-1)`,
-      `rootLinkStrength: ${this.settings.rootLinkStrength}  # Root-proximity modifier (UI 0-1000, internal 0-10 via /100)`,
-      `ageLinkStrength: ${this.settings.ageLinkStrength.toFixed(2)}  # Age-based modifier (per Ma, 0-10)`,
+      `rootLinkStrength: ${this.settings.rootLinkStrength}  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)`,
+      `ageLinkStrength: ${this.settings.ageLinkStrength.toFixed(2)}  # Age-based modifier (UI 0-500, per Ma)`,
       `topologyRepulsionX: ${this.settings.topologyRepulsionX}  # Master control; 0 disables (UI 0-100, internal 0-10)`,
       `topologyRepulsionA: ${this.settings.topologyRepulsionA}  # Baseline offset (UI 0-100, internal 0-10)`,
       `topologyRepulsionB: ${this.settings.topologyRepulsionB}  # Force scale (UI 0-100, internal 0-10)`,
       `lockRootPosition: ${this.settings.lockRootPosition}  # Keep root fixed in place`,
       `windDirection: ${this.settings.windDirection}  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)`,
-      `windStrength: ${this.settings.windStrength}  # Wind force (0-100, 0 disables)`,
+      `windStrength: ${this.settings.windStrength}  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)`,
       '',
       '# APPEARANCE',
       `edgeThickness: ${this.settings.edgeThickness.toFixed(2)}  # Stroke width (0.5-3)`,

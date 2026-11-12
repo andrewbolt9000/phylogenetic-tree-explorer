@@ -8,8 +8,8 @@
 
 charge: 300  # Repulsion strength (0-1500)
 linkStrength: 0.50  # Link stiffness (0-1)
-rootLinkStrength: 0  # Root-proximity link strength modifier (UI: 0-10000, internal: 0-100 via /100 conversion; 0 disables)
-ageLinkStrength: 0.00  # Age-based link strength modifier (UI: 0-100; produces ageLinkStrength/1000 * divergenceAgeMa; 0 disables)
+rootLinkStrength: 0  # Root-proximity link strength modifier (UI: 0-2000, internal: 0-20 via /100 conversion; 0 disables)
+ageLinkStrength: 0.00  # Age-based link strength modifier (UI: 0-500; produces ageLinkStrength/1000 * divergenceAgeMa; 0 disables)
 
 # Topology repulsion equation: F_topology = B * (A + X) / D
 # Where D is shortest-path graph distance, X is the master control
@@ -25,13 +25,13 @@ edgeElasticityC: 0  # Root elasticity adjustment (0-10)
 
 lockRootPosition: true  # Keep the root fixed in place
 windDirection: 0  # Wind direction in degrees (0=right, 90=down, 180=left, 270=up)
-windStrength: 0  # Directional wind force (0-100; 0 disables wind)
+windStrength: 0  # Directional wind force (UI: 0-2000, internal: 0-1.0 via /2000; 0 disables wind)
 
 # APPEARANCE
 # Controls for visual styling of edges, nodes, and text
 
-edgeThickness: 1.5  # Stroke width of phylogenetic edges (0.5-3)
-nodeCircleSize: 1.0  # Radius multiplier for node background circles (0.5-2)
+edgeThickness: 11  # Stroke width of phylogenetic edges (0.5-3)
+nodeCircleSize: 1.4  # Radius multiplier for node background circles (0.5-2)
 graphFontSize: 11  # Font size for node labels (8-20px)
 sidebarFontSize: 14  # Font size for sidebar controls (10-20px)
 

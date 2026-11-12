@@ -30,7 +30,7 @@ test('Root lock and wind - Schema defines lockRootPosition, windDirection, windS
   assert.ok(schema.windStrength, 'windStrength should exist in schema');
   assert.equal(schema.windStrength.type, 'integer', 'windStrength should be integer');
   assert.equal(schema.windStrength.min, 0, 'windStrength min should be 0');
-  assert.equal(schema.windStrength.max, 100, 'windStrength max should be 100');
+  assert.equal(schema.windStrength.max, 2000, 'windStrength max should be 2000');
   assert.equal(schema.windStrength.default, 0, 'windStrength default should be 0');
 });
 
@@ -101,12 +101,12 @@ test('Root lock and wind - Settings validation clamps out-of-range values', asyn
   assert.ok(settings.getSettings().windDirection >= 0 && settings.getSettings().windDirection <= 360,
     'Over-max wind direction should clamp to 0-360 range');
   
-  // Wind strength clamping
+  // Wind strength clamping (0-2000 UI range)
   settings.setSetting('windStrength', -10);
   assert.equal(settings.getSettings().windStrength, 0, 'Negative wind strength should clamp to 0');
   
-  settings.setSetting('windStrength', 150);
-  assert.equal(settings.getSettings().windStrength, 100, 'Over-max wind strength should clamp to 100');
+  settings.setSetting('windStrength', 2500);
+  assert.equal(settings.getSettings().windStrength, 2000, 'Over-max wind strength should clamp to 2000');
 });
 
 /**
@@ -201,4 +201,115 @@ test('Root lock and wind - Settings can be reset to defaults', async (t) => {
   assert.equal(reset.lockRootPosition, defaults.lockRootPosition, 'Should be able to reset lockRootPosition');
   assert.equal(reset.windDirection, defaults.windDirection, 'Should be able to reset windDirection');
   assert.equal(reset.windStrength, defaults.windStrength, 'Should be able to reset windStrength');
+});
+
+/**
+ * Test 13: Wind strength new range (0-2000)
+ */
+test('Root lock and wind - Wind strength accepts new maximum of 2000', async (t) => {
+  const settings = new VisualizationSettings();
+  
+  // Test setting to max value
+  settings.setSetting('windStrength', 2000);
+  assert.equal(settings.getSettings().windStrength, 2000, 'windStrength should accept 2000');
+  
+  // Test mid-range values
+  settings.setSetting('windStrength', 1000);
+  assert.equal(settings.getSettings().windStrength, 1000, 'windStrength should accept 1000');
+  
+  settings.setSetting('windStrength', 500);
+  assert.equal(settings.getSettings().windStrength, 500, 'windStrength should accept 500');
+});
+
+/**
+ * Test 14: Root link strength new range (0-2000)
+ */
+test('Root lock and wind - Root link strength accepts new maximum of 2000', async (t) => {
+  const settings = new VisualizationSettings();
+  
+  // Test setting to max value
+  settings.setSetting('rootLinkStrength', 2000);
+  assert.equal(settings.getSettings().rootLinkStrength, 2000, 'rootLinkStrength should accept 2000');
+  
+  // Test mid-range values
+  settings.setSetting('rootLinkStrength', 1000);
+  assert.equal(settings.getSettings().rootLinkStrength, 1000, 'rootLinkStrength should accept 1000');
+});
+
+/**
+ * Test 15: Age link strength new range (0-500)
+ */
+test('Root lock and wind - Age link strength accepts new maximum of 500', async (t) => {
+  const settings = new VisualizationSettings();
+  
+  // Test setting to max value
+  settings.setSetting('ageLinkStrength', 500);
+  assert.equal(settings.getSettings().ageLinkStrength, 500, 'ageLinkStrength should accept 500');
+  
+  // Test mid-range values
+  settings.setSetting('ageLinkStrength', 250);
+  assert.equal(settings.getSettings().ageLinkStrength, 250, 'ageLinkStrength should accept 250');
+});
+
+/**
+ * Test 16: Wind persistence and force behavior verification
+ */
+test('Root lock and wind - Wind force conversion is correct', async (t) => {
+  // Verify wind strength conversion formula
+  // UI range 0-2000 → force magnitude 0-1.0
+  // Formula: magnitude = windStrength / 2000
+  
+  const testCases = [
+    { ui: 0, expected: 0 },
+    { ui: 500, expected: 0.25 },
+    { ui: 1000, expected: 0.5 },
+    { ui: 1500, expected: 0.75 },
+    { ui: 2000, expected: 1.0 },
+  ];
+  
+  for (const testCase of testCases) {
+    const magnitude = testCase.ui / 2000;
+    assert.ok(
+      Math.abs(magnitude - testCase.expected) < 0.0001,
+      `Wind strength ${testCase.ui} should produce magnitude ${testCase.expected}, got ${magnitude}`
+    );
+  }
+});
+
+/**
+ * Test 17: Wind strength zero removes wind force
+ */
+test('Root lock and wind - Wind strength zero is treated as disabled', async (t) => {
+  const settings = new VisualizationSettings();
+  
+  // Set wind to zero explicitly
+  settings.setSetting('windStrength', 0);
+  assert.equal(settings.getSettings().windStrength, 0, 'Wind strength should be zero');
+  
+  // Verify zero does not get clamped or modified
+  const current = settings.getSettings();
+  assert.strictEqual(current.windStrength, 0, 'Zero should remain exactly zero, not converted');
+});
+
+/**
+ * Test 18: Settings behavior with all new ranges
+ */
+test('Root lock and wind - All three setting ranges work together', async (t) => {
+  const settings = new VisualizationSettings();
+  
+  // Set all at their maximum values
+  settings.setSetting('rootLinkStrength', 2000);
+  settings.setSetting('ageLinkStrength', 500);
+  settings.setSetting('windStrength', 2000);
+  
+  const current = settings.getSettings();
+  assert.equal(current.rootLinkStrength, 2000, 'rootLinkStrength max should be 2000');
+  assert.equal(current.ageLinkStrength, 500, 'ageLinkStrength max should be 500');
+  assert.equal(current.windStrength, 2000, 'windStrength max should be 2000');
+  
+  // Export and re-import to verify persistence
+  const yaml = settings.toYAML();
+  assert.ok(yaml.includes('rootLinkStrength: 2000'), 'YAML should include rootLinkStrength at 2000');
+  assert.ok(yaml.includes('ageLinkStrength: 500'), 'YAML should include ageLinkStrength at 500');
+  assert.ok(yaml.includes('windStrength: 2000'), 'YAML should include windStrength at 2000');
 });

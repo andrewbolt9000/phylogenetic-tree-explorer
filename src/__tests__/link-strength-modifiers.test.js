@@ -14,18 +14,18 @@ import { VisualizationSettings } from '../settings/VisualizationSettings.js';
 test('Link strength modifiers - Schema defines rootLinkStrength and ageLinkStrength', async (t) => {
   const schema = VisualizationSettings.getSchema();
   
-  // Check rootLinkStrength schema (changed to UI 0-1000)
+  // Check rootLinkStrength schema (changed to UI 0-2000)
   assert.ok(schema.rootLinkStrength, 'rootLinkStrength should exist in schema');
   assert.equal(schema.rootLinkStrength.type, 'integer', 'rootLinkStrength should be integer');
   assert.equal(schema.rootLinkStrength.min, 0, 'rootLinkStrength min should be 0');
-  assert.equal(schema.rootLinkStrength.max, 1000, 'rootLinkStrength max should be 1000');
+  assert.equal(schema.rootLinkStrength.max, 2000, 'rootLinkStrength max should be 2000');
   assert.equal(schema.rootLinkStrength.default, 0, 'rootLinkStrength default should be 0');
   
-  // Check ageLinkStrength schema (changed to UI 0-100)
+  // Check ageLinkStrength schema (changed to UI 0-500)
   assert.ok(schema.ageLinkStrength, 'ageLinkStrength should exist in schema');
   assert.equal(schema.ageLinkStrength.type, 'number', 'ageLinkStrength should be number');
   assert.equal(schema.ageLinkStrength.min, 0, 'ageLinkStrength min should be 0');
-  assert.equal(schema.ageLinkStrength.max, 100, 'ageLinkStrength max should be 100');
+  assert.equal(schema.ageLinkStrength.max, 500, 'ageLinkStrength max should be 500');
   assert.equal(schema.ageLinkStrength.default, 0, 'ageLinkStrength default should be 0');
 });
 
@@ -80,19 +80,19 @@ test('Link strength modifiers - YAML export includes new settings', async (t) =>
 test('Link strength modifiers - Settings validation clamps out-of-range values', async (t) => {
   const settings = new VisualizationSettings();
   
-  // Test root link strength clamping (0-1000 UI range)
+  // Test root link strength clamping (0-2000 UI range)
   settings.setSetting('rootLinkStrength', -10);
   assert.equal(settings.getSettings().rootLinkStrength, 0, 'Negative rootLinkStrength should clamp to 0');
   
-  settings.setSetting('rootLinkStrength', 1500);
-  assert.equal(settings.getSettings().rootLinkStrength, 1000, 'Over-max rootLinkStrength should clamp to 1000');
+  settings.setSetting('rootLinkStrength', 2500);
+  assert.equal(settings.getSettings().rootLinkStrength, 2000, 'Over-max rootLinkStrength should clamp to 2000');
   
-  // Test age link strength clamping (0-100 UI range)
+  // Test age link strength clamping (0-500 UI range)
   settings.setSetting('ageLinkStrength', -5);
   assert.equal(settings.getSettings().ageLinkStrength, 0, 'Negative ageLinkStrength should clamp to 0');
   
-  settings.setSetting('ageLinkStrength', 150);
-  assert.equal(settings.getSettings().ageLinkStrength, 100, 'Over-max ageLinkStrength should clamp to 100');
+  settings.setSetting('ageLinkStrength', 600);
+  assert.equal(settings.getSettings().ageLinkStrength, 500, 'Over-max ageLinkStrength should clamp to 500');
 });
 
 /**
@@ -176,7 +176,7 @@ test('Link strength modifiers - YAML defaults match schema defaults', async (t) 
 /**
  * Test 11: HTML slider maximum matches schema definition
  */
-test('Link strength modifiers - HTML slider max matches schema (0-1000)', async (t) => {
+test('Link strength modifiers - HTML slider max matches schema (0-2000)', async (t) => {
   const fs = await import('fs');
   const path = await import('path');
   
@@ -198,8 +198,8 @@ test('Link strength modifiers - HTML slider max matches schema (0-1000)', async 
   const schemaMax = VisualizationSettings.getSchema().rootLinkStrength.max;
   
   assert.equal(
-    sliderMax, 1000,
-    'HTML slider max should be 1000'
+    sliderMax, 2000,
+    'HTML slider max should be 2000'
   );
   
   assert.equal(

@@ -79,7 +79,7 @@ class ForceDirectedVisualization {
 
     // Directional wind force
     this.windDirection = 0; // Degrees: 0 = right
-    this.windStrength = 0;  // UI range 0-100
+    this.windStrength = 0;  // UI range 0-2000
     this.windForce = null;
 
     // Appearance parameters
@@ -1438,6 +1438,11 @@ class ForceDirectedVisualization {
     this.lockRootPosition = Boolean(locked);
     this._applyRootLock();
 
+    // If wind is active, update it to reflect the new root participation
+    if (this.windStrength > 0) {
+      this._updateWindForce();
+    }
+
     if (this.simulation) {
       this.simulation.alpha(0.3).restart();
     }
@@ -1455,44 +1460,67 @@ class ForceDirectedVisualization {
 
   /**
    * Set the wind strength.
-   * @param {number} strength - Wind strength (0-100)
+   * Wind strength is in the range 0-2000 (UI).
+   * @param {number} strength - Wind strength (0-2000, clamped)
    */
   setWindStrength(strength) {
-    this.windStrength = Math.max(0, Math.min(100, Number(strength)));
+    this.windStrength = Math.max(0, Math.min(2000, Number(strength)));
     this._updateWindForce();
   }
 
   /**
    * Update or register the wind force in the D3 simulation.
+   * 
+   * Wind applies constant directional acceleration independently of simulation alpha,
+   * ensuring it remains active even as the simulation cools.
+   * 
+   * Conversion: UI range 0-2000 → force magnitude 0-1.0
+   * Formula: magnitude = (windStrength / 2000)
+   * This produces the same max magnitude (1.0) as the previous 0-100 UI range with /100 conversion.
+   * 
+   * Root participation:
+   * - If lockRootPosition is true: root is excluded from wind (remains pinned)
+   * - If lockRootPosition is false: root participates in wind like other nodes
+   * 
+   * When wind strength is zero, the force is removed and alphaTarget is cleared to allow
+   * normal simulation cooling.
+   * 
    * @private
    */
   _updateWindForce() {
     if (!this.simulation) return;
 
     if (this.windStrength === 0) {
+      // Wind disabled: remove force and restore normal simulation cooling
       this.simulation.force('wind', null);
+      this.simulation.alphaTarget(0);  // Allow simulation to cool naturally
       this.windForce = null;
       return;
     }
 
+    // Wind enabled: create directional force
     const radians = this.windDirection * Math.PI / 180;
     const forceX = Math.cos(radians);
     const forceY = Math.sin(radians);
-    const magnitude = this.windStrength / 100;
+    const magnitude = this.windStrength / 2000;  // Convert UI 0-2000 to force magnitude 0-1
 
-    this.windForce = alpha => {
+    this.windForce = () => {
       for (const node of this.nodes) {
-        // Wind never directly affects the root.
-        if (node.id === this.rootNodeId) {
+        // Exclude root only if it is locked in place.
+        // If root is unlocked, it participates in wind like other nodes.
+        if (node.id === this.rootNodeId && this.lockRootPosition) {
           continue;
         }
 
-        node.vx += forceX * magnitude * alpha;
-        node.vy += forceY * magnitude * alpha;
+        node.vx += forceX * magnitude;
+        node.vy += forceY * magnitude;
       }
     };
 
     this.simulation.force('wind', this.windForce);
+    // Keep simulation running while wind is active.
+    // Use a small alphaTarget to maintain gentle cooling while wind persists.
+    this.simulation.alphaTarget(0.1);
     this.simulation.alpha(0.3).restart();
   }
 
