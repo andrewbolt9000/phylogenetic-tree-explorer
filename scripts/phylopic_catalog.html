@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhyloPic Discovery Catalog</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #f5f5f5; padding: 40px 20px; }
+    .container { max-width: 1400px; margin: 0 auto; }
+    h1 { text-align: center; margin-bottom: 10px; color: #333; }
+    .header-info { text-align: center; color: #666; margin-bottom: 40px; font-size: 14px; }
+    .species-section { background: white; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    .species-title { font-size: 18px; font-weight: 600; color: #2E86AB; margin-bottom: 8px; border-bottom: 2px solid #E8E8E8; padding-bottom: 8px; }
+    .species-scientific { font-size: 14px; color: #999; font-style: italic; margin-bottom: 16px; }
+    .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 16px; margin-right: 8px; }
+    .status.species { background: #C8E6C9; color: #2E7D32; }
+    .status.genus { background: #FFE0B2; color: #E65100; }
+    .status.higher { background: #BBDEFB; color: #0D47A1; }
+    .status.not-found { background: #FFCDD2; color: #C62828; }
+    .download-status { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; margin-left: 8px; }
+    .download-status.downloaded { background: #81C784; color: white; }
+    .download-status.failed { background: #E57373; color: white; }
+    .candidates { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }
+    .candidate { border: 1px solid #E8E8E8; border-radius: 4px; padding: 16px; background: #FAFAFA; }
+    .candidate.downloaded { border-left: 4px solid #81C784; }
+    .candidate.failed { border-left: 4px solid #E57373; }
+    .candidate:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-color: #2E86AB; }
+    .candidate-image { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: white; border: 1px solid #E8E8E8; border-radius: 4px; margin-bottom: 12px; overflow: hidden; }
+    .candidate-image img { max-width: 100%; max-height: 100%; }
+    .candidate-image.no-image { color: #999; font-size: 12px; text-align: center; }
+    .candidate-info { font-size: 12px; color: #666; line-height: 1.6; }
+    .candidate-info-row { margin-bottom: 6px; }
+    .candidate-info-label { font-weight: 600; color: #333; display: inline-block; width: 80px; }
+    .error-message { background: #FFEBEE; border-left: 3px solid #E57373; padding: 8px; border-radius: 3px; margin-top: 8px; font-size: 11px; color: #C62828; }
+    .restriction { display: inline-block; background: #FFE082; color: #F57F17; padding: 2px 6px; border-radius: 2px; font-size: 11px; margin: 2px 2px 2px 0; }
+    .phylopic-link { display: inline-block; margin-top: 8px; color: #2E86AB; text-decoration: none; font-weight: 600; }
+    .notes { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 12px; border-radius: 4px; font-size: 13px; color: #856404; }
+    .summary { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 12px; border-radius: 4px; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>PhyloPic Discovery Catalog</h1>
+    <div class="header-info">
+      Generated using PhyloPic API (build 562)<br>
+      21 Mammalian species from phylogenetic dataset
+    </div>
+    <div class="species-section">
+      <div class="species-title">Great Fruit Bat</div>
+      <div class="species-scientific">Artibeus lituratus</div>
+      <div class="status genus">FOUND GENUS</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/5024b63d-e684-45bf-8638-dbf863f43e35.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 5024b63d...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Jorge D. Carballo Morales</div>
+            <a href="https://www.phylopic.org/images/5024b63d-e684-45bf-8638-dbf863f43e35" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Blue Whale</div>
+      <div class="species-scientific">Balaenoptera musculus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/16969246-31e0-48e3-90ff-cad9a8746073.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 16969246...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 69855d40...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Scott Hartman</div>
+            <a href="https://www.phylopic.org/images/69855d40-36ce-445b-bd8f-90cc7d0cca96" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Domestic Cattle</div>
+      <div class="species-scientific">Bos taurus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> dc5c561e...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/dc5c561e-e030-444d-ba22-3d427b60e58a" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> ea92020a...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/ea92020a-298a-4977-b6d3-dccbe816bb5e" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Gray Wolf</div>
+      <div class="species-scientific">Canis lupus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 113d2520...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Gabriela Palomo-Munoz</div>
+            <a href="https://www.phylopic.org/images/113d2520-9f92-456f-b305-52ee3986172d" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/171a1fd1-797b-404c-b942-604cc2c508af.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 171a1fd1...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Richard Rich</div>
+            <a href="https://www.phylopic.org/images/171a1fd1-797b-404c-b942-604cc2c508af" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 3492f4ca...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> César Camilo Julián Caballero</div>
+            <a href="https://www.phylopic.org/images/3492f4ca-01f0-4609-a84f-084a84bf4e95" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/5a0398e3-a455-4ca6-ba86-cf3f1b25977a.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 5a0398e3...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/5a0398e3-a455-4ca6-ba86-cf3f1b25977a" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Red Deer</div>
+      <div class="species-scientific">Cervus elaphus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 61e74aaf...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Abby Weber</div>
+            <a href="https://www.phylopic.org/images/61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/72f2f997-e474-4caf-bbd5-72fc8dbcc40d.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 72f2f997...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Steven Traver</div>
+            <a href="https://www.phylopic.org/images/72f2f997-e474-4caf-bbd5-72fc8dbcc40d" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Domestic Cat</div>
+      <div class="species-scientific">Felis catus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/08db8ea0-95b9-4729-8bdb-ee03f86f8464.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 08db8ea0...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Western Lowland Gorilla</div>
+      <div class="species-scientific">Gorilla gorilla</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 142e0571...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/142e0571-3b5f-443d-a887-b572a224ea22" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/d9af529d-e426-4c7a-922a-562d57a7872e.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> d9af529d...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/dd10acd5-fef8-41b4-b7af-fd8f651cc8b3.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> dd10acd5...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Andy Wilson</div>
+            <a href="https://www.phylopic.org/images/dd10acd5-fef8-41b4-b7af-fd8f651cc8b3" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> f9bb81be...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/f9bb81be-bd1e-4513-a92e-2cee296fb357" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Human</div>
+      <div class="species-scientific">Homo sapiens</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/9c6af553-390c-4bdd-baeb-6992cbc540b1.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 9c6af553...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/9c6af553-390c-4bdd-baeb-6992cbc540b1" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/f36c3c31-8b66-4413-a39f-a2b2b422e7ff.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> f36c3c31...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/f36c3c31-8b66-4413-a39f-a2b2b422e7ff" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/f46f28c7-b3da-485e-9af0-9839b63138e0.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> f46f28c7...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/f46f28c7-b3da-485e-9af0-9839b63138e0" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/1e3a5ba7-aeef-458e-9f08-cb10d3c896b8.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 1e3a5ba7...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/1e3a5ba7-aeef-458e-9f08-cb10d3c896b8" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/312a3222-7e8d-4fe0-91e7-2923dde20389.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 312a3222...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/312a3222-7e8d-4fe0-91e7-2923dde20389" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Rhesus Macaque</div>
+      <div class="species-scientific">Macaca mulatta</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/4e9c5666-79cc-4766-a7d3-d547514b0d77.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 4e9c5666...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Matthew Schmitz</div>
+            <a href="https://www.phylopic.org/images/4e9c5666-79cc-4766-a7d3-d547514b0d77" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/63169c26-e130-4f3b-8c34-02ec8b0862c7.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 63169c26...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Ben Murrell</div>
+            <a href="https://www.phylopic.org/images/63169c26-e130-4f3b-8c34-02ec8b0862c7" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/eedde61f-3402-4f7c-9350-49b74f5e1dba.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> eedde61f...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Red Kangaroo</div>
+      <div class="species-scientific">Macropus rufus</div>
+      <div class="status genus">FOUND GENUS</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/87ffd414-da20-4692-8e7b-2407e060904d.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 87ffd414...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Pascal Abel</div>
+            <a href="https://www.phylopic.org/images/87ffd414-da20-4692-8e7b-2407e060904d" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">House Mouse</div>
+      <div class="species-scientific">Mus musculus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/0f6af3d8-49d2-4d75-8edf-08598387afde.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 0f6af3d8...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/0f6af3d8-49d2-4d75-8edf-08598387afde" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/36dc0476-ae7d-49ed-85c4-220139930bfc.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 36dc0476...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Cagri CEVRIM</div>
+            <a href="https://www.phylopic.org/images/36dc0476-ae7d-49ed-85c4-220139930bfc" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/6b2b98f6-f879-445f-9ac2-2c2563157025.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 6b2b98f6...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/6b2b98f6-f879-445f-9ac2-2c2563157025" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/92989e35-4e68-4a2d-b3a2-191ba9da671a.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 92989e35...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Kamil S. Jaron</div>
+            <a href="https://www.phylopic.org/images/92989e35-4e68-4a2d-b3a2-191ba9da671a" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/b1e0d893-a8e2-48e9-9850-4045d29ec2be.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> b1e0d893...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Arcadia Science</div>
+            <a href="https://www.phylopic.org/images/b1e0d893-a8e2-48e9-9850-4045d29ec2be" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Platypus</div>
+      <div class="species-scientific">Ornithorhynchus anatinus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/162021b6-349b-4a64-906f-33d4a191b30e.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 162021b6...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Rachel T Mason</div>
+            <a href="https://www.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/3ca524e8-74c5-45ad-a267-9f599ab7d751.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 3ca524e8...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/3ca524e8-74c5-45ad-a267-9f599ab7d751" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/61932f57-1fd2-49d9-bb86-042d6005581a.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 61932f57...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Steven Traver</div>
+            <a href="https://www.phylopic.org/images/61932f57-1fd2-49d9-bb86-042d6005581a" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/b406c409-2735-4a3d-a7aa-8afe0b6e72dc.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> b406c409...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Sarah Werning</div>
+            <a href="https://www.phylopic.org/images/b406c409-2735-4a3d-a7aa-8afe0b6e72dc" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/f11ede6b-240d-487c-bdea-f2eb082c479f.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> f11ede6b...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Guillaume Dera</div>
+            <a href="https://www.phylopic.org/images/f11ede6b-240d-487c-bdea-f2eb082c479f" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Bonobo</div>
+      <div class="species-scientific">Pan paniscus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/9cc16c5e-cba4-43ce-93d2-0e042139dcd2.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 9cc16c5e...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Guillaume Dera</div>
+            <a href="https://www.phylopic.org/images/9cc16c5e-cba4-43ce-93d2-0e042139dcd2" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/f06b4dd0-094e-4f37-9105-25fdb4eb1b02.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> f06b4dd0...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/f06b4dd0-094e-4f37-9105-25fdb4eb1b02" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Common Chimpanzee</div>
+      <div class="species-scientific">Pan troglodytes</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 34f93016...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Kai Caspar</div>
+            <a href="https://www.phylopic.org/images/34f93016-ee49-428c-8504-c7c4739232bc" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Lion</div>
+      <div class="species-scientific">Panthera leo</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/5e900306-3a5e-4193-8a94-74cc765f0aaf.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 5e900306...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/78dbe564-bcba-4dc3-8bdc-fb95fc288580.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 78dbe564...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/9f33e613-944c-483d-8275-cc59a1b470c2.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 9f33e613...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> a8be3867...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Kai Caspar</div>
+            <a href="https://www.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> b79d7633...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Ivan Iofrida</div>
+            <a href="https://www.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Leopard</div>
+      <div class="species-scientific">Panthera pardus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/5e900306-3a5e-4193-8a94-74cc765f0aaf.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 5e900306...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/78dbe564-bcba-4dc3-8bdc-fb95fc288580.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 78dbe564...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/78dbe564-bcba-4dc3-8bdc-fb95fc288580" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/9f33e613-944c-483d-8275-cc59a1b470c2.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 9f33e613...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/9f33e613-944c-483d-8275-cc59a1b470c2" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> a8be3867...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Kai Caspar</div>
+            <a href="https://www.phylopic.org/images/a8be3867-83d4-4614-9fed-9bcd2546dd5b" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> b79d7633...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Ivan Iofrida</div>
+            <a href="https://www.phylopic.org/images/b79d7633-c28d-4e0b-9f20-a28c9d4a4825" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Common Cuscus</div>
+      <div class="species-scientific">Phalanger orientalis</div>
+      <div class="status not-found">NOT FOUND</div>
+      <div class="notes">No suitable images found in PhyloPic for Phalanger orientalis</div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Bornean Orangutan</div>
+      <div class="species-scientific">Pongo pygmaeus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/63c557ce-d82c-42e6-a26a-a9f0f05c2c18.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 63c557ce...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC-BY</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Gareth Monger</div>
+            <a href="https://www.phylopic.org/images/63c557ce-d82c-42e6-a26a-a9f0f05c2c18" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/2f701a27-2f0b-4a97-9caa-206251edfe90.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 2f701a27...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Rowan Sherwood</div>
+            <a href="https://www.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/4a27dce0-012a-41ec-b831-a46e88108f3e.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 4a27dce0...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Margot Michaud</div>
+            <a href="https://www.phylopic.org/images/4a27dce0-012a-41ec-b831-a46e88108f3e" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Brown Rat</div>
+      <div class="species-scientific">Rattus norvegicus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/43bb7956-1630-4ef4-928e-f129c5722f20.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 43bb7956...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Mozillian</div>
+            <a href="https://www.phylopic.org/images/43bb7956-1630-4ef4-928e-f129c5722f20" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 6b8ecf3f...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Arcadia Science</div>
+            <a href="https://www.phylopic.org/images/6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/00d12cef-0904-4bf8-a915-901feeecbb2e.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 00d12cef...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Rebecca Groom</div>
+            <a href="https://www.phylopic.org/images/00d12cef-0904-4bf8-a915-901feeecbb2e" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate failed">
+          <div class="candidate-image">
+            <div class="no-image">Not downloaded<br>SKIP_NOT_SVG</div>
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 53f8f372...<span class="download-status failed">✗ SKIP_NOT_SVG</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Ryan Cupo</div>
+            <a href="https://www.phylopic.org/images/53f8f372-adc0-4247-bc66-0075e241fc95" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+            <div class="error-message">File does not contain SVG markup. Content-Type: image/png</div>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/726683a1-78ed-4371-9c10-c220b8716c54.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 726683a1...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Rebecca Groom</div>
+            <a href="https://www.phylopic.org/images/726683a1-78ed-4371-9c10-c220b8716c54" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Red Squirrel</div>
+      <div class="species-scientific">Sciurus vulgaris</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/23c700c9-e695-404a-8d0c-146e1fc4bada.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 23c700c9...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Ferran Sayol</div>
+            <a href="https://www.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <div class="species-title">Bottlenose Dolphin</div>
+      <div class="species-scientific">Tursiops truncatus</div>
+      <div class="status species">FOUND SPECIES</div>
+      <div class="candidates">
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 0b5c6b41...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> Unknown</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> T. Michael Keesey</div>
+            <a href="https://www.phylopic.org/images/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/10af79a9-36b4-4be3-8a5d-dadea9cea810.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 10af79a9...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Guillaume Dera</div>
+            <a href="https://www.phylopic.org/images/10af79a9-36b4-4be3-8a5d-dadea9cea810" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/4ac248c2-da47-4c20-ad5a-30c45dc38fa0.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 4ac248c2...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Amy Beauvois</div>
+            <a href="https://www.phylopic.org/images/4ac248c2-da47-4c20-ad5a-30c45dc38fa0" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/6260355c-1f7b-491c-baa5-4268710276d6.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 6260355c...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Olesja Bogomaz</div>
+            <a href="https://www.phylopic.org/images/6260355c-1f7b-491c-baa5-4268710276d6" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+        <div class="candidate downloaded">
+          <div class="candidate-image">
+            <img src="phylopic_candidates/6682f694-1c10-4386-a6e5-361581400f15.svg" alt="silhouette">
+          </div>
+          <div class="candidate-info">
+            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> 6682f694...<span class="download-status downloaded">✓ Downloaded</span></div>
+            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> SPECIES</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> CC0 1.0 / Public Domain</div>
+            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> Steven Traver</div>
+            <a href="https://www.phylopic.org/images/6682f694-1c10-4386-a6e5-361581400f15" class="phylopic-link" target="_blank">View on PhyloPic →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="species-section">
+      <h2>Summary</h2>
+      <div class="summary">
+        <strong>Species-level matches:</strong> 18/21<br>
+        <strong>Genus-level matches:</strong> 2/21<br>
+        <strong>Higher-level matches:</strong> 0/21<br>
+        <strong>Not found:</strong> 1/21<br>
+        <br>
+        <strong>Successfully downloaded SVGs:</strong> 53 images<br>
+        <strong>Failed or skipped:</strong> 9 candidates
+      </div>
+    </div>
+  </div>
+</body>
+</html>

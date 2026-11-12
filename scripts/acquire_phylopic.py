@@ -268,6 +268,7 @@ class PhyloPicDiscovery:
         print(f"{'='*60}")
         
         total_downloaded = 0
+        total_failed = 0
         
         for result in self.results.values():
             if result["status"] == "NOT_FOUND":
@@ -282,39 +283,67 @@ class PhyloPicDiscovery:
                 try:
                     url = candidate["vector_url"]
                     uuid = candidate["uuid"]
-                    
                     filename = f"{uuid}.svg"
                     filepath = download_dir / filename
                     
-                    print(f"  [{i+1}] {filename}...", end=" ")
+                    print(f"  [{i+1}] {filename}...", end=" ", flush=True)
                     
+                    # Fetch the file
                     resp = self.session.get(url, timeout=DOWNLOAD_TIMEOUT)
                     resp.raise_for_status()
                     
-                    # Validate SVG content
-                    content = resp.text[:100]
+                    content = resp.text
+                    content_type = resp.headers.get('content-type', '').lower()
+                    
+                    # Validate SVG content (check for svg tag anywhere in content, not just first 100 chars)
                     if '<svg' not in content.lower():
-                        print(f"SKIP (not SVG)")
+                        print(f"SKIP (not SVG, content-type: {content_type})")
+                        candidate["download_status"] = "SKIP_NOT_SVG"
+                        candidate["error"] = f"File does not contain SVG markup. Content-Type: {content_type}"
+                        total_failed += 1
+                        continue
+                    
+                    # Validate file size (reject empty files)
+                    if len(content) < 100:
+                        print(f"SKIP (file too small: {len(content)} bytes)")
+                        candidate["download_status"] = "SKIP_TOO_SMALL"
+                        candidate["error"] = f"File too small: {len(content)} bytes"
+                        total_failed += 1
                         continue
                     
                     # Save file
                     with open(filepath, 'w') as f:
-                        f.write(resp.text)
+                        f.write(content)
                     
                     candidate["downloaded"] = True
                     candidate["download_filename"] = filename
-                    candidate["file_size"] = len(resp.text)
+                    candidate["file_size"] = len(content)
+                    candidate["download_status"] = "DOWNLOADED"
+                    candidate["download_timestamp"] = time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())
                     total_downloaded += 1
                     
-                    print(f"OK ({len(resp.text)} bytes)")
+                    print(f"OK ({len(content)} bytes)")
                     
+                except requests.exceptions.Timeout:
+                    print(f"FAIL (timeout)")
+                    candidate["download_status"] = "DOWNLOAD_TIMEOUT"
+                    candidate["error"] = "HTTP timeout"
+                    total_failed += 1
+                except requests.exceptions.HTTPError as e:
+                    print(f"FAIL (HTTP {e.response.status_code})")
+                    candidate["download_status"] = f"HTTP_ERROR_{e.response.status_code}"
+                    candidate["error"] = f"HTTP error {e.response.status_code}"
+                    total_failed += 1
                 except Exception as e:
-                    print(f"FAIL ({e})")
-                    continue
+                    print(f"FAIL ({type(e).__name__})")
+                    candidate["download_status"] = "DOWNLOAD_ERROR"
+                    candidate["error"] = str(e)
+                    total_failed += 1
                 
                 time.sleep(RATE_LIMIT_DELAY)
         
         print(f"\n✓ Downloaded {total_downloaded} candidate SVGs")
+        print(f"✗ Failed to download {total_failed} candidates")
     
     def generate_html_catalog(self):
         """Generate an HTML contact sheet of candidates."""
@@ -344,21 +373,30 @@ class PhyloPicDiscovery:
             '    .species-section { background: white; border-radius: 8px; padding: 20px; margin-bottom: 30px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }',
             '    .species-title { font-size: 18px; font-weight: 600; color: #2E86AB; margin-bottom: 8px; border-bottom: 2px solid #E8E8E8; padding-bottom: 8px; }',
             '    .species-scientific { font-size: 14px; color: #999; font-style: italic; margin-bottom: 16px; }',
-            '    .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }',
-            '    .status.found { background: #C8E6C9; color: #2E7D32; }',
-            '    .status.not-found { background: #FFCDD2; color: #C62828; }',
+            '    .status { display: inline-block; padding: 4px 12px; border-radius: 4px; font-size: 12px; font-weight: 600; margin-bottom: 16px; margin-right: 8px; }',
+            '    .status.species { background: #C8E6C9; color: #2E7D32; }',
             '    .status.genus { background: #FFE0B2; color: #E65100; }',
+            '    .status.higher { background: #BBDEFB; color: #0D47A1; }',
+            '    .status.not-found { background: #FFCDD2; color: #C62828; }',
+            '    .download-status { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; margin-left: 8px; }',
+            '    .download-status.downloaded { background: #81C784; color: white; }',
+            '    .download-status.failed { background: #E57373; color: white; }',
             '    .candidates { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 20px; }',
             '    .candidate { border: 1px solid #E8E8E8; border-radius: 4px; padding: 16px; background: #FAFAFA; }',
+            '    .candidate.downloaded { border-left: 4px solid #81C784; }',
+            '    .candidate.failed { border-left: 4px solid #E57373; }',
             '    .candidate:hover { box-shadow: 0 4px 12px rgba(0,0,0,0.15); border-color: #2E86AB; }',
             '    .candidate-image { width: 100%; height: 200px; display: flex; align-items: center; justify-content: center; background: white; border: 1px solid #E8E8E8; border-radius: 4px; margin-bottom: 12px; overflow: hidden; }',
             '    .candidate-image img { max-width: 100%; max-height: 100%; }',
+            '    .candidate-image.no-image { color: #999; font-size: 12px; text-align: center; }',
             '    .candidate-info { font-size: 12px; color: #666; line-height: 1.6; }',
             '    .candidate-info-row { margin-bottom: 6px; }',
             '    .candidate-info-label { font-weight: 600; color: #333; display: inline-block; width: 80px; }',
+            '    .error-message { background: #FFEBEE; border-left: 3px solid #E57373; padding: 8px; border-radius: 3px; margin-top: 8px; font-size: 11px; color: #C62828; }',
             '    .restriction { display: inline-block; background: #FFE082; color: #F57F17; padding: 2px 6px; border-radius: 2px; font-size: 11px; margin: 2px 2px 2px 0; }',
             '    .phylopic-link { display: inline-block; margin-top: 8px; color: #2E86AB; text-decoration: none; font-weight: 600; }',
             '    .notes { background: #FFF3CD; border-left: 4px solid #FFC107; padding: 12px; border-radius: 4px; font-size: 13px; color: #856404; }',
+            '    .summary { background: #E3F2FD; border-left: 4px solid #2196F3; padding: 12px; border-radius: 4px; margin-top: 20px; }',
             '  </style>',
             '</head>',
             '<body>',
@@ -370,43 +408,68 @@ class PhyloPicDiscovery:
             '    </div>',
         ]
         
+        # Count statistics
+        downloaded_count = 0
+        species_with_svg = 0
+        species_genus_level = 0
+        species_higher_level = 0
+        species_not_found = 0
+        
         # Add species sections
         for species_key in sorted(self.results.keys()):
             result = self.results[species_key]
+            candidates = result['candidates']
             
+            # Count stats
             if result["status"] == "NOT_FOUND":
+                species_not_found += 1
                 status_class = "not-found"
                 status_text = "NOT FOUND"
+            elif "GENUS" in result["status"]:
+                species_genus_level += 1
+                status_class = "genus"
+                status_text = "FOUND GENUS"
+            elif "HIGHER" in result["status"]:
+                species_higher_level += 1
+                status_class = "higher"
+                status_text = "FOUND HIGHER TAXON"
             else:
-                status_class = "genus" if "GENUS" in result["status"] else "found"
-                status_text = result["status"].replace("_", " ")
+                species_with_svg += 1
+                status_class = "species"
+                status_text = "FOUND SPECIES"
             
             html_parts.append('    <div class="species-section">')
             html_parts.append(f'      <div class="species-title">{result["common_name"]}</div>')
             html_parts.append(f'      <div class="species-scientific">{result["scientific_name"]}</div>')
             html_parts.append(f'      <div class="status {status_class}">{status_text}</div>')
             
-            if result["candidates"]:
+            if candidates:
                 html_parts.append('      <div class="candidates">')
-                for candidate in result["candidates"]:
+                
+                for candidate in candidates:
                     downloaded = candidate.get("downloaded", False)
+                    download_status = candidate.get("download_status", "UNKNOWN")
+                    candidate_class = "downloaded" if downloaded else "failed"
                     
-                    if downloaded and candidate.get("download_filename"):
+                    if downloaded:
+                        downloaded_count += 1
                         image_html = f'<img src="phylopic_candidates/{candidate["download_filename"]}" alt="silhouette">'
+                        status_badge = '<span class="download-status downloaded">✓ Downloaded</span>'
                     else:
-                        image_html = '<div style="color: #999; text-align: center;">Not downloaded</div>'
+                        image_html = f'<div class="no-image">Not downloaded<br>{download_status}</div>'
+                        status_badge = f'<span class="download-status failed">✗ {download_status}</span>'
                     
                     restrictions_html = ""
                     if candidate["license"]["restrictions"]:
                         for r in candidate["license"]["restrictions"]:
                             restrictions_html += f'<div class="restriction">{r}</div>'
                     
-                    html_parts.append('        <div class="candidate">')
+                    html_parts.append(f'        <div class="candidate {candidate_class}">')
                     html_parts.append('          <div class="candidate-image">')
                     html_parts.append(f'            {image_html}')
                     html_parts.append('          </div>')
                     html_parts.append('          <div class="candidate-info">')
-                    html_parts.append(f'            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> {candidate["uuid"][:8]}...</div>')
+                    html_parts.append(f'            <div class="candidate-info-row"><span class="candidate-info-label">UUID:</span> {candidate["uuid"][:8]}...{status_badge}</div>')
                     html_parts.append(f'            <div class="candidate-info-row"><span class="candidate-info-label">Level:</span> {candidate["taxonomic_level"].upper()}</div>')
                     html_parts.append(f'            <div class="candidate-info-row"><span class="candidate-info-label">License:</span> {candidate["license"]["title"]}</div>')
                     
@@ -415,6 +478,10 @@ class PhyloPicDiscovery:
                     
                     html_parts.append(f'            <div class="candidate-info-row"><span class="candidate-info-label">By:</span> {candidate["contributor"]}</div>')
                     html_parts.append(f'            <a href="{candidate["phylopic_url"]}" class="phylopic-link" target="_blank">View on PhyloPic →</a>')
+                    
+                    if candidate.get("error"):
+                        html_parts.append(f'            <div class="error-message">{candidate["error"]}</div>')
+                    
                     html_parts.append('          </div>')
                     html_parts.append('        </div>')
                 
@@ -429,8 +496,15 @@ class PhyloPicDiscovery:
         # Add summary
         html_parts.append('    <div class="species-section">')
         html_parts.append('      <h2>Summary</h2>')
-        html_parts.append(f'      <p><strong>Found:</strong> {found_count}/21 species</p>')
-        html_parts.append(f'      <p><strong>Not Found:</strong> {not_found_count}/21 species</p>')
+        html_parts.append('      <div class="summary">')
+        html_parts.append(f'        <strong>Species-level matches:</strong> {species_with_svg}/21<br>')
+        html_parts.append(f'        <strong>Genus-level matches:</strong> {species_genus_level}/21<br>')
+        html_parts.append(f'        <strong>Higher-level matches:</strong> {species_higher_level}/21<br>')
+        html_parts.append(f'        <strong>Not found:</strong> {species_not_found}/21<br>')
+        html_parts.append(f'        <br>')
+        html_parts.append(f'        <strong>Successfully downloaded SVGs:</strong> {downloaded_count} images<br>')
+        html_parts.append(f'        <strong>Failed or skipped:</strong> {sum(len(r["candidates"]) for r in self.results.values() if r["status"] != "NOT_FOUND") - downloaded_count} candidates')
+        html_parts.append('      </div>')
         html_parts.append('    </div>')
         
         html_parts.extend(['  </div>', '</body>', '</html>'])

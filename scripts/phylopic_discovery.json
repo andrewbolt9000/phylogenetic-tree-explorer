@@ -1,5 +1,5 @@
 {
-  "timestamp": "2026-11-12T03:15:23Z",
+  "timestamp": "2026-11-12T03:25:47Z",
   "build": "562",
   "total_species": 21,
   "found": 20,
@@ -24,8 +24,11 @@
           "specific_node": "Homo rhodesiensis rhodesiensis",
           "general_node": "Homo (sapiens)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "9c6af553-390c-4bdd-baeb-6992cbc540b1.svg",
+          "file_size": 422050,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:14Z"
         },
         {
           "uuid": "f36c3c31-8b66-4413-a39f-a2b2b422e7ff",
@@ -42,8 +45,11 @@
           "specific_node": "Homo antecessor",
           "general_node": "Homo (sapiens)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "f36c3c31-8b66-4413-a39f-a2b2b422e7ff.svg",
+          "file_size": 44008,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:15Z"
         },
         {
           "uuid": "f46f28c7-b3da-485e-9af0-9839b63138e0",
@@ -62,7 +68,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "f46f28c7-b3da-485e-9af0-9839b63138e0.svg",
-          "file_size": 7424
+          "file_size": 7424,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:15Z"
         },
         {
           "uuid": "1e3a5ba7-aeef-458e-9f08-cb10d3c896b8",
@@ -79,8 +87,11 @@
           "specific_node": "Homo neanderthalensis neanderthalensis",
           "general_node": "Homo neanderthalensis",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "1e3a5ba7-aeef-458e-9f08-cb10d3c896b8.svg",
+          "file_size": 44090,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:16Z"
         },
         {
           "uuid": "312a3222-7e8d-4fe0-91e7-2923dde20389",
@@ -97,8 +108,11 @@
           "specific_node": "Homo neanderthalensis neanderthalensis",
           "general_node": "Homo neanderthalensis",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "312a3222-7e8d-4fe0-91e7-2923dde20389.svg",
+          "file_size": 41626,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:16Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -124,7 +138,9 @@
           "general_node": "Pan",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -151,7 +167,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "9cc16c5e-cba4-43ce-93d2-0e042139dcd2.svg",
-          "file_size": 8906
+          "file_size": 8906,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:17Z"
         },
         {
           "uuid": "f06b4dd0-094e-4f37-9105-25fdb4eb1b02",
@@ -168,8 +186,11 @@
           "specific_node": "Pan paniscus",
           "general_node": "Pan",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "f06b4dd0-094e-4f37-9105-25fdb4eb1b02.svg",
+          "file_size": 56354,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:18Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -195,7 +216,9 @@
           "general_node": "Gorilla",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         },
         {
           "uuid": "d9af529d-e426-4c7a-922a-562d57a7872e",
@@ -212,8 +235,11 @@
           "specific_node": "Gorilla gorilla gorilla",
           "general_node": "Gorilla",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "d9af529d-e426-4c7a-922a-562d57a7872e.svg",
+          "file_size": 91492,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:18Z"
         },
         {
           "uuid": "dd10acd5-fef8-41b4-b7af-fd8f651cc8b3",
@@ -232,7 +258,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "dd10acd5-fef8-41b4-b7af-fd8f651cc8b3.svg",
-          "file_size": 19884
+          "file_size": 19884,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:19Z"
         },
         {
           "uuid": "f9bb81be-bd1e-4513-a92e-2cee296fb357",
@@ -250,7 +278,9 @@
           "general_node": "Gorilla",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -277,7 +307,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "63c557ce-d82c-42e6-a26a-a9f0f05c2c18.svg",
-          "file_size": 7030
+          "file_size": 7030,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:20Z"
         },
         {
           "uuid": "2f701a27-2f0b-4a97-9caa-206251edfe90",
@@ -296,7 +328,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "2f701a27-2f0b-4a97-9caa-206251edfe90.svg",
-          "file_size": 9118
+          "file_size": 9118,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:20Z"
         },
         {
           "uuid": "4a27dce0-012a-41ec-b831-a46e88108f3e",
@@ -315,7 +349,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "4a27dce0-012a-41ec-b831-a46e88108f3e.svg",
-          "file_size": 12587
+          "file_size": 12587,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:21Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -342,7 +378,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "4e9c5666-79cc-4766-a7d3-d547514b0d77.svg",
-          "file_size": 7387
+          "file_size": 7387,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:22Z"
         },
         {
           "uuid": "63169c26-e130-4f3b-8c34-02ec8b0862c7",
@@ -361,7 +399,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "63169c26-e130-4f3b-8c34-02ec8b0862c7.svg",
-          "file_size": 8148
+          "file_size": 8148,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:22Z"
         },
         {
           "uuid": "eedde61f-3402-4f7c-9350-49b74f5e1dba",
@@ -378,8 +418,11 @@
           "specific_node": "Macaca mulatta",
           "general_node": "Cercopithecidae",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "eedde61f-3402-4f7c-9350-49b74f5e1dba.svg",
+          "file_size": 60078,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:23Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -404,8 +447,11 @@
           "specific_node": "Sciurus vulgaris",
           "general_node": "tree squirrels",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "23c700c9-e695-404a-8d0c-146e1fc4bada.svg",
+          "file_size": 7805,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:24Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -430,8 +476,11 @@
           "specific_node": "Mus musculus domesticus",
           "general_node": "Murini",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "0f6af3d8-49d2-4d75-8edf-08598387afde.svg",
+          "file_size": 29421,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:24Z"
         },
         {
           "uuid": "36dc0476-ae7d-49ed-85c4-220139930bfc",
@@ -450,7 +499,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "36dc0476-ae7d-49ed-85c4-220139930bfc.svg",
-          "file_size": 4342
+          "file_size": 4342,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:25Z"
         },
         {
           "uuid": "6b2b98f6-f879-445f-9ac2-2c2563157025",
@@ -467,8 +518,11 @@
           "specific_node": "Mus musculus domesticus",
           "general_node": "Murini",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "6b2b98f6-f879-445f-9ac2-2c2563157025.svg",
+          "file_size": 6066,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:25Z"
         },
         {
           "uuid": "92989e35-4e68-4a2d-b3a2-191ba9da671a",
@@ -485,8 +539,11 @@
           "specific_node": "Mus musculus",
           "general_node": "Murini",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "92989e35-4e68-4a2d-b3a2-191ba9da671a.svg",
+          "file_size": 2490,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:26Z"
         },
         {
           "uuid": "b1e0d893-a8e2-48e9-9850-4045d29ec2be",
@@ -505,7 +562,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "b1e0d893-a8e2-48e9-9850-4045d29ec2be.svg",
-          "file_size": 2336
+          "file_size": 2336,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:27Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -532,7 +591,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "43bb7956-1630-4ef4-928e-f129c5722f20.svg",
-          "file_size": 15173
+          "file_size": 15173,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:27Z"
         },
         {
           "uuid": "6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4",
@@ -551,7 +612,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "6b8ecf3f-a5c2-4ca4-adbc-1c7280c380d4.svg",
-          "file_size": 2283
+          "file_size": 2283,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:28Z"
         },
         {
           "uuid": "00d12cef-0904-4bf8-a915-901feeecbb2e",
@@ -568,8 +631,11 @@
           "specific_node": "Rattus norvegicus",
           "general_node": "Rattus",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "00d12cef-0904-4bf8-a915-901feeecbb2e.svg",
+          "file_size": 5178,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:28Z"
         },
         {
           "uuid": "53f8f372-adc0-4247-bc66-0075e241fc95",
@@ -587,7 +653,9 @@
           "general_node": "Rattus",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         },
         {
           "uuid": "726683a1-78ed-4371-9c10-c220b8716c54",
@@ -604,8 +672,11 @@
           "specific_node": "Rattus norvegicus",
           "general_node": "Rattus",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "726683a1-78ed-4371-9c10-c220b8716c54.svg",
+          "file_size": 2004,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:29Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -631,7 +702,9 @@
           "general_node": "Canis (lupus)",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         },
         {
           "uuid": "171a1fd1-797b-404c-b942-604cc2c508af",
@@ -650,7 +723,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "171a1fd1-797b-404c-b942-604cc2c508af.svg",
-          "file_size": 27718
+          "file_size": 27718,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:30Z"
         },
         {
           "uuid": "3492f4ca-01f0-4609-a84f-084a84bf4e95",
@@ -668,7 +743,9 @@
           "general_node": "Canis (lupus)",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         },
         {
           "uuid": "5a0398e3-a455-4ca6-ba86-cf3f1b25977a",
@@ -685,8 +762,11 @@
           "specific_node": "Canis latrans",
           "general_node": "Canis (lupus)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "5a0398e3-a455-4ca6-ba86-cf3f1b25977a.svg",
+          "file_size": 6564,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:31Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -713,7 +793,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "08db8ea0-95b9-4729-8bdb-ee03f86f8464.svg",
-          "file_size": 15113
+          "file_size": 15113,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:32Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -738,8 +820,11 @@
           "specific_node": "Panthera pardus",
           "general_node": "Panthera (Panthera)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "5e900306-3a5e-4193-8a94-74cc765f0aaf.svg",
+          "file_size": 5121,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:32Z"
         },
         {
           "uuid": "78dbe564-bcba-4dc3-8bdc-fb95fc288580",
@@ -756,8 +841,11 @@
           "specific_node": "Panthera pardus",
           "general_node": "Panthera (Panthera)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "78dbe564-bcba-4dc3-8bdc-fb95fc288580.svg",
+          "file_size": 6215,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:33Z"
         },
         {
           "uuid": "9f33e613-944c-483d-8275-cc59a1b470c2",
@@ -776,7 +864,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "9f33e613-944c-483d-8275-cc59a1b470c2.svg",
-          "file_size": 8427
+          "file_size": 8427,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:33Z"
         },
         {
           "uuid": "a8be3867-83d4-4614-9fed-9bcd2546dd5b",
@@ -795,7 +885,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg",
-          "file_size": 22833
+          "file_size": 22833,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:34Z"
         },
         {
           "uuid": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
@@ -814,7 +906,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg",
-          "file_size": 9854
+          "file_size": 9854,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:34Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -839,8 +933,11 @@
           "specific_node": "Panthera pardus",
           "general_node": "Panthera (Panthera)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "5e900306-3a5e-4193-8a94-74cc765f0aaf.svg",
+          "file_size": 5121,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:35Z"
         },
         {
           "uuid": "78dbe564-bcba-4dc3-8bdc-fb95fc288580",
@@ -857,8 +954,11 @@
           "specific_node": "Panthera pardus",
           "general_node": "Panthera (Panthera)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "78dbe564-bcba-4dc3-8bdc-fb95fc288580.svg",
+          "file_size": 6215,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:35Z"
         },
         {
           "uuid": "9f33e613-944c-483d-8275-cc59a1b470c2",
@@ -877,7 +977,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "9f33e613-944c-483d-8275-cc59a1b470c2.svg",
-          "file_size": 8427
+          "file_size": 8427,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:36Z"
         },
         {
           "uuid": "a8be3867-83d4-4614-9fed-9bcd2546dd5b",
@@ -896,7 +998,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "a8be3867-83d4-4614-9fed-9bcd2546dd5b.svg",
-          "file_size": 22833
+          "file_size": 22833,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:36Z"
         },
         {
           "uuid": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825",
@@ -915,7 +1019,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "b79d7633-c28d-4e0b-9f20-a28c9d4a4825.svg",
-          "file_size": 9854
+          "file_size": 9854,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:37Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -940,8 +1046,11 @@
           "specific_node": "Balaenoptera musculus",
           "general_node": "Balaenoptera (Rorqualus)",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "16969246-31e0-48e3-90ff-cad9a8746073.svg",
+          "file_size": 6042,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:38Z"
         },
         {
           "uuid": "69855d40-36ce-445b-bd8f-90cc7d0cca96",
@@ -959,7 +1068,9 @@
           "general_node": "Balaenoptera (Rorqualus)",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -984,8 +1095,11 @@
           "specific_node": "Tursiops truncatus",
           "general_node": "Tursiops",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "0b5c6b41-3a44-4c9e-869a-63ed54bf7c65.svg",
+          "file_size": 4757,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:38Z"
         },
         {
           "uuid": "10af79a9-36b4-4be3-8a5d-dadea9cea810",
@@ -1004,7 +1118,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "10af79a9-36b4-4be3-8a5d-dadea9cea810.svg",
-          "file_size": 4170
+          "file_size": 4170,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:39Z"
         },
         {
           "uuid": "4ac248c2-da47-4c20-ad5a-30c45dc38fa0",
@@ -1023,7 +1139,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "4ac248c2-da47-4c20-ad5a-30c45dc38fa0.svg",
-          "file_size": 61654
+          "file_size": 61654,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:39Z"
         },
         {
           "uuid": "6260355c-1f7b-491c-baa5-4268710276d6",
@@ -1042,7 +1160,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "6260355c-1f7b-491c-baa5-4268710276d6.svg",
-          "file_size": 2874
+          "file_size": 2874,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:40Z"
         },
         {
           "uuid": "6682f694-1c10-4386-a6e5-361581400f15",
@@ -1059,8 +1179,11 @@
           "specific_node": "Tursiops truncatus",
           "general_node": "Tursiops",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "6682f694-1c10-4386-a6e5-361581400f15.svg",
+          "file_size": 4151,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:41Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -1087,7 +1210,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "61e74aaf-60f0-40a9-b9d4-44bef0b5b9f9.svg",
-          "file_size": 5665
+          "file_size": 5665,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:41Z"
         },
         {
           "uuid": "72f2f997-e474-4caf-bbd5-72fc8dbcc40d",
@@ -1104,8 +1229,11 @@
           "specific_node": "Cervus elaphus",
           "general_node": "Plesiometacarpi",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "72f2f997-e474-4caf-bbd5-72fc8dbcc40d.svg",
+          "file_size": 12342,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:42Z"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -1131,7 +1259,9 @@
           "general_node": "Bos (Bos)",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         },
         {
           "uuid": "ea92020a-298a-4977-b6d3-dccbe816bb5e",
@@ -1149,7 +1279,9 @@
           "general_node": "Bos (Bos)",
           "taxonomic_level": "species",
           "downloaded": false,
-          "download_filename": null
+          "download_filename": null,
+          "download_status": "SKIP_NOT_SVG",
+          "error": "File does not contain SVG markup. Content-Type: image/png"
         }
       ],
       "status": "FOUND_SPECIES",
@@ -1176,7 +1308,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "5024b63d-e684-45bf-8638-dbf863f43e35.svg",
-          "file_size": 3580
+          "file_size": 3580,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:43Z"
         }
       ],
       "status": "FOUND_GENUS",
@@ -1201,8 +1335,11 @@
           "specific_node": "Macropodus opercularis",
           "general_node": "Macropodusinae",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "87ffd414-da20-4692-8e7b-2407e060904d.svg",
+          "file_size": 225083,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:44Z"
         }
       ],
       "status": "FOUND_GENUS",
@@ -1238,7 +1375,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "162021b6-349b-4a64-906f-33d4a191b30e.svg",
-          "file_size": 6647
+          "file_size": 6647,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:44Z"
         },
         {
           "uuid": "3ca524e8-74c5-45ad-a267-9f599ab7d751",
@@ -1257,7 +1396,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "3ca524e8-74c5-45ad-a267-9f599ab7d751.svg",
-          "file_size": 9257
+          "file_size": 9257,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:45Z"
         },
         {
           "uuid": "61932f57-1fd2-49d9-bb86-042d6005581a",
@@ -1274,8 +1415,11 @@
           "specific_node": "Ornithorhynchus anatinus",
           "general_node": "Ornithorhynchus anatinus",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "61932f57-1fd2-49d9-bb86-042d6005581a.svg",
+          "file_size": 8082,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:46Z"
         },
         {
           "uuid": "b406c409-2735-4a3d-a7aa-8afe0b6e72dc",
@@ -1292,8 +1436,11 @@
           "specific_node": "Ornithorhynchus anatinus",
           "general_node": "Ornithorhynchus anatinus",
           "taxonomic_level": "species",
-          "downloaded": false,
-          "download_filename": null
+          "downloaded": true,
+          "download_filename": "b406c409-2735-4a3d-a7aa-8afe0b6e72dc.svg",
+          "file_size": 4467,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:46Z"
         },
         {
           "uuid": "f11ede6b-240d-487c-bdea-f2eb082c479f",
@@ -1312,7 +1459,9 @@
           "taxonomic_level": "species",
           "downloaded": true,
           "download_filename": "f11ede6b-240d-487c-bdea-f2eb082c479f.svg",
-          "file_size": 7449
+          "file_size": 7449,
+          "download_status": "DOWNLOADED",
+          "download_timestamp": "2026-11-12T03:25:47Z"
         }
       ],
       "status": "FOUND_SPECIES",
