@@ -66,16 +66,17 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
 
   // Test 5: Verify charge strength mapping is correct
   await t.test('Charge slider event listener maps positive UI values to negative D3 values', () => {
-    // The charge slider mapping is now handled by SettingsUI._wireControls()
-    // Verify the mapping is correct in SettingsUI
+    // New architecture: charge slider stores positive values, negation happens in application layer
     const settingsPath = path.join(process.cwd(), 'src/ui/SettingsUI.js');
     const settings = fs.readFileSync(settingsPath, 'utf8');
     
-    // Check that charge slider is configured to negate values
+    // Check that charge slider stores positive values from UI
     assert.ok(settings.includes("'charge-slider'"), 'charge-slider control exists');
-    assert.ok(settings.includes('transform: v => -parseInt(v)'), 'charge values are negated for D3');
-    assert.ok(settings.includes('chargeStrength'), 'chargeStrength setting exists');
-    assert.ok(settings.includes("display: 'charge-value'"), 'display value element is updated');
+    assert.ok(settings.includes("setting: 'charge'"), 'charge setting name is used');
+    assert.ok(settings.includes('transform: v => parseInt(v)'), 'charge values stored as positive integers');
+    
+    // Check that negation happens in visualization application
+    assert.ok(settings.includes('this.viz.setChargeStrength(-settings.charge)'), 'charge is negated when applying to D3');
   });
 
   // Test 6: Verify topology repulsion A/B/X equation is implemented

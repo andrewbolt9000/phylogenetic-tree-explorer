@@ -156,10 +156,10 @@ test('Slider Responsiveness Architecture', async (t) => {
     const uiPath = path.join(process.cwd(), 'src/ui/SettingsUI.js');
     const code = fs.readFileSync(uiPath, 'utf8');
     
-    // Check that major settings are applied
-    assert.ok(code.includes('setChargeStrength(settings.chargeStrength)'), 'Charge applied');
+    // Check that major settings are applied with correct names
+    assert.ok(code.includes('setChargeStrength(-settings.charge)'), 'Charge applied (negated for D3)');
     assert.ok(code.includes('setLinkStrength(settings.linkStrength)'), 'Link strength applied');
-    assert.ok(code.includes('setSilhouetteSize(settings.silhouetteSize)'), 'Silhouette size applied');
+    assert.ok(code.includes('setSilhouetteSize(settings.silhouetteSizePercent)'), 'Silhouette size applied');
     assert.ok(code.includes('setTopologyRepulsionA'), 'Topology A applied');
     assert.ok(code.includes('setTopologyRepulsionB'), 'Topology B applied');
     assert.ok(code.includes('setTopologyRepulsionX'), 'Topology X applied');

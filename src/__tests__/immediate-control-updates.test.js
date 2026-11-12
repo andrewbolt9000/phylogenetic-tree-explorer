@@ -50,9 +50,9 @@ test('Immediate Control Updates Without Node Dragging', async (t) => {
   await t.test('SettingsUI calls visualization setters when settings change', () => {
     const settingsUICode = fs.readFileSync('./src/ui/SettingsUI.js', 'utf-8');
     
-    // Verify SettingsUI calls silhouette setters
-    assert.match(settingsUICode, /setSilhouetteSize\(settings\.silhouetteSize\)/,
-      'SettingsUI should call setSilhouetteSize');
+    // Verify SettingsUI calls silhouette setters with correct setting names
+    assert.match(settingsUICode, /setSilhouetteSize\(settings\.silhouetteSizePercent\)/,
+      'SettingsUI should call setSilhouetteSize with silhouetteSizePercent');
     
     assert.match(settingsUICode, /setSilhouetteXOffset\(settings\.silhouetteXOffset\)/,
       'SettingsUI should call setSilhouetteXOffset');

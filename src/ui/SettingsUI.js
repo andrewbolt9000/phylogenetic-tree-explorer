@@ -33,8 +33,9 @@ class SettingsUI {
     this.settings.onChange((newSettings) => {
       if (!this.updatingUI) {
         this._updateUIFromSettings(newSettings);
-        this._applySettingsToVisualization(newSettings);
       }
+
+      this._applySettingsToVisualization(newSettings);
     });
     
     // Add import/export buttons
@@ -76,26 +77,26 @@ class SettingsUI {
   _wireControls() {
     const controlMap = {
       // Force/physics controls
-      'charge-slider': { setting: 'chargeStrength', transform: v => -parseInt(v), display: 'charge-value' },
-      'link-slider': { setting: 'linkStrength', transform: v => parseInt(v) / 1000, display: 'link-value' },
+      'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
+      'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v) / 1000, display: 'link-value' },
       'edge-thickness-slider': { setting: 'edgeThickness', transform: v => parseFloat(v), display: 'edge-thickness-value' },
       
       // Topology repulsion equation: F = B * (A + X) / D
-      'topology-repulsion-a-slider': { setting: 'topologyRepulsionA', transform: v => parseInt(v), display: 'topology-repulsion-a-value' },
-      'topology-repulsion-b-slider': { setting: 'topologyRepulsionB', transform: v => parseInt(v), display: 'topology-repulsion-b-value' },
+      'topology-repulsion-a-slider': { setting: 'topologyRepulsionA', transform: v => parseFloat(v), display: 'topology-repulsion-a-value' },
+      'topology-repulsion-b-slider': { setting: 'topologyRepulsionB', transform: v => parseFloat(v), display: 'topology-repulsion-b-value' },
       'topology-repulsion-x-slider': { setting: 'topologyRepulsionX', transform: v => parseInt(v), display: 'topology-repulsion-x-value' },
       
       // Appearance controls
-      'node-circle-slider': { setting: 'nodeCircleScale', transform: v => parseFloat(v), display: 'node-circle-value' },
-      'font-size-slider': { setting: 'fontSizeBase', transform: v => parseInt(v), display: 'font-size-value' },
+      'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
+      'font-size-slider': { setting: 'graphFontSize', transform: v => parseInt(v), display: 'font-size-value' },
       'sidebar-font-size-slider': { setting: 'sidebarFontSize', transform: v => parseInt(v), display: 'sidebar-font-size-value' },
       
       // Silhouette controls
-      'silhouette-size-slider': { setting: 'silhouetteSize', transform: v => parseInt(v), display: 'silhouette-size-value', suffix: '%' },
+      'silhouette-size-slider': { setting: 'silhouetteSizePercent', transform: v => parseInt(v), display: 'silhouette-size-value', suffix: '%' },
       'silhouette-x-offset-slider': { setting: 'silhouetteXOffset', transform: v => parseInt(v), display: 'silhouette-x-offset-value', suffix: 'px' },
       'silhouette-y-offset-slider': { setting: 'silhouetteYOffset', transform: v => parseInt(v), display: 'silhouette-y-offset-value', suffix: 'px' },
       'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
-      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseInt(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
+      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
       
       // Toggle controls
       'show-node-dates-toggle': { setting: 'showNodeDates', transform: v => v.checked, isToggle: true },
@@ -119,7 +120,9 @@ class SettingsUI {
       element.addEventListener('input', (e) => {
         try {
           this.updatingUI = true;
-          const value = config.transform(e.target);
+          const value = config.transform(
+            config.isToggle ? e.target : e.target.value
+          );
           this.settings.setSetting(config.setting, value);
           this.updatingUI = false;
           
@@ -152,16 +155,16 @@ class SettingsUI {
    */
   _updateUIFromSettings(settings) {
     const sliderMap = {
-      chargeStrength: 'charge-slider',
+      charge: 'charge-slider',
       linkStrength: 'link-slider',
       edgeThickness: 'edge-thickness-slider',
       topologyRepulsionA: 'topology-repulsion-a-slider',
       topologyRepulsionB: 'topology-repulsion-b-slider',
       topologyRepulsionX: 'topology-repulsion-x-slider',
-      nodeCircleScale: 'node-circle-slider',
-      fontSizeBase: 'font-size-slider',
+      nodeCircleSize: 'node-circle-slider',
+      graphFontSize: 'font-size-slider',
       sidebarFontSize: 'sidebar-font-size-slider',
-      silhouetteSize: 'silhouette-size-slider',
+      silhouetteSizePercent: 'silhouette-size-slider',
       silhouetteXOffset: 'silhouette-x-offset-slider',
       silhouetteYOffset: 'silhouette-y-offset-slider',
       silhouetteGrayscale: 'silhouette-grayscale-slider',
@@ -177,8 +180,11 @@ class SettingsUI {
     Object.entries(sliderMap).forEach(([settingKey, elementId]) => {
       const element = document.getElementById(elementId);
       if (element && settings[settingKey] !== undefined) {
-        // Handle charge specially (it's stored negative, displayed positive)
-        const displayValue = settingKey === 'chargeStrength' ? -settings[settingKey] : settings[settingKey];
+        let displayValue = settings[settingKey];
+        // For opacity, convert from 0-1 to 0-100 for display
+        if (settingKey === 'silhouetteOpacity') {
+          displayValue = Math.round(displayValue * 100);
+        }
         element.value = displayValue;
       }
     });
@@ -200,8 +206,8 @@ class SettingsUI {
     if (!this.viz) return;
     
     // Apply force parameters
-    if (settings.chargeStrength !== undefined) {
-      this.viz.setChargeStrength(settings.chargeStrength);
+    if (settings.charge !== undefined) {
+      this.viz.setChargeStrength(-settings.charge);  // Negate for repulsion
     }
     if (settings.linkStrength !== undefined) {
       this.viz.setLinkStrength(settings.linkStrength);
@@ -222,16 +228,16 @@ class SettingsUI {
     if (settings.edgeThickness !== undefined) {
       this.viz.setEdgeThickness(settings.edgeThickness);
     }
-    if (settings.nodeCircleScale !== undefined) {
-      this.viz.setNodeCircleScale(settings.nodeCircleScale);
+    if (settings.nodeCircleSize !== undefined) {
+      this.viz.setNodeCircleSize(settings.nodeCircleSize);
     }
-    if (settings.fontSizeBase !== undefined) {
-      this.viz.setFontSize(settings.fontSizeBase);
+    if (settings.graphFontSize !== undefined) {
+      this.viz.setGraphFontSize(settings.graphFontSize);
     }
     
     // Apply silhouette parameters
-    if (settings.silhouetteSize !== undefined) {
-      this.viz.setSilhouetteSize(settings.silhouetteSize);
+    if (settings.silhouetteSizePercent !== undefined) {
+      this.viz.setSilhouetteSize(settings.silhouetteSizePercent);
     }
     if (settings.silhouetteXOffset !== undefined) {
       this.viz.setSilhouetteXOffset(settings.silhouetteXOffset);

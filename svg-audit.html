@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>SVG Background Audit</title>
+  <style>
+    body { font-family: sans-serif; margin: 20px; }
+    .test-group { border: 1px solid #ccc; padding: 20px; margin: 10px 0; }
+    svg { border: 1px solid red; width: 200px; height: 200px; }
+    .info { font-size: 12px; margin-top: 10px; }
+  </style>
+</head>
+<body>
+  <h1>PhyloExplorer SVG Asset Audit</h1>
+  
+  <div class="test-group">
+    <h2>Brown Rat (Rattus norvegicus)</h2>
+    <img src="./assets/silhouettes/rattus-norvegicus.svg" alt="Brown Rat" width="200" height="200">
+    <div class="info">
+      <p>Expected: Black silhouette on transparent background</p>
+      <p id="rat-status">Loading...</p>
+    </div>
+  </div>
+
+  <div class="test-group">
+    <h2>Red Kangaroo (Macropus rufus)</h2>
+    <img src="./assets/silhouettes/macropus-rufus.svg" alt="Red Kangaroo" width="200" height="200">
+    <div class="info">
+      <p>Expected: Black silhouette on transparent background</p>
+      <p id="kangaroo-status">Loading...</p>
+    </div>
+  </div>
+
+  <div class="test-group">
+    <h2>Common Cuscus (Phalanger orientalis)</h2>
+    <p>Status: MISSING in manifest (PNG-only or not found)</p>
+    <div class="info" id="cuscus-status">Loading...</div>
+  </div>
+
+  <div class="test-group">
+    <h2>Domestic Cattle (Bos taurus)</h2>
+    <p>Status: MISSING in manifest (PNG-only or not found)</p>
+    <div class="info" id="cattle-status">Loading...</div>
+  </div>
+
+  <div class="test-group">
+    <h2>Common Chimpanzee (Pan troglodytes)</h2>
+    <p>Status: MISSING in manifest (PNG-only or not found)</p>
+    <div class="info" id="chimp-status">Loading...</div>
+  </div>
+
+  <script>
+    async function auditAssets() {
+      // Check manifest
+      const manifestResponse = await fetch('./assets/silhouettes/PRODUCTION_MANIFEST.json');
+      const manifest = await manifestResponse.json();
+      
+      const taxaToCheck = [
+        'rattus-norvegicus',
+        'macropus-rufus',
+        'phalanger-orientalis',
+        'bos-taurus',
+        'pan-troglodytes'
+      ];
+      
+      for (const taxaId of taxaToCheck) {
+        const entry = manifest[taxaId];
+        if (!entry) {
+          console.log(`${taxaId}: NOT IN MANIFEST`);
+          continue;
+        }
+        
+        const status = entry.status || 'PRODUCTION';
+        const filename = entry.filename;
+        const statusElement = document.getElementById(`${taxaId.replace('-', '-')}-status`);
+        
+        if (status === 'MISSING') {
+          const msg = `Status: MISSING - ${entry.reason}`;
+          console.log(`${taxaId}: ${msg}`);
+          if (statusElement) statusElement.textContent = msg;
+        } else {
+          // Try to load and inspect the SVG
+          try {
+            const svgResponse = await fetch(`./assets/silhouettes/${filename}`);
+            const svgText = await svgResponse.text();
+            
+            // Check for obvious issues
+            const hasRect = svgText.includes('<rect') && svgText.includes('fill="#');
+            const hasViewBox = svgText.includes('viewBox');
+            const viewBoxMatch = svgText.match(/viewBox="([^"]+)"/);
+            
+            const msg = `Loaded successfully - ViewBox: ${viewBoxMatch ? viewBoxMatch[1] : 'NONE'}, ${hasRect ? 'Has rects' : 'No rects'}`;
+            console.log(`${taxaId}: ${msg}`);
+            if (statusElement) statusElement.textContent = msg;
+          } catch (e) {
+            const msg = `Failed to load: ${e.message}`;
+            console.log(`${taxaId}: ${msg}`);
+            if (statusElement) statusElement.textContent = msg;
+          }
+        }
+      }
+    }
+    
+    window.addEventListener('load', auditAssets);
+  </script>
+</body>
+</html>
