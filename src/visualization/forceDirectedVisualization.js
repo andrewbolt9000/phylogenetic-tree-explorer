@@ -215,9 +215,6 @@ class ForceDirectedVisualization {
           .strength(this.currentChargeStrength))
         .force('collision', d3.forceCollide()
           .radius(d => d.type === 'terminal' ? 8 : 6))
-        .force('center', d3.forceCenter(
-          this.options.width / 2,
-          this.options.height / 2))
         .alpha(1)
         .alphaDecay(0.02)
         .velocityDecay(0.4);
