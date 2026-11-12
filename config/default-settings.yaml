@@ -8,14 +8,24 @@
 
 charge: 300  # Repulsion strength (0-1500)
 linkStrength: 0.50  # Link stiffness (0-1)
+rootLinkStrength: 0  # Root-proximity link strength modifier (UI: 0-10000, internal: 0-100 via /100 conversion; 0 disables)
+ageLinkStrength: 0.00  # Age-based link strength modifier (UI: 0-100; produces ageLinkStrength/1000 * divergenceAgeMa; 0 disables)
 
 # Topology repulsion equation: F_topology = B * (A + X) / D
 # Where D is shortest-path graph distance, X is the master control
-topologyRepulsionX: 0  # Master control; 0 disables all topology repulsion (0-200)
-topologyRepulsionA: 1  # Baseline/offset parameter (0-10)
-topologyRepulsionB: 1  # Force scale multiplier (0-10)
+# UI range: 0-100; internal range: 0-10 (divided by 10)
+topologyRepulsionX: 0  # Master control; 0 disables all topology repulsion (UI: 0-100)
+topologyRepulsionA: 10  # Baseline/offset parameter (UI: 0-100)
+topologyRepulsionB: 10  # Force scale multiplier (UI: 0-100)
 
 edgeElasticityC: 0  # Root elasticity adjustment (0-10)
+
+# ROOT POSITIONING AND WIND
+# Controls for root locking and directional wind force
+
+lockRootPosition: true  # Keep the root fixed in place
+windDirection: 0  # Wind direction in degrees (0=right, 90=down, 180=left, 270=up)
+windStrength: 0  # Directional wind force (0-100; 0 disables wind)
 
 # APPEARANCE
 # Controls for visual styling of edges, nodes, and text
@@ -41,5 +51,5 @@ silhouetteOpacity: 1.0  # Opacity (0-1)
 # TOGGLES
 # Enable or disable optional features
 
-showNodeDates: false  # Display divergence age estimates
+showNodeDates: true  # Display divergence age estimates
 showAncestralLabels: false  # Display clade names on ancestral nodes

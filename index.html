@@ -4,10 +4,10 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PhyloExplorer - Mammalian Phylogenetic Tree</title>
-  
+
   <!-- Load D3.js from CDN so it's available for module imports -->
   <script src="https://d3js.org/d3.v7.min.js"></script>
-  
+
   <style>
     /* Jost font definition */
     @font-face {
@@ -280,7 +280,7 @@
   <div class="container">
     <div class="sidebar">
       <h1>PhyloExplorer</h1>
-      
+
       <div id="error-container"></div>
 
       <div id="loading" class="loading" style="display: none;">
@@ -295,7 +295,7 @@
             <span>Repulsion (Charge)</span>
             <span class="control-value" id="charge-value">300</span>
           </div>
-          <input type="range" id="charge-slider" 
+          <input type="range" id="charge-slider"
                  min="0" max="1500" value="300" step="10">
           <p class="info-text">
             Higher values increase repulsion between nodes. Zero disables repulsion.
@@ -310,13 +310,13 @@
           <p class="info-text">
             Where: A = baseline offset, B = force scale, X = master control, D = graph distance
           </p>
-          
+
           <div class="subcontrol">
             <div class="control-label">
               <span>Topology Baseline (A)</span>
               <span class="control-value" id="topology-repulsion-a-value">1</span>
             </div>
-            <input type="range" id="topology-repulsion-a-slider" 
+            <input type="range" id="topology-repulsion-a-slider"
                    min="0" max="100" value="10" step="1">
             <p class="info-text" style="font-size: 0.9em;">
               Baseline contribution. At A=0, repulsion depends entirely on X.
@@ -328,7 +328,7 @@
               <span>Topology Multiplier (B)</span>
               <span class="control-value" id="topology-repulsion-b-value">1</span>
             </div>
-            <input type="range" id="topology-repulsion-b-slider" 
+            <input type="range" id="topology-repulsion-b-slider"
                    min="0" max="100" value="10" step="1">
             <p class="info-text" style="font-size: 0.9em;">
               Overall force scale. Larger values amplify the topology repulsion effect.
@@ -340,7 +340,7 @@
               <span>Topology Strength (X)</span>
               <span class="control-value" id="topology-repulsion-x-value">0</span>
             </div>
-            <input type="range" id="topology-repulsion-x-slider" 
+            <input type="range" id="topology-repulsion-x-slider"
                    min="0" max="100" value="0" step="1">
             <p class="info-text" style="font-size: 0.9em;">
               Master control strength. Zero disables topology repulsion completely.
@@ -353,10 +353,68 @@
             <span>Link Strength</span>
             <span class="control-value" id="link-value">0.50</span>
           </div>
-          <input type="range" id="link-slider" 
-                 min="0" max="3" value="0.5" step="0.05">
+          <input type="range" id="link-slider"
+                 min="0" max="1" value="0.5" step="0.05">
           <p class="info-text">
             Controls how strongly parent-child edges pull nodes together.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Root Link Strength</span>
+            <span class="control-value" id="root-link-strength-value">0</span>
+          </div>
+          <input type="range" id="root-link-strength-slider"
+                 min="0" max="1000" value="0" step="1">
+          <p class="info-text">
+            Strengthens edges near the root. 0 = disabled.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Age Link Strength</span>
+            <span class="control-value" id="age-link-strength-value">0.00</span>
+          </div>
+          <input type="range" id="age-link-strength-slider"
+                 min="0" max="100" value="0" step="0.1">
+          <p class="info-text">
+            Additional link strength per million years of divergence. 0 = disabled.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Lock Root Position</span>
+          </div>
+          <input type="checkbox" id="lock-root-position-toggle" checked>
+          <p class="info-text">
+            Keep the root stationary while the other nodes move.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Wind Direction</span>
+            <span class="control-value" id="wind-direction-value">0°</span>
+          </div>
+          <input type="range" id="wind-direction-slider"
+                 min="0" max="360" value="0" step="1">
+          <p class="info-text">
+            0° right, 90° down, 180° left, 270° up.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Wind Strength</span>
+            <span class="control-value" id="wind-strength-value">0</span>
+          </div>
+          <input type="range" id="wind-strength-slider"
+                 min="0" max="100" value="0" step="1">
+          <p class="info-text">
+            Directional force applied to the nodes. Zero disables wind.
           </p>
         </div>
 
@@ -369,7 +427,7 @@
             <span>Edge Thickness</span>
             <span class="control-value" id="edge-thickness-value">1.5</span>
           </div>
-          <input type="range" id="edge-thickness-slider" 
+          <input type="range" id="edge-thickness-slider"
                  min="0.5" max="11" value="1.5" step="0.25">
           <p class="info-text">
             Controls the stroke width of phylogenetic edges.
@@ -381,7 +439,7 @@
             <span>Node Circle Size</span>
             <span class="control-value" id="node-circle-value">1.0</span>
           </div>
-          <input type="range" id="node-circle-slider" 
+          <input type="range" id="node-circle-slider"
                  min="0.5" max="8" value="1.0" step="0.1">
           <p class="info-text">
             Controls the radius of the grey circle behind each node.
@@ -393,7 +451,7 @@
             <span>Graph Font Size</span>
             <span class="control-value" id="font-size-value">11px</span>
           </div>
-          <input type="range" id="font-size-slider" 
+          <input type="range" id="font-size-slider"
                  min="8" max="38" value="11" step="1">
           <p class="info-text">
             Controls the font size of node labels.
@@ -405,7 +463,7 @@
             <span>Sidebar Font Size</span>
             <span class="control-value" id="sidebar-font-size-value">14px</span>
           </div>
-          <input type="range" id="sidebar-font-size-slider" 
+          <input type="range" id="sidebar-font-size-slider"
                  min="11" max="24" value="14" step="1">
           <p class="info-text">
             Controls the font size of sidebar text and controls.
@@ -417,7 +475,7 @@
             <span>Silhouette Size</span>
             <span class="control-value" id="silhouette-size-value">100%</span>
           </div>
-          <input type="range" id="silhouette-size-slider" 
+          <input type="range" id="silhouette-size-slider"
                  min="30" max="300" value="100" step="10">
           <p class="info-text">
             Controls the size of animal silhouettes relative to default.
@@ -429,7 +487,7 @@
             <span>Silhouette Horizontal Offset</span>
             <span class="control-value" id="silhouette-x-offset-value">0px</span>
           </div>
-          <input type="range" id="silhouette-x-offset-slider" 
+          <input type="range" id="silhouette-x-offset-slider"
                  min="-100" max="100" value="0" step="1">
           <p class="info-text">
             Shifts silhouettes left or right relative to node centers.
@@ -441,7 +499,7 @@
             <span>Silhouette Vertical Offset</span>
             <span class="control-value" id="silhouette-y-offset-value">0px</span>
           </div>
-          <input type="range" id="silhouette-y-offset-slider" 
+          <input type="range" id="silhouette-y-offset-slider"
                  min="-100" max="100" value="0" step="1">
           <p class="info-text">
             Shifts silhouettes up or down relative to node centers.
@@ -453,7 +511,7 @@
             <span>Silhouette Grayscale</span>
             <span class="control-value" id="silhouette-grayscale-value">50%</span>
           </div>
-          <input type="range" id="silhouette-grayscale-slider" 
+          <input type="range" id="silhouette-grayscale-slider"
                  min="0" max="100" value="50" step="5">
           <p class="info-text">
             Controls grayscale: 0% = black, 50% = gray, 100% = white.
@@ -465,7 +523,7 @@
             <span>Silhouette Opacity</span>
             <span class="control-value" id="silhouette-opacity-value">100%</span>
           </div>
-          <input type="range" id="silhouette-opacity-slider" 
+          <input type="range" id="silhouette-opacity-slider"
                  min="0" max="100" value="100" step="5">
           <p class="info-text">
             Controls transparency: 0% = invisible, 100% = fully opaque.
@@ -604,13 +662,13 @@
         try {
           const manifestResponse = await fetch('./assets/silhouettes/PRODUCTION_MANIFEST.json');
           const manifestData = await manifestResponse.json();
-          
+
           // Create reverse mapping: taxonomyId -> filename, plus metadata
           if (manifestData.silhouetteMappings) {
             for (const [key, mapping] of Object.entries(manifestData.silhouetteMappings)) {
               if (mapping.taxonomyId && mapping.filename) {
                 silhouetteMappingByTaxonId[mapping.taxonomyId] = mapping.filename;
-                
+
                 // Store metadata for diagnostic display
                 silhouetteMetadata[mapping.taxonomyId] = {
                   commonName: mapping.commonName,
@@ -640,7 +698,10 @@
           width: document.getElementById('graph').clientWidth,
           height: document.getElementById('graph').clientHeight,
           rootNodeId: hypothesisData.rootNodeId,
-          assetMetadata: silhouetteMetadata  // Pass asset metadata for diagnostics
+          hypothesisId: hypothesisData.hypothesisId,  // Active hypothesis ID for divergence data lookups (independent of display toggles)
+          assetMetadata: silhouetteMetadata,  // Pass asset metadata for diagnostics
+          phyloGraph: graph,  // Pass scientific graph for topology repulsion distance calculations
+          divergenceData: divergenceData  // Pass divergence data for age-based link strength calculations
         });
 
         viz.render();
@@ -653,10 +714,10 @@
         // Diagnostic: Report on asset loading
         console.log('\n=== PhyloExplorer Asset Loading Diagnostic ===');
         console.log(`Total terminal species: ${adapter.getTerminalCount()}`);
-        
+
         let assetsWithPhylo = 0;
         let assetsMissing = 0;
-        
+
         nodes.forEach(node => {
           if (node.type === 'terminal') {
             const metadata = silhouetteMetadata[node.taxonId];
@@ -671,10 +732,10 @@
             }
           }
         });
-        
+
         console.log(`\nAssets with PhyloPic sources: ${assetsWithPhylo}/${adapter.getTerminalCount()}`);
         console.log(`Assets missing: ${assetsMissing}/${adapter.getTerminalCount()}`);
-        
+
         // Store for runtime checking
         window.phyloExplorerAssets = {
           metadata: silhouetteMetadata,

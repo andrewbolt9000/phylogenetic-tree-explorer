@@ -134,13 +134,13 @@ test('Visualization Updates Not Suppressed by updatingUI Flag', async (t) => {
   await t.test('Topology repulsion parameters all valid', () => {
     const settings = new VisualizationSettings();
 
-    settings.setSetting('topologyRepulsionA', 2.5);
-    settings.setSetting('topologyRepulsionB', 3);
+    settings.setSetting('topologyRepulsionA', 25);
+    settings.setSetting('topologyRepulsionB', 30);
     settings.setSetting('topologyRepulsionX', 75);
 
     const newSettings = settings.getSettings();
-    assert.strictEqual(newSettings.topologyRepulsionA, 2.5);
-    assert.strictEqual(newSettings.topologyRepulsionB, 3);
+    assert.strictEqual(newSettings.topologyRepulsionA, 25);
+    assert.strictEqual(newSettings.topologyRepulsionB, 30);
     assert.strictEqual(newSettings.topologyRepulsionX, 75);
 
     // All should be valid numbers

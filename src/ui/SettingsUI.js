@@ -38,6 +38,12 @@ class SettingsUI {
       this._applySettingsToVisualization(newSettings);
     });
     
+    // Apply initial settings explicitly
+    // Settings loaded before listener registration may not have been applied
+    const current = this.settings.getSettings();
+    this._updateUIFromSettings(current);
+    this._applySettingsToVisualization(current);
+    
     // Add import/export buttons
     this._addImportExportButtons();
   }
@@ -78,13 +84,20 @@ class SettingsUI {
     const controlMap = {
       // Force/physics controls
       'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
-      'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v) / 1000, display: 'link-value' },
+      'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v), display: 'link-value' },
+      'root-link-strength-slider': { setting: 'rootLinkStrength', transform: v => parseInt(v), display: 'root-link-strength-value' },
+      'age-link-strength-slider': { setting: 'ageLinkStrength', transform: v => parseFloat(v), display: 'age-link-strength-value', suffix: '' },
       'edge-thickness-slider': { setting: 'edgeThickness', transform: v => parseFloat(v), display: 'edge-thickness-value' },
       
       // Topology repulsion equation: F = B * (A + X) / D
       'topology-repulsion-a-slider': { setting: 'topologyRepulsionA', transform: v => parseFloat(v), display: 'topology-repulsion-a-value' },
       'topology-repulsion-b-slider': { setting: 'topologyRepulsionB', transform: v => parseFloat(v), display: 'topology-repulsion-b-value' },
       'topology-repulsion-x-slider': { setting: 'topologyRepulsionX', transform: v => parseInt(v), display: 'topology-repulsion-x-value' },
+      
+      // Root positioning and wind controls
+      'lock-root-position-toggle': { setting: 'lockRootPosition', transform: v => v.checked, isToggle: true },
+      'wind-direction-slider': { setting: 'windDirection', transform: v => parseInt(v), display: 'wind-direction-value', suffix: '°' },
+      'wind-strength-slider': { setting: 'windStrength', transform: v => parseInt(v), display: 'wind-strength-value' },
       
       // Appearance controls
       'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
@@ -157,10 +170,14 @@ class SettingsUI {
     const sliderMap = {
       charge: 'charge-slider',
       linkStrength: 'link-slider',
+      rootLinkStrength: 'root-link-strength-slider',
+      ageLinkStrength: 'age-link-strength-slider',
       edgeThickness: 'edge-thickness-slider',
       topologyRepulsionA: 'topology-repulsion-a-slider',
       topologyRepulsionB: 'topology-repulsion-b-slider',
       topologyRepulsionX: 'topology-repulsion-x-slider',
+      windDirection: 'wind-direction-slider',
+      windStrength: 'wind-strength-slider',
       nodeCircleSize: 'node-circle-slider',
       graphFontSize: 'font-size-slider',
       sidebarFontSize: 'sidebar-font-size-slider',
@@ -172,6 +189,7 @@ class SettingsUI {
     };
     
     const toggleMap = {
+      lockRootPosition: 'lock-root-position-toggle',
       showNodeDates: 'show-node-dates-toggle',
       showAncestralLabels: 'show-ancestral-labels-toggle',
     };
@@ -211,6 +229,21 @@ class SettingsUI {
     }
     if (settings.linkStrength !== undefined) {
       this.viz.setLinkStrength(settings.linkStrength);
+    }
+    if (settings.rootLinkStrength !== undefined) {
+      this.viz.setRootLinkStrength(settings.rootLinkStrength);
+    }
+    if (settings.ageLinkStrength !== undefined) {
+      this.viz.setAgeLinkStrength(settings.ageLinkStrength);
+    }
+    if (settings.lockRootPosition !== undefined) {
+      this.viz.setRootLocked(settings.lockRootPosition);
+    }
+    if (settings.windDirection !== undefined) {
+      this.viz.setWindDirection(settings.windDirection);
+    }
+    if (settings.windStrength !== undefined) {
+      this.viz.setWindStrength(settings.windStrength);
     }
     
     // Apply topology repulsion parameters (A, B, X)

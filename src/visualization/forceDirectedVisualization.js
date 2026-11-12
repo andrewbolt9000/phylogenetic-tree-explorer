@@ -61,11 +61,26 @@ class ForceDirectedVisualization {
     // Current force parameters
     this.currentChargeStrength = this.options.chargeStrength;
     this.currentLinkStrength = this.options.linkStrength;
+    this.currentRootLinkStrength = 0;  // Root-proximity modifier (UI 0-1000, internal 0-10 via /100 in _computePerLinkStrength)
+    this.currentAgeLinkStrength = 0;   // Age-based modifier (UI 0-100, produces per-Ma coefficient via /1000 in _computePerLinkStrength)
     
     // Topology repulsion equation: F_topology = B * (A + X) / D
-    this.topologyRepulsionX = 0;  // Master control strength (0 disables)
-    this.topologyRepulsionA = 1;  // Baseline offset parameter
-    this.topologyRepulsionB = 1;  // Overall force scale multiplier
+    // Internal values are 0-10; UI values are 0-100 (divided by 10 when setting)
+    this.topologyRepulsionX = 0;  // Master control strength (internal: 0, UI: 0 disables)
+    this.topologyRepulsionA = 1;  // Baseline offset parameter (internal: 1, UI: 10)
+    this.topologyRepulsionB = 1;  // Overall force scale multiplier (internal: 1, UI: 10)
+
+    // Node depth cache for root link strength calculations
+    this.nodeDepths = {};   // Map of nodeId to depth from root
+    this.maxDepth = 0;      // Maximum depth (for normalization)
+
+    // Root positioning
+    this.lockRootPosition = true;
+
+    // Directional wind force
+    this.windDirection = 0; // Degrees: 0 = right
+    this.windStrength = 0;  // UI range 0-100
+    this.windForce = null;
 
     // Appearance parameters
     this.edgeThickness = 1.5;
@@ -81,13 +96,14 @@ class ForceDirectedVisualization {
 
     // Node date display
     this.showNodeDates = false;
-    this.divergenceData = null;
+    this.divergenceData = this.options.divergenceData || null;  // Can be set during construction or later
+    this.hypothesisId = this.options.hypothesisId || null;  // The active hypothesis ID for data lookups (passed independently of display toggles)
     this.nodeDateLabels = null;
 
     // Ancestral labels display
     this.showAncestralLabels = false;
     this.hypothesisData = null;
-    this.phyloGraph = null;  // Store graph for label generation
+    this.phyloGraph = null;  // Store graph for label generation and topology repulsion
     this.ancestralLabelElements = null;
     this.rootNodeId = this.options.rootNodeId;
 
@@ -97,6 +113,49 @@ class ForceDirectedVisualization {
     
     // Asset metadata for diagnostics
     this.assetMetadata = this.options.assetMetadata;
+
+    // Initialize phyloGraph and compute distances if provided
+    if (this.options.phyloGraph) {
+      this._initializeGraphAndCache(this.options.phyloGraph);
+    }
+  }
+
+  /**
+   * Initialize the phyloGraph and precompute distance cache.
+   * Called during construction if phyloGraph is provided in options,
+   * or when setShowAncestralLabels receives a new graph.
+   * 
+   * @param {PhyloGraph} phyloGraph - The scientific phylogenetic graph
+   * @throws {Error} If graph is invalid
+   * @private
+   */
+  _initializeGraphAndCache(phyloGraph) {
+    // Validate graph
+    if (!phyloGraph) {
+      console.warn('[ForceDirectedVisualization] No phyloGraph provided for topology repulsion initialization');
+      this.phyloGraph = null;
+      this.graphDistances = null;
+      return;
+    }
+
+    if (typeof phyloGraph.getNodes !== 'function') {
+      console.error('[ForceDirectedVisualization] Invalid phyloGraph: missing getNodes() method');
+      this.phyloGraph = null;
+      this.graphDistances = null;
+      return;
+    }
+
+    // Store the graph
+    this.phyloGraph = phyloGraph;
+
+    // Compute and cache distances
+    try {
+      this.graphDistances = this._computeGraphDistances(phyloGraph);
+      console.log(`[ForceDirectedVisualization] Graph distances computed for ${Object.keys(this.graphDistances).length} nodes`);
+    } catch (error) {
+      console.error('[ForceDirectedVisualization] Failed to compute graph distances:', error.message);
+      this.graphDistances = null;
+    }
   }
 
   /**
@@ -119,6 +178,10 @@ class ForceDirectedVisualization {
 
     // Add a group for the graph content (for panning)
     this.g = this.svg.append('g');
+
+    // Compute node depths for root link strength modifiers
+    this.nodeDepths = this._computeNodeDepths();
+    this.maxDepth = Math.max(0, ...Object.values(this.nodeDepths));
 
     // Create force simulation
     this._createSimulation();
@@ -165,6 +228,12 @@ class ForceDirectedVisualization {
           .id(d => d.id)
           .strength(this.currentLinkStrength));
       }
+
+      // Apply root lock after D3 has initialized node positions.
+      this._applyRootLock();
+
+      // Register wind force if enabled.
+      this._updateWindForce();
     } catch (e) {
       console.error('[ForceDirectedVisualization] Error creating simulation:', e.message);
       throw e;
@@ -328,6 +397,7 @@ class ForceDirectedVisualization {
   /**
    * Render date labels for ancestral nodes.
    * Only displays if showNodeDates is true and divergenceData is available.
+   * Uses the helper to get divergence estimates (returns null for 0 or multiple estimates).
    * @private
    */
   _renderDateLabels() {
@@ -338,24 +408,18 @@ class ForceDirectedVisualization {
     }
 
     // Extract central estimate for each node from divergenceData
+    // Use helper that returns null for 0 or multiple estimates (never silently selects)
     const datesByNodeId = {};
-    if (this.divergenceData) {
-      // The DivergenceLoader returns { estimates, sourceMetadata, estimatesByHypothesis }
-      // We need to use estimatesByHypothesis which has structure: hypothesisId -> nodeId -> {estimates: [...]}
+    if (this.hypothesisId) {
       const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
+      const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
       
-      for (const hypothesisId in estimatesByHypothesis) {
-        const hypothesisEstimates = estimatesByHypothesis[hypothesisId];
-        
+      if (hypothesisEstimates) {
         for (const nodeId in hypothesisEstimates) {
-          const nodeData = hypothesisEstimates[nodeId];
-          const nodeEstimates = nodeData.estimates || [];
-          
-          // Use first estimate if multiple exist
-          if (Array.isArray(nodeEstimates) && nodeEstimates.length > 0) {
-            const estimate = nodeEstimates[0];
-            const unit = estimate.unit || 'Ma';
-            datesByNodeId[nodeId] = `${estimate.centralEstimate}${unit}`;
+          const divergenceAge = this._getDivergenceEstimate(nodeId);
+          if (divergenceAge !== null) {
+            const unit = 'Ma';
+            datesByNodeId[nodeId] = `${divergenceAge}${unit}`;
           }
         }
       }
@@ -574,8 +638,15 @@ class ForceDirectedVisualization {
       })
       .on('end', (event, d) => {
         if (!event.active) this.simulation.alphaTarget(0);
-        d.fx = null;
-        d.fy = null;
+
+        if (d.id === this.rootNodeId && this.lockRootPosition) {
+          // Keep a locked root pinned at its newly dragged position.
+          d.fx = d.x;
+          d.fy = d.y;
+        } else {
+          d.fx = null;
+          d.fy = null;
+        }
       }));
   }
 
@@ -685,6 +756,106 @@ class ForceDirectedVisualization {
   }
 
   /**
+   * Get the divergence age (Ma) for a node.
+   * 
+   * Returns the central estimate only when exactly one estimate is available.
+   * Returns null when there are zero or multiple estimates (never silently selects first).
+   * Returns null if divergence data is unavailable.
+   * 
+   * @param {string} nodeId - The node ID
+   * @returns {number|null} Central estimate in Ma, or null if unavailable or ambiguous
+   * @private
+   */
+  _getDivergenceEstimate(nodeId) {
+    if (!this.divergenceData || !nodeId || !this.hypothesisId) {
+      return null;
+    }
+
+    const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
+    
+    // Navigate: hypothesisId -> nodeId -> {estimates: [...]}
+    const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
+    if (!hypothesisEstimates) {
+      return null;
+    }
+    
+    const nodeData = hypothesisEstimates[nodeId];
+    if (!nodeData) {
+      return null;
+    }
+    
+    const estimates = nodeData.estimates;
+    if (!Array.isArray(estimates)) {
+      return null;
+    }
+    
+    // Only return if exactly one estimate exists
+    if (estimates.length === 1) {
+      return estimates[0].centralEstimate || null;
+    }
+    
+    // Multiple estimates: return null (don't silently select first)
+    // Zero estimates: return null
+    return null;
+  }
+
+  /**
+   * Compute per-link strength using base strength, root-proximity modifier, and age modifier.
+   * 
+   * Formula:
+   * rootContribution = baseLinkStrength * (rootLinkStrength / 100) * (1 - childDepth / maxDepth)
+   * ageContribution = (ageLinkStrength / 1000) * (divergenceAgeMa / 100)
+   * edgeStrength = baseLinkStrength + rootContribution + ageContribution
+   * 
+   * Scaling:
+   * - rootLinkStrength: UI 0-1000 → internal 0-10 via /100 conversion
+   * - ageLinkStrength: UI 0-100 → coefficient scaled by age/100 normalization
+   *   - At max slider (100), max age (320 Ma): 100/1000 * 320/100 = 0.32 contribution
+   *   - At mid slider (50), median age (80 Ma): 50/1000 * 80/100 = 0.04 contribution
+   *   - At max slider (100), young age (6 Ma): 100/1000 * 6/100 = 0.006 contribution
+   *
+   * @param {Object} link - D3 link object with source/target
+   * @param {number} baseLinkStrength - Base link strength (0-1)
+   * @param {number} rootLinkStrength - Root proximity modifier (UI 0-1000)
+   * @param {number} ageLinkStrength - Age modifier coefficient (UI 0-100)
+   * @returns {number} Per-link strength value
+   * @private
+   */
+  _computePerLinkStrength(link, baseLinkStrength, rootLinkStrength, ageLinkStrength) {
+    let strength = baseLinkStrength;
+
+    // Root-proximity contribution
+    // rootLinkStrength is UI 0-1000, convert to internal 0-10 via /100
+    const internalRootStrength = rootLinkStrength / 100;
+    if (internalRootStrength > 0 && this.maxDepth > 0) {
+      const targetId = typeof link.target === 'object' ? link.target.id : link.target;
+      const childDepth = this.nodeDepths[targetId] || 0;
+      const depthFraction = childDepth / this.maxDepth;
+      const rootContribution = baseLinkStrength * internalRootStrength * (1 - depthFraction);
+      strength += rootContribution;
+    }
+
+    // Age-based contribution
+    // ageLinkStrength is UI 0-100, normalized by age in hundreds of Ma
+    if (ageLinkStrength > 0 && this.divergenceData) {
+      const targetId = typeof link.target === 'object' ? link.target.id : link.target;
+      
+      // Get the divergence age for this node using the helper
+      // Returns null if zero or multiple estimates (never silently selects)
+      const divergenceAgeMa = this._getDivergenceEstimate(targetId);
+      
+      if (divergenceAgeMa !== null && divergenceAgeMa > 0) {
+        // Scale: (ageLinkStrength / 1000) * (age / 100)
+        // Normalizes ages to roughly 0-3.2 range (since max age ~320 Ma)
+        const ageContribution = (ageLinkStrength / 1000) * (divergenceAgeMa / 100);
+        strength += ageContribution;
+      }
+    }
+
+    return strength;
+  }
+
+  /**
    * Update the charge/repulsion force.
    */
   setChargeStrength(strength) {
@@ -698,14 +869,74 @@ class ForceDirectedVisualization {
 
   /**
    * Update the link/spring force.
+   * Uses per-link strength accessor to support root-proximity and age-based modifiers.
    */
   setLinkStrength(strength) {
     this.currentLinkStrength = strength;
     if (this.simulation) {
-      this.simulation.force('link', d3.forceLink(this.links)
-        .id(d => d.id)
-        .strength(strength));
+      // Update the existing force instead of recreating it
+      // This preserves D3's internal state and ensures idempotent updates
+      const linkForce = this.simulation.force('link');
+      if (linkForce) {
+        // Use per-link strength accessor if modifiers are active
+        if (this.currentRootLinkStrength > 0 || this.currentAgeLinkStrength > 0) {
+          linkForce.strength(link => 
+            this._computePerLinkStrength(
+              link, 
+              strength, 
+              this.currentRootLinkStrength, 
+              this.currentAgeLinkStrength
+            )
+          );
+        } else {
+          // Use scalar value when no modifiers are active
+          linkForce.strength(strength);
+        }
+      } else {
+        // Fallback: if no link force exists, create one
+        this.simulation.force('link', d3.forceLink(this.links)
+          .id(d => d.id)
+          .strength(link => 
+            this._computePerLinkStrength(
+              link, 
+              strength, 
+              this.currentRootLinkStrength, 
+              this.currentAgeLinkStrength
+            )
+          ));
+      }
       this.simulation.alpha(0.3).restart();
+    }
+  }
+
+  /**
+   * Set root-proximity link strength modifier.
+   * Strengthens edges near the root; affects parent-child pulling.
+   * 
+   * @param {number} value - UI value (0-100), converted to internal 0-10
+   */
+  setRootLinkStrength(value) {
+    // Store the raw UI value (0-1000) for use in _computePerLinkStrength
+    // Conversion to internal 0-10 happens in _computePerLinkStrength via /100
+    this.currentRootLinkStrength = value;
+    if (this.simulation) {
+      // Recompute link force with new modifier
+      this.setLinkStrength(this.currentLinkStrength);
+    }
+  }
+
+  /**
+   * Set age-based link strength modifier.
+   * Adds strength based on divergence age (Ma), normalized by age/100.
+   * Formula: ageContribution = (ageLinkStrength / 1000) * (divergenceAgeMa / 100)
+   * 
+   * @param {number} value - UI coefficient 0-100 (produces scaled age contribution)
+   */
+  setAgeLinkStrength(value) {
+    this.currentAgeLinkStrength = value;
+    if (this.simulation) {
+      // Recompute link force with new modifier
+      this.setLinkStrength(this.currentLinkStrength);
     }
   }
 
@@ -854,10 +1085,23 @@ class ForceDirectedVisualization {
 
   /**
    * Toggle display of node date labels.
+   * 
+   * Note: This controls label visibility only. Divergence data is passed during
+   * construction (divergenceData option) and is independent of this toggle.
+   * The divergence data is used for force calculations regardless of label visibility.
+   * 
+   * @param {boolean} show - Whether to show date labels
+   * @param {Object} divergenceData - (Optional) If provided, store this as the current data
    */
   setShowNodeDates(show, divergenceData) {
     this.showNodeDates = show;
-    this.divergenceData = divergenceData;
+    
+    // If new divergence data is provided, update it
+    // (For backward compatibility with existing code that passes data here)
+    if (divergenceData) {
+      this.divergenceData = divergenceData;
+    }
+    
     this._renderDateLabels();
   }
 
@@ -867,7 +1111,12 @@ class ForceDirectedVisualization {
   setShowAncestralLabels(show, hypothesisData, phyloGraph) {
     this.showAncestralLabels = show;
     this.hypothesisData = hypothesisData;
-    this.phyloGraph = phyloGraph;
+    
+    // If a different graph is supplied, update both phyloGraph and graphDistances together
+    if (phyloGraph && phyloGraph !== this.phyloGraph) {
+      this._initializeGraphAndCache(phyloGraph);
+    }
+    
     this._renderAncestralLabels();
   }
 
@@ -944,6 +1193,52 @@ class ForceDirectedVisualization {
   }
 
   /**
+   * Compute depth (distance from root) for each visualization node.
+   * Depth is the number of edges from root to this node.
+   * 
+   * @returns {Object} Map of nodeId to depth
+   * @private
+   */
+  _computeNodeDepths() {
+    const depths = {};
+    
+    if (!this.rootNodeId) {
+      console.warn('[ForceDirectedVisualization] No root node set; cannot compute depths');
+      return depths;
+    }
+
+    // BFS from root to assign depths
+    const queue = [[this.rootNodeId, 0]];
+    const visited = new Set([this.rootNodeId]);
+    depths[this.rootNodeId] = 0;
+
+    while (queue.length > 0) {
+      const [nodeId, depth] = queue.shift();
+      const vizNode = this.nodes.find(n => n.id === nodeId);
+      
+      if (!vizNode) continue;
+
+      // For each child of this node (in visualization links),
+      // find the next depth level
+      const childLinks = this.links.filter(l => 
+        (typeof l.source === 'object' ? l.source.id : l.source) === nodeId
+      );
+
+      for (const link of childLinks) {
+        const childId = typeof link.target === 'object' ? link.target.id : link.target;
+        
+        if (!visited.has(childId)) {
+          visited.add(childId);
+          depths[childId] = depth + 1;
+          queue.push([childId, depth + 1]);
+        }
+      }
+    }
+
+    return depths;
+  }
+
+  /**
    * Calculate topology-aware repulsion force strength based on graph distance.
    * Uses inverse-square distance decay: strength = scaleFactor / (1 + distance^2)
    * 
@@ -1016,6 +1311,13 @@ class ForceDirectedVisualization {
 
     // If we don't have a simulation yet, can't set up the force
     if (!this.simulation) {
+      return;
+    }
+
+    // Check that we have the required graph distance data
+    if (!this.graphDistances) {
+      console.warn('[ForceDirectedVisualization] Cannot enable topology repulsion: no graph distances computed. ' +
+                   'Supply a valid PhyloGraph during construction or via setShowAncestralLabels().');
       return;
     }
 
@@ -1107,6 +1409,91 @@ class ForceDirectedVisualization {
    */
   getAssetDiagnostics(taxonId) {
     return this.assetMetadata?.[taxonId] || null;
+  }
+
+  /**
+   * Apply or release the root position lock.
+   * @private
+   */
+  _applyRootLock() {
+    const root = this.nodes.find(node => node.id === this.rootNodeId);
+    if (!root) return;
+
+    if (this.lockRootPosition) {
+      root.fx = root.x;
+      root.fy = root.y;
+      root.vx = 0;
+      root.vy = 0;
+    } else {
+      root.fx = null;
+      root.fy = null;
+    }
+  }
+
+  /**
+   * Set whether the root is locked in place.
+   * @param {boolean} locked - True to lock the root, false to release it
+   */
+  setRootLocked(locked) {
+    this.lockRootPosition = Boolean(locked);
+    this._applyRootLock();
+
+    if (this.simulation) {
+      this.simulation.alpha(0.3).restart();
+    }
+  }
+
+  /**
+   * Set the wind direction in degrees.
+   * 0° = right, 90° = down, 180° = left, 270° = up
+   * @param {number} degrees - Wind direction (0-360)
+   */
+  setWindDirection(degrees) {
+    this.windDirection = ((Number(degrees) % 360) + 360) % 360;
+    this._updateWindForce();
+  }
+
+  /**
+   * Set the wind strength.
+   * @param {number} strength - Wind strength (0-100)
+   */
+  setWindStrength(strength) {
+    this.windStrength = Math.max(0, Math.min(100, Number(strength)));
+    this._updateWindForce();
+  }
+
+  /**
+   * Update or register the wind force in the D3 simulation.
+   * @private
+   */
+  _updateWindForce() {
+    if (!this.simulation) return;
+
+    if (this.windStrength === 0) {
+      this.simulation.force('wind', null);
+      this.windForce = null;
+      return;
+    }
+
+    const radians = this.windDirection * Math.PI / 180;
+    const forceX = Math.cos(radians);
+    const forceY = Math.sin(radians);
+    const magnitude = this.windStrength / 100;
+
+    this.windForce = alpha => {
+      for (const node of this.nodes) {
+        // Wind never directly affects the root.
+        if (node.id === this.rootNodeId) {
+          continue;
+        }
+
+        node.vx += forceX * magnitude * alpha;
+        node.vy += forceY * magnitude * alpha;
+      }
+    };
+
+    this.simulation.force('wind', this.windForce);
+    this.simulation.alpha(0.3).restart();
   }
 
   /**

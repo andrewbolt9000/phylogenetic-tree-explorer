@@ -1,12 +1,12 @@
 /**
  * Centralized settings management for PhyloExplorer visualization.
- * 
+ *
  * This module provides:
  * - A single source of truth for all visualization parameters
  * - Validation of settings values
  * - Default settings
  * - Settings persistence (via YAML)
- * 
+ *
  * All visualization controls and updates flow through this module.
  */
 
@@ -23,36 +23,43 @@ class VisualizationSettings {
   static getDefaults() {
     return {
       version: '1.0',
-      
+
       // Force parameters
       charge: 300,                    // Repulsion strength (0-1500)
       linkStrength: 0.5,              // Link/edge stiffness (0-1)
-      topologyRepulsionX: 0,           // Topology repulsion master control (0-200)
-      topologyRepulsionA: 1,           // Topology repulsion baseline/offset (0-10)
-      topologyRepulsionB: 1,           // Topology repulsion force scale (0-10)
-      
+      rootLinkStrength: 0, // Root-proximity link strength modifier (UI 0-1000, internal 0-10 via /100)
+      ageLinkStrength: 0,             // Age-based link strength modifier (per Ma)
+      topologyRepulsionX: 0,           // Topology repulsion master control (UI 0-100, internal 0-10)
+      topologyRepulsionA: 10,          // Topology repulsion baseline/offset (UI 0-100, internal 0-10)
+      topologyRepulsionB: 10,          // Topology repulsion force scale (UI 0-100, internal 0-10)
+
       // Appearance parameters
       edgeThickness: 1.5,             // Stroke width of edges (0.5-3)
       nodeCircleSize: 1.0,            // Radius multiplier for node circles (0.5-2)
       graphFontSize: 11,              // Font size for node labels (8-20px)
       sidebarFontSize: 14,            // Font size for sidebar controls (10-20px)
-      
+
       // Silhouette parameters
       silhouetteSizePercent: 100,     // Size relative to default (30-300%)
       silhouetteXOffset: 0,           // Horizontal offset in pixels (-50 to 50)
       silhouetteYOffset: 0,           // Vertical offset in pixels (-50 to 50)
       silhouetteGrayscale: 50,        // Grayscale amount (0-100, 0=black, 100=white)
       silhouetteOpacity: 1.0,         // Opacity (0-1)
-      
+
       // Toggle parameters
       showNodeDates: false,           // Display divergence age estimates
       showAncestralLabels: false,     // Display clade names on ancestral nodes
-      
+
       // Root-proximity edge weighting
       rootProximityWeighting: 0,      // Edge thickness scaling near root (0-1)
-      
+
       // Edge elasticity parameters (from previous milestone)
       edgeElasticityC: 0,             // Root elasticity adjustment (0-10)
+
+      // Root positioning and wind
+      lockRootPosition: true,
+      windDirection: 0,
+      windStrength: 0,
     };
   }
 
@@ -175,7 +182,7 @@ class VisualizationSettings {
         description: 'Settings format version',
         category: 'metadata',
       },
-      
+
       // Forces
       charge: {
         type: 'integer',
@@ -193,31 +200,47 @@ class VisualizationSettings {
         description: 'Link/edge stiffness (spring strength)',
         category: 'forces',
       },
+      rootLinkStrength: {
+        type: 'integer',
+        min: 0,
+        max: 1000,
+        default: 0,
+        description: 'Root-proximity link strength modifier (UI 0-1000, internal 0-10 via /100 conversion; 0 disables)',
+        category: 'forces',
+      },
+      ageLinkStrength: {
+        type: 'number',
+        min: 0,
+        max: 100,
+        default: 0,
+        description: 'Age-based link strength modifier (UI 0-100; produces ageLinkStrength/1000 * divergenceAgeMa contribution; 0 disables)',
+        category: 'forces',
+      },
       topologyRepulsionX: {
         type: 'integer',
         min: 0,
-        max: 200,
+        max: 100,
         default: 0,
-        description: 'Topology repulsion master control (0 disables)',
+        description: 'Topology repulsion master control (UI 0-100, internal 0-10 after /10 conversion; 0 disables)',
         category: 'forces',
       },
       topologyRepulsionA: {
-        type: 'number',
+        type: 'integer',
         min: 0,
-        max: 10,
-        default: 1,
-        description: 'Topology repulsion baseline/offset',
+        max: 100,
+        default: 10,
+        description: 'Topology repulsion baseline/offset (UI 0-100, internal 0-10 after /10 conversion)',
         category: 'forces',
       },
       topologyRepulsionB: {
-        type: 'number',
+        type: 'integer',
         min: 0,
-        max: 10,
-        default: 1,
-        description: 'Topology repulsion force scale multiplier',
+        max: 100,
+        default: 10,
+        description: 'Topology repulsion force scale multiplier (UI 0-100, internal 0-10 after /10 conversion)',
         category: 'forces',
       },
-      
+
       // Appearance
       edgeThickness: {
         type: 'number',
@@ -251,7 +274,7 @@ class VisualizationSettings {
         description: 'Font size for sidebar controls in pixels',
         category: 'appearance',
       },
-      
+
       // Silhouettes
       silhouetteSizePercent: {
         type: 'integer',
@@ -293,7 +316,7 @@ class VisualizationSettings {
         description: 'Opacity of silhouettes',
         category: 'silhouettes',
       },
-      
+
       // Toggles
       showNodeDates: {
         type: 'boolean',
@@ -307,7 +330,7 @@ class VisualizationSettings {
         description: 'Display clade names on ancestral nodes',
         category: 'controls',
       },
-      
+
       // Root proximity weighting
       rootProximityWeighting: {
         type: 'number',
@@ -317,7 +340,7 @@ class VisualizationSettings {
         description: 'Edge thickness weighting near root',
         category: 'appearance',
       },
-      
+
       // Edge elasticity
       edgeElasticityC: {
         type: 'number',
@@ -325,6 +348,30 @@ class VisualizationSettings {
         max: 10,
         default: 0,
         description: 'Root elasticity adjustment',
+        category: 'forces',
+      },
+
+      // Root positioning and wind
+      lockRootPosition: {
+        type: 'boolean',
+        default: true,
+        description: 'Keep the phylogenetic root fixed in place',
+        category: 'forces',
+      },
+      windDirection: {
+        type: 'integer',
+        min: 0,
+        max: 360,
+        default: 0,
+        description: 'Wind direction in degrees; 0 is right, 90 is down',
+        category: 'forces',
+      },
+      windStrength: {
+        type: 'integer',
+        min: 0,
+        max: 100,
+        default: 0,
+        description: 'Directional wind force; 0 disables wind',
         category: 'forces',
       },
     };
@@ -350,10 +397,14 @@ class VisualizationSettings {
       '# FORCES',
       `charge: ${this.settings.charge}  # Repulsion strength (0-1500)`,
       `linkStrength: ${this.settings.linkStrength.toFixed(2)}  # Link stiffness (0-1)`,
-      `topologyRepulsionX: ${this.settings.topologyRepulsionX}  # Master control; 0 disables (0-200)`,
-      `topologyRepulsionA: ${this.settings.topologyRepulsionA.toFixed(2)}  # Baseline offset (0-10)`,
-      `topologyRepulsionB: ${this.settings.topologyRepulsionB.toFixed(2)}  # Force scale (0-10)`,
-      `edgeElasticityC: ${this.settings.edgeElasticityC.toFixed(2)}  # Root elasticity (0-10)`,
+      `rootLinkStrength: ${this.settings.rootLinkStrength}  # Root-proximity modifier (UI 0-1000, internal 0-10 via /100)`,
+      `ageLinkStrength: ${this.settings.ageLinkStrength.toFixed(2)}  # Age-based modifier (per Ma, 0-10)`,
+      `topologyRepulsionX: ${this.settings.topologyRepulsionX}  # Master control; 0 disables (UI 0-100, internal 0-10)`,
+      `topologyRepulsionA: ${this.settings.topologyRepulsionA}  # Baseline offset (UI 0-100, internal 0-10)`,
+      `topologyRepulsionB: ${this.settings.topologyRepulsionB}  # Force scale (UI 0-100, internal 0-10)`,
+      `lockRootPosition: ${this.settings.lockRootPosition}  # Keep root fixed in place`,
+      `windDirection: ${this.settings.windDirection}  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)`,
+      `windStrength: ${this.settings.windStrength}  # Wind force (0-100, 0 disables)`,
       '',
       '# APPEARANCE',
       `edgeThickness: ${this.settings.edgeThickness.toFixed(2)}  # Stroke width (0.5-3)`,

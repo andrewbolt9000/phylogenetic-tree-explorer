@@ -160,3 +160,88 @@ test('VisualizationSettings: allow removing listeners', () => {
   settings.setSetting('charge', 400);
   assert.equal(callCount, 0);
 });
+
+// Tests for Topology Repulsion Scale Consistency
+test('VisualizationSettings: topology repulsion defaults are A=10, B=10, X=0', () => {
+  const settings = new VisualizationSettings();
+  const current = settings.getSettings();
+  assert.equal(current.topologyRepulsionA, 10, 'A should default to 10');
+  assert.equal(current.topologyRepulsionB, 10, 'B should default to 10');
+  assert.equal(current.topologyRepulsionX, 0, 'X should default to 0');
+});
+
+test('VisualizationSettings: topology schema defines 0-100 range for A', () => {
+  const schema = VisualizationSettings.getSchema();
+  assert.equal(schema.topologyRepulsionA.min, 0);
+  assert.equal(schema.topologyRepulsionA.max, 100);
+  assert.equal(schema.topologyRepulsionA.default, 10);
+});
+
+test('VisualizationSettings: topology schema defines 0-100 range for B', () => {
+  const schema = VisualizationSettings.getSchema();
+  assert.equal(schema.topologyRepulsionB.min, 0);
+  assert.equal(schema.topologyRepulsionB.max, 100);
+  assert.equal(schema.topologyRepulsionB.default, 10);
+});
+
+test('VisualizationSettings: topology schema defines 0-100 range for X', () => {
+  const schema = VisualizationSettings.getSchema();
+  assert.equal(schema.topologyRepulsionX.min, 0);
+  assert.equal(schema.topologyRepulsionX.max, 100);
+  assert.equal(schema.topologyRepulsionX.default, 0);
+});
+
+test('VisualizationSettings: topology A accepts 0 and 100', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionA', 0);
+  assert.equal(settings.getSettings().topologyRepulsionA, 0);
+  settings.setSetting('topologyRepulsionA', 100);
+  assert.equal(settings.getSettings().topologyRepulsionA, 100);
+});
+
+test('VisualizationSettings: topology B accepts 0 and 100', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionB', 0);
+  assert.equal(settings.getSettings().topologyRepulsionB, 0);
+  settings.setSetting('topologyRepulsionB', 100);
+  assert.equal(settings.getSettings().topologyRepulsionB, 100);
+});
+
+test('VisualizationSettings: topology X accepts 0 and 100', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionX', 0);
+  assert.equal(settings.getSettings().topologyRepulsionX, 0);
+  settings.setSetting('topologyRepulsionX', 100);
+  assert.equal(settings.getSettings().topologyRepulsionX, 100);
+});
+
+test('VisualizationSettings: topology values above 100 are clamped to 100', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionA', 150);
+  assert.equal(settings.getSettings().topologyRepulsionA, 100);
+  settings.setSetting('topologyRepulsionB', 200);
+  assert.equal(settings.getSettings().topologyRepulsionB, 100);
+  settings.setSetting('topologyRepulsionX', 150);
+  assert.equal(settings.getSettings().topologyRepulsionX, 100);
+});
+
+test('VisualizationSettings: topology values below 0 are clamped to 0', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionA', -10);
+  assert.equal(settings.getSettings().topologyRepulsionA, 0);
+  settings.setSetting('topologyRepulsionB', -5);
+  assert.equal(settings.getSettings().topologyRepulsionB, 0);
+  settings.setSetting('topologyRepulsionX', -50);
+  assert.equal(settings.getSettings().topologyRepulsionX, 0);
+});
+
+test('VisualizationSettings: topology can set intermediate values', () => {
+  const settings = new VisualizationSettings();
+  settings.setSetting('topologyRepulsionA', 50);
+  assert.equal(settings.getSettings().topologyRepulsionA, 50);
+  settings.setSetting('topologyRepulsionB', 75);
+  assert.equal(settings.getSettings().topologyRepulsionB, 75);
+  settings.setSetting('topologyRepulsionX', 25);
+  assert.equal(settings.getSettings().topologyRepulsionX, 25);
+});
+
