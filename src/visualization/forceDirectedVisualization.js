@@ -70,6 +70,7 @@ class ForceDirectedVisualization {
     // Silhouette offsets (in pixels, relative to node center)
     this.silhouetteXOffset = 0;
     this.silhouetteYOffset = 0;
+    this.silhouetteSizePercent = 100;  // Size as percentage of default (100 = 5x node radius)
 
     // Node date display
     this.showNodeDates = false;
@@ -235,8 +236,9 @@ class ForceDirectedVisualization {
         const group = d3.select(nodes[i]);
         
         // Create an image element for the silhouette
-        // Make silhouettes much larger (5x the node circle) for clear visibility
-        const silhouetteSize = this._getNodeCircleRadius(d) * 5;
+        // Base size is 5x the node circle, adjusted by silhouetteSizePercent
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
         
         group
           .append('image')
@@ -584,8 +586,24 @@ class ForceDirectedVisualization {
 
     // Update silhouette positions if offsets have changed
     this.g.selectAll('image.silhouette')
-      .attr('x', d => -this._getNodeCircleRadius(d) * 1.5 + this.silhouetteXOffset)
-      .attr('y', d => -this._getNodeCircleRadius(d) * 1.5 + this.silhouetteYOffset);
+      .attr('x', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        return -silhouetteSize / 2 + this.silhouetteXOffset;
+      })
+      .attr('y', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        return -silhouetteSize / 2 + this.silhouetteYOffset;
+      })
+      .attr('width', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        return baseSize * (this.silhouetteSizePercent / 100);
+      })
+      .attr('height', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        return baseSize * (this.silhouetteSizePercent / 100);
+      });
   }
 
   /**
@@ -702,6 +720,14 @@ class ForceDirectedVisualization {
    */
   setSilhouetteYOffset(offsetPixels) {
     this.silhouetteYOffset = offsetPixels;
+    // Silhouettes will be updated in the next tick
+  }
+
+  /**
+   * Set silhouette size as a percentage of default (100 = 5x node radius).
+   */
+  setSilhouetteSize(sizePercent) {
+    this.silhouetteSizePercent = Math.max(30, Math.min(300, sizePercent));
     // Silhouettes will be updated in the next tick
   }
 

@@ -348,6 +348,18 @@
 
         <div class="control-group">
           <div class="control-label">
+            <span>Silhouette Size</span>
+            <span class="control-value" id="silhouette-size-value">100%</span>
+          </div>
+          <input type="range" id="silhouette-size-slider" 
+                 min="30" max="300" value="100" step="10">
+          <p class="info-text">
+            Controls the size of animal silhouettes relative to default.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
             <span>Silhouette Horizontal Offset</span>
             <span class="control-value" id="silhouette-x-offset-value">0px</span>
           </div>
@@ -605,6 +617,14 @@
           const value = parseInt(e.target.value);
           document.getElementById('sidebar-font-size-value').textContent = value + 'px';
           document.documentElement.style.setProperty('--sidebar-font-size', value + 'px');
+        });
+
+        // Silhouette size slider
+        const silhouetteSizeSlider = document.getElementById('silhouette-size-slider');
+        silhouetteSizeSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('silhouette-size-value').textContent = value + '%';
+          viz.setSilhouetteSize(value);
         });
 
         // Silhouette horizontal offset slider
