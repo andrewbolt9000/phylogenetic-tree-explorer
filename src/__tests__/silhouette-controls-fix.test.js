@@ -58,22 +58,22 @@ test('Silhouette Controls Fix', async (t) => {
     assert.match(sliderMatch[0], /step="5"/, 'opacity step should be 5');
   });
 
-  await t.test('HTML has event listeners for grayscale and opacity controls', () => {
-    const indexContent = fs.readFileSync('./index.html', 'utf-8');
+  await t.test('Silhouette controls are wired through SettingsUI', () => {
+    const settingsUIContent = fs.readFileSync('./src/ui/SettingsUI.js', 'utf-8');
     
-    // Check grayscale listener
-    assert.match(indexContent, /silhouette-grayscale-slider.*addEventListener/s,
-      'should have event listener for grayscale slider');
+    // Grayscale should be wired
+    assert.match(settingsUIContent, /'silhouette-grayscale-slider'/,
+      'SettingsUI should wire grayscale slider');
     
-    assert.match(indexContent, /setSilhouetteGrayscale/,
-      'event listener should call setSilhouetteGrayscale');
+    assert.match(settingsUIContent, /silhouetteGrayscale/,
+      'SettingsUI should reference silhouetteGrayscale setting');
     
-    // Check opacity listener
-    assert.match(indexContent, /silhouette-opacity-slider.*addEventListener/s,
-      'should have event listener for opacity slider');
+    // Opacity should be wired
+    assert.match(settingsUIContent, /'silhouette-opacity-slider'/,
+      'SettingsUI should wire opacity slider');
     
-    assert.match(indexContent, /setSilhouetteOpacity/,
-      'event listener should call setSilhouetteOpacity');
+    assert.match(settingsUIContent, /silhouetteOpacity/,
+      'SettingsUI should reference silhouetteOpacity setting');
   });
 
   await t.test('ForceDirectedVisualization has silhouette property initialization', () => {

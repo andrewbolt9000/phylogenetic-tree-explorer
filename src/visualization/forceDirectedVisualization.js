@@ -645,6 +645,46 @@ class ForceDirectedVisualization {
   }
 
   /**
+   * Immediately update silhouettes without waiting for simulation tick.
+   * Called when silhouette size, position, opacity, or grayscale changes.
+   * @private
+   */
+  _updateSilhouettesImmediate() {
+    if (!this.g) return; // Visualization not yet rendered
+    
+    // Update silhouette-group transforms (size and offset)
+    this.g.selectAll('g.silhouette-group')
+      .attr('transform', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        return `translate(${this.silhouetteXOffset},${this.silhouetteYOffset})`;
+      });
+
+    // Update silhouette image sizes within the group
+    this.g.selectAll('image.silhouette')
+      .attr('x', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        return -silhouetteSize / 2;
+      })
+      .attr('y', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        return -silhouetteSize / 2;
+      })
+      .attr('width', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        return baseSize * (this.silhouetteSizePercent / 100);
+      })
+      .attr('height', d => {
+        const baseSize = this._getNodeCircleRadius(d) * 5;
+        return baseSize * (this.silhouetteSizePercent / 100);
+      })
+      .attr('opacity', this.silhouetteOpacity)
+      .style('filter', this._getSilhouetteGrayscaleFilter(this.silhouetteGrayscale));
+  }
+
+  /**
    * Update the charge/repulsion force.
    */
   setChargeStrength(strength) {
@@ -750,7 +790,8 @@ class ForceDirectedVisualization {
    */
   setSilhouetteXOffset(offsetPixels) {
     this.silhouetteXOffset = offsetPixels;
-    // Silhouettes will be updated in the next tick
+    // Immediately update silhouettes without waiting for simulation tick
+    this._updateSilhouettesImmediate();
   }
 
   /**
@@ -758,7 +799,8 @@ class ForceDirectedVisualization {
    */
   setSilhouetteYOffset(offsetPixels) {
     this.silhouetteYOffset = offsetPixels;
-    // Silhouettes will be updated in the next tick
+    // Immediately update silhouettes without waiting for simulation tick
+    this._updateSilhouettesImmediate();
   }
 
   /**
@@ -766,7 +808,8 @@ class ForceDirectedVisualization {
    */
   setSilhouetteSize(sizePercent) {
     this.silhouetteSizePercent = Math.max(30, Math.min(300, sizePercent));
-    // Silhouettes will be updated in the next tick
+    // Immediately update silhouettes without waiting for simulation tick
+    this._updateSilhouettesImmediate();
   }
 
   /**
@@ -774,7 +817,8 @@ class ForceDirectedVisualization {
    */
   setSilhouetteOpacity(opacity) {
     this.silhouetteOpacity = Math.max(0, Math.min(1, opacity));
-    // Silhouettes will be updated in the next tick
+    // Immediately update silhouettes without waiting for simulation tick
+    this._updateSilhouettesImmediate();
   }
 
   /**
@@ -782,7 +826,8 @@ class ForceDirectedVisualization {
    */
   setSilhouetteGrayscale(grayscale) {
     this.silhouetteGrayscale = Math.max(0, Math.min(100, grayscale));
-    // Silhouettes will be updated in the next tick
+    // Immediately update silhouettes without waiting for simulation tick
+    this._updateSilhouettesImmediate();
   }
 
   /**

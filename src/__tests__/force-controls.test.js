@@ -195,15 +195,15 @@ test('Silhouette Offset Controls', async (t) => {
     assert.ok(html.includes('id="silhouette-y-offset-value"'), 'Vertical offset value display exists');
   });
 
-  // Test 2: Verify event listeners are attached
-  await t.test('HTML event listeners for offset sliders are defined', () => {
-    const htmlPath = path.join(process.cwd(), 'index.html');
-    const html = fs.readFileSync(htmlPath, 'utf8');
+  // Test 2: Verify controls are wired through SettingsUI
+  await t.test('HTML offset sliders are wired through SettingsUI', () => {
+    const settingsUIPath = path.join(process.cwd(), 'src/ui/SettingsUI.js');
+    const code = fs.readFileSync(settingsUIPath, 'utf8');
     
-    assert.ok(html.includes('silhouette-x-offset-slider'), 'Horizontal offset slider referenced in listeners');
-    assert.ok(html.includes('setSilhouetteXOffset'), 'setSilhouetteXOffset method called from listener');
-    assert.ok(html.includes('silhouette-y-offset-slider'), 'Vertical offset slider referenced in listeners');
-    assert.ok(html.includes('setSilhouetteYOffset'), 'setSilhouetteYOffset method called from listener');
+    assert.ok(code.includes('silhouette-x-offset-slider'), 'X offset slider is wired in SettingsUI');
+    assert.ok(code.includes('silhouetteXOffset'), 'silhouetteXOffset setting is mapped');
+    assert.ok(code.includes('silhouette-y-offset-slider'), 'Y offset slider is wired in SettingsUI');
+    assert.ok(code.includes('silhouetteYOffset'), 'silhouetteYOffset setting is mapped');
   });
 
   // Test 3: Verify visualization methods exist

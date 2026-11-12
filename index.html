@@ -746,45 +746,8 @@
           document.documentElement.style.setProperty('--sidebar-font-size', value + 'px');
         });
 
-        // Silhouette size slider
-        const silhouetteSizeSlider = document.getElementById('silhouette-size-slider');
-        silhouetteSizeSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('silhouette-size-value').textContent = value + '%';
-          viz.setSilhouetteSize(value);
-        });
-
-        // Silhouette horizontal offset slider
-        const silhouetteXOffsetSlider = document.getElementById('silhouette-x-offset-slider');
-        silhouetteXOffsetSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('silhouette-x-offset-value').textContent = value + 'px';
-          viz.setSilhouetteXOffset(value);
-        });
-
-        // Silhouette vertical offset slider
-        const silhouetteYOffsetSlider = document.getElementById('silhouette-y-offset-slider');
-        silhouetteYOffsetSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('silhouette-y-offset-value').textContent = value + 'px';
-          viz.setSilhouetteYOffset(value);
-        });
-
-        // Silhouette grayscale slider
-        const silhouetteGrayscaleSlider = document.getElementById('silhouette-grayscale-slider');
-        silhouetteGrayscaleSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('silhouette-grayscale-value').textContent = value + '%';
-          viz.setSilhouetteGrayscale(value);
-        });
-
-        // Silhouette opacity slider
-        const silhouetteOpacitySlider = document.getElementById('silhouette-opacity-slider');
-        silhouetteOpacitySlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('silhouette-opacity-value').textContent = value + '%';
-          viz.setSilhouetteOpacity(value / 100);
-        });
+        // Note: Silhouette controls are wired through SettingsUI and do not need manual event listeners.
+        // Changes to silhouette size, position, opacity, and grayscale are handled automatically.
 
         // Show node dates toggle
         const showNodeDatesToggle = document.getElementById('show-node-dates-toggle');

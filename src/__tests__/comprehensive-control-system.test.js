@@ -203,24 +203,27 @@ test('PhyloExplorer Comprehensive Control System Verification', async (t) => {
     assert.match(vizContent, /\.attr\('opacity'/);
   });
 
-  await t.test('HTML has event listeners for all silhouette controls', () => {
-    const html = fs.readFileSync('./index.html', 'utf-8');
+  await t.test('Silhouette controls are wired through SettingsUI', () => {
+    const settingsUIContent = fs.readFileSync('./src/ui/SettingsUI.js', 'utf-8');
     
-    assert.match(html, /silhouette-size-slider.*addEventListener/s);
-    assert.match(html, /silhouette-x-offset-slider.*addEventListener/s);
-    assert.match(html, /silhouette-y-offset-slider.*addEventListener/s);
-    assert.match(html, /silhouette-grayscale-slider.*addEventListener/s);
-    assert.match(html, /silhouette-opacity-slider.*addEventListener/s);
+    // Verify SettingsUI has all silhouette controls in its wiring map
+    assert.match(settingsUIContent, /'silhouette-size-slider'/);
+    assert.match(settingsUIContent, /'silhouette-x-offset-slider'/);
+    assert.match(settingsUIContent, /'silhouette-y-offset-slider'/);
+    assert.match(settingsUIContent, /'silhouette-grayscale-slider'/);
+    assert.match(settingsUIContent, /'silhouette-opacity-slider'/);
   });
 
-  await t.test('Silhouette controls call correct visualization methods', () => {
-    const html = fs.readFileSync('./index.html', 'utf-8');
+  await t.test('Visualization has immediate silhouette update method', () => {
+    const vizContent = fs.readFileSync('./src/visualization/forceDirectedVisualization.js', 'utf-8');
     
-    assert.match(html, /setSilhouetteSize\(/);
-    assert.match(html, /setSilhouetteXOffset\(/);
-    assert.match(html, /setSilhouetteYOffset\(/);
-    assert.match(html, /setSilhouetteGrayscale\(/);
-    assert.match(html, /setSilhouetteOpacity\(/);
+    // Verify _updateSilhouettesImmediate exists and is called by setters
+    assert.match(vizContent, /_updateSilhouettesImmediate\(\)/);
+    assert.match(vizContent, /setSilhouetteSize.*_updateSilhouettesImmediate/s);
+    assert.match(vizContent, /setSilhouetteXOffset.*_updateSilhouettesImmediate/s);
+    assert.match(vizContent, /setSilhouetteYOffset.*_updateSilhouettesImmediate/s);
+    assert.match(vizContent, /setSilhouetteGrayscale.*_updateSilhouettesImmediate/s);
+    assert.match(vizContent, /setSilhouetteOpacity.*_updateSilhouettesImmediate/s);
   });
 
   await t.test('SettingsUI module exists and exports', () => {
