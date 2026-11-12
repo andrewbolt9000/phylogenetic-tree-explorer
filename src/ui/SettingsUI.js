@@ -75,7 +75,7 @@ class SettingsUI {
     const controlMap = {
       // Force/physics controls
       'charge-slider': { setting: 'chargeStrength', transform: v => -parseInt(v), display: 'charge-value' },
-      'link-strength-slider': { setting: 'linkStrength', transform: v => parseInt(v) / 1000, display: 'link-strength-value' },
+      'link-slider': { setting: 'linkStrength', transform: v => parseInt(v) / 1000, display: 'link-value' },
       'edge-thickness-slider': { setting: 'edgeThickness', transform: v => parseFloat(v), display: 'edge-thickness-value' },
       
       // Topology repulsion equation: F = B * (A + X) / D
@@ -84,8 +84,9 @@ class SettingsUI {
       'topology-repulsion-x-slider': { setting: 'topologyRepulsionX', transform: v => parseInt(v), display: 'topology-repulsion-x-value' },
       
       // Appearance controls
-      'node-circle-scale-slider': { setting: 'nodeCircleScale', transform: v => parseFloat(v), display: 'node-circle-scale-value' },
-      'graph-font-size-slider': { setting: 'fontSizeBase', transform: v => parseInt(v), display: 'graph-font-size-value' },
+      'node-circle-slider': { setting: 'nodeCircleScale', transform: v => parseFloat(v), display: 'node-circle-value' },
+      'font-size-slider': { setting: 'fontSizeBase', transform: v => parseInt(v), display: 'font-size-value' },
+      'sidebar-font-size-slider': { setting: 'sidebarFontSize', transform: v => parseInt(v), display: 'sidebar-font-size-value' },
       
       // Silhouette controls
       'silhouette-size-slider': { setting: 'silhouetteSize', transform: v => parseInt(v), display: 'silhouette-size-value', suffix: '%' },
@@ -132,13 +133,14 @@ class SettingsUI {
   _updateUIFromSettings(settings) {
     const sliderMap = {
       chargeStrength: 'charge-slider',
-      linkStrength: 'link-strength-slider',
+      linkStrength: 'link-slider',
       edgeThickness: 'edge-thickness-slider',
       topologyRepulsionA: 'topology-repulsion-a-slider',
       topologyRepulsionB: 'topology-repulsion-b-slider',
       topologyRepulsionX: 'topology-repulsion-x-slider',
-      nodeCircleScale: 'node-circle-scale-slider',
-      fontSizeBase: 'graph-font-size-slider',
+      nodeCircleScale: 'node-circle-slider',
+      fontSizeBase: 'font-size-slider',
+      sidebarFontSize: 'sidebar-font-size-slider',
       silhouetteSize: 'silhouette-size-slider',
       silhouetteXOffset: 'silhouette-x-offset-slider',
       silhouetteYOffset: 'silhouette-y-offset-slider',
@@ -222,6 +224,11 @@ class SettingsUI {
     }
     if (settings.silhouetteGrayscale !== undefined) {
       this.viz.setSilhouetteGrayscale(settings.silhouetteGrayscale);
+    }
+    
+    // Apply CSS-based parameters
+    if (settings.sidebarFontSize !== undefined) {
+      document.documentElement.style.setProperty('--sidebar-font-size', settings.sidebarFontSize + 'px');
     }
     
     // Apply toggle parameters

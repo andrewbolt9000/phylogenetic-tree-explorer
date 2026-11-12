@@ -695,9 +695,11 @@
         document.getElementById('controls').style.display = 'block';
 
         // Setup controls
+        // Note: SettingsUI.initialize() (called above) already wired all controls
+        // including topology repulsion A/B/X sliders, charge, link, and appearance controls.
+        // We just need references for manual initialization of forces before SettingsUI applies them.
         const chargeSlider = document.getElementById('charge-slider');
         const linkSlider = document.getElementById('link-slider');
-        const topologyRepulsionSlider = document.getElementById('topology-repulsion-slider');
         const resetButton = document.getElementById('reset-button');
 
         // Initialize charge strength to match the slider's current value
@@ -710,29 +712,8 @@
         const initialLinkValue = parseFloat(linkSlider.value);
         viz.setLinkStrength(initialLinkValue);
 
-        // Initialize topology repulsion to match the slider's current value
-        const initialTopologyRepulsion = parseInt(topologyRepulsionSlider.value);
-        viz.setTopologyRepulsion(initialTopologyRepulsion, graph);
-
-        chargeSlider.addEventListener('input', (e) => {
-          const uiValue = parseInt(e.target.value);
-          document.getElementById('charge-value').textContent = uiValue;
-          // Map UI value (0-1500) to D3 negative value (0 to -1500)
-          const d3Value = uiValue === 0 ? 0 : -uiValue;
-          viz.setChargeStrength(d3Value);
-        });
-
-        topologyRepulsionSlider.addEventListener('input', (e) => {
-          const value = parseInt(e.target.value);
-          document.getElementById('topology-repulsion-value').textContent = value;
-          viz.setTopologyRepulsion(value, graph);
-        });
-
-        linkSlider.addEventListener('input', (e) => {
-          const value = parseFloat(e.target.value);
-          document.getElementById('link-value').textContent = value.toFixed(2);
-          viz.setLinkStrength(value);
-        });
+        // Note: Topology repulsion A/B/X parameters are now initialized by SettingsUI
+        // which loads defaults from config/default-settings.yaml and wires the three new A/B/X sliders.
 
         // Appearance control sliders
         const edgeThicknessSlider = document.getElementById('edge-thickness-slider');

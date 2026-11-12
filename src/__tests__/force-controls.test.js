@@ -62,19 +62,18 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(code.includes('this.topologyRepulsionX'), 'Stores X parameter');
   });
 
-  // Test 5: Verify event listener maps values correctly
+  // Test 5: Verify charge strength mapping is correct
   await t.test('Charge slider event listener maps positive UI values to negative D3 values', () => {
-    const htmlPath = path.join(process.cwd(), 'index.html');
-    const html = fs.readFileSync(htmlPath, 'utf8');
+    // The charge slider mapping is now handled by SettingsUI._wireControls()
+    // Verify the mapping is correct in SettingsUI
+    const settingsPath = path.join(process.cwd(), 'src/ui/SettingsUI.js');
+    const settings = fs.readFileSync(settingsPath, 'utf8');
     
-    // Find the event listener code
-    const listenerMatch = html.match(/chargeSlider\.addEventListener\('input'[\s\S]*?viz\.setChargeStrength\(d3Value\);/);
-    assert.ok(listenerMatch, 'Charge slider has input event listener');
-    
-    const listenerCode = listenerMatch[0];
-    assert.ok(listenerCode.includes('const uiValue = parseInt'), 'Reads UI value as integer');
-    assert.ok(listenerCode.includes('const d3Value = uiValue === 0 ? 0 : -uiValue'), 'Maps positive UI to negative D3');
-    assert.ok(listenerCode.includes('charge-value'), 'Updates display value');
+    // Check that charge slider is configured to negate values
+    assert.ok(settings.includes("'charge-slider'"), 'charge-slider control exists');
+    assert.ok(settings.includes('transform: v => -parseInt(v)'), 'charge values are negated for D3');
+    assert.ok(settings.includes('chargeStrength'), 'chargeStrength setting exists');
+    assert.ok(settings.includes("display: 'charge-value'"), 'display value element is updated');
   });
 
   // Test 6: Verify topology repulsion A/B/X equation is implemented

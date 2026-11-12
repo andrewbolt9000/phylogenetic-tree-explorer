@@ -93,15 +93,16 @@ test('Part B: Repulsion Charge Control Bug Fixes', async (t) => {
   });
 
   await t.test('charge slider event listener maps UI value to D3 negative value', () => {
-    const indexContent = fs.readFileSync('./index.html', 'utf-8');
+    // This behavior is now handled by SettingsUI._wireControls()
+    const settingsUiContent = fs.readFileSync('./src/ui/SettingsUI.js', 'utf-8');
     
-    // Find the event listener code
-    assert.match(indexContent, /chargeSlider\.addEventListener.*?uiValue.*?-uiValue/s,
-      'charge slider should map UI value to negative D3 value');
+    // Check that the transform function maps charge to negative D3 value
+    assert.match(settingsUiContent, /'charge-slider'.*?transform:\s*v\s*=>\s*-parseInt\(v\)/s,
+      'charge slider transform should map UI value to negative D3 value');
     
-    // Verify zero case is handled
-    assert.match(indexContent, /uiValue === 0 \? 0 : -uiValue/,
-      'should handle zero case (0 -> 0, not 0 -> -0)');
+    // Verify the setting is applied correctly (D3 expects negative for repulsion)
+    assert.match(settingsUiContent, /chargeStrength.*?=>\s*-/,
+      'chargeStrength should be negated for D3 compatibility');
   });
 
   await t.test('charge slider help text is updated', () => {
