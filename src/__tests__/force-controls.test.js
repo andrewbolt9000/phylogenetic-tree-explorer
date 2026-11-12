@@ -21,16 +21,21 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(html.includes('id="charge-value">300</span>'), 'Display value initialized to 300');
   });
 
-  // Test 2: Verify Topology Repulsion slider exists
+  // Test 2: Verify Topology Repulsion sliders exist (A, B, X)
   await t.test('Topology Repulsion slider HTML has correct initial values', () => {
     const htmlPath = path.join(process.cwd(), 'index.html');
     const html = fs.readFileSync(htmlPath, 'utf8');
     
-    assert.ok(html.includes('id="topology-repulsion-slider"'), 'Topology repulsion slider exists');
-    assert.ok(html.includes('topology-repulsion'), 'Topology repulsion slider has correct ID pattern');
-    assert.ok(html.includes('min="0"'), 'Topology slider has min=0');
-    assert.ok(html.includes('max="100"'), 'Topology slider has max=100');
-    assert.ok(html.includes('value="0"'), 'Topology slider defaults to 0 (disabled)');
+    // Check for A, B, X sliders
+    assert.ok(html.includes('id="topology-repulsion-a-slider"'), 'Topology repulsion A slider exists');
+    assert.ok(html.includes('id="topology-repulsion-b-slider"'), 'Topology repulsion B slider exists');
+    assert.ok(html.includes('id="topology-repulsion-x-slider"'), 'Topology repulsion X slider exists');
+    
+    // Check equation display
+    assert.ok(html.includes('F<sub>topology</sub>'), 'Topology equation displayed');
+    assert.ok(html.includes('Topology Baseline'), 'Topology Baseline (A) label present');
+    assert.ok(html.includes('Topology Multiplier'), 'Topology Multiplier (B) label present');
+    assert.ok(html.includes('Topology Strength'), 'Topology Strength (X) label present');
   });
 
   // Test 3: Verify initialization code syncs slider with force
@@ -44,14 +49,17 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(html.includes('initialChargeD3Value'), 'Initialization maps UI value to D3 value');
   });
 
-  // Test 4: Verify topology repulsion initialization
-  await t.test('HTML initialization code synchronizes topology repulsion with visualization', () => {
-    const htmlPath = path.join(process.cwd(), 'index.html');
-    const html = fs.readFileSync(htmlPath, 'utf8');
+  // Test 4: Verify topology repulsion A/B/X initialization
+  await t.test('Topology repulsion has separate A, B, X setter methods', () => {
+    const vizPath = path.join(process.cwd(), 'src/visualization/forceDirectedVisualization.js');
+    const code = fs.readFileSync(vizPath, 'utf8');
     
-    assert.ok(html.includes('initialTopologyRepulsion'), 'Initialization reads topology slider');
-    assert.ok(html.includes('setTopologyRepulsion'), 'Initialization calls setTopologyRepulsion');
-    assert.ok(html.includes('topologyRepulsionSlider'), 'Topology slider event listener exists');
+    assert.ok(code.includes('setTopologyRepulsionA'), 'Has setTopologyRepulsionA method');
+    assert.ok(code.includes('setTopologyRepulsionB'), 'Has setTopologyRepulsionB method');
+    assert.ok(code.includes('setTopologyRepulsionX'), 'Has setTopologyRepulsionX method');
+    assert.ok(code.includes('this.topologyRepulsionA'), 'Stores A parameter');
+    assert.ok(code.includes('this.topologyRepulsionB'), 'Stores B parameter');
+    assert.ok(code.includes('this.topologyRepulsionX'), 'Stores X parameter');
   });
 
   // Test 5: Verify event listener maps values correctly
@@ -69,15 +77,15 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(listenerCode.includes('charge-value'), 'Updates display value');
   });
 
-  // Test 6: Verify topology repulsion force method exists
-  await t.test('ForceDirectedVisualization has setTopologyRepulsion method', () => {
+  // Test 6: Verify topology repulsion A/B/X equation is implemented
+  await t.test('Topology repulsion equation implemented: F_topology = B * (A + X) / D', () => {
     const vizPath = path.join(process.cwd(), 'src/visualization/forceDirectedVisualization.js');
     const code = fs.readFileSync(vizPath, 'utf8');
     
-    assert.ok(code.includes('setTopologyRepulsion(strength, phyloGraph)'), 'setTopologyRepulsion method exists');
-    assert.ok(code.includes('this.topologyRepulsionStrength'), 'Stores topology repulsion state');
-    assert.ok(code.includes('_computeGraphDistances'), 'Has distance computation method');
-    assert.ok(code.includes('_calculateTopoRepulsion'), 'Has repulsion calculation method');
+    // Look for the equation in the code (using this.property references)
+    assert.ok(code.includes('this.topologyRepulsionB * (this.topologyRepulsionA + this.topologyRepulsionX)'), 'Equation implemented');
+    assert.ok(code.includes('/ D'), 'Distance division present');
+    assert.ok(code.includes('Math.max(graphDist, 1)'), 'Distance clamped to minimum 1');
   });
 
   // Test 7: Verify distance computation exists
@@ -90,15 +98,14 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(code.includes('const queue'), 'Uses queue data structure');
   });
 
-  // Test 8: Verify distance-decay formula
-  await t.test('Topology repulsion uses inverse-square distance decay', () => {
+  // Test 8: Verify A, B, X parameters are cached and not recomputed
+  await t.test('Topology repulsion caches graph distances', () => {
     const vizPath = path.join(process.cwd(), 'src/visualization/forceDirectedVisualization.js');
     const code = fs.readFileSync(vizPath, 'utf8');
     
-    assert.ok(code.includes('_calculateTopoRepulsion'), 'Decay calculation method exists');
-    assert.ok(code.includes('graphDistance === 0'), 'Handles zero distance');
-    assert.ok(code.includes('scaleFactor === 0'), 'Handles disabled feature (factor=0)');
-    assert.ok(code.includes('1 + (graphDistance * graphDistance)'), 'Uses inverse-square decay');
+    assert.ok(code.includes('this.graphDistances'), 'Distances cached in property');
+    assert.ok(code.includes('(this.graphDistances[a.id] && this.graphDistances[a.id][b.id])'), 'Reads cached distances');
+    assert.ok(code.includes('this._computeGraphDistances(phyloGraph)'), 'Has method to compute distances');
   });
 
   // Test 9: Verify forces are separate and independent
@@ -107,17 +114,17 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     const code = fs.readFileSync(vizPath, 'utf8');
     
     assert.ok(code.includes('this.currentChargeStrength'), 'Stores charge strength separately');
-    assert.ok(code.includes('this.topologyRepulsionStrength'), 'Stores topology strength separately');
+    assert.ok(code.includes('this.topologyRepulsionX'), 'Stores X parameter separately');
     assert.ok(code.includes("this.simulation.force('charge'"), 'Charge is separate D3 force');
     assert.ok(code.includes("this.simulation.force('topoRepulsion'"), 'Topology is separate D3 force');
   });
 
-  // Test 10: Verify topology force can be disabled
+  // Test 10: Verify X=0 disables topology repulsion completely
   await t.test('Topology repulsion force can be disabled by setting strength to 0', () => {
     const vizPath = path.join(process.cwd(), 'src/visualization/forceDirectedVisualization.js');
     const code = fs.readFileSync(vizPath, 'utf8');
     
-    assert.ok(code.includes('if (strength === 0 || !this.simulation)'), 'Checks for zero strength');
+    assert.ok(code.includes('if (this.topologyRepulsionX === 0)'), 'Checks X=0 for disable');
     assert.ok(code.includes("this.simulation.force('topoRepulsion', null)"), 'Removes force when disabled');
   });
 
@@ -135,27 +142,29 @@ test('Force Controls - Repulsion Charge and Topology Repulsion', async (t) => {
     assert.ok(code.includes('phyloGraph.getChildren(currentId)'), 'Uses getChildren() method');
   });
 
-  // Test 12: Verify topology repulsion initialization doesn't compute distances when disabled
+  // Test 12: Verify X=0 disables computation
   await t.test('Topology repulsion with strength=0 does not compute graph distances', () => {
     const vizPath = path.join(process.cwd(), 'src/visualization/forceDirectedVisualization.js');
     const code = fs.readFileSync(vizPath, 'utf8');
     
-    // Check that the method returns early when strength is 0
-    assert.ok(code.includes('if (strength === 0 || !this.simulation)'), 'Early return when strength=0');
+    // Check that X=0 causes early return before any computation
+    assert.ok(code.includes('if (this.topologyRepulsionX === 0)'), 'Checks X parameter first');
+    assert.ok(code.includes('this.simulation.force(\'topoRepulsion\', null)'), 'Disables force');
+    assert.ok(code.includes('return'), 'Returns early when disabled');
     
-    // The early return should happen BEFORE _computeGraphDistances is called
-    const setTopoMethod = code.substring(
-      code.indexOf('setTopologyRepulsion(strength, phyloGraph)'),
-      code.indexOf('setTopologyRepulsion(strength, phyloGraph)') + 2000
+    // The early return in _updateTopologyRepulsion should happen BEFORE the force calculation
+    const updateTopoMethod = code.substring(
+      code.indexOf('_updateTopologyRepulsion()'),
+      code.indexOf('_updateTopologyRepulsion()') + 2500
     );
     
-    const earlyReturnIdx = setTopoMethod.indexOf('if (strength === 0 || !this.simulation)');
-    const computeDistIdx = setTopoMethod.indexOf('_computeGraphDistances');
+    const earlyReturnIdx = updateTopoMethod.indexOf('if (this.topologyRepulsionX === 0)');
+    const forceCalcIdx = updateTopoMethod.indexOf('this.topoRepulsionForce = (alpha)');
     
-    assert.ok(earlyReturnIdx > -1, 'Has early return check');
-    assert.ok(computeDistIdx > -1, 'Has distance computation');
-    // Early return should come first, preventing distance computation when disabled
-    assert.ok(earlyReturnIdx < computeDistIdx, 'Early return happens before distance computation');
+    assert.ok(earlyReturnIdx > -1, 'Has early return check for X=0');
+    assert.ok(forceCalcIdx > -1, 'Has force calculation');
+    // Early return should come first, preventing force calculation when disabled
+    assert.ok(earlyReturnIdx < forceCalcIdx, 'Early return happens before force calculation');
   });
 
   // Test 13: Verify error message for invalid graph object

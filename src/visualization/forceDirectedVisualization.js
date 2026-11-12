@@ -61,7 +61,11 @@ class ForceDirectedVisualization {
     // Current force parameters
     this.currentChargeStrength = this.options.chargeStrength;
     this.currentLinkStrength = this.options.linkStrength;
-    this.topologyRepulsionStrength = 0;
+    
+    // Topology repulsion equation: F_topology = B * (A + X) / D
+    this.topologyRepulsionX = 0;  // Master control strength (0 disables)
+    this.topologyRepulsionA = 1;  // Baseline offset parameter
+    this.topologyRepulsionB = 1;  // Overall force scale multiplier
 
     // Appearance parameters
     this.edgeThickness = 1.5;
@@ -917,82 +921,101 @@ class ForceDirectedVisualization {
   }
 
   /**
-   * Set topology-aware repulsion strength and reapply the force.
+   * Set topology repulsion baseline parameter (A).
+   * Part of equation: F_topology = B * (A + X) / D
    * 
-   * Topology repulsion adds additional distance-based repulsion on top of
-   * the ordinary D3 many-body charge force. Nodes close together in the
-   * phylogenetic graph experience stronger additional repulsion.
-   * 
-   * @param {number} strength - Slider value (0-100), where 0 disables this force
-   * @param {Object} phyloGraph - The immutable PhyloGraph object
+   * @param {number} value - UI value (0-100), converted to internal 0-10
    */
-  setTopologyRepulsion(strength, phyloGraph) {
-    this.topologyRepulsionStrength = strength;
+  setTopologyRepulsionA(value) {
+    this.topologyRepulsionA = value / 10;  // Convert from UI (0-100) to internal (0-10)
+    this._updateTopologyRepulsion();
+  }
 
-    // If disabled, remove the custom force
-    if (strength === 0 || !this.simulation) {
-      if (this.topoRepulsionForce) {
+  /**
+   * Set topology repulsion force scale multiplier (B).
+   * Part of equation: F_topology = B * (A + X) / D
+   * 
+   * @param {number} value - UI value (0-100), converted to internal 0-10
+   */
+  setTopologyRepulsionB(value) {
+    this.topologyRepulsionB = value / 10;  // Convert from UI (0-100) to internal (0-10)
+    this._updateTopologyRepulsion();
+  }
+
+  /**
+   * Set topology repulsion master strength (X).
+   * Part of equation: F_topology = B * (A + X) / D
+   * When X = 0, topology repulsion is completely disabled.
+   * 
+   * @param {number} value - UI value (0-100), converted to internal 0-10
+   */
+  setTopologyRepulsionX(value) {
+    this.topologyRepulsionX = value / 10;  // Convert from UI (0-100) to internal (0-10)
+    this._updateTopologyRepulsion();
+  }
+
+  /**
+   * Internal helper to update topology repulsion force after any parameter changes.
+   * Recomputes and restarts the simulation if needed.
+   * @private
+   */
+  _updateTopologyRepulsion() {
+    // If X = 0, disable completely
+    if (this.topologyRepulsionX === 0) {
+      if (this.topoRepulsionForce && this.simulation) {
         this.simulation.force('topoRepulsion', null);
         this.topoRepulsionForce = null;
       }
       return;
     }
 
-    // Validate that graph was provided and has the correct API
-    if (!phyloGraph || typeof phyloGraph.getNodes !== 'function') {
-      console.error(
-        '[PhyloExplorer] Cannot enable Topology Repulsion: invalid or missing graph object. ' +
-        'Graph must be a PhyloGraph instance with getNodes(), getChildren(), and getParent() methods.'
-      );
-      // Disable the feature if graph is invalid
-      if (this.topoRepulsionForce) {
-        this.simulation.force('topoRepulsion', null);
-        this.topoRepulsionForce = null;
-      }
+    // If we don't have a simulation yet, can't set up the force
+    if (!this.simulation) {
       return;
     }
 
-    // Compute graph distances if not already cached
-    if (!this.graphDistances) {
-      this.graphDistances = this._computeGraphDistances(phyloGraph);
-    }
-
-    // Create a custom force that applies topology-aware repulsion
-    const distances = this.graphDistances;
-    const scaleFactor = strength / 100;  // Normalize slider value
-    const calculateTopo = (d) => this._calculateTopoRepulsion.bind(this);
-
+    // Create custom force using the A/B/X equation
     this.topoRepulsionForce = (alpha) => {
       for (let i = 0; i < this.nodes.length; i++) {
         for (let j = i + 1; j < this.nodes.length; j++) {
           const a = this.nodes[i];
           const b = this.nodes[j];
 
-          const graphDist = (distances[a.id] && distances[a.id][b.id]) || 
-                           (distances[b.id] && distances[b.id][a.id]) || 
+          // Get graph distance between nodes
+          const graphDist = (this.graphDistances[a.id] && this.graphDistances[a.id][b.id]) || 
+                           (this.graphDistances[b.id] && this.graphDistances[b.id][a.id]) || 
                            Infinity;
 
           if (graphDist === Infinity) continue;  // Not connected in graph
 
-          // Calculate repulsion strength based on graph distance
-          const repulsionStrength = this._calculateTopoRepulsion(graphDist, scaleFactor);
-          if (repulsionStrength === 0) continue;
+          // Clamp graph distance to at least 1 to avoid division issues
+          const D = Math.max(graphDist, 1);
 
-          // Calculate vector from b to a
+          // Compute topology repulsion using the equation: F = B * (A + X) / D
+          // Where:
+          //   B = overall force multiplier (0-10)
+          //   A = baseline offset (0-10)
+          //   X = master control strength (0-10)
+          //   D = shortest-path graph distance
+          const F_magnitude = this.topologyRepulsionB * (this.topologyRepulsionA + this.topologyRepulsionX) / D;
+
+          if (F_magnitude === 0) continue;
+
+          // Calculate spatial vector from b to a
           const dx = a.x - b.x;
           const dy = a.y - b.y;
-          const distance = Math.sqrt(dx * dx + dy * dy);
+          const spatialDistance = Math.sqrt(dx * dx + dy * dy);
 
-          // Avoid division by zero
-          if (distance === 0) continue;
+          // Avoid division by zero for coincident nodes
+          if (spatialDistance === 0) continue;
 
-          // Apply repulsion force (push nodes apart)
-          // Force magnitude decreases with pixel distance to prevent extreme effects
-          const pixelDistance = Math.max(distance, 1);
-          const force = repulsionStrength * alpha / pixelDistance;
+          // Apply repulsion along the spatial direction
+          // Reduce effect with spatial distance to prevent extreme pushes
+          const pixelDistance = Math.max(spatialDistance, 1);
+          const force = F_magnitude * alpha / pixelDistance;
 
-          const fx = (dx / distance) * force;
-          const fy = (dy / distance) * force;
+          const fx = (dx / spatialDistance) * force;
+          const fy = (dy / spatialDistance) * force;
 
           a.vx += fx;
           a.vy += fy;
@@ -1002,12 +1025,35 @@ class ForceDirectedVisualization {
       }
     };
 
-    // Update or add the force
-    if (this.simulation) {
-      this.simulation.force('topoRepulsion', this.topoRepulsionForce);
-      this.simulation.alpha(0.3).restart();
+    // Update the force in the simulation
+    this.simulation.force('topoRepulsion', this.topoRepulsionForce);
+    this.simulation.alpha(0.3).restart();
+  }
+
+  /**
+   * Legacy: Set topology-aware repulsion strength and reapply the force.
+   * 
+   * Topology repulsion adds additional distance-based repulsion on top of
+   * the ordinary D3 many-body charge force. Nodes close together in the
+   * phylogenetic graph experience stronger additional repulsion.
+   * 
+   * This method is maintained for backward compatibility but no longer used.
+   * Use setTopologyRepulsionX() instead.
+   * 
+   * @param {number} strength - Slider value (0-100), where 0 disables this force
+   * @param {Object} phyloGraph - The immutable PhyloGraph object
+   * @deprecated
+   */
+  setTopologyRepulsion(strength, phyloGraph) {
+    // For backward compatibility, treat the old strength value as X
+    this.setTopologyRepulsionX(strength);
+
+    // Cache graph if provided
+    if (phyloGraph && typeof phyloGraph.getNodes === 'function' && !this.graphDistances) {
+      this.graphDistances = this._computeGraphDistances(phyloGraph);
     }
   }
+
 
   /**
    * Get diagnostic information about asset loading for a specific taxon.

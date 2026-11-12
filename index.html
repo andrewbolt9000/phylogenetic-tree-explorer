@@ -103,6 +103,33 @@
       color: #2E86AB;
     }
 
+    .equation-display {
+      background: #f5f5f5;
+      border-left: 3px solid #2E86AB;
+      padding: 12px;
+      margin-bottom: 12px;
+      border-radius: 3px;
+      font-size: 0.95em;
+    }
+
+    .equation-display code {
+      background: white;
+      padding: 2px 6px;
+      border-radius: 2px;
+      font-family: 'Courier New', monospace;
+      font-size: 0.9em;
+      display: block;
+      margin-top: 6px;
+      color: #333;
+    }
+
+    .subcontrol {
+      margin-left: 12px;
+      margin-top: 12px;
+      padding-left: 12px;
+      border-left: 2px solid #ddd;
+    }
+
     input[type="range"] {
       width: 100%;
       height: 6px;
@@ -276,15 +303,49 @@
         </div>
 
         <div class="control-group">
-          <div class="control-label">
-            <span>Topology Repulsion</span>
-            <span class="control-value" id="topology-repulsion-value">0</span>
+          <div class="equation-display">
+            <strong>Topology Repulsion Equation:</strong>
+            <code>F<sub>topology</sub> = B × (A + X) / D</code>
           </div>
-          <input type="range" id="topology-repulsion-slider" 
-                 min="0" max="100" value="0" step="1">
           <p class="info-text">
-            Additional repulsion based on phylogenetic distance. Zero disables this effect.
+            Where: A = baseline offset, B = force scale, X = master control, D = graph distance
           </p>
+          
+          <div class="subcontrol">
+            <div class="control-label">
+              <span>Topology Baseline (A)</span>
+              <span class="control-value" id="topology-repulsion-a-value">1</span>
+            </div>
+            <input type="range" id="topology-repulsion-a-slider" 
+                   min="0" max="100" value="10" step="1">
+            <p class="info-text" style="font-size: 0.9em;">
+              Baseline contribution. At A=0, repulsion depends entirely on X.
+            </p>
+          </div>
+
+          <div class="subcontrol">
+            <div class="control-label">
+              <span>Topology Multiplier (B)</span>
+              <span class="control-value" id="topology-repulsion-b-value">1</span>
+            </div>
+            <input type="range" id="topology-repulsion-b-slider" 
+                   min="0" max="100" value="10" step="1">
+            <p class="info-text" style="font-size: 0.9em;">
+              Overall force scale. Larger values amplify the topology repulsion effect.
+            </p>
+          </div>
+
+          <div class="subcontrol">
+            <div class="control-label">
+              <span>Topology Strength (X)</span>
+              <span class="control-value" id="topology-repulsion-x-value">0</span>
+            </div>
+            <input type="range" id="topology-repulsion-x-slider" 
+                   min="0" max="100" value="0" step="1">
+            <p class="info-text" style="font-size: 0.9em;">
+              Master control strength. Zero disables topology repulsion completely.
+            </p>
+          </div>
         </div>
 
         <div class="control-group">

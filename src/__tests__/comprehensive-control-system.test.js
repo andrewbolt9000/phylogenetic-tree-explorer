@@ -20,12 +20,14 @@ test('PhyloExplorer Comprehensive Control System Verification', async (t) => {
       assert.match(html, new RegExp(`id="${id}"`), `Should have ${id}`);
     });
     
-    // Force controls
+    // Force controls (changed: topology repulsion is now A, B, X instead of single slider)
     const forceControls = [
       'charge-slider',
       'link-slider',
       'edge-thickness-slider',
-      'topology-repulsion-slider'
+      'topology-repulsion-a-slider',
+      'topology-repulsion-b-slider',
+      'topology-repulsion-x-slider'
     ];
     
     forceControls.forEach(id => {
@@ -133,9 +135,12 @@ test('PhyloExplorer Comprehensive Control System Verification', async (t) => {
     assert.match(html, /id="sidebar-font-size-slider"/);
   });
 
-  await t.test('Topology repulsion slider exists', () => {
+  await t.test('Topology repulsion sliders (A, B, X) exist', () => {
     const html = fs.readFileSync('./index.html', 'utf-8');
-    assert.match(html, /id="topology-repulsion-slider"/);
+    assert.match(html, /id="topology-repulsion-a-slider"/, 'A slider exists');
+    assert.match(html, /id="topology-repulsion-b-slider"/, 'B slider exists');
+    assert.match(html, /id="topology-repulsion-x-slider"/, 'X slider exists');
+    assert.match(html, /F<sub>topology<\/sub>/, 'Equation displayed');
   });
 
   await t.test('Node dates toggle exists', () => {
