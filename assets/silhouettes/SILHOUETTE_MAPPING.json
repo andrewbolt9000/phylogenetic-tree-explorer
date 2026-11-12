@@ -1,0 +1,136 @@
+{
+  "silhouetteMappings": {
+    "homo-sapiens": {
+      "taxonomyId": "tax_homo_sapiens",
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "filename": "homo-sapiens.svg"
+    },
+    "pan-troglodytes": {
+      "taxonomyId": "tax_pan_troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Common Chimpanzee",
+      "filename": "pan-troglodytes.svg"
+    },
+    "pan-paniscus": {
+      "taxonomyId": "tax_pan_paniscus",
+      "scientificName": "Pan paniscus",
+      "commonName": "Bonobo",
+      "filename": "pan-paniscus.svg"
+    },
+    "gorilla-gorilla": {
+      "taxonomyId": "tax_gorilla_gorilla",
+      "scientificName": "Gorilla gorilla",
+      "commonName": "Western Lowland Gorilla",
+      "filename": "gorilla-gorilla.svg"
+    },
+    "pongo-pygmaeus": {
+      "taxonomyId": "tax_pongo_pygmaeus",
+      "scientificName": "Pongo pygmaeus",
+      "commonName": "Bornean Orangutan",
+      "filename": "pongo-pygmaeus.svg"
+    },
+    "macaca-mulatta": {
+      "taxonomyId": "tax_macaca_mulatta",
+      "scientificName": "Macaca mulatta",
+      "commonName": "Rhesus Macaque",
+      "filename": "macaca-mulatta.svg"
+    },
+    "mus-musculus": {
+      "taxonomyId": "tax_mus_musculus",
+      "scientificName": "Mus musculus",
+      "commonName": "House Mouse",
+      "filename": "mus-musculus.svg"
+    },
+    "rattus-norvegicus": {
+      "taxonomyId": "tax_rattus_norvegicus",
+      "scientificName": "Rattus norvegicus",
+      "commonName": "Brown Rat",
+      "filename": "rattus-norvegicus.svg"
+    },
+    "canis-lupus": {
+      "taxonomyId": "tax_canis_lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray Wolf",
+      "filename": "canis-lupus.svg"
+    },
+    "felis-catus": {
+      "taxonomyId": "tax_felis_catus",
+      "scientificName": "Felis catus",
+      "commonName": "Domestic Cat",
+      "filename": "felis-catus.svg"
+    },
+    "panthera-leo": {
+      "taxonomyId": "tax_panthera_leo",
+      "scientificName": "Panthera leo",
+      "commonName": "Lion",
+      "filename": "panthera-leo.svg"
+    },
+    "panthera-pardus": {
+      "taxonomyId": "tax_panthera_pardus",
+      "scientificName": "Panthera pardus",
+      "commonName": "Leopard",
+      "filename": "panthera-pardus.svg"
+    },
+    "balaenoptera-musculus": {
+      "taxonomyId": "tax_balaenoptera_musculus",
+      "scientificName": "Balaenoptera musculus",
+      "commonName": "Blue Whale",
+      "filename": "balaenoptera-musculus.svg"
+    },
+    "tursiops-truncatus": {
+      "taxonomyId": "tax_tursiops_truncatus",
+      "scientificName": "Tursiops truncatus",
+      "commonName": "Bottlenose Dolphin",
+      "filename": "tursiops-truncatus.svg"
+    },
+    "cervus-elaphus": {
+      "taxonomyId": "tax_cervus_elaphus",
+      "scientificName": "Cervus elaphus",
+      "commonName": "Red Deer",
+      "filename": "cervus-elaphus.svg"
+    },
+    "bos-taurus": {
+      "taxonomyId": "tax_bos_taurus",
+      "scientificName": "Bos taurus",
+      "commonName": "Domestic Cattle",
+      "filename": "bos-taurus.svg"
+    },
+    "artibeus-lituratus": {
+      "taxonomyId": "tax_artibeus_lituratus",
+      "scientificName": "Artibeus lituratus",
+      "commonName": "Great Fruit Bat",
+      "filename": "artibeus-lituratus.svg"
+    },
+    "macropus-rufus": {
+      "taxonomyId": "tax_macropus_rufus",
+      "scientificName": "Macropus rufus",
+      "commonName": "Red Kangaroo",
+      "filename": "macropus-rufus.svg"
+    },
+    "phalanger-orientalis": {
+      "taxonomyId": "tax_phalanger_orientalis",
+      "scientificName": "Phalanger orientalis",
+      "commonName": "Common Cuscus",
+      "filename": "phalanger-orientalis.svg"
+    },
+    "ornithorhynchus-anatinus": {
+      "taxonomyId": "tax_ornithorhynchus_anatinus",
+      "scientificName": "Ornithorhynchus anatinus",
+      "commonName": "Platypus",
+      "filename": "ornithorhynchus-anatinus.svg"
+    },
+    "sciurus-vulgaris": {
+      "taxonomyId": "tax_sciurus_vulgaris",
+      "scientificName": "Sciurus vulgaris",
+      "commonName": "Red Squirrel",
+      "filename": "sciurus-vulgaris.svg"
+    }
+  },
+  "metadata": {
+    "totalSpecies": 21,
+    "allTerminalSpeciesCovered": true,
+    "assetFormat": "SVG",
+    "license": "CC0 1.0 Universal"
+  }
+}

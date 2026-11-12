@@ -1,0 +1,116 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Divergence Estimates Schema",
+  "description": "Defines temporal estimates of divergence times for internal nodes in phylogenetic hypotheses. Multiple independent estimates are preserved for each node, scoped to a hypothesis and source. Organized as a hierarchical structure: divergenceEstimates -> hypothesis ID -> node ID -> array of estimates.",
+  "type": "object",
+  "required": ["divergenceEstimates"],
+  "properties": {
+    "divergenceEstimates": {
+      "type": "object",
+      "description": "Divergence estimates organized by hypothesis. Keys are hypothesis IDs (e.g., 'phylo_mammals_1').",
+      "additionalProperties": {
+        "type": "object",
+        "description": "Estimates for a single hypothesis, organized by node ID.",
+        "additionalProperties": {
+          "type": "array",
+          "description": "Array of independent estimates for this node from different sources. Multiple estimates are preserved without averaging.",
+          "items": {
+            "type": "object",
+            "required": ["sourceId", "centralEstimate"],
+            "properties": {
+              "sourceId": {
+                "type": "string",
+                "description": "Stable identifier for this source (e.g., 'source_dos_reis_2018', 'source_springer_2004'). Used to link to source metadata."
+              },
+              "centralEstimate": {
+                "type": "number",
+                "description": "Central estimate of divergence time in millions of years ago (Ma). Must be >= 0."
+              },
+              "statisticType": {
+                "type": "string",
+                "enum": ["mean", "median", "mode", "other"],
+                "description": "What the central estimate represents. Defaults to 'mean' if not specified. Important for proper statistical interpretation."
+              },
+              "uncertaintyLower": {
+                "type": ["number", "null"],
+                "description": "Lower bound of uncertainty interval (Ma). Null if not available. Must be <= centralEstimate."
+              },
+              "uncertaintyUpper": {
+                "type": ["number", "null"],
+                "description": "Upper bound of uncertainty interval (Ma). Null if not available. Must be >= centralEstimate."
+              },
+              "uncertaintyType": {
+                "type": ["string", "null"],
+                "description": "Type of uncertainty interval (e.g., '95% credible interval', '95% confidence interval', 'standard deviation'). Required if uncertainty bounds are provided."
+              },
+              "unit": {
+                "type": "string",
+                "enum": ["Ma", "Ga"],
+                "description": "Unit of time: 'Ma' (millions of years ago) or 'Ga' (billions of years ago). Defaults to 'Ma'."
+              },
+              "methodology": {
+                "type": ["string", "null"],
+                "description": "Brief description of methodology (e.g., 'Bayesian relaxed clock', 'penalized likelihood'). Important for interpretation."
+              },
+              "calibrationNotes": {
+                "type": ["string", "null"],
+                "description": "Notes on calibration points or methodological caveats. Optional but important for reproducibility."
+              },
+              "source": {
+                "type": ["string", "null"],
+                "description": "Source identifier (e.g., 'doi:10.1038/srep33666'). Optional but recommended for traceability."
+              },
+              "sourceAuthors": {
+                "type": ["array", "null"],
+                "items": { "type": "string" },
+                "description": "Authors of the source publication. Optional."
+              },
+              "sourceYear": {
+                "type": ["integer", "null"],
+                "description": "Publication year. Optional."
+              },
+              "sourceTitle": {
+                "type": ["string", "null"],
+                "description": "Publication title. Optional."
+              },
+              "sourceJournal": {
+                "type": ["string", "null"],
+                "description": "Journal name. Optional."
+              },
+              "notes": {
+                "type": ["string", "null"],
+                "description": "Any additional notes about this specific estimate. Optional."
+              }
+            },
+            "additionalProperties": false
+          },
+          "minItems": 0
+        }
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "description": "Overall metadata for the divergence estimates dataset.",
+      "properties": {
+        "source": {
+          "type": ["string", "null"],
+          "description": "Source or origin of these estimates. Optional."
+        },
+        "license": {
+          "type": ["string", "null"],
+          "description": "License under which data is available. Optional."
+        },
+        "accessDate": {
+          "type": ["string", "null"],
+          "description": "Date data was compiled or accessed (YYYY-MM-DD). Optional."
+        },
+        "notes": {
+          "type": ["string", "null"],
+          "description": "General notes about the dataset. Optional."
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "additionalProperties": false
+}

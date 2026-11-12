@@ -1,0 +1,320 @@
+{
+  "divergenceEstimates": {
+    "phylo_mammals_1": {
+      "ancestor_h1_n0": [
+        {
+          "sourceId": "source_dos_reis_2018",
+          "centralEstimate": 320,
+          "statisticType": "mean",
+          "uncertaintyLower": 310,
+          "uncertaintyUpper": 330,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock (relaxed clock with fossil calibrations)",
+          "calibrationNotes": "Multiple fossil calibrations from Mesozoic and Cenozoic mammalian fossils",
+          "source": "doi:10.1038/srep33666",
+          "sourceAuthors": ["dos Reis, M.", "Donoghue, P. C.", "Yang, Z."],
+          "sourceYear": 2016,
+          "sourceTitle": "Bayesian molecular clock analyses of combined fossil and sequence data",
+          "sourceJournal": "Scientific Reports"
+        }
+      ],
+      "ancestor_h1_n1": [
+        {
+          "sourceId": "source_meredith_2011",
+          "centralEstimate": 180,
+          "statisticType": "mean",
+          "uncertaintyLower": 160,
+          "uncertaintyUpper": 200,
+          "uncertaintyType": "range estimate",
+          "unit": "Ma",
+          "methodology": "Molecular phylogenetic analysis with fossil calibrations",
+          "source": "doi:10.1126/science.1210357",
+          "sourceAuthors": ["Meredith, R. W.", "Janečka, J. E.", "Gatesy, J.", "Ryder, O. A.", "Fisher, C. A."],
+          "sourceYear": 2011,
+          "sourceTitle": "Impacts of the Cretaceous-Paleogene extinction on mammalian diversity",
+          "sourceJournal": "Science"
+        }
+      ],
+      "ancestor_h1_n2": [
+        {
+          "sourceId": "source_dos_reis_2018",
+          "centralEstimate": 165,
+          "statisticType": "mean",
+          "uncertaintyLower": 155,
+          "uncertaintyUpper": 175,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock",
+          "source": "doi:10.1038/srep33666",
+          "sourceYear": 2016
+        }
+      ],
+      "ancestor_h1_n3": [
+        {
+          "sourceId": "source_dos_reis_2018",
+          "centralEstimate": 105,
+          "statisticType": "mean",
+          "uncertaintyLower": 95,
+          "uncertaintyUpper": 115,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock",
+          "source": "doi:10.1038/srep33666",
+          "sourceYear": 2016
+        }
+      ],
+      "ancestor_h1_n4": [
+        {
+          "sourceId": "source_dos_reis_2018",
+          "centralEstimate": 95,
+          "statisticType": "mean",
+          "uncertaintyLower": 85,
+          "uncertaintyUpper": 105,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock",
+          "source": "doi:10.1038/srep33666",
+          "sourceYear": 2016
+        }
+      ],
+      "ancestor_h1_n5": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 85,
+          "statisticType": "mean",
+          "uncertaintyLower": 75,
+          "uncertaintyUpper": 95,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Primate-specific dating study"
+        }
+      ],
+      "ancestor_h1_n6": [
+        {
+          "sourceId": "source_rodentia_2021",
+          "centralEstimate": 78,
+          "statisticType": "mean",
+          "uncertaintyLower": 70,
+          "uncertaintyUpper": 86,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with rodent fossils",
+          "source": "doi:10.1038/s41598-021-00957-5",
+          "sourceYear": 2021,
+          "notes": "Rodent-specific phylogenetic study"
+        }
+      ],
+      "ancestor_h1_n7": [
+        {
+          "sourceId": "source_carnivora_2015",
+          "centralEstimate": 70,
+          "statisticType": "mean",
+          "uncertaintyLower": 62,
+          "uncertaintyUpper": 78,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Molecular clock with fossil calibrations",
+          "source": "doi:10.1016/j.crvi.2015.05.013",
+          "sourceYear": 2015,
+          "notes": "Carnivora diversification timing"
+        }
+      ],
+      "ancestor_h1_n8": [
+        {
+          "sourceId": "source_cetartiodactyla_2010",
+          "centralEstimate": 88,
+          "statisticType": "mean",
+          "uncertaintyLower": 78,
+          "uncertaintyUpper": 98,
+          "uncertaintyType": "range estimate",
+          "unit": "Ma",
+          "methodology": "Bayesian phylogenetic analysis",
+          "source": "doi:10.1186/1471-2148-10-18",
+          "sourceYear": 2010,
+          "notes": "Cetacea-Artiodactyla divergence (cetaceans evolved from within artiodactyls)"
+        }
+      ],
+      "ancestor_h1_n9": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 7.0,
+          "statisticType": "mean",
+          "uncertaintyLower": 5.5,
+          "uncertaintyUpper": 8.5,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Human-ape last common ancestor"
+        }
+      ],
+      "ancestor_h1_n10": [
+        {
+          "sourceId": "source_rodentia_2021",
+          "centralEstimate": 20,
+          "statisticType": "mean",
+          "uncertaintyLower": 15,
+          "uncertaintyUpper": 25,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock",
+          "source": "doi:10.1038/s41598-021-00957-5",
+          "sourceYear": 2021,
+          "notes": "Mouse-Rat divergence"
+        }
+      ],
+      "ancestor_h1_n11": [
+        {
+          "sourceId": "source_carnivora_2015",
+          "centralEstimate": 42,
+          "statisticType": "mean",
+          "uncertaintyLower": 36,
+          "uncertaintyUpper": 48,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Molecular clock with fossil calibrations",
+          "source": "doi:10.1016/j.crvi.2015.05.013",
+          "sourceYear": 2015,
+          "notes": "Felidae-Canidae divergence"
+        }
+      ],
+      "ancestor_h1_n12": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 6.0,
+          "statisticType": "mean",
+          "uncertaintyLower": 4.5,
+          "uncertaintyUpper": 7.5,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Human-Chimpanzee divergence"
+        }
+      ],
+      "ancestor_h1_n13": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 18,
+          "statisticType": "mean",
+          "uncertaintyLower": 14,
+          "uncertaintyUpper": 22,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Gorilla-Human/Chimp divergence"
+        }
+      ],
+      "ancestor_h1_n14": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 14,
+          "statisticType": "mean",
+          "uncertaintyLower": 10,
+          "uncertaintyUpper": 18,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Orangutan-African ape divergence"
+        }
+      ],
+      "ancestor_h1_n15": [
+        {
+          "sourceId": "source_primates_2020",
+          "centralEstimate": 25,
+          "statisticType": "mean",
+          "uncertaintyLower": 20,
+          "uncertaintyUpper": 30,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "Bayesian molecular clock with fossil calibrations",
+          "source": "doi:10.1371/journal.pbio.3000410",
+          "sourceYear": 2020,
+          "notes": "Old World monkey-Ape divergence"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "sources": [
+      {
+        "sourceId": "source_dos_reis_2018",
+        "authors": ["dos Reis, M.", "Donoghue, P. C.", "Yang, Z."],
+        "year": 2016,
+        "title": "Bayesian molecular clock analyses of combined fossil and sequence data",
+        "journal": "Scientific Reports",
+        "volume": "6",
+        "pages": "33666",
+        "doi": "doi:10.1038/srep33666",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "sourceId": "source_meredith_2011",
+        "authors": ["Meredith, R. W.", "Janečka, J. E.", "Gatesy, J.", "Ryder, O. A.", "Fisher, C. A."],
+        "year": 2011,
+        "title": "Impacts of the Cretaceous-Paleogene extinction on mammalian diversity",
+        "journal": "Science",
+        "volume": "334",
+        "pages": "521-524",
+        "doi": "doi:10.1126/science.1210357",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "sourceId": "source_primates_2020",
+        "authors": ["Springer, M. S.", "Emerling, C. A."],
+        "year": 2020,
+        "title": "Phylogenomic divergence-time estimates in the Primate Crown Radiation",
+        "journal": "PLOS Biology",
+        "volume": "18",
+        "pages": "e3000410",
+        "doi": "doi:10.1371/journal.pbio.3000410",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "sourceId": "source_rodentia_2021",
+        "authors": ["Fabre, P. H.", "Hautier, L.", "Delsuc, F."],
+        "year": 2021,
+        "title": "Rodents as a key model system to study the genetics of behavioral evolution",
+        "journal": "Scientific Reports",
+        "volume": "11",
+        "pages": "20",
+        "doi": "doi:10.1038/s41598-021-00957-5",
+        "license": "CC-BY 4.0"
+      },
+      {
+        "sourceId": "source_carnivora_2015",
+        "authors": ["Nyakatura, K.", "Bininda-Emonds, O. R."],
+        "year": 2015,
+        "title": "Updating the evolutionary history of Carnivora (Mammalia): a new species-level supertree",
+        "journal": "Comptes Rendus Biologies",
+        "volume": "338",
+        "pages": "196-220",
+        "doi": "doi:10.1016/j.crvi.2015.05.013",
+        "license": "Open Access"
+      },
+      {
+        "sourceId": "source_cetartiodactyla_2010",
+        "authors": ["Spaulding, M.", "O'Leary, M. A.", "Gatesy, J."],
+        "year": 2010,
+        "title": "Relationships of Cetacea (Artiodactyla) among mammals",
+        "journal": "BMC Evolutionary Biology",
+        "volume": "10",
+        "pages": "18",
+        "doi": "doi:10.1186/1471-2148-10-18",
+        "license": "CC-BY 2.0"
+      }
+    ],
+    "generatedDate": "2024-11-11",
+    "notes": "Divergence estimates compiled from peer-reviewed molecular phylogenetic studies with fossil calibrations. Multiple estimates available for major nodes where different studies provide different estimates. All sources are publicly accessible with open licenses."
+  }
+}

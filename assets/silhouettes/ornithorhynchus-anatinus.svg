@@ -1,0 +1,7 @@
+<svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <desc>Platypus - Ornithorhynchus anatinus</desc>
+  <ellipse cx="50" cy="50" rx="14" ry="13" fill="#4A6FA5"/>
+  <ellipse cx="35" cy="50" rx="6" ry="8" fill="#4A6FA5"/>
+  <path d="M 42 50 L 30 48 L 30 52 Z" fill="#4A6FA5"/>
+  <path d="M 55 42 L 50 25 M 55 42 L 58 25" stroke="#4A6FA5" stroke-width="1.5" fill="#4A6FA5" stroke-linecap="round"/>
+</svg>

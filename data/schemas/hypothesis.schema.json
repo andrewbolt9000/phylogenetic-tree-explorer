@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Phylogenetic Hypothesis Schema",
+  "description": "Defines a rooted phylogenetic tree representing a published evolutionary hypothesis. Terminal nodes reference taxa from the taxonomy; internal nodes are hypothesis-specific ancestors.",
+  "type": "object",
+  "required": ["hypothesisId", "hypothesisName", "source", "rootNodeId", "terminalIdPrefix", "internalIdPrefix", "nodes"],
+  "properties": {
+    "hypothesisId": {
+      "type": "string",
+      "pattern": "^phylo_.+",
+      "description": "Stable, unique identifier for this hypothesis. Prefixed with 'phylo_'. Scopes all internal node IDs and divergence estimates."
+    },
+    "hypothesisName": {
+      "type": "string",
+      "description": "Human-readable name for this hypothesis (e.g., 'dos Reis et al. 2018 Time-Tree')."
+    },
+    "source": {
+      "type": "string",
+      "description": "Citation or DOI for the published source (e.g., 'doi:10.1016/j.cub.2018.03.056')."
+    },
+    "sourceMetadata": {
+      "type": "object",
+      "description": "Additional metadata about the source publication. Optional.",
+      "properties": {
+        "authors": {
+          "type": "array",
+          "items": { "type": "string" },
+          "description": "List of authors."
+        },
+        "year": {
+          "type": "integer",
+          "description": "Publication year."
+        },
+        "title": {
+          "type": "string",
+          "description": "Publication title."
+        },
+        "journal": {
+          "type": "string",
+          "description": "Journal or publication venue."
+        }
+      },
+      "additionalProperties": true
+    },
+    "rootNodeId": {
+      "type": "string",
+      "description": "ID of the root node (most recent common ancestor of all taxa). Must be an internal node ID."
+    },
+    "terminalIdPrefix": {
+      "type": "string",
+      "description": "Prefix used for terminal node IDs in this hypothesis (typically 'tax_'). Allows validation that terminals reference taxa."
+    },
+    "internalIdPrefix": {
+      "type": "string",
+      "description": "Prefix used for internal (ancestral) node IDs in this hypothesis (e.g., 'ancestor_h1_'). Includes hypothesis identifier for scoping."
+    },
+    "nodes": {
+      "type": "array",
+      "description": "Array of all nodes in the tree (terminal and internal). Must form a valid rooted tree.",
+      "items": {
+        "type": "object",
+        "required": ["id", "type", "parentId", "children"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique node identifier within this hypothesis. Terminals start with terminalIdPrefix; internals start with internalIdPrefix."
+          },
+          "type": {
+            "type": "string",
+            "enum": ["terminal", "internal"],
+            "description": "Node type: 'terminal' for taxon reference, 'internal' for ancestor."
+          },
+          "parentId": {
+            "type": ["string", "null"],
+            "description": "ID of parent node. Null for root node only. All non-root nodes must have a parent."
+          },
+          "children": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Array of child node IDs. Internal nodes must have at least 2 children (binary or polytomous). Terminals have empty array."
+          },
+          "taxonId": {
+            "type": "string",
+            "description": "For terminal nodes only: the taxonomic ID this node represents (must match a taxon in taxonomy). Internal nodes do not have this field."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    }
+  },
+  "additionalProperties": false
+}

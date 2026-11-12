@@ -1,0 +1,63 @@
+{
+  "divergenceEstimates": {
+    "phylo_hypothesis-001": {
+      "ancestor_h1_n0": [
+        {
+          "sourceId": "synthetic_source_1",
+          "centralEstimate": 100.0,
+          "statisticType": "mean",
+          "uncertaintyLower": 90.0,
+          "uncertaintyUpper": 110.0,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "SYNTHETIC - Bayesian relaxed clock (fictional)",
+          "calibrationNotes": "SYNTHETIC - Artificial calibration points"
+        }
+      ],
+      "ancestor_h1_n1": [
+        {
+          "sourceId": "synthetic_source_1",
+          "centralEstimate": 75.0,
+          "statisticType": "median",
+          "uncertaintyLower": 65.0,
+          "uncertaintyUpper": 85.0,
+          "uncertaintyType": "95% confidence interval",
+          "unit": "Ma",
+          "methodology": "SYNTHETIC - Maximum likelihood",
+          "calibrationNotes": "SYNTHETIC - Fictional calibration"
+        }
+      ],
+      "ancestor_h1_n2": [
+        {
+          "sourceId": "synthetic_source_2",
+          "centralEstimate": 120.0,
+          "statisticType": "mean",
+          "uncertaintyLower": 100.0,
+          "uncertaintyUpper": 140.0,
+          "uncertaintyType": "95% credible interval",
+          "unit": "Ma",
+          "methodology": "SYNTHETIC - Another method",
+          "calibrationNotes": "SYNTHETIC - Different calibrations"
+        }
+      ]
+    }
+  },
+  "metadata": {
+    "synthetic_source_1": {
+      "type": "analysis",
+      "title": "Synthetic Test Source 1",
+      "year": 2024,
+      "license": "CC0",
+      "accessDate": "2024-11-01",
+      "notes": "SYNTHETIC - Test data only"
+    },
+    "synthetic_source_2": {
+      "type": "analysis",
+      "title": "Synthetic Test Source 2",
+      "year": 2024,
+      "license": "CC0",
+      "accessDate": "2024-11-01",
+      "notes": "SYNTHETIC - Test data only"
+    }
+  }
+}

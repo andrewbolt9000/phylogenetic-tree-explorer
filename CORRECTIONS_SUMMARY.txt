@@ -1,0 +1,261 @@
+================================================================================
+PhyloExplorer: Milestone 0 Documentation Corrections — COMPLETE
+================================================================================
+
+OVERVIEW
+--------
+All four project specification documents (PROJECT_SPEC.md, ARCHITECTURE.md, 
+DATA_POLICY.md, ROADMAP.md) have been comprehensively revised to address eight 
+critical architectural issues identified in review.
+
+The primary concern was conflation of taxonomy (formal organism classification) 
+with phylogeny (evolutionary relationships). All four documents now maintain 
+rigorous separation of these concepts.
+
+
+WHAT CHANGED
+============
+
+1. PROJECT_SPEC.md
+   ✓ Separated "taxonomic reference" from "phylogenetic hypothesis"
+   ✓ Clarified MRCA displays divergence time estimates (not generic "distance")
+   ✓ Explicitly distinguished four temporal concepts:
+     - Divergence time: When lineages split
+     - Taxon origin: When organism first appeared
+     - First fossil occurrence: Oldest known fossil
+     - Branch length: Duration lineage persists
+   ✓ Added "Multiple Phylogenetic Hypotheses" as planned future feature
+   ✓ All example data marked as FICTIONAL
+
+2. ARCHITECTURE.md
+   ✓ Restructured into 5-layer design:
+     Layer 1: Taxonomy (formal classification)
+     Layer 2: Phylogenetic Hypothesis (evolutionary tree)
+     Layer 3: Graph (abstract operations)
+     Layer 4: Layout (positioning algorithms)
+     Layer 5: Visualization (D3.js rendering)
+   
+   ✓ Separated concepts:
+     - Taxonomy: Formal Linnaean classification with tax_* ID prefix
+     - Phylogeny: Published evolutionary hypothesis with hypothesis-scoped IDs
+     - Terminals reference taxonomic IDs; internals are hypothesis-unique
+   
+   ✓ Revised layout architecture:
+     - Free Force-Directed: Both X and Y unconstrained
+     - Time-Axis: X constrained by time estimates, Y from 1D physics
+     - LayoutEngine interface queries coordinate freedom
+   
+   ✓ Updated graph model:
+     - PhyloGraph accepts hypothesisId (scopes operations)
+     - Immutable tree structure enforced
+   
+   ✓ Added section 2.5: All JSON examples explicitly marked FICTIONAL
+   
+   ✓ Module structure now reflects separation:
+     - taxonomyLoader.js
+     - hypothesisLoader.js
+     - divergenceLoader.js
+     - schemaValidator.js
+     - taxonomyResolver.js
+
+3. DATA_POLICY.md
+   ✓ Reorganized around core separation:
+     Section 1: Scientific Integrity principles
+     Section 2: Taxonomy (not automatically a phylogenetic tree)
+     Section 3: Phylogenetic Hypotheses (rooted trees, hypothesis-scoped)
+     Section 4: Divergence Estimates (detailed model with uncertainty)
+   
+   ✓ Added section 3.2: Supporting multiple phylogenetic hypotheses
+     - Each hypothesis has hypothesisId
+     - Internal nodes unique within hypothesis
+     - No silent combining of topologies
+   
+   ✓ Enriched divergence estimate model:
+     - Binding: (hypothesisId, nodeId, sourceId)
+     - Includes: statisticType, uncertaintyType, methodology, calibration,
+       DOI, estimate date
+     - All estimates preserved independently
+     - Never averaged or silently selected
+   
+   ✓ Section 4.3: Explicitly distinguish temporal concepts
+     - Never conflate divergence time with taxon origin
+     - Never treat fossil occurrence as evolutionary date
+     - Store branch length separately
+   
+   ✓ All JSON examples marked: "FICTIONAL example for schema documentation only"
+
+4. ROADMAP.md
+   ✓ Reorganized milestone structure:
+     M0: Project Documentation (COMPLETE)
+     M1: Data Structures & Graph Foundation (was embedded in visualization)
+     M2: Force-Directed Visualization (now uses M1 foundation + test fixtures)
+     M3: Real Mammalian Dataset (NEW: pure data curation, parallel to M2)
+     M4: Search & Taxon Discovery
+     M5: MRCA Comparison
+     M6: Bookmarks & Tree Pruning
+     M7: GitHub Pages Deployment
+     M8+: Post-release (Time-Axis Layout, etc.)
+   
+   ✓ M1 now includes:
+     - JSON schemas for all data types
+     - Synthetic test fixtures (30 taxa, explicitly marked fictional)
+     - Graph operations and validation
+     - No visualization
+     - No real datasets
+   
+   ✓ M3 is new: Pure data curation
+     - Can run parallel to M2 visualization
+     - Independent of visualization work
+     - Sourcing, validation, licensing verification
+     - No code; pure data and documentation
+   
+   ✓ Updated acceptance criteria for all milestones
+   
+   ✓ Added "Unresolved Questions" section with 5 key decisions needed
+   
+   ✓ Updated timeline and summary table
+
+
+WHY THIS MATTERS
+================
+
+1. Prevents conflation of taxonomy with evolution
+   Problem: Treating taxonomic ranks as equivalent to phylogenetic clades
+   Solution: Separate taxonomy (formal classification) from phylogeny (trees)
+
+2. Enables multiple phylogenetic hypotheses
+   Problem: Application silently combines competing published trees
+   Solution: Hypothesis-scoped node IDs; operations respect boundaries
+
+3. Preserves scientific transparency
+   Problem: Estimates averaged or selected silently
+   Solution: All estimates with full metadata stored independently
+
+4. Supports constrained layouts
+   Problem: Time-axis layout requires architectural refactoring
+   Solution: LayoutEngine queries coordinate freedom from start
+
+5. Separates data curation from visualization
+   Problem: Dataset collection blocked by visualization code
+   Solution: M3 data curation independent; M2 visualization uses test fixtures
+
+6. Eliminates example data confusion
+   Problem: Schema examples could be mistaken for real data
+   Solution: All examples marked explicitly FICTIONAL
+
+
+KEY ARCHITECTURAL DECISIONS
+============================
+
+Taxonomy Structure:
+  - ID prefix: tax_*
+  - Example: tax_homo_sapiens
+  - Source: ITIS or NCBI Taxonomy
+  - Represents formal classification (kingdom → species)
+
+Phylogenetic Hypothesis:
+  - Each hypothesis has hypothesisId: "phylo_hypothesis-001"
+  - Terminal nodes: type: "terminal", taxonId: references taxonomy
+  - Internal nodes: type: "internal", id: ancestor_h1_n0 (hypothesis-scoped)
+  - Represents one published evolutionary tree
+
+Divergence Estimate:
+  - Binding: (hypothesisId, nodeId, sourceId)
+  - Fields: estimateAge, statisticType, uncertaintyType, bounds, methodology,
+    calibrationNotes, source DOI, estimate date
+  - Multiple estimates preserved; never averaged
+  - Display: All estimates available; user selects or app shows most recent
+
+Layout Coordinate Constraints:
+  - isXConstrained(): Returns true if X position fixed
+  - isYConstrained(): Returns true if Y position fixed
+  - Free layout: Both false
+  - Time-axis: X=true, Y=false (1D physics on Y)
+
+Synthetic Test Data:
+  - Location: test-fixtures/ (within git repo)
+  - Clearly marked: All IDs fictional, all data fictional
+  - Example: phylo_hypothesis-001, ancestor_h1_n0, tax_example_species
+  - Size: 30 taxa for M1 testing
+  - Real data: Separate M3 milestone
+
+
+UNRESOLVED QUESTIONS (To address before M1)
+============================================
+
+1. Dataset Selection: Which published mammalian phylogeny?
+   Options: dos Reis 2018, Springer 2004, TimeTree, other
+   Action: Verify redistribution rights before selection
+
+2. Dataset Size: Initial release scope?
+   Options: 200-300 species (fast), comprehensive (valuable)
+   Recommendation: Start small, expand later
+
+3. Build Tools: ES module delivery strategy?
+   Options: Direct ES modules on GitHub Pages, or bundler (Rollup/esbuild)?
+   Action: Test during M1
+
+4. Divergence Estimate UI: Multiple estimates strategy?
+   Options: Show all + user select, show most recent, show mean (NO)
+   Recommendation: Show all; default to most recent
+
+5. Mobile Support: Desktop-primary or full mobile?
+   Options: Desktop-primary initial, mobile post-release
+   Recommendation: Desktop-primary for initial release
+
+
+MILESTONE 1 ACCEPTANCE CRITERIA
+================================
+
+Before M1 is considered complete, verify:
+
+✓ JSON Schemas
+  - All data types have complete JSON schemas
+  - Schemas validate against real-world constraints
+  
+✓ Taxonomy-Phylogeny Separation
+  - Taxonomy loader reads formal classification
+  - Hypothesis loader reads rooted trees
+  - Terminals reference taxon IDs
+  - No automatic taxonomy-to-phylogeny conversion
+  
+✓ Hypothesis Scoping
+  - Internal node IDs contain hypothesis prefix
+  - MRCA calculations scoped to selected hypothesis
+  - Multiple hypotheses do not interfere
+  
+✓ Test Fixtures
+  - Synthetic 30-taxon fixture loads without errors
+  - All IDs clearly marked fictional
+  - All source metadata fictional
+  - Fixture integrity validated
+  
+✓ Graph Operations
+  - MRCA calculation 100% correct on test data
+  - Path finding 100% correct
+  - Pruning operations 100% correct
+  - Tree integrity checks catch all invalid structures
+  
+✓ No Real Data Yet
+  - Repository contains only synthetic test fixtures
+  - No real mammalian data included
+  - No external data sources ingested
+  
+✓ All Unit Tests Pass
+  - Comprehensive test coverage
+  - All edge cases covered
+  - All tests pass
+
+
+NEXT STEPS
+==========
+
+1. Review all four revised documents
+2. Address 5 unresolved questions (see above)
+3. Confirm architecture with stakeholders
+4. Approve taxonomy-phylogeny separation approach
+5. Begin Milestone 1 implementation
+
+Milestone 0 (Documentation) is COMPLETE and ready for approval.
+
+================================================================================

@@ -1,0 +1,8 @@
+<svg viewBox="0 0 100 100" width="100" height="100" xmlns="http://www.w3.org/2000/svg">
+  <desc>Squirrel - Sciurus vulgaris</desc>
+  <path d="M 40 28 L 35 16 L 42 22 M 60 28 L 65 16 L 58 22" stroke="#4A6FA5" stroke-width="1.5" fill="#4A6FA5"/>
+  <circle cx="50" cy="35" r="9" fill="#4A6FA5"/>
+  <ellipse cx="50" cy="55" rx="11" ry="13" fill="#4A6FA5"/>
+  <path d="M 44 48 L 34 70 M 56 48 L 66 70" stroke="#4A6FA5" stroke-width="1.8" fill="#4A6FA5" stroke-linecap="round"/>
+  <path d="M 58 50 Q 72 48 80 55" stroke="#4A6FA5" stroke-width="2" fill="#4A6FA5" stroke-linecap="round"/>
+</svg>

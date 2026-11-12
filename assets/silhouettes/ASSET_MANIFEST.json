@@ -1,0 +1,236 @@
+{
+  "silhouetteAssets": [
+    {
+      "id": "homo-sapiens",
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "filename": "homo-sapiens.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Minimalist silhouette representation"
+    },
+    {
+      "id": "pan-troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Common Chimpanzee",
+      "filename": "pan-troglodytes.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Silhouette with characteristic arm proportions"
+    },
+    {
+      "id": "pan-paniscus",
+      "scientificName": "Pan paniscus",
+      "commonName": "Bonobo",
+      "filename": "pan-paniscus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Silhouette showing slighter build compared to chimpanzee"
+    },
+    {
+      "id": "gorilla-gorilla",
+      "scientificName": "Gorilla gorilla",
+      "commonName": "Western Lowland Gorilla",
+      "filename": "gorilla-gorilla.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Silhouette emphasizing robust build"
+    },
+    {
+      "id": "pongo-pygmaeus",
+      "scientificName": "Pongo pygmaeus",
+      "commonName": "Bornean Orangutan",
+      "filename": "pongo-pygmaeus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Silhouette showing long arms"
+    },
+    {
+      "id": "macaca-mulatta",
+      "scientificName": "Macaca mulatta",
+      "commonName": "Rhesus Macaque",
+      "filename": "macaca-mulatta.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Smaller primate silhouette with tail"
+    },
+    {
+      "id": "mus-musculus",
+      "scientificName": "Mus musculus",
+      "commonName": "House Mouse",
+      "filename": "mus-musculus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Small rodent silhouette with prominent tail"
+    },
+    {
+      "id": "rattus-norvegicus",
+      "scientificName": "Rattus norvegicus",
+      "commonName": "Brown Rat",
+      "filename": "rattus-norvegicus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Rodent silhouette larger than mouse"
+    },
+    {
+      "id": "canis-lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray Wolf",
+      "filename": "canis-lupus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Canid silhouette with ears and tail"
+    },
+    {
+      "id": "felis-catus",
+      "scientificName": "Felis catus",
+      "commonName": "Domestic Cat",
+      "filename": "felis-catus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Feline silhouette with pointed ears and tail"
+    },
+    {
+      "id": "panthera-leo",
+      "scientificName": "Panthera leo",
+      "commonName": "Lion",
+      "filename": "panthera-leo.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Large cat silhouette with mane indication"
+    },
+    {
+      "id": "panthera-pardus",
+      "scientificName": "Panthera pardus",
+      "commonName": "Leopard",
+      "filename": "panthera-pardus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Large spotted cat silhouette"
+    },
+    {
+      "id": "balaenoptera-musculus",
+      "scientificName": "Balaenoptera musculus",
+      "commonName": "Blue Whale",
+      "filename": "balaenoptera-musculus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Whale silhouette with dorsal fin"
+    },
+    {
+      "id": "tursiops-truncatus",
+      "scientificName": "Tursiops truncatus",
+      "commonName": "Bottlenose Dolphin",
+      "filename": "tursiops-truncatus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Cetacean silhouette with curved dorsal fin"
+    },
+    {
+      "id": "cervus-elaphus",
+      "scientificName": "Cervus elaphus",
+      "commonName": "Red Deer",
+      "filename": "cervus-elaphus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Ungulate silhouette with branching antlers"
+    },
+    {
+      "id": "bos-taurus",
+      "scientificName": "Bos taurus",
+      "commonName": "Domestic Cattle",
+      "filename": "bos-taurus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Bovine silhouette with horns"
+    },
+    {
+      "id": "artibeus-lituratus",
+      "scientificName": "Artibeus lituratus",
+      "commonName": "Great Fruit Bat",
+      "filename": "artibeus-lituratus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Chiropteran silhouette with wing structure"
+    },
+    {
+      "id": "macropus-rufus",
+      "scientificName": "Macropus rufus",
+      "commonName": "Red Kangaroo",
+      "filename": "macropus-rufus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Marsupial silhouette with characteristic upright posture"
+    },
+    {
+      "id": "phalanger-orientalis",
+      "scientificName": "Phalanger orientalis",
+      "commonName": "Common Cuscus",
+      "filename": "phalanger-orientalis.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Marsupial arboreal silhouette with prehensile tail"
+    },
+    {
+      "id": "ornithorhynchus-anatinus",
+      "scientificName": "Ornithorhynchus anatinus",
+      "commonName": "Platypus",
+      "filename": "ornithorhynchus-anatinus.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Monotreme silhouette with distinctive bill"
+    },
+    {
+      "id": "sciurus-vulgaris",
+      "scientificName": "Sciurus vulgaris",
+      "commonName": "Red Squirrel",
+      "filename": "sciurus-vulgaris.svg",
+      "license": "CC0 1.0 Universal",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "created": "2024",
+      "credit": "PhyloExplorer Project",
+      "notes": "Rodent arboreal silhouette with prominent ear tufts and tail"
+    }
+  ],
+  "notes": "All silhouettes are minimalist scientific representations created for PhyloExplorer. They are provided under CC0 1.0 Universal Public Domain Dedication, allowing free use without restriction. These SVG files are optimized for the phylogenetic tree visualization context."
+}

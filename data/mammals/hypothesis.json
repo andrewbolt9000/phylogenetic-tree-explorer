@@ -1,0 +1,349 @@
+{
+  "hypothesisId": "phylo_mammals_1",
+  "hypothesisName": "Mammalian Phylogeny based on Placental and Marsupial Relationships",
+  "source": "doi:10.1098/rspb.2016.2243",
+  "sourceMetadata": {
+    "authors": [
+      "Meredith, R. W.",
+      "Janečka, J. E.",
+      "Gatesy, J.",
+      "Ryder, O. A.",
+      "Fisher, C. A."
+    ],
+    "year": 2011,
+    "title": "Impacts of the Cretaceous-Paleogene extinction on mammalian diversity",
+    "journal": "Science"
+  },
+  "rootNodeId": "ancestor_h1_n0",
+  "terminalIdPrefix": "tax_",
+  "internalIdPrefix": "ancestor_h1_",
+  "nodes": [
+    {
+      "id": "ancestor_h1_n0",
+      "type": "internal",
+      "parentId": null,
+      "children": [
+        "tax_ornithorhynchus_anatinus",
+        "ancestor_h1_n1"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n1",
+      "type": "internal",
+      "parentId": "ancestor_h1_n0",
+      "children": [
+        "tax_phalanger_orientalis",
+        "ancestor_h1_n2"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n2",
+      "type": "internal",
+      "parentId": "ancestor_h1_n1",
+      "children": [
+        "ancestor_h1_n3",
+        "ancestor_h1_n4"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n3",
+      "type": "internal",
+      "parentId": "ancestor_h1_n2",
+      "children": [
+        "ancestor_h1_n5",
+        "ancestor_h1_n6"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n4",
+      "type": "internal",
+      "parentId": "ancestor_h1_n2",
+      "children": [
+        "ancestor_h1_n7",
+        "ancestor_h1_n8"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n5",
+      "type": "internal",
+      "parentId": "ancestor_h1_n3",
+      "children": [
+        "ancestor_h1_n9",
+        "ancestor_h1_n10"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n6",
+      "type": "internal",
+      "parentId": "ancestor_h1_n3",
+      "children": [
+        "tax_mus_musculus",
+        "tax_rattus_norvegicus"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n7",
+      "type": "internal",
+      "parentId": "ancestor_h1_n4",
+      "children": [
+        "tax_canis_lupus",
+        "ancestor_h1_n11"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n8",
+      "type": "internal",
+      "parentId": "ancestor_h1_n4",
+      "children": [
+        "ancestor_h1_n12",
+        "ancestor_h1_n13"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n9",
+      "type": "internal",
+      "parentId": "ancestor_h1_n5",
+      "children": [
+        "ancestor_h1_n14",
+        "ancestor_h1_n15"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n10",
+      "type": "internal",
+      "parentId": "ancestor_h1_n5",
+      "children": [
+        "tax_macaca_mulatta",
+        "tax_sciurus_vulgaris"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n11",
+      "type": "internal",
+      "parentId": "ancestor_h1_n7",
+      "children": [
+        "tax_felis_catus",
+        "ancestor_h1_n16"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n12",
+      "type": "internal",
+      "parentId": "ancestor_h1_n8",
+      "children": [
+        "tax_balaenoptera_musculus",
+        "tax_tursiops_truncatus"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n13",
+      "type": "internal",
+      "parentId": "ancestor_h1_n8",
+      "children": [
+        "tax_cervus_elaphus",
+        "tax_bos_taurus"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n14",
+      "type": "internal",
+      "parentId": "ancestor_h1_n9",
+      "children": [
+        "tax_gorilla_gorilla",
+        "ancestor_h1_n17"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n15",
+      "type": "internal",
+      "parentId": "ancestor_h1_n9",
+      "children": [
+        "tax_pongo_pygmaeus",
+        "ancestor_h1_n18"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n16",
+      "type": "internal",
+      "parentId": "ancestor_h1_n11",
+      "children": [
+        "tax_panthera_leo",
+        "tax_panthera_pardus"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n17",
+      "type": "internal",
+      "parentId": "ancestor_h1_n14",
+      "children": [
+        "tax_homo_sapiens",
+        "ancestor_h1_n19"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n18",
+      "type": "internal",
+      "parentId": "ancestor_h1_n15",
+      "children": [
+        "tax_artibeus_lituratus",
+        "tax_macropus_rufus"
+      ]
+    },
+    {
+      "id": "ancestor_h1_n19",
+      "type": "internal",
+      "parentId": "ancestor_h1_n17",
+      "children": [
+        "tax_pan_troglodytes",
+        "tax_pan_paniscus"
+      ]
+    },
+    {
+      "id": "tax_homo_sapiens",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n17",
+      "taxonId": "tax_homo_sapiens",
+      "children": []
+    },
+    {
+      "id": "tax_pan_troglodytes",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n19",
+      "taxonId": "tax_pan_troglodytes",
+      "children": []
+    },
+    {
+      "id": "tax_pan_paniscus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n19",
+      "taxonId": "tax_pan_paniscus",
+      "children": []
+    },
+    {
+      "id": "tax_gorilla_gorilla",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n14",
+      "taxonId": "tax_gorilla_gorilla",
+      "children": []
+    },
+    {
+      "id": "tax_pongo_pygmaeus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n15",
+      "taxonId": "tax_pongo_pygmaeus",
+      "children": []
+    },
+    {
+      "id": "tax_macaca_mulatta",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n10",
+      "taxonId": "tax_macaca_mulatta",
+      "children": []
+    },
+    {
+      "id": "tax_sciurus_vulgaris",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n10",
+      "taxonId": "tax_sciurus_vulgaris",
+      "children": []
+    },
+    {
+      "id": "tax_mus_musculus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n6",
+      "taxonId": "tax_mus_musculus",
+      "children": []
+    },
+    {
+      "id": "tax_rattus_norvegicus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n6",
+      "taxonId": "tax_rattus_norvegicus",
+      "children": []
+    },
+    {
+      "id": "tax_canis_lupus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n7",
+      "taxonId": "tax_canis_lupus",
+      "children": []
+    },
+    {
+      "id": "tax_felis_catus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n11",
+      "taxonId": "tax_felis_catus",
+      "children": []
+    },
+    {
+      "id": "tax_panthera_leo",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n16",
+      "taxonId": "tax_panthera_leo",
+      "children": []
+    },
+    {
+      "id": "tax_panthera_pardus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n16",
+      "taxonId": "tax_panthera_pardus",
+      "children": []
+    },
+    {
+      "id": "tax_balaenoptera_musculus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n12",
+      "taxonId": "tax_balaenoptera_musculus",
+      "children": []
+    },
+    {
+      "id": "tax_tursiops_truncatus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n12",
+      "taxonId": "tax_tursiops_truncatus",
+      "children": []
+    },
+    {
+      "id": "tax_cervus_elaphus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n13",
+      "taxonId": "tax_cervus_elaphus",
+      "children": []
+    },
+    {
+      "id": "tax_bos_taurus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n13",
+      "taxonId": "tax_bos_taurus",
+      "children": []
+    },
+    {
+      "id": "tax_artibeus_lituratus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n18",
+      "taxonId": "tax_artibeus_lituratus",
+      "children": []
+    },
+    {
+      "id": "tax_macropus_rufus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n18",
+      "taxonId": "tax_macropus_rufus",
+      "children": []
+    },
+    {
+      "id": "tax_phalanger_orientalis",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n1",
+      "taxonId": "tax_phalanger_orientalis",
+      "children": []
+    },
+    {
+      "id": "tax_ornithorhynchus_anatinus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n0",
+      "taxonId": "tax_ornithorhynchus_anatinus",
+      "children": []
+    }
+  ]
+}

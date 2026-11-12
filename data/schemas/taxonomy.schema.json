@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Taxonomy Schema",
+  "description": "Defines the structure of taxonomic reference data. Taxonomy is the authoritative roster of organisms with formal classification, independent of any phylogenetic hypothesis.",
+  "type": "object",
+  "required": ["taxonomy", "metadata"],
+  "properties": {
+    "taxonomy": {
+      "type": "array",
+      "description": "Array of taxonomic records. Each taxon has a stable ID, scientific name, and parent relationship.",
+      "items": {
+        "type": "object",
+        "required": ["id", "scientificName", "rank", "parent", "extinct"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^tax_.+",
+            "description": "Stable taxonomic identifier. Always prefixed with 'tax_' to distinguish from phylogenetic node IDs. Does not depend on scientific name and remains unchanged through taxonomic revisions."
+          },
+          "scientificName": {
+            "type": "string",
+            "description": "Current scientific name (binomial for species, genus for genus, etc.). May change without changing the ID."
+          },
+          "commonName": {
+            "type": "string",
+            "description": "Common name in English, if available. Optional."
+          },
+          "rank": {
+            "type": "string",
+            "enum": ["domain", "kingdom", "phylum", "class", "order", "family", "subfamily", "tribe", "subtribe", "superfamily", "genus", "subgenus", "species", "subspecies"],
+            "description": "Taxonomic rank."
+          },
+          "parent": {
+            "type": ["string", "null"],
+            "description": "ID of parent taxon (e.g., 'tax_homo' for genus Homo). Root taxa have parent=null. Parent must exist in the taxonomy."
+          },
+          "synonyms": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Alternative scientific names (former names after reclassification, etc.). Optional."
+          },
+          "source": {
+            "type": "string",
+            "description": "Authority source (e.g., 'ITIS', 'NCBI', 'WoRMS'). Required for data provenance."
+          },
+          "sourceId": {
+            "type": "string",
+            "description": "Stable identifier in source system (e.g., ITIS TSN). Optional but recommended."
+          },
+          "extinct": {
+            "type": "boolean",
+            "description": "True if the taxon is entirely extinct (no extant members). False if extant members exist."
+          },
+          "notes": {
+            "type": "string",
+            "description": "Any additional notes or caveats. Optional."
+          }
+        },
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["source"],
+      "description": "Metadata about the taxonomic dataset.",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Source authority (e.g., 'ITIS 2024', 'NCBI Taxonomy 2024')."
+        },
+        "sourceUrl": {
+          "type": "string",
+          "format": "uri",
+          "description": "URL to source website. Optional."
+        },
+        "license": {
+          "type": "string",
+          "description": "License under which data is available. Required for redistribution verification."
+        },
+        "accessDate": {
+          "type": "string",
+          "format": "date",
+          "description": "Date data was accessed or imported (YYYY-MM-DD). Required for version tracking."
+        },
+        "version": {
+          "type": "string",
+          "description": "Source version or snapshot identifier. Optional."
+        },
+        "notes": {
+          "type": "string",
+          "description": "Additional notes about data curation or processing. Optional."
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

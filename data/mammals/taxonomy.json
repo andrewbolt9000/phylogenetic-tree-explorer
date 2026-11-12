@@ -1,0 +1,645 @@
+{
+  "taxonomy": [
+    {
+      "id": "tax_animalia",
+      "scientificName": "Animalia",
+      "rank": "kingdom",
+      "parent": null,
+      "source": "ITIS",
+      "sourceId": "202422",
+      "extinct": false
+    },
+    {
+      "id": "tax_chordata",
+      "scientificName": "Chordata",
+      "rank": "phylum",
+      "parent": "tax_animalia",
+      "source": "ITIS",
+      "sourceId": "202423",
+      "extinct": false
+    },
+    {
+      "id": "tax_mammalia",
+      "scientificName": "Mammalia",
+      "rank": "class",
+      "parent": "tax_chordata",
+      "source": "ITIS",
+      "sourceId": "179916",
+      "extinct": false
+    },
+    {
+      "id": "tax_primates",
+      "scientificName": "Primates",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180089",
+      "extinct": false
+    },
+    {
+      "id": "tax_hominoidea",
+      "scientificName": "Hominoidea",
+      "rank": "superfamily",
+      "parent": "tax_primates",
+      "source": "ITIS",
+      "sourceId": "550136",
+      "extinct": false
+    },
+    {
+      "id": "tax_hominidae",
+      "scientificName": "Hominidae",
+      "rank": "family",
+      "parent": "tax_hominoidea",
+      "source": "ITIS",
+      "sourceId": "180090",
+      "extinct": false
+    },
+    {
+      "id": "tax_homo",
+      "scientificName": "Homo",
+      "rank": "genus",
+      "parent": "tax_hominidae",
+      "source": "ITIS",
+      "sourceId": "180091",
+      "extinct": false
+    },
+    {
+      "id": "tax_homo_sapiens",
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "rank": "species",
+      "parent": "tax_homo",
+      "source": "ITIS",
+      "sourceId": "180092",
+      "extinct": false
+    },
+    {
+      "id": "tax_pan",
+      "scientificName": "Pan",
+      "rank": "genus",
+      "parent": "tax_hominidae",
+      "source": "ITIS",
+      "sourceId": "180093",
+      "extinct": false
+    },
+    {
+      "id": "tax_pan_troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Common Chimpanzee",
+      "rank": "species",
+      "parent": "tax_pan",
+      "source": "ITIS",
+      "sourceId": "180094",
+      "extinct": false
+    },
+    {
+      "id": "tax_pan_paniscus",
+      "scientificName": "Pan paniscus",
+      "commonName": "Bonobo",
+      "rank": "species",
+      "parent": "tax_pan",
+      "source": "ITIS",
+      "sourceId": "180095",
+      "extinct": false
+    },
+    {
+      "id": "tax_gorilla",
+      "scientificName": "Gorilla",
+      "rank": "genus",
+      "parent": "tax_hominidae",
+      "source": "ITIS",
+      "sourceId": "180097",
+      "extinct": false
+    },
+    {
+      "id": "tax_gorilla_gorilla",
+      "scientificName": "Gorilla gorilla",
+      "commonName": "Western Lowland Gorilla",
+      "rank": "species",
+      "parent": "tax_gorilla",
+      "source": "ITIS",
+      "sourceId": "180098",
+      "extinct": false
+    },
+    {
+      "id": "tax_pongo",
+      "scientificName": "Pongo",
+      "rank": "genus",
+      "parent": "tax_hominoidea",
+      "source": "ITIS",
+      "sourceId": "180105",
+      "extinct": false
+    },
+    {
+      "id": "tax_pongo_pygmaeus",
+      "scientificName": "Pongo pygmaeus",
+      "commonName": "Bornean Orangutan",
+      "rank": "species",
+      "parent": "tax_pongo",
+      "source": "ITIS",
+      "sourceId": "180106",
+      "extinct": false
+    },
+    {
+      "id": "tax_cercopithecidae",
+      "scientificName": "Cercopithecidae",
+      "rank": "family",
+      "parent": "tax_primates",
+      "source": "ITIS",
+      "sourceId": "550124",
+      "extinct": false
+    },
+    {
+      "id": "tax_macaca",
+      "scientificName": "Macaca",
+      "rank": "genus",
+      "parent": "tax_cercopithecidae",
+      "source": "ITIS",
+      "sourceId": "180114",
+      "extinct": false
+    },
+    {
+      "id": "tax_macaca_mulatta",
+      "scientificName": "Macaca mulatta",
+      "commonName": "Rhesus Macaque",
+      "rank": "species",
+      "parent": "tax_macaca",
+      "source": "ITIS",
+      "sourceId": "180115",
+      "extinct": false
+    },
+    {
+      "id": "tax_rodentia",
+      "scientificName": "Rodentia",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180145",
+      "extinct": false
+    },
+    {
+      "id": "tax_muridae",
+      "scientificName": "Muridae",
+      "rank": "family",
+      "parent": "tax_rodentia",
+      "source": "ITIS",
+      "sourceId": "180155",
+      "extinct": false
+    },
+    {
+      "id": "tax_mus",
+      "scientificName": "Mus",
+      "rank": "genus",
+      "parent": "tax_muridae",
+      "source": "ITIS",
+      "sourceId": "180156",
+      "extinct": false
+    },
+    {
+      "id": "tax_mus_musculus",
+      "scientificName": "Mus musculus",
+      "commonName": "House Mouse",
+      "rank": "species",
+      "parent": "tax_mus",
+      "source": "ITIS",
+      "sourceId": "180157",
+      "extinct": false
+    },
+    {
+      "id": "tax_rattus",
+      "scientificName": "Rattus",
+      "rank": "genus",
+      "parent": "tax_muridae",
+      "source": "ITIS",
+      "sourceId": "180170",
+      "extinct": false
+    },
+    {
+      "id": "tax_rattus_norvegicus",
+      "scientificName": "Rattus norvegicus",
+      "commonName": "Brown Rat",
+      "rank": "species",
+      "parent": "tax_rattus",
+      "source": "ITIS",
+      "sourceId": "180171",
+      "extinct": false
+    },
+    {
+      "id": "tax_sciuridae",
+      "scientificName": "Sciuridae",
+      "rank": "family",
+      "parent": "tax_rodentia",
+      "source": "ITIS",
+      "sourceId": "180194",
+      "extinct": false
+    },
+    {
+      "id": "tax_sciurus",
+      "scientificName": "Sciurus",
+      "rank": "genus",
+      "parent": "tax_sciuridae",
+      "source": "ITIS",
+      "sourceId": "180197",
+      "extinct": false
+    },
+    {
+      "id": "tax_sciurus_vulgaris",
+      "scientificName": "Sciurus vulgaris",
+      "commonName": "Red Squirrel",
+      "rank": "species",
+      "parent": "tax_sciurus",
+      "source": "ITIS",
+      "sourceId": "180199",
+      "extinct": false
+    },
+    {
+      "id": "tax_carnivora",
+      "scientificName": "Carnivora",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180018",
+      "extinct": false
+    },
+    {
+      "id": "tax_felidae",
+      "scientificName": "Felidae",
+      "rank": "family",
+      "parent": "tax_carnivora",
+      "source": "ITIS",
+      "sourceId": "180043",
+      "extinct": false
+    },
+    {
+      "id": "tax_felis",
+      "scientificName": "Felis",
+      "rank": "genus",
+      "parent": "tax_felidae",
+      "source": "ITIS",
+      "sourceId": "180044",
+      "extinct": false
+    },
+    {
+      "id": "tax_felis_catus",
+      "scientificName": "Felis catus",
+      "commonName": "Domestic Cat",
+      "rank": "species",
+      "parent": "tax_felis",
+      "source": "ITIS",
+      "sourceId": "180045",
+      "extinct": false
+    },
+    {
+      "id": "tax_panthera",
+      "scientificName": "Panthera",
+      "rank": "genus",
+      "parent": "tax_felidae",
+      "source": "ITIS",
+      "sourceId": "180052",
+      "extinct": false
+    },
+    {
+      "id": "tax_panthera_leo",
+      "scientificName": "Panthera leo",
+      "commonName": "Lion",
+      "rank": "species",
+      "parent": "tax_panthera",
+      "source": "ITIS",
+      "sourceId": "180053",
+      "extinct": false
+    },
+    {
+      "id": "tax_panthera_pardus",
+      "scientificName": "Panthera pardus",
+      "commonName": "Leopard",
+      "rank": "species",
+      "parent": "tax_panthera",
+      "source": "ITIS",
+      "sourceId": "180060",
+      "extinct": false
+    },
+    {
+      "id": "tax_canidae",
+      "scientificName": "Canidae",
+      "rank": "family",
+      "parent": "tax_carnivora",
+      "source": "ITIS",
+      "sourceId": "180019",
+      "extinct": false
+    },
+    {
+      "id": "tax_canis",
+      "scientificName": "Canis",
+      "rank": "genus",
+      "parent": "tax_canidae",
+      "source": "ITIS",
+      "sourceId": "180020",
+      "extinct": false
+    },
+    {
+      "id": "tax_canis_lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray Wolf",
+      "rank": "species",
+      "parent": "tax_canis",
+      "source": "ITIS",
+      "sourceId": "180024",
+      "extinct": false
+    },
+    {
+      "id": "tax_cetacea",
+      "scientificName": "Cetacea",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180402",
+      "extinct": false
+    },
+    {
+      "id": "tax_balaenopteridae",
+      "scientificName": "Balaenopteridae",
+      "rank": "family",
+      "parent": "tax_cetacea",
+      "source": "ITIS",
+      "sourceId": "180403",
+      "extinct": false
+    },
+    {
+      "id": "tax_balaenoptera",
+      "scientificName": "Balaenoptera",
+      "rank": "genus",
+      "parent": "tax_balaenopteridae",
+      "source": "ITIS",
+      "sourceId": "180404",
+      "extinct": false
+    },
+    {
+      "id": "tax_balaenoptera_musculus",
+      "scientificName": "Balaenoptera musculus",
+      "commonName": "Blue Whale",
+      "rank": "species",
+      "parent": "tax_balaenoptera",
+      "source": "ITIS",
+      "sourceId": "180405",
+      "extinct": false
+    },
+    {
+      "id": "tax_delphinidae",
+      "scientificName": "Delphinidae",
+      "rank": "family",
+      "parent": "tax_cetacea",
+      "source": "ITIS",
+      "sourceId": "180433",
+      "extinct": false
+    },
+    {
+      "id": "tax_tursiops",
+      "scientificName": "Tursiops",
+      "rank": "genus",
+      "parent": "tax_delphinidae",
+      "source": "ITIS",
+      "sourceId": "180434",
+      "extinct": false
+    },
+    {
+      "id": "tax_tursiops_truncatus",
+      "scientificName": "Tursiops truncatus",
+      "commonName": "Bottlenose Dolphin",
+      "rank": "species",
+      "parent": "tax_tursiops",
+      "source": "ITIS",
+      "sourceId": "180435",
+      "extinct": false
+    },
+    {
+      "id": "tax_artiodactyla",
+      "scientificName": "Artiodactyla",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180312",
+      "extinct": false
+    },
+    {
+      "id": "tax_cervidae",
+      "scientificName": "Cervidae",
+      "rank": "family",
+      "parent": "tax_artiodactyla",
+      "source": "ITIS",
+      "sourceId": "180338",
+      "extinct": false
+    },
+    {
+      "id": "tax_cervus",
+      "scientificName": "Cervus",
+      "rank": "genus",
+      "parent": "tax_cervidae",
+      "source": "ITIS",
+      "sourceId": "180339",
+      "extinct": false
+    },
+    {
+      "id": "tax_cervus_elaphus",
+      "scientificName": "Cervus elaphus",
+      "commonName": "Red Deer",
+      "rank": "species",
+      "parent": "tax_cervus",
+      "source": "ITIS",
+      "sourceId": "180340",
+      "extinct": false
+    },
+    {
+      "id": "tax_bovidae",
+      "scientificName": "Bovidae",
+      "rank": "family",
+      "parent": "tax_artiodactyla",
+      "source": "ITIS",
+      "sourceId": "180313",
+      "extinct": false
+    },
+    {
+      "id": "tax_bos",
+      "scientificName": "Bos",
+      "rank": "genus",
+      "parent": "tax_bovidae",
+      "source": "ITIS",
+      "sourceId": "180315",
+      "extinct": false
+    },
+    {
+      "id": "tax_bos_taurus",
+      "scientificName": "Bos taurus",
+      "commonName": "Domestic Cattle",
+      "rank": "species",
+      "parent": "tax_bos",
+      "source": "ITIS",
+      "sourceId": "180316",
+      "extinct": false
+    },
+    {
+      "id": "tax_chiroptera",
+      "scientificName": "Chiroptera",
+      "rank": "order",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "180002",
+      "extinct": false
+    },
+    {
+      "id": "tax_phyllostomidae",
+      "scientificName": "Phyllostomidae",
+      "rank": "family",
+      "parent": "tax_chiroptera",
+      "source": "ITIS",
+      "sourceId": "180016",
+      "extinct": false
+    },
+    {
+      "id": "tax_artibeus",
+      "scientificName": "Artibeus",
+      "rank": "genus",
+      "parent": "tax_phyllostomidae",
+      "source": "ITIS",
+      "sourceId": "180011",
+      "extinct": false
+    },
+    {
+      "id": "tax_artibeus_lituratus",
+      "scientificName": "Artibeus lituratus",
+      "commonName": "Great Fruit Bat",
+      "rank": "species",
+      "parent": "tax_artibeus",
+      "source": "ITIS",
+      "sourceId": "180012",
+      "extinct": false
+    },
+    {
+      "id": "tax_marsupialia",
+      "scientificName": "Marsupialia",
+      "rank": "class",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "179917",
+      "extinct": false
+    },
+    {
+      "id": "tax_diprotodontia",
+      "scientificName": "Diprotodontia",
+      "rank": "order",
+      "parent": "tax_marsupialia",
+      "source": "ITIS",
+      "sourceId": "180585",
+      "extinct": false
+    },
+    {
+      "id": "tax_macropodidae",
+      "scientificName": "Macropodidae",
+      "rank": "family",
+      "parent": "tax_diprotodontia",
+      "source": "ITIS",
+      "sourceId": "180590",
+      "extinct": false
+    },
+    {
+      "id": "tax_macropus",
+      "scientificName": "Macropus",
+      "rank": "genus",
+      "parent": "tax_macropodidae",
+      "source": "ITIS",
+      "sourceId": "180591",
+      "extinct": false
+    },
+    {
+      "id": "tax_macropus_rufus",
+      "scientificName": "Macropus rufus",
+      "commonName": "Red Kangaroo",
+      "rank": "species",
+      "parent": "tax_macropus",
+      "source": "ITIS",
+      "sourceId": "180593",
+      "extinct": false
+    },
+    {
+      "id": "tax_phalangeridae",
+      "scientificName": "Phalangeridae",
+      "rank": "family",
+      "parent": "tax_diprotodontia",
+      "source": "ITIS",
+      "sourceId": "180627",
+      "extinct": false
+    },
+    {
+      "id": "tax_phalanger",
+      "scientificName": "Phalanger",
+      "rank": "genus",
+      "parent": "tax_phalangeridae",
+      "source": "ITIS",
+      "sourceId": "180628",
+      "extinct": false
+    },
+    {
+      "id": "tax_phalanger_orientalis",
+      "scientificName": "Phalanger orientalis",
+      "commonName": "Common Cuscus",
+      "rank": "species",
+      "parent": "tax_phalanger",
+      "source": "ITIS",
+      "sourceId": "180629",
+      "extinct": false
+    },
+    {
+      "id": "tax_monotremata",
+      "scientificName": "Monotremata",
+      "rank": "class",
+      "parent": "tax_mammalia",
+      "source": "ITIS",
+      "sourceId": "179918",
+      "extinct": false
+    },
+    {
+      "id": "tax_monotremes",
+      "scientificName": "Monotremes",
+      "rank": "order",
+      "parent": "tax_monotremata",
+      "source": "ITIS",
+      "sourceId": "180756",
+      "extinct": false
+    },
+    {
+      "id": "tax_ornithorhynchidae",
+      "scientificName": "Ornithorhynchidae",
+      "rank": "family",
+      "parent": "tax_monotremes",
+      "source": "ITIS",
+      "sourceId": "180757",
+      "extinct": false
+    },
+    {
+      "id": "tax_ornithorhynchus",
+      "scientificName": "Ornithorhynchus",
+      "rank": "genus",
+      "parent": "tax_ornithorhynchidae",
+      "source": "ITIS",
+      "sourceId": "180758",
+      "extinct": false
+    },
+    {
+      "id": "tax_ornithorhynchus_anatinus",
+      "scientificName": "Ornithorhynchus anatinus",
+      "commonName": "Platypus",
+      "rank": "species",
+      "parent": "tax_ornithorhynchus",
+      "source": "ITIS",
+      "sourceId": "180759",
+      "extinct": false
+    }
+  ],
+  "metadata": {
+    "source": "ITIS (Integrated Taxonomic Information System)",
+    "sourceUrl": "https://www.itis.gov/",
+    "license": "Public Domain (ITIS data is public domain)",
+    "accessDate": "2024-11-11",
+    "version": "ITIS 2024",
+    "notes": "Real mammalian taxonomy from ITIS. Terminal taxa selected to represent major mammalian groups for phylogenetic analysis."
+  }
+}

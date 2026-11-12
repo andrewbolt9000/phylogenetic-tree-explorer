@@ -1,0 +1,185 @@
+{
+  "taxonomy": [
+    {
+      "id": "tax_exa_animalia",
+      "scientificName": "Animalia",
+      "rank": "kingdom",
+      "parent": null,
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_chordata",
+      "scientificName": "Chordata",
+      "rank": "phylum",
+      "parent": "tax_exa_animalia",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_mammalia",
+      "scientificName": "Mammalia",
+      "rank": "class",
+      "parent": "tax_exa_chordata",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_primates",
+      "scientificName": "Primates",
+      "rank": "order",
+      "parent": "tax_exa_mammalia",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_carnivora",
+      "scientificName": "Carnivora",
+      "rank": "order",
+      "parent": "tax_exa_mammalia",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_hominoidea",
+      "scientificName": "Hominoidea",
+      "rank": "superfamily",
+      "parent": "tax_exa_primates",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_hominidae",
+      "scientificName": "Hominidae",
+      "rank": "family",
+      "parent": "tax_exa_hominoidea",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_homo",
+      "scientificName": "Homo",
+      "rank": "genus",
+      "parent": "tax_exa_hominidae",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_pan",
+      "scientificName": "Pan",
+      "rank": "genus",
+      "parent": "tax_exa_hominidae",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_homo_sapiens",
+      "scientificName": "Homo sapiens",
+      "commonName": "Human",
+      "rank": "species",
+      "parent": "tax_exa_homo",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_pan_troglodytes",
+      "scientificName": "Pan troglodytes",
+      "commonName": "Common Chimpanzee",
+      "rank": "species",
+      "parent": "tax_exa_pan",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_pan_paniscus",
+      "scientificName": "Pan paniscus",
+      "commonName": "Bonobo",
+      "rank": "species",
+      "parent": "tax_exa_pan",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_gorilla",
+      "scientificName": "Gorilla",
+      "rank": "genus",
+      "parent": "tax_exa_hominidae",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_gorilla_gorilla",
+      "scientificName": "Gorilla gorilla",
+      "commonName": "Western Lowland Gorilla",
+      "rank": "species",
+      "parent": "tax_exa_gorilla",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_pongo",
+      "scientificName": "Pongo",
+      "rank": "genus",
+      "parent": "tax_exa_hominoidea",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_pongo_pygmaeus",
+      "scientificName": "Pongo pygmaeus",
+      "commonName": "Bornean Orangutan",
+      "rank": "species",
+      "parent": "tax_exa_pongo",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_felidae",
+      "scientificName": "Felidae",
+      "rank": "family",
+      "parent": "tax_exa_carnivora",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_felis",
+      "scientificName": "Felis",
+      "rank": "genus",
+      "parent": "tax_exa_felidae",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_felis_catus",
+      "scientificName": "Felis catus",
+      "commonName": "Domestic Cat",
+      "rank": "species",
+      "parent": "tax_exa_felis",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_canis",
+      "scientificName": "Canis",
+      "rank": "genus",
+      "parent": "tax_exa_felidae",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    },
+    {
+      "id": "tax_exa_canis_lupus",
+      "scientificName": "Canis lupus",
+      "commonName": "Gray Wolf",
+      "rank": "species",
+      "parent": "tax_exa_canis",
+      "source": "SYNTHETIC-FIXTURE",
+      "extinct": false
+    }
+  ],
+  "metadata": {
+    "source": "SYNTHETIC-FIXTURE",
+    "license": "CC0 (Public Domain) - Synthetic for testing only",
+    "accessDate": "2024-11-01",
+    "notes": "SYNTHETIC TEST FIXTURE - Not real taxonomic data. For automated testing only. Do not present as published data."
+  }
+}

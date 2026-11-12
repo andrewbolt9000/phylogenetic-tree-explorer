@@ -1,0 +1,124 @@
+{
+  "hypothesisId": "phylo_hypothesis-001",
+  "hypothesisName": "Synthetic Mammalian Phylogeny - FIXTURE ONLY",
+  "source": "SYNTHETIC-FIXTURE-NOT-REAL",
+  "sourceMetadata": {
+    "type": "SYNTHETIC",
+    "title": "SYNTHETIC TEST FIXTURE - Not a real publication",
+    "notes": "This is artificial data for testing. Do not cite or publish."
+  },
+  "rootNodeId": "ancestor_h1_n0",
+  "terminalIdPrefix": "tax_",
+  "internalIdPrefix": "ancestor_h1_",
+  "nodes": [
+    {
+      "id": "ancestor_h1_n0",
+      "type": "internal",
+      "parentId": null,
+      "children": ["ancestor_h1_n1", "ancestor_h1_n2"]
+    },
+    {
+      "id": "ancestor_h1_n1",
+      "type": "internal",
+      "parentId": "ancestor_h1_n0",
+      "children": ["ancestor_h1_n3", "tax_exa_pongo_pygmaeus"]
+    },
+    {
+      "id": "ancestor_h1_n2",
+      "type": "internal",
+      "parentId": "ancestor_h1_n0",
+      "children": ["ancestor_h1_n5", "ancestor_h1_n6"]
+    },
+    {
+      "id": "ancestor_h1_n3",
+      "type": "internal",
+      "parentId": "ancestor_h1_n1",
+      "children": ["ancestor_h1_n7", "ancestor_h1_n8"]
+    },
+    {
+      "id": "ancestor_h1_n5",
+      "type": "internal",
+      "parentId": "ancestor_h1_n2",
+      "children": ["ancestor_h1_n9", "ancestor_h1_n10"]
+    },
+    {
+      "id": "ancestor_h1_n6",
+      "type": "internal",
+      "parentId": "ancestor_h1_n2",
+      "children": ["tax_exa_felis_catus", "tax_exa_canis_lupus"]
+    },
+    {
+      "id": "ancestor_h1_n7",
+      "type": "internal",
+      "parentId": "ancestor_h1_n3",
+      "children": ["tax_exa_homo_sapiens", "tax_exa_pan_troglodytes"]
+    },
+    {
+      "id": "ancestor_h1_n8",
+      "type": "internal",
+      "parentId": "ancestor_h1_n3",
+      "children": ["tax_exa_gorilla_gorilla", "tax_exa_pan_paniscus"]
+    },
+    {
+      "id": "ancestor_h1_n9",
+      "type": "internal",
+      "parentId": "ancestor_h1_n5",
+      "children": ["tax_exa_homo_sapiens", "tax_exa_pan_paniscus"]
+    },
+    {
+      "id": "ancestor_h1_n10",
+      "type": "internal",
+      "parentId": "ancestor_h1_n5",
+      "children": ["tax_exa_gorilla_gorilla", "tax_exa_pongo_pygmaeus"]
+    },
+    {
+      "id": "tax_exa_homo_sapiens",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n7",
+      "children": [],
+      "taxonId": "tax_exa_homo_sapiens"
+    },
+    {
+      "id": "tax_exa_pan_troglodytes",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n7",
+      "children": [],
+      "taxonId": "tax_exa_pan_troglodytes"
+    },
+    {
+      "id": "tax_exa_gorilla_gorilla",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n8",
+      "children": [],
+      "taxonId": "tax_exa_gorilla_gorilla"
+    },
+    {
+      "id": "tax_exa_pan_paniscus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n8",
+      "children": [],
+      "taxonId": "tax_exa_pan_paniscus"
+    },
+    {
+      "id": "tax_exa_pongo_pygmaeus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n1",
+      "children": [],
+      "taxonId": "tax_exa_pongo_pygmaeus"
+    },
+    {
+      "id": "tax_exa_felis_catus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n6",
+      "children": [],
+      "taxonId": "tax_exa_felis_catus"
+    },
+    {
+      "id": "tax_exa_canis_lupus",
+      "type": "terminal",
+      "parentId": "ancestor_h1_n6",
+      "children": [],
+      "taxonId": "tax_exa_canis_lupus"
+    }
+  ]
+}

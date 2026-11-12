@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PhyloExplorer - Mammalian Phylogenetic Tree</title>
+  
+  <!-- Load D3.js from CDN so it's available for module imports -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  
+  <style>
+    /* Jost font definition */
+    @font-face {
+      font-family: 'Jost';
+      src: url('./assets/fonts/Jost-Medium.ttf') format('truetype');
+      font-weight: 500;
+      font-style: normal;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --sidebar-font-size: 14px;
+    }
+
+    body {
+      font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: #f5f5f5;
+      color: #333;
+      font-size: var(--sidebar-font-size);
+    }
+
+    button, input, select, textarea {
+      font-family: 'Jost', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif !important;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+    }
+
+    .sidebar {
+      width: 280px;
+      background: white;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      overflow-y: auto;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .graph-container {
+      flex: 1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    h1 {
+      font-size: calc(var(--sidebar-font-size) * 1.3);
+      margin-bottom: 20px;
+      color: #2E86AB;
+    }
+
+    h2 {
+      font-size: var(--sidebar-font-size);
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 10px;
+      color: #555;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    .control-group {
+      margin-bottom: 20px;
+    }
+
+    .control-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: calc(var(--sidebar-font-size) * 0.86);
+      font-weight: 500;
+      margin-bottom: 6px;
+      color: #666;
+    }
+
+    .control-value {
+      font-weight: 600;
+      color: #2E86AB;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      height: 6px;
+      border-radius: 3px;
+      background: #ddd;
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #2E86AB;
+      cursor: pointer;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transition: background-color 0.2s;
+    }
+
+    input[type="range"]::-webkit-slider-thumb:hover {
+      background: #1d5a7a;
+    }
+
+    input[type="range"]::-moz-range-thumb {
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #2E86AB;
+      cursor: pointer;
+      border: none;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+      transition: background-color 0.2s;
+    }
+
+    input[type="range"]::-moz-range-thumb:hover {
+      background: #1d5a7a;
+    }
+
+    .stats {
+      background: #f9f9f9;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      padding: 10px;
+      font-size: calc(var(--sidebar-font-size) * 0.86);
+      line-height: 1.6;
+    }
+
+    .stats div {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    button {
+      width: 100%;
+      padding: 8px 12px;
+      margin-top: 10px;
+      background: #2E86AB;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: calc(var(--sidebar-font-size) * 0.86);
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    button:hover {
+      background: #1d5a7a;
+    }
+
+    .checkbox-label {
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+      font-size: var(--sidebar-font-size);
+      margin-bottom: 8px;
+    }
+
+    .checkbox-label input[type="checkbox"] {
+      margin-right: 8px;
+      cursor: pointer;
+      width: 16px;
+      height: 16px;
+    }
+
+    .legend {
+      margin-top: 20px;
+      font-size: calc(var(--sidebar-font-size) * 0.86);
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 6px;
+    }
+
+    .legend-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      margin-right: 8px;
+      border: 1px solid #ccc;
+    }
+
+    .legend-terminal {
+      background: #2E86AB;
+    }
+
+    .legend-ancestor {
+      background: #A23B72;
+    }
+
+    .error {
+      color: #d32f2f;
+      background: #ffebee;
+      padding: 12px;
+      border-radius: 4px;
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+
+    .loading {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      font-size: 14px;
+      color: #999;
+    }
+
+    .info-text {
+      font-size: calc(var(--sidebar-font-size) * 0.86);
+      color: #666;
+      line-height: 1.5;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="sidebar">
+      <h1>PhyloExplorer</h1>
+      
+      <div id="error-container"></div>
+
+      <div id="loading" class="loading" style="display: none;">
+        Loading dataset...
+      </div>
+
+      <div id="controls" style="display: none;">
+        <h2>Forces</h2>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Repulsion (Charge)</span>
+            <span class="control-value" id="charge-value">300</span>
+          </div>
+          <input type="range" id="charge-slider" 
+                 min="0" max="1500" value="300" step="10">
+          <p class="info-text">
+            Higher values increase repulsion between nodes. Zero disables repulsion.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Topology Repulsion</span>
+            <span class="control-value" id="topology-repulsion-value">0</span>
+          </div>
+          <input type="range" id="topology-repulsion-slider" 
+                 min="0" max="100" value="0" step="1">
+          <p class="info-text">
+            Additional repulsion based on phylogenetic distance. Zero disables this effect.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Link Strength</span>
+            <span class="control-value" id="link-value">0.50</span>
+          </div>
+          <input type="range" id="link-slider" 
+                 min="0" max="3" value="0.5" step="0.05">
+          <p class="info-text">
+            Controls how strongly parent-child edges pull nodes together.
+          </p>
+        </div>
+
+        <button id="reset-button">Reset View</button>
+
+        <h2>Appearance</h2>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Edge Thickness</span>
+            <span class="control-value" id="edge-thickness-value">1.5</span>
+          </div>
+          <input type="range" id="edge-thickness-slider" 
+                 min="0.5" max="11" value="1.5" step="0.25">
+          <p class="info-text">
+            Controls the stroke width of phylogenetic edges.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Node Circle Size</span>
+            <span class="control-value" id="node-circle-value">1.0</span>
+          </div>
+          <input type="range" id="node-circle-slider" 
+                 min="0.5" max="8" value="1.0" step="0.1">
+          <p class="info-text">
+            Controls the radius of the grey circle behind each node.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Graph Font Size</span>
+            <span class="control-value" id="font-size-value">11px</span>
+          </div>
+          <input type="range" id="font-size-slider" 
+                 min="8" max="38" value="11" step="1">
+          <p class="info-text">
+            Controls the font size of node labels.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Sidebar Font Size</span>
+            <span class="control-value" id="sidebar-font-size-value">14px</span>
+          </div>
+          <input type="range" id="sidebar-font-size-slider" 
+                 min="11" max="24" value="14" step="1">
+          <p class="info-text">
+            Controls the font size of sidebar text and controls.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Silhouette Horizontal Offset</span>
+            <span class="control-value" id="silhouette-x-offset-value">0px</span>
+          </div>
+          <input type="range" id="silhouette-x-offset-slider" 
+                 min="-100" max="100" value="0" step="1">
+          <p class="info-text">
+            Shifts silhouettes left or right relative to node centers.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Silhouette Vertical Offset</span>
+            <span class="control-value" id="silhouette-y-offset-value">0px</span>
+          </div>
+          <input type="range" id="silhouette-y-offset-slider" 
+                 min="-100" max="100" value="0" step="1">
+          <p class="info-text">
+            Shifts silhouettes up or down relative to node centers.
+          </p>
+        </div>
+
+        <h2>Controls</h2>
+
+        <div class="control-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="show-node-dates-toggle">
+            <span>Show Node Dates</span>
+          </label>
+          <p class="info-text">
+            Display divergence age estimates on ancestral nodes.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="show-ancestral-labels-toggle">
+            <span>Show Ancestral Labels</span>
+          </label>
+          <p class="info-text">
+            Display clade names and descriptive labels on ancestral nodes.
+          </p>
+        </div>
+
+        <h2>Dataset</h2>
+        <div class="stats">
+          <div>
+            <span>Species:</span>
+            <span id="species-count">—</span>
+          </div>
+          <div>
+            <span>Ancestors:</span>
+            <span id="ancestor-count">—</span>
+          </div>
+          <div>
+            <span>Total Nodes:</span>
+            <span id="total-nodes">—</span>
+          </div>
+          <div>
+            <span>Links:</span>
+            <span id="total-links">—</span>
+          </div>
+        </div>
+
+        <h2>Legend</h2>
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-dot legend-terminal"></div>
+            <span>Terminal Species</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot legend-ancestor"></div>
+            <span>Ancestral Node</span>
+          </div>
+        </div>
+
+        <h2>Interaction</h2>
+        <div class="info-text">
+          <p><strong>Zoom:</strong> Scroll wheel or pinch</p>
+          <p><strong>Pan:</strong> Click and drag background</p>
+          <p><strong>Drag Node:</strong> Click and drag node</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="main">
+      <div id="graph" class="graph-container"></div>
+    </div>
+  </div>
+
+  <script type="module">
+    import { TaxonomyLoader } from './src/data/taxonomyLoader.js';
+    import { HypothesisLoader } from './src/data/hypothesisLoader.js';
+    import { DivergenceLoader } from './src/data/divergenceLoader.js';
+    import { GraphBuilder } from './src/graph/PhyloGraph.js';
+    import { VisualizationAdapter } from './src/visualization/visualizationAdapter.js';
+    import { ForceDirectedVisualization } from './src/visualization/forceDirectedVisualization.js';
+
+    const schemaDir = './data/schemas';
+    const mammalDataDir = './data/mammals';
+
+    async function initializeVisualization() {
+      try {
+        console.log('[PhyloExplorer] Initialization starting');
+        // Show loading
+        document.getElementById('loading').style.display = 'flex';
+        document.getElementById('controls').style.display = 'none';
+        console.log('[PhyloExplorer] Loading indicators set');
+
+        // Load data using async loaders (browser uses fetch, no fs initialization needed)
+        console.log('[PhyloExplorer] Creating TaxonomyLoader');
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        console.log('[PhyloExplorer] Loading taxonomy data');
+        const taxonomyData = await taxonomyLoader.loadAsync(`${mammalDataDir}/taxonomy.json`);
+        console.log('[PhyloExplorer] Taxonomy loaded, taxa count:', Object.keys(taxonomyData.taxa).length);
+
+        console.log('[PhyloExplorer] Creating HypothesisLoader');
+        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
+        console.log('[PhyloExplorer] Loading hypothesis data');
+        const hypothesisData = await hypothesisLoader.loadAsync(
+          `${mammalDataDir}/hypothesis.json`,
+          taxonomyData.taxa
+        );
+        console.log('[PhyloExplorer] Hypothesis loaded');
+
+        console.log('[PhyloExplorer] Creating DivergenceLoader');
+        const divergenceLoader = new DivergenceLoader(`${schemaDir}/divergence-estimates.schema.json`);
+        console.log('[PhyloExplorer] Loading divergence data');
+        // Create a map of hypotheses for the divergence loader
+        const hypothesesMap = {};
+        hypothesesMap[hypothesisData.hypothesisId] = hypothesisData;
+        const divergenceData = await divergenceLoader.loadAsync(`${mammalDataDir}/divergence-estimates.json`, hypothesesMap);
+        console.log('[PhyloExplorer] Divergence data loaded');
+
+        // Build graph
+        const graphBuilder = new GraphBuilder(
+          hypothesisData.hypothesisId,
+          hypothesisData.rootNodeId
+        );
+
+        for (const node of hypothesisData.nodes) {
+          graphBuilder.addNode(node);
+        }
+
+        const graph = graphBuilder.build(taxonomyData.taxa);
+
+        // Load silhouette mapping and create reverse lookup (taxonId -> filename)
+        let silhouetteMappingByTaxonId = {};
+        try {
+          const silhouetteResponse = await fetch('./assets/silhouettes/SILHOUETTE_MAPPING.json');
+          const silhouetteData = await silhouetteResponse.json();
+          
+          // Create reverse mapping: taxonomyId -> filename
+          if (silhouetteData.silhouetteMappings) {
+            for (const [key, mapping] of Object.entries(silhouetteData.silhouetteMappings)) {
+              if (mapping.taxonomyId && mapping.filename) {
+                silhouetteMappingByTaxonId[mapping.taxonomyId] = mapping.filename;
+              }
+            }
+          }
+          console.log('[PhyloExplorer] Silhouette mapping loaded, taxa with silhouettes:', Object.keys(silhouetteMappingByTaxonId).length);
+        } catch (e) {
+          console.warn('[PhyloExplorer] Silhouette mapping could not be loaded:', e.message);
+        }
+
+        // Create visualization adapter with silhouette mapping
+        const adapter = new VisualizationAdapter(graph, taxonomyData.taxa, silhouetteMappingByTaxonId);
+        const { nodes, links } = adapter.adapt();
+
+        // Create and render visualization
+        const viz = new ForceDirectedVisualization('graph', nodes, links, {
+          width: document.getElementById('graph').clientWidth,
+          height: document.getElementById('graph').clientHeight,
+          rootNodeId: hypothesisData.rootNodeId
+        });
+
+        viz.render();
+
+        // Update statistics
+        document.getElementById('species-count').textContent = adapter.getTerminalCount();
+        document.getElementById('ancestor-count').textContent = adapter.getInternalCount();
+        document.getElementById('total-nodes').textContent = nodes.length;
+        document.getElementById('total-links').textContent = links.length;
+
+        // Hide loading, show controls
+        document.getElementById('loading').style.display = 'none';
+        document.getElementById('controls').style.display = 'block';
+
+        // Setup controls
+        const chargeSlider = document.getElementById('charge-slider');
+        const linkSlider = document.getElementById('link-slider');
+        const topologyRepulsionSlider = document.getElementById('topology-repulsion-slider');
+        const resetButton = document.getElementById('reset-button');
+
+        // Initialize charge strength to match the slider's current value
+        // This prevents a jump when the user first touches the slider
+        const initialChargeValue = parseInt(chargeSlider.value);
+        const initialChargeD3Value = initialChargeValue === 0 ? 0 : -initialChargeValue;
+        viz.setChargeStrength(initialChargeD3Value);
+
+        // Initialize link strength to match the slider's current value
+        const initialLinkValue = parseFloat(linkSlider.value);
+        viz.setLinkStrength(initialLinkValue);
+
+        // Initialize topology repulsion to match the slider's current value
+        const initialTopologyRepulsion = parseInt(topologyRepulsionSlider.value);
+        viz.setTopologyRepulsion(initialTopologyRepulsion, graph);
+
+        chargeSlider.addEventListener('input', (e) => {
+          const uiValue = parseInt(e.target.value);
+          document.getElementById('charge-value').textContent = uiValue;
+          // Map UI value (0-1500) to D3 negative value (0 to -1500)
+          const d3Value = uiValue === 0 ? 0 : -uiValue;
+          viz.setChargeStrength(d3Value);
+        });
+
+        topologyRepulsionSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('topology-repulsion-value').textContent = value;
+          viz.setTopologyRepulsion(value, graph);
+        });
+
+        linkSlider.addEventListener('input', (e) => {
+          const value = parseFloat(e.target.value);
+          document.getElementById('link-value').textContent = value.toFixed(2);
+          viz.setLinkStrength(value);
+        });
+
+        // Appearance control sliders
+        const edgeThicknessSlider = document.getElementById('edge-thickness-slider');
+        const nodeCircleSlider = document.getElementById('node-circle-slider');
+        const fontSizeSlider = document.getElementById('font-size-slider');
+
+        edgeThicknessSlider.addEventListener('input', (e) => {
+          const value = parseFloat(e.target.value);
+          document.getElementById('edge-thickness-value').textContent = value.toFixed(2);
+          viz.setEdgeThickness(value);
+        });
+
+        nodeCircleSlider.addEventListener('input', (e) => {
+          const value = parseFloat(e.target.value);
+          document.getElementById('node-circle-value').textContent = value.toFixed(1);
+          viz.setNodeCircleSize(value);
+        });
+
+        fontSizeSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('font-size-value').textContent = value + 'px';
+          viz.setGraphFontSize(value);
+        });
+
+        // Sidebar font size slider
+        const sidebarFontSizeSlider = document.getElementById('sidebar-font-size-slider');
+        sidebarFontSizeSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('sidebar-font-size-value').textContent = value + 'px';
+          document.documentElement.style.setProperty('--sidebar-font-size', value + 'px');
+        });
+
+        // Silhouette horizontal offset slider
+        const silhouetteXOffsetSlider = document.getElementById('silhouette-x-offset-slider');
+        silhouetteXOffsetSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('silhouette-x-offset-value').textContent = value + 'px';
+          viz.setSilhouetteXOffset(value);
+        });
+
+        // Silhouette vertical offset slider
+        const silhouetteYOffsetSlider = document.getElementById('silhouette-y-offset-slider');
+        silhouetteYOffsetSlider.addEventListener('input', (e) => {
+          const value = parseInt(e.target.value);
+          document.getElementById('silhouette-y-offset-value').textContent = value + 'px';
+          viz.setSilhouetteYOffset(value);
+        });
+
+        // Show node dates toggle
+        const showNodeDatesToggle = document.getElementById('show-node-dates-toggle');
+        showNodeDatesToggle.addEventListener('input', (e) => {
+          viz.setShowNodeDates(e.target.checked, divergenceData);
+        });
+
+        // Show ancestral labels toggle
+        const showAncestralLabelsToggle = document.getElementById('show-ancestral-labels-toggle');
+        showAncestralLabelsToggle.addEventListener('input', (e) => {
+          viz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
+        });
+
+        resetButton.addEventListener('click', () => {
+          viz.resetView();
+        });
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+          const container = document.getElementById('graph');
+          viz.handleResize(container.clientWidth, container.clientHeight);
+        });
+
+      } catch (error) {
+        console.error('[PhyloExplorer] Error loading visualization:', error);
+        console.error('[PhyloExplorer] Error stack:', error.stack);
+        document.getElementById('loading').style.display = 'none';
+        const errorContainer = document.getElementById('error-container');
+        errorContainer.innerHTML = `
+          <div class="error" style="color: red; padding: 10px; background: #ffe6e6; border: 1px solid red; margin: 10px 0;">
+            <strong>Error:</strong> ${error.message}
+            <pre style="margin-top: 5px; white-space: pre-wrap; font-size: calc(var(--sidebar-font-size) * 0.86);">${error.stack || ''}</pre>
+          </div>
+        `;
+      }
+    }
+
+    // Initialize on page load
+    console.log('[PhyloExplorer] Adding load event listener');
+    window.addEventListener('load', () => {
+      console.log('[PhyloExplorer] Load event fired, calling initializeVisualization');
+      initializeVisualization().catch(err => {
+        console.error('[PhyloExplorer] Uncaught error from initializeVisualization:', err);
+      });
+    });
+  </script>
+</body>
+</html>
