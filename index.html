@@ -486,6 +486,8 @@
     import { GraphBuilder } from './src/graph/PhyloGraph.js';
     import { VisualizationAdapter } from './src/visualization/visualizationAdapter.js';
     import { ForceDirectedVisualization } from './src/visualization/forceDirectedVisualization.js';
+    import { VisualizationSettings } from './src/settings/VisualizationSettings.js';
+    import SettingsUI from './src/ui/SettingsUI.js';
 
     const schemaDir = './data/schemas';
     const mammalDataDir = './data/mammals';
@@ -581,6 +583,11 @@
         });
 
         viz.render();
+
+        // Initialize centralized settings management
+        const settings = new VisualizationSettings();
+        const settingsUI = new SettingsUI(settings, viz);
+        await settingsUI.initialize();
 
         // Diagnostic: Report on asset loading
         console.log('\n=== PhyloExplorer Asset Loading Diagnostic ===');
