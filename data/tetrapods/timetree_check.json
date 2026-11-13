@@ -1,0 +1,574 @@
+{
+  "dataset": "Tetrapod Dataset",
+  "roster_version": 1,
+  "source_tree": "data/time_tree_raw_data/TT6_Tetrapods.nwk",
+  "check_date": "2026-11-13",
+  "method": "Exact scientific-name match after replacing spaces with underscores.",
+  "summary": {
+    "candidates": 80,
+    "matched": 76,
+    "missing": 4
+  },
+  "results": [
+    {
+      "species_id": "mammal_001",
+      "scientific_name": "Ornithorhynchus anatinus",
+      "group": "mammals",
+      "expected_tree_label": "Ornithorhynchus_anatinus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_002",
+      "scientific_name": "Tachyglossus aculeatus",
+      "group": "mammals",
+      "expected_tree_label": "Tachyglossus_aculeatus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_003",
+      "scientific_name": "Didelphis virginiana",
+      "group": "mammals",
+      "expected_tree_label": "Didelphis_virginiana",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_004",
+      "scientific_name": "Macropus giganteus",
+      "group": "mammals",
+      "expected_tree_label": "Macropus_giganteus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_005",
+      "scientific_name": "Vombatus ursinus",
+      "group": "mammals",
+      "expected_tree_label": "Vombatus_ursinus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_006",
+      "scientific_name": "Homo sapiens",
+      "group": "mammals",
+      "expected_tree_label": "Homo_sapiens",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_007",
+      "scientific_name": "Pan troglodytes",
+      "group": "mammals",
+      "expected_tree_label": "Pan_troglodytes",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_008",
+      "scientific_name": "Pongo pygmaeus",
+      "group": "mammals",
+      "expected_tree_label": "Pongo_pygmaeus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_009",
+      "scientific_name": "Loxodonta africana",
+      "group": "mammals",
+      "expected_tree_label": "Loxodonta_africana",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_010",
+      "scientific_name": "Equus caballus",
+      "group": "mammals",
+      "expected_tree_label": "Equus_caballus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_011",
+      "scientific_name": "Bos taurus",
+      "group": "mammals",
+      "expected_tree_label": "Bos_taurus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_012",
+      "scientific_name": "Sus scrofa",
+      "group": "mammals",
+      "expected_tree_label": "Sus_scrofa",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_013",
+      "scientific_name": "Canis lupus",
+      "group": "mammals",
+      "expected_tree_label": "Canis_lupus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_014",
+      "scientific_name": "Felis catus",
+      "group": "mammals",
+      "expected_tree_label": "Felis_catus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_015",
+      "scientific_name": "Panthera leo",
+      "group": "mammals",
+      "expected_tree_label": "Panthera_leo",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_016",
+      "scientific_name": "Ursus arctos",
+      "group": "mammals",
+      "expected_tree_label": "Ursus_arctos",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_017",
+      "scientific_name": "Balaenoptera musculus",
+      "group": "mammals",
+      "expected_tree_label": "Balaenoptera_musculus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_018",
+      "scientific_name": "Tursiops truncatus",
+      "group": "mammals",
+      "expected_tree_label": "Tursiops_truncatus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_019",
+      "scientific_name": "Myotis lucifugus",
+      "group": "mammals",
+      "expected_tree_label": "Myotis_lucifugus",
+      "matched": true
+    },
+    {
+      "species_id": "mammal_020",
+      "scientific_name": "Mus musculus",
+      "group": "mammals",
+      "expected_tree_label": "Mus_musculus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_001",
+      "scientific_name": "Struthio camelus",
+      "group": "birds",
+      "expected_tree_label": "Struthio_camelus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_002",
+      "scientific_name": "Dromaius novaehollandiae",
+      "group": "birds",
+      "expected_tree_label": "Dromaius_novaehollandiae",
+      "matched": true
+    },
+    {
+      "species_id": "bird_003",
+      "scientific_name": "Apteryx australis",
+      "group": "birds",
+      "expected_tree_label": "Apteryx_australis",
+      "matched": true
+    },
+    {
+      "species_id": "bird_004",
+      "scientific_name": "Anas platyrhynchos",
+      "group": "birds",
+      "expected_tree_label": "Anas_platyrhynchos",
+      "matched": true
+    },
+    {
+      "species_id": "bird_005",
+      "scientific_name": "Gallus gallus",
+      "group": "birds",
+      "expected_tree_label": "Gallus_gallus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_006",
+      "scientific_name": "Meleagris gallopavo",
+      "group": "birds",
+      "expected_tree_label": "Meleagris_gallopavo",
+      "matched": true
+    },
+    {
+      "species_id": "bird_007",
+      "scientific_name": "Aptenodytes forsteri",
+      "group": "birds",
+      "expected_tree_label": "Aptenodytes_forsteri",
+      "matched": true
+    },
+    {
+      "species_id": "bird_008",
+      "scientific_name": "Spheniscus demersus",
+      "group": "birds",
+      "expected_tree_label": "Spheniscus_demersus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_009",
+      "scientific_name": "Phoenicopterus roseus",
+      "group": "birds",
+      "expected_tree_label": "Phoenicopterus_roseus",
+      "matched": false
+    },
+    {
+      "species_id": "bird_010",
+      "scientific_name": "Pelecanus occidentalis",
+      "group": "birds",
+      "expected_tree_label": "Pelecanus_occidentalis",
+      "matched": true
+    },
+    {
+      "species_id": "bird_011",
+      "scientific_name": "Ciconia ciconia",
+      "group": "birds",
+      "expected_tree_label": "Ciconia_ciconia",
+      "matched": true
+    },
+    {
+      "species_id": "bird_012",
+      "scientific_name": "Haliaeetus leucocephalus",
+      "group": "birds",
+      "expected_tree_label": "Haliaeetus_leucocephalus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_013",
+      "scientific_name": "Aquila chrysaetos",
+      "group": "birds",
+      "expected_tree_label": "Aquila_chrysaetos",
+      "matched": true
+    },
+    {
+      "species_id": "bird_014",
+      "scientific_name": "Bubo bubo",
+      "group": "birds",
+      "expected_tree_label": "Bubo_bubo",
+      "matched": true
+    },
+    {
+      "species_id": "bird_015",
+      "scientific_name": "Columba livia",
+      "group": "birds",
+      "expected_tree_label": "Columba_livia",
+      "matched": true
+    },
+    {
+      "species_id": "bird_016",
+      "scientific_name": "Psittacus erithacus",
+      "group": "birds",
+      "expected_tree_label": "Psittacus_erithacus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_017",
+      "scientific_name": "Corvus corax",
+      "group": "birds",
+      "expected_tree_label": "Corvus_corax",
+      "matched": true
+    },
+    {
+      "species_id": "bird_018",
+      "scientific_name": "Passer domesticus",
+      "group": "birds",
+      "expected_tree_label": "Passer_domesticus",
+      "matched": true
+    },
+    {
+      "species_id": "bird_019",
+      "scientific_name": "Troglodytes troglodytes",
+      "group": "birds",
+      "expected_tree_label": "Troglodytes_troglodytes",
+      "matched": true
+    },
+    {
+      "species_id": "bird_020",
+      "scientific_name": "Fregata magnificens",
+      "group": "birds",
+      "expected_tree_label": "Fregata_magnificens",
+      "matched": false
+    },
+    {
+      "species_id": "reptile_001",
+      "scientific_name": "Sphenodon punctatus",
+      "group": "reptiles",
+      "expected_tree_label": "Sphenodon_punctatus",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_002",
+      "scientific_name": "Alligator mississippiensis",
+      "group": "reptiles",
+      "expected_tree_label": "Alligator_mississippiensis",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_003",
+      "scientific_name": "Crocodylus niloticus",
+      "group": "reptiles",
+      "expected_tree_label": "Crocodylus_niloticus",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_004",
+      "scientific_name": "Chelonia mydas",
+      "group": "reptiles",
+      "expected_tree_label": "Chelonia_mydas",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_005",
+      "scientific_name": "Dermochelys coriacea",
+      "group": "reptiles",
+      "expected_tree_label": "Dermochelys_coriacea",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_006",
+      "scientific_name": "Testudo graeca",
+      "group": "reptiles",
+      "expected_tree_label": "Testudo_graeca",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_007",
+      "scientific_name": "Gekko gecko",
+      "group": "reptiles",
+      "expected_tree_label": "Gekko_gecko",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_008",
+      "scientific_name": "Anolis carolinensis",
+      "group": "reptiles",
+      "expected_tree_label": "Anolis_carolinensis",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_009",
+      "scientific_name": "Varanus komodoensis",
+      "group": "reptiles",
+      "expected_tree_label": "Varanus_komodoensis",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_010",
+      "scientific_name": "Iguana iguana",
+      "group": "reptiles",
+      "expected_tree_label": "Iguana_iguana",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_011",
+      "scientific_name": "Heloderma suspectum",
+      "group": "reptiles",
+      "expected_tree_label": "Heloderma_suspectum",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_012",
+      "scientific_name": "Python bivittatus",
+      "group": "reptiles",
+      "expected_tree_label": "Python_bivittatus",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_013",
+      "scientific_name": "Boa constrictor",
+      "group": "reptiles",
+      "expected_tree_label": "Boa_constrictor",
+      "matched": false
+    },
+    {
+      "species_id": "reptile_014",
+      "scientific_name": "Naja naja",
+      "group": "reptiles",
+      "expected_tree_label": "Naja_naja",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_015",
+      "scientific_name": "Ophiophagus hannah",
+      "group": "reptiles",
+      "expected_tree_label": "Ophiophagus_hannah",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_016",
+      "scientific_name": "Vipera berus",
+      "group": "reptiles",
+      "expected_tree_label": "Vipera_berus",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_017",
+      "scientific_name": "Crotalus atrox",
+      "group": "reptiles",
+      "expected_tree_label": "Crotalus_atrox",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_018",
+      "scientific_name": "Chamaeleo calyptratus",
+      "group": "reptiles",
+      "expected_tree_label": "Chamaeleo_calyptratus",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_019",
+      "scientific_name": "Sceloporus occidentalis",
+      "group": "reptiles",
+      "expected_tree_label": "Sceloporus_occidentalis",
+      "matched": true
+    },
+    {
+      "species_id": "reptile_020",
+      "scientific_name": "Eublepharis macularius",
+      "group": "reptiles",
+      "expected_tree_label": "Eublepharis_macularius",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_001",
+      "scientific_name": "Ambystoma mexicanum",
+      "group": "amphibians",
+      "expected_tree_label": "Ambystoma_mexicanum",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_002",
+      "scientific_name": "Ambystoma maculatum",
+      "group": "amphibians",
+      "expected_tree_label": "Ambystoma_maculatum",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_003",
+      "scientific_name": "Andrias japonicus",
+      "group": "amphibians",
+      "expected_tree_label": "Andrias_japonicus",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_004",
+      "scientific_name": "Salamandra salamandra",
+      "group": "amphibians",
+      "expected_tree_label": "Salamandra_salamandra",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_005",
+      "scientific_name": "Triturus cristatus",
+      "group": "amphibians",
+      "expected_tree_label": "Triturus_cristatus",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_006",
+      "scientific_name": "Pleurodeles waltl",
+      "group": "amphibians",
+      "expected_tree_label": "Pleurodeles_waltl",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_007",
+      "scientific_name": "Rana temporaria",
+      "group": "amphibians",
+      "expected_tree_label": "Rana_temporaria",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_008",
+      "scientific_name": "Lithobates catesbeianus",
+      "group": "amphibians",
+      "expected_tree_label": "Lithobates_catesbeianus",
+      "matched": false
+    },
+    {
+      "species_id": "amphibian_009",
+      "scientific_name": "Xenopus laevis",
+      "group": "amphibians",
+      "expected_tree_label": "Xenopus_laevis",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_010",
+      "scientific_name": "Hymenochirus boettgeri",
+      "group": "amphibians",
+      "expected_tree_label": "Hymenochirus_boettgeri",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_011",
+      "scientific_name": "Dendrobates tinctorius",
+      "group": "amphibians",
+      "expected_tree_label": "Dendrobates_tinctorius",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_012",
+      "scientific_name": "Oophaga pumilio",
+      "group": "amphibians",
+      "expected_tree_label": "Oophaga_pumilio",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_013",
+      "scientific_name": "Bufo bufo",
+      "group": "amphibians",
+      "expected_tree_label": "Bufo_bufo",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_014",
+      "scientific_name": "Rhinella marina",
+      "group": "amphibians",
+      "expected_tree_label": "Rhinella_marina",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_015",
+      "scientific_name": "Hyla arborea",
+      "group": "amphibians",
+      "expected_tree_label": "Hyla_arborea",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_016",
+      "scientific_name": "Pipa pipa",
+      "group": "amphibians",
+      "expected_tree_label": "Pipa_pipa",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_017",
+      "scientific_name": "Ceratophrys ornata",
+      "group": "amphibians",
+      "expected_tree_label": "Ceratophrys_ornata",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_018",
+      "scientific_name": "Gastrotheca riobambae",
+      "group": "amphibians",
+      "expected_tree_label": "Gastrotheca_riobambae",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_019",
+      "scientific_name": "Ichthyophis glutinosus",
+      "group": "amphibians",
+      "expected_tree_label": "Ichthyophis_glutinosus",
+      "matched": true
+    },
+    {
+      "species_id": "amphibian_020",
+      "scientific_name": "Siphonops annulatus",
+      "group": "amphibians",
+      "expected_tree_label": "Siphonops_annulatus",
+      "matched": true
+    }
+  ]
+}

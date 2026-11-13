@@ -41,15 +41,36 @@
     .container {
       display: flex;
       height: 100vh;
+      overflow: hidden;
     }
 
     .sidebar {
-      width: 280px;
+      flex: 0 0 320px;
+      width: 320px;
+      display: flex;
+      flex-direction: column;
+      container-type: inline-size;
       background: white;
       border-right: 1px solid #ddd;
       padding: 20px;
       overflow-y: auto;
       box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+
+    .sidebar-resizer {
+      flex: 0 0 6px;
+      cursor: col-resize;
+      background: #eee;
+      border-right: 1px solid #ddd;
+      border-left: 1px solid #ddd;
+      position: relative;
+      z-index: 2;
+      touch-action: none;
+    }
+
+    .sidebar-resizer:hover,
+    .sidebar-resizer.dragging {
+      background: #2E86AB;
     }
 
     .main {
@@ -64,10 +85,51 @@
       overflow: hidden;
     }
 
-    h1 {
-      font-size: calc(var(--sidebar-font-size) * 1.3);
+    .sidebar-bottom-logo {
+      display: block;
+      width: 100%;
+      height: auto;
+      margin-top: auto;
+      padding-top: 24px;
+    }
+
+    .sidebar-bottom-logo img {
+      display: block;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .sidebar-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 8px;
+      width: 100%;
       margin-bottom: 20px;
+    }
+
+    .sidebar-header h1 {
+      flex: 0 0 auto;
+      max-width: 100%;
+      white-space: nowrap;
+      font-size: clamp(14.4px, 7.8cqi, 43.2px);
+      margin: 0;
       color: #2E86AB;
+    }
+
+    .sidebar-logo {
+      flex: 1 1 0;
+      min-width: 0;
+      height: 42px;
+    }
+
+    .sidebar-logo img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: left center;
     }
 
     h2 {
@@ -279,7 +341,12 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <h1>PhyloExplorer</h1>
+      <div class="sidebar-header">
+        <h1>PhyloExplorer</h1>
+        <div class="sidebar-logo">
+          <img src="assets/images/washington_instruments.png" alt="Washington Instruments">
+        </div>
+      </div>
 
       <div id="error-container"></div>
 
@@ -288,6 +355,34 @@
       </div>
 
       <div id="controls" style="display: none;">
+        <h2>Dataset</h2>
+        <div class="control-group">
+          <label for="dataset-selector" class="control-label">Select Dataset:</label>
+          <select id="dataset-selector" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px; cursor: pointer;">
+            <option value="mammals">Mammals (21 species)</option>
+            <option value="animals">Animals (593 species)</option>
+            <option value="mammals-600">Mammals (156)</option>
+          </select>
+        </div>
+        <div class="stats">
+          <div>
+            <span>Species:</span>
+            <span id="species-count">—</span>
+          </div>
+          <div>
+            <span>Ancestors:</span>
+            <span id="ancestor-count">—</span>
+          </div>
+          <div>
+            <span>Total Nodes:</span>
+            <span id="total-nodes">—</span>
+          </div>
+          <div>
+            <span>Links:</span>
+            <span id="total-links">—</span>
+          </div>
+        </div>
+
         <h2>Forces</h2>
 
         <div class="control-group">
@@ -794,34 +889,6 @@
           </p>
         </div>
 
-        <h2>Dataset</h2>
-        <div class="control-group">
-          <label for="dataset-selector" class="control-label">Select Dataset:</label>
-          <select id="dataset-selector" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px; cursor: pointer;">
-            <option value="mammals">Mammals (21 species)</option>
-            <option value="animals">Animals (593 species)</option>
-            <option value="mammals-600">Mammals (156)</option>
-          </select>
-        </div>
-        <div class="stats">
-          <div>
-            <span>Species:</span>
-            <span id="species-count">—</span>
-          </div>
-          <div>
-            <span>Ancestors:</span>
-            <span id="ancestor-count">—</span>
-          </div>
-          <div>
-            <span>Total Nodes:</span>
-            <span id="total-nodes">—</span>
-          </div>
-          <div>
-            <span>Links:</span>
-            <span id="total-links">—</span>
-          </div>
-        </div>
-
         <h2>Legend</h2>
         <div class="legend">
           <div class="legend-item">
@@ -841,7 +908,20 @@
           <p><strong>Drag Node:</strong> Click and drag node</p>
         </div>
       </div>
+
+      <div class="sidebar-bottom-logo">
+        <img src="assets/images/washington_instruments.png" alt="Washington Instruments">
+      </div>
     </div>
+
+    <div
+      class="sidebar-resizer"
+      id="sidebar-resizer"
+      role="separator"
+      aria-label="Resize sidebar"
+      aria-orientation="vertical"
+      tabindex="0"
+    ></div>
 
     <div class="main">
       <div id="graph" class="graph-container"></div>
@@ -1157,6 +1237,58 @@
         console.error('[PhyloExplorer] Uncaught error from initializeVisualization:', err);
       });
     });
+  </script>
+
+  <script>
+    (() => {
+      const sidebar = document.querySelector('.sidebar');
+      const main = document.querySelector('.main');
+      const resizer = document.getElementById('sidebar-resizer');
+      const container = document.querySelector('.container');
+
+      if (!sidebar || !main || !resizer || !container) return;
+
+      let dragging = false;
+      let startX = 0;
+      let startWidth = 0;
+
+      resizer.addEventListener('pointerdown', (event) => {
+        dragging = true;
+        startX = event.clientX;
+        startWidth = sidebar.getBoundingClientRect().width;
+
+        // Freeze the tree at its current width.
+        const mainWidth = main.getBoundingClientRect().width;
+        main.style.flex = `0 0 ${mainWidth}px`;
+
+        resizer.classList.add('dragging');
+        document.body.style.cursor = 'col-resize';
+        document.body.style.userSelect = 'none';
+
+        resizer.setPointerCapture(event.pointerId);
+        event.preventDefault();
+      });
+
+      resizer.addEventListener('pointermove', (event) => {
+        if (!dragging) return;
+
+        const newWidth = startWidth + event.clientX - startX;
+        sidebar.style.flex = `0 0 ${newWidth}px`;
+        sidebar.style.width = `${newWidth}px`;
+      });
+
+      function stopDragging() {
+        if (!dragging) return;
+
+        dragging = false;
+        resizer.classList.remove('dragging');
+        document.body.style.cursor = '';
+        document.body.style.userSelect = '';
+      }
+
+      resizer.addEventListener('pointerup', stopDragging);
+      resizer.addEventListener('pointercancel', stopDragging);
+    })();
   </script>
 </body>
 </html>

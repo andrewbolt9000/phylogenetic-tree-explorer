@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Z-Order Test</title>
+<style>
+body { margin: 0; display: flex; }
+#app { flex: 1; }
+#output { width: 300px; padding: 20px; overflow-y: auto; font-family: monospace; font-size: 11px; }
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="output"></div>
+
+<script type="module">
+import { ForceDirectedVisualization } from './src/visualization/forceDirectedVisualization.js';
+import { PhyloGraph } from './src/graph/phyloGraph.js';
+import { TaxonomyData } from './src/data/taxonomyData.js';
+
+const output = document.getElementById('output');
+const log = (msg) => {
+  output.innerHTML += msg + '<br>';
+};
+
+// Load and initialize
+fetch('./data/mammal-divergence-estimates.json')
+  .then(r => r.json())
+  .then(divergenceData => {
+    fetch('./data/mammal-taxonomy.json')
+      .then(r => r.json())
+      .then(taxonomyData => {
+        const graph = new PhyloGraph(taxonomyData);
+        const viz = new ForceDirectedVisualization('app', graph.nodes, graph.links, {
+          divergenceData,
+          rootNodeId: graph.rootNodeId
+        });
+        
+        // Wait for render
+        setTimeout(() => {
+          log('=== Initial SVG Structure ===');
+          const viewport = document.querySelector('g.viewport');
+          const children = Array.from(viewport.children);
+          children.forEach((child, i) => {
+            log(`[${i}] ${child.tagName}.${child.getAttribute('class') || '?'}`);
+          });
+          
+          // Find a node to hover
+          const nodeCircles = document.querySelectorAll('circle.node-circle');
+          if (nodeCircles.length > 0) {
+            log('<br>=== Simulating Hover ===');
+            const circle = nodeCircles[5];
+            const event = new MouseEvent('mouseenter', { bubbles: true, view: window });
+            circle.dispatchEvent(event);
+            
+            setTimeout(() => {
+              log('<br>=== After Hover SVG Structure ===');
+              const newChildren = Array.from(viewport.children);
+              newChildren.forEach((child, i) => {
+                log(`[${i}] ${child.tagName}.${child.getAttribute('class') || '?'}`);
+              });
+              
+              log('<br>=== Foreground Layer Contents ===');
+              const fg = document.querySelector('g.foreground-overlay');
+              if (fg) {
+                const fgChildren = Array.from(fg.children);
+                log(`Foreground contains ${fgChildren.length} elements:`);
+                fgChildren.forEach((el, i) => {
+                  log(`  [${i}] ${el.tagName}.${el.getAttribute('class') || '?'}`);
+                });
+              }
+            }, 150);
+          }
+        }, 1000);
+      });
+  });
+</script>
+</body>
+</html>

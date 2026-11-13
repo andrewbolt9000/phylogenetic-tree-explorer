@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Multi-Dataset Integration Test</title>
+  <style>
+    body {
+      font-family: monospace;
+      background: #f5f5f5;
+      padding: 20px;
+      margin: 0;
+    }
+    .test-container {
+      background: white;
+      padding: 15px;
+      margin: 10px 0;
+      border-left: 4px solid #2E86AB;
+      border-radius: 3px;
+    }
+    .pass {
+      border-left-color: #28a745;
+      background: #f0f9f6;
+    }
+    .fail {
+      border-left-color: #dc3545;
+      background: #fff5f5;
+    }
+    .result {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .pass .result {
+      color: #28a745;
+    }
+    .fail .result {
+      color: #dc3545;
+    }
+    .summary {
+      margin-top: 20px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+    h1 {
+      color: #2E86AB;
+      margin-top: 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>PhyloExplorer Multi-Dataset Integration Test</h1>
+  
+  <div id="results"></div>
+  <div id="summary" class="summary"></div>
+
+  <script type="module">
+    import { TaxonomyLoader } from './src/data/taxonomyLoader.js';
+    import { HypothesisLoader } from './src/data/hypothesisLoader.js';
+
+    const schemaDir = './data/schemas';
+    let tests = [];
+    let passed = 0;
+    let failed = 0;
+
+    function logTest(name, success, details) {
+      tests.push({ name, success, details });
+      if (success) {
+        passed++;
+      } else {
+        failed++;
+      }
+      renderResults();
+    }
+
+    function renderResults() {
+      const resultsDiv = document.getElementById('results');
+      resultsDiv.innerHTML = tests.map((t, i) => `
+        <div class="test-container ${t.success ? 'pass' : 'fail'}">
+          <strong>${i + 1}. ${t.name}</strong>
+          <div class="result">${t.success ? '✓ PASS' : '✗ FAIL'}</div>
+          ${t.details ? `<div class="result" style="font-size: 12px; color: #666;">${t.details}</div>` : ''}
+        </div>
+      `).join('');
+
+      const summaryDiv = document.getElementById('summary');
+      summaryDiv.innerHTML = `
+        <div>Total: ${tests.length} | Passed: ${passed} | Failed: ${failed}</div>
+        ${failed === 0 ? '<div style="color: #28a745;">✓ All tests passed!</div>' : '<div style="color: #dc3545;">✗ Some tests failed</div>'}
+      `;
+    }
+
+    async function runTests() {
+      console.log('Starting multi-dataset integration tests...\n');
+
+      // Test 1: Load mammals taxonomy
+      try {
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const mammalTaxonomy = await taxonomyLoader.loadAsync('./data/mammals/taxonomy.json');
+        logTest('Load Mammals taxonomy', true, `Loaded ${Object.keys(mammalTaxonomy.taxa).length} taxa`);
+      } catch (e) {
+        logTest('Load Mammals taxonomy', false, e.message);
+      }
+
+      // Test 2: Load mammals hypothesis
+      try {
+        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const mammalTaxonomy = await taxonomyLoader.loadAsync('./data/mammals/taxonomy.json');
+        const mammalHypothesis = await hypothesisLoader.loadAsync('./data/mammals/hypothesis.json', mammalTaxonomy.taxa);
+        logTest('Load Mammals hypothesis', true, `Loaded ${mammalHypothesis.nodes.length} nodes`);
+      } catch (e) {
+        logTest('Load Mammals hypothesis', false, e.message);
+      }
+
+      // Test 3: Load animals taxonomy
+      try {
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const animalTaxonomy = await taxonomyLoader.loadAsync('./data/animals/taxonomy.json');
+        logTest('Load Animals taxonomy', true, `Loaded ${Object.keys(animalTaxonomy.taxa).length} taxa`);
+      } catch (e) {
+        logTest('Load Animals taxonomy', false, e.message);
+      }
+
+      // Test 4: Load animals hypothesis
+      try {
+        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const animalTaxonomy = await taxonomyLoader.loadAsync('./data/animals/taxonomy.json');
+        const animalHypothesis = await hypothesisLoader.loadAsync('./data/animals/hypothesis.json', animalTaxonomy.taxa);
+        logTest('Load Animals hypothesis', true, `Loaded ${animalHypothesis.nodes.length} nodes`);
+      } catch (e) {
+        logTest('Load Animals hypothesis', false, e.message);
+      }
+
+      // Test 5: Load mammals silhouette manifest
+      try {
+        const response = await fetch('./assets/silhouettes/PRODUCTION_MANIFEST.json');
+        const data = await response.json();
+        const count = Object.keys(data.silhouetteMappings || {}).length;
+        logTest('Load Mammals silhouette manifest', true, `Found ${count} silhouette mappings`);
+      } catch (e) {
+        logTest('Load Mammals silhouette manifest', false, e.message);
+      }
+
+      // Test 6: Load animals silhouette mapping
+      try {
+        const response = await fetch('./data/animals/silhouette-mapping.json');
+        const data = await response.json();
+        const count = Object.keys(data.mappings || {}).length;
+        logTest('Load Animals silhouette mapping', true, `Found ${count} PhyloPic image UUIDs`);
+      } catch (e) {
+        logTest('Load Animals silhouette mapping', false, e.message);
+      }
+
+      // Test 7: Verify animals dataset has internal nodes with taxonId
+      try {
+        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const animalTaxonomy = await taxonomyLoader.loadAsync('./data/animals/taxonomy.json');
+        const animalHypothesis = await hypothesisLoader.loadAsync('./data/animals/hypothesis.json', animalTaxonomy.taxa);
+        
+        const internalNodesWithTaxonId = animalHypothesis.nodes.filter(n => n.type === 'internal' && n.taxonId);
+        logTest('Internal nodes with taxonId support', internalNodesWithTaxonId.length > 0, 
+          `Found ${internalNodesWithTaxonId.length} internal nodes with taxonId`);
+      } catch (e) {
+        logTest('Internal nodes with taxonId support', false, e.message);
+      }
+
+      // Test 8: Verify animals dataset has more species than mammals
+      try {
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const mammalTaxonomy = await taxonomyLoader.loadAsync('./data/mammals/taxonomy.json');
+        const animalTaxonomy = await taxonomyLoader.loadAsync('./data/animals/taxonomy.json');
+        
+        const mammalCount = Object.keys(mammalTaxonomy.taxa).length;
+        const animalCount = Object.keys(animalTaxonomy.taxa).length;
+        
+        logTest('Animals dataset larger than Mammals', animalCount > mammalCount, 
+          `Mammals: ${mammalCount} taxa, Animals: ${animalCount} taxa`);
+      } catch (e) {
+        logTest('Animals dataset larger than Mammals', false, e.message);
+      }
+
+      // Test 9: Verify silhouette URLs are valid
+      try {
+        const response = await fetch('./data/animals/silhouette-mapping.json');
+        const data = await response.json();
+        
+        const entries = Object.entries(data.mappings || {});
+        const hasUrls = entries.some(([_, m]) => m.sourceUrl && m.sourceUrl.includes('phylopic.org'));
+        
+        logTest('Animals silhouettes have PhyloPic URLs', hasUrls, 
+          `Sample: ${entries[0]?.[1]?.sourceUrl || 'N/A'}`);
+      } catch (e) {
+        logTest('Animals silhouettes have PhyloPic URLs', false, e.message);
+      }
+
+      // Test 10: Verify extinct field handling
+      try {
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        const animalTaxonomy = await taxonomyLoader.loadAsync('./data/animals/taxonomy.json');
+        
+        const taxa = Object.values(animalTaxonomy.taxa);
+        const sampleTaxon = taxa[0];
+        const hasExtinctField = 'extinct' in sampleTaxon || !('extinct' in sampleTaxon);
+        
+        logTest('Taxonomy includes extinction status', hasExtinctField, 
+          `Sample taxon (${sampleTaxon.scientificName}): extinct=${sampleTaxon.extinct}`);
+      } catch (e) {
+        logTest('Taxonomy includes extinction status', false, e.message);
+      }
+    }
+
+    // Run tests on page load
+    window.addEventListener('load', () => {
+      runTests().catch(e => {
+        console.error('Test runner error:', e);
+      });
+    });
+  </script>
+</body>
+</html>

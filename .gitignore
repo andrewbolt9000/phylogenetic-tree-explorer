@@ -18,27 +18,19 @@ env/
 .ott_lineage_cache/
 .phylopic_cache/
 .pytest_cache/
+scripts/.ott_cache/
+scripts/.ott_lineage_cache/
+scripts/.phylopic_cache/
 
 # Temporary and backup files
-*.bak
+*.bak*
 *.tmp
 *.log
 *~
+*.before-*
 
 # Local session state
 .session/
 
 # Raw TimeTree downloads (license-restricted; do not redistribute)
 data/time_tree_raw_data/
-
-# Timestamped and named backups
-*.bak*
-*.before-*
-
-# Timestamped and named backups
-*.bak*
-*.before-*
-
-# Timestamped and named backups
-*.bak*
-*.before-*

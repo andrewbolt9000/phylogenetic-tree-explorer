@@ -1,0 +1,576 @@
+{
+  "dataset": "Tetrapod Dataset",
+  "version": 1,
+  "status": "candidate_roster",
+  "created": "2026-11-13",
+  "description": "Independent candidate roster of 80 tetrapod species.",
+  "inclusion_rule": "A candidate must have a verified TimeTree match, independent taxonomy record, and usable PhyloPic image.",
+  "groups": {
+    "mammals": 20,
+    "birds": 20,
+    "reptiles": 20,
+    "amphibians": 20
+  },
+  "species": [
+    {
+      "id": "mammal_001",
+      "group": "mammals",
+      "common_name": "Platypus",
+      "scientific_name": "Ornithorhynchus anatinus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_002",
+      "group": "mammals",
+      "common_name": "Short-beaked echidna",
+      "scientific_name": "Tachyglossus aculeatus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_003",
+      "group": "mammals",
+      "common_name": "Virginia opossum",
+      "scientific_name": "Didelphis virginiana",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_004",
+      "group": "mammals",
+      "common_name": "Eastern grey kangaroo",
+      "scientific_name": "Macropus giganteus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_005",
+      "group": "mammals",
+      "common_name": "Common wombat",
+      "scientific_name": "Vombatus ursinus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_006",
+      "group": "mammals",
+      "common_name": "Human",
+      "scientific_name": "Homo sapiens",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_007",
+      "group": "mammals",
+      "common_name": "Chimpanzee",
+      "scientific_name": "Pan troglodytes",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_008",
+      "group": "mammals",
+      "common_name": "Bornean orangutan",
+      "scientific_name": "Pongo pygmaeus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_009",
+      "group": "mammals",
+      "common_name": "African bush elephant",
+      "scientific_name": "Loxodonta africana",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_010",
+      "group": "mammals",
+      "common_name": "Horse",
+      "scientific_name": "Equus caballus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_011",
+      "group": "mammals",
+      "common_name": "Domestic cattle",
+      "scientific_name": "Bos taurus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_012",
+      "group": "mammals",
+      "common_name": "Wild boar",
+      "scientific_name": "Sus scrofa",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_013",
+      "group": "mammals",
+      "common_name": "Gray wolf",
+      "scientific_name": "Canis lupus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_014",
+      "group": "mammals",
+      "common_name": "Domestic cat",
+      "scientific_name": "Felis catus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_015",
+      "group": "mammals",
+      "common_name": "Lion",
+      "scientific_name": "Panthera leo",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_016",
+      "group": "mammals",
+      "common_name": "Brown bear",
+      "scientific_name": "Ursus arctos",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_017",
+      "group": "mammals",
+      "common_name": "Blue whale",
+      "scientific_name": "Balaenoptera musculus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_018",
+      "group": "mammals",
+      "common_name": "Bottlenose dolphin",
+      "scientific_name": "Tursiops truncatus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_019",
+      "group": "mammals",
+      "common_name": "Little brown bat",
+      "scientific_name": "Myotis lucifugus",
+      "status": "candidate"
+    },
+    {
+      "id": "mammal_020",
+      "group": "mammals",
+      "common_name": "House mouse",
+      "scientific_name": "Mus musculus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_001",
+      "group": "birds",
+      "common_name": "Ostrich",
+      "scientific_name": "Struthio camelus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_002",
+      "group": "birds",
+      "common_name": "Emu",
+      "scientific_name": "Dromaius novaehollandiae",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_003",
+      "group": "birds",
+      "common_name": "Southern brown kiwi",
+      "scientific_name": "Apteryx australis",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_004",
+      "group": "birds",
+      "common_name": "Mallard",
+      "scientific_name": "Anas platyrhynchos",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_005",
+      "group": "birds",
+      "common_name": "Red junglefowl",
+      "scientific_name": "Gallus gallus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_006",
+      "group": "birds",
+      "common_name": "Wild turkey",
+      "scientific_name": "Meleagris gallopavo",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_007",
+      "group": "birds",
+      "common_name": "Emperor penguin",
+      "scientific_name": "Aptenodytes forsteri",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_008",
+      "group": "birds",
+      "common_name": "African penguin",
+      "scientific_name": "Spheniscus demersus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_009",
+      "group": "birds",
+      "common_name": "Greater flamingo",
+      "scientific_name": "Phoenicopterus roseus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_010",
+      "group": "birds",
+      "common_name": "Brown pelican",
+      "scientific_name": "Pelecanus occidentalis",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_011",
+      "group": "birds",
+      "common_name": "White stork",
+      "scientific_name": "Ciconia ciconia",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_012",
+      "group": "birds",
+      "common_name": "Bald eagle",
+      "scientific_name": "Haliaeetus leucocephalus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_013",
+      "group": "birds",
+      "common_name": "Golden eagle",
+      "scientific_name": "Aquila chrysaetos",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_014",
+      "group": "birds",
+      "common_name": "Eurasian eagle-owl",
+      "scientific_name": "Bubo bubo",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_015",
+      "group": "birds",
+      "common_name": "Rock pigeon",
+      "scientific_name": "Columba livia",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_016",
+      "group": "birds",
+      "common_name": "African grey parrot",
+      "scientific_name": "Psittacus erithacus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_017",
+      "group": "birds",
+      "common_name": "Common raven",
+      "scientific_name": "Corvus corax",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_018",
+      "group": "birds",
+      "common_name": "House sparrow",
+      "scientific_name": "Passer domesticus",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_019",
+      "group": "birds",
+      "common_name": "Eurasian wren",
+      "scientific_name": "Troglodytes troglodytes",
+      "status": "candidate"
+    },
+    {
+      "id": "bird_020",
+      "group": "birds",
+      "common_name": "Magnificent frigatebird",
+      "scientific_name": "Fregata magnificens",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_001",
+      "group": "reptiles",
+      "common_name": "Tuatara",
+      "scientific_name": "Sphenodon punctatus",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_002",
+      "group": "reptiles",
+      "common_name": "American alligator",
+      "scientific_name": "Alligator mississippiensis",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_003",
+      "group": "reptiles",
+      "common_name": "Nile crocodile",
+      "scientific_name": "Crocodylus niloticus",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_004",
+      "group": "reptiles",
+      "common_name": "Green sea turtle",
+      "scientific_name": "Chelonia mydas",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_005",
+      "group": "reptiles",
+      "common_name": "Leatherback sea turtle",
+      "scientific_name": "Dermochelys coriacea",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_006",
+      "group": "reptiles",
+      "common_name": "Greek tortoise",
+      "scientific_name": "Testudo graeca",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_007",
+      "group": "reptiles",
+      "common_name": "Tokay gecko",
+      "scientific_name": "Gekko gecko",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_008",
+      "group": "reptiles",
+      "common_name": "Green anole",
+      "scientific_name": "Anolis carolinensis",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_009",
+      "group": "reptiles",
+      "common_name": "Komodo dragon",
+      "scientific_name": "Varanus komodoensis",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_010",
+      "group": "reptiles",
+      "common_name": "Green iguana",
+      "scientific_name": "Iguana iguana",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_011",
+      "group": "reptiles",
+      "common_name": "Gila monster",
+      "scientific_name": "Heloderma suspectum",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_012",
+      "group": "reptiles",
+      "common_name": "Burmese python",
+      "scientific_name": "Python bivittatus",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_013",
+      "group": "reptiles",
+      "common_name": "Boa constrictor",
+      "scientific_name": "Boa constrictor",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_014",
+      "group": "reptiles",
+      "common_name": "Indian cobra",
+      "scientific_name": "Naja naja",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_015",
+      "group": "reptiles",
+      "common_name": "King cobra",
+      "scientific_name": "Ophiophagus hannah",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_016",
+      "group": "reptiles",
+      "common_name": "European adder",
+      "scientific_name": "Vipera berus",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_017",
+      "group": "reptiles",
+      "common_name": "Western diamondback rattlesnake",
+      "scientific_name": "Crotalus atrox",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_018",
+      "group": "reptiles",
+      "common_name": "Veiled chameleon",
+      "scientific_name": "Chamaeleo calyptratus",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_019",
+      "group": "reptiles",
+      "common_name": "Western fence lizard",
+      "scientific_name": "Sceloporus occidentalis",
+      "status": "candidate"
+    },
+    {
+      "id": "reptile_020",
+      "group": "reptiles",
+      "common_name": "Leopard gecko",
+      "scientific_name": "Eublepharis macularius",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_001",
+      "group": "amphibians",
+      "common_name": "Axolotl",
+      "scientific_name": "Ambystoma mexicanum",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_002",
+      "group": "amphibians",
+      "common_name": "Spotted salamander",
+      "scientific_name": "Ambystoma maculatum",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_003",
+      "group": "amphibians",
+      "common_name": "Japanese giant salamander",
+      "scientific_name": "Andrias japonicus",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_004",
+      "group": "amphibians",
+      "common_name": "Fire salamander",
+      "scientific_name": "Salamandra salamandra",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_005",
+      "group": "amphibians",
+      "common_name": "Great crested newt",
+      "scientific_name": "Triturus cristatus",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_006",
+      "group": "amphibians",
+      "common_name": "Iberian ribbed newt",
+      "scientific_name": "Pleurodeles waltl",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_007",
+      "group": "amphibians",
+      "common_name": "Common frog",
+      "scientific_name": "Rana temporaria",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_008",
+      "group": "amphibians",
+      "common_name": "American bullfrog",
+      "scientific_name": "Lithobates catesbeianus",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_009",
+      "group": "amphibians",
+      "common_name": "African clawed frog",
+      "scientific_name": "Xenopus laevis",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_010",
+      "group": "amphibians",
+      "common_name": "African dwarf frog",
+      "scientific_name": "Hymenochirus boettgeri",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_011",
+      "group": "amphibians",
+      "common_name": "Dyeing poison dart frog",
+      "scientific_name": "Dendrobates tinctorius",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_012",
+      "group": "amphibians",
+      "common_name": "Strawberry poison-dart frog",
+      "scientific_name": "Oophaga pumilio",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_013",
+      "group": "amphibians",
+      "common_name": "Common toad",
+      "scientific_name": "Bufo bufo",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_014",
+      "group": "amphibians",
+      "common_name": "Cane toad",
+      "scientific_name": "Rhinella marina",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_015",
+      "group": "amphibians",
+      "common_name": "European tree frog",
+      "scientific_name": "Hyla arborea",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_016",
+      "group": "amphibians",
+      "common_name": "Surinam toad",
+      "scientific_name": "Pipa pipa",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_017",
+      "group": "amphibians",
+      "common_name": "Argentine horned frog",
+      "scientific_name": "Ceratophrys ornata",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_018",
+      "group": "amphibians",
+      "common_name": "Riobamba marsupial frog",
+      "scientific_name": "Gastrotheca riobambae",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_019",
+      "group": "amphibians",
+      "common_name": "Cayenne caecilian",
+      "scientific_name": "Ichthyophis glutinosus",
+      "status": "candidate"
+    },
+    {
+      "id": "amphibian_020",
+      "group": "amphibians",
+      "common_name": "Ringed caecilian",
+      "scientific_name": "Siphonops annulatus",
+      "status": "candidate"
+    }
+  ]
+}

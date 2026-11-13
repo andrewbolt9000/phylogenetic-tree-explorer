@@ -760,23 +760,23 @@ class ForceDirectedVisualization {
       return null;
     }
 
-    // Sort by common name for consistency
+    // Sort by resolved display name for consistency
     descendants.sort((a, b) => {
-      const aName = a.commonName || a.scientificName || a.id;
-      const bName = b.commonName || b.scientificName || b.id;
+      const aName = a.label || a.id;
+      const bName = b.label || b.id;
       return aName.localeCompare(bName);
     });
 
     // Generate label based on number of descendants
     if (descendants.length === 1) {
-      return `Ancestor of ${descendants[0].commonName || descendants[0].scientificName}`;
+      return `Ancestor of ${descendants[0].label || descendants[0].id}`;
     } else if (descendants.length === 2) {
-      return `Common ancestor of ${descendants[0].commonName || descendants[0].scientificName} and ${descendants[1].commonName || descendants[1].scientificName}`;
+      return `Common ancestor of ${descendants[0].label || descendants[0].id} and ${descendants[1].label || descendants[1].id}`;
     } else if (descendants.length <= 4) {
-      const names = descendants.slice(0, 3).map(d => d.commonName || d.scientificName).join(', ');
+      const names = descendants.slice(0, 3).map(d => d.label || d.id).join(', ');
       return `Common ancestor of ${names}, and ${descendants.length - 3} other`;
     } else {
-      const firstName = descendants[0].commonName || descendants[0].scientificName;
+      const firstName = descendants[0].label || descendants[0].id;
       return `Common ancestor of ${firstName} and ${descendants.length - 1} others`;
     }
   }
@@ -866,7 +866,7 @@ class ForceDirectedVisualization {
     const rootVizNode = this.nodes.find(n => n.id === this.rootNodeId);
     if (!rootVizNode) return;
 
-    const label = rootVizNode.scientificName || rootVizNode.label || 'Root';
+    const label = rootVizNode.label || 'Root';
 
     // Render root label background
     this.rootLabelBackground = this.textBackgroundsLayer.selectAll('rect.root-label-bg')
@@ -1098,7 +1098,7 @@ class ForceDirectedVisualization {
 
       // Root label background
       if (this.rootLabelBackground && this.rootNode) {
-        const rootLabel = this.rootNode.scientificName || this.rootNode.label || 'Root';
+        const rootLabel = this.rootNode.label || 'Root';
         this.rootLabelBackground
           .attr('x', d => {
             const dims = this._estimateTextDimensions(rootLabel, this.fontSizeBase);

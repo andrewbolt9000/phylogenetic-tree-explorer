@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Mammals-600 Dataset Loading</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      max-width: 1200px;
+      margin: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+      border-bottom: 2px solid #2196F3;
+      padding-bottom: 10px;
+    }
+    .test-suite {
+      background: white;
+      padding: 20px;
+      margin: 20px 0;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .test-item {
+      padding: 10px;
+      margin: 10px 0;
+      border-left: 4px solid #ddd;
+      border-radius: 3px;
+    }
+    .test-item.pass {
+      background-color: #e8f5e9;
+      border-left-color: #4caf50;
+    }
+    .test-item.fail {
+      background-color: #ffebee;
+      border-left-color: #f44336;
+    }
+    .test-item.running {
+      background-color: #e3f2fd;
+      border-left-color: #2196F3;
+    }
+    .test-label {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .test-message {
+      font-size: 14px;
+      color: #666;
+      margin-top: 5px;
+    }
+    .summary {
+      background-color: #f0f0f0;
+      padding: 15px;
+      border-radius: 5px;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+    .summary.all-pass {
+      background-color: #c8e6c9;
+      color: #1b5e20;
+    }
+    .summary.has-failures {
+      background-color: #ffcdd2;
+      color: #b71c1c;
+    }
+    button {
+      background-color: #2196F3;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 14px;
+      margin-top: 10px;
+    }
+    button:hover {
+      background-color: #1976d2;
+    }
+    .dataset-info {
+      background-color: #fff9c4;
+      padding: 10px;
+      border-radius: 5px;
+      margin-bottom: 20px;
+      border-left: 4px solid #fbc02d;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mammals-600 Dataset Loading Tests</h1>
+  
+  <div class="dataset-info">
+    <strong>Dataset:</strong> Mammals (156) - PhyloPic format with silhouette-mapping.json
+  </div>
+
+  <div class="test-suite">
+    <h2>Tests</h2>
+    <div id="test-results"></div>
+    <button onclick="runTests()">Run Tests</button>
+  </div>
+
+  <div id="summary-container"></div>
+
+  <script>
+    const results = [];
+
+    async function addTest(name, testFn) {
+      const resultElement = document.createElement('div');
+      resultElement.className = 'test-item running';
+      resultElement.innerHTML = `<div class="test-label">${name}</div><div class="test-message">Running...</div>`;
+      document.getElementById('test-results').appendChild(resultElement);
+
+      try {
+        await testFn();
+        resultElement.className = 'test-item pass';
+        resultElement.innerHTML = `<div class="test-label">✓ ${name}</div>`;
+        results.push({ name, pass: true });
+      } catch (error) {
+        resultElement.className = 'test-item fail';
+        resultElement.innerHTML = `<div class="test-label">✗ ${name}</div><div class="test-message">${error.message}</div>`;
+        results.push({ name, pass: false, error: error.message });
+      }
+    }
+
+    async function runTests() {
+      results.length = 0;
+      document.getElementById('test-results').innerHTML = '';
+      document.getElementById('summary-container').innerHTML = '';
+
+      // Test 1: Load taxonomy.json
+      await addTest('Load taxonomy.json from data/mammals-600/', async () => {
+        const response = await fetch('./data/mammals-600/taxonomy.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const taxonomy = await response.json();
+        if (!taxonomy || typeof taxonomy !== 'object') throw new Error('Taxonomy is not an object');
+        if (Object.keys(taxonomy).length === 0) throw new Error('Taxonomy is empty');
+      });
+
+      // Test 2: Load hypothesis.json
+      await addTest('Load hypothesis.json from data/mammals-600/', async () => {
+        const response = await fetch('./data/mammals-600/hypothesis.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const hypothesis = await response.json();
+        if (!hypothesis) throw new Error('Hypothesis is null');
+        if (!hypothesis.hypothesisId) throw new Error('Missing hypothesisId');
+      });
+
+      // Test 3: Load silhouette-mapping.json
+      await addTest('Load silhouette-mapping.json from data/mammals-600/', async () => {
+        const response = await fetch('./data/mammals-600/silhouette-mapping.json');
+        if (!response.ok) throw new Error(`HTTP ${response.status}`);
+        const mapping = await response.json();
+        if (!mapping.mappings || typeof mapping.mappings !== 'object') throw new Error('Missing or invalid mappings');
+        if (Object.keys(mapping.mappings).length === 0) throw new Error('Mappings is empty');
+      });
+
+      // Test 4: Verify mammals-600 has PhyloPic format (URLs, not filenames)
+      await addTest('Verify mammals-600 uses PhyloPic URLs (not local filenames)', async () => {
+        const response = await fetch('./data/mammals-600/silhouette-mapping.json');
+        const mapping = await response.json();
+        
+        let hasUrls = false;
+        let hasInvalidFilenames = false;
+        
+        for (const [taxonId, imageData] of Object.entries(mapping.mappings)) {
+          if (imageData.sourceUrl && imageData.sourceUrl.includes('phylopic.org')) {
+            hasUrls = true;
+          }
+          if (imageData.sourceUrl && imageData.sourceUrl.endsWith('.svg')) {
+            hasInvalidFilenames = true;
+          }
+        }
+        
+        if (!hasUrls) throw new Error('No PhyloPic URLs found in mappings');
+        if (hasInvalidFilenames) throw new Error('Found local filenames instead of URLs');
+      });
+
+      // Test 5: Verify taxonomy entries are resolvable
+      await addTest('Verify taxonomy entries have required fields', async () => {
+        const response = await fetch('./data/mammals-600/taxonomy.json');
+        const taxonomy = await response.json();
+        
+        let entriesChecked = 0;
+        for (const [taxonId, taxon] of Object.entries(taxonomy)) {
+          if (entriesChecked > 10) break; // Sample first 10
+          if (!taxon.scientificName && !taxon.commonName) {
+            throw new Error(`Taxon ${taxonId} missing both scientificName and commonName`);
+          }
+          entriesChecked++;
+        }
+        
+        if (entriesChecked === 0) throw new Error('No taxonomy entries found');
+      });
+
+      // Test 6: Verify internal nodes can have taxonIds in mammals-600
+      await addTest('Verify hypothesis structure supports internal nodes with taxonIds', async () => {
+        const response = await fetch('./data/mammals-600/hypothesis.json');
+        const hypothesis = await response.json();
+        
+        if (!hypothesis.nodes) throw new Error('Missing nodes');
+        
+        let internalCount = 0;
+        let internalWithTaxonId = 0;
+        
+        for (const node of hypothesis.nodes) {
+          if (node.type === 'internal') {
+            internalCount++;
+            if (node.taxonId) internalWithTaxonId++;
+          }
+        }
+        
+        if (internalCount === 0) throw new Error('No internal nodes found');
+        // At least some internal nodes should have taxonIds (not required for all)
+      });
+
+      // Test 7: Verify all animals in silhouette-mapping have corresponding taxonomy entries
+      await addTest('Verify silhouette mapping references exist in taxonomy', async () => {
+        const taxResponse = await fetch('./data/mammals-600/taxonomy.json');
+        const taxonomy = await response.json();
+        
+        const silResponse = await fetch('./data/mammals-600/silhouette-mapping.json');
+        const silMapping = await silResponse.json();
+        
+        let missingCount = 0;
+        let sampledCount = 0;
+        
+        for (const taxonId of Object.keys(silMapping.mappings)) {
+          if (sampledCount > 20) break; // Sample first 20
+          if (!taxonomy[taxonId]) {
+            missingCount++;
+          }
+          sampledCount++;
+        }
+        
+        if (missingCount > 0) throw new Error(`${missingCount}/${sampledCount} silhouette mappings missing from taxonomy`);
+      });
+
+      // Test 8: Verify mammals-600 has correct species count (156)
+      await addTest('Verify mammals-600 dataset has expected size (~156 terminal species)', async () => {
+        const response = await fetch('./data/mammals-600/hypothesis.json');
+        const hypothesis = await response.json();
+        
+        if (!hypothesis.nodes) throw new Error('Missing nodes');
+        
+        const terminalCount = hypothesis.nodes.filter(n => n.type === 'terminal').length;
+        // Should be around 156 terminal nodes
+        if (terminalCount < 100 || terminalCount > 300) {
+          throw new Error(`Expected ~156 terminals, got ${terminalCount}`);
+        }
+      });
+
+      // Test 9: Verify distinct difference from Animals dataset (593)
+      await addTest('Verify mammals-600 is distinct from Animals dataset', async () => {
+        const response = await fetch('./data/mammals-600/hypothesis.json');
+        const mammals600 = await response.json();
+        
+        const mammals600Count = mammals600.nodes.filter(n => n.type === 'terminal').length;
+        
+        // Load Animals for comparison
+        const animalsResponse = await fetch('./data/animals/hypothesis.json');
+        const animals = await animalsResponse.json();
+        const animalsCount = animals.nodes.filter(n => n.type === 'terminal').length;
+        
+        if (mammals600Count >= animalsCount) {
+          throw new Error(`Mammals-600 (${mammals600Count}) should be smaller than Animals (${animalsCount})`);
+        }
+      });
+
+      // Test 10: Verify mammals-600 has consistent structure with other datasets
+      await addTest('Verify mammals-600 hypothesis has valid structure', async () => {
+        const response = await fetch('./data/mammals-600/hypothesis.json');
+        const hypothesis = await response.json();
+        
+        const required = ['hypothesisId', 'rootNodeId', 'nodes'];
+        for (const field of required) {
+          if (!(field in hypothesis)) throw new Error(`Missing required field: ${field}`);
+        }
+        
+        if (!Array.isArray(hypothesis.nodes)) throw new Error('nodes is not an array');
+        if (hypothesis.nodes.length === 0) throw new Error('nodes array is empty');
+      });
+
+      // Summary
+      displaySummary();
+    }
+
+    function displaySummary() {
+      const passed = results.filter(r => r.pass).length;
+      const failed = results.filter(r => !r.pass).length;
+      const total = results.length;
+
+      const summaryDiv = document.getElementById('summary-container');
+      const className = failed === 0 ? 'summary all-pass' : 'summary has-failures';
+      
+      summaryDiv.className = className;
+      summaryDiv.innerHTML = `
+        <div>Tests Run: ${total}</div>
+        <div>Passed: ${passed}</div>
+        <div>Failed: ${failed}</div>
+        <div>Success Rate: ${total > 0 ? ((passed/total)*100).toFixed(1) : 0}%</div>
+      `;
+    }
+
+    // Auto-run on page load
+    window.addEventListener('load', () => {
+      runTests();
+    });
+  </script>
+</body>
+</html>

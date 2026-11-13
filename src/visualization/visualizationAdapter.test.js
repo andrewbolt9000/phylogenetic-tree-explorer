@@ -508,4 +508,66 @@ test('Visualization Adapter - Internal Nodes with taxonId', async (t) => {
     assert.ok(internalWithTaxon, 'Should have one internal node with taxonId');
     assert.ok(internalWithoutTaxon, 'Should have one internal node without taxonId');
   });
+
+  await t.test('sourceLabel is preserved on visualization nodes', () => {
+    const hypothesis = {
+      hypothesisId: 'test_h_label',
+      rootNodeId: 'ancestor_h_n0',
+      nodes: [
+        { id: 'ancestor_h_n0', type: 'internal', parentId: null, children: ['tax_a'], sourceLabel: 'Root ancestor' },
+        { id: 'tax_a', type: 'terminal', parentId: 'ancestor_h_n0', taxonId: 'tax_a', children: [] }
+      ]
+    };
+
+    const taxonomy = {
+      'tax_a': { id: 'tax_a', scientificName: 'Species A', rank: 'species' }
+    };
+
+    const builder = new GraphBuilder(hypothesis.hypothesisId, hypothesis.rootNodeId);
+    for (const node of hypothesis.nodes) {
+      builder.addNode(node);
+    }
+    const graph = builder.build(taxonomy);
+
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    const { nodes } = adapter.adapt();
+
+    const rootNode = nodes.find(n => n.id === 'ancestor_h_n0');
+    assert.ok(rootNode, 'Should find root node');
+    assert.strictEqual(rootNode.sourceLabel, 'Root ancestor', 'sourceLabel should be preserved');
+  });
+
+  await t.test('Display name resolver is used for labels', () => {
+    // Test that the resolver is correctly integrated
+    const hypothesis = {
+      hypothesisId: 'test_h_resolver',
+      rootNodeId: 'ancestor_h_n0',
+      nodes: [
+        { id: 'ancestor_h_n0', type: 'internal', parentId: null, children: ['tax_a'] },
+        { id: 'tax_a', type: 'terminal', parentId: 'ancestor_h_n0', taxonId: 'tax_a', children: [] }
+      ]
+    };
+
+    const taxonomy = {
+      'tax_a': { 
+        id: 'tax_a', 
+        scientificName: 'Test Species', 
+        commonName: 'Test Common',
+        rank: 'species' 
+      }
+    };
+
+    const builder = new GraphBuilder(hypothesis.hypothesisId, hypothesis.rootNodeId);
+    for (const node of hypothesis.nodes) {
+      builder.addNode(node);
+    }
+    const graph = builder.build(taxonomy);
+
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    const { nodes } = adapter.adapt();
+
+    const terminalNode = nodes.find(n => n.id === 'tax_a');
+    assert.strictEqual(terminalNode.label, 'Test Species', 
+      'Should prefer scientific name (resolver behavior)');
+  });
 });

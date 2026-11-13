@@ -1,0 +1,101 @@
+{
+  "dataset": "Tetrapod Dataset",
+  "build": "preliminary_v1",
+  "created": "2026-11-13",
+  "source_tree": "data/time_tree_raw_data/TT6_Tetrapods.nwk",
+  "source_roster": "data/tetrapods/roster.json",
+  "source_timetree_audit": "data/tetrapods/timetree_check.json",
+  "source_phylopic_inventory": "data/tetrapods/phylopic_inventory.json",
+  "species_included": 69,
+  "species_excluded": 11,
+  "images_copied": 362,
+  "tree_terminals": 69,
+  "root_to_tip_distances_preserved": true,
+  "image_qualification": "pending",
+  "excluded_species": [
+    {
+      "id": "mammal_019",
+      "scientific_name": "Myotis lucifugus",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "bird_009",
+      "scientific_name": "Phoenicopterus roseus",
+      "reasons": [
+        "no_exact_TimeTree_terminal"
+      ]
+    },
+    {
+      "id": "bird_020",
+      "scientific_name": "Fregata magnificens",
+      "reasons": [
+        "no_exact_TimeTree_terminal"
+      ]
+    },
+    {
+      "id": "reptile_013",
+      "scientific_name": "Boa constrictor",
+      "reasons": [
+        "no_exact_TimeTree_terminal"
+      ]
+    },
+    {
+      "id": "reptile_014",
+      "scientific_name": "Naja naja",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "reptile_020",
+      "scientific_name": "Eublepharis macularius",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "amphibian_002",
+      "scientific_name": "Ambystoma maculatum",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "amphibian_008",
+      "scientific_name": "Lithobates catesbeianus",
+      "reasons": [
+        "no_exact_TimeTree_terminal",
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "amphibian_010",
+      "scientific_name": "Hymenochirus boettgeri",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "amphibian_018",
+      "scientific_name": "Gastrotheca riobambae",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    },
+    {
+      "id": "amphibian_019",
+      "scientific_name": "Ichthyophis glutinosus",
+      "reasons": [
+        "no_downloaded_PhyloPic_images"
+      ]
+    }
+  ],
+  "outputs": [
+    "roster.json",
+    "tree.nwk",
+    "images.json",
+    "images/"
+  ]
+}

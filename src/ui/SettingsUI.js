@@ -424,6 +424,11 @@ class SettingsUI {
 
     panel.appendChild(section);
 
+    const bottomLogo = document.querySelector('.sidebar-bottom-logo');
+    if (bottomLogo) {
+      panel.appendChild(bottomLogo);
+    }
+
     // Wire export button
     document.getElementById('export-settings-btn').addEventListener('click', () => {
       this._exportSettings();

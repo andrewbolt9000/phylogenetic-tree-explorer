@@ -9,6 +9,8 @@
  * creating separate, deep copies of all visualization data.
  */
 
+import { resolveDisplayName } from '../taxonomy/displayNameResolver.js';
+
 class VisualizationAdapter {
   /**
    * Construct a visualization adapter from a PhyloGraph.
@@ -79,6 +81,7 @@ class VisualizationAdapter {
       type: graphNode.type,
       parentId: graphNode.parentId ? String(graphNode.parentId) : null,
       taxonId: graphNode.taxonId ? String(graphNode.taxonId) : null,
+      sourceLabel: graphNode.sourceLabel ? String(graphNode.sourceLabel) : null,
       
       // Get taxon name if this is a terminal node
       label: this._getNodeLabel(nodeId, graphNode),
@@ -130,29 +133,26 @@ class VisualizationAdapter {
   /**
    * Get a human-readable label for a node.
    * 
-   * For any node with a taxonId, use the taxon name from taxonomy.
-   * For internal nodes without a taxonId, use a generic label.
+   * Uses resolveDisplayName for taxonomy-aware naming.
+   * Falls back to ancestor labels for internal nodes without taxon association.
    * 
    * @private
    */
   _getNodeLabel(nodeId, graphNode) {
-    // If the node has a taxonId (terminal or internal), resolve it
-    if (graphNode.taxonId) {
-      const taxon = this.taxonomy[graphNode.taxonId];
-      if (taxon) {
-        return taxon.scientificName || taxon.commonName || graphNode.taxonId;
+    // Try to resolve from taxonomy using the resolver
+    const displayName = resolveDisplayName(graphNode, this.taxonomy, { preferCommonName: false });
+    
+    // If resolver returned a generic "Unidentified node", generate ancestor label
+    if (displayName === 'Unidentified node') {
+      const idStr = String(nodeId || '');
+      const match = idStr.match(/_n(\d+)$/);
+      if (match) {
+        return `Ancestor ${match[1]}`;
       }
-      return graphNode.taxonId;
+      return idStr;
     }
     
-    // No taxonId: internal nodes without taxon association use generic label
-    const idStr = String(nodeId || '');
-    const match = idStr.match(/_n(\d+)$/);
-    if (match) {
-      return `Ancestor ${match[1]}`;
-    }
-    
-    return idStr;
+    return displayName;
   }
 
   /**
