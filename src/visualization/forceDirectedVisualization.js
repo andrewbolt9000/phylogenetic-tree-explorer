@@ -1541,7 +1541,7 @@ class ForceDirectedVisualization {
    */
   _renderGrid() {
     // Remove existing grid if present
-    d3.select(this.g).selectAll('g.grid-container').remove();
+    this.g.selectAll('g.grid-container').remove();
 
     if (!this.showGrid) {
       this.gridElement = null;
@@ -1549,7 +1549,7 @@ class ForceDirectedVisualization {
     }
 
     // Create a grid container group as the first child of this.g
-    this.gridElement = d3.select(this.g)
+    this.gridElement = this.g
       .insert('g', ':first-child')
       .attr('class', 'grid-container')
       .attr('opacity', this.gridOpacity);
