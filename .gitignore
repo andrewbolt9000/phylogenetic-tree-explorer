@@ -1,0 +1,44 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Local caches
+.ott_cache/
+.ott_lineage_cache/
+.phylopic_cache/
+.pytest_cache/
+
+# Temporary and backup files
+*.bak
+*.tmp
+*.log
+*~
+
+# Local session state
+.session/
+
+# Raw TimeTree downloads (license-restricted; do not redistribute)
+data/time_tree_raw_data/
+
+# Timestamped and named backups
+*.bak*
+*.before-*
+
+# Timestamped and named backups
+*.bak*
+*.before-*
+
+# Timestamped and named backups
+*.bak*
+*.before-*

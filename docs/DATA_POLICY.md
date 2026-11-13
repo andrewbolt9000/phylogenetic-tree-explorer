@@ -69,9 +69,9 @@ Taxonomic data represents formal Linnaean or modern classification, independent 
 
 **Key properties**:
 - **Stable taxonomic identifiers**: Each organism reference has a persistent `id` prefixed `tax_` to distinguish from phylogenetic node IDs.
-- **Rank field**: Species, genus, family, order, class, phylum, kingdom.
+- **Rank field**: Any taxonomic rank from the Open Tree of Life vocabulary, including Linnaean ranks (kingdom, phylum, class, order, family, genus, species), intermediate ranks (superfamily, subfamily, tribe, subtribe, subgenus, section, subsection), mammal-specific ranks (infraclass, cohort, subcohort, superorder, suborder, infraorder, parvorder), and unranked taxa (`no rank`).
 - **Parent relationship**: Links to the parent taxon in the taxonomic hierarchy.
-- **Source attribution**: Documented source (ITIS, NCBI Taxonomy, etc.).
+- **Source attribution**: Documented source (Open Tree of Life, ITIS, NCBI Taxonomy, etc.).
 - **Extinct flag**: Indicates whether the taxon has extant (living) representatives.
 
 **Important distinction**: 
@@ -101,17 +101,34 @@ Taxonomic data represents formal Linnaean or modern classification, independent 
 - Must be unique and persistent across application versions.
 - Format must be machine-readable and URL-safe (e.g., lowercase, underscores for spaces).
 
-### 2.3 Taxonomic Hierarchy
+### 2.3 Taxonomic Hierarchy and Ranks
 
 **Structure**:
 - Every non-root taxon has exactly one parent (single-parent hierarchy).
 - The taxonomy forms a rooted tree structure, with one root taxon (e.g., "Animalia" or "Mammalia").
 - Parent-child relationships represent formal taxonomic classification, not evolutionary branching.
-- A taxonomic parent represents the next higher rank in the Linnaean hierarchy (e.g., species → genus → family → order).
+- A taxonomic parent represents the next higher rank in the taxonomic hierarchy (e.g., species → genus → family → order, but intermediate and non-Linnaean ranks may also appear).
+
+**Rank vocabulary**:
+- The application supports all Open Tree of Life taxonomic ranks, including:
+  - **Linnaean ranks**: domain, kingdom, phylum, class, order, family, genus, species, subspecies
+  - **Intermediate ranks**: subphylum, superclass, subclass, superfamily, subfamily, tribe, subtribe, subgenus, section, subsection
+  - **Mammal-specific ranks**: infraclass, cohort, subcohort, superorder, suborder, infraorder, parvorder
+  - **Species-related groupings**: species group, species subgroup
+  - **Unranked taxa**: `no rank` (for organisms without formal rank classification)
+- Rank values are preserved exactly as provided by the source database; no normalization or relabeling occurs.
+- The application maintains a rank hierarchy for informational purposes (enabling rank-aware operations like filtering), but **actual parent-child relationships come exclusively from the source lineage data, never from rank inference**.
+
+**Rank hierarchy awareness**:
+- The application understands the general ordering of ranks where well-established (e.g., kingdom > phylum > class > order > family > genus > species).
+- However, not all ranks can be ordered relative to each other (e.g., `no rank` has undefined position).
+- Applications should never infer evolutionary or taxonomic relationships from rank alone; use actual parent-child data instead.
 
 **Valid assumptions**:
 - The taxonomy is a rooted tree, not a forest: there is exactly one root node with `parentId: null`.
 - There are no cycles: the parent chain from any taxon leads to the unique root.
+- Every taxon has a rank value (possibly `no rank`).
+- Rank values are non-empty strings and are preserved exactly as provided by the source.
 
 **Validation**:
 - On data load, verify that all parent references exist.

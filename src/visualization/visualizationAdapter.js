@@ -89,6 +89,7 @@ class VisualizationAdapter {
       
       // Silhouette asset for terminal species (if available)
       silhouetteFilename: this._getSilhouetteFilename(graphNode),
+      silhouetteUrl: this._getSilhouetteUrl(graphNode),
       
       // Mutable layout properties (D3 will set these)
       x: Math.random() * 800,
@@ -129,13 +130,14 @@ class VisualizationAdapter {
   /**
    * Get a human-readable label for a node.
    * 
-   * For terminal nodes, use the species scientific name from taxonomy.
-   * For internal nodes, use a generic label.
+   * For any node with a taxonId, use the taxon name from taxonomy.
+   * For internal nodes without a taxonId, use a generic label.
    * 
    * @private
    */
   _getNodeLabel(nodeId, graphNode) {
-    if (graphNode.type === 'terminal' && graphNode.taxonId) {
+    // If the node has a taxonId (terminal or internal), resolve it
+    if (graphNode.taxonId) {
       const taxon = this.taxonomy[graphNode.taxonId];
       if (taxon) {
         return taxon.scientificName || taxon.commonName || graphNode.taxonId;
@@ -143,7 +145,7 @@ class VisualizationAdapter {
       return graphNode.taxonId;
     }
     
-    // Internal nodes: extract node number from ID for display
+    // No taxonId: internal nodes without taxon association use generic label
     const idStr = String(nodeId || '');
     const match = idStr.match(/_n(\d+)$/);
     if (match) {
@@ -154,11 +156,12 @@ class VisualizationAdapter {
   }
 
   /**
-   * Get common name for a node (terminal species only).
+   * Get common name for a node.
+   * Works for any node with a valid taxonId (terminal or internal).
    * @private
    */
   _getCommonName(graphNode) {
-    if (graphNode.type === 'terminal' && graphNode.taxonId) {
+    if (graphNode.taxonId) {
       const taxon = this.taxonomy[graphNode.taxonId];
       if (taxon) {
         return taxon.commonName || null;
@@ -168,11 +171,12 @@ class VisualizationAdapter {
   }
 
   /**
-   * Get scientific name for a node (terminal species only).
+   * Get scientific name for a node.
+   * Works for any node with a valid taxonId (terminal or internal).
    * @private
    */
   _getScientificName(graphNode) {
-    if (graphNode.type === 'terminal' && graphNode.taxonId) {
+    if (graphNode.taxonId) {
       const taxon = this.taxonomy[graphNode.taxonId];
       if (taxon) {
         return taxon.scientificName || null;
@@ -182,12 +186,31 @@ class VisualizationAdapter {
   }
 
   /**
-   * Get silhouette filename for a node (terminal species only).
+   * Get silhouette filename for a node.
+   * Works for any node with a valid taxonId (terminal or internal).
    * @private
    */
   _getSilhouetteFilename(graphNode) {
-    if (graphNode.type === 'terminal' && graphNode.taxonId) {
-      return this.silhouetteMapping[graphNode.taxonId] || null;
+    if (graphNode.taxonId) {
+      const mapping = this.silhouetteMapping[graphNode.taxonId];
+      if (mapping && mapping.silhouetteFilename) {
+        return mapping.silhouetteFilename;
+      }
+    }
+    return null;
+  }
+
+  /**
+   * Get silhouette URL for a node (for PhyloPic images).
+   * Works for any node with a valid taxonId (terminal or internal).
+   * @private
+   */
+  _getSilhouetteUrl(graphNode) {
+    if (graphNode.taxonId) {
+      const mapping = this.silhouetteMapping[graphNode.taxonId];
+      if (mapping && mapping.silhouetteUrl) {
+        return mapping.silhouetteUrl;
+      }
     }
     return null;
   }

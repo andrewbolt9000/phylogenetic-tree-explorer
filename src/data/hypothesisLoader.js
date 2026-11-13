@@ -228,10 +228,10 @@ class HypothesisLoader {
           );
         }
       } else {
-        // Internal node must have at least 2 children (binary or polytomous)
-        if (!Array.isArray(node.children) || node.children.length < 2) {
+        // Internal nodes may be unary to preserve the original OTL topology.
+        if (!Array.isArray(node.children)) {
           throw new ValidationError(
-            `Internal node '${node.id}' must have at least 2 children, got ${node.children.length}`
+            `Internal node '${node.id}' must have a children array`
           );
         }
         // All children must exist
@@ -239,6 +239,14 @@ class HypothesisLoader {
           if (!nodeMap[childId]) {
             throw new ValidationError(
               `Node '${node.id}' references non-existent child '${childId}'`
+            );
+          }
+        }
+        // If internal node has a taxonId, validate that it exists in taxonomy
+        if (node.taxonId) {
+          if (Object.keys(taxonomy).length > 0 && !taxonomy[node.taxonId]) {
+            throw new ValidationError(
+              `Internal node '${node.id}' references non-existent taxon '${node.taxonId}'`
             );
           }
         }

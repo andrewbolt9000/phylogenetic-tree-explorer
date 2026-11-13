@@ -1,0 +1,2648 @@
+{
+  "metadata": {
+    "description": "Reverse lookups for node identity mapping",
+    "mrca_ids": 147,
+    "ott_ids": 542
+  },
+  "mrca_to_nodes": {
+    "mrcaott102": [
+      "ancestor_otl_000001",
+      "ancestor_otl_000002",
+      "ancestor_otl_000003",
+      "ancestor_otl_000004",
+      "ancestor_otl_000005",
+      "ancestor_otl_000006",
+      "ancestor_otl_000007",
+      "ancestor_otl_000008",
+      "ancestor_otl_000009",
+      "ancestor_otl_000010",
+      "ancestor_otl_000011",
+      "ancestor_otl_000023",
+      "ancestor_otl_000024",
+      "ancestor_otl_000032"
+    ],
+    "mrcaott92106": [
+      "ancestor_otl_000013",
+      "ancestor_otl_000014"
+    ],
+    "mrcaott8118": [
+      "ancestor_otl_000015",
+      "ancestor_otl_000016",
+      "ancestor_otl_000017",
+      "ancestor_otl_000018",
+      "ancestor_otl_000019",
+      "ancestor_otl_000020",
+      "ancestor_otl_000021",
+      "ancestor_otl_000022"
+    ],
+    "mrcaott9032": [
+      "ancestor_otl_000028",
+      "ancestor_otl_000030"
+    ],
+    "mrcaott42": [
+      "ancestor_otl_000033",
+      "ancestor_otl_000034",
+      "ancestor_otl_000035",
+      "ancestor_otl_000037",
+      "ancestor_otl_000042",
+      "ancestor_otl_000058",
+      "ancestor_otl_000073",
+      "ancestor_otl_000081",
+      "ancestor_otl_000083",
+      "tax_ott490538",
+      "ancestor_otl_000632",
+      "ancestor_otl_000633",
+      "ancestor_otl_000634"
+    ],
+    "mrcaott744000": [
+      "ancestor_otl_000044"
+    ],
+    "mrcaott236059": [
+      "ancestor_otl_000045"
+    ],
+    "mrcaott236057": [
+      "tax_ott271555",
+      "ancestor_otl_000047",
+      "tax_ott391631"
+    ],
+    "mrcaott88915": [
+      "ancestor_otl_000052"
+    ],
+    "mrcaott67355": [
+      "ancestor_otl_000053"
+    ],
+    "mrcaott44975": [
+      "ancestor_otl_000054"
+    ],
+    "mrcaott38834": [
+      "tax_ott886085",
+      "ancestor_otl_000055",
+      "ancestor_otl_000056"
+    ],
+    "mrcaott125718": [
+      "ancestor_otl_000060",
+      "ancestor_otl_000061",
+      "tax_ott744000"
+    ],
+    "mrcaott160623": [
+      "ancestor_otl_000063",
+      "ancestor_otl_000064",
+      "ancestor_otl_000065",
+      "ancestor_otl_000066",
+      "ancestor_otl_000067"
+    ],
+    "mrcaott43435": [
+      "ancestor_otl_000069"
+    ],
+    "mrcaott10477": [
+      "ancestor_otl_000070",
+      "ancestor_otl_000071"
+    ],
+    "mrcaott621138": [
+      "ancestor_otl_000085"
+    ],
+    "mrcaott786": [
+      "ancestor_otl_000086",
+      "ancestor_otl_000087",
+      "tax_ott923734",
+      "tax_ott5553964",
+      "tax_ott864596",
+      "ancestor_otl_000111",
+      "ancestor_otl_000144",
+      "tax_ott417950",
+      "ancestor_otl_000194"
+    ],
+    "mrcaott33609": [
+      "ancestor_otl_000091",
+      "ancestor_otl_000101",
+      "ancestor_otl_000109"
+    ],
+    "mrcaott485691": [
+      "ancestor_otl_000093",
+      "ancestor_otl_000094"
+    ],
+    "mrcaott436611": [
+      "ancestor_otl_000096",
+      "ancestor_otl_000097",
+      "ancestor_otl_000100"
+    ],
+    "mrcaott689663": [
+      "ancestor_otl_000104",
+      "ancestor_otl_000105"
+    ],
+    "mrcaott575292": [
+      "ancestor_otl_000106"
+    ],
+    "mrcaott115446": [
+      "ancestor_otl_000107"
+    ],
+    "mrcaott111862": [
+      "tax_ott860954"
+    ],
+    "mrcaott83926": [
+      "ancestor_otl_000114",
+      "ancestor_otl_000115",
+      "ancestor_otl_000116",
+      "ancestor_otl_000117",
+      "tax_ott115449",
+      "ancestor_otl_000119",
+      "tax_ott741053",
+      "ancestor_otl_000120",
+      "ancestor_otl_000124",
+      "ancestor_otl_000126",
+      "ancestor_otl_000127",
+      "ancestor_otl_000134",
+      "ancestor_otl_000135",
+      "ancestor_otl_000136",
+      "ancestor_otl_000143",
+      "tax_ott770315"
+    ],
+    "mrcaott770295": [
+      "ancestor_otl_000132",
+      "ancestor_otl_000133"
+    ],
+    "mrcaott96938": [
+      "ancestor_otl_000138",
+      "ancestor_otl_000140",
+      "ancestor_otl_000141"
+    ],
+    "mrcaott429031": [
+      "tax_ott417965",
+      "ancestor_otl_000146"
+    ],
+    "mrcaott2025": [
+      "ancestor_otl_000147",
+      "ancestor_otl_000159",
+      "ancestor_otl_000160",
+      "ancestor_otl_000161"
+    ],
+    "mrcaott298261": [
+      "tax_ott770302",
+      "ancestor_otl_000150"
+    ],
+    "mrcaott274346": [
+      "ancestor_otl_000151"
+    ],
+    "mrcaott172747": [
+      "ancestor_otl_000152",
+      "ancestor_otl_000153",
+      "ancestor_otl_000157"
+    ],
+    "mrcaott921451": [
+      "tax_ott995038"
+    ],
+    "mrcaott566865": [
+      "ancestor_otl_000155"
+    ],
+    "mrcaott339031": [
+      "ancestor_otl_000165"
+    ],
+    "mrcaott672751": [
+      "ancestor_otl_000170",
+      "tax_ott489225"
+    ],
+    "mrcaott311205": [
+      "ancestor_otl_000171"
+    ],
+    "mrcaott132960": [
+      "ancestor_otl_000173",
+      "tax_ott921451",
+      "ancestor_otl_000174"
+    ],
+    "mrcaott3428": [
+      "ancestor_otl_000176",
+      "ancestor_otl_000181",
+      "ancestor_otl_000187"
+    ],
+    "mrcaott97009": [
+      "ancestor_otl_000178"
+    ],
+    "mrcaott22554": [
+      "ancestor_otl_000179"
+    ],
+    "mrcaott323051": [
+      "ancestor_otl_000190"
+    ],
+    "mrcaott101793": [
+      "ancestor_otl_000191"
+    ],
+    "mrcaott1548": [
+      "tax_ott50727",
+      "ancestor_otl_000198",
+      "ancestor_otl_000199",
+      "ancestor_otl_000200",
+      "ancestor_otl_000201",
+      "tax_ott339040",
+      "ancestor_otl_000218",
+      "ancestor_otl_000272",
+      "ancestor_otl_000344",
+      "ancestor_otl_000349",
+      "ancestor_otl_000369",
+      "ancestor_otl_000370",
+      "ancestor_otl_000371",
+      "ancestor_otl_000372",
+      "ancestor_otl_000407",
+      "ancestor_otl_000579"
+    ],
+    "mrcaott90636": [
+      "ancestor_otl_000205",
+      "ancestor_otl_000207",
+      "ancestor_otl_000208"
+    ],
+    "mrcaott15447": [
+      "ancestor_otl_000209",
+      "ancestor_otl_000212",
+      "ancestor_otl_000216"
+    ],
+    "mrcaott54038": [
+      "ancestor_otl_000215"
+    ],
+    "mrcaott88864": [
+      "ancestor_otl_000221",
+      "ancestor_otl_000222",
+      "ancestor_otl_000223",
+      "ancestor_otl_000224",
+      "tax_ott936014"
+    ],
+    "mrcaott20474": [
+      "ancestor_otl_000225",
+      "ancestor_otl_000228",
+      "ancestor_otl_000231",
+      "tax_ott410149",
+      "ancestor_otl_000234",
+      "ancestor_otl_000235",
+      "ancestor_otl_000240",
+      "ancestor_otl_000241",
+      "tax_ott19017",
+      "ancestor_otl_000255",
+      "tax_ott768679"
+    ],
+    "mrcaott132224": [
+      "ancestor_otl_000233"
+    ],
+    "mrcaott98208": [
+      "ancestor_otl_000239"
+    ],
+    "mrcaott128285": [
+      "ancestor_otl_000246"
+    ],
+    "mrcaott21273": [
+      "ancestor_otl_000247",
+      "ancestor_otl_000250",
+      "ancestor_otl_000251",
+      "ancestor_otl_000252",
+      "tax_ott202967"
+    ],
+    "mrcaott561127": [
+      "tax_ott274550"
+    ],
+    "mrcaott401076": [
+      "tax_ott70819"
+    ],
+    "mrcaott24247": [
+      "tax_ott123206",
+      "ancestor_otl_000257",
+      "ancestor_otl_000258",
+      "ancestor_otl_000259",
+      "ancestor_otl_000269"
+    ],
+    "mrcaott73074": [
+      "ancestor_otl_000263",
+      "ancestor_otl_000268",
+      "tax_ott274566"
+    ],
+    "mrcaott354607": [
+      "ancestor_otl_000265",
+      "ancestor_otl_000266",
+      "tax_ott363040"
+    ],
+    "mrcaott490099": [
+      "ancestor_otl_000267"
+    ],
+    "mrcaott108126": [
+      "ancestor_otl_000280"
+    ],
+    "mrcaott86868": [
+      "ancestor_otl_000284"
+    ],
+    "mrcaott5269": [
+      "ancestor_otl_000285",
+      "ancestor_otl_000303",
+      "ancestor_otl_000307"
+    ],
+    "mrcaott124220": [
+      "ancestor_otl_000287",
+      "tax_ott490099",
+      "ancestor_otl_000288",
+      "ancestor_otl_000289"
+    ],
+    "mrcaott111103": [
+      "ancestor_otl_000290",
+      "tax_ott768674"
+    ],
+    "mrcaott47843": [
+      "ancestor_otl_000291",
+      "ancestor_otl_000302"
+    ],
+    "mrcaott423943": [
+      "ancestor_otl_000294"
+    ],
+    "mrcaott194312": [
+      "ancestor_otl_000301"
+    ],
+    "mrcaott6470": [
+      "ancestor_otl_000306"
+    ],
+    "mrcaott5256": [
+      "ancestor_otl_000308",
+      "ancestor_otl_000333",
+      "ancestor_otl_000334",
+      "ancestor_otl_000343"
+    ],
+    "mrcaott276851": [
+      "ancestor_otl_000315"
+    ],
+    "mrcaott226193": [
+      "tax_ott124215"
+    ],
+    "mrcaott44568": [
+      "ancestor_otl_000318",
+      "tax_ott1089663",
+      "tax_ott851318",
+      "ancestor_otl_000324",
+      "ancestor_otl_000325",
+      "ancestor_otl_000326",
+      "tax_ott1003906",
+      "ancestor_otl_000327",
+      "ancestor_otl_000328",
+      "ancestor_otl_000329",
+      "tax_ott276851",
+      "ancestor_otl_000331",
+      "tax_ott825964",
+      "ancestor_otl_000332"
+    ],
+    "mrcaott226190": [
+      "ancestor_otl_000320"
+    ],
+    "mrcaott800320": [
+      "tax_ott306757"
+    ],
+    "mrcaott143004": [
+      "tax_ott800320"
+    ],
+    "mrcaott510768": [
+      "ancestor_otl_000355"
+    ],
+    "mrcaott9419": [
+      "tax_ott510768"
+    ],
+    "mrcaott307132": [
+      "tax_ott124776",
+      "ancestor_otl_000373"
+    ],
+    "mrcaott217241": [
+      "tax_ott1068202",
+      "ancestor_otl_000374"
+    ],
+    "mrcaott61869": [
+      "tax_ott1068218",
+      "ancestor_otl_000375",
+      "ancestor_otl_000376"
+    ],
+    "mrcaott31968": [
+      "ancestor_otl_000377",
+      "tax_ott1034204"
+    ],
+    "mrcaott6790": [
+      "ancestor_otl_000378",
+      "tax_ott1034198",
+      "ancestor_otl_000379",
+      "ancestor_otl_000381",
+      "ancestor_otl_000382",
+      "ancestor_otl_000395"
+    ],
+    "mrcaott238431": [
+      "ancestor_otl_000385"
+    ],
+    "mrcaott9379": [
+      "ancestor_otl_000387",
+      "ancestor_otl_000388",
+      "ancestor_otl_000390",
+      "ancestor_otl_000391",
+      "ancestor_otl_000392"
+    ],
+    "mrcaott6794": [
+      "ancestor_otl_000393",
+      "ancestor_otl_000394"
+    ],
+    "mrcaott20425": [
+      "ancestor_otl_000397",
+      "ancestor_otl_000398",
+      "ancestor_otl_000399"
+    ],
+    "mrcaott15293": [
+      "ancestor_otl_000400",
+      "ancestor_otl_000401",
+      "ancestor_otl_000402",
+      "ancestor_otl_000403"
+    ],
+    "mrcaott10730": [
+      "ancestor_otl_000406"
+    ],
+    "mrcaott80402": [
+      "ancestor_otl_000410"
+    ],
+    "mrcaott4697": [
+      "ancestor_otl_000411",
+      "ancestor_otl_000416",
+      "ancestor_otl_000429",
+      "ancestor_otl_000433",
+      "ancestor_otl_000439",
+      "tax_ott949676",
+      "ancestor_otl_000446",
+      "ancestor_otl_000475",
+      "tax_ott886829",
+      "ancestor_otl_000578"
+    ],
+    "mrcaott167828": [
+      "ancestor_otl_000418"
+    ],
+    "mrcaott4709": [
+      "ancestor_otl_000419",
+      "ancestor_otl_000422",
+      "ancestor_otl_000426",
+      "ancestor_otl_000427",
+      "ancestor_otl_000428"
+    ],
+    "mrcaott901933": [
+      "tax_ott178247"
+    ],
+    "mrcaott203417": [
+      "ancestor_otl_000436",
+      "ancestor_otl_000437"
+    ],
+    "mrcaott231602": [
+      "ancestor_otl_000444",
+      "tax_ott397142"
+    ],
+    "mrcaott10732": [
+      "ancestor_otl_000448",
+      "ancestor_otl_000449",
+      "ancestor_otl_000452",
+      "ancestor_otl_000453",
+      "tax_ott872562",
+      "ancestor_otl_000474"
+    ],
+    "mrcaott300426": [
+      "ancestor_otl_000451",
+      "tax_ott348040"
+    ],
+    "mrcaott22069": [
+      "tax_ott231602"
+    ],
+    "mrcaott22064": [
+      "ancestor_otl_000458",
+      "ancestor_otl_000461",
+      "ancestor_otl_000462",
+      "ancestor_otl_000463",
+      "ancestor_otl_000464",
+      "ancestor_otl_000473"
+    ],
+    "mrcaott95364": [
+      "ancestor_otl_000465",
+      "tax_ott872577",
+      "ancestor_otl_000467",
+      "tax_ott872573",
+      "ancestor_otl_000472"
+    ],
+    "mrcaott47497": [
+      "tax_ott1040694",
+      "ancestor_otl_000484",
+      "ancestor_otl_000487",
+      "ancestor_otl_000488",
+      "ancestor_otl_000489",
+      "ancestor_otl_000490",
+      "ancestor_otl_000494",
+      "tax_ott313163",
+      "ancestor_otl_000508",
+      "ancestor_otl_000509",
+      "tax_ott247331",
+      "ancestor_otl_000510",
+      "ancestor_otl_000511",
+      "tax_ott837601",
+      "ancestor_otl_000512"
+    ],
+    "mrcaott684074": [
+      "ancestor_otl_000481",
+      "tax_ott95364"
+    ],
+    "mrcaott247331": [
+      "tax_ott749644",
+      "ancestor_otl_000486"
+    ],
+    "mrcaott110766": [
+      "ancestor_otl_000493"
+    ],
+    "mrcaott609054": [
+      "ancestor_otl_000496"
+    ],
+    "mrcaott297455": [
+      "ancestor_otl_000497",
+      "ancestor_otl_000501",
+      "ancestor_otl_000503",
+      "ancestor_otl_000504"
+    ],
+    "mrcaott419501": [
+      "ancestor_otl_000499",
+      "ancestor_otl_000500"
+    ],
+    "mrcaott315465": [
+      "tax_ott247333"
+    ],
+    "mrcaott77889": [
+      "ancestor_otl_000505",
+      "ancestor_otl_000507"
+    ],
+    "mrcaott685113": [
+      "tax_ott821953"
+    ],
+    "mrcaott6940": [
+      "ancestor_otl_000517",
+      "tax_ott821964",
+      "ancestor_otl_000526",
+      "ancestor_otl_000536",
+      "ancestor_otl_000574"
+    ],
+    "mrcaott383901": [
+      "ancestor_otl_000522",
+      "ancestor_otl_000524"
+    ],
+    "mrcaott373464": [
+      "ancestor_otl_000529"
+    ],
+    "mrcaott194346": [
+      "ancestor_otl_000530"
+    ],
+    "mrcaott220532": [
+      "ancestor_otl_000533"
+    ],
+    "mrcaott126631": [
+      "tax_ott768514",
+      "ancestor_otl_000534"
+    ],
+    "mrcaott45845": [
+      "ancestor_otl_000535"
+    ],
+    "mrcaott19397": [
+      "ancestor_otl_000538",
+      "ancestor_otl_000543",
+      "ancestor_otl_000573"
+    ],
+    "mrcaott371429": [
+      "ancestor_otl_000540"
+    ],
+    "mrcaott42318": [
+      "ancestor_otl_000541"
+    ],
+    "mrcaott54737": [
+      "ancestor_otl_000544",
+      "ancestor_otl_000545",
+      "ancestor_otl_000546",
+      "tax_ott42314",
+      "ancestor_otl_000557",
+      "ancestor_otl_000564",
+      "tax_ott862641",
+      "ancestor_otl_000571",
+      "ancestor_otl_000572"
+    ],
+    "mrcaott198595": [
+      "ancestor_otl_000548"
+    ],
+    "mrcaott86166": [
+      "ancestor_otl_000552"
+    ],
+    "mrcaott86162": [
+      "ancestor_otl_000556"
+    ],
+    "mrcaott442049": [
+      "ancestor_otl_000559",
+      "ancestor_otl_000561"
+    ],
+    "mrcaott507553": [
+      "ancestor_otl_000566"
+    ],
+    "mrcaott660447": [
+      "tax_ott86162"
+    ],
+    "mrcaott86170": [
+      "tax_ott42307"
+    ],
+    "mrcaott222362": [
+      "ancestor_otl_000580",
+      "ancestor_otl_000581",
+      "tax_ott1033549",
+      "ancestor_otl_000582"
+    ],
+    "mrcaott3285": [
+      "ancestor_otl_000585",
+      "ancestor_otl_000590"
+    ],
+    "mrcaott72667": [
+      "ancestor_otl_000598",
+      "ancestor_otl_000606"
+    ],
+    "mrcaott106258": [
+      "ancestor_otl_000601"
+    ],
+    "mrcaott90404": [
+      "ancestor_otl_000605"
+    ],
+    "mrcaott82081": [
+      "ancestor_otl_000611",
+      "ancestor_otl_000614"
+    ],
+    "mrcaott796672": [
+      "ancestor_otl_000617",
+      "ancestor_otl_000618"
+    ],
+    "mrcaott527342": [
+      "ancestor_otl_000625",
+      "ancestor_otl_000626"
+    ],
+    "mrcaott42481": [
+      "tax_ott273233",
+      "ancestor_otl_000641",
+      "ancestor_otl_000645",
+      "ancestor_otl_000646",
+      "ancestor_otl_000647",
+      "ancestor_otl_000648",
+      "ancestor_otl_000649",
+      "ancestor_otl_000650",
+      "ancestor_otl_000651",
+      "ancestor_otl_000652"
+    ],
+    "mrcaott398453": [
+      "ancestor_otl_000638",
+      "ancestor_otl_000639"
+    ],
+    "mrcaott42493": [
+      "ancestor_otl_000643",
+      "ancestor_otl_000644"
+    ],
+    "mrcaott34417": [
+      "ancestor_otl_000654",
+      "ancestor_otl_000655"
+    ],
+    "mrcaott6735": [
+      "ancestor_otl_000656",
+      "tax_ott597239",
+      "ancestor_otl_000663",
+      "ancestor_otl_000664",
+      "ancestor_otl_000674"
+    ],
+    "mrcaott461135": [
+      "tax_ott42493"
+    ],
+    "mrcaott84809": [
+      "ancestor_otl_000666",
+      "tax_ott327624",
+      "ancestor_otl_000667",
+      "ancestor_otl_000668"
+    ],
+    "mrcaott79410": [
+      "ancestor_otl_000669"
+    ],
+    "mrcaott29033": [
+      "ancestor_otl_000671"
+    ],
+    "mrcaott79623": [
+      "ancestor_otl_000682",
+      "tax_ott16038"
+    ]
+  },
+  "ott_to_nodes": {
+    "542509": [
+      "ancestor_otl_000000"
+    ],
+    "102": [
+      "ancestor_otl_000001",
+      "ancestor_otl_000002",
+      "ancestor_otl_000003",
+      "ancestor_otl_000004",
+      "ancestor_otl_000005",
+      "ancestor_otl_000006",
+      "ancestor_otl_000007",
+      "ancestor_otl_000008",
+      "ancestor_otl_000009",
+      "ancestor_otl_000010",
+      "ancestor_otl_000011",
+      "ancestor_otl_000023",
+      "ancestor_otl_000024",
+      "ancestor_otl_000032"
+    ],
+    "271555": [
+      "ancestor_otl_000012"
+    ],
+    "92106": [
+      "ancestor_otl_000013",
+      "ancestor_otl_000014"
+    ],
+    "8118": [
+      "ancestor_otl_000015",
+      "ancestor_otl_000016",
+      "ancestor_otl_000017",
+      "ancestor_otl_000018",
+      "ancestor_otl_000019",
+      "ancestor_otl_000020",
+      "ancestor_otl_000021",
+      "ancestor_otl_000022"
+    ],
+    "816256": [
+      "ancestor_otl_000025"
+    ],
+    "391631": [
+      "ancestor_otl_000026"
+    ],
+    "391624": [
+      "ancestor_otl_000027"
+    ],
+    "9032": [
+      "ancestor_otl_000028",
+      "ancestor_otl_000030"
+    ],
+    "917323": [
+      "ancestor_otl_000029"
+    ],
+    "671049": [
+      "ancestor_otl_000031"
+    ],
+    "42": [
+      "ancestor_otl_000033",
+      "ancestor_otl_000034",
+      "ancestor_otl_000035",
+      "ancestor_otl_000037",
+      "ancestor_otl_000042",
+      "ancestor_otl_000058",
+      "ancestor_otl_000073",
+      "ancestor_otl_000081",
+      "ancestor_otl_000083",
+      "tax_ott490538",
+      "ancestor_otl_000632",
+      "ancestor_otl_000633",
+      "ancestor_otl_000634"
+    ],
+    "839752": [
+      "ancestor_otl_000036"
+    ],
+    "7067181": [
+      "tax_ott542509"
+    ],
+    "886085": [
+      "ancestor_otl_000038"
+    ],
+    "1048190": [
+      "ancestor_otl_000039"
+    ],
+    "835319": [
+      "ancestor_otl_000040"
+    ],
+    "7067145": [
+      "ancestor_otl_000041"
+    ],
+    "744000": [
+      "ancestor_otl_000043",
+      "ancestor_otl_000044"
+    ],
+    "236059": [
+      "ancestor_otl_000045"
+    ],
+    "744006": [
+      "ancestor_otl_000046"
+    ],
+    "236057": [
+      "tax_ott271555",
+      "ancestor_otl_000047",
+      "tax_ott391631"
+    ],
+    "220339": [
+      "ancestor_otl_000048"
+    ],
+    "744018": [
+      "ancestor_otl_000049"
+    ],
+    "744023": [
+      "ancestor_otl_000050"
+    ],
+    "7067179": [
+      "ancestor_otl_000051"
+    ],
+    "88915": [
+      "ancestor_otl_000052"
+    ],
+    "67355": [
+      "ancestor_otl_000053"
+    ],
+    "44975": [
+      "ancestor_otl_000054"
+    ],
+    "38834": [
+      "tax_ott886085",
+      "ancestor_otl_000055",
+      "ancestor_otl_000056"
+    ],
+    "44557": [
+      "ancestor_otl_000057"
+    ],
+    "286193": [
+      "ancestor_otl_000059"
+    ],
+    "125718": [
+      "ancestor_otl_000060",
+      "ancestor_otl_000061",
+      "tax_ott744000"
+    ],
+    "410925": [
+      "ancestor_otl_000062"
+    ],
+    "160623": [
+      "ancestor_otl_000063",
+      "ancestor_otl_000064",
+      "ancestor_otl_000065",
+      "ancestor_otl_000066",
+      "ancestor_otl_000067"
+    ],
+    "649553": [
+      "ancestor_otl_000068"
+    ],
+    "43435": [
+      "ancestor_otl_000069"
+    ],
+    "10477": [
+      "ancestor_otl_000070",
+      "ancestor_otl_000071"
+    ],
+    "384218": [
+      "tax_ott744018"
+    ],
+    "44559": [
+      "ancestor_otl_000072"
+    ],
+    "864593": [
+      "ancestor_otl_000074"
+    ],
+    "923734": [
+      "ancestor_otl_000075"
+    ],
+    "5553964": [
+      "ancestor_otl_000076"
+    ],
+    "864610": [
+      "ancestor_otl_000077"
+    ],
+    "864596": [
+      "ancestor_otl_000078"
+    ],
+    "864605": [
+      "ancestor_otl_000079"
+    ],
+    "644258": [
+      "tax_ott286193"
+    ],
+    "644242": [
+      "ancestor_otl_000080"
+    ],
+    "392220": [
+      "ancestor_otl_000082"
+    ],
+    "860954": [
+      "ancestor_otl_000084"
+    ],
+    "235536": [
+      "tax_ott410925"
+    ],
+    "621138": [
+      "ancestor_otl_000085"
+    ],
+    "786": [
+      "ancestor_otl_000086",
+      "ancestor_otl_000087",
+      "tax_ott923734",
+      "tax_ott5553964",
+      "tax_ott864596",
+      "ancestor_otl_000111",
+      "ancestor_otl_000144",
+      "tax_ott417950",
+      "ancestor_otl_000194"
+    ],
+    "741061": [
+      "ancestor_otl_000088"
+    ],
+    "741047": [
+      "ancestor_otl_000089"
+    ],
+    "741055": [
+      "ancestor_otl_000090"
+    ],
+    "33609": [
+      "ancestor_otl_000091",
+      "ancestor_otl_000101",
+      "ancestor_otl_000109"
+    ],
+    "115449": [
+      "ancestor_otl_000092"
+    ],
+    "485691": [
+      "ancestor_otl_000093",
+      "ancestor_otl_000094"
+    ],
+    "115460": [
+      "ancestor_otl_000095"
+    ],
+    "436611": [
+      "ancestor_otl_000096",
+      "ancestor_otl_000097",
+      "ancestor_otl_000100"
+    ],
+    "741053": [
+      "ancestor_otl_000098"
+    ],
+    "741052": [
+      "ancestor_otl_000099"
+    ],
+    "689660": [
+      "ancestor_otl_000102"
+    ],
+    "689650": [
+      "ancestor_otl_000103"
+    ],
+    "689663": [
+      "ancestor_otl_000104",
+      "ancestor_otl_000105"
+    ],
+    "575292": [
+      "ancestor_otl_000106"
+    ],
+    "115446": [
+      "ancestor_otl_000107"
+    ],
+    "111862": [
+      "tax_ott860954"
+    ],
+    "268324": [
+      "ancestor_otl_000108"
+    ],
+    "842860": [
+      "ancestor_otl_000110"
+    ],
+    "842868": [
+      "ancestor_otl_000112"
+    ],
+    "386194": [
+      "tax_ott741047"
+    ],
+    "770315": [
+      "ancestor_otl_000113"
+    ],
+    "83926": [
+      "ancestor_otl_000114",
+      "ancestor_otl_000115",
+      "ancestor_otl_000116",
+      "ancestor_otl_000117",
+      "tax_ott115449",
+      "ancestor_otl_000119",
+      "tax_ott741053",
+      "ancestor_otl_000120",
+      "ancestor_otl_000124",
+      "ancestor_otl_000126",
+      "ancestor_otl_000127",
+      "ancestor_otl_000134",
+      "ancestor_otl_000135",
+      "ancestor_otl_000136",
+      "ancestor_otl_000143",
+      "tax_ott770315"
+    ],
+    "770309": [
+      "ancestor_otl_000118"
+    ],
+    "417950": [
+      "ancestor_otl_000121"
+    ],
+    "158484": [
+      "ancestor_otl_000122"
+    ],
+    "417957": [
+      "ancestor_otl_000123"
+    ],
+    "417965": [
+      "ancestor_otl_000125"
+    ],
+    "417969": [
+      "tax_ott689660"
+    ],
+    "312031": [
+      "tax_ott689650"
+    ],
+    "770295": [
+      "ancestor_otl_000128",
+      "ancestor_otl_000132",
+      "ancestor_otl_000133"
+    ],
+    "770302": [
+      "ancestor_otl_000129"
+    ],
+    "417949": [
+      "ancestor_otl_000130"
+    ],
+    "1082538": [
+      "ancestor_otl_000131"
+    ],
+    "995038": [
+      "ancestor_otl_000137"
+    ],
+    "96938": [
+      "ancestor_otl_000138",
+      "ancestor_otl_000140",
+      "ancestor_otl_000141"
+    ],
+    "166552": [
+      "ancestor_otl_000139"
+    ],
+    "166544": [
+      "ancestor_otl_000142"
+    ],
+    "842867": [
+      "tax_ott158484"
+    ],
+    "489221": [
+      "ancestor_otl_000145"
+    ],
+    "429031": [
+      "tax_ott417965",
+      "ancestor_otl_000146"
+    ],
+    "2025": [
+      "ancestor_otl_000147",
+      "ancestor_otl_000159",
+      "ancestor_otl_000160",
+      "ancestor_otl_000161"
+    ],
+    "1015243": [
+      "ancestor_otl_000148"
+    ],
+    "489225": [
+      "ancestor_otl_000149"
+    ],
+    "3607843": [
+      "tax_ott770295"
+    ],
+    "298261": [
+      "tax_ott770302",
+      "ancestor_otl_000150"
+    ],
+    "274346": [
+      "ancestor_otl_000151"
+    ],
+    "172747": [
+      "ancestor_otl_000152",
+      "ancestor_otl_000153",
+      "ancestor_otl_000157"
+    ],
+    "921451": [
+      "ancestor_otl_000154",
+      "tax_ott995038"
+    ],
+    "566865": [
+      "ancestor_otl_000155"
+    ],
+    "532396": [
+      "ancestor_otl_000156"
+    ],
+    "1015234": [
+      "ancestor_otl_000158"
+    ],
+    "339033": [
+      "ancestor_otl_000162"
+    ],
+    "386195": [
+      "ancestor_otl_000163"
+    ],
+    "339031": [
+      "tax_ott489221",
+      "ancestor_otl_000165"
+    ],
+    "5925594": [
+      "ancestor_otl_000164"
+    ],
+    "933322": [
+      "ancestor_otl_000166"
+    ],
+    "702151": [
+      "ancestor_otl_000167"
+    ],
+    "702152": [
+      "ancestor_otl_000168"
+    ],
+    "696018": [
+      "ancestor_otl_000169"
+    ],
+    "672751": [
+      "ancestor_otl_000170",
+      "tax_ott489225"
+    ],
+    "311205": [
+      "ancestor_otl_000171"
+    ],
+    "311203": [
+      "ancestor_otl_000172"
+    ],
+    "132960": [
+      "ancestor_otl_000173",
+      "tax_ott921451",
+      "ancestor_otl_000174"
+    ],
+    "1058643": [
+      "ancestor_otl_000175"
+    ],
+    "3428": [
+      "ancestor_otl_000176",
+      "ancestor_otl_000181",
+      "ancestor_otl_000187"
+    ],
+    "913930": [
+      "ancestor_otl_000177"
+    ],
+    "913932": [
+      "tax_ott339031"
+    ],
+    "97009": [
+      "ancestor_otl_000178"
+    ],
+    "22554": [
+      "ancestor_otl_000179"
+    ],
+    "913933": [
+      "ancestor_otl_000180"
+    ],
+    "702142": [
+      "ancestor_otl_000182"
+    ],
+    "50727": [
+      "ancestor_otl_000183"
+    ],
+    "190075": [
+      "ancestor_otl_000184"
+    ],
+    "915769": [
+      "ancestor_otl_000185"
+    ],
+    "702144": [
+      "ancestor_otl_000186"
+    ],
+    "339040": [
+      "ancestor_otl_000188"
+    ],
+    "339045": [
+      "ancestor_otl_000189"
+    ],
+    "323051": [
+      "ancestor_otl_000190"
+    ],
+    "863755": [
+      "tax_ott696018"
+    ],
+    "101793": [
+      "ancestor_otl_000191"
+    ],
+    "702145": [
+      "ancestor_otl_000192"
+    ],
+    "702147": [
+      "ancestor_otl_000193"
+    ],
+    "913935": [
+      "tax_ott913930"
+    ],
+    "6520519": [
+      "ancestor_otl_000195"
+    ],
+    "392222": [
+      "ancestor_otl_000196"
+    ],
+    "936014": [
+      "ancestor_otl_000197"
+    ],
+    "1548": [
+      "tax_ott50727",
+      "ancestor_otl_000198",
+      "ancestor_otl_000199",
+      "ancestor_otl_000200",
+      "ancestor_otl_000201",
+      "tax_ott339040",
+      "ancestor_otl_000218",
+      "ancestor_otl_000272",
+      "ancestor_otl_000344",
+      "ancestor_otl_000349",
+      "ancestor_otl_000369",
+      "ancestor_otl_000370",
+      "ancestor_otl_000371",
+      "ancestor_otl_000372",
+      "ancestor_otl_000407",
+      "ancestor_otl_000579"
+    ],
+    "534970": [
+      "ancestor_otl_000202"
+    ],
+    "410149": [
+      "ancestor_otl_000203"
+    ],
+    "410145": [
+      "ancestor_otl_000204"
+    ],
+    "90636": [
+      "ancestor_otl_000205",
+      "ancestor_otl_000207",
+      "ancestor_otl_000208"
+    ],
+    "410156": [
+      "ancestor_otl_000206"
+    ],
+    "15447": [
+      "ancestor_otl_000209",
+      "ancestor_otl_000212",
+      "ancestor_otl_000216"
+    ],
+    "410153": [
+      "ancestor_otl_000210"
+    ],
+    "936000": [
+      "ancestor_otl_000211"
+    ],
+    "460509": [
+      "ancestor_otl_000213"
+    ],
+    "460507": [
+      "ancestor_otl_000214"
+    ],
+    "54038": [
+      "ancestor_otl_000215"
+    ],
+    "460505": [
+      "ancestor_otl_000217"
+    ],
+    "202967": [
+      "ancestor_otl_000219"
+    ],
+    "19017": [
+      "ancestor_otl_000220"
+    ],
+    "88864": [
+      "ancestor_otl_000221",
+      "ancestor_otl_000222",
+      "ancestor_otl_000223",
+      "ancestor_otl_000224",
+      "tax_ott936014"
+    ],
+    "20474": [
+      "ancestor_otl_000225",
+      "ancestor_otl_000228",
+      "ancestor_otl_000231",
+      "tax_ott410149",
+      "ancestor_otl_000234",
+      "ancestor_otl_000235",
+      "ancestor_otl_000240",
+      "ancestor_otl_000241",
+      "tax_ott19017",
+      "ancestor_otl_000255",
+      "tax_ott768679"
+    ],
+    "860784": [
+      "ancestor_otl_000226"
+    ],
+    "860783": [
+      "ancestor_otl_000227"
+    ],
+    "274550": [
+      "ancestor_otl_000229"
+    ],
+    "274554": [
+      "ancestor_otl_000230"
+    ],
+    "70819": [
+      "tax_ott410145"
+    ],
+    "123206": [
+      "ancestor_otl_000232"
+    ],
+    "540244": [
+      "tax_ott410153"
+    ],
+    "132224": [
+      "ancestor_otl_000233"
+    ],
+    "122647": [
+      "tax_ott460509"
+    ],
+    "19028": [
+      "ancestor_otl_000236"
+    ],
+    "19027": [
+      "ancestor_otl_000237"
+    ],
+    "385449": [
+      "ancestor_otl_000238"
+    ],
+    "98208": [
+      "ancestor_otl_000239"
+    ],
+    "128285": [
+      "ancestor_otl_000242",
+      "ancestor_otl_000246"
+    ],
+    "128284": [
+      "ancestor_otl_000243"
+    ],
+    "363040": [
+      "ancestor_otl_000244"
+    ],
+    "363039": [
+      "ancestor_otl_000245"
+    ],
+    "21273": [
+      "ancestor_otl_000247",
+      "ancestor_otl_000250",
+      "ancestor_otl_000251",
+      "ancestor_otl_000252",
+      "tax_ott202967"
+    ],
+    "274566": [
+      "ancestor_otl_000248"
+    ],
+    "274567": [
+      "ancestor_otl_000249"
+    ],
+    "768679": [
+      "ancestor_otl_000253"
+    ],
+    "768678": [
+      "tax_ott860784"
+    ],
+    "910691": [
+      "ancestor_otl_000254"
+    ],
+    "561127": [
+      "tax_ott274550"
+    ],
+    "215885": [
+      "ancestor_otl_000256"
+    ],
+    "401076": [
+      "tax_ott70819"
+    ],
+    "24247": [
+      "tax_ott123206",
+      "ancestor_otl_000257",
+      "ancestor_otl_000258",
+      "ancestor_otl_000259",
+      "ancestor_otl_000269"
+    ],
+    "644255": [
+      "tax_ott19028"
+    ],
+    "122649": [
+      "ancestor_otl_000260"
+    ],
+    "641187": [
+      "ancestor_otl_000261"
+    ],
+    "756071": [
+      "ancestor_otl_000262"
+    ],
+    "73074": [
+      "ancestor_otl_000263",
+      "ancestor_otl_000268",
+      "tax_ott274566"
+    ],
+    "907693": [
+      "ancestor_otl_000264"
+    ],
+    "354607": [
+      "ancestor_otl_000265",
+      "ancestor_otl_000266",
+      "tax_ott363040"
+    ],
+    "490099": [
+      "tax_ott128285",
+      "ancestor_otl_000267"
+    ],
+    "346071": [
+      "ancestor_otl_000270"
+    ],
+    "768677": [
+      "ancestor_otl_000271"
+    ],
+    "768674": [
+      "ancestor_otl_000273"
+    ],
+    "768687": [
+      "ancestor_otl_000274"
+    ],
+    "207426": [
+      "ancestor_otl_000275"
+    ],
+    "207428": [
+      "ancestor_otl_000276"
+    ],
+    "768685": [
+      "ancestor_otl_000277"
+    ],
+    "768683": [
+      "ancestor_otl_000278"
+    ],
+    "768682": [
+      "tax_ott215885"
+    ],
+    "194522": [
+      "ancestor_otl_000279"
+    ],
+    "108126": [
+      "ancestor_otl_000280"
+    ],
+    "403912": [
+      "ancestor_otl_000281"
+    ],
+    "986971": [
+      "ancestor_otl_000282"
+    ],
+    "698411": [
+      "tax_ott644255"
+    ],
+    "698410": [
+      "ancestor_otl_000283"
+    ],
+    "935329": [
+      "tax_ott641187"
+    ],
+    "86868": [
+      "ancestor_otl_000284"
+    ],
+    "5269": [
+      "ancestor_otl_000285",
+      "ancestor_otl_000303",
+      "ancestor_otl_000307"
+    ],
+    "124230": [
+      "ancestor_otl_000286"
+    ],
+    "124235": [
+      "tax_ott907693"
+    ],
+    "124220": [
+      "ancestor_otl_000287",
+      "tax_ott490099",
+      "ancestor_otl_000288",
+      "ancestor_otl_000289"
+    ],
+    "111103": [
+      "ancestor_otl_000290",
+      "tax_ott768674"
+    ],
+    "47843": [
+      "ancestor_otl_000291",
+      "ancestor_otl_000302"
+    ],
+    "124215": [
+      "tax_ott207426"
+    ],
+    "124219": [
+      "ancestor_otl_000292"
+    ],
+    "698406": [
+      "ancestor_otl_000293"
+    ],
+    "1089663": [
+      "tax_ott768683"
+    ],
+    "423943": [
+      "ancestor_otl_000294"
+    ],
+    "851308": [
+      "ancestor_otl_000295"
+    ],
+    "306757": [
+      "ancestor_otl_000296"
+    ],
+    "306759": [
+      "ancestor_otl_000297"
+    ],
+    "851318": [
+      "ancestor_otl_000298"
+    ],
+    "851317": [
+      "ancestor_otl_000299"
+    ],
+    "851307": [
+      "ancestor_otl_000300"
+    ],
+    "194312": [
+      "ancestor_otl_000301"
+    ],
+    "1003906": [
+      "ancestor_otl_000304"
+    ],
+    "1003909": [
+      "ancestor_otl_000305"
+    ],
+    "6470": [
+      "ancestor_otl_000306"
+    ],
+    "276849": [
+      "tax_ott698411"
+    ],
+    "5256": [
+      "ancestor_otl_000308",
+      "ancestor_otl_000333",
+      "ancestor_otl_000334",
+      "ancestor_otl_000343"
+    ],
+    "276851": [
+      "ancestor_otl_000309",
+      "ancestor_otl_000315"
+    ],
+    "276856": [
+      "ancestor_otl_000310"
+    ],
+    "276861": [
+      "ancestor_otl_000311"
+    ],
+    "825964": [
+      "ancestor_otl_000312"
+    ],
+    "276860": [
+      "ancestor_otl_000313"
+    ],
+    "3612363": [
+      "ancestor_otl_000314"
+    ],
+    "698417": [
+      "ancestor_otl_000316"
+    ],
+    "226198": [
+      "tax_ott124230"
+    ],
+    "226201": [
+      "ancestor_otl_000317"
+    ],
+    "226193": [
+      "tax_ott124215"
+    ],
+    "44568": [
+      "ancestor_otl_000318",
+      "tax_ott1089663",
+      "tax_ott851318",
+      "ancestor_otl_000324",
+      "ancestor_otl_000325",
+      "ancestor_otl_000326",
+      "tax_ott1003906",
+      "ancestor_otl_000327",
+      "ancestor_otl_000328",
+      "ancestor_otl_000329",
+      "tax_ott276851",
+      "ancestor_otl_000331",
+      "tax_ott825964",
+      "ancestor_otl_000332"
+    ],
+    "226190": [
+      "ancestor_otl_000319",
+      "ancestor_otl_000320"
+    ],
+    "800320": [
+      "ancestor_otl_000321",
+      "tax_ott306757"
+    ],
+    "800310": [
+      "ancestor_otl_000322"
+    ],
+    "800309": [
+      "ancestor_otl_000323"
+    ],
+    "800314": [
+      "ancestor_otl_000330"
+    ],
+    "698424": [
+      "ancestor_otl_000335"
+    ],
+    "662806": [
+      "ancestor_otl_000336"
+    ],
+    "662802": [
+      "ancestor_otl_000337"
+    ],
+    "510762": [
+      "ancestor_otl_000338"
+    ],
+    "510761": [
+      "ancestor_otl_000339"
+    ],
+    "510764": [
+      "ancestor_otl_000340"
+    ],
+    "7655792": [
+      "ancestor_otl_000341"
+    ],
+    "7655791": [
+      "ancestor_otl_000342"
+    ],
+    "729998": [
+      "ancestor_otl_000345"
+    ],
+    "730013": [
+      "ancestor_otl_000346"
+    ],
+    "730021": [
+      "ancestor_otl_000347"
+    ],
+    "730008": [
+      "ancestor_otl_000348"
+    ],
+    "916745": [
+      "tax_ott226198"
+    ],
+    "906301": [
+      "tax_ott226190"
+    ],
+    "906305": [
+      "ancestor_otl_000350"
+    ],
+    "986973": [
+      "ancestor_otl_000351"
+    ],
+    "510759": [
+      "ancestor_otl_000352"
+    ],
+    "143004": [
+      "tax_ott800320"
+    ],
+    "510752": [
+      "ancestor_otl_000353"
+    ],
+    "510768": [
+      "ancestor_otl_000354",
+      "ancestor_otl_000355"
+    ],
+    "510767": [
+      "tax_ott662806"
+    ],
+    "510775": [
+      "ancestor_otl_000356"
+    ],
+    "510773": [
+      "tax_ott510762"
+    ],
+    "622916": [
+      "ancestor_otl_000357"
+    ],
+    "124776": [
+      "ancestor_otl_000358"
+    ],
+    "1068214": [
+      "ancestor_otl_000359"
+    ],
+    "615440": [
+      "ancestor_otl_000360"
+    ],
+    "1068202": [
+      "tax_ott729998"
+    ],
+    "615436": [
+      "ancestor_otl_000361"
+    ],
+    "1068218": [
+      "ancestor_otl_000362"
+    ],
+    "94003": [
+      "ancestor_otl_000363"
+    ],
+    "541951": [
+      "ancestor_otl_000364"
+    ],
+    "1070066": [
+      "tax_ott906301"
+    ],
+    "1034204": [
+      "ancestor_otl_000365"
+    ],
+    "397576": [
+      "tax_ott986973"
+    ],
+    "1034198": [
+      "ancestor_otl_000366"
+    ],
+    "1034201": [
+      "tax_ott510752"
+    ],
+    "1034218": [
+      "ancestor_otl_000367"
+    ],
+    "9419": [
+      "tax_ott510768"
+    ],
+    "541948": [
+      "ancestor_otl_000368"
+    ],
+    "307132": [
+      "tax_ott124776",
+      "ancestor_otl_000373"
+    ],
+    "217241": [
+      "tax_ott1068202",
+      "ancestor_otl_000374"
+    ],
+    "61869": [
+      "tax_ott1068218",
+      "ancestor_otl_000375",
+      "ancestor_otl_000376"
+    ],
+    "31968": [
+      "ancestor_otl_000377",
+      "tax_ott1034204"
+    ],
+    "6790": [
+      "ancestor_otl_000378",
+      "tax_ott1034198",
+      "ancestor_otl_000379",
+      "ancestor_otl_000381",
+      "ancestor_otl_000382",
+      "ancestor_otl_000395"
+    ],
+    "238434": [
+      "ancestor_otl_000380"
+    ],
+    "238431": [
+      "ancestor_otl_000383",
+      "ancestor_otl_000385"
+    ],
+    "456414": [
+      "ancestor_otl_000384"
+    ],
+    "1039975": [
+      "ancestor_otl_000386"
+    ],
+    "9379": [
+      "ancestor_otl_000387",
+      "ancestor_otl_000388",
+      "ancestor_otl_000390",
+      "ancestor_otl_000391",
+      "ancestor_otl_000392"
+    ],
+    "289151": [
+      "ancestor_otl_000389"
+    ],
+    "6794": [
+      "ancestor_otl_000393",
+      "ancestor_otl_000394"
+    ],
+    "813034": [
+      "ancestor_otl_000396"
+    ],
+    "20425": [
+      "ancestor_otl_000397",
+      "ancestor_otl_000398",
+      "ancestor_otl_000399"
+    ],
+    "15293": [
+      "ancestor_otl_000400",
+      "ancestor_otl_000401",
+      "ancestor_otl_000402",
+      "ancestor_otl_000403"
+    ],
+    "574742": [
+      "ancestor_otl_000404"
+    ],
+    "754606": [
+      "ancestor_otl_000405"
+    ],
+    "10730": [
+      "ancestor_otl_000406"
+    ],
+    "574724": [
+      "tax_ott238431"
+    ],
+    "178247": [
+      "ancestor_otl_000408"
+    ],
+    "752563": [
+      "ancestor_otl_000409"
+    ],
+    "80402": [
+      "ancestor_otl_000410"
+    ],
+    "4697": [
+      "ancestor_otl_000411",
+      "ancestor_otl_000416",
+      "ancestor_otl_000429",
+      "ancestor_otl_000433",
+      "ancestor_otl_000439",
+      "tax_ott949676",
+      "ancestor_otl_000446",
+      "ancestor_otl_000475",
+      "tax_ott886829",
+      "ancestor_otl_000578"
+    ],
+    "67323": [
+      "ancestor_otl_000412"
+    ],
+    "923113": [
+      "ancestor_otl_000413"
+    ],
+    "923115": [
+      "ancestor_otl_000414"
+    ],
+    "693052": [
+      "ancestor_otl_000415"
+    ],
+    "949676": [
+      "tax_ott813034"
+    ],
+    "949684": [
+      "ancestor_otl_000417"
+    ],
+    "167828": [
+      "ancestor_otl_000418"
+    ],
+    "4709": [
+      "ancestor_otl_000419",
+      "ancestor_otl_000422",
+      "ancestor_otl_000426",
+      "ancestor_otl_000427",
+      "ancestor_otl_000428"
+    ],
+    "656961": [
+      "ancestor_otl_000420"
+    ],
+    "1088408": [
+      "ancestor_otl_000421"
+    ],
+    "397142": [
+      "ancestor_otl_000423"
+    ],
+    "397141": [
+      "ancestor_otl_000424"
+    ],
+    "306281": [
+      "ancestor_otl_000425"
+    ],
+    "923109": [
+      "ancestor_otl_000430"
+    ],
+    "923112": [
+      "ancestor_otl_000431"
+    ],
+    "693048": [
+      "ancestor_otl_000432"
+    ],
+    "901933": [
+      "tax_ott178247"
+    ],
+    "348043": [
+      "ancestor_otl_000434"
+    ],
+    "348040": [
+      "tax_ott923113"
+    ],
+    "348029": [
+      "ancestor_otl_000435"
+    ],
+    "203417": [
+      "ancestor_otl_000436",
+      "ancestor_otl_000437"
+    ],
+    "872571": [
+      "ancestor_otl_000438"
+    ],
+    "872562": [
+      "ancestor_otl_000440"
+    ],
+    "872565": [
+      "ancestor_otl_000441"
+    ],
+    "827257": [
+      "ancestor_otl_000442"
+    ],
+    "231602": [
+      "ancestor_otl_000443",
+      "ancestor_otl_000444",
+      "tax_ott397142"
+    ],
+    "231606": [
+      "tax_ott656961"
+    ],
+    "445986": [
+      "ancestor_otl_000445"
+    ],
+    "10732": [
+      "ancestor_otl_000447",
+      "ancestor_otl_000448",
+      "ancestor_otl_000449",
+      "ancestor_otl_000452",
+      "ancestor_otl_000453",
+      "tax_ott872562",
+      "ancestor_otl_000474"
+    ],
+    "872567": [
+      "tax_ott923109"
+    ],
+    "872577": [
+      "ancestor_otl_000450"
+    ],
+    "300426": [
+      "ancestor_otl_000451",
+      "tax_ott348040"
+    ],
+    "872573": [
+      "ancestor_otl_000454"
+    ],
+    "872566": [
+      "ancestor_otl_000455"
+    ],
+    "297458": [
+      "ancestor_otl_000456"
+    ],
+    "698422": [
+      "ancestor_otl_000457"
+    ],
+    "22069": [
+      "tax_ott231602"
+    ],
+    "22064": [
+      "ancestor_otl_000458",
+      "ancestor_otl_000461",
+      "ancestor_otl_000462",
+      "ancestor_otl_000463",
+      "ancestor_otl_000464",
+      "ancestor_otl_000473"
+    ],
+    "1040694": [
+      "ancestor_otl_000459"
+    ],
+    "1040699": [
+      "ancestor_otl_000460"
+    ],
+    "749626": [
+      "tax_ott10732"
+    ],
+    "95364": [
+      "tax_ott872567",
+      "ancestor_otl_000465",
+      "tax_ott872577",
+      "ancestor_otl_000467",
+      "tax_ott872573",
+      "ancestor_otl_000472"
+    ],
+    "749640": [
+      "ancestor_otl_000466"
+    ],
+    "749638": [
+      "ancestor_otl_000468"
+    ],
+    "749644": [
+      "ancestor_otl_000469"
+    ],
+    "749643": [
+      "ancestor_otl_000470"
+    ],
+    "95367": [
+      "ancestor_otl_000471"
+    ],
+    "247333": [
+      "tax_ott698422"
+    ],
+    "247341": [
+      "ancestor_otl_000476"
+    ],
+    "47497": [
+      "tax_ott1040694",
+      "ancestor_otl_000484",
+      "ancestor_otl_000487",
+      "ancestor_otl_000488",
+      "ancestor_otl_000489",
+      "ancestor_otl_000490",
+      "ancestor_otl_000494",
+      "tax_ott313163",
+      "ancestor_otl_000508",
+      "ancestor_otl_000509",
+      "tax_ott247331",
+      "ancestor_otl_000510",
+      "ancestor_otl_000511",
+      "tax_ott837601",
+      "ancestor_otl_000512"
+    ],
+    "684074": [
+      "ancestor_otl_000477",
+      "ancestor_otl_000481",
+      "tax_ott95364"
+    ],
+    "684073": [
+      "ancestor_otl_000478"
+    ],
+    "821953": [
+      "ancestor_otl_000479"
+    ],
+    "821959": [
+      "ancestor_otl_000480"
+    ],
+    "313163": [
+      "ancestor_otl_000482"
+    ],
+    "837603": [
+      "ancestor_otl_000483"
+    ],
+    "247331": [
+      "ancestor_otl_000485",
+      "tax_ott749644",
+      "ancestor_otl_000486"
+    ],
+    "837601": [
+      "ancestor_otl_000491"
+    ],
+    "621163": [
+      "ancestor_otl_000492"
+    ],
+    "110766": [
+      "ancestor_otl_000493"
+    ],
+    "775766": [
+      "ancestor_otl_000495"
+    ],
+    "609054": [
+      "ancestor_otl_000496"
+    ],
+    "297455": [
+      "ancestor_otl_000497",
+      "ancestor_otl_000501",
+      "ancestor_otl_000503",
+      "ancestor_otl_000504"
+    ],
+    "821964": [
+      "ancestor_otl_000498"
+    ],
+    "419501": [
+      "ancestor_otl_000499",
+      "ancestor_otl_000500"
+    ],
+    "315465": [
+      "ancestor_otl_000502",
+      "tax_ott247333"
+    ],
+    "77889": [
+      "ancestor_otl_000505",
+      "ancestor_otl_000507"
+    ],
+    "821973": [
+      "tax_ott684074"
+    ],
+    "821952": [
+      "ancestor_otl_000506"
+    ],
+    "685113": [
+      "tax_ott821953"
+    ],
+    "770319": [
+      "ancestor_otl_000513"
+    ],
+    "827263": [
+      "ancestor_otl_000514"
+    ],
+    "803645": [
+      "ancestor_otl_000515"
+    ],
+    "418480": [
+      "ancestor_otl_000516"
+    ],
+    "6940": [
+      "ancestor_otl_000517",
+      "tax_ott821964",
+      "ancestor_otl_000526",
+      "ancestor_otl_000536",
+      "ancestor_otl_000574"
+    ],
+    "42311": [
+      "ancestor_otl_000518"
+    ],
+    "768514": [
+      "tax_ott775766"
+    ],
+    "768510": [
+      "ancestor_otl_000519"
+    ],
+    "827269": [
+      "ancestor_otl_000520"
+    ],
+    "383901": [
+      "ancestor_otl_000521",
+      "ancestor_otl_000522",
+      "ancestor_otl_000524"
+    ],
+    "383900": [
+      "tax_ott315465"
+    ],
+    "397157": [
+      "ancestor_otl_000523"
+    ],
+    "397140": [
+      "tax_ott821973"
+    ],
+    "397138": [
+      "ancestor_otl_000525"
+    ],
+    "768511": [
+      "ancestor_otl_000527"
+    ],
+    "768507": [
+      "ancestor_otl_000528"
+    ],
+    "373464": [
+      "ancestor_otl_000529"
+    ],
+    "194346": [
+      "ancestor_otl_000530"
+    ],
+    "5681": [
+      "ancestor_otl_000531"
+    ],
+    "768502": [
+      "tax_ott803645"
+    ],
+    "445403": [
+      "ancestor_otl_000532"
+    ],
+    "220532": [
+      "ancestor_otl_000533"
+    ],
+    "126631": [
+      "tax_ott768514",
+      "ancestor_otl_000534"
+    ],
+    "45845": [
+      "ancestor_otl_000535"
+    ],
+    "42314": [
+      "ancestor_otl_000537"
+    ],
+    "532117": [
+      "tax_ott383901"
+    ],
+    "19397": [
+      "ancestor_otl_000538",
+      "ancestor_otl_000543",
+      "ancestor_otl_000573"
+    ],
+    "42324": [
+      "tax_ott397157"
+    ],
+    "42322": [
+      "ancestor_otl_000539"
+    ],
+    "371429": [
+      "ancestor_otl_000540"
+    ],
+    "42318": [
+      "ancestor_otl_000541"
+    ],
+    "563154": [
+      "ancestor_otl_000542"
+    ],
+    "563166": [
+      "tax_ott768511"
+    ],
+    "54737": [
+      "ancestor_otl_000544",
+      "ancestor_otl_000545",
+      "ancestor_otl_000546",
+      "tax_ott42314",
+      "ancestor_otl_000557",
+      "ancestor_otl_000564",
+      "tax_ott862641",
+      "ancestor_otl_000571",
+      "ancestor_otl_000572"
+    ],
+    "563165": [
+      "ancestor_otl_000547"
+    ],
+    "862641": [
+      "tax_ott768502"
+    ],
+    "198595": [
+      "ancestor_otl_000548"
+    ],
+    "570215": [
+      "ancestor_otl_000549"
+    ],
+    "86183": [
+      "ancestor_otl_000550"
+    ],
+    "86182": [
+      "ancestor_otl_000551"
+    ],
+    "86166": [
+      "ancestor_otl_000552"
+    ],
+    "86162": [
+      "tax_ott532117",
+      "ancestor_otl_000556"
+    ],
+    "42307": [
+      "ancestor_otl_000553"
+    ],
+    "86161": [
+      "tax_ott42324"
+    ],
+    "752759": [
+      "ancestor_otl_000554"
+    ],
+    "752758": [
+      "tax_ott42322"
+    ],
+    "626920": [
+      "ancestor_otl_000555"
+    ],
+    "886829": [
+      "ancestor_otl_000558"
+    ],
+    "442049": [
+      "ancestor_otl_000559",
+      "ancestor_otl_000561"
+    ],
+    "507549": [
+      "ancestor_otl_000560"
+    ],
+    "507545": [
+      "ancestor_otl_000562"
+    ],
+    "886828": [
+      "ancestor_otl_000563"
+    ],
+    "507553": [
+      "tax_ott563166",
+      "ancestor_otl_000566"
+    ],
+    "752746": [
+      "ancestor_otl_000565"
+    ],
+    "774314": [
+      "ancestor_otl_000567"
+    ],
+    "86170": [
+      "ancestor_otl_000568",
+      "tax_ott42307"
+    ],
+    "86169": [
+      "tax_ott86183"
+    ],
+    "1033549": [
+      "ancestor_otl_000569"
+    ],
+    "1033548": [
+      "ancestor_otl_000570"
+    ],
+    "660447": [
+      "tax_ott86162"
+    ],
+    "563159": [
+      "tax_ott752759"
+    ],
+    "827259": [
+      "ancestor_otl_000575"
+    ],
+    "44565": [
+      "tax_ott507549"
+    ],
+    "588292": [
+      "tax_ott507545"
+    ],
+    "644245": [
+      "ancestor_otl_000576"
+    ],
+    "644247": [
+      "ancestor_otl_000577"
+    ],
+    "644249": [
+      "tax_ott507553"
+    ],
+    "644252": [
+      "tax_ott752746"
+    ],
+    "222362": [
+      "tax_ott86170",
+      "ancestor_otl_000580",
+      "ancestor_otl_000581",
+      "tax_ott1033549",
+      "ancestor_otl_000582"
+    ],
+    "222367": [
+      "ancestor_otl_000583"
+    ],
+    "292504": [
+      "ancestor_otl_000584"
+    ],
+    "733072": [
+      "tax_ott588292"
+    ],
+    "222358": [
+      "tax_ott644245"
+    ],
+    "3285": [
+      "ancestor_otl_000585",
+      "ancestor_otl_000590"
+    ],
+    "796660": [
+      "ancestor_otl_000586"
+    ],
+    "796658": [
+      "ancestor_otl_000587"
+    ],
+    "805540": [
+      "ancestor_otl_000588"
+    ],
+    "796668": [
+      "ancestor_otl_000589"
+    ],
+    "796664": [
+      "ancestor_otl_000591"
+    ],
+    "392223": [
+      "ancestor_otl_000592"
+    ],
+    "5334778": [
+      "ancestor_otl_000593"
+    ],
+    "226178": [
+      "tax_ott222362"
+    ],
+    "226189": [
+      "ancestor_otl_000594"
+    ],
+    "226181": [
+      "tax_ott292504"
+    ],
+    "835324": [
+      "ancestor_otl_000595"
+    ],
+    "835323": [
+      "ancestor_otl_000596"
+    ],
+    "835321": [
+      "ancestor_otl_000597"
+    ],
+    "226183": [
+      "tax_ott796660"
+    ],
+    "72667": [
+      "ancestor_otl_000598",
+      "ancestor_otl_000606"
+    ],
+    "541928": [
+      "ancestor_otl_000599"
+    ],
+    "541927": [
+      "ancestor_otl_000600"
+    ],
+    "106258": [
+      "ancestor_otl_000601"
+    ],
+    "541936": [
+      "ancestor_otl_000602"
+    ],
+    "541933": [
+      "ancestor_otl_000603"
+    ],
+    "541924": [
+      "ancestor_otl_000604"
+    ],
+    "226176": [
+      "tax_ott226178"
+    ],
+    "90404": [
+      "ancestor_otl_000605"
+    ],
+    "347650": [
+      "tax_ott835324"
+    ],
+    "347642": [
+      "ancestor_otl_000607"
+    ],
+    "702190": [
+      "ancestor_otl_000608"
+    ],
+    "54168": [
+      "ancestor_otl_000609"
+    ],
+    "3616708": [
+      "ancestor_otl_000610"
+    ],
+    "82081": [
+      "ancestor_otl_000611",
+      "ancestor_otl_000614"
+    ],
+    "561087": [
+      "tax_ott541928"
+    ],
+    "561106": [
+      "ancestor_otl_000612"
+    ],
+    "561103": [
+      "tax_ott541936"
+    ],
+    "561100": [
+      "ancestor_otl_000613"
+    ],
+    "746703": [
+      "ancestor_otl_000615"
+    ],
+    "796672": [
+      "ancestor_otl_000616",
+      "ancestor_otl_000617",
+      "ancestor_otl_000618"
+    ],
+    "796671": [
+      "tax_ott347650"
+    ],
+    "273244": [
+      "ancestor_otl_000619"
+    ],
+    "495017": [
+      "ancestor_otl_000620"
+    ],
+    "490538": [
+      "ancestor_otl_000621"
+    ],
+    "490533": [
+      "tax_ott561087"
+    ],
+    "847766": [
+      "ancestor_otl_000622"
+    ],
+    "495016": [
+      "ancestor_otl_000623"
+    ],
+    "273233": [
+      "ancestor_otl_000624"
+    ],
+    "527342": [
+      "ancestor_otl_000625",
+      "ancestor_otl_000626"
+    ],
+    "527308": [
+      "ancestor_otl_000627"
+    ],
+    "273225": [
+      "tax_ott796672"
+    ],
+    "495015": [
+      "ancestor_otl_000628"
+    ],
+    "495018": [
+      "ancestor_otl_000629"
+    ],
+    "847764": [
+      "ancestor_otl_000630"
+    ],
+    "6520513": [
+      "ancestor_otl_000631"
+    ],
+    "683263": [
+      "ancestor_otl_000635"
+    ],
+    "597239": [
+      "ancestor_otl_000636"
+    ],
+    "42481": [
+      "tax_ott273233",
+      "ancestor_otl_000641",
+      "ancestor_otl_000645",
+      "ancestor_otl_000646",
+      "ancestor_otl_000647",
+      "ancestor_otl_000648",
+      "ancestor_otl_000649",
+      "ancestor_otl_000650",
+      "ancestor_otl_000651",
+      "ancestor_otl_000652"
+    ],
+    "897696": [
+      "ancestor_otl_000637"
+    ],
+    "398453": [
+      "ancestor_otl_000638",
+      "ancestor_otl_000639"
+    ],
+    "7068051": [
+      "ancestor_otl_000640"
+    ],
+    "42493": [
+      "ancestor_otl_000642",
+      "ancestor_otl_000643",
+      "ancestor_otl_000644"
+    ],
+    "196582": [
+      "ancestor_otl_000653"
+    ],
+    "34417": [
+      "ancestor_otl_000654",
+      "ancestor_otl_000655"
+    ],
+    "6735": [
+      "ancestor_otl_000656",
+      "tax_ott597239",
+      "ancestor_otl_000663",
+      "ancestor_otl_000664",
+      "ancestor_otl_000674"
+    ],
+    "835328": [
+      "ancestor_otl_000657"
+    ],
+    "835327": [
+      "ancestor_otl_000658"
+    ],
+    "323250": [
+      "ancestor_otl_000659"
+    ],
+    "327624": [
+      "tax_ott897696"
+    ],
+    "327630": [
+      "ancestor_otl_000660"
+    ],
+    "327628": [
+      "ancestor_otl_000661"
+    ],
+    "461135": [
+      "tax_ott42493"
+    ],
+    "277679": [
+      "ancestor_otl_000662"
+    ],
+    "919171": [
+      "tax_ott835328"
+    ],
+    "762047": [
+      "ancestor_otl_000665"
+    ],
+    "84809": [
+      "ancestor_otl_000666",
+      "tax_ott327624",
+      "ancestor_otl_000667",
+      "ancestor_otl_000668"
+    ],
+    "79410": [
+      "ancestor_otl_000669"
+    ],
+    "608046": [
+      "ancestor_otl_000670"
+    ],
+    "29033": [
+      "ancestor_otl_000671"
+    ],
+    "16069": [
+      "ancestor_otl_000672"
+    ],
+    "277697": [
+      "ancestor_otl_000673"
+    ],
+    "16033": [
+      "ancestor_otl_000675"
+    ],
+    "229558": [
+      "ancestor_otl_000676"
+    ],
+    "16038": [
+      "tax_ott919171"
+    ],
+    "16047": [
+      "ancestor_otl_000677"
+    ],
+    "344064": [
+      "ancestor_otl_000678"
+    ],
+    "962377": [
+      "ancestor_otl_000679"
+    ],
+    "962391": [
+      "ancestor_otl_000680"
+    ],
+    "344066": [
+      "ancestor_otl_000681"
+    ],
+    "79623": [
+      "ancestor_otl_000682",
+      "tax_ott16038"
+    ],
+    "962396": [
+      "ancestor_otl_000683"
+    ],
+    "962395": [
+      "ancestor_otl_000684"
+    ],
+    "244265": [
+      "tax_ott962377"
+    ]
+  }
+}

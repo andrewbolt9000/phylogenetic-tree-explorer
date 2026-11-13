@@ -3,7 +3,15 @@
   "title": "Phylogenetic Hypothesis Schema",
   "description": "Defines a rooted phylogenetic tree representing a published evolutionary hypothesis. Terminal nodes reference taxa from the taxonomy; internal nodes are hypothesis-specific ancestors.",
   "type": "object",
-  "required": ["hypothesisId", "hypothesisName", "source", "rootNodeId", "terminalIdPrefix", "internalIdPrefix", "nodes"],
+  "required": [
+    "hypothesisId",
+    "hypothesisName",
+    "source",
+    "rootNodeId",
+    "terminalIdPrefix",
+    "internalIdPrefix",
+    "nodes"
+  ],
   "properties": {
     "hypothesisId": {
       "type": "string",
@@ -24,7 +32,9 @@
       "properties": {
         "authors": {
           "type": "array",
-          "items": { "type": "string" },
+          "items": {
+            "type": "string"
+          },
           "description": "List of authors."
         },
         "year": {
@@ -59,7 +69,12 @@
       "description": "Array of all nodes in the tree (terminal and internal). Must form a valid rooted tree.",
       "items": {
         "type": "object",
-        "required": ["id", "type", "parentId", "children"],
+        "required": [
+          "id",
+          "type",
+          "parentId",
+          "children"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -67,24 +82,50 @@
           },
           "type": {
             "type": "string",
-            "enum": ["terminal", "internal"],
+            "enum": [
+              "terminal",
+              "internal"
+            ],
             "description": "Node type: 'terminal' for taxon reference, 'internal' for ancestor."
           },
           "parentId": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "ID of parent node. Null for root node only. All non-root nodes must have a parent."
           },
           "children": {
             "type": "array",
-            "items": { "type": "string" },
-            "description": "Array of child node IDs. Internal nodes must have at least 2 children (binary or polytomous). Terminals have empty array."
+            "items": {
+              "type": "string"
+            },
+            "description": "Internal nodes require at least 1 child; terminal nodes require an empty array."
           },
           "taxonId": {
             "type": "string",
-            "description": "For terminal nodes only: the taxonomic ID this node represents (must match a taxon in taxonomy). Internal nodes do not have this field."
+            "description": "Taxonomic ID this node represents. Required for terminal nodes. Optional for internal nodes (e.g., when an internal node has been designated as an animal taxon). Must match a taxon in taxonomy when present."
           }
         },
-        "additionalProperties": false
+        "additionalProperties": false,
+        "allOf": [
+          {
+            "if": {
+              "properties": {
+                "type": {
+                  "const": "terminal"
+                }
+              }
+            },
+            "then": {
+              "properties": {
+                "children": {
+                  "maxItems": 0
+                }
+              }
+            }
+          }
+        ]
       },
       "minItems": 1
     }

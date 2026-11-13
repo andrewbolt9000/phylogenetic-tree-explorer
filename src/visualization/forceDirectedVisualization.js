@@ -56,6 +56,11 @@ class ForceDirectedVisualization {
     this.nodeCircles = null;
     this.labelElements = null;
     this.scientificLabelElements = null;
+    this.commonNameBackgrounds = null;  // D3 selection for common name background rects
+    this.scientificNameBackgrounds = null;  // D3 selection for scientific name background rects
+    this.dateBackgrounds = null;  // D3 selection for date label background rects
+    this.ancestralLabelBackgrounds = null;  // D3 selection for ancestral label background rects
+    this.rootLabelBackground = null;  // D3 selection for root label background rect
     this.zoom = null;
 
     // Current force parameters
@@ -100,8 +105,14 @@ class ForceDirectedVisualization {
     this.hoverHighlightSize = 15;
     this.hoverHighlightXOffset = 0;
     this.hoverHighlightYOffset = 0;
+    this.hoverHighlightOpacity = 0.7;
     this.hoverHighlightCircle = null;  // D3 selection for hover highlight element
+    this.hoverHighlightLayer = null;   // D3 selection for hover highlight group
     this.currentHoveredNodeId = null;
+    this._hoveredNodeGroup = null;
+
+    // Text background settings
+    this.textBackgroundYOffset = 0;  // Y offset for text backgrounds in pixels
 
     // Silhouette shadow settings
     this.silhouetteShadowEnabled = true;
@@ -134,6 +145,9 @@ class ForceDirectedVisualization {
 
     // Text layer for guaranteed layering
     this.textLayer = null;  // D3 selection for dedicated text layer
+    this.textBackgroundsLayer = null;  // D3 selection for text background rectangles
+    this.textBackgroundHeight = 1.2;   // Multiplier for text background rectangle height
+    this.foregroundLayer = null;  // Foreground overlay for hovered node and labels
 
     // Topology-aware repulsion
     this.graphDistances = null;  // Precomputed shortest-path distances
@@ -229,11 +243,35 @@ class ForceDirectedVisualization {
     this._renderLinks();
     this._renderNodes();
 
+    // Create hover highlight layer (positioned between nodes and text)
+    // This allows the hover highlight to be behind the text layer while above other nodes
+    this.hoverHighlightLayer = this.g.append('g')
+      .attr('class', 'hover-highlight-layer');
+
+    // Create hover highlight circle in its own layer
+    this.hoverHighlightCircle = this.hoverHighlightLayer.append('circle')
+      .attr('class', 'hover-highlight')
+      .attr('r', this.hoverHighlightSize)
+      .attr('fill', '#ffffff')
+      .attr('stroke', '#000000')
+      .attr('stroke-width', 2)
+      .attr('opacity', 0)
+      .attr('pointer-events', 'none');
+
     // Create text layer as the FINAL CHILD of the viewport group.
     // It inherits the viewport's zoom/pan transform automatically.
     // This eliminates the need for separate transform synchronization.
     this.textLayer = this.g.append('g')
       .attr('class', 'text-layer');
+
+    // Create text-backgrounds group as first child of text layer.
+    // SVG renders earlier elements behind later elements, so backgrounds will appear behind text.
+    this.textBackgroundsLayer = this.textLayer.append('g')
+      .attr('class', 'text-backgrounds');
+
+    // Foreground overlay for the complete hovered node and its labels.
+    this.foregroundLayer = this.g.append('g')
+      .attr('class', 'foreground-overlay');
 
     // Now render all text elements into the text layer
     this._renderLabels();
@@ -318,6 +356,27 @@ class ForceDirectedVisualization {
       .attr('offset', d => d.offset)
       .attr('stop-color', d => d.color)
       .attr('stop-opacity', d => d.opacity);
+
+    // Create horizontal linear gradient for text backgrounds
+    // Gradient ID: textBackgroundGradient
+    // White center at 50% opacity, fading to transparent at both horizontal edges
+    defs.append('linearGradient')
+      .attr('id', 'textBackgroundGradient')
+      .attr('x1', '0%')
+      .attr('y1', '0%')
+      .attr('x2', '100%')
+      .attr('y2', '0%')  // Horizontal gradient only (x-axis)
+      .selectAll('stop')
+      .data([
+        { offset: '0%', color: '#ffffff', opacity: 0 },
+        { offset: '50%', color: '#c6c6c6', opacity: 0.9 },
+        { offset: '100%', color: '#ffffff', opacity: 0 }
+      ])
+      .enter()
+      .append('stop')
+      .attr('offset', d => d.offset)
+      .attr('stop-color', d => d.color)
+      .attr('stop-opacity', d => d.opacity);
   }
 
   /**
@@ -361,7 +420,7 @@ class ForceDirectedVisualization {
       .append('circle')
       .attr('class', 'node-marker')
       .attr('r', d => d.type === 'terminal' ? 6 : 4)
-      .attr('fill', d => d.type === 'terminal' ? '#2E86AB' : '#A23B72')
+      .attr('fill', d => d.type === 'terminal' ? '#1d81b0' : '#a0326d')
       .attr('opacity', 0.8)
       .attr('stroke', '#fff')
       .attr('stroke-width', 1.5)
@@ -373,39 +432,50 @@ class ForceDirectedVisualization {
     // Add drag behavior to the entire node group
     nodeGroups.call(this._addDragBehavior.bind(this));
 
-    // Create hover highlight circle
-    this.hoverHighlightCircle = this.g.insert('circle', ':first-child')
-      .attr('class', 'hover-highlight')
-      .attr('r', this.hoverHighlightSize)
-      .attr('fill', 'url(#hoverHighlightGradient)')
-      .attr('opacity', 0)
-      .attr('pointer-events', 'none');
-
-    // Add hover event handling for nodes
+    // Promote the complete hovered node as one foreground unit.
     this.nodeCircles
       .on('mouseenter', (event, d) => {
-        // Only show hover highlight for terminal (leaf) nodes
+        if (this.currentHoveredNodeId !== null &&
+          this.currentHoveredNodeId !== d.id) {
+          this._restoreHoveredNodeFromForeground();
+        }
+
+        this.currentHoveredNodeId = d.id;
+        d3.select(event.target).attr('opacity', 0.8);
+
+        const hoveredNodeGroup = d3.select(event.currentTarget.parentNode);
+        this._moveNodeTextToForeground(d.id, hoveredNodeGroup);
+
+        // The highlight sits above ordinary nodes but behind the promoted node.
+        this.hoverHighlightLayer.raise();
+        this.foregroundLayer.raise();
+
+        this.hoverHighlightCircle
+          .interrupt();
+
         if (d.type === 'terminal') {
-          this.currentHoveredNodeId = d.id;
-          d3.select(event.target).attr('opacity', 0.8);
-          // Position and show hover highlight
           this.hoverHighlightCircle
             .attr('cx', d.x + this.hoverHighlightXOffset)
             .attr('cy', d.y + this.hoverHighlightYOffset)
             .transition()
             .duration(100)
-            .attr('opacity', 0.2);
+            .attr('opacity', this.hoverHighlightOpacity);
+        } else {
+          this.hoverHighlightCircle
+            .attr('opacity', 0);
         }
       })
       .on('mouseleave', (event, d) => {
-        if (d.type === 'terminal') {
+        d3.select(event.target).attr('opacity', 0.6);
+
+        if (this.currentHoveredNodeId === d.id) {
           this.currentHoveredNodeId = null;
-          d3.select(event.target).attr('opacity', 0.6);
-          // Hide hover highlight
           this.hoverHighlightCircle
+            .interrupt()
             .transition()
             .duration(100)
             .attr('opacity', 0);
+          this._restoreHoveredNodeFromForeground();
         }
       });
   }
@@ -417,12 +487,17 @@ class ForceDirectedVisualization {
    * @private
    */
   _renderSilhouettes(nodeGroups) {
-    // Render silhouettes only for terminal nodes that have them
+    // Render silhouettes for any node that has them (terminal or internal with taxonId)
     let silhouetteCount = 0;
     nodeGroups.each((d, i, nodes) => {
-      if (d.type === 'terminal' && d.silhouetteFilename) {
+      if (d.silhouetteFilename || d.silhouetteUrl) {
         silhouetteCount++;
         const group = d3.select(nodes[i]);
+
+        // Determine the image URL to use (prefer silhouetteUrl over filename)
+        const imageUrl = d.silhouetteUrl 
+          ? d.silhouetteUrl 
+          : `./assets/silhouettes/${d.silhouetteFilename}`;
 
         // Create a group for silhouette that will contain an image element
         // Base size is 5x the node circle, adjusted by silhouetteSizePercent
@@ -444,15 +519,15 @@ class ForceDirectedVisualization {
             .attr('width', silhouetteSize)
             .attr('height', silhouetteSize)
             .attr('preserveAspectRatio', 'xMidYMid meet')
-            .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
+            .attr('href', imageUrl)
             .attr('opacity', this.silhouetteShadowOpacity)
             .attr('pointer-events', 'none')
             .style('filter', 'brightness(0) saturate(100%) invert(60%)')
             .on('load', function () {
-              console.log(`[Silhouette Shadow] Loaded: ${d.silhouetteFilename}`);
+              console.log(`[Silhouette Shadow] Loaded: ${d.silhouetteFilename || d.silhouetteUrl}`);
             })
-            .on('error', function() {
-              console.warn(`[Silhouette Shadow] Failed to load: ${d.silhouetteFilename}`);
+            .on('error', function () {
+              console.warn(`[Silhouette Shadow] Failed to load: ${d.silhouetteFilename || d.silhouetteUrl}`);
             });
         }
 
@@ -471,20 +546,20 @@ class ForceDirectedVisualization {
           .attr('width', silhouetteSize)
           .attr('height', silhouetteSize)
           .attr('preserveAspectRatio', 'xMidYMid meet')
-          .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
+          .attr('href', imageUrl)
           .attr('opacity', 0.85)
           .attr('pointer-events', 'none')
           .style('mix-blend-mode', 'multiply')
-          .on('load', function() {
-            console.log(`[Silhouette] Loaded: ${d.silhouetteFilename}`);
+          .on('load', function () {
+            console.log(`[Silhouette] Loaded: ${d.silhouetteFilename || d.silhouetteUrl}`);
           })
-          .on('error', function() {
+          .on('error', function () {
             // Silhouette failed to load - just log it, don't crash
-            console.warn(`[Silhouette] Failed to load: ${d.silhouetteFilename}`);
+            console.warn(`[Silhouette] Failed to load: ${d.silhouetteFilename || d.silhouetteUrl}`);
           });
       }
     });
-    console.log(`[Silhouettes] Rendered ${silhouetteCount} silhouettes for terminal nodes`);
+    console.log(`[Silhouettes] Rendered ${silhouetteCount} silhouettes`);
   }
 
   /**
@@ -493,30 +568,78 @@ class ForceDirectedVisualization {
    * @private
    */
   _renderLabels() {
+    // Data for common and scientific names: any node with a taxonId and the corresponding data
+    const commonNameData = this.nodes.filter(d => d.commonName);
+    const scientificNameData = this.nodes.filter(d => d.scientificName);
+
+    // Render common name backgrounds
+    const commonNameBackgrounds = this.textBackgroundsLayer.selectAll('rect.node-label-common-bg')
+      .data(commonNameData, d => d.id)
+      .join(enter => enter.append('rect')
+        .attr('class', 'node-label-common-bg')
+        .attr('data-node-id', d => d.id)
+        .attr('fill', 'url(#textBackgroundGradient)')
+        .attr('pointer-events', 'none'))
+      .attr('x', d => {
+        const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+        return dims.x;
+      })
+      .attr('y', d => {
+        const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+        // Offset by -0.4em for common names (same as text dy) plus Y offset setting
+        return dims.y - (this.fontSizeBase * 0.4) + this.textBackgroundYOffset;
+      })
+      .attr('width', d => this._estimateTextDimensions(d.commonName, this.fontSizeBase).width)
+      .attr('height', d => this._estimateTextDimensions(d.commonName, this.fontSizeBase).height * this.textBackgroundHeight);
+
     // Render common names (top line)
     const commonNameLabels = this.textLayer.selectAll('text.node-label-common')
-      .data(this.nodes.filter(d => d.type === 'terminal' && d.commonName), d => d.id)
+      .data(commonNameData, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-common')
+        .attr('data-node-id', d => d.id)
         .attr('font-family', 'Jost, sans-serif')
         .attr('font-weight', 'normal')
         .attr('text-anchor', 'middle')
         .attr('dy', '-0.4em')  // Offset upward
-        .attr('fill', '#333')
+        .attr('fill', '#000000')
+        .style('filter', 'drop-shadow(0 0 4px #ffffff)')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.commonName);
 
+    // Render scientific name backgrounds
+    const scientificNameBackgrounds = this.textBackgroundsLayer.selectAll('rect.node-label-scientific-bg')
+      .data(scientificNameData, d => d.id)
+      .join(enter => enter.append('rect')
+        .attr('class', 'node-label-scientific-bg')
+        .attr('data-node-id', d => d.id)
+        .attr('fill', 'url(#textBackgroundGradient)')
+        .attr('pointer-events', 'none'))
+      .attr('x', d => {
+        const dims = this._estimateTextDimensions(d.scientificName, this.fontSizeBase);
+        return dims.x;
+      })
+      .attr('y', d => {
+        const dims = this._estimateTextDimensions(d.scientificName, this.fontSizeBase);
+        // Offset by 0.8em for scientific names (same as text dy) plus Y offset setting
+        return dims.y + (this.fontSizeBase * 0.8) + this.textBackgroundYOffset;
+      })
+      .attr('width', d => this._estimateTextDimensions(d.scientificName, this.fontSizeBase).width)
+      .attr('height', d => this._estimateTextDimensions(d.scientificName, this.fontSizeBase).height * this.textBackgroundHeight);
+
     // Render scientific names (bottom line, italic)
     const scientificNameLabels = this.textLayer.selectAll('text.node-label-scientific')
-      .data(this.nodes.filter(d => d.type === 'terminal' && d.scientificName), d => d.id)
+      .data(scientificNameData, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-scientific')
+        .attr('data-node-id', d => d.id)
         .attr('font-family', 'Jost, sans-serif')
         .attr('font-style', 'italic')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.8em')  // Offset downward
-        .attr('fill', '#666')
+        .attr('fill', '#343434')
+        .style('filter', 'drop-shadow(0 0 4px #ffffff)')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.scientificName);
@@ -524,6 +647,8 @@ class ForceDirectedVisualization {
     // Store references for updating font size
     this.labelElements = commonNameLabels;
     this.scientificLabelElements = scientificNameLabels;
+    this.commonNameBackgrounds = commonNameBackgrounds;
+    this.scientificNameBackgrounds = scientificNameBackgrounds;
   }
 
   /**
@@ -560,17 +685,39 @@ class ForceDirectedVisualization {
     // Render date labels using data binding
     const nodesWithDates = this.nodes.filter(d => d.type === 'internal' && datesByNodeId[d.id]);
 
+    // Render date label backgrounds
+    const dateBackgrounds = this.textBackgroundsLayer.selectAll('rect.node-date-label-bg')
+      .data(nodesWithDates, d => d.id)
+      .join(enter => enter.append('rect')
+        .attr('class', 'node-date-label-bg')
+        .attr('data-node-id', d => d.id)
+        .attr('fill', 'url(#textBackgroundGradient)')
+        .attr('pointer-events', 'none'))
+      .attr('x', d => {
+        const dims = this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize);
+        return dims.x;
+      })
+      .attr('y', d => {
+        const dims = this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize);
+        return dims.y + (this.nodeDateFontSize * 1.2) + this.textBackgroundYOffset;
+      })
+      .attr('width', d => this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize).width)
+      .attr('height', d => this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize).height * this.textBackgroundHeight);
+
     this.nodeDateLabels = this.textLayer.selectAll('text.node-date-label')
       .data(nodesWithDates, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-date-label')
+        .attr('data-node-id', d => d.id)
         .attr('font-family', 'Jost, sans-serif')
         .attr('text-anchor', 'middle')
         .attr('dy', '1.2em')
-        .attr('fill', '#999')
+        .attr('fill', '#767676')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.nodeDateFontSize}px`)
       .text(d => datesByNodeId[d.id]);
+
+    this.dateBackgrounds = dateBackgrounds;
   }
 
   /**
@@ -636,8 +783,9 @@ class ForceDirectedVisualization {
 
   _renderAncestralLabels() {
     if (!this.showAncestralLabels || !this.hypothesisData) {
-      // Remove all ancestral labels
+      // Remove all ancestral labels and backgrounds
       this.textLayer.selectAll('text.ancestral-label').remove();
+      this.textBackgroundsLayer.selectAll('rect.ancestral-label-bg').remove();
       return;
     }
 
@@ -658,10 +806,33 @@ class ForceDirectedVisualization {
         const hypothesisNode = hypothesisNodesByNodeId[d.id];
         const label = this._generateAncestralLabel(d.id, hypothesisNode);
         if (label) {
-          ancestralNodesWithLabels.push({...d, label});
+          ancestralNodesWithLabels.push({ ...d, label });
         }
       }
     });
+
+    // Render ancestral label backgrounds
+    const ancestralBackgrounds = this.textBackgroundsLayer.selectAll('rect.ancestral-label-bg')
+      .data(ancestralNodesWithLabels, d => d.id)
+      .join(
+        enter => enter.append('rect')
+          .attr('class', 'ancestral-label-bg')
+          .attr('data-node-id', d => d.id)
+          .attr('fill', 'url(#textBackgroundGradient)')
+          .attr('pointer-events', 'none'),
+        update => update,
+        exit => exit.remove()
+      )
+      .attr('x', d => {
+        const dims = this._estimateTextDimensions(d.label, this.fontSizeBase * 0.85);
+        return dims.x;
+      })
+      .attr('y', d => {
+        const dims = this._estimateTextDimensions(d.label, this.fontSizeBase * 0.85);
+        return dims.y + (this.fontSizeBase * 0.85 * 1.0) + this.textBackgroundYOffset;
+      })
+      .attr('width', d => this._estimateTextDimensions(d.label, this.fontSizeBase * 0.85).width)
+      .attr('height', d => this._estimateTextDimensions(d.label, this.fontSizeBase * 0.85).height * this.textBackgroundHeight);
 
     // Use D3 data binding to render ancestral labels
     this.textLayer.selectAll('text.ancestral-label')
@@ -669,6 +840,7 @@ class ForceDirectedVisualization {
       .join(
         enter => enter.append('text')
           .attr('class', 'ancestral-label')
+          .attr('data-node-id', d => d.id)
           .attr('font-family', 'Jost, sans-serif')
           .attr('text-anchor', 'middle')
           .attr('dy', '1.0em')
@@ -679,6 +851,8 @@ class ForceDirectedVisualization {
       )
       .attr('font-size', `${this.fontSizeBase * 0.85}px`)
       .text(d => d.label);
+
+    this.ancestralLabelBackgrounds = ancestralBackgrounds;
   }
 
   /**
@@ -694,18 +868,41 @@ class ForceDirectedVisualization {
 
     const label = rootVizNode.scientificName || rootVizNode.label || 'Root';
 
+    // Render root label background
+    this.rootLabelBackground = this.textBackgroundsLayer.selectAll('rect.root-label-bg')
+      .data([rootVizNode], d => d.id)
+      .join(enter => enter.append('rect')
+        .attr('class', 'root-label-bg')
+        .attr('data-node-id', d => d.id)
+        .attr('fill', 'url(#textBackgroundGradient)')
+        .attr('pointer-events', 'none'))
+      .attr('x', () => {
+        const dims = this._estimateTextDimensions(label, this.fontSizeBase);
+        return dims.x;
+      })
+      .attr('y', () => {
+        const dims = this._estimateTextDimensions(label, this.fontSizeBase);
+        return dims.y + (this.fontSizeBase * 0.3) + this.textBackgroundYOffset;
+      })
+      .attr('width', () => this._estimateTextDimensions(label, this.fontSizeBase).width)
+      .attr('height', () => this._estimateTextDimensions(label, this.fontSizeBase).height * this.textBackgroundHeight);
+
     this.textLayer.selectAll('text.root-label')
       .data([rootVizNode], d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'root-label')
+        .attr('data-node-id', d => d.id)
         .attr('font-family', 'Jost, sans-serif')
         .attr('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.3em')
-        .attr('fill', '#222')
+        .attr('fill', '#320384')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(label);
+
+    // Store root node reference for updating position in _onTick
+    this.rootNode = rootVizNode;
   }
 
   /**
@@ -718,9 +915,40 @@ class ForceDirectedVisualization {
   }
 
   /**
-   * Add drag behavior to nodes.
+   * Estimate dimensions of a text element for background sizing.
+   * In SVG, text dimensions depend on font, size, and content.
+   * This provides a reasonable estimate for background rectangles.
+   * @param {string} text - The text content
+   * @param {number} fontSize - Font size in pixels
+   * @returns {{width: number, height: number, x: number, y: number}} Dimensions for background rect
    * @private
    */
+  _estimateTextDimensions(text, fontSize) {
+    // Estimate character width based on font size (Jost/sans-serif is roughly 0.5-0.6 of font size)
+    const charWidth = fontSize * 0.55;
+    const textWidth = text.length * charWidth;
+
+    // Text height is approximately 1.2 * fontSize (including ascenders/descenders)
+    const textHeight = fontSize * 1.2;
+
+    // Calculate background padding (small margins around text)
+    const paddingX = 4;
+    const paddingY = 2;
+
+    const bgWidth = textWidth + (paddingX * 2);
+    const bgHeight = textHeight + (paddingY * 2);
+
+    // Position relative to text anchor (middle)
+    const bgX = -bgWidth / 2;
+    const bgY = -bgHeight / 2;
+
+    return {
+      width: bgWidth,
+      height: bgHeight,
+      x: bgX,
+      y: bgY
+    };
+  }
   _addDragBehavior(selection) {
     selection.call(d3.drag()
       .on('start', (event, d) => {
@@ -785,18 +1013,102 @@ class ForceDirectedVisualization {
       if (hoveredNode) {
         this.hoverHighlightCircle
           .attr('cx', hoveredNode.x + this.hoverHighlightXOffset)
-          .attr('cy', hoveredNode.y + this.hoverHighlightYOffset)
-          .attr('fill', '#ffffff')
-          .attr('fill-opacity', 1);
+          .attr('cy', hoveredNode.y + this.hoverHighlightYOffset);
       }
     }
 
     // Update text positions (text layer elements track their corresponding nodes)
     // Text layer inherits viewport zoom/pan transform, but needs individual node coordinates
     if (this.textLayer) {
-      this.textLayer.selectAll('text')
+      this.g.selectAll('text')
         .attr('x', d => d.x || 0)
         .attr('y', d => d.y || 0);
+
+      // Update text background positions
+      // Common name backgrounds
+      if (this.commonNameBackgrounds) {
+        this.commonNameBackgrounds
+          .attr('x', d => {
+            const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+            return (d.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+            return (d.y || 0) + dims.y - (this.fontSizeBase * 0.4);
+          });
+      }
+
+      // Common name backgrounds
+      if (this.commonNameBackgrounds) {
+        this.commonNameBackgrounds
+          .attr('x', d => {
+            const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+            return (d.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const dims = this._estimateTextDimensions(d.commonName, this.fontSizeBase);
+            return (d.y || 0) + dims.y - (this.fontSizeBase * 0.4) + this.textBackgroundYOffset;
+          });
+      }
+
+      // Scientific name backgrounds
+      if (this.scientificNameBackgrounds) {
+        this.scientificNameBackgrounds
+          .attr('x', d => {
+            const dims = this._estimateTextDimensions(d.scientificName, this.fontSizeBase);
+            return (d.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const dims = this._estimateTextDimensions(d.scientificName, this.fontSizeBase);
+            return (d.y || 0) + dims.y + (this.fontSizeBase * 0.8) + this.textBackgroundYOffset;
+          });
+      }
+
+      // Date label backgrounds
+      if (this.dateBackgrounds) {
+        this.dateBackgrounds
+          .attr('x', d => {
+            const dateText = `${this._getDivergenceEstimate(d.id)}Ma`;
+            const dims = this._estimateTextDimensions(dateText, this.nodeDateFontSize);
+            return (d.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const dateText = `${this._getDivergenceEstimate(d.id)}Ma`;
+            const dims = this._estimateTextDimensions(dateText, this.nodeDateFontSize);
+            return (d.y || 0) + dims.y + (this.nodeDateFontSize * 1.2) + this.textBackgroundYOffset;
+          });
+      }
+
+      // Ancestral label backgrounds
+      if (this.ancestralLabelBackgrounds) {
+        this.ancestralLabelBackgrounds
+          .attr('x', d => {
+            const label = d.label;
+            if (!label) return 0;
+            const dims = this._estimateTextDimensions(label, this.fontSizeBase * 0.85);
+            return (d.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const label = d.label;
+            if (!label) return 0;
+            const dims = this._estimateTextDimensions(label, this.fontSizeBase * 0.85);
+            return (d.y || 0) + dims.y + (this.fontSizeBase * 0.85 * 1.0) + this.textBackgroundYOffset;
+          });
+      }
+
+      // Root label background
+      if (this.rootLabelBackground && this.rootNode) {
+        const rootLabel = this.rootNode.scientificName || this.rootNode.label || 'Root';
+        this.rootLabelBackground
+          .attr('x', d => {
+            const dims = this._estimateTextDimensions(rootLabel, this.fontSizeBase);
+            return (this.rootNode.x || 0) + dims.x;
+          })
+          .attr('y', d => {
+            const dims = this._estimateTextDimensions(rootLabel, this.fontSizeBase);
+            return (this.rootNode.y || 0) + dims.y + (this.fontSizeBase * 0.3) + this.textBackgroundYOffset;
+          });
+      }
     }
 
     // Update silhouette-group transforms (size and offset)
@@ -1499,7 +1811,7 @@ class ForceDirectedVisualization {
     // Check that we have the required graph distance data
     if (!this.graphDistances) {
       console.warn('[ForceDirectedVisualization] Cannot enable topology repulsion: no graph distances computed. ' +
-                   'Supply a valid PhyloGraph during construction or via setShowAncestralLabels().');
+        'Supply a valid PhyloGraph during construction or via setShowAncestralLabels().');
       return;
     }
 
@@ -1512,8 +1824,8 @@ class ForceDirectedVisualization {
 
           // Get graph distance between nodes
           const graphDist = (this.graphDistances[a.id] && this.graphDistances[a.id][b.id]) ||
-                           (this.graphDistances[b.id] && this.graphDistances[b.id][a.id]) ||
-                           Infinity;
+            (this.graphDistances[b.id] && this.graphDistances[b.id][a.id]) ||
+            Infinity;
 
           if (graphDist === Infinity) continue;  // Not connected in graph
 
@@ -1749,7 +2061,7 @@ class ForceDirectedVisualization {
         .attr('y1', -range)
         .attr('x2', x)
         .attr('y2', range)
-        .attr('stroke', '#4a9fb5')
+        .attr('stroke', '#45a9c2')
         .attr('stroke-width', lineWidth);
     }
 
@@ -1875,7 +2187,7 @@ class ForceDirectedVisualization {
    * @param {number} size - Radius in pixels
    */
   setHoverHighlightSize(size) {
-    this.hoverHighlightSize = Math.max(5, Math.min(100, Number(size)));
+    this.hoverHighlightSize = Math.max(0, Math.min(200, Number(size)));
     if (this.hoverHighlightCircle) {
       this.hoverHighlightCircle.attr('r', this.hoverHighlightSize);
     }
@@ -1900,9 +2212,36 @@ class ForceDirectedVisualization {
   }
 
   /**
-   * Set silhouette shadow enabled/disabled.
-   * @param {boolean} enabled - Whether to show shadows
+   * Set hover highlight opacity.
+   * @param {number} opacity - Opacity as percentage (0-100)
    */
+  setHoverHighlightOpacity(opacity) {
+    this.hoverHighlightOpacity = Math.max(0, Math.min(100, Number(opacity))) / 100;
+    // Opacity will be applied on next hover
+  }
+
+  /**
+   * Set vertical offset for text backgrounds.
+   * @param {number} offset - Vertical offset in pixels
+   */
+  setTextBackgroundYOffset(offset) {
+    this.textBackgroundYOffset = Number(offset);
+    this._onTick();
+  }
+
+  /**
+   * Set text background rectangle height multiplier.
+   * @param {number} height - Height multiplier (0.5-2.0)
+   */
+  setTextBackgroundHeight(height) {
+    this.textBackgroundHeight = Math.max(0.5, Math.min(2.0, Number(height)));
+    // Backgrounds are updated on next render
+    this._renderLabels();
+    this._renderDateLabels();
+    this._renderAncestralLabels();
+    this._renderRootLabel();
+  }
+
   setSilhouetteShadowEnabled(enabled) {
     this.silhouetteShadowEnabled = Boolean(enabled);
     // Shadows are updated on next tick or re-render
@@ -1982,6 +2321,107 @@ class ForceDirectedVisualization {
     if (this.svg) {
       this.svg.attr('style', `border: 1px solid #ccc; background: ${color};`);
     }
+  }
+
+  /**
+   * Promote a complete node and all its labels into the foreground layer.
+   * Original parent/child positions are recorded for restoration.
+   * @private
+   */
+  _moveNodeTextToForeground(nodeId, nodeGroup) {
+    if (!this.foregroundLayer || !nodeGroup || nodeGroup.empty()) return;
+
+    this._restoreHoveredNodeFromForeground();
+
+    const rememberAndMove = (element, destination) => {
+      const node = element.node();
+      if (!node || node.parentNode === destination.node()) return;
+      node._foregroundPosition = {
+        parent: node.parentNode,
+        index: Array.prototype.indexOf.call(node.parentNode.childNodes, node)
+      };
+      destination.append(() => node);
+    };
+    const rememberAndMoveMany = (elements, destination) => {
+      // Capture every original index before moving any sibling.
+      const nodes = elements.map(element => element.node())
+        .filter(node => node && node.parentNode !== destination.node());
+      nodes.forEach(node => {
+        node._foregroundPosition = {
+          parent: node.parentNode,
+          index: Array.prototype.indexOf.call(node.parentNode.childNodes, node)
+        };
+      });
+      nodes.forEach(node => destination.append(() => node));
+    };
+
+    // Node artwork first: circles, marker, silhouette, and silhouette shadow.
+    rememberAndMove(nodeGroup, this.foregroundLayer);
+    this._hoveredNodeGroup = nodeGroup.node();
+
+    const textSelectors = [
+      `text.node-label-common[data-node-id="${nodeId}"]`,
+      `text.node-label-scientific[data-node-id="${nodeId}"]`,
+      `text.node-date-label[data-node-id="${nodeId}"]`,
+      `text.ancestral-label[data-node-id="${nodeId}"]`,
+      `text.root-label[data-node-id="${nodeId}"]`
+    ];
+    const bgSelectors = [
+      `rect.node-label-common-bg[data-node-id="${nodeId}"]`,
+      `rect.node-label-scientific-bg[data-node-id="${nodeId}"]`,
+      `rect.node-date-label-bg[data-node-id="${nodeId}"]`,
+      `rect.ancestral-label-bg[data-node-id="${nodeId}"]`,
+      `rect.root-label-bg[data-node-id="${nodeId}"]`
+    ];
+
+    // Capture all original sibling positions before moving either collection.
+    const backgrounds = bgSelectors
+      .map(selector => this.g.select(selector))
+      .filter(element => !element.empty());
+    const texts = textSelectors
+      .map(selector => this.g.select(selector))
+      .filter(element => !element.empty());
+
+    // Backgrounds follow the node, then text follows backgrounds.
+    rememberAndMoveMany(backgrounds, this.foregroundLayer);
+    rememberAndMoveMany(texts, this.foregroundLayer);
+  }
+
+  /**
+   * Restore the promoted node and labels to their original DOM positions.
+   * @private
+   */
+  _restoreHoveredNodeFromForeground() {
+    if (!this.foregroundLayer) return;
+
+    const elements = Array.from(this.foregroundLayer.node().children)
+      .filter(node => node._foregroundPosition);
+    const byParent = new Map();
+
+    elements.forEach(node => {
+      const { parent, index } = node._foregroundPosition;
+      if (!parent || !parent.isConnected) return;
+      if (!byParent.has(parent)) byParent.set(parent, []);
+      byParent.get(parent).push({ node, index });
+    });
+
+    byParent.forEach((entries, parent) => {
+      entries.sort((a, b) => a.index - b.index);
+      entries.forEach(({ node, index }) => {
+        parent.insertBefore(node, parent.childNodes[index] || null);
+        delete node._foregroundPosition;
+      });
+    });
+
+    elements.forEach(node => {
+      if (node._foregroundPosition &&
+        (!node._foregroundPosition.parent ||
+          !node._foregroundPosition.parent.isConnected)) {
+        delete node._foregroundPosition;
+      }
+    });
+
+    this._hoveredNodeGroup = null;
   }
 
   /**

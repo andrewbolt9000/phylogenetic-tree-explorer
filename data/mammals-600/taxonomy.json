@@ -1,0 +1,7557 @@
+{
+  "taxonomy": [
+    {
+      "id": "tax_ott42314",
+      "scientificName": "Panthera tigris",
+      "rank": "species",
+      "parent": "tax_ott563154",
+      "extinct": null,
+      "synonyms": [
+        "Felis tigris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42314",
+      "commonName": "Tiger"
+    },
+    {
+      "id": "tax_ott563154",
+      "scientificName": "Panthera",
+      "rank": "genus",
+      "parent": "tax_ott626917",
+      "extinct": null,
+      "synonyms": [
+        "Jaguarius",
+        "Jaguirius",
+        "Leo",
+        "Leonina",
+        "Leoninae",
+        "Pardotigris",
+        "Pardus",
+        "Tigrina",
+        "Tigrinae",
+        "Tigris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott563154"
+    },
+    {
+      "id": "tax_ott626917",
+      "scientificName": "Pantherinae",
+      "rank": "subfamily",
+      "parent": "tax_ott563159",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott626917"
+    },
+    {
+      "id": "tax_ott563159",
+      "scientificName": "Felidae",
+      "rank": "family",
+      "parent": "tax_ott827259",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott563159"
+    },
+    {
+      "id": "tax_ott827259",
+      "scientificName": "Feliformia",
+      "rank": "suborder",
+      "parent": "tax_ott44565",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott827259"
+    },
+    {
+      "id": "tax_ott44565",
+      "scientificName": "Carnivora",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott44565"
+    },
+    {
+      "id": "tax_ott392223",
+      "scientificName": "Laurasiatheria",
+      "rank": "superorder",
+      "parent": "tax_ott5334778",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott392223"
+    },
+    {
+      "id": "tax_ott5334778",
+      "scientificName": "Boreoeutheria",
+      "rank": "no rank",
+      "parent": "tax_ott683263",
+      "extinct": null,
+      "synonyms": [
+        "Boreotheria"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5334778"
+    },
+    {
+      "id": "tax_ott683263",
+      "scientificName": "Eutheria",
+      "rank": "no rank",
+      "parent": "tax_ott229558",
+      "extinct": null,
+      "synonyms": [
+        "Placentalia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott683263"
+    },
+    {
+      "id": "tax_ott229558",
+      "scientificName": "Theria",
+      "rank": "subclass",
+      "parent": "tax_ott244265",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott229558"
+    },
+    {
+      "id": "tax_ott244265",
+      "scientificName": "Mammalia",
+      "rank": "class",
+      "parent": "tax_ott229560",
+      "extinct": null,
+      "synonyms": [
+        "Blaria",
+        "Protobradydae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott244265"
+    },
+    {
+      "id": "tax_ott229560",
+      "scientificName": "Amniota",
+      "rank": "no rank",
+      "parent": "tax_ott229562",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott229560"
+    },
+    {
+      "id": "tax_ott229562",
+      "scientificName": "Tetrapoda",
+      "rank": "superclass",
+      "parent": "tax_ott4940726",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott229562"
+    },
+    {
+      "id": "tax_ott4940726",
+      "scientificName": "Dipnotetrapodomorpha",
+      "rank": "no rank",
+      "parent": "tax_ott458402",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott4940726"
+    },
+    {
+      "id": "tax_ott458402",
+      "scientificName": "Sarcopterygii",
+      "rank": "superclass",
+      "parent": "tax_ott114654",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott458402"
+    },
+    {
+      "id": "tax_ott114654",
+      "scientificName": "Euteleostomi",
+      "rank": "no rank",
+      "parent": "tax_ott114656",
+      "extinct": null,
+      "synonyms": [
+        "Osteichthyes"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott114654"
+    },
+    {
+      "id": "tax_ott114656",
+      "scientificName": "Teleostomi",
+      "rank": "no rank",
+      "parent": "tax_ott278114",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott114656"
+    },
+    {
+      "id": "tax_ott278114",
+      "scientificName": "Gnathostomata",
+      "rank": "superclass",
+      "parent": "tax_ott801601",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott278114"
+    },
+    {
+      "id": "tax_ott801601",
+      "scientificName": "Vertebrata",
+      "rank": "subphylum",
+      "parent": "tax_ott947318",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott801601"
+    },
+    {
+      "id": "tax_ott947318",
+      "scientificName": "Craniata",
+      "rank": "subphylum",
+      "parent": "tax_ott125642",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott947318"
+    },
+    {
+      "id": "tax_ott125642",
+      "scientificName": "Chordata",
+      "rank": "phylum",
+      "parent": "tax_ott147604",
+      "extinct": null,
+      "synonyms": [
+        "Acanthopis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott125642"
+    },
+    {
+      "id": "tax_ott147604",
+      "scientificName": "Deuterostomia",
+      "rank": "no rank",
+      "parent": "tax_ott117569",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott147604"
+    },
+    {
+      "id": "tax_ott117569",
+      "scientificName": "Bilateria",
+      "rank": "no rank",
+      "parent": "tax_ott641038",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott117569"
+    },
+    {
+      "id": "tax_ott641038",
+      "scientificName": "Eumetazoa",
+      "rank": "no rank",
+      "parent": "tax_ott691846",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott641038"
+    },
+    {
+      "id": "tax_ott691846",
+      "scientificName": "Metazoa",
+      "rank": "kingdom",
+      "parent": "tax_ott5246131",
+      "extinct": null,
+      "synonyms": [
+        "Animalia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott691846"
+    },
+    {
+      "id": "tax_ott5246131",
+      "scientificName": "Holozoa",
+      "rank": "no rank",
+      "parent": "tax_ott332573",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5246131"
+    },
+    {
+      "id": "tax_ott332573",
+      "scientificName": "Opisthokonta",
+      "rank": "no rank",
+      "parent": "tax_ott304358",
+      "extinct": null,
+      "synonyms": [
+        "Fungi/Metazoa group",
+        "opisthokonts"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott332573"
+    },
+    {
+      "id": "tax_ott304358",
+      "scientificName": "Eukaryota",
+      "rank": "domain",
+      "parent": "tax_ott93302",
+      "extinct": null,
+      "synonyms": [
+        "D4P07G08",
+        "DH147-EKD10",
+        "DH147-EKD23",
+        "Eucaryotae",
+        "Eukarya",
+        "Eukaryotae",
+        "LG25-05",
+        "NAMAKO-1",
+        "RT5iin25",
+        "SA1-3C06"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott304358"
+    },
+    {
+      "id": "tax_ott93302",
+      "scientificName": "cellular organisms",
+      "rank": "no rank",
+      "parent": "tax_ott805080",
+      "extinct": null,
+      "synonyms": [
+        "biota"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott93302"
+    },
+    {
+      "id": "tax_ott805080",
+      "scientificName": "life",
+      "rank": "no rank",
+      "parent": null,
+      "extinct": null,
+      "synonyms": [
+        "all"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott805080"
+    },
+    {
+      "id": "tax_ott42324",
+      "scientificName": "Panthera pardus",
+      "rank": "species",
+      "parent": "tax_ott563154",
+      "extinct": null,
+      "synonyms": [
+        "Felis pardus",
+        "Felis pardus nanopardus",
+        "Leo pardus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42324",
+      "commonName": "Leopard"
+    },
+    {
+      "id": "tax_ott42322",
+      "scientificName": "Panthera onca",
+      "rank": "species",
+      "parent": "tax_ott563154",
+      "extinct": null,
+      "synonyms": [
+        "Felis augustus",
+        "Felis onca",
+        "Felis onca boliviensis",
+        "Felis onca coxi",
+        "Felis onca ucayalae",
+        "Felis veronis",
+        "Panthera augusta",
+        "Panthera onca augusta",
+        "Uncia augusta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42322",
+      "commonName": "Jaguar"
+    },
+    {
+      "id": "tax_ott532117",
+      "scientificName": "Panthera uncia",
+      "rank": "species",
+      "parent": "tax_ott563154",
+      "extinct": null,
+      "synonyms": [
+        "Felis uncia",
+        "Uncia uncia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott532117",
+      "commonName": "Snow leopard"
+    },
+    {
+      "id": "tax_ott752759",
+      "scientificName": "Acinonyx jubatus",
+      "rank": "species",
+      "parent": "tax_ott752758",
+      "extinct": null,
+      "synonyms": [
+        "Acinonyx rex",
+        "Cynaelurus jubatus",
+        "Felis jubata"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott752759",
+      "commonName": "Cheetah"
+    },
+    {
+      "id": "tax_ott752758",
+      "scientificName": "Acinonyx",
+      "rank": "genus",
+      "parent": "tax_ott626920",
+      "extinct": null,
+      "synonyms": [
+        "Acinomyx",
+        "Cinaylurus",
+        "Cynaelurus",
+        "Cynailurus",
+        "Cynofelis",
+        "Guepar",
+        "Gueparda",
+        "Guepardus",
+        "Miracinonyx",
+        "Paracinonyx"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott752758"
+    },
+    {
+      "id": "tax_ott626920",
+      "scientificName": "Acinonychinae",
+      "rank": "subfamily",
+      "parent": "tax_ott563159",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott626920"
+    },
+    {
+      "id": "tax_ott42307",
+      "scientificName": "Puma concolor",
+      "rank": "species",
+      "parent": "tax_ott86161",
+      "extinct": null,
+      "synonyms": [
+        "Felis bituminosa",
+        "Felis californica",
+        "Felis concolor",
+        "Felis couguar",
+        "Felis daggetti",
+        "Felis hawveri",
+        "Felis hippolestes",
+        "Felis improcera",
+        "Felis oregonensis",
+        "Panthera concolor"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42307",
+      "commonName": "Cougar"
+    },
+    {
+      "id": "tax_ott86161",
+      "scientificName": "Puma",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Herpailurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86161"
+    },
+    {
+      "id": "tax_ott626916",
+      "scientificName": "Felinae",
+      "rank": "subfamily",
+      "parent": "tax_ott563159",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott626916"
+    },
+    {
+      "id": "tax_ott247341",
+      "scientificName": "Canis lupus",
+      "rank": "species",
+      "parent": "tax_ott372706",
+      "extinct": null,
+      "synonyms": [
+        "Aenocyon milleri",
+        "Canis dingo",
+        "Canis familiaris",
+        "Canis furlongi",
+        "Canis lycaon",
+        "Canis milleri",
+        "Canis nubilus",
+        "Canis occidentalis",
+        "Canis pambasileus",
+        "Canis petrolei",
+        "Canis tundrarum",
+        "Canis variabilis",
+        "Lupus gigas",
+        "Lupus lupus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott247341",
+      "commonName": "Gray wolf"
+    },
+    {
+      "id": "tax_ott372706",
+      "scientificName": "Canis",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Aenocyon",
+        "Alopedon",
+        "Alopsis",
+        "Canix",
+        "Chaon",
+        "Dasycyon",
+        "Dieba",
+        "Dimenia",
+        "Jacalius",
+        "Lupulella",
+        "Lupulus",
+        "Lupus",
+        "Lyciscus",
+        "Mamcanisus",
+        "Neocyon",
+        "Oreocyon",
+        "Oxygonus",
+        "Oxygous",
+        "Sacalius",
+        "Schaeffia",
+        "Simenia",
+        "Thos",
+        "Vulpicanis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott372706"
+    },
+    {
+      "id": "tax_ott770319",
+      "scientificName": "Canidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [
+        "Amphicyon angustidens",
+        "Cynodictis angustidens",
+        "Hesperocyon angustidens",
+        "Pseudocynodictis angustidens"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770319"
+    },
+    {
+      "id": "tax_ott827263",
+      "scientificName": "Caniformia",
+      "rank": "suborder",
+      "parent": "tax_ott44565",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott827263"
+    },
+    {
+      "id": "tax_ott821964",
+      "scientificName": "Vulpes vulpes",
+      "rank": "species",
+      "parent": "tax_ott821970",
+      "extinct": null,
+      "synonyms": [
+        "Canis vulpes",
+        "Vulpes fulvus",
+        "Vulpes palmaria"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821964",
+      "commonName": "Red fox"
+    },
+    {
+      "id": "tax_ott821970",
+      "scientificName": "Vulpes",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Alopex",
+        "Canis alopex",
+        "Cynalopex",
+        "Fennecus",
+        "Leucocyon",
+        "Mamvulpesus",
+        "Megalotis",
+        "Vulpes alopex",
+        "Vulpis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821970"
+    },
+    {
+      "id": "tax_ott775766",
+      "scientificName": "Vulpes lagopus",
+      "rank": "species",
+      "parent": "tax_ott821970",
+      "extinct": null,
+      "synonyms": [
+        "Alopex lagopus",
+        "Canis lagopus",
+        "Leucocyon lagopus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott775766",
+      "commonName": "Arctic fox"
+    },
+    {
+      "id": "tax_ott247331",
+      "scientificName": "Canis latrans",
+      "rank": "species",
+      "parent": "tax_ott372706",
+      "extinct": null,
+      "synonyms": [
+        "Canis andersoni",
+        "Canis caneloensis",
+        "Canis clepticus",
+        "Canis estor",
+        "Canis frustror",
+        "Canis goldmani",
+        "Canis hondurensis",
+        "Canis impavidus",
+        "Canis irvingtonensis",
+        "Canis jamesi",
+        "Canis lestes",
+        "Canis mearnsi",
+        "Canis microdon",
+        "Canis nebrascensis",
+        "Canis ochropus",
+        "Canis orcutti",
+        "Canis pallidus",
+        "Canis peninsulae",
+        "Canis riviveronis",
+        "Canis vigilis",
+        "Lyciscus cagottis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott247331",
+      "commonName": "Coyote"
+    },
+    {
+      "id": "tax_ott313163",
+      "scientificName": "Cuon alpinus",
+      "rank": "species",
+      "parent": "tax_ott837603",
+      "extinct": null,
+      "synonyms": [
+        "Canis alpinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott313163",
+      "commonName": "Dhole"
+    },
+    {
+      "id": "tax_ott837603",
+      "scientificName": "Cuon",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Anurocyon",
+        "Chrysaeus",
+        "Chryseus",
+        "Cyon",
+        "Primaevus",
+        "Primoevus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott837603"
+    },
+    {
+      "id": "tax_ott821953",
+      "scientificName": "Lycaon pictus",
+      "rank": "species",
+      "parent": "tax_ott821959",
+      "extinct": null,
+      "synonyms": [
+        "Hyaena picta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821953",
+      "commonName": "African wild dog"
+    },
+    {
+      "id": "tax_ott821959",
+      "scientificName": "Lycaon",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Cynhyaena",
+        "Cynhyoena",
+        "Cynohyoena",
+        "Cynus",
+        "Hyaenoides",
+        "Hyaenoïdes",
+        "Hyenoides",
+        "Kynos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821959"
+    },
+    {
+      "id": "tax_ott247333",
+      "scientificName": "Canis lupus familiaris",
+      "rank": "subspecies",
+      "parent": "tax_ott247341",
+      "extinct": null,
+      "synonyms": [
+        "Canis canis",
+        "Canis domesticus",
+        "Canis familiaris",
+        "beagle dog",
+        "beagle dogs"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott247333",
+      "commonName": "Domestic dog"
+    },
+    {
+      "id": "tax_ott563166",
+      "scientificName": "Felis catus",
+      "rank": "species",
+      "parent": "tax_ott563165",
+      "extinct": null,
+      "synonyms": [
+        "Felis catus domestica",
+        "Felis domesticus",
+        "Felis lybica domestica",
+        "Felis silvestris catus",
+        "Korat cats"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott563166",
+      "commonName": "Domestic cat"
+    },
+    {
+      "id": "tax_ott563165",
+      "scientificName": "Felis",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Avitofelis",
+        "Catolynx",
+        "Catus",
+        "Chaus",
+        "Eremaelurus",
+        "Felia",
+        "Felix",
+        "Folis",
+        "Ictalurus",
+        "Mamfelisus",
+        "Microfelis",
+        "Octalobus",
+        "Octolobus",
+        "Otailurus",
+        "Otocalobus",
+        "Otocolobus",
+        "Poliailurus",
+        "Trichaelurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott563165"
+    },
+    {
+      "id": "tax_ott507545",
+      "scientificName": "Lynx rufus",
+      "rank": "species",
+      "parent": "tax_ott886828",
+      "extinct": null,
+      "synonyms": [
+        "Felis calcaratus",
+        "Felis rufus",
+        "Lynx compressus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott507545",
+      "commonName": "Bobcat"
+    },
+    {
+      "id": "tax_ott886828",
+      "scientificName": "Lynx",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Cervaria",
+        "Eucervaria",
+        "Linx",
+        "Lynceus",
+        "Lynchus",
+        "Lyncus",
+        "Pardina"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott886828"
+    },
+    {
+      "id": "tax_ott507549",
+      "scientificName": "Lynx canadensis",
+      "rank": "species",
+      "parent": "tax_ott886828",
+      "extinct": null,
+      "synonyms": [
+        "Felis canadensis",
+        "Felis lynx canadensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott507549",
+      "commonName": "Canada lynx"
+    },
+    {
+      "id": "tax_ott886829",
+      "scientificName": "Lynx lynx",
+      "rank": "species",
+      "parent": "tax_ott886828",
+      "extinct": null,
+      "synonyms": [
+        "Felis lynx",
+        "Felis lynx wardi"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott886829",
+      "commonName": "Eurasian lynx"
+    },
+    {
+      "id": "tax_ott872567",
+      "scientificName": "Ursus arctos",
+      "rank": "species",
+      "parent": "tax_ott178482",
+      "extinct": null,
+      "synonyms": [
+        "Danis ferox",
+        "Melanarctos cavifrons",
+        "Ursus ferox",
+        "Ursus horribilis",
+        "Ursus procerus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872567",
+      "commonName": "Brown bear"
+    },
+    {
+      "id": "tax_ott178482",
+      "scientificName": "Ursus",
+      "rank": "genus",
+      "parent": "tax_ott297458",
+      "extinct": null,
+      "synonyms": [
+        "Arcticonus",
+        "Danis",
+        "Euarctos",
+        "Mamursus",
+        "Melanarctos",
+        "Mylarctos",
+        "Myrmarctos",
+        "Selenarctos",
+        "Thalassarctos",
+        "Thalassarctus",
+        "Thalassiarchus",
+        "Ursarctos",
+        "Ursulus",
+        "Vetularctos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott178482"
+    },
+    {
+      "id": "tax_ott297458",
+      "scientificName": "Ursidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [
+        "Subparictidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott297458"
+    },
+    {
+      "id": "tax_ott10732",
+      "scientificName": "Ursus maritimus",
+      "rank": "species",
+      "parent": "tax_ott178482",
+      "extinct": null,
+      "synonyms": [
+        "Thalarctos maritimus",
+        "Thalarctos polaris",
+        "Ursus maritimus marinus",
+        "Ursus maritimus maritimus",
+        "Ursus polaris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott10732",
+      "commonName": "Polar bear"
+    },
+    {
+      "id": "tax_ott872577",
+      "scientificName": "Ursus americanus",
+      "rank": "species",
+      "parent": "tax_ott178482",
+      "extinct": null,
+      "synonyms": [
+        "Euarctos americanus",
+        "Euarctos vitabilis",
+        "Ursus altifrontalis",
+        "Ursus amblyceps",
+        "Ursus amplidens",
+        "Ursus californiensis",
+        "Ursus carlottae",
+        "Ursus kermodei",
+        "Ursus luteolus",
+        "Ursus machetes",
+        "Ursus optimus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872577",
+      "commonName": "American black bear"
+    },
+    {
+      "id": "tax_ott872573",
+      "scientificName": "Ailuropoda melanoleuca",
+      "rank": "species",
+      "parent": "tax_ott872566",
+      "extinct": null,
+      "synonyms": [
+        "Aeluropus melanoleucus",
+        "Ailuropus melanoleucus",
+        "Ursus melanoleucus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872573",
+      "commonName": "Giant panda"
+    },
+    {
+      "id": "tax_ott872566",
+      "scientificName": "Ailuropoda",
+      "rank": "genus",
+      "parent": "tax_ott297458",
+      "extinct": null,
+      "synonyms": [
+        "Aeluropus",
+        "Ailuropus",
+        "Pandarctos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872566"
+    },
+    {
+      "id": "tax_ott872562",
+      "scientificName": "Ailurus fulgens",
+      "rank": "species",
+      "parent": "tax_ott872565",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872562",
+      "commonName": "Red panda"
+    },
+    {
+      "id": "tax_ott872565",
+      "scientificName": "Ailurus",
+      "rank": "genus",
+      "parent": "tax_ott827257",
+      "extinct": null,
+      "synonyms": [
+        "Aelurus",
+        "Arctaelurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872565"
+    },
+    {
+      "id": "tax_ott827257",
+      "scientificName": "Ailuridae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott827257"
+    },
+    {
+      "id": "tax_ott348040",
+      "scientificName": "Procyon lotor",
+      "rank": "species",
+      "parent": "tax_ott348029",
+      "extinct": null,
+      "synonyms": [
+        "Procyon nanus",
+        "Procyon priscus",
+        "Procyon simus",
+        "Ursus lotor"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott348040",
+      "commonName": "Raccoon"
+    },
+    {
+      "id": "tax_ott348029",
+      "scientificName": "Procyon",
+      "rank": "genus",
+      "parent": "tax_ott872571",
+      "extinct": null,
+      "synonyms": [
+        "Porcyon",
+        "Prochyon",
+        "Procion",
+        "Proyon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott348029"
+    },
+    {
+      "id": "tax_ott872571",
+      "scientificName": "Procyonidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [
+        "Cercoleptidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott872571"
+    },
+    {
+      "id": "tax_ott803645",
+      "scientificName": "Suricata suricatta",
+      "rank": "species",
+      "parent": "tax_ott418480",
+      "extinct": null,
+      "synonyms": [
+        "Viverra suricata"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott803645",
+      "commonName": "Meerkat"
+    },
+    {
+      "id": "tax_ott418480",
+      "scientificName": "Suricata",
+      "rank": "genus",
+      "parent": "tax_ott42311",
+      "extinct": null,
+      "synonyms": [
+        "Rhyzaena",
+        "Rizaena",
+        "Rizoena",
+        "Rysaena",
+        "Ryzaena",
+        "Surricata"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott418480"
+    },
+    {
+      "id": "tax_ott42311",
+      "scientificName": "Herpestidae",
+      "rank": "family",
+      "parent": "tax_ott827259",
+      "extinct": null,
+      "synonyms": [
+        "Herpestinae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42311"
+    },
+    {
+      "id": "tax_ott231602",
+      "scientificName": "Mephitis mephitis",
+      "rank": "species",
+      "parent": "tax_ott231606",
+      "extinct": null,
+      "synonyms": [
+        "Mephitis mesomelas",
+        "Mephitis nigra",
+        "Viverra mephitis",
+        "Viverra nigra"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott231602",
+      "commonName": "Striped skunk"
+    },
+    {
+      "id": "tax_ott231606",
+      "scientificName": "Mephitis",
+      "rank": "genus",
+      "parent": "tax_ott445986",
+      "extinct": null,
+      "synonyms": [
+        "Chincha",
+        "Leucomitra",
+        "Mammephitisus",
+        "Mephites",
+        "Mephritis",
+        "Viverra"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott231606"
+    },
+    {
+      "id": "tax_ott445986",
+      "scientificName": "Mephitidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott445986"
+    },
+    {
+      "id": "tax_ott656961",
+      "scientificName": "Lontra canadensis",
+      "rank": "species",
+      "parent": "tax_ott1088408",
+      "extinct": null,
+      "synonyms": [
+        "Lutra canadensis",
+        "Mustela canadensis",
+        "Mustela lutra canadensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott656961",
+      "commonName": "North American river otter"
+    },
+    {
+      "id": "tax_ott1088408",
+      "scientificName": "Lontra",
+      "rank": "genus",
+      "parent": "tax_ott306281",
+      "extinct": null,
+      "synonyms": [
+        "Latax",
+        "Lataxia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1088408"
+    },
+    {
+      "id": "tax_ott306281",
+      "scientificName": "Lutrinae",
+      "rank": "subfamily",
+      "parent": "tax_ott348043",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott306281"
+    },
+    {
+      "id": "tax_ott348043",
+      "scientificName": "Mustelidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [
+        "Mustilidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott348043"
+    },
+    {
+      "id": "tax_ott949676",
+      "scientificName": "Enhydra lutris",
+      "rank": "species",
+      "parent": "tax_ott949684",
+      "extinct": null,
+      "synonyms": [
+        "Latax lutris",
+        "Lutra gracilis",
+        "Lutra marina",
+        "Lutra stelleri",
+        "Mustela lutris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott949676",
+      "commonName": "Sea otter"
+    },
+    {
+      "id": "tax_ott949684",
+      "scientificName": "Enhydra",
+      "rank": "genus",
+      "parent": "tax_ott306281",
+      "extinct": null,
+      "synonyms": [
+        "Enhydria",
+        "Enhydris",
+        "Enhydrus",
+        "Enydris",
+        "Euhydris",
+        "Latax",
+        "Pusa",
+        "Sutra"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott949684"
+    },
+    {
+      "id": "tax_ott397142",
+      "scientificName": "Pteronura brasiliensis",
+      "rank": "species",
+      "parent": "tax_ott397141",
+      "extinct": null,
+      "synonyms": [
+        "Lutra brasiliana",
+        "Lutra lupina",
+        "Mustela lutris brasiliensis",
+        "Pteronura sambachii",
+        "Pterura sanbachii"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397142",
+      "commonName": "Giant otter"
+    },
+    {
+      "id": "tax_ott397141",
+      "scientificName": "Pteronura",
+      "rank": "genus",
+      "parent": "tax_ott306281",
+      "extinct": null,
+      "synonyms": [
+        "Craspedura",
+        "Pterura",
+        "Saricovia",
+        "Suricoria"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397141"
+    },
+    {
+      "id": "tax_ott698422",
+      "scientificName": "Phoca vitulina",
+      "rank": "species",
+      "parent": "tax_ott175267",
+      "extinct": null,
+      "synonyms": [
+        "Callocephalus vitulinus",
+        "Phoca canina",
+        "Phoca linnaei",
+        "Phoca littorea",
+        "Phoca scopulicola",
+        "Phoca thienemanni",
+        "Phoca variegata"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698422",
+      "commonName": "Harbor seal"
+    },
+    {
+      "id": "tax_ott175267",
+      "scientificName": "Phoca",
+      "rank": "genus",
+      "parent": "tax_ott749626",
+      "extinct": null,
+      "synonyms": [
+        "Ambysus",
+        "Arctias",
+        "Callicephalus",
+        "Callocephalus",
+        "Calocephalus",
+        "Caspiopusa",
+        "Histriophoca"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott175267"
+    },
+    {
+      "id": "tax_ott749626",
+      "scientificName": "Phocidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [
+        "Manatus maeoticus",
+        "Miophoca vetusta",
+        "Monachus vetusta",
+        "Phoca bessarabica",
+        "Phoca modesta",
+        "Phoca novorossica",
+        "Pinnipedia",
+        "Pristiphoca vetusta",
+        "Squalodon modesta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott749626"
+    },
+    {
+      "id": "tax_ott95364",
+      "scientificName": "Zalophus californianus",
+      "rank": "species",
+      "parent": "tax_ott749640",
+      "extinct": null,
+      "synonyms": [
+        "Arctocephalus gilliespii",
+        "Eumetopias californianus",
+        "Otaria californiana",
+        "Otaria gilliespii",
+        "Zalophus gilliespii"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott95364",
+      "commonName": "California sea lion"
+    },
+    {
+      "id": "tax_ott749640",
+      "scientificName": "Zalophus",
+      "rank": "genus",
+      "parent": "tax_ott749638",
+      "extinct": null,
+      "synonyms": [
+        "Zalophus kimitsensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott749640"
+    },
+    {
+      "id": "tax_ott749638",
+      "scientificName": "Otariidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott749638"
+    },
+    {
+      "id": "tax_ott749644",
+      "scientificName": "Odobenus rosmarus",
+      "rank": "species",
+      "parent": "tax_ott749643",
+      "extinct": null,
+      "synonyms": [
+        "Hemicaulodon effodiens",
+        "Odobaenus rosmarus",
+        "Odobenotherium lartetianus",
+        "Odobenotherium virginianum",
+        "Odobenus arcticus",
+        "Odobenus virginianus",
+        "Phoca rosmarus",
+        "Rosmarus rosmarus",
+        "Trichechus orientalis",
+        "Trichechus rosmarus",
+        "Trichechus virginianus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott749644",
+      "commonName": "Walrus"
+    },
+    {
+      "id": "tax_ott749643",
+      "scientificName": "Odobenus",
+      "rank": "genus",
+      "parent": "tax_ott95367",
+      "extinct": null,
+      "synonyms": [
+        "Hodobaenus",
+        "Odobaenus",
+        "Odobaenus obesus",
+        "Odobenus obesus",
+        "Odontobaenus",
+        "Ordobenus",
+        "Rosmarus",
+        "Rosmarus obesus",
+        "Trichaecus",
+        "Trichechus",
+        "Trichechus obesus",
+        "Trichecus",
+        "Trichecus obesus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott749643"
+    },
+    {
+      "id": "tax_ott95367",
+      "scientificName": "Odobenidae",
+      "rank": "family",
+      "parent": "tax_ott827263",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott95367"
+    },
+    {
+      "id": "tax_ott1040694",
+      "scientificName": "Halichoerus grypus",
+      "rank": "species",
+      "parent": "tax_ott1040699",
+      "extinct": null,
+      "synonyms": [
+        "Halichoerus griseus",
+        "Halichoerus grypus halichoerus",
+        "Phoca atlantica",
+        "Phoca baltica",
+        "Phoca griseus",
+        "Phoca grypus",
+        "Phoca halichoerus",
+        "Phoca macrorhynchus",
+        "Phoca pachyrhynchus",
+        "Phocha halichoreus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1040694",
+      "commonName": "Gray seal"
+    },
+    {
+      "id": "tax_ott1040699",
+      "scientificName": "Halichoerus",
+      "rank": "genus",
+      "parent": "tax_ott749626",
+      "extinct": null,
+      "synonyms": [
+        "Halichaerus",
+        "Halicherus",
+        "Halychaerus",
+        "Halycherus",
+        "Halychoerus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1040699"
+    },
+    {
+      "id": "tax_ott541936",
+      "scientificName": "Loxodonta africana",
+      "rank": "species",
+      "parent": "tax_ott541933",
+      "extinct": null,
+      "synonyms": [
+        "Elephas africanus",
+        "Elephas africanus cavendishi",
+        "Elephas capensis",
+        "Elephas capensis knochenhaueri",
+        "Elephas capensis oxyotis",
+        "Loxodonta africana africana"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541936",
+      "commonName": "African elephant"
+    },
+    {
+      "id": "tax_ott541933",
+      "scientificName": "Loxodonta",
+      "rank": "genus",
+      "parent": "tax_ott541924",
+      "extinct": null,
+      "synonyms": [
+        "Loxodiskodon",
+        "Loxodon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541933"
+    },
+    {
+      "id": "tax_ott541924",
+      "scientificName": "Elephantidae",
+      "rank": "family",
+      "parent": "tax_ott226176",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541924"
+    },
+    {
+      "id": "tax_ott226176",
+      "scientificName": "Proboscidea",
+      "rank": "order",
+      "parent": "tax_ott746703",
+      "extinct": null,
+      "synonyms": [
+        "Caenobasileus tremontigerus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226176"
+    },
+    {
+      "id": "tax_ott746703",
+      "scientificName": "Afrotheria",
+      "rank": "no rank",
+      "parent": "tax_ott6520513",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott746703"
+    },
+    {
+      "id": "tax_ott6520513",
+      "scientificName": "Atlantogenata",
+      "rank": "no rank",
+      "parent": "tax_ott683263",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott6520513"
+    },
+    {
+      "id": "tax_ott541928",
+      "scientificName": "Elephas maximus",
+      "rank": "species",
+      "parent": "tax_ott541927",
+      "extinct": null,
+      "synonyms": [
+        "Elephas asiaticus",
+        "Elephas gigas"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541928",
+      "commonName": "Asian elephant"
+    },
+    {
+      "id": "tax_ott541927",
+      "scientificName": "Elephas",
+      "rank": "genus",
+      "parent": "tax_ott541924",
+      "extinct": null,
+      "synonyms": [
+        "Elephantus",
+        "Hesperoloxodon",
+        "Sivalikia",
+        "Stegoloxodon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541927"
+    },
+    {
+      "id": "tax_ott1034198",
+      "scientificName": "Ceratotherium simum",
+      "rank": "species",
+      "parent": "tax_ott1034201",
+      "extinct": null,
+      "synonyms": [
+        "Ceratotherium simum simum",
+        "Rhinoceros burchellii",
+        "Rhinoceros camus",
+        "Rhinoceros simus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1034198",
+      "commonName": "White rhinoceros"
+    },
+    {
+      "id": "tax_ott1034201",
+      "scientificName": "Ceratotherium",
+      "rank": "genus",
+      "parent": "tax_ott1034218",
+      "extinct": null,
+      "synonyms": [
+        "Cyclochilus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1034201"
+    },
+    {
+      "id": "tax_ott1034218",
+      "scientificName": "Rhinocerotidae",
+      "rank": "family",
+      "parent": "tax_ott541948",
+      "extinct": null,
+      "synonyms": [
+        "Aceratherium oregonensis",
+        "Anchisodon tubifer",
+        "Aphelops crassus",
+        "Diceratherium oregonensis",
+        "Gigantamynodon akespensis",
+        "Peraceras crassus",
+        "Rhinoceridae",
+        "Rhinoceros crassus",
+        "Rhinoceros oregonensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1034218"
+    },
+    {
+      "id": "tax_ott541948",
+      "scientificName": "Perissodactyla",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541948"
+    },
+    {
+      "id": "tax_ott1034204",
+      "scientificName": "Diceros bicornis",
+      "rank": "species",
+      "parent": "tax_ott397576",
+      "extinct": null,
+      "synonyms": [
+        "Rhinoceros bicornis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1034204",
+      "commonName": "Black rhinoceros"
+    },
+    {
+      "id": "tax_ott397576",
+      "scientificName": "Diceros",
+      "rank": "genus",
+      "parent": "tax_ott1034218",
+      "extinct": null,
+      "synonyms": [
+        "Colobognathus",
+        "Keitloa",
+        "Opsiceros",
+        "Rhinaster"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397576"
+    },
+    {
+      "id": "tax_ott510762",
+      "scientificName": "Hippopotamus amphibius",
+      "rank": "species",
+      "parent": "tax_ott510761",
+      "extinct": null,
+      "synonyms": [
+        "Hippopotamus amphibious",
+        "Hippopotamus incognitus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510762",
+      "commonName": "Hippopotamus"
+    },
+    {
+      "id": "tax_ott510761",
+      "scientificName": "Hippopotamus",
+      "rank": "genus",
+      "parent": "tax_ott510764",
+      "extinct": null,
+      "synonyms": [
+        "Hippopothamus",
+        "Hippotamus",
+        "Hyppopotamus",
+        "Phanourios",
+        "Tetraproctodon",
+        "Tetraprotodon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510761"
+    },
+    {
+      "id": "tax_ott510764",
+      "scientificName": "Hippopotamidae",
+      "rank": "family",
+      "parent": "tax_ott7655792",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510764"
+    },
+    {
+      "id": "tax_ott7655792",
+      "scientificName": "Ancodonta",
+      "rank": "infraorder",
+      "parent": "tax_ott7655791",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7655792"
+    },
+    {
+      "id": "tax_ott7655791",
+      "scientificName": "Whippomorpha",
+      "rank": "suborder",
+      "parent": "tax_ott622916",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7655791"
+    },
+    {
+      "id": "tax_ott622916",
+      "scientificName": "Artiodactyla",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [
+        "Cetartiodactyla"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott622916"
+    },
+    {
+      "id": "tax_ott768674",
+      "scientificName": "Giraffa camelopardalis",
+      "rank": "species",
+      "parent": "tax_ott768687",
+      "extinct": null,
+      "synonyms": [
+        "Cervus camelopardalis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768674",
+      "commonName": "Giraffe"
+    },
+    {
+      "id": "tax_ott768687",
+      "scientificName": "Giraffa",
+      "rank": "genus",
+      "parent": "tax_ott768685",
+      "extinct": null,
+      "synonyms": [
+        "Cameleopardalis",
+        "Camelopardalis",
+        "Camelopardalus",
+        "Girafa",
+        "Giraffe",
+        "Orasius",
+        "Trachelotherium"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768687"
+    },
+    {
+      "id": "tax_ott768685",
+      "scientificName": "Giraffidae",
+      "rank": "family",
+      "parent": "tax_ott403912",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768685"
+    },
+    {
+      "id": "tax_ott403912",
+      "scientificName": "Pecora",
+      "rank": "infraorder",
+      "parent": "tax_ott986971",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott403912"
+    },
+    {
+      "id": "tax_ott986971",
+      "scientificName": "Ruminantia",
+      "rank": "suborder",
+      "parent": "tax_ott622916",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott986971"
+    },
+    {
+      "id": "tax_ott124776",
+      "scientificName": "Equus burchellii quagga",
+      "rank": "subspecies",
+      "parent": "tax_ott1068214",
+      "extinct": null,
+      "synonyms": [
+        "Equus quagga",
+        "Equus quagga burchellii",
+        "Equus quagga quagga"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott124776",
+      "commonName": "Plains zebra"
+    },
+    {
+      "id": "tax_ott1068214",
+      "scientificName": "Equus burchellii",
+      "rank": "species",
+      "parent": "tax_ott615440",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1068214"
+    },
+    {
+      "id": "tax_ott615440",
+      "scientificName": "Hippotigris",
+      "rank": "subgenus",
+      "parent": "tax_ott541951",
+      "extinct": null,
+      "synonyms": [
+        "Equus subg. Hippotigris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott615440"
+    },
+    {
+      "id": "tax_ott541951",
+      "scientificName": "Equus",
+      "rank": "genus",
+      "parent": "tax_ott1070066",
+      "extinct": null,
+      "synonyms": [
+        "Asinohippus",
+        "Asinus",
+        "Caballus",
+        "Dolichohippus",
+        "Equus semiplicatus",
+        "Eqvus",
+        "Grevya",
+        "Hemiomus",
+        "Hemionus",
+        "Hemippus",
+        "Hippotigris",
+        "Ludolphozecora",
+        "Megacephalon",
+        "Megacephalonella",
+        "Microhippus",
+        "Neohippus",
+        "Onager",
+        "Onager semiplicatus",
+        "Pseudoquagga",
+        "Quagga",
+        "Quaggoides",
+        "Sussemionus",
+        "Zebra"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott541951"
+    },
+    {
+      "id": "tax_ott1070066",
+      "scientificName": "Equidae",
+      "rank": "family",
+      "parent": "tax_ott541948",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1070066"
+    },
+    {
+      "id": "tax_ott1068218",
+      "scientificName": "Equus caballus",
+      "rank": "species",
+      "parent": "tax_ott94003",
+      "extinct": null,
+      "synonyms": [
+        "Equus asinus hippagrus",
+        "Equus caballus caballus",
+        "Equus caballus domesticus",
+        "Equus caballus fossilis",
+        "Equus caballus gallicus",
+        "Equus caballus germanicus",
+        "Equus caballus piveteaui",
+        "Equus ferus caballus",
+        "Equus hippagrus",
+        "Equus neogaeus",
+        "Equus neogeus",
+        "Equus przewalskii f. caballus",
+        "Equus przewalskii forma caballus",
+        "Hipphaplus bravardi",
+        "Hippidium neogaeum"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1068218",
+      "commonName": "Horse"
+    },
+    {
+      "id": "tax_ott94003",
+      "scientificName": "Equus subgenus Equus",
+      "rank": "subgenus",
+      "parent": "tax_ott541951",
+      "extinct": null,
+      "synonyms": [
+        "Equus subg. Equus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott94003"
+    },
+    {
+      "id": "tax_ott1068202",
+      "scientificName": "Equus asinus",
+      "rank": "species",
+      "parent": "tax_ott615436",
+      "extinct": null,
+      "synonyms": [
+        "Asinus africanus aegyptiacus",
+        "Asinus asinus",
+        "Asinus vulgaris",
+        "Equus africanus asinus",
+        "Equus asinus asinus",
+        "Equus asinus palaestinae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1068202",
+      "commonName": "Donkey"
+    },
+    {
+      "id": "tax_ott615436",
+      "scientificName": "Asinus",
+      "rank": "subgenus",
+      "parent": "tax_ott541951",
+      "extinct": null,
+      "synonyms": [
+        "Equus subg. Asinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott615436"
+    },
+    {
+      "id": "tax_ott490099",
+      "scientificName": "Bos taurus",
+      "rank": "species",
+      "parent": "tax_ott1066581",
+      "extinct": null,
+      "synonyms": [
+        "Bos bovis",
+        "Bos indicus",
+        "Bos primigenius",
+        "Bos primigenius taurus",
+        "Bovidae sp. Adi Nefas"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott490099",
+      "commonName": "Domestic cattle"
+    },
+    {
+      "id": "tax_ott1066581",
+      "scientificName": "Bos",
+      "rank": "genus",
+      "parent": "tax_ott346071",
+      "extinct": null,
+      "synonyms": [
+        "Bibos",
+        "Bisbos",
+        "Bubalibos",
+        "Gauribos",
+        "Gavaeus",
+        "Gaveus",
+        "Microbos",
+        "Novibos",
+        "Poephagus",
+        "Pseudonovibos",
+        "Taurus",
+        "Uribos",
+        "Urus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1066581"
+    },
+    {
+      "id": "tax_ott346071",
+      "scientificName": "Bovinae",
+      "rank": "subfamily",
+      "parent": "tax_ott768677",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott346071"
+    },
+    {
+      "id": "tax_ott768677",
+      "scientificName": "Bovidae",
+      "rank": "family",
+      "parent": "tax_ott403912",
+      "extinct": null,
+      "synonyms": [
+        "Adenota mengesi",
+        "Antilope koba",
+        "Antilope mazama",
+        "Antilope temamazama",
+        "Antilopidae",
+        "Capra depressa",
+        "Capra reversa",
+        "Catoblepas brookii",
+        "Cervus guineensis",
+        "Ixalus",
+        "Ixalus probaton"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768677"
+    },
+    {
+      "id": "tax_ott907693",
+      "scientificName": "Bison bison",
+      "rank": "species",
+      "parent": "tax_ott907692",
+      "extinct": null,
+      "synonyms": [
+        "Bison americanus",
+        "Bison americanus pennsylvanicus",
+        "Bison bison athabasacae",
+        "Bison bison athabascae",
+        "Bison bison bison",
+        "Bison bison septemtrionalis",
+        "Bison sylvestris",
+        "Bos (Bison) bison",
+        "Bos bison"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott907693",
+      "commonName": "American bison"
+    },
+    {
+      "id": "tax_ott907692",
+      "scientificName": "Bison",
+      "rank": "genus",
+      "parent": "tax_ott346071",
+      "extinct": null,
+      "synonyms": [
+        "Bonasus",
+        "Stelabison",
+        "Urus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott907692"
+    },
+    {
+      "id": "tax_ott641187",
+      "scientificName": "Bubalus bubalis",
+      "rank": "species",
+      "parent": "tax_ott756071",
+      "extinct": null,
+      "synonyms": [
+        "Bos bubalis",
+        "Bos bubalis hosei",
+        "Bubalus arnee",
+        "Bubalus arnee bubalis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott641187",
+      "commonName": "Water buffalo"
+    },
+    {
+      "id": "tax_ott756071",
+      "scientificName": "Bubalus",
+      "rank": "genus",
+      "parent": "tax_ott346071",
+      "extinct": null,
+      "synonyms": [
+        "Anoa",
+        "Bubalis",
+        "Buffelus",
+        "Probubalus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott756071"
+    },
+    {
+      "id": "tax_ott70819",
+      "scientificName": "Ovis aries",
+      "rank": "species",
+      "parent": "tax_ott540244",
+      "extinct": null,
+      "synonyms": [
+        "Ovis ammon aries",
+        "Ovis guineensis",
+        "Ovis laristanica",
+        "Ovis musimon",
+        "Ovis ophion",
+        "Ovis orientalis",
+        "Ovis orientalis aries",
+        "Ovis ovis",
+        "Ovis strepsiceros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott70819",
+      "commonName": "Sheep"
+    },
+    {
+      "id": "tax_ott540244",
+      "scientificName": "Ovis",
+      "rank": "genus",
+      "parent": "tax_ott122647",
+      "extinct": null,
+      "synonyms": [
+        "Ammon",
+        "Argali",
+        "Aries",
+        "Caprovis",
+        "Musimon",
+        "Musmon",
+        "Pachyceros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott540244"
+    },
+    {
+      "id": "tax_ott122647",
+      "scientificName": "Caprinae",
+      "rank": "subfamily",
+      "parent": "tax_ott768677",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott122647"
+    },
+    {
+      "id": "tax_ott19017",
+      "scientificName": "Capra hircus",
+      "rank": "species",
+      "parent": "tax_ott19014",
+      "extinct": null,
+      "synonyms": [
+        "African dwarf goat",
+        "African dwarf goats",
+        "Capra aegagrus hircus",
+        "Naine d'Afrique de l'Ouest"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott19017",
+      "commonName": "Goat"
+    },
+    {
+      "id": "tax_ott19014",
+      "scientificName": "Capra",
+      "rank": "genus",
+      "parent": "tax_ott122647",
+      "extinct": null,
+      "synonyms": [
+        "Aegagrus",
+        "Aegionomus",
+        "Aegoceros",
+        "Aegocerus",
+        "Aigoceros",
+        "Aries",
+        "Eucapra",
+        "Euibex",
+        "Hilzheimeria",
+        "Hircus",
+        "Ibec",
+        "Ibex",
+        "Oegoceros",
+        "Orthaegoceros",
+        "Tragus",
+        "Turocapra",
+        "Turus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott19014"
+    },
+    {
+      "id": "tax_ott730013",
+      "scientificName": "Sus scrofa",
+      "rank": "species",
+      "parent": "tax_ott730021",
+      "extinct": null,
+      "synonyms": [
+        "Sus attila",
+        "Sus baeticus",
+        "Sus castilianus",
+        "Sus celtica",
+        "Sus continentalis",
+        "Sus domesticus",
+        "Sus europaeus",
+        "Sus sardous",
+        "Sus setosus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott730013",
+      "commonName": "Wild boar"
+    },
+    {
+      "id": "tax_ott730021",
+      "scientificName": "Sus",
+      "rank": "genus",
+      "parent": "tax_ott730008",
+      "extinct": null,
+      "synonyms": [
+        "Annamisus",
+        "Aulacochoerus",
+        "Caprisculus",
+        "Capriscus",
+        "Centuriosus",
+        "Dasychoerus",
+        "Euhys",
+        "Eusus",
+        "Gyrosus",
+        "Indisus",
+        "Microsus",
+        "Nesosus",
+        "Porcula",
+        "Porculia",
+        "Porcus",
+        "Ptychochoerus",
+        "Rhinosus",
+        "Scrofa",
+        "Sinisus",
+        "Taenisus",
+        "Verrusus",
+        "Vittatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott730021"
+    },
+    {
+      "id": "tax_ott730008",
+      "scientificName": "Suidae",
+      "rank": "family",
+      "parent": "tax_ott916745",
+      "extinct": null,
+      "synonyms": [
+        "Phacochoeridae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott730008"
+    },
+    {
+      "id": "tax_ott916745",
+      "scientificName": "Suina",
+      "rank": "suborder",
+      "parent": "tax_ott622916",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott916745"
+    },
+    {
+      "id": "tax_ott729998",
+      "scientificName": "Sus scrofa domesticus",
+      "rank": "subspecies",
+      "parent": "tax_ott730013",
+      "extinct": null,
+      "synonyms": [
+        "Sus domestica",
+        "Sus domesticus",
+        "Sus scrofa domestica"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott729998",
+      "commonName": "Domestic pig"
+    },
+    {
+      "id": "tax_ott510768",
+      "scientificName": "Camelus bactrianus",
+      "rank": "species",
+      "parent": "tax_ott510767",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510768",
+      "commonName": "Bactrian camel"
+    },
+    {
+      "id": "tax_ott510767",
+      "scientificName": "Camelus",
+      "rank": "genus",
+      "parent": "tax_ott510775",
+      "extinct": null,
+      "synonyms": [
+        "Camelius",
+        "Camellus",
+        "Camelus dromedarius hybridus",
+        "Dromedarius",
+        "Paracamelus",
+        "Paracamelus arenicola"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510767"
+    },
+    {
+      "id": "tax_ott510775",
+      "scientificName": "Camelidae",
+      "rank": "family",
+      "parent": "tax_ott510773",
+      "extinct": null,
+      "synonyms": [
+        "Altomeryx",
+        "Eschatiidae",
+        "Poebrotheriidae",
+        "Protolabididae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510775"
+    },
+    {
+      "id": "tax_ott510773",
+      "scientificName": "Tylopoda",
+      "rank": "suborder",
+      "parent": "tax_ott622916",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510773"
+    },
+    {
+      "id": "tax_ott510752",
+      "scientificName": "Camelus dromedarius",
+      "rank": "species",
+      "parent": "tax_ott510767",
+      "extinct": null,
+      "synonyms": [
+        "Camelus arabicus",
+        "Camelus ferus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510752",
+      "commonName": "Dromedary camel"
+    },
+    {
+      "id": "tax_ott986973",
+      "scientificName": "Lama glama",
+      "rank": "species",
+      "parent": "tax_ott510759",
+      "extinct": null,
+      "synonyms": [
+        "Auchenia lama",
+        "Camelus glama",
+        "Lama guanicoe glama"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott986973",
+      "commonName": "Llama"
+    },
+    {
+      "id": "tax_ott510759",
+      "scientificName": "Lama",
+      "rank": "genus",
+      "parent": "tax_ott510775",
+      "extinct": null,
+      "synonyms": [
+        "Anchenia",
+        "Auchenia",
+        "Auchenia californica",
+        "Auchenias",
+        "Aucheria",
+        "Dromedarius",
+        "Guanaco",
+        "Lacma",
+        "Llacma",
+        "Llama",
+        "Neauchenia",
+        "Neoauchenia",
+        "Neouchenia",
+        "Pacos",
+        "Vicunia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott510759"
+    },
+    {
+      "id": "tax_ott906301",
+      "scientificName": "Vicugna pacos",
+      "rank": "species",
+      "parent": "tax_ott906305",
+      "extinct": null,
+      "synonyms": [
+        "? pacos",
+        "Auchenia paca",
+        "Camelus pacos",
+        "Lama guanicoe pacos",
+        "Lama pacos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott906301",
+      "commonName": "Alpaca"
+    },
+    {
+      "id": "tax_ott906305",
+      "scientificName": "Vicugna",
+      "rank": "genus",
+      "parent": "tax_ott510775",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott906305"
+    },
+    {
+      "id": "tax_ott410153",
+      "scientificName": "Rangifer tarandus",
+      "rank": "species",
+      "parent": "tax_ott936000",
+      "extinct": null,
+      "synonyms": [
+        "Cervus tarandus",
+        "Cervus tarandus arctica",
+        "Rangifer arcticus",
+        "Rangifer muscatinensis",
+        "Rangifer spitzbergensis",
+        "Rangifer tarandus platyrhynchos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott410153",
+      "commonName": "Reindeer"
+    },
+    {
+      "id": "tax_ott936000",
+      "scientificName": "Rangifer",
+      "rank": "genus",
+      "parent": "tax_ott194507",
+      "extinct": null,
+      "synonyms": [
+        "Achlis",
+        "Procerus",
+        "Procervus",
+        "Tarandus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott936000"
+    },
+    {
+      "id": "tax_ott194507",
+      "scientificName": "Odocoileinae",
+      "rank": "subfamily",
+      "parent": "tax_ott460505",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott194507"
+    },
+    {
+      "id": "tax_ott460505",
+      "scientificName": "Cervidae",
+      "rank": "family",
+      "parent": "tax_ott403912",
+      "extinct": null,
+      "synonyms": [
+        "Cervus whitneyi",
+        "Odocoileus whitneyi",
+        "Sangamona fugitiva"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott460505"
+    },
+    {
+      "id": "tax_ott460509",
+      "scientificName": "Alces alces",
+      "rank": "species",
+      "parent": "tax_ott460507",
+      "extinct": null,
+      "synonyms": [
+        "Alces alce",
+        "Alces antiquorum",
+        "Alces coronatus",
+        "Alces europaeus",
+        "Alces jubata",
+        "Alces machilis",
+        "Alces muswa",
+        "Alces palmatus",
+        "Alces runnymedensis",
+        "Cervus alces"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott460509",
+      "commonName": "Moose"
+    },
+    {
+      "id": "tax_ott460507",
+      "scientificName": "Alces",
+      "rank": "genus",
+      "parent": "tax_ott194507",
+      "extinct": null,
+      "synonyms": [
+        "Achlis",
+        "Achlys",
+        "Alce",
+        "Alcelaphus",
+        "Alces shimeki",
+        "Alcis",
+        "Alus",
+        "Paralces"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott460507"
+    },
+    {
+      "id": "tax_ott936014",
+      "scientificName": "Cervus elaphus",
+      "rank": "species",
+      "parent": "tax_ott460519",
+      "extinct": null,
+      "synonyms": [
+        "Cervus albicus",
+        "Cervus albifrons",
+        "Cervus albus",
+        "Cervus atlanticus",
+        "Cervus balticus",
+        "Cervus elaphus carpathicus",
+        "Cervus elaphus tauricus",
+        "Cervus germanicus",
+        "Cervus hippelaphus",
+        "Cervus hispanicus",
+        "Cervus mediterraneus",
+        "Cervus merriami",
+        "Cervus minor",
+        "Cervus montanus",
+        "Cervus neglectus",
+        "Cervus rhenanus",
+        "Cervus saxonicus",
+        "Cervus scoticus",
+        "Cervus typicus",
+        "Cervus varius",
+        "Cervus vulgaris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott936014",
+      "commonName": "Red deer"
+    },
+    {
+      "id": "tax_ott460519",
+      "scientificName": "Cervus",
+      "rank": "genus",
+      "parent": "tax_ott534970",
+      "extinct": null,
+      "synonyms": [
+        "Cerous",
+        "Ceruus",
+        "Cervus aguangae",
+        "Cervus fortisi",
+        "Cervus lucasi",
+        "Elaphoceros",
+        "Elaphus",
+        "Eucervus",
+        "Harana",
+        "Pseudaxis",
+        "Pseudocervus",
+        "Sica",
+        "Sika",
+        "Sikaillus",
+        "Sikailus",
+        "Sikelaphus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott460519"
+    },
+    {
+      "id": "tax_ott534970",
+      "scientificName": "Cervinae",
+      "rank": "subfamily",
+      "parent": "tax_ott460505",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott534970"
+    },
+    {
+      "id": "tax_ott410145",
+      "scientificName": "Odocoileus virginianus",
+      "rank": "species",
+      "parent": "tax_ott410156",
+      "extinct": null,
+      "synonyms": [
+        "Cervus leucurus",
+        "Cervus virginianus",
+        "Dama virginiana",
+        "Dama virginianus",
+        "Odocoileus cooki",
+        "Odocoileus sheridanus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott410145",
+      "commonName": "White-tailed deer"
+    },
+    {
+      "id": "tax_ott410156",
+      "scientificName": "Odocoileus",
+      "rank": "genus",
+      "parent": "tax_ott194507",
+      "extinct": null,
+      "synonyms": [
+        "Aplacerus",
+        "Cariacus",
+        "Dama",
+        "Dorcelaphus",
+        "Elaphalces",
+        "Elephalces",
+        "Eucervus",
+        "Gymnatis",
+        "Gymnotis",
+        "Macrotis",
+        "Mazama",
+        "Odocoelus",
+        "Odocoileus brachydontus",
+        "Odocoileus brachyodontus",
+        "Odontocoelus",
+        "Oplacerus",
+        "Otelaphus",
+        "Palaeodocoileus",
+        "Protomazama",
+        "Reduncina",
+        "Subulus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott410156"
+    },
+    {
+      "id": "tax_ott410149",
+      "scientificName": "Odocoileus hemionus",
+      "rank": "species",
+      "parent": "tax_ott410156",
+      "extinct": null,
+      "synonyms": [
+        "Cariacus ensifer",
+        "Cervus hemionus",
+        "Dama hemionus",
+        "Odocoileus cascensis",
+        "Odocoileus columbianus",
+        "Odocoileus ensifer"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott410149",
+      "commonName": "Mule deer"
+    },
+    {
+      "id": "tax_ott768683",
+      "scientificName": "Antilocapra americana",
+      "rank": "species",
+      "parent": "tax_ott768682",
+      "extinct": null,
+      "synonyms": [
+        "Antilocapra anteflexa",
+        "Antilope americana",
+        "Capra americana",
+        "Neomeryx finni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768683",
+      "commonName": "Pronghorn"
+    },
+    {
+      "id": "tax_ott768682",
+      "scientificName": "Antilocapra",
+      "rank": "genus",
+      "parent": "tax_ott194522",
+      "extinct": null,
+      "synonyms": [
+        "Antilopecapra",
+        "Dicranoceras",
+        "Dicranoceros",
+        "Dicranocerus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768682"
+    },
+    {
+      "id": "tax_ott194522",
+      "scientificName": "Antilocapridae",
+      "rank": "family",
+      "parent": "tax_ott403912",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott194522"
+    },
+    {
+      "id": "tax_ott274550",
+      "scientificName": "Oreamnos americanus",
+      "rank": "species",
+      "parent": "tax_ott274554",
+      "extinct": null,
+      "synonyms": [
+        "? montanus",
+        "Antilope lanigera",
+        "Aplocerus montanus",
+        "Haplocerus montanus",
+        "Mazama dorsata",
+        "Oreamnos americanus columbiae",
+        "Oreamnos americanus columbianus",
+        "Oreamnos americanus dorsatus",
+        "Oreamnos americanus kennedyi",
+        "Oreamnos americanus lanigera",
+        "Oreamnos americanus missoulae",
+        "Oreamnos americanus montanus",
+        "Oreamnos americanus sericeus",
+        "Oreamnos montanus",
+        "Rupicapra americana"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott274550",
+      "commonName": "Mountain goat"
+    },
+    {
+      "id": "tax_ott274554",
+      "scientificName": "Oreamnos",
+      "rank": "genus",
+      "parent": "tax_ott122647",
+      "extinct": null,
+      "synonyms": [
+        "Aplocerus",
+        "Haploceros",
+        "Haplocerus",
+        "Oreamnus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott274554"
+    },
+    {
+      "id": "tax_ott123206",
+      "scientificName": "Ovis canadensis",
+      "rank": "species",
+      "parent": "tax_ott540244",
+      "extinct": null,
+      "synonyms": [
+        "Ovis canadensis catclawensis",
+        "Ovis catclawensis",
+        "Ovis montana"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott123206",
+      "commonName": "Bighorn sheep"
+    },
+    {
+      "id": "tax_ott768679",
+      "scientificName": "Aepyceros melampus",
+      "rank": "species",
+      "parent": "tax_ott768678",
+      "extinct": null,
+      "synonyms": [
+        "Antilope melampus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768679",
+      "commonName": "Impala"
+    },
+    {
+      "id": "tax_ott768678",
+      "scientificName": "Aepyceros",
+      "rank": "genus",
+      "parent": "tax_ott910691",
+      "extinct": null,
+      "synonyms": [
+        "Aepiceras",
+        "Aepiceros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768678"
+    },
+    {
+      "id": "tax_ott910691",
+      "scientificName": "Aepycerotinae",
+      "rank": "subfamily",
+      "parent": "tax_ott768677",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott910691"
+    },
+    {
+      "id": "tax_ott363040",
+      "scientificName": "Antidorcas marsupialis",
+      "rank": "species",
+      "parent": "tax_ott363039",
+      "extinct": null,
+      "synonyms": [
+        "Antilope marsupialis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott363040",
+      "commonName": "Springbok"
+    },
+    {
+      "id": "tax_ott363039",
+      "scientificName": "Antidorcas",
+      "rank": "genus",
+      "parent": "tax_ott70835",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott363039"
+    },
+    {
+      "id": "tax_ott70835",
+      "scientificName": "Antilopinae",
+      "rank": "subfamily",
+      "parent": "tax_ott768677",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott70835"
+    },
+    {
+      "id": "tax_ott19028",
+      "scientificName": "Connochaetes taurinus",
+      "rank": "species",
+      "parent": "tax_ott19027",
+      "extinct": null,
+      "synonyms": [
+        "Antilope taurina",
+        "Gorgon taurinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott19028",
+      "commonName": "Wildebeest"
+    },
+    {
+      "id": "tax_ott19027",
+      "scientificName": "Connochaetes",
+      "rank": "genus",
+      "parent": "tax_ott385449",
+      "extinct": null,
+      "synonyms": [
+        "Butragus",
+        "Catablepas",
+        "Catoblepas",
+        "Catoblephas",
+        "Cemas",
+        "Connochetes",
+        "Connochoetes",
+        "Gorgon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott19027"
+    },
+    {
+      "id": "tax_ott385449",
+      "scientificName": "Alcelaphinae",
+      "rank": "subfamily",
+      "parent": "tax_ott768677",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott385449"
+    },
+    {
+      "id": "tax_ott417950",
+      "scientificName": "Pan troglodytes",
+      "rank": "species",
+      "parent": "tax_ott417957",
+      "extinct": null,
+      "synonyms": [
+        "Simia troglodytes"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott417950",
+      "commonName": "Chimpanzee"
+    },
+    {
+      "id": "tax_ott417957",
+      "scientificName": "Pan",
+      "rank": "genus",
+      "parent": "tax_ott312031",
+      "extinct": null,
+      "synonyms": [
+        "Andropithecus",
+        "Anthropithecus",
+        "Anthropopithecus",
+        "Antropopithecus",
+        "Bonobo",
+        "Chimpansee",
+        "Chimpanzee",
+        "Engeco",
+        "Fsihego",
+        "Hylanthropus",
+        "Mimeles",
+        "Mimetes",
+        "Pan sp. WO2005014654",
+        "Pan sp. WO2007026120",
+        "Pongo",
+        "Pseudanthropos",
+        "Satyrus",
+        "Theranthropus",
+        "Troglodytes"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott417957"
+    },
+    {
+      "id": "tax_ott312031",
+      "scientificName": "Homininae",
+      "rank": "subfamily",
+      "parent": "tax_ott770311",
+      "extinct": null,
+      "synonyms": [
+        "Homo/Pan/Gorilla group"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott312031"
+    },
+    {
+      "id": "tax_ott770311",
+      "scientificName": "Hominidae",
+      "rank": "family",
+      "parent": "tax_ott386191",
+      "extinct": null,
+      "synonyms": [
+        "Dryopithecidae",
+        "Homo-simiadae",
+        "Pongidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770311"
+    },
+    {
+      "id": "tax_ott386191",
+      "scientificName": "Hominoidea",
+      "rank": "superfamily",
+      "parent": "tax_ott842867",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott386191"
+    },
+    {
+      "id": "tax_ott842867",
+      "scientificName": "Catarrhini",
+      "rank": "parvorder",
+      "parent": "tax_ott386195",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott842867"
+    },
+    {
+      "id": "tax_ott386195",
+      "scientificName": "Simiiformes",
+      "rank": "infraorder",
+      "parent": "tax_ott702152",
+      "extinct": null,
+      "synonyms": [
+        "Anthropoidea"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott386195"
+    },
+    {
+      "id": "tax_ott702152",
+      "scientificName": "Haplorrhini",
+      "rank": "suborder",
+      "parent": "tax_ott913935",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702152"
+    },
+    {
+      "id": "tax_ott913935",
+      "scientificName": "Primates",
+      "rank": "no rank",
+      "parent": "tax_ott6520519",
+      "extinct": null,
+      "synonyms": [
+        "Ceciliolemuridae",
+        "Primata",
+        "primate"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott913935"
+    },
+    {
+      "id": "tax_ott6520519",
+      "scientificName": "Primatomorpha",
+      "rank": "no rank",
+      "parent": "tax_ott392222",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott6520519"
+    },
+    {
+      "id": "tax_ott392222",
+      "scientificName": "Euarchontoglires",
+      "rank": "superorder",
+      "parent": "tax_ott5334778",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott392222"
+    },
+    {
+      "id": "tax_ott158484",
+      "scientificName": "Pan paniscus",
+      "rank": "species",
+      "parent": "tax_ott417957",
+      "extinct": null,
+      "synonyms": [
+        "Pan satyrus paniscus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott158484",
+      "commonName": "Bonobo"
+    },
+    {
+      "id": "tax_ott417965",
+      "scientificName": "Gorilla gorilla",
+      "rank": "species",
+      "parent": "tax_ott417969",
+      "extinct": null,
+      "synonyms": [
+        "Troglodytes gorilla"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott417965",
+      "commonName": "Western gorilla"
+    },
+    {
+      "id": "tax_ott417969",
+      "scientificName": "Gorilla",
+      "rank": "genus",
+      "parent": "tax_ott312031",
+      "extinct": null,
+      "synonyms": [
+        "Pseudogorilla"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott417969"
+    },
+    {
+      "id": "tax_ott770302",
+      "scientificName": "Pongo pygmaeus",
+      "rank": "species",
+      "parent": "tax_ott417949",
+      "extinct": null,
+      "synonyms": [
+        "Pongo pygmaeus ciochoni",
+        "Pongo pygmaeus devosi",
+        "Pongo pygmaeus fromageti",
+        "Pongo pygmaeus kahlkei",
+        "Simia pygmaeus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770302",
+      "commonName": "Bornean orangutan"
+    },
+    {
+      "id": "tax_ott417949",
+      "scientificName": "Pongo",
+      "rank": "genus",
+      "parent": "tax_ott1082538",
+      "extinct": null,
+      "synonyms": [
+        "Faunus",
+        "Lophotus",
+        "Macrobates",
+        "Pongos",
+        "Satyrus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott417949"
+    },
+    {
+      "id": "tax_ott1082538",
+      "scientificName": "Ponginae",
+      "rank": "subfamily",
+      "parent": "tax_ott770311",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1082538"
+    },
+    {
+      "id": "tax_ott770295",
+      "scientificName": "Pongo abelii",
+      "rank": "species",
+      "parent": "tax_ott417949",
+      "extinct": null,
+      "synonyms": [
+        "Pithecus satyrus abelii",
+        "Pithecus satyrus abongensis",
+        "Pithecus satyrus deliensis",
+        "Pithecus satyrus langkatensis",
+        "Pongo pygmaeus abeli",
+        "Pongo pygmaeus abelii",
+        "Simia abelii",
+        "Simia gigantica",
+        "Simia satyrus abelii"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770295",
+      "commonName": "Sumatran orangutan"
+    },
+    {
+      "id": "tax_ott770315",
+      "scientificName": "Homo sapiens",
+      "rank": "species",
+      "parent": "tax_ott770309",
+      "extinct": true,
+      "synonyms": [
+        "Homo aethiopicus",
+        "Homo americanus",
+        "Homo arabicus",
+        "Homo aurignacensis",
+        "Homo australasicus",
+        "Homo cafer",
+        "Homo capensis",
+        "Homo columbicus",
+        "Homo cro-magnonensis",
+        "Homo dawsoni",
+        "Homo drennani",
+        "Homo eurafricanus",
+        "Homo floresiensis",
+        "Homo fossilis protoaethiopicus",
+        "Homo grimaldiensis",
+        "Homo grimaldii",
+        "Homo helmei",
+        "Homo hottentotus",
+        "Homo hyperboreus",
+        "Homo indicus",
+        "Homo japeticus",
+        "Homo kanamensis",
+        "Homo melaninus",
+        "Homo monstrosus",
+        "Homo neptunianus",
+        "Homo palestinus",
+        "Homo patagonus",
+        "Homo priscus",
+        "Homo proto-aethiopicus",
+        "Homo sapiens cro-magnonensis",
+        "Homo sapiens grimaldiensis",
+        "Homo scythicus",
+        "Homo sinicus",
+        "Homo spelaeus",
+        "Homo troglodytes",
+        "Homo wadjakensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770315",
+      "commonName": "Human"
+    },
+    {
+      "id": "tax_ott770309",
+      "scientificName": "Homo",
+      "rank": "genus",
+      "parent": "tax_ott312031",
+      "extinct": true,
+      "synonyms": [
+        "Africanthropus",
+        "Afrikanthropus",
+        "Anthropus",
+        "Archanthropus",
+        "Atlanthropus",
+        "Cyphanthropus",
+        "Eoanthropus",
+        "Epanthropos",
+        "Euranthropus",
+        "Europanthropus",
+        "Helacyton",
+        "Hemanthropus",
+        "Hemianthropus",
+        "Heoanthropus",
+        "Homopithecus",
+        "Javanthropus",
+        "Maueranthropus",
+        "Meganthropus",
+        "Metanthropos",
+        "Metanthropus",
+        "Nipponanthropus",
+        "Notanthropus",
+        "Palaeanthropus",
+        "Palaeoanthropus",
+        "Pithecanthropos",
+        "Pithecanthropus",
+        "Praanthropus",
+        "Praehomo",
+        "Proanthropus",
+        "Protanthropus",
+        "Pseudhomo",
+        "Sinanthropus",
+        "Tchadanthropus",
+        "Telanthropus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott770309"
+    },
+    {
+      "id": "tax_ott689650",
+      "scientificName": "Macaca mulatta",
+      "rank": "species",
+      "parent": "tax_ott268324",
+      "extinct": null,
+      "synonyms": [
+        "Cercopithecus mulatta",
+        "Inuus sanctijohannis",
+        "Macaca mulatta mcmahoni",
+        "Macaca nipalensis",
+        "Macaca oinops",
+        "Macaca siamica",
+        "Macacus lasiotus",
+        "Macacus oinops",
+        "Macacus rhesus",
+        "Macacus rhesus villosus",
+        "Macacus tcheliensis",
+        "Macacus vestitus",
+        "Pithecus littoralis",
+        "Simia erythraea",
+        "Simia fulvus",
+        "Simia rhesus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott689650",
+      "commonName": "Rhesus macaque"
+    },
+    {
+      "id": "tax_ott268324",
+      "scientificName": "Macaca",
+      "rank": "genus",
+      "parent": "tax_ott842860",
+      "extinct": null,
+      "synonyms": [
+        "Aulaxinus",
+        "Aulaxinuus",
+        "Cynamolgus",
+        "Cynomacaca",
+        "Cynomolgus",
+        "Cynopithecus",
+        "Cynopythecus",
+        "Gymnopyga",
+        "Innus",
+        "Innuus",
+        "Inuus",
+        "Lyssodes",
+        "Macaco",
+        "Macacus",
+        "Magotus",
+        "Magus",
+        "Maimon",
+        "Nemestrinus",
+        "Ouanderou",
+        "Pithes",
+        "Pycnandra sp. Lowry et al. 5786",
+        "Rhesus",
+        "Salmacis",
+        "Silenus",
+        "Sylvanus",
+        "Vetulus",
+        "Zati"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott268324"
+    },
+    {
+      "id": "tax_ott842860",
+      "scientificName": "Cercopithecinae",
+      "rank": "subfamily",
+      "parent": "tax_ott842868",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott842860"
+    },
+    {
+      "id": "tax_ott842868",
+      "scientificName": "Cercopithecidae",
+      "rank": "family",
+      "parent": "tax_ott386194",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott842868"
+    },
+    {
+      "id": "tax_ott386194",
+      "scientificName": "Cercopithecoidea",
+      "rank": "superfamily",
+      "parent": "tax_ott842867",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott386194"
+    },
+    {
+      "id": "tax_ott689660",
+      "scientificName": "Macaca fuscata",
+      "rank": "species",
+      "parent": "tax_ott268324",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott689660",
+      "commonName": "Japanese macaque"
+    },
+    {
+      "id": "tax_ott115449",
+      "scientificName": "Papio anubis",
+      "rank": "species",
+      "parent": "tax_ott115460",
+      "extinct": null,
+      "synonyms": [
+        "Anubis baboon",
+        "Cynocephalus anubis",
+        "Cynocephalus choras",
+        "Cynocephalus doguera",
+        "Papio anubis doguera",
+        "Papio anubis lestes",
+        "Papio anubis niloticus",
+        "Papio anubis olivaceus",
+        "Papio anubis tibestianus",
+        "Papio anubis vigilis",
+        "Papio cynocephalus anubis",
+        "Papio doguera",
+        "Papio furax",
+        "Papio graueri",
+        "Papio hamadryas anubis",
+        "Papio hamadryas doguera",
+        "Papio heuglini",
+        "Papio lydekkeri",
+        "Papio neumanni",
+        "Papio nigeriae",
+        "Papio silvestris",
+        "Papio tesselatum",
+        "Papio werneri",
+        "Papio yokoensis",
+        "Simia anubis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott115449",
+      "commonName": "Olive baboon"
+    },
+    {
+      "id": "tax_ott115460",
+      "scientificName": "Papio",
+      "rank": "genus",
+      "parent": "tax_ott842860",
+      "extinct": null,
+      "synonyms": [
+        "Chaeropithecus",
+        "Chaeropitheus",
+        "Choeropithecus",
+        "Comopithecus",
+        "Cyanocephalus",
+        "Cynocephalus",
+        "Hamadryas",
+        "Kynokephalos",
+        "Sphinx"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott115460"
+    },
+    {
+      "id": "tax_ott913930",
+      "scientificName": "Lemur catta",
+      "rank": "species",
+      "parent": "tax_ott913932",
+      "extinct": null,
+      "synonyms": [
+        "Maki mococo"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott913930",
+      "commonName": "Ring-tailed lemur"
+    },
+    {
+      "id": "tax_ott913932",
+      "scientificName": "Lemur",
+      "rank": "genus",
+      "parent": "tax_ott913933",
+      "extinct": null,
+      "synonyms": [
+        "Catta",
+        "Eulemur",
+        "Maki",
+        "Mococo",
+        "Odorlemur",
+        "Procebus",
+        "Prosimia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott913932"
+    },
+    {
+      "id": "tax_ott913933",
+      "scientificName": "Lemuridae",
+      "rank": "family",
+      "parent": "tax_ott702142",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott913933"
+    },
+    {
+      "id": "tax_ott702142",
+      "scientificName": "Lemuriformes",
+      "rank": "infraorder",
+      "parent": "tax_ott702147",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702142"
+    },
+    {
+      "id": "tax_ott702147",
+      "scientificName": "Strepsirrhini",
+      "rank": "suborder",
+      "parent": "tax_ott913935",
+      "extinct": null,
+      "synonyms": [
+        "Strepsirhini"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702147"
+    },
+    {
+      "id": "tax_ott327624",
+      "scientificName": "Phascolarctos cinereus",
+      "rank": "species",
+      "parent": "tax_ott327630",
+      "extinct": null,
+      "synonyms": [
+        "Lipurus cinereus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott327624",
+      "commonName": "Koala"
+    },
+    {
+      "id": "tax_ott327630",
+      "scientificName": "Phascolarctos",
+      "rank": "genus",
+      "parent": "tax_ott327628",
+      "extinct": null,
+      "synonyms": [
+        "Draximenus",
+        "Koala",
+        "Kola",
+        "Lipurus",
+        "Liscurus",
+        "Morodactylus",
+        "Phascolarctus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott327630"
+    },
+    {
+      "id": "tax_ott327628",
+      "scientificName": "Phascolarctidae",
+      "rank": "family",
+      "parent": "tax_ott277679",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott327628"
+    },
+    {
+      "id": "tax_ott277679",
+      "scientificName": "Diprotodontia",
+      "rank": "order",
+      "parent": "tax_ott16033",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott277679"
+    },
+    {
+      "id": "tax_ott16033",
+      "scientificName": "Metatheria",
+      "rank": "no rank",
+      "parent": "tax_ott229558",
+      "extinct": null,
+      "synonyms": [
+        "Cimolestes lucasi",
+        "Ideodelphys microscopicus",
+        "Marsupialia",
+        "Notogale tenuis",
+        "Odontomysopidae",
+        "Odontomysops spiniferus",
+        "Pharsophorus tenuis",
+        "Promysops primarius"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott16033"
+    },
+    {
+      "id": "tax_ott597239",
+      "scientificName": "Macropus giganteus",
+      "rank": "species",
+      "parent": "tax_ott42495",
+      "extinct": null,
+      "synonyms": [
+        "Macropus faunus",
+        "Macropus magister",
+        "Macropus titan"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott597239",
+      "commonName": "Kangaroo"
+    },
+    {
+      "id": "tax_ott42495",
+      "scientificName": "Macropus",
+      "rank": "genus",
+      "parent": "tax_ott196582",
+      "extinct": null,
+      "synonyms": [
+        "Boriogale",
+        "Dendrodorcopsis",
+        "Gerboides",
+        "Gerboïdes",
+        "Gigantomys",
+        "Halmathurus",
+        "Halmatopus",
+        "Halmaturus",
+        "Kalmaturus",
+        "Kanguroo",
+        "Kanguru",
+        "Kangurus",
+        "Leptosiagon",
+        "Macropus elegans",
+        "Megaleia",
+        "Megaloia",
+        "Notamacropus",
+        "Osphranter",
+        "Osphrantes",
+        "Phascolagus",
+        "Prionotemmus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42495"
+    },
+    {
+      "id": "tax_ott196582",
+      "scientificName": "Macropodidae",
+      "rank": "family",
+      "parent": "tax_ott277679",
+      "extinct": null,
+      "synonyms": [
+        "Macropidae",
+        "Macropina"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott196582"
+    },
+    {
+      "id": "tax_ott897696",
+      "scientificName": "Osphranter rufus",
+      "rank": "species",
+      "parent": "tax_ott7068051",
+      "extinct": null,
+      "synonyms": [
+        "Kangurus rufus",
+        "Macropus rufus",
+        "Megaleia rufa"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott897696",
+      "commonName": "Red kangaroo"
+    },
+    {
+      "id": "tax_ott7068051",
+      "scientificName": "Osphranter",
+      "rank": "genus",
+      "parent": "tax_ott196582",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7068051"
+    },
+    {
+      "id": "tax_ott42493",
+      "scientificName": "Notamacropus agilis",
+      "rank": "species",
+      "parent": "tax_ott7068048",
+      "extinct": null,
+      "synonyms": [
+        "Dorcopsis aurantiacus",
+        "Halmaturus agilis",
+        "Halmaturus binoe",
+        "Halmaturus crassipes",
+        "Halmaturus jardinii",
+        "Halmaturus siva",
+        "Macropus agilis",
+        "Macropus papuanus",
+        "Macropus papuensis",
+        "Osphranter stirtoni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott42493",
+      "commonName": "Wallaby"
+    },
+    {
+      "id": "tax_ott7068048",
+      "scientificName": "Notamacropus",
+      "rank": "genus",
+      "parent": "tax_ott196582",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7068048"
+    },
+    {
+      "id": "tax_ott835328",
+      "scientificName": "Vombatus ursinus",
+      "rank": "species",
+      "parent": "tax_ott835327",
+      "extinct": null,
+      "synonyms": [
+        "Didelphis ursina",
+        "Phascolomys ursinus",
+        "Phascolomys vombatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835328",
+      "commonName": "Common wombat"
+    },
+    {
+      "id": "tax_ott835327",
+      "scientificName": "Vombatus",
+      "rank": "genus",
+      "parent": "tax_ott323250",
+      "extinct": null,
+      "synonyms": [
+        "Amblosia",
+        "Amblosis",
+        "Amblotes",
+        "Amblotis",
+        "Amblyotis",
+        "Opossum",
+        "Phascolomis",
+        "Phascolomus",
+        "Phascolomys",
+        "Uomlatus",
+        "Wombatus",
+        "Wonbatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835327"
+    },
+    {
+      "id": "tax_ott323250",
+      "scientificName": "Vombatidae",
+      "rank": "family",
+      "parent": "tax_ott277679",
+      "extinct": null,
+      "synonyms": [
+        "Phascolomina"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott323250"
+    },
+    {
+      "id": "tax_ott919171",
+      "scientificName": "Didelphis virginiana",
+      "rank": "species",
+      "parent": "tax_ott762047",
+      "extinct": null,
+      "synonyms": [
+        "Didelphis marsupialis virginiana"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott919171",
+      "commonName": "Virginia opossum"
+    },
+    {
+      "id": "tax_ott762047",
+      "scientificName": "Didelphis",
+      "rank": "genus",
+      "parent": "tax_ott608046",
+      "extinct": null,
+      "synonyms": [
+        "Dasyurotherium",
+        "Didelphus",
+        "Didelphys",
+        "Dimerodon",
+        "Gamba",
+        "Gambatherium",
+        "Leucodidelphis",
+        "Leucodidelphys",
+        "Thylacotherium"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott762047"
+    },
+    {
+      "id": "tax_ott608046",
+      "scientificName": "Didelphinae",
+      "rank": "subfamily",
+      "parent": "tax_ott16069",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott608046"
+    },
+    {
+      "id": "tax_ott16069",
+      "scientificName": "Didelphidae",
+      "rank": "family",
+      "parent": "tax_ott277697",
+      "extinct": null,
+      "synonyms": [
+        "Didelphiidae",
+        "Didelphydae",
+        "Didelphyidae",
+        "Dryolestes tenax"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott16069"
+    },
+    {
+      "id": "tax_ott277697",
+      "scientificName": "Didelphimorphia",
+      "rank": "order",
+      "parent": "tax_ott16033",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott277697"
+    },
+    {
+      "id": "tax_ott962377",
+      "scientificName": "Ornithorhynchus anatinus",
+      "rank": "species",
+      "parent": "tax_ott962391",
+      "extinct": null,
+      "synonyms": [
+        "Ornithorhynchus agilis",
+        "Ornithorhynchus brevirostris",
+        "Ornithorhynchus crispus",
+        "Ornithorhynchus fuscus",
+        "Ornithorhynchus laevis",
+        "Ornithorhynchus novaehollandiae",
+        "Ornithorhynchus paradoxus",
+        "Ornithorhynchus rufus",
+        "Platypus anatinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott962377",
+      "commonName": "Platypus"
+    },
+    {
+      "id": "tax_ott962391",
+      "scientificName": "Ornithorhynchus",
+      "rank": "genus",
+      "parent": "tax_ott344066",
+      "extinct": null,
+      "synonyms": [
+        "Demipus",
+        "Dermipus",
+        "Dermopus",
+        "Ornithorhyncus",
+        "Ornithorinchus",
+        "Ornithorinxus",
+        "Ornithorrhynchus",
+        "Ornitorhynchus",
+        "Platypus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott962391"
+    },
+    {
+      "id": "tax_ott344066",
+      "scientificName": "Ornithorhynchidae",
+      "rank": "family",
+      "parent": "tax_ott962396",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott344066"
+    },
+    {
+      "id": "tax_ott962396",
+      "scientificName": "Monotremata",
+      "rank": "order",
+      "parent": "tax_ott962395",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott962396"
+    },
+    {
+      "id": "tax_ott962395",
+      "scientificName": "Prototheria",
+      "rank": "no rank",
+      "parent": "tax_ott244265",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott962395"
+    },
+    {
+      "id": "tax_ott16038",
+      "scientificName": "Tachyglossus aculeatus",
+      "rank": "species",
+      "parent": "tax_ott16047",
+      "extinct": null,
+      "synonyms": [
+        "Echidna aculeata",
+        "Echidna australis",
+        "Myrmecophaga aculeata",
+        "Tachyglossus aculeata"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott16038",
+      "commonName": "Short-beaked echidna"
+    },
+    {
+      "id": "tax_ott16047",
+      "scientificName": "Tachyglossus",
+      "rank": "genus",
+      "parent": "tax_ott344064",
+      "extinct": null,
+      "synonyms": [
+        "Acanthonotus",
+        "Aculeata",
+        "Echidea",
+        "Echidna",
+        "Echinopus",
+        "Syphomia",
+        "Syphonia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott16047"
+    },
+    {
+      "id": "tax_ott344064",
+      "scientificName": "Tachyglossidae",
+      "rank": "family",
+      "parent": "tax_ott962396",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott344064"
+    },
+    {
+      "id": "tax_ott273233",
+      "scientificName": "Bradypus variegatus",
+      "rank": "species",
+      "parent": "tax_ott527308",
+      "extinct": null,
+      "synonyms": [
+        "Arctopithecus castaneiceps",
+        "Arctopithecus griseus",
+        "Bradypus griseus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott273233",
+      "commonName": "Three-toed sloth"
+    },
+    {
+      "id": "tax_ott527308",
+      "scientificName": "Bradypus",
+      "rank": "genus",
+      "parent": "tax_ott273225",
+      "extinct": null,
+      "synonyms": [
+        "Achaeus",
+        "Acheus",
+        "Achoeus",
+        "Arctopithecus",
+        "Bradipus",
+        "Bradupus",
+        "Bradyphus",
+        "Eubradypus",
+        "Hemibradypus",
+        "Ignavus",
+        "Scaeopus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott527308"
+    },
+    {
+      "id": "tax_ott273225",
+      "scientificName": "Bradypodidae",
+      "rank": "family",
+      "parent": "tax_ott495015",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott273225"
+    },
+    {
+      "id": "tax_ott495015",
+      "scientificName": "Folivora",
+      "rank": "suborder",
+      "parent": "tax_ott495018",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott495015"
+    },
+    {
+      "id": "tax_ott495018",
+      "scientificName": "Pilosa",
+      "rank": "order",
+      "parent": "tax_ott847764",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott495018"
+    },
+    {
+      "id": "tax_ott847764",
+      "scientificName": "Xenarthra",
+      "rank": "no rank",
+      "parent": "tax_ott6520513",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott847764"
+    },
+    {
+      "id": "tax_ott490538",
+      "scientificName": "Myrmecophaga tridactyla",
+      "rank": "species",
+      "parent": "tax_ott490533",
+      "extinct": null,
+      "synonyms": [
+        "Myrmecophaga centralis",
+        "Tamandua tridactyla"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott490538",
+      "commonName": "Giant anteater"
+    },
+    {
+      "id": "tax_ott490533",
+      "scientificName": "Myrmecophaga",
+      "rank": "genus",
+      "parent": "tax_ott847766",
+      "extinct": null,
+      "synonyms": [
+        "Falcifer",
+        "Mirmecophaga",
+        "Myrmecopha",
+        "Myrmecophagus",
+        "Nunezia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott490533"
+    },
+    {
+      "id": "tax_ott847766",
+      "scientificName": "Myrmecophagidae",
+      "rank": "family",
+      "parent": "tax_ott495016",
+      "extinct": null,
+      "synonyms": [
+        "Adiastaltidae",
+        "Anathitidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott847766"
+    },
+    {
+      "id": "tax_ott495016",
+      "scientificName": "Vermilingua",
+      "rank": "suborder",
+      "parent": "tax_ott495018",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott495016"
+    },
+    {
+      "id": "tax_ott796672",
+      "scientificName": "Dasypus novemcinctus",
+      "rank": "species",
+      "parent": "tax_ott796671",
+      "extinct": null,
+      "synonyms": [
+        "Tatusia novemcincta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796672",
+      "commonName": "Nine-banded armadillo"
+    },
+    {
+      "id": "tax_ott796671",
+      "scientificName": "Dasypus",
+      "rank": "genus",
+      "parent": "tax_ott273244",
+      "extinct": null,
+      "synonyms": [
+        "Cachicama",
+        "Cachicamus",
+        "Cataphractus",
+        "Cryptophractus",
+        "Dasipus",
+        "Dasyrus",
+        "Daysypus",
+        "Hyperoambon",
+        "Loricatus",
+        "Muletia",
+        "Praopus",
+        "Tatu",
+        "Tatus",
+        "Tatusia",
+        "Zonoplites"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796671"
+    },
+    {
+      "id": "tax_ott273244",
+      "scientificName": "Dasypodidae",
+      "rank": "family",
+      "parent": "tax_ott495017",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott273244"
+    },
+    {
+      "id": "tax_ott495017",
+      "scientificName": "Cingulata",
+      "rank": "order",
+      "parent": "tax_ott847764",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott495017"
+    },
+    {
+      "id": "tax_ott796660",
+      "scientificName": "Erinaceus europaeus",
+      "rank": "species",
+      "parent": "tax_ott796658",
+      "extinct": null,
+      "synonyms": [
+        "Erinaceus dissimilis",
+        "Erinaceus erinaceus",
+        "Erinaceus erinaceus centralrossicus",
+        "Erinaceus erinaceus europaeus",
+        "Erinaceus europaeus centralrossicus",
+        "Erinaceus europaeus europaeus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796660",
+      "commonName": "European hedgehog"
+    },
+    {
+      "id": "tax_ott796658",
+      "scientificName": "Erinaceus",
+      "rank": "genus",
+      "parent": "tax_ott805540",
+      "extinct": null,
+      "synonyms": [
+        "Herinaceus",
+        "Peroeclinus",
+        "Setiger"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796658"
+    },
+    {
+      "id": "tax_ott805540",
+      "scientificName": "Erinaceinae",
+      "rank": "subfamily",
+      "parent": "tax_ott796668",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott805540"
+    },
+    {
+      "id": "tax_ott796668",
+      "scientificName": "Erinaceidae",
+      "rank": "family",
+      "parent": "tax_ott796664",
+      "extinct": null,
+      "synonyms": [
+        "Acanthionidae",
+        "Erinacidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796668"
+    },
+    {
+      "id": "tax_ott796664",
+      "scientificName": "Eulipotyphla",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [
+        "Soricomorpha"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott796664"
+    },
+    {
+      "id": "tax_ott410925",
+      "scientificName": "Sciurus carolinensis",
+      "rank": "species",
+      "parent": "tax_ott866983",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott410925",
+      "commonName": "Eastern gray squirrel"
+    },
+    {
+      "id": "tax_ott866983",
+      "scientificName": "Sciurus",
+      "rank": "genus",
+      "parent": "tax_ott649553",
+      "extinct": null,
+      "synonyms": [
+        "Aphrontis",
+        "Araeosciurus",
+        "Baiosciurus",
+        "Echinosciurus",
+        "Guerlinguetus",
+        "Hadrosciurus",
+        "Hesperosciurus",
+        "Histriosciurus",
+        "Leptosciurus",
+        "Macroschus",
+        "Macroxus",
+        "Macroxys",
+        "Mesosciurus",
+        "Neosciurus",
+        "Oreosciurus",
+        "Otosciurus",
+        "Parasciurus",
+        "Sciuras",
+        "Sciurur",
+        "Simosciurus",
+        "Tenes",
+        "Urosciurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott866983"
+    },
+    {
+      "id": "tax_ott649553",
+      "scientificName": "Sciurini",
+      "rank": "tribe",
+      "parent": "tax_ott630990",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott649553"
+    },
+    {
+      "id": "tax_ott630990",
+      "scientificName": "Sciurinae",
+      "rank": "subfamily",
+      "parent": "tax_ott384218",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott630990"
+    },
+    {
+      "id": "tax_ott384218",
+      "scientificName": "Sciuridae",
+      "rank": "family",
+      "parent": "tax_ott44559",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott384218"
+    },
+    {
+      "id": "tax_ott44559",
+      "scientificName": "Sciuromorpha",
+      "rank": "suborder",
+      "parent": "tax_ott864593",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott44559"
+    },
+    {
+      "id": "tax_ott864593",
+      "scientificName": "Rodentia",
+      "rank": "order",
+      "parent": "tax_ott392220",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott864593"
+    },
+    {
+      "id": "tax_ott392220",
+      "scientificName": "Glires",
+      "rank": "no rank",
+      "parent": "tax_ott392222",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott392220"
+    },
+    {
+      "id": "tax_ott886085",
+      "scientificName": "Castor canadensis",
+      "rank": "species",
+      "parent": "tax_ott1048190",
+      "extinct": null,
+      "synonyms": [
+        "Castor caecator",
+        "Castor canadensis acadicus",
+        "Castor canadensis baileyi",
+        "Castor canadensis belugae",
+        "Castor canadensis caecator",
+        "Castor canadensis canadensis",
+        "Castor canadensis carolinensis",
+        "Castor canadensis concisor",
+        "Castor canadensis duchesnei",
+        "Castor canadensis frondator",
+        "Castor canadensis idoneus",
+        "Castor canadensis labradorensis",
+        "Castor canadensis leucodontus",
+        "Castor canadensis mexicanus",
+        "Castor canadensis michiganensis",
+        "Castor canadensis missouriensis",
+        "Castor canadensis pallidus",
+        "Castor canadensis phaeus",
+        "Castor canadensis repentinus",
+        "Castor canadensis rostralis",
+        "Castor canadensis sagittatus",
+        "Castor canadensis taylori",
+        "Castor canadensis texensis",
+        "Castor subauratus shastensis",
+        "Castor subauratus subauratus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott886085",
+      "commonName": "North American beaver"
+    },
+    {
+      "id": "tax_ott1048190",
+      "scientificName": "Castor",
+      "rank": "genus",
+      "parent": "tax_ott835319",
+      "extinct": null,
+      "synonyms": [
+        "Aulacodon",
+        "Fiber",
+        "Mamcastorus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1048190"
+    },
+    {
+      "id": "tax_ott835319",
+      "scientificName": "Castoridae",
+      "rank": "family",
+      "parent": "tax_ott7067145",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835319"
+    },
+    {
+      "id": "tax_ott7067145",
+      "scientificName": "Castorimorpha",
+      "rank": "suborder",
+      "parent": "tax_ott864593",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7067145"
+    },
+    {
+      "id": "tax_ott744018",
+      "scientificName": "Hydrochoerus hydrochaeris",
+      "rank": "species",
+      "parent": "tax_ott744023",
+      "extinct": null,
+      "synonyms": [
+        "Capiguara americana",
+        "Cavia capybara",
+        "Hydrochaeris hydrochaeris",
+        "Hydrochaerus capybara",
+        "Hydrochaerus hydrochaeris",
+        "Hydrochoerus capybara",
+        "Hydrochoerus cololoi",
+        "Hydrochoerus hydrochoeris",
+        "Hydrochoerus irroratus",
+        "Hydrochoerus uruguayensis",
+        "Sus hydrochaeris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott744018",
+      "commonName": "Capybara"
+    },
+    {
+      "id": "tax_ott744023",
+      "scientificName": "Hydrochoerus",
+      "rank": "genus",
+      "parent": "tax_ott7067179",
+      "extinct": null,
+      "synonyms": [
+        "Capibara",
+        "Capiguara",
+        "Hydrochaeris",
+        "Hydrochaerus",
+        "Hydrocharus",
+        "Hydrocheirus",
+        "Hydrocherus",
+        "Hydrochoenus",
+        "Xenohydrochoerus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott744023"
+    },
+    {
+      "id": "tax_ott7067179",
+      "scientificName": "Hydrochaeridae",
+      "rank": "family",
+      "parent": "tax_ott44557",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7067179"
+    },
+    {
+      "id": "tax_ott44557",
+      "scientificName": "Hystricomorpha",
+      "rank": "suborder",
+      "parent": "tax_ott864593",
+      "extinct": null,
+      "synonyms": [
+        "Hystricognathi"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott44557"
+    },
+    {
+      "id": "tax_ott744000",
+      "scientificName": "Cavia porcellus",
+      "rank": "species",
+      "parent": "tax_ott744006",
+      "extinct": null,
+      "synonyms": [
+        "Cavia aperea porcellus",
+        "Cavia cobaya",
+        "Mus porcellus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott744000",
+      "commonName": "Guinea pig"
+    },
+    {
+      "id": "tax_ott744006",
+      "scientificName": "Cavia",
+      "rank": "genus",
+      "parent": "tax_ott220339",
+      "extinct": null,
+      "synonyms": [
+        "Anoema",
+        "Anoemas",
+        "Anoëma",
+        "Cauia",
+        "Cobaia",
+        "Cobaya",
+        "Coiza",
+        "Coïza",
+        "Mamcaviaus",
+        "Savia",
+        "Scavia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott744006"
+    },
+    {
+      "id": "tax_ott220339",
+      "scientificName": "Caviidae",
+      "rank": "family",
+      "parent": "tax_ott44557",
+      "extinct": null,
+      "synonyms": [
+        "Caviadae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott220339"
+    },
+    {
+      "id": "tax_ott542509",
+      "scientificName": "Mus musculus",
+      "rank": "species",
+      "parent": "tax_ott164652",
+      "extinct": null,
+      "synonyms": [
+        "LK3 transgenic mice",
+        "Mus bactrianus tantillus",
+        "Mus molossinus",
+        "Mus molossinus yonakuni",
+        "Mus musculus cinereomaculatus",
+        "Mus musculus domesticus",
+        "Mus musculus varius",
+        "Mus nordmanni",
+        "Mus sp. 129SV",
+        "nude mice",
+        "transgenic mice"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott542509",
+      "commonName": "House mouse"
+    },
+    {
+      "id": "tax_ott164652",
+      "scientificName": "Mus subgenus Mus",
+      "rank": "subgenus",
+      "parent": "tax_ott1068778",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott164652"
+    },
+    {
+      "id": "tax_ott1068778",
+      "scientificName": "Mus",
+      "rank": "genus",
+      "parent": "tax_ott889045",
+      "extinct": null,
+      "synonyms": [
+        "Acromys",
+        "Budamys",
+        "Coelomys",
+        "Drymomys",
+        "Gatamiya",
+        "Gatimiya",
+        "Hylenomys",
+        "Laggade",
+        "Leggada",
+        "Leggadilla",
+        "Mus kagii",
+        "Musculus",
+        "Mycteromys",
+        "Nannomys",
+        "Oromys",
+        "Pseudoconomys",
+        "Pyromys",
+        "Tautatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1068778"
+    },
+    {
+      "id": "tax_ott889045",
+      "scientificName": "Murinae",
+      "rank": "subfamily",
+      "parent": "tax_ott816256",
+      "extinct": null,
+      "synonyms": [
+        "Otomyinae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott889045"
+    },
+    {
+      "id": "tax_ott816256",
+      "scientificName": "Muridae",
+      "rank": "family",
+      "parent": "tax_ott839752",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott816256"
+    },
+    {
+      "id": "tax_ott839752",
+      "scientificName": "Muroidea",
+      "rank": "no rank",
+      "parent": "tax_ott7067181",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott839752"
+    },
+    {
+      "id": "tax_ott7067181",
+      "scientificName": "Myomorpha",
+      "rank": "suborder",
+      "parent": "tax_ott864593",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott7067181"
+    },
+    {
+      "id": "tax_ott271555",
+      "scientificName": "Rattus norvegicus",
+      "rank": "species",
+      "parent": "tax_ott271578",
+      "extinct": null,
+      "synonyms": [
+        "Buffalo rat",
+        "Epimys norvegicus socer",
+        "Mus caraco",
+        "Mus caspius",
+        "Mus decumanoides",
+        "Mus decumanus",
+        "Mus decumanus hybridus",
+        "Mus decumanus major",
+        "Mus griseipectus",
+        "Mus hibernicus",
+        "Mus humiliatus",
+        "Mus javanus",
+        "Mus magnirostris",
+        "Mus maniculatus",
+        "Mus maurus",
+        "Mus norvegicus",
+        "Mus norvegicus praestans",
+        "Mus ouangthomae",
+        "Mus plumbeus",
+        "Mus surmolottus",
+        "Mus sylvaticus discolor",
+        "Mus tamarensis",
+        "Rattus PC12 clone IS",
+        "Rattus decumanus",
+        "Rattus humiliatus insolatus",
+        "Rattus humiliatus sowerbyi",
+        "Rattus norvegicus albus",
+        "Rattus norvegicus otomoi",
+        "Rattus norvegicus primarius",
+        "Rattus sp. strain Wistar",
+        "Sprague-Dawley rat",
+        "Wistar rats",
+        "laboratory rat",
+        "zitter rats"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott271555",
+      "commonName": "Brown rat"
+    },
+    {
+      "id": "tax_ott271578",
+      "scientificName": "Rattus",
+      "rank": "genus",
+      "parent": "tax_ott889045",
+      "extinct": null,
+      "synonyms": [
+        "Acanthomys",
+        "Christomys",
+        "Cironomys",
+        "Epimys",
+        "Geromys",
+        "Mollicomys",
+        "Octomys",
+        "Pullomys",
+        "Stenomys",
+        "Togomys"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott271578"
+    },
+    {
+      "id": "tax_ott864596",
+      "scientificName": "Oryctolagus cuniculus",
+      "rank": "species",
+      "parent": "tax_ott864605",
+      "extinct": null,
+      "synonyms": [
+        "Lepus cuniculus",
+        "New Zealand rabbit",
+        "Oryctogalus fodiens",
+        "Oryctolagus cnossius",
+        "Oryctolagus cuniculus borkumensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott864596",
+      "commonName": "European rabbit"
+    },
+    {
+      "id": "tax_ott864605",
+      "scientificName": "Oryctolagus",
+      "rank": "genus",
+      "parent": "tax_ott644258",
+      "extinct": null,
+      "synonyms": [
+        "Cuniculus",
+        "Onyctolagus",
+        "Oryctalagus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott864605"
+    },
+    {
+      "id": "tax_ott644258",
+      "scientificName": "Leporidae",
+      "rank": "family",
+      "parent": "tax_ott644242",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644258"
+    },
+    {
+      "id": "tax_ott644242",
+      "scientificName": "Lagomorpha",
+      "rank": "order",
+      "parent": "tax_ott392220",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644242"
+    },
+    {
+      "id": "tax_ott923734",
+      "scientificName": "Lepus americanus",
+      "rank": "species",
+      "parent": "tax_ott864610",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott923734",
+      "commonName": "Snowshoe hare"
+    },
+    {
+      "id": "tax_ott864610",
+      "scientificName": "Lepus",
+      "rank": "genus",
+      "parent": "tax_ott644258",
+      "extinct": null,
+      "synonyms": [
+        "Allolagus",
+        "Boreolagus",
+        "Chionobates",
+        "Eulagos",
+        "Eulepus",
+        "Indolagus",
+        "Lagos",
+        "Macrotolagus",
+        "Microtolagus",
+        "Poecilolagus",
+        "Proeulagus",
+        "Sabanolagus",
+        "Sinolagus",
+        "Tarimolagus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott864610"
+    },
+    {
+      "id": "tax_ott5553964",
+      "scientificName": "Lepus microtis",
+      "rank": "species",
+      "parent": "tax_ott864610",
+      "extinct": null,
+      "synonyms": [
+        "Lepus victoriae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5553964",
+      "commonName": "African savanna hare"
+    },
+    {
+      "id": "tax_ott124230",
+      "scientificName": "Tursiops truncatus",
+      "rank": "species",
+      "parent": "tax_ott124235",
+      "extinct": null,
+      "synonyms": [
+        "Delphinus compressicauda",
+        "Delphinus cymodoce",
+        "Delphinus erebennus",
+        "Delphinus metis",
+        "Delphinus metis</i> [No.1]",
+        "Delphinus nesarnack",
+        "Delphinus nesarnak",
+        "Delphinus parvimanus",
+        "Delphinus troncatus",
+        "Delphinus truncatus",
+        "Delphinus tursio",
+        "Delphinus tursio obtusus",
+        "Phocoena compressicauda",
+        "Tursio compressicauda",
+        "Tursio cymodice",
+        "Tursio metis",
+        "Tursio truncatus",
+        "Tursiops coerulescens",
+        "Tursiops communis",
+        "Tursiops compressicauda",
+        "Tursiops eurynome",
+        "Tursiops gephyreus",
+        "Tursiops gilli",
+        "Tursiops gillii",
+        "Tursiops maugeanus",
+        "Tursiops nuuanu",
+        "Tursiops parvimanus",
+        "Tursiops ponticus",
+        "Tursiops subridens",
+        "Tursiops truncantus",
+        "Tursiops truncatus gillii",
+        "Tursiops tursio",
+        "Tursiops tursio obtusus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott124230",
+      "commonName": "Bottlenose dolphin"
+    },
+    {
+      "id": "tax_ott124235",
+      "scientificName": "Tursiops",
+      "rank": "genus",
+      "parent": "tax_ott698406",
+      "extinct": null,
+      "synonyms": [
+        "Gadamu",
+        "Gudamu",
+        "Tursio"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott124235"
+    },
+    {
+      "id": "tax_ott698406",
+      "scientificName": "Delphinidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Cephalorhynchinae",
+        "Delphinapteridae",
+        "Delphinoidae",
+        "Delphinusideae",
+        "Globicephalidae",
+        "Globidelphinidae",
+        "Globiocephalidae",
+        "Grampidae",
+        "Grampidelphidae",
+        "Orcadae",
+        "Orcadina",
+        "Orcaelidae",
+        "Orcaellidae",
+        "Orcinae",
+        "Orcini",
+        "Orcininae",
+        "Stenidae",
+        "Steno cudmorei",
+        "Trispondylus",
+        "Trispondylus kleini",
+        "Tursiops miocaenus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698406"
+    },
+    {
+      "id": "tax_ott698417",
+      "scientificName": "Odontoceti",
+      "rank": "parvorder",
+      "parent": "tax_ott698424",
+      "extinct": null,
+      "synonyms": [
+        "Cetodontes",
+        "Delphiniceti",
+        "Denticete",
+        "Denticeti",
+        "Odontoceta",
+        "Odontocete",
+        "Squaloceti"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698417"
+    },
+    {
+      "id": "tax_ott698424",
+      "scientificName": "Cetacea",
+      "rank": "infraorder",
+      "parent": "tax_ott7655791",
+      "extinct": null,
+      "synonyms": [
+        "Balaena prisca",
+        "Homocetus villersi"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698424"
+    },
+    {
+      "id": "tax_ott124215",
+      "scientificName": "Orcinus orca",
+      "rank": "species",
+      "parent": "tax_ott124219",
+      "extinct": null,
+      "synonyms": [
+        "Delphinus duhameli",
+        "Delphinus gladiator",
+        "Delphinus grampus",
+        "Delphinus orca",
+        "Delphinus orca ensidoratus",
+        "Delphinus serra",
+        "Delphinus victorini",
+        "Grampus orca",
+        "Grampus rectipinna",
+        "Grampus vectipinna",
+        "Ophysia pacifica",
+        "Orca africana",
+        "Orca antarctica",
+        "Orca ater",
+        "Orca ater fusca",
+        "Orca atra",
+        "Orca capensis",
+        "Orca eschrichtii",
+        "Orca glacialis",
+        "Orca gladiator",
+        "Orca gladiator arcticus",
+        "Orca gladiator australis",
+        "Orca gladiator europaeus",
+        "Orca gladiator tasmaniensis",
+        "Orca latirostris",
+        "Orca magellanica",
+        "Orca megellanica",
+        "Orca minor",
+        "Orca orca",
+        "Orca orca megallanicus",
+        "Orca pacifica",
+        "Orca rectipinna",
+        "Orca schlegelii",
+        "Orca stenorhyncha",
+        "Orca tasmanica",
+        "Orcinus glacialis",
+        "Orcinus nanus",
+        "Orcinus orca capensis",
+        "Orcinus orca eschrichti",
+        "Orcinus orca magellanica",
+        "Orcinus orca megallanicus",
+        "Orcinus orca pacifica",
+        "Orcinus rectipinna",
+        "Phocaena orca",
+        "Physeter microps"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott124215",
+      "commonName": "Orca"
+    },
+    {
+      "id": "tax_ott124219",
+      "scientificName": "Orcinus",
+      "rank": "genus",
+      "parent": "tax_ott698406",
+      "extinct": null,
+      "synonyms": [
+        "Gladiator",
+        "Grampus",
+        "Ophesia",
+        "Ophysia",
+        "Orca"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott124219"
+    },
+    {
+      "id": "tax_ott226190",
+      "scientificName": "Balaenoptera musculus",
+      "rank": "species",
+      "parent": "tax_ott800316",
+      "extinct": null,
+      "synonyms": [
+        "Balaena borealis",
+        "Balaena maximus",
+        "Balaena musculus",
+        "Balaenoptera carolinae",
+        "Balaenoptera gigas",
+        "Balaenoptera indica",
+        "Balaenoptera intermedia",
+        "Balaenoptera jubartes",
+        "Balaenoptera miramaris",
+        "Balaenoptera sibbaldi",
+        "Balaenoptera sibbaldii",
+        "Balaenoptera sulfurea",
+        "Cuvierius latirostris",
+        "Physalus boops",
+        "Physalus indicus",
+        "Physalus latirostris",
+        "Physalus sibbaldii",
+        "Pterobalaena gigas",
+        "Pterobalaena grypus",
+        "Rorqualus boops",
+        "Rorqualus borealis",
+        "Rorqualus major",
+        "Rorqualus musculus",
+        "Sibbaldius antarcticus",
+        "Sibbaldius borealis",
+        "Sibbaldius musculus",
+        "Sibbaldius sulfureus",
+        "Sibbaldus borealis",
+        "Sibbaldus musculus",
+        "Stenobalaena xanthogaster"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226190",
+      "commonName": "Blue whale"
+    },
+    {
+      "id": "tax_ott800316",
+      "scientificName": "Balaenoptera",
+      "rank": "genus",
+      "parent": "tax_ott800326",
+      "extinct": null,
+      "synonyms": [
+        "Agaphelus",
+        "Balaenoptera ryani",
+        "Balaenopteris",
+        "Balaenopterus",
+        "Balenoptera",
+        "Balenopterus",
+        "Baloenoptera",
+        "Belaenoptera",
+        "Benedenia",
+        "Boops",
+        "Catoptera",
+        "Cetoptera",
+        "Cuvierius",
+        "Cuvierus",
+        "Dactylaena",
+        "Dubertus",
+        "Eubalaenoptera",
+        "Fabricia",
+        "Flowerius",
+        "Mysticetus",
+        "Ogmobalaena",
+        "Phalaenoptera",
+        "Phylasus",
+        "Physalis",
+        "Physalus",
+        "Pterobalaena",
+        "Ptychocetus",
+        "Rorqualus",
+        "Rudolphius",
+        "Sibbaldius",
+        "Sibbaldus",
+        "Stenobalaena",
+        "Swinhoia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800316"
+    },
+    {
+      "id": "tax_ott800326",
+      "scientificName": "Balaenopteridae",
+      "rank": "family",
+      "parent": "tax_ott800314",
+      "extinct": null,
+      "synonyms": [
+        "Agaphelidae",
+        "Balaena definata",
+        "Balaena emarginata",
+        "Balaenodon emarginatus",
+        "Balaenoptera borealina",
+        "Balaenoptera cortesii portisii",
+        "Balaenoptera definata",
+        "Balaenoptera definata sibbaldina",
+        "Balaenoptera definita",
+        "Balaenoptera emarginata",
+        "Balaenoptera emarginata rostratella",
+        "Balaenoptera garopii",
+        "Balaenoptera goropi",
+        "Balaenoptera hubachi",
+        "Balaenoptera musculoides",
+        "Balaenoptera portisii",
+        "Balaenoptera rostratella",
+        "Balaenoptera sibbaldina",
+        "Hadrosaurus tripos",
+        "Megaptera affinis",
+        "Megaptera hubachi",
+        "Megaptera robusta",
+        "Megapteropsis robusta",
+        "Palaeocetidae",
+        "Physalinidae",
+        "Plesiocetus garopii",
+        "Plesiocetus goropii",
+        "Trachodon tripos"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800326"
+    },
+    {
+      "id": "tax_ott800314",
+      "scientificName": "Mysticeti",
+      "rank": "parvorder",
+      "parent": "tax_ott698424",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800314"
+    },
+    {
+      "id": "tax_ott226198",
+      "scientificName": "Megaptera novaeangliae",
+      "rank": "species",
+      "parent": "tax_ott226201",
+      "extinct": null,
+      "synonyms": [
+        "Balaena allamack",
+        "Balaena atlanticus",
+        "Balaena boops",
+        "Balaena gibbosa",
+        "Balaena lalandii",
+        "Balaena longimana",
+        "Balaena longipinna",
+        "Balaena nodosa",
+        "Balaena novaeangliae",
+        "Balaena sulcata antarctica",
+        "Balaenoptera antarctica",
+        "Balaenoptera astrolabae",
+        "Balaenoptera astrolabe",
+        "Balaenoptera australis",
+        "Balaenoptera capensis",
+        "Balaenoptera gibbosa",
+        "Balaenoptera leucopteron",
+        "Balaenoptera syncondylus",
+        "Kyphobalaena keporkak",
+        "Megaptera americana",
+        "Megaptera antarctica",
+        "Megaptera australis",
+        "Megaptera bellicosa",
+        "Megaptera boops",
+        "Megaptera brasiliensis",
+        "Megaptera braziliensis",
+        "Megaptera burmeisteri",
+        "Megaptera gigas",
+        "Megaptera indica",
+        "Megaptera kusira",
+        "Megaptera kuzira",
+        "Megaptera lalandii",
+        "Megaptera longimana",
+        "Megaptera longimana morei",
+        "Megaptera longipinna",
+        "Megaptera nodosa",
+        "Megaptera nodosa bellicosa",
+        "Megaptera nodosa lalandii",
+        "Megaptera nodosa nodosa",
+        "Megaptera nodosa novaezealandiae",
+        "Megaptera nodosa novaezelandiae",
+        "Megaptera nodosa osphyia",
+        "Megaptera novaeangliae australis",
+        "Megaptera novaezealandiae",
+        "Megaptera novaezelandiae",
+        "Megaptera osphya",
+        "Megaptera osphyia",
+        "Megaptera poescop",
+        "Megaptera poeskop",
+        "Megaptera versabilis",
+        "Poescopia lalandii",
+        "Rorqualus antarcticus",
+        "Rorqualus australis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226198",
+      "commonName": "Humpback whale"
+    },
+    {
+      "id": "tax_ott226201",
+      "scientificName": "Megaptera",
+      "rank": "genus",
+      "parent": "tax_ott800326",
+      "extinct": null,
+      "synonyms": [
+        "Cyphobalaena",
+        "Kyphobalaena",
+        "Megaptera miocaena",
+        "Megapteron",
+        "Perqualus",
+        "Poescopia",
+        "Poeskopia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226201"
+    },
+    {
+      "id": "tax_ott276851",
+      "scientificName": "Physeter catodon",
+      "rank": "species",
+      "parent": "tax_ott276856",
+      "extinct": null,
+      "synonyms": [
+        "Catodon australis",
+        "Catodon colneti",
+        "Catodon krefftii",
+        "Catodon macrocephalus",
+        "Catodon trumpo",
+        "Cetus cylindricus",
+        "Delphinus bayeri",
+        "Meganeuron krefftii",
+        "Megistosaurus ensiformis",
+        "Phiseter cylindricus",
+        "Phiseter mular",
+        "Phiseter trumpo",
+        "Physalus cylindricus",
+        "Physeter andersonii",
+        "Physeter australasianus",
+        "Physeter australasiensis",
+        "Physeter australis",
+        "Physeter macrocephalus",
+        "Physeter maximus",
+        "Physeter microps",
+        "Physeter microps rectidentatus",
+        "Physeter mular",
+        "Physeter novaeangliae",
+        "Physeter orthodon",
+        "Physeter tursio",
+        "Physeterus sulcatus",
+        "Tursio vulgaris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott276851",
+      "commonName": "Sperm whale"
+    },
+    {
+      "id": "tax_ott276856",
+      "scientificName": "Physeter",
+      "rank": "genus",
+      "parent": "tax_ott276861",
+      "extinct": null,
+      "synonyms": [
+        "Catadon",
+        "Catodon",
+        "Cetus",
+        "Euphyseter",
+        "Meganeuron",
+        "Megistosaurus",
+        "Orthodon",
+        "Phiseter",
+        "Physalus",
+        "Physelus",
+        "Physeteres",
+        "Physeterus",
+        "Physiter",
+        "Tursio"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott276856"
+    },
+    {
+      "id": "tax_ott276861",
+      "scientificName": "Physeteridae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Catodontidae",
+        "Hypocetus",
+        "Kogiidae",
+        "Orca semseyi",
+        "Orcinus semseyi",
+        "Palaeophoca",
+        "Physeterina",
+        "Physodontidae",
+        "Physotherium solterii",
+        "Physotherium sotterii",
+        "Scaldicetus lodgei",
+        "Ziphioides obliquus",
+        "Ziphioides triangulus",
+        "Ziphiola",
+        "Ziphiola clepsydra"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott276861"
+    },
+    {
+      "id": "tax_ott800320",
+      "scientificName": "Eschrichtius robustus",
+      "rank": "species",
+      "parent": "tax_ott800310",
+      "extinct": null,
+      "synonyms": [
+        "Agaphelus gibbosus",
+        "Agaphelus glaucus",
+        "Balaena boops",
+        "Balaena gibbosa",
+        "Balaenoptera robusta",
+        "Eschrichtius gibbosus",
+        "Eschrichtius glaucus",
+        "Eschrichtius robusta",
+        "Plesiocetus robustus",
+        "Rachianectes glaucus",
+        "Rhachianectes glaucus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800320",
+      "commonName": "Gray whale"
+    },
+    {
+      "id": "tax_ott800310",
+      "scientificName": "Eschrichtius",
+      "rank": "genus",
+      "parent": "tax_ott800309",
+      "extinct": null,
+      "synonyms": [
+        "Cyphonotus",
+        "Eschrichtius mysticetoides",
+        "Eschrictius",
+        "Rachianectes",
+        "Rhachianectes",
+        "Rhachionectes"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800310"
+    },
+    {
+      "id": "tax_ott800309",
+      "scientificName": "Eschrichtiidae",
+      "rank": "family",
+      "parent": "tax_ott800314",
+      "extinct": null,
+      "synonyms": [
+        "Eschrichtidae",
+        "Rachianectidae",
+        "Rhachianectidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott800309"
+    },
+    {
+      "id": "tax_ott306757",
+      "scientificName": "Monodon monoceros",
+      "rank": "species",
+      "parent": "tax_ott306759",
+      "extinct": null,
+      "synonyms": [
+        "Ceratodon monodon",
+        "Ceratodontis ceratodon",
+        "Monodon microcephalus",
+        "Monodon narhval",
+        "Monodon narhwal",
+        "Narwalus andersonianus",
+        "Narwalus microcephalus",
+        "Narwalus vulgaris",
+        "Tachynices megacephalus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott306757",
+      "commonName": "Narwhal"
+    },
+    {
+      "id": "tax_ott306759",
+      "scientificName": "Monodon",
+      "rank": "genus",
+      "parent": "tax_ott851307",
+      "extinct": null,
+      "synonyms": [
+        "Ceratodon",
+        "Ceratodontis",
+        "Diodon",
+        "Monodontinae",
+        "Monodus",
+        "Narhvalus",
+        "Narvallus",
+        "Narvalus",
+        "Narwalus",
+        "Narwhalus",
+        "Tachynices"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott306759"
+    },
+    {
+      "id": "tax_ott851307",
+      "scientificName": "Monodontidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Belugidae",
+        "Beluginae",
+        "Delphinapteridae",
+        "Delphinapterinae",
+        "Norvallidae",
+        "Tachynicidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott851307"
+    },
+    {
+      "id": "tax_ott851318",
+      "scientificName": "Delphinapterus leucas",
+      "rank": "species",
+      "parent": "tax_ott851317",
+      "extinct": null,
+      "synonyms": [
+        "Balaena albicans",
+        "Beluga angustata",
+        "Beluga borealis",
+        "Beluga canadensis",
+        "Beluga catodon",
+        "Beluga concreta",
+        "Beluga declivis",
+        "Beluga glacialis",
+        "Beluga kingii",
+        "Beluga rhinodon",
+        "Beluga vermontana",
+        "Catodon albicans",
+        "Catodon canadensis",
+        "Catodon candicans",
+        "Catodon sibbaldi",
+        "Cephalorhynchus hectori albus",
+        "Delphinapterus beluga",
+        "Delphinapterus catodon",
+        "Delphinapterus concreta",
+        "Delphinapterus dorofeevi",
+        "Delphinapterus freimani",
+        "Delphinapterus kingi",
+        "Delphinapterus leucas marisalbi",
+        "Delphinapterus marisalbi",
+        "Delphinapterus vermontanus",
+        "Delphinus albians",
+        "Delphinus albicans",
+        "Delphinus canadensis",
+        "Delphinus kingii",
+        "Delphinus leucas",
+        "Delphinus leucaster",
+        "Delphinus phocaena albus",
+        "Delphinus vermontana",
+        "Inia canadensis",
+        "Physeter macrocephalus albicans"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott851318",
+      "commonName": "Beluga whale"
+    },
+    {
+      "id": "tax_ott851317",
+      "scientificName": "Delphinapterus",
+      "rank": "genus",
+      "parent": "tax_ott851307",
+      "extinct": null,
+      "synonyms": [
+        "Agrocetus",
+        "Argocetus",
+        "Beluga",
+        "Delphinaptera",
+        "Delphinaster",
+        "Delphinopterus",
+        "Delphiraptenus",
+        "Delphis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott851317"
+    },
+    {
+      "id": "tax_ott226178",
+      "scientificName": "Trichechus manatus",
+      "rank": "species",
+      "parent": "tax_ott226189",
+      "extinct": null,
+      "synonyms": [
+        "Manatus americanus",
+        "Manatus australis",
+        "Manatus koellikeri",
+        "Trichechus koellikeri",
+        "Trichecus manatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226178",
+      "commonName": "Manatee"
+    },
+    {
+      "id": "tax_ott226189",
+      "scientificName": "Trichechus",
+      "rank": "genus",
+      "parent": "tax_ott226181",
+      "extinct": null,
+      "synonyms": [
+        "Erichechus",
+        "Halipaedisca",
+        "Irochus",
+        "Manatus",
+        "Nemodermus",
+        "Neodermus",
+        "Oxystomus",
+        "Thrichechus",
+        "Trichecus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226189"
+    },
+    {
+      "id": "tax_ott226181",
+      "scientificName": "Trichechidae",
+      "rank": "family",
+      "parent": "tax_ott226183",
+      "extinct": null,
+      "synonyms": [
+        "Halicorea",
+        "Halicoreae",
+        "Manatida",
+        "Manatidae",
+        "Manatoidea",
+        "Manatus aequatorialis",
+        "Manatus vulgaris",
+        "Trichechinae",
+        "Trichechoidea",
+        "Trichecidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226181"
+    },
+    {
+      "id": "tax_ott226183",
+      "scientificName": "Sirenia",
+      "rank": "order",
+      "parent": "tax_ott746703",
+      "extinct": null,
+      "synonyms": [
+        "Crassitherium robustum",
+        "Diopia",
+        "Halitherium inornatum",
+        "Herbivora",
+        "Manatus inornatus",
+        "Sireniformia",
+        "Sirenotherium pirabense",
+        "Sirenotherium pirabensis",
+        "Trichechus inornatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott226183"
+    },
+    {
+      "id": "tax_ott835324",
+      "scientificName": "Dugong dugon",
+      "rank": "species",
+      "parent": "tax_ott835323",
+      "extinct": null,
+      "synonyms": [
+        "Dugong dugon dugon",
+        "Dugong dugon hemprichii",
+        "Dugong dugon tabernaculi",
+        "Dugong dugong",
+        "Halicore australe",
+        "Halicore australis",
+        "Halicore cetacea",
+        "Halicore dugong",
+        "Halicore dugung",
+        "Halicore hemprichii",
+        "Halicore lottum",
+        "Halicore tabernaculi",
+        "Trichechus dugon",
+        "Trichechus dugung"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835324",
+      "commonName": "Dugong"
+    },
+    {
+      "id": "tax_ott835323",
+      "scientificName": "Dugong",
+      "rank": "genus",
+      "parent": "tax_ott835321",
+      "extinct": null,
+      "synonyms": [
+        "Amblychilus",
+        "Dugongidus",
+        "Dugungus",
+        "Dungugus",
+        "Halichore",
+        "Halicon",
+        "Halicone",
+        "Halicora",
+        "Halicore",
+        "Halicorne",
+        "Halycore",
+        "Odobenus",
+        "Platystomus",
+        "Udobaenus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835323"
+    },
+    {
+      "id": "tax_ott835321",
+      "scientificName": "Dugongidae",
+      "rank": "family",
+      "parent": "tax_ott226183",
+      "extinct": null,
+      "synonyms": [
+        "Felsinotherium alleni",
+        "Halianassa collinii",
+        "Halicorida",
+        "Halicoridae",
+        "Halicoroidea",
+        "Halitherium alleni",
+        "Halitherium antillense",
+        "Halitherium chouqueti",
+        "Halitherium dubium",
+        "Halitherium guettardi",
+        "Halitherium kaupi",
+        "Halitherium raulinii",
+        "Halitherium schinzi lareolensis",
+        "Halitherium schinzii lareolense",
+        "Halitherium taulannense",
+        "Halitherium uytterhoeveni",
+        "Halytherium dubium",
+        "Hippopotamus dubius",
+        "Manatherium delheidi",
+        "Manatus dubius",
+        "Manatus guettardi",
+        "Manatus renggeri",
+        "Metaxytherium alleni",
+        "Metaxytherium guettardi",
+        "Protosiren dubia",
+        "Trachytherium raulinii"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott835321"
+    },
+    {
+      "id": "tax_ott238431",
+      "scientificName": "Desmodus rotundus",
+      "rank": "species",
+      "parent": "tax_ott456414",
+      "extinct": null,
+      "synonyms": [
+        "Phyllostoma rotundum"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott238431",
+      "commonName": "Vampire bat"
+    },
+    {
+      "id": "tax_ott456414",
+      "scientificName": "Desmodus",
+      "rank": "genus",
+      "parent": "tax_ott1039975",
+      "extinct": null,
+      "synonyms": [
+        "Desmodon",
+        "Edostoma"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott456414"
+    },
+    {
+      "id": "tax_ott1039975",
+      "scientificName": "Desmodontinae",
+      "rank": "subfamily",
+      "parent": "tax_ott289151",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1039975"
+    },
+    {
+      "id": "tax_ott289151",
+      "scientificName": "Phyllostomidae",
+      "rank": "family",
+      "parent": "tax_ott603783",
+      "extinct": null,
+      "synonyms": [
+        "Phyllostomatidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott289151"
+    },
+    {
+      "id": "tax_ott603783",
+      "scientificName": "Microchiroptera",
+      "rank": "suborder",
+      "parent": "tax_ott574724",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott603783"
+    },
+    {
+      "id": "tax_ott574724",
+      "scientificName": "Chiroptera",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott574724"
+    },
+    {
+      "id": "tax_ott813034",
+      "scientificName": "Rousettus aegyptiacus",
+      "rank": "species",
+      "parent": "tax_ott813038",
+      "extinct": null,
+      "synonyms": [
+        "Rousettus aegypticus",
+        "Rousettus egyptiacus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott813034",
+      "commonName": "Egyptian fruit bat"
+    },
+    {
+      "id": "tax_ott813038",
+      "scientificName": "Rousettus",
+      "rank": "genus",
+      "parent": "tax_ott37734",
+      "extinct": null,
+      "synonyms": [
+        "Boneia",
+        "Cercopterus",
+        "Cynonicteris",
+        "Cynonycteris",
+        "Eleutherura",
+        "Roussettus",
+        "Senonycteris",
+        "Stenonycteris",
+        "Xantarpya",
+        "Xantharpyia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott813038"
+    },
+    {
+      "id": "tax_ott37734",
+      "scientificName": "Pteropodinae",
+      "rank": "subfamily",
+      "parent": "tax_ott574742",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott37734"
+    },
+    {
+      "id": "tax_ott574742",
+      "scientificName": "Pteropodidae",
+      "rank": "family",
+      "parent": "tax_ott754606",
+      "extinct": null,
+      "synonyms": [
+        "Pteropidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott574742"
+    },
+    {
+      "id": "tax_ott754606",
+      "scientificName": "Megachiroptera",
+      "rank": "suborder",
+      "parent": "tax_ott574724",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott754606"
+    },
+    {
+      "id": "tax_ott286193",
+      "scientificName": "Sciurus vulgaris",
+      "rank": "species",
+      "parent": "tax_ott866983",
+      "extinct": null,
+      "synonyms": [
+        "Sciurus alpinus",
+        "Sciurus balcanicus",
+        "Sciurus carpathicus",
+        "Sciurus croaticus",
+        "Sciurus europaeus",
+        "Sciurus fuscoater",
+        "Sciurus graeca",
+        "Sciurus italicus",
+        "Sciurus leucurus",
+        "Sciurus lilaeus",
+        "Sciurus typicus",
+        "Sciurus vulgaris hoffmanni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott286193",
+      "commonName": "Red squirrel"
+    },
+    {
+      "id": "tax_ott391631",
+      "scientificName": "Mesocricetus auratus",
+      "rank": "species",
+      "parent": "tax_ott391624",
+      "extinct": null,
+      "synonyms": [
+        "Golden hamsters",
+        "Syrian hamsters"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott391631",
+      "commonName": "Golden hamster"
+    },
+    {
+      "id": "tax_ott391624",
+      "scientificName": "Mesocricetus",
+      "rank": "genus",
+      "parent": "tax_ott917323",
+      "extinct": null,
+      "synonyms": [
+        "Mediocricetus",
+        "Semicricetus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott391624"
+    },
+    {
+      "id": "tax_ott917323",
+      "scientificName": "Cricetinae",
+      "rank": "subfamily",
+      "parent": "tax_ott671049",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott917323"
+    },
+    {
+      "id": "tax_ott671049",
+      "scientificName": "Cricetidae",
+      "rank": "family",
+      "parent": "tax_ott839752",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott671049"
+    },
+    {
+      "id": "tax_ott222362",
+      "scientificName": "Talpa europaea",
+      "rank": "species",
+      "parent": "tax_ott222367",
+      "extinct": null,
+      "synonyms": [
+        "Talpa alba",
+        "Talpa albida",
+        "Talpa albomaculata",
+        "Talpa brauneri",
+        "Talpa caudata",
+        "Talpa cinerea",
+        "Talpa europaea kratochvilli",
+        "Talpa europea",
+        "Talpa flavescens",
+        "Talpa friseus",
+        "Talpa grisea",
+        "Talpa lutea",
+        "Talpa maculata",
+        "Talpa nigra",
+        "Talpa panici",
+        "Talpa rufa",
+        "Talpa scalops",
+        "Talpa sp. PPW-2003",
+        "Talpa uralensis",
+        "Talpa variegata",
+        "Talpa vulgaris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott222362",
+      "commonName": "European mole"
+    },
+    {
+      "id": "tax_ott222367",
+      "scientificName": "Talpa",
+      "rank": "genus",
+      "parent": "tax_ott222358",
+      "extinct": null,
+      "synonyms": [
+        "Asioscalops",
+        "Asioscaptor",
+        "Heterotalpa",
+        "Scalpa",
+        "Talpops"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott222367"
+    },
+    {
+      "id": "tax_ott222358",
+      "scientificName": "Talpidae",
+      "rank": "family",
+      "parent": "tax_ott796664",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott222358"
+    },
+    {
+      "id": "tax_ott561087",
+      "scientificName": "Orycteropus afer",
+      "rank": "species",
+      "parent": "tax_ott561106",
+      "extinct": null,
+      "synonyms": [
+        "Myrmecophaga afra",
+        "Myrmecophaga capensis",
+        "Orycteropus capensis",
+        "Orycteropus haussanus",
+        "Orycteropus senegalensis",
+        "Orycteropus wertheri"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott561087",
+      "commonName": "Aardvark"
+    },
+    {
+      "id": "tax_ott561106",
+      "scientificName": "Orycteropus",
+      "rank": "genus",
+      "parent": "tax_ott561103",
+      "extinct": null,
+      "synonyms": [
+        "Orajeteropus",
+        "Oryctheropus",
+        "Oryctopus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott561106"
+    },
+    {
+      "id": "tax_ott561103",
+      "scientificName": "Orycteropodidae",
+      "rank": "family",
+      "parent": "tax_ott561100",
+      "extinct": null,
+      "synonyms": [
+        "Orycteropidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott561103"
+    },
+    {
+      "id": "tax_ott561100",
+      "scientificName": "Tubulidentata",
+      "rank": "order",
+      "parent": "tax_ott746703",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott561100"
+    },
+    {
+      "id": "tax_ott315465",
+      "scientificName": "Vulpes zerda",
+      "rank": "species",
+      "parent": "tax_ott821970",
+      "extinct": null,
+      "synonyms": [
+        "Canis zerda",
+        "Fennecus zerda"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott315465",
+      "commonName": "Fennec fox"
+    },
+    {
+      "id": "tax_ott178247",
+      "scientificName": "Gulo gulo",
+      "rank": "species",
+      "parent": "tax_ott752563",
+      "extinct": null,
+      "synonyms": [
+        "Gulo gidleyi",
+        "Gulo schlosseri",
+        "Gulo vulgaris",
+        "Mustela gulo"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott178247",
+      "commonName": "Wolverine"
+    },
+    {
+      "id": "tax_ott752563",
+      "scientificName": "Gulo",
+      "rank": "genus",
+      "parent": "tax_ott67323",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott752563"
+    },
+    {
+      "id": "tax_ott67323",
+      "scientificName": "Martinae",
+      "rank": "subfamily",
+      "parent": "tax_ott348043",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott67323"
+    },
+    {
+      "id": "tax_ott923113",
+      "scientificName": "Meles meles",
+      "rank": "species",
+      "parent": "tax_ott923115",
+      "extinct": null,
+      "synonyms": [
+        "Meles alba",
+        "Meles britannicus",
+        "Meles caninus",
+        "Meles danicus",
+        "Meles marianensis",
+        "Meles typicus",
+        "Meles vulgaris",
+        "Ursus meles"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott923113",
+      "commonName": "European badger"
+    },
+    {
+      "id": "tax_ott923115",
+      "scientificName": "Meles",
+      "rank": "genus",
+      "parent": "tax_ott693052",
+      "extinct": null,
+      "synonyms": [
+        "Eumeles",
+        "Meledes",
+        "Melesium",
+        "Melex",
+        "Taxus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott923115"
+    },
+    {
+      "id": "tax_ott693052",
+      "scientificName": "Melinae",
+      "rank": "subfamily",
+      "parent": "tax_ott348043",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott693052"
+    },
+    {
+      "id": "tax_ott923109",
+      "scientificName": "Mellivora capensis",
+      "rank": "species",
+      "parent": "tax_ott923112",
+      "extinct": null,
+      "synonyms": [
+        "Viverra capensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott923109",
+      "commonName": "Honey badger"
+    },
+    {
+      "id": "tax_ott923112",
+      "scientificName": "Mellivora",
+      "rank": "genus",
+      "parent": "tax_ott693048",
+      "extinct": null,
+      "synonyms": [
+        "Lipotus",
+        "Melitoryx",
+        "Melivora",
+        "Mellivorus",
+        "Ratellus",
+        "Ratelus",
+        "Rattelus",
+        "Ursitaxus",
+        "Ursotaxus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott923112"
+    },
+    {
+      "id": "tax_ott693048",
+      "scientificName": "Mellivoriane",
+      "rank": "subfamily",
+      "parent": "tax_ott348043",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott693048"
+    },
+    {
+      "id": "tax_ott383901",
+      "scientificName": "Hyaena hyaena",
+      "rank": "species",
+      "parent": "tax_ott383900",
+      "extinct": null,
+      "synonyms": [
+        "Canis hyaena",
+        "Hyaena antiquorum",
+        "Hyaena fasciata",
+        "Hyaena hyaena barbara",
+        "Hyaena hyaena hyaena",
+        "Hyaena indica",
+        "Hyaena orientalis",
+        "Hyaena striata",
+        "Hyaena virgata",
+        "Hyaena vulgaris"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott383901",
+      "commonName": "Striped hyena"
+    },
+    {
+      "id": "tax_ott383900",
+      "scientificName": "Hyaena",
+      "rank": "genus",
+      "parent": "tax_ott397138",
+      "extinct": null,
+      "synonyms": [
+        "Euhyaena",
+        "Hiaena",
+        "Hiena",
+        "Hyaenea",
+        "Hyena",
+        "Hyoena",
+        "Parahyaena",
+        "Pliocrocuta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott383900"
+    },
+    {
+      "id": "tax_ott397138",
+      "scientificName": "Hyaenidae",
+      "rank": "family",
+      "parent": "tax_ott827259",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397138"
+    },
+    {
+      "id": "tax_ott397157",
+      "scientificName": "Crocuta crocuta",
+      "rank": "species",
+      "parent": "tax_ott397140",
+      "extinct": null,
+      "synonyms": [
+        "Canis crocuta",
+        "Crocotta kibotonensis",
+        "Crocotta panganensis",
+        "Crocuta crocuta fisi",
+        "Crocuta crocuta fortis",
+        "Crocuta nyassae",
+        "Crocuta nzoyae",
+        "Crocuta rufopicta",
+        "Crocuta thomasi",
+        "Hyaena capensis",
+        "Hyaena crocuta",
+        "Hyaena cuvieri",
+        "Hyaena gariepensis",
+        "Hyaena germinans",
+        "Hyaena leontiewi",
+        "Hyaena maculata",
+        "Hyaena noltei",
+        "Hyaena rufa",
+        "Hyaena thierryi",
+        "Hyaena togoensis",
+        "Hyaena wismanni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397157",
+      "commonName": "Spotted hyena"
+    },
+    {
+      "id": "tax_ott397140",
+      "scientificName": "Crocuta",
+      "rank": "genus",
+      "parent": "tax_ott397138",
+      "extinct": null,
+      "synonyms": [
+        "Crocotta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397140"
+    },
+    {
+      "id": "tax_ott86170",
+      "scientificName": "Leptailurus serval",
+      "rank": "species",
+      "parent": "tax_ott86169",
+      "extinct": null,
+      "synonyms": [
+        "Caracal serval",
+        "Felis capensis",
+        "Felis senegalensis",
+        "Felis serval",
+        "Profelis serval"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86170",
+      "commonName": "Serval"
+    },
+    {
+      "id": "tax_ott86169",
+      "scientificName": "Leptailurus",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Galeopardus",
+        "Septailurus",
+        "Serval",
+        "Servalina"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86169"
+    },
+    {
+      "id": "tax_ott1033549",
+      "scientificName": "Caracal caracal",
+      "rank": "species",
+      "parent": "tax_ott1033548",
+      "extinct": null,
+      "synonyms": [
+        "Felis caracal",
+        "Lynx caracal",
+        "Profelis caracal"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1033549",
+      "commonName": "Caracal"
+    },
+    {
+      "id": "tax_ott1033548",
+      "scientificName": "Caracal",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Caracala",
+        "Urolynchus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1033548"
+    },
+    {
+      "id": "tax_ott752746",
+      "scientificName": "Leopardus pardalis",
+      "rank": "species",
+      "parent": "tax_ott774314",
+      "extinct": null,
+      "synonyms": [
+        "Felis albescens",
+        "Felis canescens",
+        "Felis griffithii",
+        "Felis limitis",
+        "Felis mearnsi",
+        "Felis mexicana",
+        "Felis ocelot",
+        "Felis pardalis",
+        "Felis pseudopardalis",
+        "Leopardus griseus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott752746",
+      "commonName": "Ocelot"
+    },
+    {
+      "id": "tax_ott774314",
+      "scientificName": "Leopardus",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Colocolo",
+        "Dendrailurus",
+        "Lynchaelurus",
+        "Lynchailurus",
+        "Margay",
+        "Montifelis",
+        "Mungofelis",
+        "Noctifelis",
+        "Oncifelis",
+        "Oncilla",
+        "Oncoides",
+        "Oncoïdes",
+        "Oreailurus",
+        "Pajeros",
+        "Pardalina",
+        "Pardalis",
+        "Pseudolynx",
+        "Severtzowius"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott774314"
+    },
+    {
+      "id": "tax_ott489225",
+      "scientificName": "Callithrix pygmaea",
+      "rank": "species",
+      "parent": "tax_ott3607843",
+      "extinct": null,
+      "synonyms": [
+        "Cebuella pygmaea"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott489225",
+      "commonName": "Pygmy marmoset"
+    },
+    {
+      "id": "tax_ott3607843",
+      "scientificName": "Cebuella",
+      "rank": "subgenus",
+      "parent": "tax_ott1015231",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott3607843"
+    },
+    {
+      "id": "tax_ott1015231",
+      "scientificName": "Callithrix",
+      "rank": "genus",
+      "parent": "tax_ott1015234",
+      "extinct": null,
+      "synonyms": [
+        "Anthopithecus",
+        "Antopithecus",
+        "Arctopithecus",
+        "Calibella",
+        "Calithrix",
+        "Calletrix",
+        "Callibella",
+        "Callitriche",
+        "Callitrix",
+        "Cebuella",
+        "Hapale",
+        "Hapales",
+        "Harpale",
+        "Harpales",
+        "Hepale",
+        "Iacchus",
+        "Jacchus",
+        "Jaccus",
+        "Jachus",
+        "Liocephalus",
+        "Mico",
+        "Micoella",
+        "Midas",
+        "Mydas",
+        "Ouistitis",
+        "Sagoin",
+        "Sagoinus",
+        "Sagouin",
+        "Saguin",
+        "Sagunus",
+        "Sanguinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1015231"
+    },
+    {
+      "id": "tax_ott1015234",
+      "scientificName": "Callitrichinae",
+      "rank": "subfamily",
+      "parent": "tax_ott489215",
+      "extinct": null,
+      "synonyms": [
+        "Callithricidae",
+        "Callitrichidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1015234"
+    },
+    {
+      "id": "tax_ott489215",
+      "scientificName": "Cebidae",
+      "rank": "family",
+      "parent": "tax_ott339033",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott489215"
+    },
+    {
+      "id": "tax_ott339033",
+      "scientificName": "Platyrrhini",
+      "rank": "parvorder",
+      "parent": "tax_ott386195",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott339033"
+    },
+    {
+      "id": "tax_ott489221",
+      "scientificName": "Saguinus imperator",
+      "rank": "species",
+      "parent": "tax_ott1015243",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott489221",
+      "commonName": "Emperor tamarin"
+    },
+    {
+      "id": "tax_ott1015243",
+      "scientificName": "Saguinus",
+      "rank": "genus",
+      "parent": "tax_ott1015234",
+      "extinct": null,
+      "synonyms": [
+        "Aedipus",
+        "Hapanella",
+        "Leontocebus",
+        "Marikina",
+        "Midas",
+        "Mystax",
+        "Oedipomidas",
+        "Oedipomidus",
+        "Oedipus",
+        "Saguinus fuscicollis acrensis",
+        "Seniocebus",
+        "Tamarin",
+        "Tamarinus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1015243"
+    },
+    {
+      "id": "tax_ott860954",
+      "scientificName": "Nasalis larvatus",
+      "rank": "species",
+      "parent": "tax_ott235536",
+      "extinct": null,
+      "synonyms": [
+        "Cercopithecus larvatus",
+        "Cercopithecus nasica",
+        "Nasalis larvatus orientalis",
+        "Nasalis recurvus",
+        "Simia capistratus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott860954",
+      "commonName": "Proboscis monkey"
+    },
+    {
+      "id": "tax_ott235536",
+      "scientificName": "Nasalis",
+      "rank": "genus",
+      "parent": "tax_ott741061",
+      "extinct": null,
+      "synonyms": [
+        "Hanno",
+        "Narsalis",
+        "Nasilis",
+        "Rhinolazon",
+        "Rhynchopithecus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott235536"
+    },
+    {
+      "id": "tax_ott741061",
+      "scientificName": "Colobinae",
+      "rank": "subfamily",
+      "parent": "tax_ott842868",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott741061"
+    },
+    {
+      "id": "tax_ott741047",
+      "scientificName": "Mandrillus sphinx",
+      "rank": "species",
+      "parent": "tax_ott741055",
+      "extinct": null,
+      "synonyms": [
+        "Maimon burlacei",
+        "Mandril sphinx",
+        "Mandrillus escherichi",
+        "Mandrillus hagenbecki",
+        "Mandrillus insularis",
+        "Mandrillus schreberi",
+        "Mandrillus tessmanni",
+        "Mandrillus zenkeri",
+        "Mandrillus zenkeri ebolowae",
+        "Papio mormon",
+        "Papio planirostris",
+        "Papio sphinx",
+        "Simia latidens",
+        "Simia madarogaster",
+        "Simia maimon",
+        "Simia mormon",
+        "Simia pennanti",
+        "Simia sphinx",
+        "Simia suilla"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott741047",
+      "commonName": "Mandrill"
+    },
+    {
+      "id": "tax_ott741055",
+      "scientificName": "Mandrillus",
+      "rank": "genus",
+      "parent": "tax_ott842860",
+      "extinct": null,
+      "synonyms": [
+        "Chaeropithecus",
+        "Drill",
+        "Madrillus",
+        "Maimon",
+        "Mandril",
+        "Mandrill",
+        "Mormon",
+        "Paphio",
+        "Papia",
+        "Papio"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott741055"
+    },
+    {
+      "id": "tax_ott995038",
+      "scientificName": "Hylobates lar",
+      "rank": "species",
+      "parent": "tax_ott166552",
+      "extinct": null,
+      "synonyms": [
+        "Homo lar"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott995038",
+      "commonName": "Gibbon"
+    },
+    {
+      "id": "tax_ott166552",
+      "scientificName": "Hylobates",
+      "rank": "genus",
+      "parent": "tax_ott166544",
+      "extinct": null,
+      "synonyms": [
+        "Brachitanytes",
+        "Cheiron",
+        "Gibbon",
+        "Hilobates",
+        "Hylebates",
+        "Hylobatus",
+        "Laratus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott166552"
+    },
+    {
+      "id": "tax_ott166544",
+      "scientificName": "Hylobatidae",
+      "rank": "family",
+      "parent": "tax_ott386191",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott166544"
+    },
+    {
+      "id": "tax_ott50727",
+      "scientificName": "Daubentonia madagascariensis",
+      "rank": "species",
+      "parent": "tax_ott190075",
+      "extinct": null,
+      "synonyms": [
+        "Cheiromys madagascariensis",
+        "Cheiromys madagascariensis laniger",
+        "Chiromys madagascariensis",
+        "Lemur psilodactylus",
+        "Myslemur madagascariensis",
+        "Myspithecus madagascariensis",
+        "Sciurus madagascariensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott50727",
+      "commonName": "Aye-aye"
+    },
+    {
+      "id": "tax_ott190075",
+      "scientificName": "Daubentonia",
+      "rank": "genus",
+      "parent": "tax_ott915769",
+      "extinct": null,
+      "synonyms": [
+        "Aie-aie",
+        "Aieaie",
+        "Aye-aye",
+        "Cheiromys",
+        "Cheyromis",
+        "Cheyromys",
+        "Chiromys",
+        "Myopithecus",
+        "Myslemur",
+        "Myspithecus",
+        "Psilodactylus",
+        "Scolecophagus",
+        "Scoleophagus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott190075"
+    },
+    {
+      "id": "tax_ott915769",
+      "scientificName": "Daubentoniidae",
+      "rank": "family",
+      "parent": "tax_ott702144",
+      "extinct": null,
+      "synonyms": [
+        "Cheiromyidae",
+        "Chiromyidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott915769"
+    },
+    {
+      "id": "tax_ott702144",
+      "scientificName": "Chiromyiformes",
+      "rank": "infraorder",
+      "parent": "tax_ott702147",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702144"
+    },
+    {
+      "id": "tax_ott644245",
+      "scientificName": "Manis javanica",
+      "rank": "species",
+      "parent": "tax_ott644247",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644245",
+      "commonName": "Sunda pangolin"
+    },
+    {
+      "id": "tax_ott644247",
+      "scientificName": "Manis",
+      "rank": "genus",
+      "parent": "tax_ott644249",
+      "extinct": null,
+      "synonyms": [
+        "Manus",
+        "Pangolin",
+        "Pangolinus",
+        "Paramanis",
+        "Phatages",
+        "Phatagin",
+        "Phataginus",
+        "Pholidotus",
+        "Smutsia",
+        "Triglochinopolis",
+        "Uromanis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644247"
+    },
+    {
+      "id": "tax_ott644249",
+      "scientificName": "Manidae",
+      "rank": "family",
+      "parent": "tax_ott644252",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644249"
+    },
+    {
+      "id": "tax_ott644252",
+      "scientificName": "Pholidota",
+      "rank": "order",
+      "parent": "tax_ott392223",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644252"
+    },
+    {
+      "id": "tax_ott347650",
+      "scientificName": "Chrysospalax trevelyani",
+      "rank": "species",
+      "parent": "tax_ott347642",
+      "extinct": null,
+      "synonyms": [
+        "Chrysochloris trevelyani"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott347650",
+      "commonName": "Giant golden mole"
+    },
+    {
+      "id": "tax_ott347642",
+      "scientificName": "Chrysospalax",
+      "rank": "genus",
+      "parent": "tax_ott702190",
+      "extinct": null,
+      "synonyms": [
+        "Bematiscus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott347642"
+    },
+    {
+      "id": "tax_ott702190",
+      "scientificName": "Chrysochlorinae",
+      "rank": "subfamily",
+      "parent": "tax_ott54168",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702190"
+    },
+    {
+      "id": "tax_ott54168",
+      "scientificName": "Chrysochloridae",
+      "rank": "no rank",
+      "parent": "tax_ott3616708",
+      "extinct": null,
+      "synonyms": [
+        "Amblysominae",
+        "Eremitalpinae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott54168"
+    },
+    {
+      "id": "tax_ott3616708",
+      "scientificName": "Afrosoricida",
+      "rank": "no rank",
+      "parent": "tax_ott746703",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott3616708"
+    },
+    {
+      "id": "tax_ott292504",
+      "scientificName": "Condylura cristata",
+      "rank": "species",
+      "parent": "tax_ott733072",
+      "extinct": null,
+      "synonyms": [
+        "Sorex cristatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott292504",
+      "commonName": "Star-nosed mole"
+    },
+    {
+      "id": "tax_ott733072",
+      "scientificName": "Condylura",
+      "rank": "genus",
+      "parent": "tax_ott222358",
+      "extinct": null,
+      "synonyms": [
+        "Astromycter",
+        "Astromyctes",
+        "Astromydes",
+        "Condylurus",
+        "Condytura",
+        "Rhinaster",
+        "Talpasorex"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott733072"
+    },
+    {
+      "id": "tax_ott768502",
+      "scientificName": "Arctictis binturong",
+      "rank": "species",
+      "parent": "tax_ott445403",
+      "extinct": null,
+      "synonyms": [
+        "Ictides albifrons",
+        "Ictides ater",
+        "Paradoxurus albifrons",
+        "Viverra binturong"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768502",
+      "commonName": "Binturong"
+    },
+    {
+      "id": "tax_ott445403",
+      "scientificName": "Arctictis",
+      "rank": "genus",
+      "parent": "tax_ott5686",
+      "extinct": null,
+      "synonyms": [
+        "Arctitis",
+        "Artictis",
+        "Icterus",
+        "Ictides",
+        "Ictis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott445403"
+    },
+    {
+      "id": "tax_ott5686",
+      "scientificName": "Paradoxurinae",
+      "rank": "subfamily",
+      "parent": "tax_ott397144",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5686"
+    },
+    {
+      "id": "tax_ott397144",
+      "scientificName": "Viverridae",
+      "rank": "family",
+      "parent": "tax_ott827259",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott397144"
+    },
+    {
+      "id": "tax_ott768514",
+      "scientificName": "Cryptoprocta ferox",
+      "rank": "species",
+      "parent": "tax_ott768510",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768514",
+      "commonName": "Fossa"
+    },
+    {
+      "id": "tax_ott768510",
+      "scientificName": "Cryptoprocta",
+      "rank": "genus",
+      "parent": "tax_ott527106",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768510"
+    },
+    {
+      "id": "tax_ott527106",
+      "scientificName": "Euplerinae",
+      "rank": "subfamily",
+      "parent": "tax_ott827269",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott527106"
+    },
+    {
+      "id": "tax_ott827269",
+      "scientificName": "Eupleridae",
+      "rank": "family",
+      "parent": "tax_ott827259",
+      "extinct": null,
+      "synonyms": [
+        "Euplerinae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott827269"
+    },
+    {
+      "id": "tax_ott768511",
+      "scientificName": "Civettictis civetta",
+      "rank": "species",
+      "parent": "tax_ott768507",
+      "extinct": null,
+      "synonyms": [
+        "Viverra civetta",
+        "Viverra poortmanni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768511",
+      "commonName": "African civet"
+    },
+    {
+      "id": "tax_ott768507",
+      "scientificName": "Civettictis",
+      "rank": "genus",
+      "parent": "tax_ott5681",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott768507"
+    },
+    {
+      "id": "tax_ott5681",
+      "scientificName": "Viverrinae",
+      "rank": "subfamily",
+      "parent": "tax_ott397144",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5681"
+    },
+    {
+      "id": "tax_ott86183",
+      "scientificName": "Otocolobus manul",
+      "rank": "species",
+      "parent": "tax_ott86182",
+      "extinct": null,
+      "synonyms": [
+        "Felis manul"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86183",
+      "commonName": "Pallas's cat"
+    },
+    {
+      "id": "tax_ott86182",
+      "scientificName": "Otocolobus",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86182"
+    },
+    {
+      "id": "tax_ott862641",
+      "scientificName": "Prionailurus viverrinus",
+      "rank": "species",
+      "parent": "tax_ott570215",
+      "extinct": null,
+      "synonyms": [
+        "Felis viverrina",
+        "Prionailurus viverrinus rhizophoreus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott862641",
+      "commonName": "Fishing cat"
+    },
+    {
+      "id": "tax_ott570215",
+      "scientificName": "Prionailurus",
+      "rank": "genus",
+      "parent": "tax_ott626916",
+      "extinct": null,
+      "synonyms": [
+        "Aellurina",
+        "Aelurina",
+        "Ailurin",
+        "Ailurina",
+        "Ailurinus",
+        "Ailurogale",
+        "Ailurun",
+        "Ictailurus",
+        "Mayailurus",
+        "Plethaelurus",
+        "Priononfelis",
+        "Viverriceps",
+        "Zibethailurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott570215"
+    },
+    {
+      "id": "tax_ott507553",
+      "scientificName": "Leopardus wiedii",
+      "rank": "species",
+      "parent": "tax_ott774314",
+      "extinct": null,
+      "synonyms": [
+        "Felis amnicola",
+        "Felis elegans",
+        "Felis glaucula",
+        "Felis macroura",
+        "Felis pirrensis",
+        "Felis wiedii",
+        "Leopardus amnicola"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott507553",
+      "commonName": "Margay"
+    },
+    {
+      "id": "tax_ott86162",
+      "scientificName": "Puma yagouaroundi",
+      "rank": "species",
+      "parent": "tax_ott86161",
+      "extinct": null,
+      "synonyms": [
+        "Felis apache",
+        "Felis cacomitli",
+        "Felis darwini",
+        "Felis fossata",
+        "Felis jaguarondi",
+        "Felis panamensis",
+        "Felis unicolor",
+        "Felis yagouaroundi",
+        "Felis yagouaroundi melantho",
+        "Felis yaguarondi",
+        "Felis yaguaroundi",
+        "Herpailurus yagouaroundi",
+        "Herpailurus yagouaroundi melantho",
+        "Herpailurus yagouaroundi yagouaroundi",
+        "Herpailurus yaguarondi",
+        "Leopardus yagouaroundi",
+        "Puma yagouaroundii"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott86162",
+      "commonName": "Jaguarundi"
+    },
+    {
+      "id": "tax_ott837601",
+      "scientificName": "Chrysocyon brachyurus",
+      "rank": "species",
+      "parent": "tax_ott621163",
+      "extinct": null,
+      "synonyms": [
+        "Canis brachyurus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott837601",
+      "commonName": "Maned wolf"
+    },
+    {
+      "id": "tax_ott621163",
+      "scientificName": "Chrysocyon",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Crysocyon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott621163"
+    },
+    {
+      "id": "tax_ott684074",
+      "scientificName": "Speothos venaticus",
+      "rank": "species",
+      "parent": "tax_ott684073",
+      "extinct": null,
+      "synonyms": [
+        "Cynogale venatica"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott684074",
+      "commonName": "Bush dog"
+    },
+    {
+      "id": "tax_ott684073",
+      "scientificName": "Speothos",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Abathmodon",
+        "Cynalicus",
+        "Cynalius",
+        "Cynalycus",
+        "Cynogale",
+        "Icticyon",
+        "Ictidocyon",
+        "Melictes",
+        "Melictis",
+        "Speothus",
+        "Speotos",
+        "Spethos",
+        "Ycticyon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott684073"
+    },
+    {
+      "id": "tax_ott821973",
+      "scientificName": "Otocyon megalotis",
+      "rank": "species",
+      "parent": "tax_ott821952",
+      "extinct": null,
+      "synonyms": [
+        "Canis megalotis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821973",
+      "commonName": "Bat-eared fox"
+    },
+    {
+      "id": "tax_ott821952",
+      "scientificName": "Otocyon",
+      "rank": "genus",
+      "parent": "tax_ott770319",
+      "extinct": null,
+      "synonyms": [
+        "Agriodus",
+        "Agrodius",
+        "Octocyon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott821952"
+    },
+    {
+      "id": "tax_ott662806",
+      "scientificName": "Hexaprotodon liberiensis",
+      "rank": "species",
+      "parent": "tax_ott662802",
+      "extinct": null,
+      "synonyms": [
+        "Choeropsis liberiensis",
+        "Hippopotamus liberiensis"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott662806",
+      "commonName": "Pygmy hippopotamus"
+    },
+    {
+      "id": "tax_ott662802",
+      "scientificName": "Hexaprotodon",
+      "rank": "genus",
+      "parent": "tax_ott510764",
+      "extinct": null,
+      "synonyms": [
+        "Chaeropsis",
+        "Choerodes",
+        "Choeropotamus",
+        "Choeropsis",
+        "Diproctodon",
+        "Diprotodon",
+        "Ditomeodon"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott662802"
+    },
+    {
+      "id": "tax_ott274566",
+      "scientificName": "Saiga tatarica",
+      "rank": "species",
+      "parent": "tax_ott274567",
+      "extinct": null,
+      "synonyms": [
+        "Capra tatarica",
+        "Saiga colus",
+        "Saiga imberbis",
+        "Saiga ricei",
+        "Saiga sayga",
+        "Saiga scythica",
+        "Saiga tatarica tatarica"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott274566",
+      "commonName": "Saiga"
+    },
+    {
+      "id": "tax_ott274567",
+      "scientificName": "Saiga",
+      "rank": "genus",
+      "parent": "tax_ott70835",
+      "extinct": null,
+      "synonyms": [
+        "Colus",
+        "Siaga"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott274567"
+    },
+    {
+      "id": "tax_ott128285",
+      "scientificName": "Litocranius walleri",
+      "rank": "species",
+      "parent": "tax_ott128284",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott128285",
+      "commonName": "Gerenuk"
+    },
+    {
+      "id": "tax_ott128284",
+      "scientificName": "Litocranius",
+      "rank": "genus",
+      "parent": "tax_ott70835",
+      "extinct": null,
+      "synonyms": [
+        "Lithocranius"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott128284"
+    },
+    {
+      "id": "tax_ott207426",
+      "scientificName": "Okapia johnstoni",
+      "rank": "species",
+      "parent": "tax_ott207428",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott207426",
+      "commonName": "Okapi"
+    },
+    {
+      "id": "tax_ott207428",
+      "scientificName": "Okapia",
+      "rank": "genus",
+      "parent": "tax_ott768685",
+      "extinct": null,
+      "synonyms": [
+        "Ocapia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott207428"
+    },
+    {
+      "id": "tax_ott860784",
+      "scientificName": "Budorcas taxicolor",
+      "rank": "species",
+      "parent": "tax_ott860783",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott860784",
+      "commonName": "Takin"
+    },
+    {
+      "id": "tax_ott860783",
+      "scientificName": "Budorcas",
+      "rank": "genus",
+      "parent": "tax_ott122647",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott860783"
+    },
+    {
+      "id": "tax_ott202967",
+      "scientificName": "Capra falconeri",
+      "rank": "species",
+      "parent": "tax_ott19014",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott202967",
+      "commonName": "Markhor"
+    },
+    {
+      "id": "tax_ott741053",
+      "scientificName": "Theropithecus gelada",
+      "rank": "species",
+      "parent": "tax_ott741052",
+      "extinct": null,
+      "synonyms": [
+        "Macacus gelada"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott741053",
+      "commonName": "Gelada"
+    },
+    {
+      "id": "tax_ott741052",
+      "scientificName": "Theropithecus",
+      "rank": "genus",
+      "parent": "tax_ott842860",
+      "extinct": null,
+      "synonyms": [
+        "Gelada",
+        "Simopithecus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott741052"
+    },
+    {
+      "id": "tax_ott696018",
+      "scientificName": "Propithecus verreauxi",
+      "rank": "species",
+      "parent": "tax_ott311203",
+      "extinct": null,
+      "synonyms": [
+        "Propithecus majori",
+        "Propithecus verreauxoides"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott696018",
+      "commonName": "Sifaka"
+    },
+    {
+      "id": "tax_ott311203",
+      "scientificName": "Propithecus",
+      "rank": "genus",
+      "parent": "tax_ott1058643",
+      "extinct": null,
+      "synonyms": [
+        "Macromerus",
+        "Protopithecus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott311203"
+    },
+    {
+      "id": "tax_ott1058643",
+      "scientificName": "Indriidae",
+      "rank": "family",
+      "parent": "tax_ott702142",
+      "extinct": null,
+      "synonyms": [
+        "Indridae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1058643"
+    },
+    {
+      "id": "tax_ott339031",
+      "scientificName": "Carlito syrichta",
+      "rank": "species",
+      "parent": "tax_ott5925594",
+      "extinct": null,
+      "synonyms": [
+        "Tarsius syrichta"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott339031",
+      "commonName": "Tarsier"
+    },
+    {
+      "id": "tax_ott5925594",
+      "scientificName": "Carlito",
+      "rank": "genus",
+      "parent": "tax_ott933322",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott5925594"
+    },
+    {
+      "id": "tax_ott933322",
+      "scientificName": "Tarsiidae",
+      "rank": "family",
+      "parent": "tax_ott702151",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott933322"
+    },
+    {
+      "id": "tax_ott702151",
+      "scientificName": "Tarsiiformes",
+      "rank": "infraorder",
+      "parent": "tax_ott702152",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702151"
+    },
+    {
+      "id": "tax_ott921451",
+      "scientificName": "Leontopithecus rosalia",
+      "rank": "species",
+      "parent": "tax_ott532396",
+      "extinct": null,
+      "synonyms": [
+        "Jacchus rosalia brasiliensis",
+        "Jacchus rosalia guyannensis",
+        "Leontocebus leoninus",
+        "Leontopithecus aurora",
+        "Leontopithecus marikina",
+        "Leontopithecus rosalia rosalia"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott921451",
+      "commonName": "Golden lion tamarin"
+    },
+    {
+      "id": "tax_ott532396",
+      "scientificName": "Leontopithecus",
+      "rank": "genus",
+      "parent": "tax_ott1015234",
+      "extinct": null,
+      "synonyms": [
+        "Leontideus",
+        "Leontocebus",
+        "Marikina"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott532396"
+    },
+    {
+      "id": "tax_ott1089663",
+      "scientificName": "Phocoena sinus",
+      "rank": "species",
+      "parent": "tax_ott851311",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1089663",
+      "commonName": "Vaquita"
+    },
+    {
+      "id": "tax_ott851311",
+      "scientificName": "Phocoena",
+      "rank": "genus",
+      "parent": "tax_ott851308",
+      "extinct": null,
+      "synonyms": [
+        "Acanthodelphis",
+        "Australophocaena",
+        "Australophocoena",
+        "Phocaena",
+        "Phocena"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott851311"
+    },
+    {
+      "id": "tax_ott851308",
+      "scientificName": "Phocoenidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Phocaenidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott851308"
+    },
+    {
+      "id": "tax_ott698411",
+      "scientificName": "Inia geoffrensis",
+      "rank": "species",
+      "parent": "tax_ott698410",
+      "extinct": null,
+      "synonyms": [
+        "Delphinorhynchus geoffrensis",
+        "Delphinorhynchus geoffroyi",
+        "Delphinus amazonicus",
+        "Delphinus frontatus",
+        "Delphinus geoffrensis",
+        "Delphinus geoffroyi",
+        "Delphinus inia",
+        "Delphinus rostratus",
+        "Inia amazonica",
+        "Inia amazonicus",
+        "Inia geoffroyensis",
+        "Inia geoffroyi",
+        "Inia geoffroyii",
+        "Inia humboldtiana",
+        "Sotalia pallida",
+        "Sotallia pallida",
+        "Steno frontatus",
+        "Steno pernettyi",
+        "Steno rostratus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698411",
+      "commonName": "Amazon river dolphin"
+    },
+    {
+      "id": "tax_ott698410",
+      "scientificName": "Inia",
+      "rank": "genus",
+      "parent": "tax_ott935329",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott698410"
+    },
+    {
+      "id": "tax_ott935329",
+      "scientificName": "Iniidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Pontoporiidae",
+        "Stenodelphidae",
+        "Stenodelphinidae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott935329"
+    },
+    {
+      "id": "tax_ott825964",
+      "scientificName": "Kogia breviceps",
+      "rank": "species",
+      "parent": "tax_ott276860",
+      "extinct": null,
+      "synonyms": [
+        "Cogia breviceps",
+        "Euphisetes pottsi",
+        "Euphysetes grayii",
+        "Euphysetes macleayi",
+        "Euphysetes macleayii",
+        "Euphysetes pottsi",
+        "Kogia brevirostris",
+        "Kogia floweri",
+        "Kogia goodei",
+        "Kogia goodie",
+        "Kogia grayi",
+        "Kogia grayii",
+        "Kogia greyi",
+        "Kogia macleayi",
+        "Physeter breviceps"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott825964",
+      "commonName": "Pygmy sperm whale"
+    },
+    {
+      "id": "tax_ott276860",
+      "scientificName": "Kogia",
+      "rank": "genus",
+      "parent": "tax_ott3612363",
+      "extinct": null,
+      "synonyms": [
+        "Callignathula",
+        "Callignathus",
+        "Cogia",
+        "Euphisetes",
+        "Euphycetes",
+        "Euphysetes",
+        "Gallignathus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott276860"
+    },
+    {
+      "id": "tax_ott3612363",
+      "scientificName": "Kogiidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Koginae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott3612363"
+    },
+    {
+      "id": "tax_ott1003906",
+      "scientificName": "Berardius bairdii",
+      "rank": "species",
+      "parent": "tax_ott1003909",
+      "extinct": null,
+      "synonyms": [
+        "Berardius bairdi",
+        "Berardius bairdi bairdi",
+        "Berardius vegaae",
+        "Berardius vegae",
+        "Berardius vegana"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1003906",
+      "commonName": "Baird's beaked whale"
+    },
+    {
+      "id": "tax_ott1003909",
+      "scientificName": "Berardius",
+      "rank": "genus",
+      "parent": "tax_ott276849",
+      "extinct": null,
+      "synonyms": [
+        "Berardus",
+        "Paikea"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott1003909"
+    },
+    {
+      "id": "tax_ott276849",
+      "scientificName": "Ziphiidae",
+      "rank": "family",
+      "parent": "tax_ott698417",
+      "extinct": null,
+      "synonyms": [
+        "Ananarcinae",
+        "Choneziphiidae",
+        "Choneziphius coelops",
+        "Dioplodon senensis",
+        "Eboroziphius coelops",
+        "Heterodontidae",
+        "Hyperoodontidae",
+        "Hyperoodontini",
+        "Mesoplodon senensis",
+        "Pelycorhamphus pertortus",
+        "Synostodon",
+        "Xiphidae",
+        "Ziphiinae",
+        "Ziphiopsis phymatodes",
+        "Ziphiopsis servatus"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott276849"
+    },
+    {
+      "id": "tax_ott588292",
+      "scientificName": "Manis pentadactyla",
+      "rank": "species",
+      "parent": "tax_ott644247",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott588292",
+      "commonName": "Pangolin"
+    },
+    {
+      "id": "tax_ott339040",
+      "scientificName": "Perodicticus potto",
+      "rank": "species",
+      "parent": "tax_ott339045",
+      "extinct": null,
+      "synonyms": [
+        "Lemur potto",
+        "Nycticebus potto"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott339040",
+      "commonName": "Potto"
+    },
+    {
+      "id": "tax_ott339045",
+      "scientificName": "Perodicticus",
+      "rank": "genus",
+      "parent": "tax_ott863755",
+      "extinct": null,
+      "synonyms": [
+        "Perodictus",
+        "Potto"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott339045"
+    },
+    {
+      "id": "tax_ott863755",
+      "scientificName": "Lorisidae",
+      "rank": "family",
+      "parent": "tax_ott702145",
+      "extinct": null,
+      "synonyms": [
+        "Loridae"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott863755"
+    },
+    {
+      "id": "tax_ott702145",
+      "scientificName": "Lorisiformes",
+      "rank": "infraorder",
+      "parent": "tax_ott702147",
+      "extinct": null,
+      "synonyms": [],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott702145"
+    },
+    {
+      "id": "tax_ott644255",
+      "scientificName": "Syncerus caffer",
+      "rank": "species",
+      "parent": "tax_ott122649",
+      "extinct": null,
+      "synonyms": [
+        "Bos caffer",
+        "Bos caffer hunti",
+        "Bos caffer matthewsi",
+        "Bos caffer simpsoni"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott644255",
+      "commonName": "African buffalo"
+    },
+    {
+      "id": "tax_ott122649",
+      "scientificName": "Syncerus",
+      "rank": "genus",
+      "parent": "tax_ott346071",
+      "extinct": null,
+      "synonyms": [
+        "Planiceros",
+        "Syncera",
+        "Synceros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott122649"
+    },
+    {
+      "id": "tax_ott215885",
+      "scientificName": "Tragelaphus eurycerus",
+      "rank": "species",
+      "parent": "tax_ott70831",
+      "extinct": null,
+      "synonyms": [
+        "Antilope eurycerus",
+        "Tragelaphus euryceros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott215885",
+      "commonName": "Bongo"
+    },
+    {
+      "id": "tax_ott70831",
+      "scientificName": "Tragelaphus",
+      "rank": "genus",
+      "parent": "tax_ott346071",
+      "extinct": null,
+      "synonyms": [
+        "Ammelaphus",
+        "Boocercus",
+        "Calliope",
+        "Euryceros",
+        "Hydrotragus",
+        "Limnotragus",
+        "Nyala",
+        "Strepriceros",
+        "Strepsicerastes",
+        "Strepsicerella",
+        "Strepsiceros",
+        "Strepticeros"
+      ],
+      "source": "Open Tree of Life Taxonomy",
+      "sourceId": "ott70831"
+    }
+  ],
+  "metadata": {
+    "source": "Open Tree of Life Taxonomy",
+    "sourceUrl": "https://tree.opentreeoflife.org/",
+    "version": "OTT 3.7 (API response source recorded per taxon)",
+    "accessDate": "2026-11-13",
+    "notes": "Taxonomic parentage follows OTL lineage responses. Unknown extinction status is null; it is not assumed extant."
+  }
+}

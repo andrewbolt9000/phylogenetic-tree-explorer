@@ -1,0 +1,4156 @@
+{
+  "source": "PhyloPic",
+  "mappings": {
+    "tax_ott42314": {
+      "imageUuid": "e148eabb-f138-43c6-b1e4-5cda2180485a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e148eabb-f138-43c6-b1e4-5cda2180485a"
+    },
+    "tax_ott42324": {
+      "imageUuid": "5e900306-3a5e-4193-8a94-74cc765f0aaf",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Lukasiniho",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5e900306-3a5e-4193-8a94-74cc765f0aaf"
+    },
+    "tax_ott42322": {
+      "imageUuid": "08d6595a-aaff-4e13-ab6a-5458719194c6",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Lukasiniho",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/08d6595a-aaff-4e13-ab6a-5458719194c6"
+    },
+    "tax_ott532117": {
+      "imageUuid": "d58e738d-e7fd-4812-8779-8ae0bd5ec2a9",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d58e738d-e7fd-4812-8779-8ae0bd5ec2a9"
+    },
+    "tax_ott752759": {
+      "imageUuid": "6290407d-2193-4d97-a194-2a7afc8f89c6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "nicubunu",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6290407d-2193-4d97-a194-2a7afc8f89c6"
+    },
+    "tax_ott42307": {
+      "imageUuid": "3f8eff77-2868-4121-8d7d-a55ebdd49e04",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "An Ignorant Atheist",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3f8eff77-2868-4121-8d7d-a55ebdd49e04"
+    },
+    "tax_ott247341": {
+      "imageUuid": "5036f260-5a0d-42c5-a0bd-9eb0729e54e0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5036f260-5a0d-42c5-a0bd-9eb0729e54e0"
+    },
+    "tax_ott821964": {
+      "imageUuid": "51b1b6e4-129d-41a6-bbbd-c3fab459c25f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/51b1b6e4-129d-41a6-bbbd-c3fab459c25f"
+    },
+    "tax_ott775766": {
+      "imageUuid": "8db421ba-4b42-4bd8-b948-5214ce122f57",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8db421ba-4b42-4bd8-b948-5214ce122f57"
+    },
+    "tax_ott247331": {
+      "imageUuid": "da5faa63-085f-4523-a542-e71cb386c999",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "David Orr",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/da5faa63-085f-4523-a542-e71cb386c999"
+    },
+    "tax_ott313163": {
+      "imageUuid": "0bdb6532-0fa9-4ae7-992c-5b04a58d04d2",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "AnAgnosticGod (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0bdb6532-0fa9-4ae7-992c-5b04a58d04d2"
+    },
+    "tax_ott821953": {
+      "imageUuid": "c974b08c-1189-48db-afc6-edf54356abb4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Holly English",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c974b08c-1189-48db-afc6-edf54356abb4"
+    },
+    "tax_ott247333": {
+      "imageUuid": "4d83a0cd-cf06-4a32-9a5a-0a6b644158c1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "David Orr",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4d83a0cd-cf06-4a32-9a5a-0a6b644158c1"
+    },
+    "tax_ott563166": {
+      "imageUuid": "08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464"
+    },
+    "tax_ott507545": {
+      "imageUuid": "ab6cfd4f-aef7-40fa-b5a5-1b79b7d112aa",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ab6cfd4f-aef7-40fa-b5a5-1b79b7d112aa"
+    },
+    "tax_ott507549": {
+      "imageUuid": "72166d2d-348b-4201-81c6-3599871f8981",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/72166d2d-348b-4201-81c6-3599871f8981"
+    },
+    "tax_ott886829": {
+      "imageUuid": "24f763a3-accf-44c9-9a08-71e9834047b7",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/24f763a3-accf-44c9-9a08-71e9834047b7"
+    },
+    "tax_ott872567": {
+      "imageUuid": "43e82541-0f4a-467c-864e-f7f44c38b5af",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tracy A. Heath",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/43e82541-0f4a-467c-864e-f7f44c38b5af"
+    },
+    "tax_ott10732": {
+      "imageUuid": "c11b4873-aa21-4394-9f5e-6996033c379f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tracy A. Heath",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c11b4873-aa21-4394-9f5e-6996033c379f"
+    },
+    "tax_ott872577": {
+      "imageUuid": "5a5dafa2-6388-43b8-a15a-4fd21cd17594",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tracy A. Heath",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5a5dafa2-6388-43b8-a15a-4fd21cd17594"
+    },
+    "tax_ott872573": {
+      "imageUuid": "4b1f7a58-8713-4d6e-a130-4c8a1ac2f749",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4b1f7a58-8713-4d6e-a130-4c8a1ac2f749"
+    },
+    "tax_ott872562": {
+      "imageUuid": "02990f6d-82d3-45a9-b85e-99deb69d2a96",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Xavier A. Jenkins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/02990f6d-82d3-45a9-b85e-99deb69d2a96"
+    },
+    "tax_ott348040": {
+      "imageUuid": "52193065-f85e-4e4d-a677-11d08aed8c2e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/52193065-f85e-4e4d-a677-11d08aed8c2e"
+    },
+    "tax_ott803645": {
+      "imageUuid": "71cc5f62-d26d-4ea9-8637-c8ac39ea1533",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/71cc5f62-d26d-4ea9-8637-c8ac39ea1533"
+    },
+    "tax_ott231602": {
+      "imageUuid": "11fa3ad4-8d6d-4e3d-947d-644bb5c1dd7f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/11fa3ad4-8d6d-4e3d-947d-644bb5c1dd7f"
+    },
+    "tax_ott656961": {
+      "imageUuid": "51510f2d-8803-4386-89b3-b04e90a32c4d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/51510f2d-8803-4386-89b3-b04e90a32c4d"
+    },
+    "tax_ott949676": {
+      "imageUuid": "d3a78afb-1b9e-45e0-b6f4-144d79f399f0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d3a78afb-1b9e-45e0-b6f4-144d79f399f0"
+    },
+    "tax_ott397142": {
+      "imageUuid": "1ff6d0be-3c7a-4908-8125-ff5eb879e1e0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1ff6d0be-3c7a-4908-8125-ff5eb879e1e0"
+    },
+    "tax_ott698422": {
+      "imageUuid": "1925a9aa-bf33-4270-824c-b8f781f8ec82",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1925a9aa-bf33-4270-824c-b8f781f8ec82"
+    },
+    "tax_ott95364": {
+      "imageUuid": "6b7f24dc-6525-4263-b480-6f93f9a7a31d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6b7f24dc-6525-4263-b480-6f93f9a7a31d"
+    },
+    "tax_ott749644": {
+      "imageUuid": "16cfde1b-d577-4de8-82b9-62b760aacba5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/16cfde1b-d577-4de8-82b9-62b760aacba5"
+    },
+    "tax_ott1040694": {
+      "imageUuid": "44ee07ec-f829-49f9-b242-f4b92bb9cf73",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/44ee07ec-f829-49f9-b242-f4b92bb9cf73"
+    },
+    "tax_ott541936": {
+      "imageUuid": "62398ac0-f0c3-48f8-8455-53512a05fbc4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/62398ac0-f0c3-48f8-8455-53512a05fbc4"
+    },
+    "tax_ott541928": {
+      "imageUuid": "7c9ab182-175d-4f02-96d0-09c1e5212bff",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7c9ab182-175d-4f02-96d0-09c1e5212bff"
+    },
+    "tax_ott1034198": {
+      "imageUuid": "fdfaac80-2382-4d80-888b-bca2ca3ca2e7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Oscar Sanisidro",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fdfaac80-2382-4d80-888b-bca2ca3ca2e7"
+    },
+    "tax_ott1034204": {
+      "imageUuid": "90839fda-8f63-4609-abed-25a7fb73c39c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/90839fda-8f63-4609-abed-25a7fb73c39c"
+    },
+    "tax_ott510762": {
+      "imageUuid": "3769e205-b10c-4aab-affc-b4f0302f4eaa",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Evan Boucher",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3769e205-b10c-4aab-affc-b4f0302f4eaa"
+    },
+    "tax_ott768674": {
+      "imageUuid": "b35f867d-26e8-4c48-806e-0f07f18b1844",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Bernard Dupont (photograph) and T. Michael Keesey (tracing)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b35f867d-26e8-4c48-806e-0f07f18b1844"
+    },
+    "tax_ott124776": {
+      "imageUuid": "3f18d263-3f53-4b88-a496-e21982ddc5ef",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Cathy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3f18d263-3f53-4b88-a496-e21982ddc5ef"
+    },
+    "tax_ott1068218": {
+      "imageUuid": "85d95128-912c-427a-9542-138e1dbf5651",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Mercedes Yrayzoz (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/85d95128-912c-427a-9542-138e1dbf5651"
+    },
+    "tax_ott1068202": {
+      "imageUuid": "d874b4d0-92f2-4503-80ce-f728ca0b03c8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d874b4d0-92f2-4503-80ce-f728ca0b03c8"
+    },
+    "tax_ott490099": {
+      "imageUuid": "ea92020a-298a-4977-b6d3-dccbe816bb5e",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "DFoidl (modified by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ea92020a-298a-4977-b6d3-dccbe816bb5e"
+    },
+    "tax_ott907693": {
+      "imageUuid": "d44d834e-1c32-4a08-a5d5-f30139de4450",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tracy A. Heath",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d44d834e-1c32-4a08-a5d5-f30139de4450"
+    },
+    "tax_ott641187": {
+      "imageUuid": "d36c5902-5124-41e5-a880-15b0b1d1070d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Cristopher Silva",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d36c5902-5124-41e5-a880-15b0b1d1070d"
+    },
+    "tax_ott70819": {
+      "imageUuid": "a9297cbd-10ca-457b-b5d5-a0b038720df7",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a9297cbd-10ca-457b-b5d5-a0b038720df7"
+    },
+    "tax_ott19017": {
+      "imageUuid": "c39a1d31-eb36-4b62-ba4d-32e29e0e5a8d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c39a1d31-eb36-4b62-ba4d-32e29e0e5a8d"
+    },
+    "tax_ott730013": {
+      "imageUuid": "3d8acaf6-4355-491e-8e86-4a411b53b98b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3d8acaf6-4355-491e-8e86-4a411b53b98b"
+    },
+    "tax_ott729998": {
+      "imageUuid": "008d6d88-d1be-470a-8c70-73625c3fb4fb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/008d6d88-d1be-470a-8c70-73625c3fb4fb"
+    },
+    "tax_ott510768": {
+      "imageUuid": "799065e8-f7a7-4581-8af5-7fe70165fa8a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "nicubunu",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/799065e8-f7a7-4581-8af5-7fe70165fa8a"
+    },
+    "tax_ott510752": {
+      "imageUuid": "e52676dd-272c-4b14-8c99-ea5dc98942e5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e52676dd-272c-4b14-8c99-ea5dc98942e5"
+    },
+    "tax_ott986973": {
+      "imageUuid": "aca9eeb8-21bc-4315-a351-17c1c1169801",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/aca9eeb8-21bc-4315-a351-17c1c1169801"
+    },
+    "tax_ott906301": {
+      "imageUuid": "ec7b0ed8-e2ef-4907-a5b7-5b47391034d4",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "based on photo by Gavin McKinnon (https://www.inaturalist.org/observations/25977897)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ec7b0ed8-e2ef-4907-a5b7-5b47391034d4"
+    },
+    "tax_ott410153": {
+      "imageUuid": "e6e864fd-8e3d-435f-9db3-dc6869c589f1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "mystica",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e6e864fd-8e3d-435f-9db3-dc6869c589f1"
+    },
+    "tax_ott460509": {
+      "imageUuid": "df2d0ad0-adb0-49d7-afe5-edc6cad21064",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Rebecca Collins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/df2d0ad0-adb0-49d7-afe5-edc6cad21064"
+    },
+    "tax_ott936014": {
+      "imageUuid": "72f2f997-e474-4caf-bbd5-72fc8dbcc40d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/72f2f997-e474-4caf-bbd5-72fc8dbcc40d"
+    },
+    "tax_ott410145": {
+      "imageUuid": "56f6fdb2-15d0-43b5-b13f-714f2cb0f5d0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tracy A. Heath",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/56f6fdb2-15d0-43b5-b13f-714f2cb0f5d0"
+    },
+    "tax_ott410149": {
+      "imageUuid": "f889b336-9e67-4154-bc96-db4095a55be2",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "xgirouxb",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f889b336-9e67-4154-bc96-db4095a55be2"
+    },
+    "tax_ott768683": {
+      "imageUuid": "a1ead819-3839-4430-9774-ae6984178fe8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Xavier Giroux-Bougard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1ead819-3839-4430-9774-ae6984178fe8"
+    },
+    "tax_ott274550": {
+      "imageUuid": "eb673457-7de3-4f3e-9b1c-c807d4d925b6",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Sarah E. Haworth",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/eb673457-7de3-4f3e-9b1c-c807d4d925b6"
+    },
+    "tax_ott123206": {
+      "imageUuid": "b7344c53-6115-49cf-836d-ae71cc3853a8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Scott Hartman",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b7344c53-6115-49cf-836d-ae71cc3853a8"
+    },
+    "tax_ott768679": {
+      "imageUuid": "e07d1491-1d85-4c47-9f7d-075ea57bf0c5",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "[unknown]",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e07d1491-1d85-4c47-9f7d-075ea57bf0c5"
+    },
+    "tax_ott363040": {
+      "imageUuid": "1f3e2f15-8899-4ad0-b935-7b05a4d97423",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1f3e2f15-8899-4ad0-b935-7b05a4d97423"
+    },
+    "tax_ott19028": {
+      "imageUuid": "020a207e-4e91-4939-95b5-6951afae2b69",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Lukasiniho",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/020a207e-4e91-4939-95b5-6951afae2b69"
+    },
+    "tax_ott417950": {
+      "imageUuid": "2f7da8c8-897a-445e-b003-b3955ad08850",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "T. Michael Keesey (vectorization) and Tony Hisgett (photography)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2f7da8c8-897a-445e-b003-b3955ad08850"
+    },
+    "tax_ott158484": {
+      "imageUuid": "f06b4dd0-094e-4f37-9105-25fdb4eb1b02",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f06b4dd0-094e-4f37-9105-25fdb4eb1b02"
+    },
+    "tax_ott417965": {
+      "imageUuid": "d9af529d-e426-4c7a-922a-562d57a7872e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey (after Colin M. L. Burnett)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d9af529d-e426-4c7a-922a-562d57a7872e"
+    },
+    "tax_ott770302": {
+      "imageUuid": "63c557ce-d82c-42e6-a26a-a9f0f05c2c18",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/63c557ce-d82c-42e6-a26a-a9f0f05c2c18"
+    },
+    "tax_ott770295": {
+      "imageUuid": "67144c22-93c2-4dc0-ba13-9f9dd2d223b9",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/67144c22-93c2-4dc0-ba13-9f9dd2d223b9"
+    },
+    "tax_ott770315": {
+      "imageUuid": "c089caae-43ef-4e4e-bf26-973dd4cb65c5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c089caae-43ef-4e4e-bf26-973dd4cb65c5"
+    },
+    "tax_ott689650": {
+      "imageUuid": "eedde61f-3402-4f7c-9350-49b74f5e1dba",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba"
+    },
+    "tax_ott689660": {
+      "imageUuid": "eedde61f-3402-4f7c-9350-49b74f5e1dba",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/eedde61f-3402-4f7c-9350-49b74f5e1dba"
+    },
+    "tax_ott115449": {
+      "imageUuid": "071db0d0-20a2-4f1b-9c26-fa20db640664",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/071db0d0-20a2-4f1b-9c26-fa20db640664"
+    },
+    "tax_ott913930": {
+      "imageUuid": "570ab1e1-a663-4360-96b7-daf09ca58abe",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Geoff Shaw",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/570ab1e1-a663-4360-96b7-daf09ca58abe"
+    },
+    "tax_ott327624": {
+      "imageUuid": "8a06d489-024f-4505-8ccb-f86e84e00e75",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8a06d489-024f-4505-8ccb-f86e84e00e75"
+    },
+    "tax_ott597239": {
+      "imageUuid": "624e3d80-cba2-4465-8f3a-c9ae4025198b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Michael Scroggie",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/624e3d80-cba2-4465-8f3a-c9ae4025198b"
+    },
+    "tax_ott897696": {
+      "imageUuid": "a55461ac-40a5-44ba-a1ce-372df579ca28",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Cathy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a55461ac-40a5-44ba-a1ce-372df579ca28"
+    },
+    "tax_ott42493": {
+      "imageUuid": "006f91fa-e49f-43f6-a02b-97c6d7b9178a",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Geoff Shaw",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/006f91fa-e49f-43f6-a02b-97c6d7b9178a"
+    },
+    "tax_ott835328": {
+      "imageUuid": "35fa51dc-e912-4158-97c4-d2088ea7abbc",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/35fa51dc-e912-4158-97c4-d2088ea7abbc"
+    },
+    "tax_ott919171": {
+      "imageUuid": "91324e57-b3f1-42e0-abe3-43e5bc8aa4c6",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/91324e57-b3f1-42e0-abe3-43e5bc8aa4c6"
+    },
+    "tax_ott962377": {
+      "imageUuid": "61932f57-1fd2-49d9-bb86-042d6005581a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/61932f57-1fd2-49d9-bb86-042d6005581a"
+    },
+    "tax_ott16038": {
+      "imageUuid": "6885c062-5deb-4ebf-a481-752186819108",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Becky Barnes",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6885c062-5deb-4ebf-a481-752186819108"
+    },
+    "tax_ott273233": {
+      "imageUuid": "925fa570-10d9-4319-bd8a-e64ad7987900",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/925fa570-10d9-4319-bd8a-e64ad7987900"
+    },
+    "tax_ott490538": {
+      "imageUuid": "d52b48fc-be52-46a1-94b7-ac7790b4730c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d52b48fc-be52-46a1-94b7-ac7790b4730c"
+    },
+    "tax_ott796672": {
+      "imageUuid": "5d59b5ce-c1dd-40f6-b295-8d2629b9775e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5d59b5ce-c1dd-40f6-b295-8d2629b9775e"
+    },
+    "tax_ott796660": {
+      "imageUuid": "6ecff71e-fcfc-4cb9-b773-9e6e21607587",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6ecff71e-fcfc-4cb9-b773-9e6e21607587"
+    },
+    "tax_ott410925": {
+      "imageUuid": "d02f50ba-af71-4997-860a-ff11e8d1cbcc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Anthony Caravaggi",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d02f50ba-af71-4997-860a-ff11e8d1cbcc"
+    },
+    "tax_ott886085": {
+      "imageUuid": "b3dd721e-6084-4413-8300-44e10d8fd3ca",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b3dd721e-6084-4413-8300-44e10d8fd3ca"
+    },
+    "tax_ott744018": {
+      "imageUuid": "097336ef-db5f-4edc-a2e4-2c29a10aa512",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/097336ef-db5f-4edc-a2e4-2c29a10aa512"
+    },
+    "tax_ott744000": {
+      "imageUuid": "afcfa5fd-3dda-4037-a2e9-9af58a5d3d4b",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Ricardo Araújo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/afcfa5fd-3dda-4037-a2e9-9af58a5d3d4b"
+    },
+    "tax_ott542509": {
+      "imageUuid": "6b2b98f6-f879-445f-9ac2-2c2563157025",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Madeleine Price Ball",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6b2b98f6-f879-445f-9ac2-2c2563157025"
+    },
+    "tax_ott271555": {
+      "imageUuid": "828a8d15-6aa9-41ab-85a3-e9e06c0f1945",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/828a8d15-6aa9-41ab-85a3-e9e06c0f1945"
+    },
+    "tax_ott864596": {
+      "imageUuid": "1e15411c-5394-4a9d-a209-76c8ac0c331d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1e15411c-5394-4a9d-a209-76c8ac0c331d"
+    },
+    "tax_ott923734": {
+      "imageUuid": "8e61e166-11f4-4377-a923-9b5b597b6eba",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Maha Ghazal",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8e61e166-11f4-4377-a923-9b5b597b6eba"
+    },
+    "tax_ott5553964": {
+      "imageUuid": "8930c815-0a3e-4b77-a2da-e7273bccddd7",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Jan A. Venter, Herbert H. T. Prins, David A. Balfour & Rob Slotow (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8930c815-0a3e-4b77-a2da-e7273bccddd7"
+    },
+    "tax_ott124230": {
+      "imageUuid": "0b5c6b41-3a44-4c9e-869a-63ed54bf7c65",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0b5c6b41-3a44-4c9e-869a-63ed54bf7c65"
+    },
+    "tax_ott124215": {
+      "imageUuid": "880129b5-b78b-40a9-88ad-55f7d1dc823f",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/880129b5-b78b-40a9-88ad-55f7d1dc823f"
+    },
+    "tax_ott226190": {
+      "imageUuid": "16969246-31e0-48e3-90ff-cad9a8746073",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073"
+    },
+    "tax_ott226198": {
+      "imageUuid": "ce70490a-79a5-47fc-afb9-834e45803ab4",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ce70490a-79a5-47fc-afb9-834e45803ab4"
+    },
+    "tax_ott276851": {
+      "imageUuid": "6579c20d-f8c2-46d8-8d23-5dd2571584bc",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6579c20d-f8c2-46d8-8d23-5dd2571584bc"
+    },
+    "tax_ott800320": {
+      "imageUuid": "8b73f54f-15e8-41b8-8c9c-46c86a185104",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8b73f54f-15e8-41b8-8c9c-46c86a185104"
+    },
+    "tax_ott306757": {
+      "imageUuid": "bfe45de4-d8a8-423c-abf3-087a7c7d0d6c",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bfe45de4-d8a8-423c-abf3-087a7c7d0d6c"
+    },
+    "tax_ott851318": {
+      "imageUuid": "79010a33-76f6-4f16-9e35-b9121b0e6bed",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/79010a33-76f6-4f16-9e35-b9121b0e6bed"
+    },
+    "tax_ott226178": {
+      "imageUuid": "12597d6c-9c80-4510-9826-975eabddc597",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Vince Smith",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/12597d6c-9c80-4510-9826-975eabddc597"
+    },
+    "tax_ott835324": {
+      "imageUuid": "5584723d-1756-48a0-8a0d-9bdb703d62ce",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5584723d-1756-48a0-8a0d-9bdb703d62ce"
+    },
+    "tax_ott238431": {
+      "imageUuid": "21180755-3394-40bf-93eb-810954c0f7ba",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Roberto Díaz Sibaja",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/21180755-3394-40bf-93eb-810954c0f7ba"
+    },
+    "tax_ott813034": {
+      "imageUuid": "59899f62-b475-4f97-acc9-9c058965ed2a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/59899f62-b475-4f97-acc9-9c058965ed2a"
+    },
+    "tax_ott286193": {
+      "imageUuid": "23c700c9-e695-404a-8d0c-146e1fc4bada",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/23c700c9-e695-404a-8d0c-146e1fc4bada"
+    },
+    "tax_ott391631": {
+      "imageUuid": "735450b5-0af0-4ca8-b37a-30734c136397",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Nina Skinner",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/735450b5-0af0-4ca8-b37a-30734c136397"
+    },
+    "tax_ott222362": {
+      "imageUuid": "0465d81c-0def-4478-af15-a075d472e957",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0465d81c-0def-4478-af15-a075d472e957"
+    },
+    "tax_ott561087": {
+      "imageUuid": "cfee2dca-3767-46b8-8d03-bd8f46e79e9e",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Pearson Scott Foresman",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cfee2dca-3767-46b8-8d03-bd8f46e79e9e"
+    },
+    "tax_ott315465": {
+      "imageUuid": "7c580599-c78e-48d8-a8ef-5154583d8bb5",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7c580599-c78e-48d8-a8ef-5154583d8bb5"
+    },
+    "tax_ott178247": {
+      "imageUuid": "1f9bbb79-f060-47c1-9954-ea78812d3b91",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1f9bbb79-f060-47c1-9954-ea78812d3b91"
+    },
+    "tax_ott923113": {
+      "imageUuid": "0c32ffbe-26ee-495a-9ec5-adb14ff1444b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Anthony Caravaggi",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0c32ffbe-26ee-495a-9ec5-adb14ff1444b"
+    },
+    "tax_ott923109": {
+      "imageUuid": "71409c76-60f0-4a92-a3eb-9a739f01bc09",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/71409c76-60f0-4a92-a3eb-9a739f01bc09"
+    },
+    "tax_ott383901": {
+      "imageUuid": "8023a0f8-c25e-4d6a-a8d2-307f54c6d736",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Donovan Reginald Rosevear (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8023a0f8-c25e-4d6a-a8d2-307f54c6d736"
+    },
+    "tax_ott397157": {
+      "imageUuid": "a160fd31-c6ba-4bd1-b2a1-dbd77014139d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a160fd31-c6ba-4bd1-b2a1-dbd77014139d"
+    },
+    "tax_ott86170": {
+      "imageUuid": "01895510-7c27-489d-b441-6f72b1f562d2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/01895510-7c27-489d-b441-6f72b1f562d2"
+    },
+    "tax_ott1033549": {
+      "imageUuid": "0495f1b4-f9a0-4ba7-ae8f-bd89aa104c42",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0495f1b4-f9a0-4ba7-ae8f-bd89aa104c42"
+    },
+    "tax_ott752746": {
+      "imageUuid": "2fc7bbbf-8ca7-48fb-8495-d351cd3b1f99",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2fc7bbbf-8ca7-48fb-8495-d351cd3b1f99"
+    },
+    "tax_ott489225": {
+      "imageUuid": "2c5508ae-5381-4622-926b-2f9b16f119f6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2c5508ae-5381-4622-926b-2f9b16f119f6"
+    },
+    "tax_ott489221": {
+      "imageUuid": "c2f4814c-3fd6-4502-b61e-ec33bdeb47b3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c2f4814c-3fd6-4502-b61e-ec33bdeb47b3"
+    },
+    "tax_ott860954": {
+      "imageUuid": "cfce3721-fd48-448c-b019-82d8808baf48",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cfce3721-fd48-448c-b019-82d8808baf48"
+    },
+    "tax_ott741047": {
+      "imageUuid": "88f44b35-0d87-4176-a23f-b699ad04cf40",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/88f44b35-0d87-4176-a23f-b699ad04cf40"
+    },
+    "tax_ott995038": {
+      "imageUuid": "7d2c80e8-578d-4394-ac5e-edb0aa3f1e94",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Kai R. Caspar",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7d2c80e8-578d-4394-ac5e-edb0aa3f1e94"
+    },
+    "tax_ott1012350": {
+      "imageUuid": "9fbdceb3-6183-415f-8647-3783bc7cfa18",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Ron Holmes/U. S. Fish and Wildlife Service (source photo), T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9fbdceb3-6183-415f-8647-3783bc7cfa18"
+    },
+    "tax_ott263127": {
+      "imageUuid": "b2b60a18-fd7d-49b2-a15d-54a62cdcac6b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Anthony Caravaggi",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b2b60a18-fd7d-49b2-a15d-54a62cdcac6b"
+    },
+    "tax_ott786435": {
+      "imageUuid": "6cebf754-cb71-448d-a5bb-947157205264",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Liftarn",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6cebf754-cb71-448d-a5bb-947157205264"
+    },
+    "tax_ott509839": {
+      "imageUuid": "e00734a7-e8a8-4fe5-b5a9-58d927ca451a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Lauren Anderson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e00734a7-e8a8-4fe5-b5a9-58d927ca451a"
+    },
+    "tax_ott514178": {
+      "imageUuid": "919a6f91-cb0b-4646-9ec2-b6a8b5e4b024",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/919a6f91-cb0b-4646-9ec2-b6a8b5e4b024"
+    },
+    "tax_ott509853": {
+      "imageUuid": "919a6f91-cb0b-4646-9ec2-b6a8b5e4b024",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/919a6f91-cb0b-4646-9ec2-b6a8b5e4b024"
+    },
+    "tax_ott494370": {
+      "imageUuid": "ef997bb0-14d8-4da3-abd1-25eab0d5eb61",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Neil Kelley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef997bb0-14d8-4da3-abd1-25eab0d5eb61"
+    },
+    "tax_ott494361": {
+      "imageUuid": "21c50828-58d8-42df-9219-2c1b0fb57c99",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/21c50828-58d8-42df-9219-2c1b0fb57c99"
+    },
+    "tax_ott60417": {
+      "imageUuid": "b0a4d3d9-f8d5-4457-a39a-93e7ca8d83fc",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Edwin Price",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b0a4d3d9-f8d5-4457-a39a-93e7ca8d83fc"
+    },
+    "tax_ott647692": {
+      "imageUuid": "14ddbf4d-7749-4153-bbe1-8d0c6ffdf142",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Matt Martyniuk (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/14ddbf4d-7749-4153-bbe1-8d0c6ffdf142"
+    },
+    "tax_ott829513": {
+      "imageUuid": "35947c43-1e5c-4003-bbaa-d352530b5af7",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Darren Naish (vectorize by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/35947c43-1e5c-4003-bbaa-d352530b5af7"
+    },
+    "tax_ott589152": {
+      "imageUuid": "6fe53db2-831d-47c4-84db-34b7b429cc40",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6fe53db2-831d-47c4-84db-34b7b429cc40"
+    },
+    "tax_ott140314": {
+      "imageUuid": "05cd7d8c-6b2c-4b97-b7b8-053559019eeb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "An Ignorant Atheist",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/05cd7d8c-6b2c-4b97-b7b8-053559019eeb"
+    },
+    "tax_ott714461": {
+      "imageUuid": "b677ec7b-a2ef-46be-9d78-a997a88e1a9c",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Xavier Giroux-Bougard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b677ec7b-a2ef-46be-9d78-a997a88e1a9c"
+    },
+    "tax_ott765167": {
+      "imageUuid": "3ceaa22b-8879-4545-9e32-425010f33cd4",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3ceaa22b-8879-4545-9e32-425010f33cd4"
+    },
+    "tax_ott1057518": {
+      "imageUuid": "ae2506e3-b97d-45d7-a3f9-1bfb1567e1b1",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Unknown (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ae2506e3-b97d-45d7-a3f9-1bfb1567e1b1"
+    },
+    "tax_ott744564": {
+      "imageUuid": "ef8228ef-8738-4110-927c-3ab6b9c03b0e",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef8228ef-8738-4110-927c-3ab6b9c03b0e"
+    },
+    "tax_ott595567": {
+      "imageUuid": "a1244226-f2c2-41dc-b113-f1c6545958ce",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1244226-f2c2-41dc-b113-f1c6545958ce"
+    },
+    "tax_ott363031": {
+      "imageUuid": "8691fc60-e7f2-4a69-af65-08461defac6b",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "L. Shyamal",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8691fc60-e7f2-4a69-af65-08461defac6b"
+    },
+    "tax_ott453575": {
+      "imageUuid": "631543cd-0e41-43b6-a325-335a06b2045e",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Cathy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/631543cd-0e41-43b6-a325-335a06b2045e"
+    },
+    "tax_ott446482": {
+      "imageUuid": "101ad9ab-dae8-442f-b102-8109b02b2a69",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/101ad9ab-dae8-442f-b102-8109b02b2a69"
+    },
+    "tax_ott153563": {
+      "imageUuid": "aff847b0-ecbd-4d41-98ce-665921a6d96e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/aff847b0-ecbd-4d41-98ce-665921a6d96e"
+    },
+    "tax_ott938416": {
+      "imageUuid": "93124ce1-73c9-4278-bfd4-a29886bc7ca7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/93124ce1-73c9-4278-bfd4-a29886bc7ca7"
+    },
+    "tax_ott183576": {
+      "imageUuid": "fc5ff059-bb2d-4e91-8422-9039ef106979",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fc5ff059-bb2d-4e91-8422-9039ef106979"
+    },
+    "tax_ott140425": {
+      "imageUuid": "633c6d04-09be-4aa4-9b92-c716c5ea9214",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Douglas Brown (modified by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/633c6d04-09be-4aa4-9b92-c716c5ea9214"
+    },
+    "tax_ott331952": {
+      "imageUuid": "2db31c7c-b0a9-460f-807e-da9181f21cf6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Peileppe",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2db31c7c-b0a9-460f-807e-da9181f21cf6"
+    },
+    "tax_ott776471": {
+      "imageUuid": "1f3bf322-4ca3-402f-80c9-0260843de5e4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1f3bf322-4ca3-402f-80c9-0260843de5e4"
+    },
+    "tax_ott30736": {
+      "imageUuid": "ce9604d7-398b-4bb2-8254-6e0283a1785e",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "T. Michael Keesey (photo by Darren Swim)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ce9604d7-398b-4bb2-8254-6e0283a1785e"
+    },
+    "tax_ott307364": {
+      "imageUuid": "1b42d9de-ad53-400d-8230-fb76602b742b",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Scott Hartman",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1b42d9de-ad53-400d-8230-fb76602b742b"
+    },
+    "tax_ott96291": {
+      "imageUuid": "83b29bf0-f4f9-412d-8b3b-7faf4febd69d",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Karina Garcia",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/83b29bf0-f4f9-412d-8b3b-7faf4febd69d"
+    },
+    "tax_ott507122": {
+      "imageUuid": "3c4ef873-76b5-473d-a740-8fcb4864462b",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Rebecca Groom",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3c4ef873-76b5-473d-a740-8fcb4864462b"
+    },
+    "tax_ott745175": {
+      "imageUuid": "3b74c3e5-1ffa-4089-95b1-371f1b71fce0",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Andrew Butko (modified)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3b74c3e5-1ffa-4089-95b1-371f1b71fce0"
+    },
+    "tax_ott1040135": {
+      "imageUuid": "cf38be70-f0a8-4a47-b387-e797ec16c7c1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matt Wilkins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cf38be70-f0a8-4a47-b387-e797ec16c7c1"
+    },
+    "tax_ott759410": {
+      "imageUuid": "618b6a9d-6aa6-4316-bf25-2a7a3f788e88",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/618b6a9d-6aa6-4316-bf25-2a7a3f788e88"
+    },
+    "tax_ott810756": {
+      "imageUuid": "b4f64736-abc3-429d-b19e-4c7f74b291c4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b4f64736-abc3-429d-b19e-4c7f74b291c4"
+    },
+    "tax_ott549519": {
+      "imageUuid": "632580ed-9bf0-4e01-b3b6-3cf31fcf417e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/632580ed-9bf0-4e01-b3b6-3cf31fcf417e"
+    },
+    "tax_ott839181": {
+      "imageUuid": "91fee963-e1b4-4ee9-935d-c4659e998f45",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/91fee963-e1b4-4ee9-935d-c4659e998f45"
+    },
+    "tax_ott1030674": {
+      "imageUuid": "120d7c61-8a1d-46f3-9124-352dd5e32050",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/120d7c61-8a1d-46f3-9124-352dd5e32050"
+    },
+    "tax_ott851014": {
+      "imageUuid": "0d19238f-25ca-42a5-a1e2-d108defb75f1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Myriam_Ramirez",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0d19238f-25ca-42a5-a1e2-d108defb75f1"
+    },
+    "tax_ott734818": {
+      "imageUuid": "93400ea7-5b4c-4d5f-92ae-2345f228df08",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matías Muñoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/93400ea7-5b4c-4d5f-92ae-2345f228df08"
+    },
+    "tax_ott630645": {
+      "imageUuid": "fcde8660-84a2-43d2-b8f5-90a2de9f0f7d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matias",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fcde8660-84a2-43d2-b8f5-90a2de9f0f7d"
+    },
+    "tax_ott749203": {
+      "imageUuid": "b985eefe-7873-437b-93b6-e06673df564c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b985eefe-7873-437b-93b6-e06673df564c"
+    },
+    "tax_ott348848": {
+      "imageUuid": "ddd5783c-ded5-48f2-a07d-cc37c83b227b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ddd5783c-ded5-48f2-a07d-cc37c83b227b"
+    },
+    "tax_ott733984": {
+      "imageUuid": "b8883a4e-6cf6-4068-93b0-c2f132a20fbb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b8883a4e-6cf6-4068-93b0-c2f132a20fbb"
+    },
+    "tax_ott792628": {
+      "imageUuid": "618c6954-80d7-4bd8-af94-6b49689ab532",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Chris Romeiks",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/618c6954-80d7-4bd8-af94-6b49689ab532"
+    },
+    "tax_ott212182": {
+      "imageUuid": "794f1293-774f-4fb2-9543-64dea9bc37d5",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Patrick Fisher (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/794f1293-774f-4fb2-9543-64dea9bc37d5"
+    },
+    "tax_ott609788": {
+      "imageUuid": "3e6b9118-7aff-4b64-8c95-38b2ee49d922",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3e6b9118-7aff-4b64-8c95-38b2ee49d922"
+    },
+    "tax_ott864865": {
+      "imageUuid": "d973f930-85f8-4a91-9e7f-8c3a0b140c81",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Richard Bartz (photo) and Albertonykus (silhouette)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d973f930-85f8-4a91-9e7f-8c3a0b140c81"
+    },
+    "tax_ott887691": {
+      "imageUuid": "491a36e7-5412-44cc-862a-4239a0acea08",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/491a36e7-5412-44cc-862a-4239a0acea08"
+    },
+    "tax_ott791957": {
+      "imageUuid": "0871b630-2dcd-4d35-b0a4-6a6551140553",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Sharon Wegner-Larsen",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0871b630-2dcd-4d35-b0a4-6a6551140553"
+    },
+    "tax_ott71459": {
+      "imageUuid": "d1e7e88d-20fb-4d4c-8a3e-b3417c392291",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Alexandre Vong",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d1e7e88d-20fb-4d4c-8a3e-b3417c392291"
+    },
+    "tax_ott329999": {
+      "imageUuid": "8bbf9dc4-b846-4757-9d93-191a3e37b16f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "annaleeblysse",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8bbf9dc4-b846-4757-9d93-191a3e37b16f"
+    },
+    "tax_ott969841": {
+      "imageUuid": "21a3420c-8d7a-4bd2-8ff7-b89fe7f5add5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/21a3420c-8d7a-4bd2-8ff7-b89fe7f5add5"
+    },
+    "tax_ott414356": {
+      "imageUuid": "5d6a2703-c087-4f58-a14d-0bbc55131100",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Mathieu Pélissié",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5d6a2703-c087-4f58-a14d-0bbc55131100"
+    },
+    "tax_ott257929": {
+      "imageUuid": "4ce73ae2-48e2-40ca-aeae-5c47d7adc047",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Sharon Wegner-Larsen",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4ce73ae2-48e2-40ca-aeae-5c47d7adc047"
+    },
+    "tax_ott728077": {
+      "imageUuid": "46ab646e-efeb-46fc-b429-a79ed3ecd1ca",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Richard Rich",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/46ab646e-efeb-46fc-b429-a79ed3ecd1ca"
+    },
+    "tax_ott554297": {
+      "imageUuid": "545d45f0-0dd1-4cfd-aad6-2b835223ea0d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/545d45f0-0dd1-4cfd-aad6-2b835223ea0d"
+    },
+    "tax_ott214509": {
+      "imageUuid": "ef0b81ab-a39e-4780-a572-e2849a23226b",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Scarlet23 (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef0b81ab-a39e-4780-a572-e2849a23226b"
+    },
+    "tax_ott976355": {
+      "imageUuid": "f9d9e345-5d79-4df0-b259-e7ab88e48854",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f9d9e345-5d79-4df0-b259-e7ab88e48854"
+    },
+    "tax_ott970846": {
+      "imageUuid": "af51e4b5-39d6-4a39-8705-97799334b7f6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/af51e4b5-39d6-4a39-8705-97799334b7f6"
+    },
+    "tax_ott920351": {
+      "imageUuid": "f3fa5012-3c60-4d0d-9f78-ffdeef367411",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f3fa5012-3c60-4d0d-9f78-ffdeef367411"
+    },
+    "tax_ott827416": {
+      "imageUuid": "90e36aea-4248-4a71-8b6f-9823b6dcd957",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Eloisa Pinheiro Giareta",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/90e36aea-4248-4a71-8b6f-9823b6dcd957"
+    },
+    "tax_ott688328": {
+      "imageUuid": "f6c6590d-8aa1-4d08-a25f-e6c90727c071",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f6c6590d-8aa1-4d08-a25f-e6c90727c071"
+    },
+    "tax_ott165368": {
+      "imageUuid": "1df5b970-3302-4e5b-8df1-a3d9fb5744d3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1df5b970-3302-4e5b-8df1-a3d9fb5744d3"
+    },
+    "tax_ott674643": {
+      "imageUuid": "b7ef52c0-e6a1-4914-b37f-f1a87fe435dc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Kamil S. Jaron",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b7ef52c0-e6a1-4914-b37f-f1a87fe435dc"
+    },
+    "tax_ott1005907": {
+      "imageUuid": "ace2b280-abe8-4dce-96db-be4e393f836d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Carlos Cano-Barbacil",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ace2b280-abe8-4dce-96db-be4e393f836d"
+    },
+    "tax_ott429083": {
+      "imageUuid": "25a76141-cca2-4b56-bd9f-9f5fdcd8efa1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Carlos Cano-Barbacil",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/25a76141-cca2-4b56-bd9f-9f5fdcd8efa1"
+    },
+    "tax_ott288063": {
+      "imageUuid": "84c7e672-2593-44a6-a807-cffbd3156cc5",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Milton Tan",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/84c7e672-2593-44a6-a807-cffbd3156cc5"
+    },
+    "tax_ott114170": {
+      "imageUuid": "bba1800a-dd86-451d-a79b-c5944cfe5231",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Milton Tan",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bba1800a-dd86-451d-a79b-c5944cfe5231"
+    },
+    "tax_ott833184": {
+      "imageUuid": "16989401-0080-4502-828d-e85a45a262be",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Stuart Humphries",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/16989401-0080-4502-828d-e85a45a262be"
+    },
+    "tax_ott833188": {
+      "imageUuid": "f4503c9f-35df-4a0d-a6ca-c66c87d68274",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f4503c9f-35df-4a0d-a6ca-c66c87d68274"
+    },
+    "tax_ott358621": {
+      "imageUuid": "c892eff7-52de-46cf-b056-5cd4496ed47f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c892eff7-52de-46cf-b056-5cd4496ed47f"
+    },
+    "tax_ott545842": {
+      "imageUuid": "495d8372-dc7a-44b6-b8e4-3b462672d71f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Felix Vaux",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/495d8372-dc7a-44b6-b8e4-3b462672d71f"
+    },
+    "tax_ott25363": {
+      "imageUuid": "38033ddf-3fec-491b-b258-f46ec0814811",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Rosenthal Harry",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/38033ddf-3fec-491b-b258-f46ec0814811"
+    },
+    "tax_ott854201": {
+      "imageUuid": "9ce911e2-a8fa-47a2-afe9-ca18d71be30f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ingo Braasch",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9ce911e2-a8fa-47a2-afe9-ca18d71be30f"
+    },
+    "tax_ott143764": {
+      "imageUuid": "cbb304e2-a44a-4704-9ea4-a8b0d5a7fcd0",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Erika Schumacher",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cbb304e2-a44a-4704-9ea4-a8b0d5a7fcd0"
+    },
+    "tax_ott216168": {
+      "imageUuid": "c931ef9c-ff5a-4b7d-96b5-80a6be323b04",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Neil Kelley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c931ef9c-ff5a-4b7d-96b5-80a6be323b04"
+    },
+    "tax_ott649803": {
+      "imageUuid": "173896a9-b0ee-4179-9056-44165c07ed63",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/173896a9-b0ee-4179-9056-44165c07ed63"
+    },
+    "tax_ott65341": {
+      "imageUuid": "648aeaaa-cc03-4105-b4f4-4769d09ba9a8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/648aeaaa-cc03-4105-b4f4-4769d09ba9a8"
+    },
+    "tax_ott630167": {
+      "imageUuid": "47badac3-c4be-407c-93f7-e7218f81321a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/47badac3-c4be-407c-93f7-e7218f81321a"
+    },
+    "tax_ott435643": {
+      "imageUuid": "89cf6943-ab88-492c-9ca1-33cecdeea886",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jamie Whitehouse",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/89cf6943-ab88-492c-9ca1-33cecdeea886"
+    },
+    "tax_ott1075153": {
+      "imageUuid": "6c1bd650-faf2-4242-ae8d-ec9faa635a0a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6c1bd650-faf2-4242-ae8d-ec9faa635a0a"
+    },
+    "tax_ott367540": {
+      "imageUuid": "aff05279-3b7e-46a8-957a-21c39c25a9c5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/aff05279-3b7e-46a8-957a-21c39c25a9c5"
+    },
+    "tax_ott773222": {
+      "imageUuid": "52865f9f-8b26-4986-bbe5-3877c1f4eb37",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/52865f9f-8b26-4986-bbe5-3877c1f4eb37"
+    },
+    "tax_ott467289": {
+      "imageUuid": "7437fc55-12a9-431f-924b-f77555bed173",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7437fc55-12a9-431f-924b-f77555bed173"
+    },
+    "tax_ott408328": {
+      "imageUuid": "4c2220b9-68a8-4594-8dd8-229643e11c84",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Birgit Lang",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4c2220b9-68a8-4594-8dd8-229643e11c84"
+    },
+    "tax_ott408337": {
+      "imageUuid": "4c2220b9-68a8-4594-8dd8-229643e11c84",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Birgit Lang",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4c2220b9-68a8-4594-8dd8-229643e11c84"
+    },
+    "tax_ott230493": {
+      "imageUuid": "172f60da-2129-4d3d-b680-686cff376d24",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Carlos Cano-Barbacil",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/172f60da-2129-4d3d-b680-686cff376d24"
+    },
+    "tax_ott235372": {
+      "imageUuid": "ab0e38bc-f514-46fb-8255-17adbc6c8d37",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Sherman Foote Denton (illustration, 1897) and Timothy J. Bartley (silhouette)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ab0e38bc-f514-46fb-8255-17adbc6c8d37"
+    },
+    "tax_ott739941": {
+      "imageUuid": "e11a3135-cfe1-4f8a-8e1e-1824fef0e833",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Timothy Knepp (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e11a3135-cfe1-4f8a-8e1e-1824fef0e833"
+    },
+    "tax_ott272344": {
+      "imageUuid": "7cb387d7-9b23-4e5c-a007-2d938339cb8a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Carlos Cano-Barbacil",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7cb387d7-9b23-4e5c-a007-2d938339cb8a"
+    },
+    "tax_ott701523": {
+      "imageUuid": "4317e447-87bb-42b9-94bc-8c910afdbe4b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Carlos Cano-Barbacil",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4317e447-87bb-42b9-94bc-8c910afdbe4b"
+    },
+    "tax_ott24657": {
+      "imageUuid": "173896a9-b0ee-4179-9056-44165c07ed63",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/173896a9-b0ee-4179-9056-44165c07ed63"
+    },
+    "tax_ott457786": {
+      "imageUuid": "bd9fc44c-2855-4f0d-8d74-883cb27dc482",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Nick Hahlbeck",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bd9fc44c-2855-4f0d-8d74-883cb27dc482"
+    },
+    "tax_ott960288": {
+      "imageUuid": "94fbb75c-6357-42bd-813a-26dd79c87b95",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Lankester Edwin Ray (modified)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/94fbb75c-6357-42bd-813a-26dd79c87b95"
+    },
+    "tax_ott712588": {
+      "imageUuid": "e0cd6df8-23c0-4973-aa3a-8ec042a4cea2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Cee Nell",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e0cd6df8-23c0-4973-aa3a-8ec042a4cea2"
+    },
+    "tax_ott312452": {
+      "imageUuid": "61dfa771-73fc-453b-8fd3-499446144640",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/61dfa771-73fc-453b-8fd3-499446144640"
+    },
+    "tax_ott1033356": {
+      "imageUuid": "c9159d10-1411-45dc-970b-da2b03be267f",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Erika Schumacher",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c9159d10-1411-45dc-970b-da2b03be267f"
+    },
+    "tax_ott1005914": {
+      "imageUuid": "5155f7c4-4609-44ed-a5e9-b3ba64b574e3",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Ian Quigley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5155f7c4-4609-44ed-a5e9-b3ba64b574e3"
+    },
+    "tax_ott1091028": {
+      "imageUuid": "ce6a78bc-3ef1-4d60-ab40-113eb84c7802",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ce6a78bc-3ef1-4d60-ab40-113eb84c7802"
+    },
+    "tax_ott608972": {
+      "imageUuid": "5dec03d9-66a2-4033-b1a9-6dbb3485199f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jack Mayer Wood",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5dec03d9-66a2-4033-b1a9-6dbb3485199f"
+    },
+    "tax_ott913382": {
+      "imageUuid": "e7028275-30d5-49fd-a4e8-42f17b179ecf",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Felix Vaux",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e7028275-30d5-49fd-a4e8-42f17b179ecf"
+    },
+    "tax_ott662992": {
+      "imageUuid": "e28cf327-0bec-42bf-af73-c1bbc0368c3e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e28cf327-0bec-42bf-af73-c1bbc0368c3e"
+    },
+    "tax_ott953907": {
+      "imageUuid": "9aca34d8-4dde-418d-9fdc-2d58b6a7b267",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9aca34d8-4dde-418d-9fdc-2d58b6a7b267"
+    },
+    "tax_ott284814": {
+      "imageUuid": "610a6dc2-9aee-47d0-bffe-89647d2884f2",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/610a6dc2-9aee-47d0-bffe-89647d2884f2"
+    },
+    "tax_ott1090802": {
+      "imageUuid": "50d51d00-2169-41fc-9c32-1b8c35a7e1bd",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "T. Michael Keesey (from a photograph by Frank Glaw, Jörn Köhler, Ted M. Townsend & Miguel Vences)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/50d51d00-2169-41fc-9c32-1b8c35a7e1bd"
+    },
+    "tax_ott559133": {
+      "imageUuid": "95a56d8c-896f-44ed-bf00-5f07d64ca6f8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "James R. Spotila and Ray Chatterji",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/95a56d8c-896f-44ed-bf00-5f07d64ca6f8"
+    },
+    "tax_ott243403": {
+      "imageUuid": "a1fa1020-ec8e-4bb0-94e8-2f678c4fecac",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Neil Kelley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1fa1020-ec8e-4bb0-94e8-2f678c4fecac"
+    },
+    "tax_ott392505": {
+      "imageUuid": "b3e35f7c-af3b-44dc-9680-82bd2d6392fb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "James R. Spotila and Ray Chatterji",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b3e35f7c-af3b-44dc-9680-82bd2d6392fb"
+    },
+    "tax_ott284917": {
+      "imageUuid": "0c63c864-b36e-477a-bdb3-45f261607098",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Cathy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0c63c864-b36e-477a-bdb3-45f261607098"
+    },
+    "tax_ott93887": {
+      "imageUuid": "67de5291-d93f-4b5b-9c5f-3a12de8daa6a",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Yotcmdr",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/67de5291-d93f-4b5b-9c5f-3a12de8daa6a"
+    },
+    "tax_ott335590": {
+      "imageUuid": "eefc0a4d-24b5-4c91-b687-8bd28c414295",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/eefc0a4d-24b5-4c91-b687-8bd28c414295"
+    },
+    "tax_ott35872": {
+      "imageUuid": "a796420f-5158-4e96-acbe-e30ef36b26d6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a796420f-5158-4e96-acbe-e30ef36b26d6"
+    },
+    "tax_ott35864": {
+      "imageUuid": "2fa0c118-f96c-407e-91eb-522065829f14",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2fa0c118-f96c-407e-91eb-522065829f14"
+    },
+    "tax_ott881015": {
+      "imageUuid": "f963f388-8297-4ceb-91f6-493b38dccba5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jagged Fang Designs",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f963f388-8297-4ceb-91f6-493b38dccba5"
+    },
+    "tax_ott6136": {
+      "imageUuid": "7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "V. Deepak",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e"
+    },
+    "tax_ott217478": {
+      "imageUuid": "f179fc74-1a83-426d-8514-acca70d12b52",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Chris Hay",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f179fc74-1a83-426d-8514-acca70d12b52"
+    },
+    "tax_ott109051": {
+      "imageUuid": "7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "V. Deepak",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e"
+    },
+    "tax_ott737820": {
+      "imageUuid": "0376a292-2e17-4978-b859-6fbf9bea6c67",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "DS Biswas",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0376a292-2e17-4978-b859-6fbf9bea6c67"
+    },
+    "tax_ott88370": {
+      "imageUuid": "0376a292-2e17-4978-b859-6fbf9bea6c67",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "DS Biswas",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0376a292-2e17-4978-b859-6fbf9bea6c67"
+    },
+    "tax_ott254279": {
+      "imageUuid": "4a37350f-cf50-4c3e-bc07-7700d6552942",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Gamma 124",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4a37350f-cf50-4c3e-bc07-7700d6552942"
+    },
+    "tax_ott764377": {
+      "imageUuid": "4c9cae92-4271-4415-a1e0-36589b440bbd",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "T. Michael Keesey (from a photo by Maximilian Paradiz)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4c9cae92-4271-4415-a1e0-36589b440bbd"
+    },
+    "tax_ott456236": {
+      "imageUuid": "55a9026d-8a47-44a2-838d-2d71dd6823d1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Alex Slavenko",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/55a9026d-8a47-44a2-838d-2d71dd6823d1"
+    },
+    "tax_ott27076": {
+      "imageUuid": "5f0a231c-f254-468b-a8c3-83a7ae6171b9",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Bill Bouton (source photo) & T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5f0a231c-f254-468b-a8c3-83a7ae6171b9"
+    },
+    "tax_ott785606": {
+      "imageUuid": "a1cd1814-e0b4-409c-af18-8cb2f841569c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1cd1814-e0b4-409c-af18-8cb2f841569c"
+    },
+    "tax_ott107027": {
+      "imageUuid": "418e6939-dc41-4424-a646-5ba1fb276648",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "V. Deepak",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/418e6939-dc41-4424-a646-5ba1fb276648"
+    },
+    "tax_ott913427": {
+      "imageUuid": "c4419539-43de-49d4-82f4-1fc599f42a15",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c4419539-43de-49d4-82f4-1fc599f42a15"
+    },
+    "tax_ott144931": {
+      "imageUuid": "cbedf474-165f-42e7-95f3-701644355409",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Natalie Claunch",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cbedf474-165f-42e7-95f3-701644355409"
+    },
+    "tax_ott240153": {
+      "imageUuid": "0da59be7-20cc-4bbe-ae22-41f169350adb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0da59be7-20cc-4bbe-ae22-41f169350adb"
+    },
+    "tax_ott14688": {
+      "imageUuid": "77f50b2e-9679-4ded-9faf-ff77d490c40a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Chuanixn Yu",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/77f50b2e-9679-4ded-9faf-ff77d490c40a"
+    },
+    "tax_ott14718": {
+      "imageUuid": "e73c5c1c-7727-4687-bf0b-3957343edfc3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e73c5c1c-7727-4687-bf0b-3957343edfc3"
+    },
+    "tax_ott9483": {
+      "imageUuid": "3bbd487e-31ef-4121-b030-f06f830132b8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3bbd487e-31ef-4121-b030-f06f830132b8"
+    },
+    "tax_ott192977": {
+      "imageUuid": "4679516b-405b-444f-974d-9775876716e2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4679516b-405b-444f-974d-9775876716e2"
+    },
+    "tax_ott451900": {
+      "imageUuid": "be8bb25e-d825-49a1-ae9f-0289efb8d410",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/be8bb25e-d825-49a1-ae9f-0289efb8d410"
+    },
+    "tax_ott465096": {
+      "imageUuid": "cd0f49a1-4adf-448e-859c-b703a73b9481",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Sarah Werning",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cd0f49a1-4adf-448e-859c-b703a73b9481"
+    },
+    "tax_ott889350": {
+      "imageUuid": "35ff35a9-fa6c-496f-a279-22908ac7e7ec",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/35ff35a9-fa6c-496f-a279-22908ac7e7ec"
+    },
+    "tax_ott889340": {
+      "imageUuid": "411ddd2c-12e8-4e92-9399-be8406d00356",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Dennis C. Murphy, after http://bit.ly/4q6IESe",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/411ddd2c-12e8-4e92-9399-be8406d00356"
+    },
+    "tax_ott984726": {
+      "imageUuid": "575eaa51-6c9b-4d36-9881-b8463c68ebbc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jake Warner",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/575eaa51-6c9b-4d36-9881-b8463c68ebbc"
+    },
+    "tax_ott1092552": {
+      "imageUuid": "5894ed62-d09e-44dd-9a61-672550be6f53",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5894ed62-d09e-44dd-9a61-672550be6f53"
+    },
+    "tax_ott689975": {
+      "imageUuid": "0a948f02-6e35-42d5-a835-b9360f450d39",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0a948f02-6e35-42d5-a835-b9360f450d39"
+    },
+    "tax_ott534288": {
+      "imageUuid": "00ddecf5-e95b-4898-be00-989a14ba175e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/00ddecf5-e95b-4898-be00-989a14ba175e"
+    },
+    "tax_ott963035": {
+      "imageUuid": "05497054-f1a2-47b7-945c-ac5ee871b895",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/05497054-f1a2-47b7-945c-ac5ee871b895"
+    },
+    "tax_ott919164": {
+      "imageUuid": "cf64d1cd-ee3c-4ce9-90ac-2fdb71e5e8f7",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Dein Freund der Baum (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cf64d1cd-ee3c-4ce9-90ac-2fdb71e5e8f7"
+    },
+    "tax_ott917441": {
+      "imageUuid": "421a3692-c1c3-4d05-a3d1-29b413687081",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/421a3692-c1c3-4d05-a3d1-29b413687081"
+    },
+    "tax_ott190091": {
+      "imageUuid": "e6705593-91ba-4b6e-9dfd-515005e35fc6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e6705593-91ba-4b6e-9dfd-515005e35fc6"
+    },
+    "tax_ott461645": {
+      "imageUuid": "956cf95f-9cbd-459b-a457-c80ba19877a4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Adrian Reich",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/956cf95f-9cbd-459b-a457-c80ba19877a4"
+    },
+    "tax_ott161197": {
+      "imageUuid": "750eeb4f-7ca5-49ff-a814-27a12d0cb13a",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Melissa Broussard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/750eeb4f-7ca5-49ff-a814-27a12d0cb13a"
+    },
+    "tax_ott1084243": {
+      "imageUuid": "4f616714-d7c9-41fa-963e-bac8c1932623",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4f616714-d7c9-41fa-963e-bac8c1932623"
+    },
+    "tax_ott656298": {
+      "imageUuid": "c5a14ad6-6d6f-49db-97b9-680cb36f8646",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c5a14ad6-6d6f-49db-97b9-680cb36f8646"
+    },
+    "tax_ott343294": {
+      "imageUuid": "984448b7-2ada-4e49-aaf1-3dcb7b056532",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Melissa Broussard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/984448b7-2ada-4e49-aaf1-3dcb7b056532"
+    },
+    "tax_ott340581": {
+      "imageUuid": "ae83a86e-79a8-46b5-ba0e-9d4b25bd707e",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Melissa Broussard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ae83a86e-79a8-46b5-ba0e-9d4b25bd707e"
+    },
+    "tax_ott158666": {
+      "imageUuid": "7ba461ab-1eb4-4fa9-8852-806006fba558",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Marie Russell",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7ba461ab-1eb4-4fa9-8852-806006fba558"
+    },
+    "tax_ott485521": {
+      "imageUuid": "7ba461ab-1eb4-4fa9-8852-806006fba558",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Marie Russell",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7ba461ab-1eb4-4fa9-8852-806006fba558"
+    },
+    "tax_ott1011010": {
+      "imageUuid": "9eb63a96-ec96-4d51-8c2f-ec330d0b51b2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Kamil S. Jaron",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9eb63a96-ec96-4d51-8c2f-ec330d0b51b2"
+    },
+    "tax_ott269666": {
+      "imageUuid": "48207547-694e-4696-90d9-b61b2084abcc",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Jaramillo Hector Sergio",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/48207547-694e-4696-90d9-b61b2084abcc"
+    },
+    "tax_ott505714": {
+      "imageUuid": "ea8fa530-d856-4423-a81d-a74342cd1875",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Thomas Hegna",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ea8fa530-d856-4423-a81d-a74342cd1875"
+    },
+    "tax_ott4629984": {
+      "imageUuid": "a8576084-b594-4824-82b8-6b0912b74bad",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a8576084-b594-4824-82b8-6b0912b74bad"
+    },
+    "tax_ott3337730": {
+      "imageUuid": "db741d09-5f75-49db-91aa-cd803f5b9dfa",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/db741d09-5f75-49db-91aa-cd803f5b9dfa"
+    },
+    "tax_ott180964": {
+      "imageUuid": "c6781aa0-c13e-4c78-955f-f891abbb5e5e",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mali'o Kodis, photograph by Jim Vargo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c6781aa0-c13e-4c78-955f-f891abbb5e5e"
+    },
+    "tax_ott180968": {
+      "imageUuid": "8229756b-82c3-4a9f-a1c6-e88f958e623e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Chris A. Hamilton",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8229756b-82c3-4a9f-a1c6-e88f958e623e"
+    },
+    "tax_ott123064": {
+      "imageUuid": "a00bc736-e96e-446b-9494-004a6345ebcd",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a00bc736-e96e-446b-9494-004a6345ebcd"
+    },
+    "tax_ott110468": {
+      "imageUuid": "f400b519-3564-4183-b4bd-c3b922cc7c5e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f400b519-3564-4183-b4bd-c3b922cc7c5e"
+    },
+    "tax_ott537559": {
+      "imageUuid": "6e6e9ed4-685f-42c8-9622-b967688ecb95",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6e6e9ed4-685f-42c8-9622-b967688ecb95"
+    },
+    "tax_ott616359": {
+      "imageUuid": "a5d0c0e8-c737-40c3-8f5d-dbca473e1c33",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a5d0c0e8-c737-40c3-8f5d-dbca473e1c33"
+    },
+    "tax_ott78499": {
+      "imageUuid": "fe233431-4014-4612-8ee6-eb1060b7eaa5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jimmy Bernot",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fe233431-4014-4612-8ee6-eb1060b7eaa5"
+    },
+    "tax_ott349699": {
+      "imageUuid": "cdc067a4-c2cc-4962-b330-2c9d02d245cb",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cdc067a4-c2cc-4962-b330-2c9d02d245cb"
+    },
+    "tax_ott499751": {
+      "imageUuid": "c6bdabec-410f-45f2-9dd1-991d1d22fdc7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Katie S. Collins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c6bdabec-410f-45f2-9dd1-991d1d22fdc7"
+    },
+    "tax_ott987409": {
+      "imageUuid": "d8877f55-4429-47f4-8163-064f98199815",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d8877f55-4429-47f4-8163-064f98199815"
+    },
+    "tax_ott528817": {
+      "imageUuid": "6cbff80e-9537-4130-8397-ebbf77464ea4",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "David Sim (photograph) and T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6cbff80e-9537-4130-8397-ebbf77464ea4"
+    },
+    "tax_ott404481": {
+      "imageUuid": "f0494167-77f6-46eb-841d-c4cefb683bbd",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f0494167-77f6-46eb-841d-c4cefb683bbd"
+    },
+    "tax_ott702294": {
+      "imageUuid": "6872620a-34e1-4744-b536-a5b5437b9097",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Noah Schlottman, photo by Casey Dunn",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6872620a-34e1-4744-b536-a5b5437b9097"
+    },
+    "tax_ott131917": {
+      "imageUuid": "1db06ea6-d1b9-4369-b62c-9bbc1b99c30b",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Matthias Buschmann (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1db06ea6-d1b9-4369-b62c-9bbc1b99c30b"
+    },
+    "tax_ott28247": {
+      "imageUuid": "46f3f90b-48ee-4d25-b751-e5070e37532e",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/46f3f90b-48ee-4d25-b751-e5070e37532e"
+    },
+    "tax_ott644678": {
+      "imageUuid": "79b7c6f7-0b2a-4d4b-a7e4-e2eb7dd09b63",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/79b7c6f7-0b2a-4d4b-a7e4-e2eb7dd09b63"
+    },
+    "tax_ott50727": {
+      "imageUuid": "bb5ccfea-39a0-48de-b5ed-d55ed5b48ed0",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bb5ccfea-39a0-48de-b5ed-d55ed5b48ed0"
+    },
+    "tax_ott644245": {
+      "imageUuid": "f628f6fe-6e2d-4173-a20f-265dc7d2d04f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f628f6fe-6e2d-4173-a20f-265dc7d2d04f"
+    },
+    "tax_ott347650": {
+      "imageUuid": "f266f85c-9c03-4620-8921-2bec8099353a",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mo Hassan",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f266f85c-9c03-4620-8921-2bec8099353a"
+    },
+    "tax_ott292504": {
+      "imageUuid": "8b656a93-ecf3-4985-8f4d-1f5c032d1a27",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Didier Descouens (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8b656a93-ecf3-4985-8f4d-1f5c032d1a27"
+    },
+    "tax_ott768502": {
+      "imageUuid": "d7471762-ce76-45d9-bd25-e422188fb9e3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d7471762-ce76-45d9-bd25-e422188fb9e3"
+    },
+    "tax_ott768514": {
+      "imageUuid": "7546aa75-8b04-4025-975c-7472c1f7fa5f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7546aa75-8b04-4025-975c-7472c1f7fa5f"
+    },
+    "tax_ott768511": {
+      "imageUuid": "a9489499-4d60-4903-baf8-5f22f8ac5c5c",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a9489499-4d60-4903-baf8-5f22f8ac5c5c"
+    },
+    "tax_ott86183": {
+      "imageUuid": "7fd7d388-f245-4d2d-a9ab-e8abc50c55d9",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7fd7d388-f245-4d2d-a9ab-e8abc50c55d9"
+    },
+    "tax_ott862641": {
+      "imageUuid": "f88227bd-9ead-4b28-b5a8-837d3d02462e",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f88227bd-9ead-4b28-b5a8-837d3d02462e"
+    },
+    "tax_ott507553": {
+      "imageUuid": "6442f5ad-5a4a-4b54-b14e-94cf4c725f67",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6442f5ad-5a4a-4b54-b14e-94cf4c725f67"
+    },
+    "tax_ott86162": {
+      "imageUuid": "9b6dc5fd-eeb9-4760-99e4-fca70ec74db0",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9b6dc5fd-eeb9-4760-99e4-fca70ec74db0"
+    },
+    "tax_ott837601": {
+      "imageUuid": "ebd8b68c-b9db-4466-b0ae-1edebd18153c",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ebd8b68c-b9db-4466-b0ae-1edebd18153c"
+    },
+    "tax_ott684074": {
+      "imageUuid": "ee39f689-8bc1-40f5-b5cd-c8431aeeae06",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ee39f689-8bc1-40f5-b5cd-c8431aeeae06"
+    },
+    "tax_ott821973": {
+      "imageUuid": "39dc7ce6-3700-4d4a-9fdf-d84d8a0482e4",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Bernard Dupont (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/39dc7ce6-3700-4d4a-9fdf-d84d8a0482e4"
+    },
+    "tax_ott662806": {
+      "imageUuid": "9a69e996-0af1-4e62-bb44-f6e74aca95db",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Zimices",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9a69e996-0af1-4e62-bb44-f6e74aca95db"
+    },
+    "tax_ott274566": {
+      "imageUuid": "fcb4f3e0-4bd8-416d-9466-edf91aafc77e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Trent Sperry",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fcb4f3e0-4bd8-416d-9466-edf91aafc77e"
+    },
+    "tax_ott128285": {
+      "imageUuid": "999c5343-2b8f-4277-ae8c-83289f18b644",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Andrew A. Farke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/999c5343-2b8f-4277-ae8c-83289f18b644"
+    },
+    "tax_ott207426": {
+      "imageUuid": "44eea793-5a86-4801-ac56-0962e62491d8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/44eea793-5a86-4801-ac56-0962e62491d8"
+    },
+    "tax_ott860784": {
+      "imageUuid": "efd552a3-5639-4d6c-a7a0-bab8eb9149da",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Kai Caspar",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/efd552a3-5639-4d6c-a7a0-bab8eb9149da"
+    },
+    "tax_ott202967": {
+      "imageUuid": "2b07a361-5d1b-4bb9-a61e-a7708cf57ecb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2b07a361-5d1b-4bb9-a61e-a7708cf57ecb"
+    },
+    "tax_ott741053": {
+      "imageUuid": "3b9150ed-4203-4cdb-b2a5-c21654857e5f",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Kai R. Caspar",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3b9150ed-4203-4cdb-b2a5-c21654857e5f"
+    },
+    "tax_ott696018": {
+      "imageUuid": "3fc9fced-817a-466a-817b-d8710364e010",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3fc9fced-817a-466a-817b-d8710364e010"
+    },
+    "tax_ott339031": {
+      "imageUuid": "f598fb39-facf-43ea-a576-1861304b2fe4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Yan Wong",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f598fb39-facf-43ea-a576-1861304b2fe4"
+    },
+    "tax_ott921451": {
+      "imageUuid": "cbfc863c-9ca3-441e-9e38-95876fe19203",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Kai R. Caspar",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cbfc863c-9ca3-441e-9e38-95876fe19203"
+    },
+    "tax_ott1089663": {
+      "imageUuid": "a23658b6-e872-45a8-b6ce-7eaba9e12a32",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a23658b6-e872-45a8-b6ce-7eaba9e12a32"
+    },
+    "tax_ott698411": {
+      "imageUuid": "f36c9daa-a102-42dd-88ac-a126753943d2",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f36c9daa-a102-42dd-88ac-a126753943d2"
+    },
+    "tax_ott825964": {
+      "imageUuid": "5bfb840e-071f-4a1a-b101-0a747a5453e7",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5bfb840e-071f-4a1a-b101-0a747a5453e7"
+    },
+    "tax_ott1003906": {
+      "imageUuid": "66ae22a7-b1d7-41e0-8c05-6c3bae0e5e35",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Chris huh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/66ae22a7-b1d7-41e0-8c05-6c3bae0e5e35"
+    },
+    "tax_ott588292": {
+      "imageUuid": "f628f6fe-6e2d-4173-a20f-265dc7d2d04f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f628f6fe-6e2d-4173-a20f-265dc7d2d04f"
+    },
+    "tax_ott928360": {
+      "imageUuid": "79ad5f09-cf21-4c89-8e7d-0c82a00ce728",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Warren H (photography), T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/79ad5f09-cf21-4c89-8e7d-0c82a00ce728"
+    },
+    "tax_ott464697": {
+      "imageUuid": "93851bd5-c8fd-4e56-a193-235611066cde",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Tom Tarrant (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/93851bd5-c8fd-4e56-a193-235611066cde"
+    },
+    "tax_ott86672": {
+      "imageUuid": "b0dd267a-ed50-4891-b933-4fa4ab25097c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b0dd267a-ed50-4891-b933-4fa4ab25097c"
+    },
+    "tax_ott1036186": {
+      "imageUuid": "43843001-a702-4f51-9a23-7a7829273664",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Danielle Alba",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/43843001-a702-4f51-9a23-7a7829273664"
+    },
+    "tax_ott544658": {
+      "imageUuid": "f044fe88-1ab2-4449-bb14-166e89d28889",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f044fe88-1ab2-4449-bb14-166e89d28889"
+    },
+    "tax_ott531206": {
+      "imageUuid": "94b3f85c-02aa-4129-a5d3-9b7293c9400a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Anders Alexander",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/94b3f85c-02aa-4129-a5d3-9b7293c9400a"
+    },
+    "tax_ott701548": {
+      "imageUuid": "969e5328-bc2b-4c15-9d6a-b3f4c103898f",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mark Gurney (photo) and Albertonykus (silhouette)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/969e5328-bc2b-4c15-9d6a-b3f4c103898f"
+    },
+    "tax_ott73578": {
+      "imageUuid": "d5194798-0b50-4a79-8b3d-e6efe468c5ab",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "T. Michael Keesey (vectorization) and HuttyMcphoo (photography)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d5194798-0b50-4a79-8b3d-e6efe468c5ab"
+    },
+    "tax_ott412129": {
+      "imageUuid": "b217ad1b-0669-4666-80da-9ddc3c3506e2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b217ad1b-0669-4666-80da-9ddc3c3506e2"
+    },
+    "tax_ott86680": {
+      "imageUuid": "c6efa25b-01ef-4692-8bc4-8e5a87b45096",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Unknown (photo), John E. McCormack, Michael G. Harvey, Brant C. Faircloth, Nicholas G. Crawford, Travis C. Glenn, Robb T. Brumfield & T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c6efa25b-01ef-4692-8bc4-8e5a87b45096"
+    },
+    "tax_ott832746": {
+      "imageUuid": "8c7cb07b-dd3a-43d1-8487-e5d125395bb3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jamie Whitehouse",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8c7cb07b-dd3a-43d1-8487-e5d125395bb3"
+    },
+    "tax_ott363015": {
+      "imageUuid": "901bfc1f-5f97-499c-961f-6cf4d8ab6239",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Mark P. Witton & Darren Naish",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/901bfc1f-5f97-499c-961f-6cf4d8ab6239"
+    },
+    "tax_ott316992": {
+      "imageUuid": "73528af2-c4ca-4bc4-81ca-d22126220fa9",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Stacy Spensley (Modified)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/73528af2-c4ca-4bc4-81ca-d22126220fa9"
+    },
+    "tax_ott3596802": {
+      "imageUuid": "18a828e0-861f-4dfb-9793-7effe17d1547",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Mike Keesey (vectorization) and Vaibhavcho (photography)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/18a828e0-861f-4dfb-9793-7effe17d1547"
+    },
+    "tax_ott180487": {
+      "imageUuid": "3813ebf5-b823-4f08-b05c-076fa09426e5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Edwin Price",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3813ebf5-b823-4f08-b05c-076fa09426e5"
+    },
+    "tax_ott585161": {
+      "imageUuid": "bdaa6989-7904-4349-8f9b-a1e6b399e2af",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bdaa6989-7904-4349-8f9b-a1e6b399e2af"
+    },
+    "tax_ott178242": {
+      "imageUuid": "51e35836-26fe-4cec-b25e-d8f4264b1a7c",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Dominic Sherony (photo) and Albertonykus (silhouette)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/51e35836-26fe-4cec-b25e-d8f4264b1a7c"
+    },
+    "tax_ott313120": {
+      "imageUuid": "1f365015-ceb0-4be8-b35f-5be7dacce0cb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matt Wilkins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1f365015-ceb0-4be8-b35f-5be7dacce0cb"
+    },
+    "tax_ott773491": {
+      "imageUuid": "202c2ad3-48a7-471d-87ef-c6d8406640e8",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/202c2ad3-48a7-471d-87ef-c6d8406640e8"
+    },
+    "tax_ott898631": {
+      "imageUuid": "202c2ad3-48a7-471d-87ef-c6d8406640e8",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/202c2ad3-48a7-471d-87ef-c6d8406640e8"
+    },
+    "tax_ott773500": {
+      "imageUuid": "3bfadee3-c4c5-408e-a1b8-e09bec80bc7f",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Roberto Díaz Sibaja",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3bfadee3-c4c5-408e-a1b8-e09bec80bc7f"
+    },
+    "tax_ott199334": {
+      "imageUuid": "395da9bf-f385-45dc-baf2-fb9e5edf453d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/395da9bf-f385-45dc-baf2-fb9e5edf453d"
+    },
+    "tax_ott852683": {
+      "imageUuid": "1a4223d5-9fe8-4f94-b465-53a2aebecc27",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1a4223d5-9fe8-4f94-b465-53a2aebecc27"
+    },
+    "tax_ott227494": {
+      "imageUuid": "f9313512-3ce4-4349-86bc-060d4faa013e",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f9313512-3ce4-4349-86bc-060d4faa013e"
+    },
+    "tax_ott1014311": {
+      "imageUuid": "3f0c2328-2eb5-4e7a-ad8a-44ab5ab72822",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Nathan Hermann",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3f0c2328-2eb5-4e7a-ad8a-44ab5ab72822"
+    },
+    "tax_ott73664": {
+      "imageUuid": "41f62d55-3c86-4204-b753-dfff8f11c6d3",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Haplochromis (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/41f62d55-3c86-4204-b753-dfff8f11c6d3"
+    },
+    "tax_ott1093624": {
+      "imageUuid": "2269a810-0a5c-4c99-93c6-bb5581e05f90",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2269a810-0a5c-4c99-93c6-bb5581e05f90"
+    },
+    "tax_ott442057": {
+      "imageUuid": "50f67ea6-a922-4ede-a054-af9632cff470",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/50f67ea6-a922-4ede-a054-af9632cff470"
+    },
+    "tax_ott277019": {
+      "imageUuid": "1173c269-c25a-4792-9d5c-39164f2caa55",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Ignacio Contreras",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1173c269-c25a-4792-9d5c-39164f2caa55"
+    },
+    "tax_ott572746": {
+      "imageUuid": "2417e9e6-d4f1-475a-9028-91bc6867cba4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2417e9e6-d4f1-475a-9028-91bc6867cba4"
+    },
+    "tax_ott516305": {
+      "imageUuid": "a9d45f96-070a-40bc-8594-18c351bb263b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a9d45f96-070a-40bc-8594-18c351bb263b"
+    },
+    "tax_ott444665": {
+      "imageUuid": "3a0a4280-d123-4dd3-8158-a5a6439af44c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "M Kolmann",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3a0a4280-d123-4dd3-8158-a5a6439af44c"
+    },
+    "tax_ott1025533": {
+      "imageUuid": "365375bc-eb64-490f-a1d6-759644a9fc35",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/365375bc-eb64-490f-a1d6-759644a9fc35"
+    },
+    "tax_ott597826": {
+      "imageUuid": "07eeaf0e-0284-4c1d-8415-ddd65a736232",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/07eeaf0e-0284-4c1d-8415-ddd65a736232"
+    },
+    "tax_ott73662": {
+      "imageUuid": "ef8a689c-a13c-4a89-a12d-33c0fe70f248",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Jose I. Castro (Vectorized by J. Boyle)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef8a689c-a13c-4a89-a12d-33c0fe70f248"
+    },
+    "tax_ott617751": {
+      "imageUuid": "635a27ce-13f5-417a-8aa9-ca177a22ab76",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Lily Hughes",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/635a27ce-13f5-417a-8aa9-ca177a22ab76"
+    },
+    "tax_ott284974": {
+      "imageUuid": "205ba057-8727-439c-a3ae-4b82b007f8be",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/205ba057-8727-439c-a3ae-4b82b007f8be"
+    },
+    "tax_ott1074169": {
+      "imageUuid": "2dc03e34-234e-4b64-b6cb-e7e2d2a513b2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Sarah Alewijnse",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2dc03e34-234e-4b64-b6cb-e7e2d2a513b2"
+    },
+    "tax_ott584432": {
+      "imageUuid": "97c10dd0-b510-4f1c-a0a1-8371a46670a5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/97c10dd0-b510-4f1c-a0a1-8371a46670a5"
+    },
+    "tax_ott3632049": {
+      "imageUuid": "68a61aa3-aee8-4d27-bcaa-7924a2f76b8f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/68a61aa3-aee8-4d27-bcaa-7924a2f76b8f"
+    },
+    "tax_ott246418": {
+      "imageUuid": "ddcfb5b4-c1a8-41d3-82e2-201011174d58",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Erika Schumacher",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ddcfb5b4-c1a8-41d3-82e2-201011174d58"
+    },
+    "tax_ott251761": {
+      "imageUuid": "287624dd-5b4f-4fa6-aeef-f4d54e33ae61",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Nathan Hermann",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/287624dd-5b4f-4fa6-aeef-f4d54e33ae61"
+    },
+    "tax_ott552620": {
+      "imageUuid": "342500a8-eabd-4630-8223-dc44bcfc678e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/342500a8-eabd-4630-8223-dc44bcfc678e"
+    },
+    "tax_ott302377": {
+      "imageUuid": "40c41a37-68a4-444a-be52-d8601447eb03",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Ieuan Jones",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/40c41a37-68a4-444a-be52-d8601447eb03"
+    },
+    "tax_ott358037": {
+      "imageUuid": "335e6e09-38a2-4a56-9e63-335dfc9e722a",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Cesar Julian",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/335e6e09-38a2-4a56-9e63-335dfc9e722a"
+    },
+    "tax_ott220923": {
+      "imageUuid": "335e6e09-38a2-4a56-9e63-335dfc9e722a",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Cesar Julian",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/335e6e09-38a2-4a56-9e63-335dfc9e722a"
+    },
+    "tax_ott335725": {
+      "imageUuid": "dd5aa97d-9abe-42b2-8e35-59bd0c506569",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dd5aa97d-9abe-42b2-8e35-59bd0c506569"
+    },
+    "tax_ott437387": {
+      "imageUuid": "12348a19-183a-44b6-91ce-b1adcabd8673",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Grupo de Ictiología de la Universidad de Antioquia",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/12348a19-183a-44b6-91ce-b1adcabd8673"
+    },
+    "tax_ott904101": {
+      "imageUuid": "9b80988a-0a9e-48d6-ba07-256796677d4e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9b80988a-0a9e-48d6-ba07-256796677d4e"
+    },
+    "tax_ott904117": {
+      "imageUuid": "4b878d44-26e1-483e-8ef4-7879da69d1d7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Lily Hughes",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4b878d44-26e1-483e-8ef4-7879da69d1d7"
+    },
+    "tax_ott754422": {
+      "imageUuid": "704a1bfb-c2bf-49dd-b555-2b033f45f0fc",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/704a1bfb-c2bf-49dd-b555-2b033f45f0fc"
+    },
+    "tax_ott1064124": {
+      "imageUuid": "59c88fc6-9586-4884-81dc-63d392a7944b",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/59c88fc6-9586-4884-81dc-63d392a7944b"
+    },
+    "tax_ott349121": {
+      "imageUuid": "69bebb23-bb1a-495e-a3db-2a073800fc72",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "C. Camilo Julián-Caballero",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/69bebb23-bb1a-495e-a3db-2a073800fc72"
+    },
+    "tax_ott806535": {
+      "imageUuid": "9698bcd8-a02a-43f0-857a-21780f612fc3",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Zachary Quigley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9698bcd8-a02a-43f0-857a-21780f612fc3"
+    },
+    "tax_ott896431": {
+      "imageUuid": "3a425af3-138d-4074-9548-376daa1ab21e",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Tree of Life App",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3a425af3-138d-4074-9548-376daa1ab21e"
+    },
+    "tax_ott612525": {
+      "imageUuid": "efff6941-a431-4251-a066-fd27ab51c52f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Fidji Berio",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/efff6941-a431-4251-a066-fd27ab51c52f"
+    },
+    "tax_ott35890": {
+      "imageUuid": "f2a5ae73-c899-4e47-b0ad-b6eac3a99350",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f2a5ae73-c899-4e47-b0ad-b6eac3a99350"
+    },
+    "tax_ott953151": {
+      "imageUuid": "fddc8b3c-20a3-4e7b-8c9c-be62e52aa2ab",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Wani2Y",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fddc8b3c-20a3-4e7b-8c9c-be62e52aa2ab"
+    },
+    "tax_ott1035828": {
+      "imageUuid": "a1e916c4-e020-4657-932b-d74ec6c08e0a",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Smokeybjb",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1e916c4-e020-4657-932b-d74ec6c08e0a"
+    },
+    "tax_ott235773": {
+      "imageUuid": "70941e01-0526-4a86-87b4-2cca78296155",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/70941e01-0526-4a86-87b4-2cca78296155"
+    },
+    "tax_ott810244": {
+      "imageUuid": "b5b835c9-2345-435e-bc64-0dd03b5750f7",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "T. Michael Keesey and Chiswick Chap, from a photograph by JSutton93",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b5b835c9-2345-435e-bc64-0dd03b5750f7"
+    },
+    "tax_ott557461": {
+      "imageUuid": "8a1555eb-8be3-4b91-8db2-e1d725303041",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8a1555eb-8be3-4b91-8db2-e1d725303041"
+    },
+    "tax_ott1084896": {
+      "imageUuid": "fec4ae89-b3ea-4693-b63e-85dad8bc9ed3",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fec4ae89-b3ea-4693-b63e-85dad8bc9ed3"
+    },
+    "tax_ott511702": {
+      "imageUuid": "686572d8-6a00-4bee-b999-d072d60f5da4",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Christina Zdenek",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/686572d8-6a00-4bee-b999-d072d60f5da4"
+    },
+    "tax_ott49561": {
+      "imageUuid": "83bfc123-464e-456d-bb9e-9a7327c4166b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/83bfc123-464e-456d-bb9e-9a7327c4166b"
+    },
+    "tax_ott4120637": {
+      "imageUuid": "a1cd1814-e0b4-409c-af18-8cb2f841569c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1cd1814-e0b4-409c-af18-8cb2f841569c"
+    },
+    "tax_ott785609": {
+      "imageUuid": "a1cd1814-e0b4-409c-af18-8cb2f841569c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1cd1814-e0b4-409c-af18-8cb2f841569c"
+    },
+    "tax_ott572364": {
+      "imageUuid": "bdea24c1-9aa7-4c6d-afe8-db223f51efe1",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bdea24c1-9aa7-4c6d-afe8-db223f51efe1"
+    },
+    "tax_ott116307": {
+      "imageUuid": "169b14e8-c89a-400b-8aa8-81b18fca7f99",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Michael Scroggie",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/169b14e8-c89a-400b-8aa8-81b18fca7f99"
+    },
+    "tax_ott842080": {
+      "imageUuid": "05497054-f1a2-47b7-945c-ac5ee871b895",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/05497054-f1a2-47b7-945c-ac5ee871b895"
+    },
+    "tax_ott424193": {
+      "imageUuid": "dd44eb4f-f4d1-4557-939e-44f35694b615",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Chuanixn Yu",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dd44eb4f-f4d1-4557-939e-44f35694b615"
+    },
+    "tax_ott954050": {
+      "imageUuid": "4825e499-7da0-479a-b189-89f61d40617b",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Y. de Hoev. (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4825e499-7da0-479a-b189-89f61d40617b"
+    },
+    "tax_ott377548": {
+      "imageUuid": "d7ff8480-5466-48f3-942c-8f614f9b0bfc",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Venu Govindappa (original photograph)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d7ff8480-5466-48f3-942c-8f614f9b0bfc"
+    },
+    "tax_ott639644": {
+      "imageUuid": "4dd27c92-9daf-4217-b35d-03487bc4a96d",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Marcos Amend (original photograph)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4dd27c92-9daf-4217-b35d-03487bc4a96d"
+    },
+    "tax_ott489551": {
+      "imageUuid": "9aa83c71-f6d9-4444-a589-a6f4a3206d70",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9aa83c71-f6d9-4444-a589-a6f4a3206d70"
+    },
+    "tax_ott459017": {
+      "imageUuid": "1def0586-8f6b-46ca-8a22-cb1d189ca72e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1def0586-8f6b-46ca-8a22-cb1d189ca72e"
+    },
+    "tax_ott918196": {
+      "imageUuid": "b05d80ba-18ab-46b1-97ad-7ff72fabba0a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b05d80ba-18ab-46b1-97ad-7ff72fabba0a"
+    },
+    "tax_ott442319": {
+      "imageUuid": "d42b31eb-6cca-46b3-80a0-b1f318c88844",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jose Carlos Arenas-Monroy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d42b31eb-6cca-46b3-80a0-b1f318c88844"
+    },
+    "tax_ott10703": {
+      "imageUuid": "27101290-d695-4a29-b99e-dd4d7f0e2b1d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/27101290-d695-4a29-b99e-dd4d7f0e2b1d"
+    },
+    "tax_ott899247": {
+      "imageUuid": "6013297c-6dff-4bb9-972d-75e69ef5623e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6013297c-6dff-4bb9-972d-75e69ef5623e"
+    },
+    "tax_ott1000561": {
+      "imageUuid": "b6de94d3-242b-4ac6-b665-50eda5113dcc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Vijay Karthick",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b6de94d3-242b-4ac6-b665-50eda5113dcc"
+    },
+    "tax_ott332086": {
+      "imageUuid": "8a4db3f2-a7c3-4ff4-b797-3eac612080d4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Michael Scroggie, from original photograph by Gary M. Stolz, USFWS (original photograph in public domain).",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8a4db3f2-a7c3-4ff4-b797-3eac612080d4"
+    },
+    "tax_ott95643": {
+      "imageUuid": "ee39605f-ab69-4789-a0ee-97535c768644",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ee39605f-ab69-4789-a0ee-97535c768644"
+    },
+    "tax_ott38967": {
+      "imageUuid": "1c7da9c7-f5eb-44c0-972d-b5fcffee6400",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1c7da9c7-f5eb-44c0-972d-b5fcffee6400"
+    },
+    "tax_ott3546447": {
+      "imageUuid": "f1c12bfc-146e-4b75-8456-abebbcf15a0c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f1c12bfc-146e-4b75-8456-abebbcf15a0c"
+    },
+    "tax_ott95320": {
+      "imageUuid": "acc64610-abae-4bea-a9a5-46e2636145b9",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/acc64610-abae-4bea-a9a5-46e2636145b9"
+    },
+    "tax_ott1048351": {
+      "imageUuid": "fa4e2eda-4509-419a-9237-c330a54fa541",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fa4e2eda-4509-419a-9237-c330a54fa541"
+    },
+    "tax_ott744200": {
+      "imageUuid": "059544e9-839c-4ac6-b2aa-51de65210642",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Cathy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/059544e9-839c-4ac6-b2aa-51de65210642"
+    },
+    "tax_ott673746": {
+      "imageUuid": "bc8cb037-1bda-4ca8-82c0-cdf064407149",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "André Karwath (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bc8cb037-1bda-4ca8-82c0-cdf064407149"
+    },
+    "tax_ott511973": {
+      "imageUuid": "38c82deb-b187-4e85-a9f8-dba2794b42d0",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Noah Schlottman",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/38c82deb-b187-4e85-a9f8-dba2794b42d0"
+    },
+    "tax_ott651929": {
+      "imageUuid": "639a8581-cf15-4ab0-a81a-d4319f7078d7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Irene Frigo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/639a8581-cf15-4ab0-a81a-d4319f7078d7"
+    },
+    "tax_ott2979896": {
+      "imageUuid": "e29b80f3-df87-46f9-ad82-be4b6c212121",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Michael Wolf (photo), Hans Hillewaert (editing), T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e29b80f3-df87-46f9-ad82-be4b6c212121"
+    },
+    "tax_ott122980": {
+      "imageUuid": "9ab896a7-9f73-4a24-b08b-539a4b860845",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "T. Michael Keesey (after Mivart)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9ab896a7-9f73-4a24-b08b-539a4b860845"
+    },
+    "tax_ott386590": {
+      "imageUuid": "77ec34f1-baff-4db1-8537-d075861a0079",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/77ec34f1-baff-4db1-8537-d075861a0079"
+    },
+    "tax_ott71606": {
+      "imageUuid": "f8a9f439-1498-4e41-822c-1ffcd1578e65",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f8a9f439-1498-4e41-822c-1ffcd1578e65"
+    },
+    "tax_ott7117788": {
+      "imageUuid": "77ec34f1-baff-4db1-8537-d075861a0079",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/77ec34f1-baff-4db1-8537-d075861a0079"
+    },
+    "tax_ott757104": {
+      "imageUuid": "d45c8762-fe53-4e29-8c13-60c1e62e722c",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Michael Rosenberg",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d45c8762-fe53-4e29-8c13-60c1e62e722c"
+    },
+    "tax_ott47834": {
+      "imageUuid": "3507b4f9-6672-42d4-9518-a0b1769b2e09",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3507b4f9-6672-42d4-9518-a0b1769b2e09"
+    },
+    "tax_ott99413": {
+      "imageUuid": "786bbbd0-529d-4e64-a8ac-f54f88194033",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Maija Karala",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/786bbbd0-529d-4e64-a8ac-f54f88194033"
+    },
+    "tax_ott508594": {
+      "imageUuid": "4944cd23-af86-4009-83d7-3c0cb1f259b4",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Drägü",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4944cd23-af86-4009-83d7-3c0cb1f259b4"
+    },
+    "tax_ott814477": {
+      "imageUuid": "0bcddcb4-493c-4a71-99d9-1118c7ffe511",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Christoph Schomburg",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0bcddcb4-493c-4a71-99d9-1118c7ffe511"
+    },
+    "tax_ott188046": {
+      "imageUuid": "e150775e-ce0b-4273-b997-c9e930fc2787",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e150775e-ce0b-4273-b997-c9e930fc2787"
+    },
+    "tax_ott3493057": {
+      "imageUuid": "50eb0080-39a6-4a7d-8ca4-736244301c7d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/50eb0080-39a6-4a7d-8ca4-736244301c7d"
+    },
+    "tax_ott977582": {
+      "imageUuid": "289a4625-9b86-4b04-bda5-27ca88e3c02b",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Melissa Broussard",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/289a4625-9b86-4b04-bda5-27ca88e3c02b"
+    },
+    "tax_ott169152": {
+      "imageUuid": "09a54836-e0a9-4a27-a7f3-720ced958b2b",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "TGHays",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/09a54836-e0a9-4a27-a7f3-720ced958b2b"
+    },
+    "tax_ott3341447": {
+      "imageUuid": "3d37ada3-aaa7-4850-8816-1597306a1c83",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "JCGiron",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3d37ada3-aaa7-4850-8816-1597306a1c83"
+    },
+    "tax_ott950367": {
+      "imageUuid": "dd6a79cb-1c36-458f-b210-b12f8f27bad1",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Udo Schmidt",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dd6a79cb-1c36-458f-b210-b12f8f27bad1"
+    },
+    "tax_ott160563": {
+      "imageUuid": "a3a253e6-39af-465b-bc35-781d8c4394f2",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Kristof Zyskowski & Yulia Bereshpolova (photograph)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a3a253e6-39af-465b-bc35-781d8c4394f2"
+    },
+    "tax_ott696705": {
+      "imageUuid": "3cfcacc8-cd54-4bc3-a32e-b56422314ba8",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Zyoute (modified)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3cfcacc8-cd54-4bc3-a32e-b56422314ba8"
+    },
+    "tax_ott867953": {
+      "imageUuid": "6b947ea6-07c9-4946-9556-d7739dd1a672",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Archaeodontosaurus (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6b947ea6-07c9-4946-9556-d7739dd1a672"
+    },
+    "tax_ott492988": {
+      "imageUuid": "c27bd9c4-6a3e-46bf-bf7a-81198b7e03cd",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Udo Schmidt",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c27bd9c4-6a3e-46bf-bf7a-81198b7e03cd"
+    },
+    "tax_ott720405": {
+      "imageUuid": "9edf219e-4e96-4ca5-89cc-f8b1d055883e",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Günter Hentschel (original photograph)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9edf219e-4e96-4ca5-89cc-f8b1d055883e"
+    },
+    "tax_ott691019": {
+      "imageUuid": "c6781aa0-c13e-4c78-955f-f891abbb5e5e",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mali'o Kodis, photograph by Jim Vargo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c6781aa0-c13e-4c78-955f-f891abbb5e5e"
+    },
+    "tax_ott3093456": {
+      "imageUuid": "e832d984-0983-4aee-a6e4-2ff344d3ba93",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "John Curtis (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e832d984-0983-4aee-a6e4-2ff344d3ba93"
+    },
+    "tax_ott807503": {
+      "imageUuid": "4e7260b0-0333-4c96-9076-14c67fe5bcc6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e7260b0-0333-4c96-9076-14c67fe5bcc6"
+    },
+    "tax_ott830884": {
+      "imageUuid": "5a29b2b8-18b5-4003-83a5-349124514403",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5a29b2b8-18b5-4003-83a5-349124514403"
+    },
+    "tax_ott3100238": {
+      "imageUuid": "8229756b-82c3-4a9f-a1c6-e88f958e623e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Chris A. Hamilton",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8229756b-82c3-4a9f-a1c6-e88f958e623e"
+    },
+    "tax_ott845207": {
+      "imageUuid": "c6781aa0-c13e-4c78-955f-f891abbb5e5e",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mali'o Kodis, photograph by Jim Vargo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c6781aa0-c13e-4c78-955f-f891abbb5e5e"
+    },
+    "tax_ott397357": {
+      "imageUuid": "60fc28c2-d267-4de1-823d-a3af82fbf2d3",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Caleb M. Gordon",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/60fc28c2-d267-4de1-823d-a3af82fbf2d3"
+    },
+    "tax_ott654841": {
+      "imageUuid": "50a3840c-8e67-4d89-8904-609fcd53860a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darren J. Parker",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/50a3840c-8e67-4d89-8904-609fcd53860a"
+    },
+    "tax_ott853932": {
+      "imageUuid": "dc3976ec-e3af-45a2-8016-817f58132c5c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Christoph Schomburg",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dc3976ec-e3af-45a2-8016-817f58132c5c"
+    },
+    "tax_ott36823": {
+      "imageUuid": "518961b9-b966-4094-b402-8ba63183cf26",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/518961b9-b966-4094-b402-8ba63183cf26"
+    },
+    "tax_ott193162": {
+      "imageUuid": "11c16873-6fb0-4643-bb85-a0ac9d5b5efc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Christoph Schomburg",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/11c16873-6fb0-4643-bb85-a0ac9d5b5efc"
+    },
+    "tax_ott994257": {
+      "imageUuid": "5053ea6b-faf3-438a-82b1-b9b742eed5a0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darren J. Parker",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5053ea6b-faf3-438a-82b1-b9b742eed5a0"
+    },
+    "tax_ott3018898": {
+      "imageUuid": "c13ad97a-49bc-4b9d-b459-c15853b1bd00",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darren J. Parker",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c13ad97a-49bc-4b9d-b459-c15853b1bd00"
+    },
+    "tax_ott3261988": {
+      "imageUuid": "4f616714-d7c9-41fa-963e-bac8c1932623",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4f616714-d7c9-41fa-963e-bac8c1932623"
+    },
+    "tax_ott709966": {
+      "imageUuid": "592591ae-3b98-4129-8641-328ddb16580e",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Courtney Rockenbach",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/592591ae-3b98-4129-8641-328ddb16580e"
+    },
+    "tax_ott1037289": {
+      "imageUuid": "565a2de1-d040-4424-b995-5ed58cdf7c96",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/565a2de1-d040-4424-b995-5ed58cdf7c96"
+    },
+    "tax_ott1094868": {
+      "imageUuid": "f31b82ce-a5cc-465a-922a-ec03deaaa25f",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Natalia Ladino",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f31b82ce-a5cc-465a-922a-ec03deaaa25f"
+    },
+    "tax_ott1083670": {
+      "imageUuid": "8c043f10-1065-4f61-9364-0847d615360a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Mattia Menchetti",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8c043f10-1065-4f61-9364-0847d615360a"
+    },
+    "tax_ott912680": {
+      "imageUuid": "f31b82ce-a5cc-465a-922a-ec03deaaa25f",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Natalia Ladino",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f31b82ce-a5cc-465a-922a-ec03deaaa25f"
+    },
+    "tax_ott213031": {
+      "imageUuid": "3fc08235-3ef9-434e-af1d-89ab04cdedf0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Santiago Soto",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3fc08235-3ef9-434e-af1d-89ab04cdedf0"
+    },
+    "tax_ott3583298": {
+      "imageUuid": "2db1a5b9-40c3-447b-a623-17202ecab231",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Noah Schlottman, photo by Adam G. Clause",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2db1a5b9-40c3-447b-a623-17202ecab231"
+    },
+    "tax_ott1084239": {
+      "imageUuid": "9e344caf-1930-4f11-a9ad-b2a21926516f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9e344caf-1930-4f11-a9ad-b2a21926516f"
+    },
+    "tax_ott938335": {
+      "imageUuid": "118f4fad-a309-46fd-99af-e59f1ba12456",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Hans Hillewaert (modified by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/118f4fad-a309-46fd-99af-e59f1ba12456"
+    },
+    "tax_ott520619": {
+      "imageUuid": "76931217-4fe0-4657-9193-86141b2e9caa",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Caleb M. Gordon",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/76931217-4fe0-4657-9193-86141b2e9caa"
+    },
+    "tax_ott929440": {
+      "imageUuid": "6b0a5129-4184-46ca-a7b8-e38838e12194",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Ekaterina Kopeykina (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6b0a5129-4184-46ca-a7b8-e38838e12194"
+    },
+    "tax_ott133360": {
+      "imageUuid": "cfd0917f-1fc1-422f-ac80-9c2dc2a85762",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Mattia Menchetti",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cfd0917f-1fc1-422f-ac80-9c2dc2a85762"
+    },
+    "tax_ott176180": {
+      "imageUuid": "b27aee5f-e30e-43f1-93f2-6312821b5c79",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b27aee5f-e30e-43f1-93f2-6312821b5c79"
+    },
+    "tax_ott1045318": {
+      "imageUuid": "51ba7d73-24fb-4bf5-9839-f2b3257ee2f3",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Thomas Hegna (modified from Lynch, 1958)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/51ba7d73-24fb-4bf5-9839-f2b3257ee2f3"
+    },
+    "tax_ott558087": {
+      "imageUuid": "a6e4cc42-b84c-4440-85c9-12d09aa5b5f8",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Thomas Hegna",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a6e4cc42-b84c-4440-85c9-12d09aa5b5f8"
+    },
+    "tax_ott59086": {
+      "imageUuid": "131ff023-9483-4bd0-aee9-1e1502c7a372",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/131ff023-9483-4bd0-aee9-1e1502c7a372"
+    },
+    "tax_ott149532": {
+      "imageUuid": "105eb7d2-fb59-4620-9efb-69f127dd8e36",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/105eb7d2-fb59-4620-9efb-69f127dd8e36"
+    },
+    "tax_ott411348": {
+      "imageUuid": "44a3628d-aafd-45cc-97a6-1cb74bd43dec",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Steven Haddock • Jellywatch.org",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/44a3628d-aafd-45cc-97a6-1cb74bd43dec"
+    },
+    "tax_ott374192": {
+      "imageUuid": "feaab8ab-b887-4875-801c-5c94c4b5da4b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jimmy Bernot",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/feaab8ab-b887-4875-801c-5c94c4b5da4b"
+    },
+    "tax_ott49627": {
+      "imageUuid": "4e64006c-4a03-4bf0-8f40-b3cf8eca97c0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e64006c-4a03-4bf0-8f40-b3cf8eca97c0"
+    },
+    "tax_ott3518397": {
+      "imageUuid": "ef1127ba-87f7-4fe8-af14-6ae889992fe4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef1127ba-87f7-4fe8-af14-6ae889992fe4"
+    },
+    "tax_ott431229": {
+      "imageUuid": "ed16bf8d-7512-4af0-a50c-3cf34993b701",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ed16bf8d-7512-4af0-a50c-3cf34993b701"
+    },
+    "tax_ott81620": {
+      "imageUuid": "0552662b-ec0c-41de-be84-d0523b8bb621",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0552662b-ec0c-41de-be84-d0523b8bb621"
+    },
+    "tax_ott274378": {
+      "imageUuid": "5a6d4413-8aad-49a9-8b16-da21ad65c1e5",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Thomas Hegna",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/5a6d4413-8aad-49a9-8b16-da21ad65c1e5"
+    },
+    "tax_ott660934": {
+      "imageUuid": "05aa1876-bf3a-4c00-b286-1c8178f9c6c9",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/05aa1876-bf3a-4c00-b286-1c8178f9c6c9"
+    },
+    "tax_ott890952": {
+      "imageUuid": "ba71aa4b-1382-4562-95d2-8c6bf59dd2b7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ba71aa4b-1382-4562-95d2-8c6bf59dd2b7"
+    },
+    "tax_ott49680": {
+      "imageUuid": "041cf5ba-b762-486a-bef1-f2f4880d3e56",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Shyamal",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/041cf5ba-b762-486a-bef1-f2f4880d3e56"
+    },
+    "tax_ott3579214": {
+      "imageUuid": "9ccaea11-774f-437b-8028-afd4ee880b36",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9ccaea11-774f-437b-8028-afd4ee880b36"
+    },
+    "tax_ott621065": {
+      "imageUuid": "70576445-1ec9-44de-9379-22f6e8451b50",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Mathilde Cordellier",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/70576445-1ec9-44de-9379-22f6e8451b50"
+    },
+    "tax_ott106112": {
+      "imageUuid": "def1099d-691e-42a8-9551-49e97f264689",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Mathilde Cordellier",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/def1099d-691e-42a8-9551-49e97f264689"
+    },
+    "tax_ott7485612": {
+      "imageUuid": "c314c714-54e3-4f66-8079-e6248115b53e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Arcadia Science",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c314c714-54e3-4f66-8079-e6248115b53e"
+    },
+    "tax_ott384576": {
+      "imageUuid": "6cbff80e-9537-4130-8397-ebbf77464ea4",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "David Sim (photograph) and T. Michael Keesey (vectorization)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6cbff80e-9537-4130-8397-ebbf77464ea4"
+    },
+    "tax_ott251385": {
+      "imageUuid": "32cafb8f-26f9-462d-868b-8a8fe88a662d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jamie Whitehouse",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/32cafb8f-26f9-462d-868b-8a8fe88a662d"
+    },
+    "tax_ott942389": {
+      "imageUuid": "2d0931d0-333a-45f0-bd22-1e08d036b407",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2d0931d0-333a-45f0-bd22-1e08d036b407"
+    },
+    "tax_ott2871561": {
+      "imageUuid": "4ddc3616-7d3c-4542-96c9-f6a9f817435e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4ddc3616-7d3c-4542-96c9-f6a9f817435e"
+    },
+    "tax_ott1033634": {
+      "imageUuid": "a4670091-e9ef-4ed9-aa80-eeb09fdfb750",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Leann Biancani / photo: opencage.info",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a4670091-e9ef-4ed9-aa80-eeb09fdfb750"
+    },
+    "tax_ott960090": {
+      "imageUuid": "a4670091-e9ef-4ed9-aa80-eeb09fdfb750",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Leann Biancani / photo: opencage.info",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a4670091-e9ef-4ed9-aa80-eeb09fdfb750"
+    },
+    "tax_ott383734": {
+      "imageUuid": "a4670091-e9ef-4ed9-aa80-eeb09fdfb750",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Leann Biancani / photo: opencage.info",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a4670091-e9ef-4ed9-aa80-eeb09fdfb750"
+    },
+    "tax_ott893890": {
+      "imageUuid": "694a26f4-5f7c-4b03-9a09-ba9707fd9185",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/694a26f4-5f7c-4b03-9a09-ba9707fd9185"
+    },
+    "tax_ott749610": {
+      "imageUuid": "334b85a9-9da8-43bb-a71b-18714f286f41",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Comingio Merculiano",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/334b85a9-9da8-43bb-a71b-18714f286f41"
+    },
+    "tax_ott997087": {
+      "imageUuid": "8c89f14e-7c7b-4844-b0c3-dd3f90818660",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8c89f14e-7c7b-4844-b0c3-dd3f90818660"
+    },
+    "tax_ott126313": {
+      "imageUuid": "d9e48b1e-655d-4cba-9a2d-13cccb3d9bc9",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "K8otter",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d9e48b1e-655d-4cba-9a2d-13cccb3d9bc9"
+    },
+    "tax_ott391833": {
+      "imageUuid": "a82a4eb5-d1bb-47ae-abe2-a8d5df6535ca",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a82a4eb5-d1bb-47ae-abe2-a8d5df6535ca"
+    },
+    "tax_ott820667": {
+      "imageUuid": "99d2123b-bbaa-44d9-881c-d5d6caf13256",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/99d2123b-bbaa-44d9-881c-d5d6caf13256"
+    },
+    "tax_ott876498": {
+      "imageUuid": "dcb623c0-4b15-491a-a140-14bba4f08a1b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dcb623c0-4b15-491a-a140-14bba4f08a1b"
+    },
+    "tax_ott325999": {
+      "imageUuid": "ef306e84-da57-412c-ba93-7bcd3fecfe26",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Katie S. Collins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ef306e84-da57-412c-ba93-7bcd3fecfe26"
+    },
+    "tax_ott111501": {
+      "imageUuid": "eed3f171-18cc-4224-8ac7-13d757ce5e5a",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Brockhaus and Efron",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/eed3f171-18cc-4224-8ac7-13d757ce5e5a"
+    },
+    "tax_ott2875306": {
+      "imageUuid": "cb95b2fd-198f-42bf-9c04-87375197719a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/cb95b2fd-198f-42bf-9c04-87375197719a"
+    },
+    "tax_ott470877": {
+      "imageUuid": "e5c0dc78-aa19-4269-871d-266ed7d803cf",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e5c0dc78-aa19-4269-871d-266ed7d803cf"
+    },
+    "tax_ott386772": {
+      "imageUuid": "2b77991f-ba4f-4d6a-8f19-3b979b582b07",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Elodie Jacob",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2b77991f-ba4f-4d6a-8f19-3b979b582b07"
+    },
+    "tax_ott1037293": {
+      "imageUuid": "dfa3a6c8-0b93-40ee-ad41-f24690a09c22",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Tauana J. Cunha",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dfa3a6c8-0b93-40ee-ad41-f24690a09c22"
+    },
+    "tax_ott875210": {
+      "imageUuid": "c4b5ddc1-5ee3-4986-b49e-b3fbd0e63aee",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Harold N Eyster",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c4b5ddc1-5ee3-4986-b49e-b3fbd0e63aee"
+    },
+    "tax_ott145756": {
+      "imageUuid": "81351e46-0ea9-4357-9a46-72036493214e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Katie S. Collins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/81351e46-0ea9-4357-9a46-72036493214e"
+    },
+    "tax_ott778849": {
+      "imageUuid": "72dc8fac-4583-4b39-8ba3-681bd09ead61",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Katie S. Collins",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/72dc8fac-4583-4b39-8ba3-681bd09ead61"
+    },
+    "tax_ott954033": {
+      "imageUuid": "d76df72f-2ae4-4604-ba94-f5567f94179c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d76df72f-2ae4-4604-ba94-f5567f94179c"
+    },
+    "tax_ott4986380": {
+      "imageUuid": "441719c7-77f9-4f57-9dcc-cd28f706e8f0",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Reka Szabo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/441719c7-77f9-4f57-9dcc-cd28f706e8f0"
+    },
+    "tax_ott4978537": {
+      "imageUuid": "3b9b5894-3c26-46a7-9772-fc62942ff66a",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3b9b5894-3c26-46a7-9772-fc62942ff66a"
+    },
+    "tax_ott941625": {
+      "imageUuid": "6a565dfd-4e81-4df5-8db3-157d69d3280d",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Auguste Le Roux and T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6a565dfd-4e81-4df5-8db3-157d69d3280d"
+    },
+    "tax_ott1020335": {
+      "imageUuid": "3b9b5894-3c26-46a7-9772-fc62942ff66a",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3b9b5894-3c26-46a7-9772-fc62942ff66a"
+    },
+    "tax_ott388241": {
+      "imageUuid": "6f529496-ad03-4e5e-8de4-3b9307dea8ce",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Smithsonian Environmental Research Center and T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6f529496-ad03-4e5e-8de4-3b9307dea8ce"
+    },
+    "tax_ott221551": {
+      "imageUuid": "441719c7-77f9-4f57-9dcc-cd28f706e8f0",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Reka Szabo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/441719c7-77f9-4f57-9dcc-cd28f706e8f0"
+    },
+    "tax_ott466493": {
+      "imageUuid": "2ca2a8ff-c166-463c-a26c-763221d22853",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2ca2a8ff-c166-463c-a26c-763221d22853"
+    },
+    "tax_ott954042": {
+      "imageUuid": "98605a59-759b-4525-81bc-e103b963a526",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Karl Ragnar Gjertsen (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/98605a59-759b-4525-81bc-e103b963a526"
+    },
+    "tax_ott316441": {
+      "imageUuid": "f0d839a1-5a3e-42b2-828a-c5e536f0f7b7",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f0d839a1-5a3e-42b2-828a-c5e536f0f7b7"
+    },
+    "tax_ott2845779": {
+      "imageUuid": "c1fd59b3-bc5b-4d26-a37a-8ee5770a5286",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Luis Cunha",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c1fd59b3-bc5b-4d26-a37a-8ee5770a5286"
+    },
+    "tax_ott639288": {
+      "imageUuid": "08901b25-0da9-483e-9c11-a5258b783d40",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "B. Duygu Özpolat",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/08901b25-0da9-483e-9c11-a5258b783d40"
+    },
+    "tax_ott986619": {
+      "imageUuid": "18ec7d79-cf30-4393-8186-74be8627967f",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "B. Duygu Özpolat",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/18ec7d79-cf30-4393-8186-74be8627967f"
+    },
+    "tax_ott226884": {
+      "imageUuid": "2bda2959-7b95-4bc9-a046-791289905e9f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2bda2959-7b95-4bc9-a046-791289905e9f"
+    },
+    "tax_ott802115": {
+      "imageUuid": "9c317e78-b548-4da6-add7-7009ea6ea16c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9c317e78-b548-4da6-add7-7009ea6ea16c"
+    },
+    "tax_ott566397": {
+      "imageUuid": "68cd12e5-716b-4c3c-ac98-37761edc74fb",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/68cd12e5-716b-4c3c-ac98-37761edc74fb"
+    },
+    "tax_ott146028": {
+      "imageUuid": "9a9b00b8-6abc-491f-a3cf-2cc0dc65e4cf",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9a9b00b8-6abc-491f-a3cf-2cc0dc65e4cf"
+    },
+    "tax_ott178412": {
+      "imageUuid": "f2fb5773-f8ff-45b0-9c6c-cc5aef3c93d5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f2fb5773-f8ff-45b0-9c6c-cc5aef3c93d5"
+    },
+    "tax_ott3684019": {
+      "imageUuid": "12b88747-2892-454a-a882-c9c7e5f2c715",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Kanchi Nanjo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/12b88747-2892-454a-a882-c9c7e5f2c715"
+    },
+    "tax_ott466489": {
+      "imageUuid": "58b9cc34-0c44-4547-a2af-8f21c04ab883",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Marta Mammone",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/58b9cc34-0c44-4547-a2af-8f21c04ab883"
+    },
+    "tax_ott894958": {
+      "imageUuid": "c75dafc8-9944-4cc7-b4e8-f8924a694b1a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c75dafc8-9944-4cc7-b4e8-f8924a694b1a"
+    },
+    "tax_ott161877": {
+      "imageUuid": "6cfafe72-d16f-490c-98d9-6dd192870b52",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Mali'o Kodis, photograph by Aqua-Photos (http://www.flickr.com/people/undervannsfotografen/)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6cfafe72-d16f-490c-98d9-6dd192870b52"
+    },
+    "tax_ott938118": {
+      "imageUuid": "8318deda-0d99-481b-b306-a0f8d98abe67",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jake Warner",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8318deda-0d99-481b-b306-a0f8d98abe67"
+    },
+    "tax_ott558023": {
+      "imageUuid": "b46a16df-5946-4049-9876-ab774b419966",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Harold N Eyster",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b46a16df-5946-4049-9876-ab774b419966"
+    },
+    "tax_ott751447": {
+      "imageUuid": "33fbcda3-a132-4d2a-8846-8485a44e24c5",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/33fbcda3-a132-4d2a-8846-8485a44e24c5"
+    },
+    "tax_ott706970": {
+      "imageUuid": "4b43f3cc-873d-4e03-afca-48cc05f1dfa9",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4b43f3cc-873d-4e03-afca-48cc05f1dfa9"
+    },
+    "tax_ott507951": {
+      "imageUuid": "918e22ea-53d9-4318-879d-1a3126968157",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "James St. John and T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/918e22ea-53d9-4318-879d-1a3126968157"
+    },
+    "tax_ott507954": {
+      "imageUuid": "32eeaa29-2e90-40b5-92fb-eb8d7fcab9ab",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Victor Piñon-González",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/32eeaa29-2e90-40b5-92fb-eb8d7fcab9ab"
+    },
+    "tax_ott26816": {
+      "imageUuid": "39fc68cd-abf0-49a3-927d-988a39fecddd",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Kurtis Wothe and Giovanna Sainz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/39fc68cd-abf0-49a3-927d-988a39fecddd"
+    },
+    "tax_ott111442": {
+      "imageUuid": "b065ca7a-406d-4bfe-ae06-b41124a1b4a3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darrin Schultz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b065ca7a-406d-4bfe-ae06-b41124a1b4a3"
+    },
+    "tax_ott832870": {
+      "imageUuid": "c3888c95-a1b2-49d7-905b-fd064f13441a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c3888c95-a1b2-49d7-905b-fd064f13441a"
+    },
+    "tax_ott2114": {
+      "imageUuid": "b8f8323c-83eb-44d3-af71-af91b0b4229e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b8f8323c-83eb-44d3-af71-af91b0b4229e"
+    },
+    "tax_ott926817": {
+      "imageUuid": "b7a75547-2a58-4303-9497-42eee2412700",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Zechariah Meunier",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b7a75547-2a58-4303-9497-42eee2412700"
+    },
+    "tax_ott197638": {
+      "imageUuid": "be5c73aa-407f-4a6f-b7ec-6061bec99d86",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/be5c73aa-407f-4a6f-b7ec-6061bec99d86"
+    },
+    "tax_ott41884": {
+      "imageUuid": "458c606d-4e65-4a6b-9787-a94093a041fe",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Graham Montgomery",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/458c606d-4e65-4a6b-9787-a94093a041fe"
+    },
+    "tax_ott431586": {
+      "imageUuid": "b84b253e-3111-42d0-aaa2-dfd981d1b4fc",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "African Mud Turtle (original drawing)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b84b253e-3111-42d0-aaa2-dfd981d1b4fc"
+    },
+    "tax_ott3652391": {
+      "imageUuid": "7922310a-c69e-4fb4-8556-4921a2daf191",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Lindberg (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7922310a-c69e-4fb4-8556-4921a2daf191"
+    },
+    "tax_ott564702": {
+      "imageUuid": "06119510-7641-4a0b-8585-93ccb5ca9447",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Harold N Eyster",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/06119510-7641-4a0b-8585-93ccb5ca9447"
+    },
+    "tax_ott146856": {
+      "imageUuid": "0552ec39-a86b-4e23-b92a-7c1c38386e29",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jake Warner",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0552ec39-a86b-4e23-b92a-7c1c38386e29"
+    },
+    "tax_ott132767": {
+      "imageUuid": "963dbc23-f242-4ede-b517-07e5e693ac31",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/963dbc23-f242-4ede-b517-07e5e693ac31"
+    },
+    "tax_ott3651304": {
+      "imageUuid": "fe2c1c76-821d-45f4-bac0-743bfe1d3ac8",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Michelle Site",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fe2c1c76-821d-45f4-bac0-743bfe1d3ac8"
+    },
+    "tax_ott4950338": {
+      "imageUuid": "7e27ce06-1f4f-45d8-a359-dcba8fc54b9b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Birgit Lang",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7e27ce06-1f4f-45d8-a359-dcba8fc54b9b"
+    },
+    "tax_ott617215": {
+      "imageUuid": "77b89da8-ecbf-4ae7-9544-0f1176559160",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "DataBase Center for Life Science (DBCLS)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/77b89da8-ecbf-4ae7-9544-0f1176559160"
+    },
+    "tax_ott574245": {
+      "imageUuid": "7e27ce06-1f4f-45d8-a359-dcba8fc54b9b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Birgit Lang",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7e27ce06-1f4f-45d8-a359-dcba8fc54b9b"
+    },
+    "tax_ott293690": {
+      "imageUuid": "7e27ce06-1f4f-45d8-a359-dcba8fc54b9b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Birgit Lang",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7e27ce06-1f4f-45d8-a359-dcba8fc54b9b"
+    },
+    "tax_ott880230": {
+      "imageUuid": "dcbe9eb2-2aa0-4b58-a336-2f691cac4145",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darrin Schultz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/dcbe9eb2-2aa0-4b58-a336-2f691cac4145"
+    },
+    "tax_ott164229": {
+      "imageUuid": "9d6fc9d2-cbd1-49fe-bb39-ac8355466e48",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9d6fc9d2-cbd1-49fe-bb39-ac8355466e48"
+    },
+    "tax_ott588761": {
+      "imageUuid": "8b28733a-9eab-4510-9dcf-9235aaf44d14",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8b28733a-9eab-4510-9dcf-9235aaf44d14"
+    },
+    "tax_ott439207": {
+      "imageUuid": "c298de53-51d8-41d4-b2eb-83723a876b9a",
+      "license": "https://creativecommons.org/licenses/by-nc/3.0/",
+      "contributor": "Michelle Site",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/c298de53-51d8-41d4-b2eb-83723a876b9a"
+    },
+    "tax_ott373931": {
+      "imageUuid": "3742f2ad-2644-4a52-94fb-48d54208d73d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3742f2ad-2644-4a52-94fb-48d54208d73d"
+    },
+    "tax_ott823199": {
+      "imageUuid": "9c529339-9a35-4c3b-9855-793fcd151ca1",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Ernst Haeckel",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9c529339-9a35-4c3b-9855-793fcd151ca1"
+    },
+    "tax_ott4939309": {
+      "imageUuid": "bca2aee7-8b41-4a79-8e24-b498c8c9a2fe",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Darrin Schultz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/bca2aee7-8b41-4a79-8e24-b498c8c9a2fe"
+    },
+    "tax_ott163384": {
+      "imageUuid": "8b28733a-9eab-4510-9dcf-9235aaf44d14",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8b28733a-9eab-4510-9dcf-9235aaf44d14"
+    },
+    "tax_ott101285": {
+      "imageUuid": "3dda4fde-0f70-4eb1-bf50-8ab5dcbd0c6b",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Madeline Eppley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3dda4fde-0f70-4eb1-bf50-8ab5dcbd0c6b"
+    },
+    "tax_ott708370": {
+      "imageUuid": "8628bb8b-44be-4b41-b2b0-2aedaeece8ee",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8628bb8b-44be-4b41-b2b0-2aedaeece8ee"
+    },
+    "tax_ott395048": {
+      "imageUuid": "7a056405-8d3e-4b1e-9368-4df1e9437e47",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7a056405-8d3e-4b1e-9368-4df1e9437e47"
+    },
+    "tax_ott560721": {
+      "imageUuid": "4e653f74-3ac5-4dd3-8b1d-c71ba99335d0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Livio Ruzzante",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e653f74-3ac5-4dd3-8b1d-c71ba99335d0"
+    },
+    "tax_ott820430": {
+      "imageUuid": "4e653f74-3ac5-4dd3-8b1d-c71ba99335d0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Livio Ruzzante",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e653f74-3ac5-4dd3-8b1d-c71ba99335d0"
+    },
+    "tax_ott819804": {
+      "imageUuid": "4e653f74-3ac5-4dd3-8b1d-c71ba99335d0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Livio Ruzzante",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e653f74-3ac5-4dd3-8b1d-c71ba99335d0"
+    },
+    "tax_ott567340": {
+      "imageUuid": "a68be31e-95e7-415a-8fb2-2a6fd3275cb8",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Frank Förster",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a68be31e-95e7-415a-8fb2-2a6fd3275cb8"
+    },
+    "tax_ott332059": {
+      "imageUuid": "103b38cc-ad0b-4d70-9a38-db277c9beca8",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/103b38cc-ad0b-4d70-9a38-db277c9beca8"
+    },
+    "tax_ott332069": {
+      "imageUuid": "3b435732-b4bb-4743-9e83-a6c8e5821f0f",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Noah Schlottman, photo by Martin V. Sørensen",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3b435732-b4bb-4743-9e83-a6c8e5821f0f"
+    },
+    "tax_ott313700": {
+      "imageUuid": "103b38cc-ad0b-4d70-9a38-db277c9beca8",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/103b38cc-ad0b-4d70-9a38-db277c9beca8"
+    },
+    "tax_ott332065": {
+      "imageUuid": "103b38cc-ad0b-4d70-9a38-db277c9beca8",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Gareth Monger",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/103b38cc-ad0b-4d70-9a38-db277c9beca8"
+    },
+    "tax_ott894254": {
+      "imageUuid": "873541fb-755d-431b-ba22-2357f76ab744",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Lisa Barf",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/873541fb-755d-431b-ba22-2357f76ab744"
+    },
+    "tax_ott918802": {
+      "imageUuid": "05df5f17-12e3-4649-9830-4338be59651f",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "李芬芳 (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/05df5f17-12e3-4649-9830-4338be59651f"
+    },
+    "tax_ott194953": {
+      "imageUuid": "607b10e4-e036-44fd-ad17-4395c6ecc0c6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/607b10e4-e036-44fd-ad17-4395c6ecc0c6"
+    },
+    "tax_ott1021812": {
+      "imageUuid": "228e140b-e126-4a15-9148-c06067e6646e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/228e140b-e126-4a15-9148-c06067e6646e"
+    },
+    "tax_ott5132284": {
+      "imageUuid": "9254ba7d-64ad-445d-83ff-45580e399c9f",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mali'o Kodis, photograph property of National Museums of Northern Ireland",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9254ba7d-64ad-445d-83ff-45580e399c9f"
+    },
+    "tax_ott1027439": {
+      "imageUuid": "9df626b5-5d9f-4603-a378-779ffbfe45b6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Riccardo Percudani",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9df626b5-5d9f-4603-a378-779ffbfe45b6"
+    },
+    "tax_ott883076": {
+      "imageUuid": "e81f2e89-d699-4339-a502-8102f8b9b871",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e81f2e89-d699-4339-a502-8102f8b9b871"
+    },
+    "tax_ott100737": {
+      "imageUuid": "33601a95-34da-4672-9e69-50cf36e2f50b",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Noah Schlottman, photo by Hans De Blauwe",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/33601a95-34da-4672-9e69-50cf36e2f50b"
+    },
+    "tax_ott744224": {
+      "imageUuid": "e48ba6be-fea3-46f7-a923-143afa4ff09f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Christoph Schomburg",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/e48ba6be-fea3-46f7-a923-143afa4ff09f"
+    },
+    "tax_ott521586": {
+      "imageUuid": "98dbd0df-7461-4730-b477-40df7ecd8eee",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Elodie Jacob",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/98dbd0df-7461-4730-b477-40df7ecd8eee"
+    },
+    "tax_ott846401": {
+      "imageUuid": "ec0d3ca0-999b-45b5-bed9-b79d7a06af9f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Josep Marti Solans",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ec0d3ca0-999b-45b5-bed9-b79d7a06af9f"
+    },
+    "tax_ott570370": {
+      "imageUuid": "0504ac08-df82-40d4-8ba6-4aca1066fd4b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0504ac08-df82-40d4-8ba6-4aca1066fd4b"
+    },
+    "tax_ott997119": {
+      "imageUuid": "fffc2572-8e73-44a5-93ad-3c20d8dbd736",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/fffc2572-8e73-44a5-93ad-3c20d8dbd736"
+    },
+    "tax_ott471703": {
+      "imageUuid": "a0753559-d626-4b3a-9af7-39c79409b8f4",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "Julie Blommaert based on photo by Sofdrakou",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a0753559-d626-4b3a-9af7-39c79409b8f4"
+    },
+    "tax_ott476668": {
+      "imageUuid": "4e64006c-4a03-4bf0-8f40-b3cf8eca97c0",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4e64006c-4a03-4bf0-8f40-b3cf8eca97c0"
+    },
+    "tax_ott339040": {
+      "imageUuid": "7f877a9e-53d7-48d0-a422-d3fa0ff5e2f9",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "Mareike C. Janiak",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7f877a9e-53d7-48d0-a422-d3fa0ff5e2f9"
+    },
+    "tax_ott644255": {
+      "imageUuid": "414644c7-12c9-4ecd-b336-ac4f8f981b47",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Jan A. Venter, Herbert H. T. Prins, David A. Balfour & Rob Slotow (vectorized by T. Michael Keesey)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/414644c7-12c9-4ecd-b336-ac4f8f981b47"
+    },
+    "tax_ott215885": {
+      "imageUuid": "01552300-a8e6-41ac-bc3d-85ed396af66a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/01552300-a8e6-41ac-bc3d-85ed396af66a"
+    },
+    "tax_ott102719": {
+      "imageUuid": "8b720ff5-8e5a-4640-babc-cc30d6495a84",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Mattia Menchetti",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8b720ff5-8e5a-4640-babc-cc30d6495a84"
+    },
+    "tax_ott1083719": {
+      "imageUuid": "4a4885cb-2ab5-432d-bed7-db7dc0445018",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4a4885cb-2ab5-432d-bed7-db7dc0445018"
+    },
+    "tax_ott557687": {
+      "imageUuid": "b1649388-f901-41b2-9c31-0ed9b1057cd9",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "NOAA Great Lakes Environmental Research Laboratory (illustration) and Timothy J. Bartley (silhouette)",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b1649388-f901-41b2-9c31-0ed9b1057cd9"
+    },
+    "tax_ott3659736": {
+      "imageUuid": "6da2be3e-7a94-44ec-b4da-09169647d961",
+      "license": "https://creativecommons.org/licenses/by-nc-sa/3.0/",
+      "contributor": "Mali'o Kodis, drawing by Manvir Singh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6da2be3e-7a94-44ec-b4da-09169647d961"
+    }
+  }
+}

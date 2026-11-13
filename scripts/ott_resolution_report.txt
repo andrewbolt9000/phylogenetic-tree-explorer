@@ -1,0 +1,24 @@
+======================================================================
+Open Tree of Life Name Resolution Report
+======================================================================
+Timestamp: 2026-11-12T22:55:00.917516
+
+OVERALL STATISTICS
+----------------------------------------------------------------------
+Total candidates:          2
+Exact matches:             2
+Synonym matches:           0
+Alternate name matches:    0
+Ambiguous matches:         0
+Unmatched:                 0
+Higher rank matches:       0
+
+RESULTS BY COLLECTION
+----------------------------------------------------------------------
+test_collection                   2  resolved:    2  unmatched:    0  (100.0%)
+
+RESULTS BY GROUP
+----------------------------------------------------------------------
+Carnivora                         2  resolved:    2  unmatched:    0  (100.0%)
+
+======================================================================

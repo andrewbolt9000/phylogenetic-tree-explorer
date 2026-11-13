@@ -62,6 +62,11 @@ class SettingsUI {
       'hover-highlight-size-slider': { setting: 'hoverHighlightSize', transform: v => parseInt(v), display: 'hover-highlight-size-value', suffix: 'px' },
       'hover-highlight-x-offset-slider': { setting: 'hoverHighlightXOffset', transform: v => parseInt(v), display: 'hover-highlight-x-offset-value', suffix: 'px' },
       'hover-highlight-y-offset-slider': { setting: 'hoverHighlightYOffset', transform: v => parseInt(v), display: 'hover-highlight-y-offset-value', suffix: 'px' },
+      'hover-highlight-opacity-slider': { setting: 'hoverHighlightOpacity', transform: v => parseInt(v), display: 'hover-highlight-opacity-value', suffix: '%' },
+
+      // Text background controls
+      'text-background-y-offset-slider': { setting: 'textBackgroundYOffset', transform: v => parseInt(v), display: 'text-background-y-offset-value', suffix: 'px' },
+      'text-background-height-slider': { setting: 'textBackgroundHeight', transform: v => parseFloat(v), display: 'text-background-height-value', suffix: 'x' },
 
       // Silhouette shadow controls
       'silhouette-shadow-enabled-toggle': { setting: 'silhouetteShadowEnabled', transform: v => v.checked, isToggle: true },
@@ -349,6 +354,13 @@ class SettingsUI {
       this.viz.setGridOpacity(settings.gridOpacity);
     }
     
+    // Apply text background parameters
+    if (settings.textBackgroundYOffset !== undefined) {
+      this.viz.setTextBackgroundYOffset(settings.textBackgroundYOffset);
+    }
+    if (settings.textBackgroundHeight !== undefined) {
+      this.viz.setTextBackgroundHeight(settings.textBackgroundHeight);
+    }
     // Apply hover highlight parameters
     if (settings.hoverHighlightSize !== undefined) {
       this.viz.setHoverHighlightSize(settings.hoverHighlightSize);
@@ -358,6 +370,9 @@ class SettingsUI {
     }
     if (settings.hoverHighlightYOffset !== undefined) {
       this.viz.setHoverHighlightYOffset(settings.hoverHighlightYOffset);
+    }
+    if (settings.hoverHighlightOpacity !== undefined) {
+      this.viz.setHoverHighlightOpacity(settings.hoverHighlightOpacity);
     }
 
     // Apply silhouette shadow parameters

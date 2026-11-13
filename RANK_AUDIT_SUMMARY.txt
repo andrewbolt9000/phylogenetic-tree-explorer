@@ -1,0 +1,78 @@
+================================================================================
+TAXONOMY RANK AUDIT - EXECUTIVE SUMMARY
+================================================================================
+
+CRITICAL FINDING: Schema rank enum is incompatible with OTL API data
+
+NUMBERS:
+  - Schema has:        14 ranks (hardcoded enum)
+  - OTL API returned:  30 ranks (real data)
+  - Missing from schema: 16 ranks
+  
+BLOCKING ISSUE:
+  Any taxonomy data with OTL ranks will FAIL schema validation.
+
+MISSING RANKS IN SCHEMA:
+  1. cohort
+  2. infraclass
+  3. infraorder
+  4. no rank
+  5. parvorder
+  6. section
+  7. species group
+  8. species subgroup
+  9. subcohort
+  10. subsection
+  (Plus: superclass, superorder, subphylum - these ARE in OTL but unclear if in schema)
+
+SCHEMA LOCATION:
+  File: data/schemas/taxonomy.schema.json
+  Lines: 49-50
+  Property: "rank" enum definition
+
+AFFECTED CODE (RANK FILTERING):
+  File: scripts/ott_name_resolver.py
+  Lines: 212-215 (binary "higher_rank" classification)
+         330 (hardcoded species check)
+  
+  PROBLEM: Assumes only species/subspecies are "low rank"
+           All other 28 ranks classified as "higher_rank" without nuance
+           No special handling for:
+           - "no rank" nodes
+           - "species group" / "species subgroup" 
+           - Intermediate ranks (infraorder, parvorder, etc.)
+
+AMBIGUOUS CASES NEEDING CLARIFICATION:
+  1. "no rank" - How to classify? Missing data? To-review? Different rank?
+  2. "species group" - Higher or lower than species?
+  3. Non-Linnaean ranks - Where in hierarchy? (cohort, section, parvorder, etc.)
+
+DOCUMENTATION GAPS:
+  - DATA_POLICY.md assumes Linnaean hierarchy only
+  - ARCHITECTURE.md examples use only 8 ranks
+  - No guidance on "no rank" handling
+  - No mention of non-Linnaean ranks
+
+TEST COVERAGE:
+  - Schema tests only use 8 common ranks
+  - Only 1 test for rank classification (higher_rank with "genus")
+  - No coverage for 22 new ranks
+  - No coverage for edge cases
+
+FILES REQUIRING CHANGES:
+  1. data/schemas/taxonomy.schema.json                    [BLOCKING]
+  2. scripts/ott_name_resolver.py                         [HIGH]
+  3. data/test-fixtures/taxonomy-fixture.json             [MEDIUM]
+  4. scripts/test_ott_name_resolver.py                    [MEDIUM]
+  5. scripts/OTL_NAME_RESOLVER_README.md                  [MEDIUM]
+  6. scripts/phylopic_image_resolver.py                   [MEDIUM]
+  7. docs/DATA_POLICY.md                                  [LOW]
+  8. docs/ARCHITECTURE.md                                 [LOW]
+
+IMMEDIATE ACTION REQUIRED:
+  1. Expand schema rank enum from 14 to 30 values
+  2. OR: Change rank from enum to plain string type
+  3. Audit and fix OTL resolver rank filtering logic
+  4. Add test coverage for all 30 ranks
+
+================================================================================

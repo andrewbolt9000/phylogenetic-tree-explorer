@@ -74,9 +74,14 @@ class VisualizationSettings {
       windStrength: 0,
 
       // Hover highlight settings
-      hoverHighlightSize: 15,         // Radius of hover highlight circle (5-100px)
+      hoverHighlightSize: 15,         // Radius of hover highlight circle (0-200px)
       hoverHighlightXOffset: 0,       // Horizontal offset in pixels (-50 to 50)
       hoverHighlightYOffset: 0,       // Vertical offset in pixels (-50 to 50)
+      hoverHighlightOpacity: 70,      // Opacity of hover highlight (0-100%)
+
+      // Text background settings
+      textBackgroundYOffset: 0,       // Vertical offset of text backgrounds in pixels (-50 to 50)
+      textBackgroundHeight: 1.2,      // Height multiplier for text backgrounds (0.5-2.0)
 
       // Silhouette shadow settings
       silhouetteShadowEnabled: true,  // Whether to display shadows
@@ -479,8 +484,8 @@ class VisualizationSettings {
       // Hover highlight settings
       hoverHighlightSize: {
         type: 'integer',
-        min: 5,
-        max: 100,
+        min: 0,
+        max: 200,
         default: 15,
         description: 'Radius of the hover highlight circle in pixels',
         category: 'appearance',
@@ -499,6 +504,32 @@ class VisualizationSettings {
         max: 50,
         default: 0,
         description: 'Vertical offset of hover highlight in pixels',
+        category: 'appearance',
+      },
+      hoverHighlightOpacity: {
+        type: 'integer',
+        min: 0,
+        max: 100,
+        default: 70,
+        description: 'Opacity of hover highlight in percentage',
+        category: 'appearance',
+      },
+
+      // Text background settings
+      textBackgroundYOffset: {
+        type: 'integer',
+        min: -50,
+        max: 50,
+        default: 0,
+        description: 'Vertical offset of text backgrounds in pixels',
+        category: 'appearance',
+      },
+      textBackgroundHeight: {
+        type: 'number',
+        min: 0.5,
+        max: 2.0,
+        default: 1.2,
+        description: 'Height multiplier for text background rectangles',
         category: 'appearance',
       },
 
@@ -590,9 +621,14 @@ class VisualizationSettings {
       `gridOpacity: ${this.settings.gridOpacity.toFixed(2)}  # Grid opacity (0-1)`,
       '',
       '# HOVER HIGHLIGHT',
-      `hoverHighlightSize: ${this.settings.hoverHighlightSize}  # Highlight circle radius (5-100px)`,
+      `hoverHighlightSize: ${this.settings.hoverHighlightSize}  # Highlight circle radius (0-200px)`,
       `hoverHighlightXOffset: ${this.settings.hoverHighlightXOffset}  # Horizontal offset (px)`,
       `hoverHighlightYOffset: ${this.settings.hoverHighlightYOffset}  # Vertical offset (px)`,
+      `hoverHighlightOpacity: ${this.settings.hoverHighlightOpacity}  # Highlight opacity (0-100%)`,
+      '',
+      '# TEXT BACKGROUNDS',
+      `textBackgroundYOffset: ${this.settings.textBackgroundYOffset}  # Vertical offset of text backgrounds (px)`,
+      `textBackgroundHeight: ${this.settings.textBackgroundHeight.toFixed(1)}  # Height multiplier (0.5-2.0)`,
       '',
       '# SILHOUETTE SHADOWS',
       `silhouetteShadowEnabled: ${this.settings.silhouetteShadowEnabled}  # Display shadow effects`,

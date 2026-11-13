@@ -639,6 +639,10 @@ The application is organized into the following modules (not all created initial
     divergenceLoader.js    # Load and validate divergence estimates JSON
     schemaValidator.js     # Validate all data against JSON schemas
     
+  /taxonomy
+    rankHierarchy.js       # Rank hierarchy knowledge base (28 OTL ranks, utilities)
+    rankHierarchy.test.js  # Tests for rank ordering and APIs
+    
   /graph
     PhyloGraph.js          # Graph data structure (hypothesis-scoped)
     graphOperations.js     # MRCA, pathfinding, pruning (work within one hypothesis)

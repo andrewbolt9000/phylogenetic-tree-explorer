@@ -114,10 +114,10 @@ test('HypothesisLoader - validates terminal nodes reference taxa', () => {
   });
 });
 
-test('HypothesisLoader - validates internal nodes have at least 2 children', () => {
+test('HypothesisLoader - accepts unary internal nodes', () => {
   const hypLoader = new HypothesisLoader('./data/schemas/hypothesis.schema.json');
 
-  const invalidHypothesis = {
+  const hypothesis = {
     hypothesisId: 'test_hyp',
     hypothesisName: 'Test',
     source: 'test',
@@ -141,8 +141,39 @@ test('HypothesisLoader - validates internal nodes have at least 2 children', () 
     ]
   };
 
-  assert.throws(() => {
-    hypLoader._processHypothesis(invalidHypothesis, {});
+  assert.doesNotThrow(() => {
+    hypLoader._processHypothesis(hypothesis, {});
+  });
+});
+
+test('HypothesisLoader - accepts empty internal placeholder nodes', () => {
+  const hypLoader = new HypothesisLoader('./data/schemas/hypothesis.schema.json');
+
+  const hypothesis = {
+    hypothesisId: 'test_hyp',
+    hypothesisName: 'Test',
+    source: 'Open Tree of Life',
+    rootNodeId: 'ancestor_h1_n0',
+    terminalIdPrefix: 'tax_',
+    internalIdPrefix: 'ancestor_h1_',
+    nodes: [
+      {
+        id: 'ancestor_h1_n0',
+        type: 'internal',
+        parentId: null,
+        children: ['ancestor_h1_n1']
+      },
+      {
+        id: 'ancestor_h1_n1',
+        type: 'internal',
+        parentId: 'ancestor_h1_n0',
+        children: []
+      }
+    ]
+  };
+
+  assert.doesNotThrow(() => {
+    hypLoader._processHypothesis(hypothesis, {});
   });
 });
 

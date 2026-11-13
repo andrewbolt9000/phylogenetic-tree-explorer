@@ -1,0 +1,6779 @@
+{
+  "hypothesisId": "phylo_mammals_600_otl_1",
+  "hypothesisName": "Mammal phylogeny — 600-animal collection, Open Tree of Life induced subtree",
+  "source": "Open Tree of Life synthetic tree, induced subtree",
+  "rootNodeId": "ancestor_otl_000000",
+  "terminalIdPrefix": "tax_",
+  "internalIdPrefix": "ancestor_otl_",
+  "sourceMetadata": {
+    "method": "Open Tree of Life induced_subtree API",
+    "supportingStudies": [
+      "ot_254@Tr87680",
+      "pg_1428@tree2855",
+      "pg_1634@tree3303",
+      "pg_2834@tree6589",
+      "pg_2833@tree6588",
+      "ot_508@tree2",
+      "pg_2688@tree6240",
+      "pg_2859@tree6643",
+      "ot_1366@Tr98763",
+      "pg_2741@tree6645",
+      "pg_2656@tree6185",
+      "pg_2825@tree6572",
+      "ot_1278@tree1",
+      "ot_642@tree1",
+      "ot_647@tree2",
+      "ot_1278@tree2",
+      "pg_1600@tree3231",
+      "pg_2816@tree6556",
+      "ot_722@tree1",
+      "ot_328@tree1",
+      "ot_1504@Tr74597",
+      "pg_2812@tree6545",
+      "pg_2647@tree6169",
+      "ot_1468@Tr100261",
+      "ot_1468@Tr100262",
+      "ot_1468@Tr100263",
+      "pg_2861@tree6647",
+      "ot_2368@tree7",
+      "ot_1344@Tr105486",
+      "ot_2140@Tr6557",
+      "ot_2370@tree2",
+      "pg_2695@tree6250",
+      "pg_1927@tree6215",
+      "pg_2587@tree5998",
+      "ot_1185@tree1",
+      "pg_2685@tree6235",
+      "ot_1409@Tr87541",
+      "pg_2359@tree4962",
+      "ot_2369@tree5",
+      "ot_1553@tree1",
+      "pg_1646@tree6231",
+      "pg_2687@tree6239",
+      "ot_1655@tree1",
+      "ot_2207@tree2",
+      "pg_1981@tree4052",
+      "pg_2843@tree6604",
+      "pg_2691@tree6244",
+      "pg_2844@tree6605",
+      "ot_1150@tree1",
+      "ot_278@tree1",
+      "pg_2684@tree6644"
+    ],
+    "note": "Original OTL topology preserved. No divergence dates or additional evolutionary branches have been inferred."
+  },
+  "nodes": [
+    {
+      "id": "ancestor_otl_000000",
+      "type": "internal",
+      "parentId": null,
+      "children": [
+        "ancestor_otl_000001",
+        "ancestor_otl_000677"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000001",
+      "type": "internal",
+      "parentId": "ancestor_otl_000000",
+      "children": [
+        "ancestor_otl_000002",
+        "ancestor_otl_000637"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000002",
+      "type": "internal",
+      "parentId": "ancestor_otl_000001",
+      "children": [
+        "ancestor_otl_000003"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000003",
+      "type": "internal",
+      "parentId": "ancestor_otl_000002",
+      "children": [
+        "ancestor_otl_000004"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000004",
+      "type": "internal",
+      "parentId": "ancestor_otl_000003",
+      "children": [
+        "ancestor_otl_000005"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000005",
+      "type": "internal",
+      "parentId": "ancestor_otl_000004",
+      "children": [
+        "ancestor_otl_000006"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000006",
+      "type": "internal",
+      "parentId": "ancestor_otl_000005",
+      "children": [
+        "ancestor_otl_000007",
+        "ancestor_otl_000598"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000007",
+      "type": "internal",
+      "parentId": "ancestor_otl_000006",
+      "children": [
+        "ancestor_otl_000008",
+        "ancestor_otl_000203"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000008",
+      "type": "internal",
+      "parentId": "ancestor_otl_000007",
+      "children": [
+        "ancestor_otl_000009",
+        "ancestor_otl_000089"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000009",
+      "type": "internal",
+      "parentId": "ancestor_otl_000008",
+      "children": [
+        "ancestor_otl_000010"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000010",
+      "type": "internal",
+      "parentId": "ancestor_otl_000009",
+      "children": [
+        "ancestor_otl_000011"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000011",
+      "type": "internal",
+      "parentId": "ancestor_otl_000010",
+      "children": [
+        "ancestor_otl_000012",
+        "ancestor_otl_000085"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000012",
+      "type": "internal",
+      "parentId": "ancestor_otl_000011",
+      "children": [
+        "ancestor_otl_000013"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000013",
+      "type": "internal",
+      "parentId": "ancestor_otl_000012",
+      "children": [
+        "ancestor_otl_000014",
+        "ancestor_otl_000071"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000014",
+      "type": "internal",
+      "parentId": "ancestor_otl_000013",
+      "children": [
+        "ancestor_otl_000015",
+        "ancestor_otl_000055"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000015",
+      "type": "internal",
+      "parentId": "ancestor_otl_000014",
+      "children": [
+        "ancestor_otl_000016",
+        "ancestor_otl_000052"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000016",
+      "type": "internal",
+      "parentId": "ancestor_otl_000015",
+      "children": [
+        "ancestor_otl_000017"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000017",
+      "type": "internal",
+      "parentId": "ancestor_otl_000016",
+      "children": [
+        "ancestor_otl_000018"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000018",
+      "type": "internal",
+      "parentId": "ancestor_otl_000017",
+      "children": [
+        "ancestor_otl_000019"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000019",
+      "type": "internal",
+      "parentId": "ancestor_otl_000018",
+      "children": [
+        "ancestor_otl_000020"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000020",
+      "type": "internal",
+      "parentId": "ancestor_otl_000019",
+      "children": [
+        "ancestor_otl_000021"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000021",
+      "type": "internal",
+      "parentId": "ancestor_otl_000020",
+      "children": [
+        "ancestor_otl_000022"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000022",
+      "type": "internal",
+      "parentId": "ancestor_otl_000021",
+      "children": [
+        "ancestor_otl_000023",
+        "ancestor_otl_000047"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000023",
+      "type": "internal",
+      "parentId": "ancestor_otl_000022",
+      "children": [
+        "ancestor_otl_000024"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000024",
+      "type": "internal",
+      "parentId": "ancestor_otl_000023",
+      "children": [
+        "ancestor_otl_000025"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000025",
+      "type": "internal",
+      "parentId": "ancestor_otl_000024",
+      "children": [
+        "ancestor_otl_000026",
+        "ancestor_otl_000037"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000026",
+      "type": "internal",
+      "parentId": "ancestor_otl_000025",
+      "children": [
+        "ancestor_otl_000027"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000027",
+      "type": "internal",
+      "parentId": "ancestor_otl_000026",
+      "children": [
+        "ancestor_otl_000028"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000028",
+      "type": "internal",
+      "parentId": "ancestor_otl_000027",
+      "children": [
+        "ancestor_otl_000029"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000029",
+      "type": "internal",
+      "parentId": "ancestor_otl_000028",
+      "children": [
+        "ancestor_otl_000030"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000030",
+      "type": "internal",
+      "parentId": "ancestor_otl_000029",
+      "children": [
+        "ancestor_otl_000031"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000031",
+      "type": "internal",
+      "parentId": "ancestor_otl_000030",
+      "children": [
+        "ancestor_otl_000032"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000032",
+      "type": "internal",
+      "parentId": "ancestor_otl_000031",
+      "children": [
+        "ancestor_otl_000033"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000033",
+      "type": "internal",
+      "parentId": "ancestor_otl_000032",
+      "children": [
+        "ancestor_otl_000034"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000034",
+      "type": "internal",
+      "parentId": "ancestor_otl_000033",
+      "children": [
+        "ancestor_otl_000035"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000035",
+      "type": "internal",
+      "parentId": "ancestor_otl_000034",
+      "children": [
+        "ancestor_otl_000036"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000036",
+      "type": "internal",
+      "parentId": "ancestor_otl_000035",
+      "children": [
+        "tax_ott542509"
+      ]
+    },
+    {
+      "id": "tax_ott542509",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000036",
+      "children": [],
+      "taxonId": "tax_ott542509"
+    },
+    {
+      "id": "ancestor_otl_000037",
+      "type": "internal",
+      "parentId": "ancestor_otl_000025",
+      "children": [
+        "ancestor_otl_000038"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000038",
+      "type": "internal",
+      "parentId": "ancestor_otl_000037",
+      "children": [
+        "ancestor_otl_000039"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000039",
+      "type": "internal",
+      "parentId": "ancestor_otl_000038",
+      "children": [
+        "ancestor_otl_000040"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000040",
+      "type": "internal",
+      "parentId": "ancestor_otl_000039",
+      "children": [
+        "ancestor_otl_000041"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000041",
+      "type": "internal",
+      "parentId": "ancestor_otl_000040",
+      "children": [
+        "ancestor_otl_000042"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000042",
+      "type": "internal",
+      "parentId": "ancestor_otl_000041",
+      "children": [
+        "ancestor_otl_000043"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000043",
+      "type": "internal",
+      "parentId": "ancestor_otl_000042",
+      "children": [
+        "ancestor_otl_000044"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000044",
+      "type": "internal",
+      "parentId": "ancestor_otl_000043",
+      "children": [
+        "ancestor_otl_000045"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000045",
+      "type": "internal",
+      "parentId": "ancestor_otl_000044",
+      "children": [
+        "ancestor_otl_000046"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000046",
+      "type": "internal",
+      "parentId": "ancestor_otl_000045",
+      "children": [
+        "tax_ott271555"
+      ]
+    },
+    {
+      "id": "tax_ott271555",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000046",
+      "children": [],
+      "taxonId": "tax_ott271555"
+    },
+    {
+      "id": "ancestor_otl_000047",
+      "type": "internal",
+      "parentId": "ancestor_otl_000022",
+      "children": [
+        "ancestor_otl_000048"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000048",
+      "type": "internal",
+      "parentId": "ancestor_otl_000047",
+      "children": [
+        "ancestor_otl_000049"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000049",
+      "type": "internal",
+      "parentId": "ancestor_otl_000048",
+      "children": [
+        "ancestor_otl_000050"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000050",
+      "type": "internal",
+      "parentId": "ancestor_otl_000049",
+      "children": [
+        "ancestor_otl_000051"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000051",
+      "type": "internal",
+      "parentId": "ancestor_otl_000050",
+      "children": [
+        "tax_ott391631"
+      ]
+    },
+    {
+      "id": "tax_ott391631",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000051",
+      "children": [],
+      "taxonId": "tax_ott391631"
+    },
+    {
+      "id": "ancestor_otl_000052",
+      "type": "internal",
+      "parentId": "ancestor_otl_000015",
+      "children": [
+        "ancestor_otl_000053"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000053",
+      "type": "internal",
+      "parentId": "ancestor_otl_000052",
+      "children": [
+        "ancestor_otl_000054"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000054",
+      "type": "internal",
+      "parentId": "ancestor_otl_000053",
+      "children": [
+        "tax_ott886085"
+      ]
+    },
+    {
+      "id": "tax_ott886085",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000054",
+      "children": [],
+      "taxonId": "tax_ott886085"
+    },
+    {
+      "id": "ancestor_otl_000055",
+      "type": "internal",
+      "parentId": "ancestor_otl_000014",
+      "children": [
+        "ancestor_otl_000056"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000056",
+      "type": "internal",
+      "parentId": "ancestor_otl_000055",
+      "children": [
+        "ancestor_otl_000057"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000057",
+      "type": "internal",
+      "parentId": "ancestor_otl_000056",
+      "children": [
+        "ancestor_otl_000058"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000058",
+      "type": "internal",
+      "parentId": "ancestor_otl_000057",
+      "children": [
+        "ancestor_otl_000059"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000059",
+      "type": "internal",
+      "parentId": "ancestor_otl_000058",
+      "children": [
+        "ancestor_otl_000060"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000060",
+      "type": "internal",
+      "parentId": "ancestor_otl_000059",
+      "children": [
+        "ancestor_otl_000061"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000061",
+      "type": "internal",
+      "parentId": "ancestor_otl_000060",
+      "children": [
+        "ancestor_otl_000062"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000062",
+      "type": "internal",
+      "parentId": "ancestor_otl_000061",
+      "children": [
+        "ancestor_otl_000063",
+        "ancestor_otl_000069"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000063",
+      "type": "internal",
+      "parentId": "ancestor_otl_000062",
+      "children": [
+        "ancestor_otl_000064"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000064",
+      "type": "internal",
+      "parentId": "ancestor_otl_000063",
+      "children": [
+        "ancestor_otl_000065"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000065",
+      "type": "internal",
+      "parentId": "ancestor_otl_000064",
+      "children": [
+        "ancestor_otl_000066"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000066",
+      "type": "internal",
+      "parentId": "ancestor_otl_000065",
+      "children": [
+        "ancestor_otl_000067"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000067",
+      "type": "internal",
+      "parentId": "ancestor_otl_000066",
+      "children": [
+        "ancestor_otl_000068"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000068",
+      "type": "internal",
+      "parentId": "ancestor_otl_000067",
+      "children": [
+        "tax_ott744000"
+      ]
+    },
+    {
+      "id": "tax_ott744000",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000068",
+      "children": [],
+      "taxonId": "tax_ott744000"
+    },
+    {
+      "id": "ancestor_otl_000069",
+      "type": "internal",
+      "parentId": "ancestor_otl_000062",
+      "children": [
+        "ancestor_otl_000070"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000070",
+      "type": "internal",
+      "parentId": "ancestor_otl_000069",
+      "children": [
+        "tax_ott744018"
+      ]
+    },
+    {
+      "id": "tax_ott744018",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000070",
+      "children": [],
+      "taxonId": "tax_ott744018"
+    },
+    {
+      "id": "ancestor_otl_000071",
+      "type": "internal",
+      "parentId": "ancestor_otl_000013",
+      "children": [
+        "ancestor_otl_000072"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000072",
+      "type": "internal",
+      "parentId": "ancestor_otl_000071",
+      "children": [
+        "ancestor_otl_000073"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000073",
+      "type": "internal",
+      "parentId": "ancestor_otl_000072",
+      "children": [
+        "ancestor_otl_000074"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000074",
+      "type": "internal",
+      "parentId": "ancestor_otl_000073",
+      "children": [
+        "ancestor_otl_000075"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000075",
+      "type": "internal",
+      "parentId": "ancestor_otl_000074",
+      "children": [
+        "ancestor_otl_000076"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000076",
+      "type": "internal",
+      "parentId": "ancestor_otl_000075",
+      "children": [
+        "ancestor_otl_000077"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000077",
+      "type": "internal",
+      "parentId": "ancestor_otl_000076",
+      "children": [
+        "ancestor_otl_000078",
+        "ancestor_otl_000080"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000078",
+      "type": "internal",
+      "parentId": "ancestor_otl_000077",
+      "children": [
+        "ancestor_otl_000079"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000079",
+      "type": "internal",
+      "parentId": "ancestor_otl_000078",
+      "children": [
+        "tax_ott286193"
+      ]
+    },
+    {
+      "id": "tax_ott286193",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000079",
+      "children": [],
+      "taxonId": "tax_ott286193"
+    },
+    {
+      "id": "ancestor_otl_000080",
+      "type": "internal",
+      "parentId": "ancestor_otl_000077",
+      "children": [
+        "ancestor_otl_000081"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000081",
+      "type": "internal",
+      "parentId": "ancestor_otl_000080",
+      "children": [
+        "ancestor_otl_000082"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000082",
+      "type": "internal",
+      "parentId": "ancestor_otl_000081",
+      "children": [
+        "ancestor_otl_000083"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000083",
+      "type": "internal",
+      "parentId": "ancestor_otl_000082",
+      "children": [
+        "ancestor_otl_000084"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000084",
+      "type": "internal",
+      "parentId": "ancestor_otl_000083",
+      "children": [
+        "tax_ott410925"
+      ]
+    },
+    {
+      "id": "tax_ott410925",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000084",
+      "children": [],
+      "taxonId": "tax_ott410925"
+    },
+    {
+      "id": "ancestor_otl_000085",
+      "type": "internal",
+      "parentId": "ancestor_otl_000011",
+      "children": [
+        "ancestor_otl_000086"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000086",
+      "type": "internal",
+      "parentId": "ancestor_otl_000085",
+      "children": [
+        "ancestor_otl_000087",
+        "ancestor_otl_000088"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000087",
+      "type": "internal",
+      "parentId": "ancestor_otl_000086",
+      "children": [
+        "tax_ott923734",
+        "tax_ott5553964"
+      ]
+    },
+    {
+      "id": "tax_ott923734",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000087",
+      "children": [],
+      "taxonId": "tax_ott923734"
+    },
+    {
+      "id": "tax_ott5553964",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000087",
+      "children": [],
+      "taxonId": "tax_ott5553964"
+    },
+    {
+      "id": "ancestor_otl_000088",
+      "type": "internal",
+      "parentId": "ancestor_otl_000086",
+      "children": [
+        "tax_ott864596"
+      ]
+    },
+    {
+      "id": "tax_ott864596",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000088",
+      "children": [],
+      "taxonId": "tax_ott864596"
+    },
+    {
+      "id": "ancestor_otl_000089",
+      "type": "internal",
+      "parentId": "ancestor_otl_000008",
+      "children": [
+        "ancestor_otl_000090"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000090",
+      "type": "internal",
+      "parentId": "ancestor_otl_000089",
+      "children": [
+        "ancestor_otl_000091"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000091",
+      "type": "internal",
+      "parentId": "ancestor_otl_000090",
+      "children": [
+        "ancestor_otl_000092",
+        "ancestor_otl_000178"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000092",
+      "type": "internal",
+      "parentId": "ancestor_otl_000091",
+      "children": [
+        "ancestor_otl_000093",
+        "ancestor_otl_000174"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000093",
+      "type": "internal",
+      "parentId": "ancestor_otl_000092",
+      "children": [
+        "ancestor_otl_000094",
+        "ancestor_otl_000155"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000094",
+      "type": "internal",
+      "parentId": "ancestor_otl_000093",
+      "children": [
+        "ancestor_otl_000095"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000095",
+      "type": "internal",
+      "parentId": "ancestor_otl_000094",
+      "children": [
+        "ancestor_otl_000096"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000096",
+      "type": "internal",
+      "parentId": "ancestor_otl_000095",
+      "children": [
+        "ancestor_otl_000097",
+        "ancestor_otl_000126"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000097",
+      "type": "internal",
+      "parentId": "ancestor_otl_000096",
+      "children": [
+        "ancestor_otl_000098"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000098",
+      "type": "internal",
+      "parentId": "ancestor_otl_000097",
+      "children": [
+        "ancestor_otl_000099"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000099",
+      "type": "internal",
+      "parentId": "ancestor_otl_000098",
+      "children": [
+        "ancestor_otl_000100",
+        "ancestor_otl_000108"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000100",
+      "type": "internal",
+      "parentId": "ancestor_otl_000099",
+      "children": [
+        "ancestor_otl_000101"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000101",
+      "type": "internal",
+      "parentId": "ancestor_otl_000100",
+      "children": [
+        "ancestor_otl_000102"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000102",
+      "type": "internal",
+      "parentId": "ancestor_otl_000101",
+      "children": [
+        "ancestor_otl_000103"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000103",
+      "type": "internal",
+      "parentId": "ancestor_otl_000102",
+      "children": [
+        "ancestor_otl_000104"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000104",
+      "type": "internal",
+      "parentId": "ancestor_otl_000103",
+      "children": [
+        "ancestor_otl_000105"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000105",
+      "type": "internal",
+      "parentId": "ancestor_otl_000104",
+      "children": [
+        "ancestor_otl_000106"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000106",
+      "type": "internal",
+      "parentId": "ancestor_otl_000105",
+      "children": [
+        "ancestor_otl_000107"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000107",
+      "type": "internal",
+      "parentId": "ancestor_otl_000106",
+      "children": [
+        "tax_ott860954"
+      ]
+    },
+    {
+      "id": "tax_ott860954",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000107",
+      "children": [],
+      "taxonId": "tax_ott860954"
+    },
+    {
+      "id": "ancestor_otl_000108",
+      "type": "internal",
+      "parentId": "ancestor_otl_000099",
+      "children": [
+        "ancestor_otl_000109"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000109",
+      "type": "internal",
+      "parentId": "ancestor_otl_000108",
+      "children": [
+        "ancestor_otl_000110",
+        "ancestor_otl_000120"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000110",
+      "type": "internal",
+      "parentId": "ancestor_otl_000109",
+      "children": [
+        "ancestor_otl_000111",
+        "ancestor_otl_000113"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000111",
+      "type": "internal",
+      "parentId": "ancestor_otl_000110",
+      "children": [
+        "ancestor_otl_000112"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000112",
+      "type": "internal",
+      "parentId": "ancestor_otl_000111",
+      "children": [
+        "tax_ott741047"
+      ]
+    },
+    {
+      "id": "tax_ott741047",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000112",
+      "children": [],
+      "taxonId": "tax_ott741047"
+    },
+    {
+      "id": "ancestor_otl_000113",
+      "type": "internal",
+      "parentId": "ancestor_otl_000110",
+      "children": [
+        "ancestor_otl_000114",
+        "ancestor_otl_000119"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000114",
+      "type": "internal",
+      "parentId": "ancestor_otl_000113",
+      "children": [
+        "ancestor_otl_000115"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000115",
+      "type": "internal",
+      "parentId": "ancestor_otl_000114",
+      "children": [
+        "ancestor_otl_000116"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000116",
+      "type": "internal",
+      "parentId": "ancestor_otl_000115",
+      "children": [
+        "ancestor_otl_000117"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000117",
+      "type": "internal",
+      "parentId": "ancestor_otl_000116",
+      "children": [
+        "ancestor_otl_000118"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000118",
+      "type": "internal",
+      "parentId": "ancestor_otl_000117",
+      "children": [
+        "tax_ott115449"
+      ]
+    },
+    {
+      "id": "tax_ott115449",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000118",
+      "children": [],
+      "taxonId": "tax_ott115449"
+    },
+    {
+      "id": "ancestor_otl_000119",
+      "type": "internal",
+      "parentId": "ancestor_otl_000113",
+      "children": [
+        "tax_ott741053"
+      ]
+    },
+    {
+      "id": "tax_ott741053",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000119",
+      "children": [],
+      "taxonId": "tax_ott741053"
+    },
+    {
+      "id": "ancestor_otl_000120",
+      "type": "internal",
+      "parentId": "ancestor_otl_000109",
+      "children": [
+        "ancestor_otl_000121"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000121",
+      "type": "internal",
+      "parentId": "ancestor_otl_000120",
+      "children": [
+        "ancestor_otl_000122"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000122",
+      "type": "internal",
+      "parentId": "ancestor_otl_000121",
+      "children": [
+        "ancestor_otl_000123"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000123",
+      "type": "internal",
+      "parentId": "ancestor_otl_000122",
+      "children": [
+        "ancestor_otl_000124"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000124",
+      "type": "internal",
+      "parentId": "ancestor_otl_000123",
+      "children": [
+        "ancestor_otl_000125"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000125",
+      "type": "internal",
+      "parentId": "ancestor_otl_000124",
+      "children": [
+        "tax_ott689660",
+        "tax_ott689650"
+      ]
+    },
+    {
+      "id": "tax_ott689660",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000125",
+      "children": [],
+      "taxonId": "tax_ott689660"
+    },
+    {
+      "id": "tax_ott689650",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000125",
+      "children": [],
+      "taxonId": "tax_ott689650"
+    },
+    {
+      "id": "ancestor_otl_000126",
+      "type": "internal",
+      "parentId": "ancestor_otl_000096",
+      "children": [
+        "ancestor_otl_000127"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000127",
+      "type": "internal",
+      "parentId": "ancestor_otl_000126",
+      "children": [
+        "ancestor_otl_000128",
+        "ancestor_otl_000150"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000128",
+      "type": "internal",
+      "parentId": "ancestor_otl_000127",
+      "children": [
+        "ancestor_otl_000129"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000129",
+      "type": "internal",
+      "parentId": "ancestor_otl_000128",
+      "children": [
+        "ancestor_otl_000130"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000130",
+      "type": "internal",
+      "parentId": "ancestor_otl_000129",
+      "children": [
+        "ancestor_otl_000131",
+        "ancestor_otl_000146"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000131",
+      "type": "internal",
+      "parentId": "ancestor_otl_000130",
+      "children": [
+        "ancestor_otl_000132"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000132",
+      "type": "internal",
+      "parentId": "ancestor_otl_000131",
+      "children": [
+        "ancestor_otl_000133"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000133",
+      "type": "internal",
+      "parentId": "ancestor_otl_000132",
+      "children": [
+        "ancestor_otl_000134",
+        "ancestor_otl_000145"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000134",
+      "type": "internal",
+      "parentId": "ancestor_otl_000133",
+      "children": [
+        "ancestor_otl_000135",
+        "ancestor_otl_000144"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000135",
+      "type": "internal",
+      "parentId": "ancestor_otl_000134",
+      "children": [
+        "ancestor_otl_000136"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000136",
+      "type": "internal",
+      "parentId": "ancestor_otl_000135",
+      "children": [
+        "ancestor_otl_000137"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000137",
+      "type": "internal",
+      "parentId": "ancestor_otl_000136",
+      "children": [
+        "ancestor_otl_000138"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000138",
+      "type": "internal",
+      "parentId": "ancestor_otl_000137",
+      "children": [
+        "ancestor_otl_000139"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000139",
+      "type": "internal",
+      "parentId": "ancestor_otl_000138",
+      "children": [
+        "ancestor_otl_000140"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000140",
+      "type": "internal",
+      "parentId": "ancestor_otl_000139",
+      "children": [
+        "ancestor_otl_000141"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000141",
+      "type": "internal",
+      "parentId": "ancestor_otl_000140",
+      "children": [
+        "ancestor_otl_000142"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000142",
+      "type": "internal",
+      "parentId": "ancestor_otl_000141",
+      "children": [
+        "ancestor_otl_000143"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000143",
+      "type": "internal",
+      "parentId": "ancestor_otl_000142",
+      "children": [
+        "tax_ott770315"
+      ]
+    },
+    {
+      "id": "tax_ott770315",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000143",
+      "children": [],
+      "taxonId": "tax_ott770315"
+    },
+    {
+      "id": "ancestor_otl_000144",
+      "type": "internal",
+      "parentId": "ancestor_otl_000134",
+      "children": [
+        "tax_ott417950",
+        "tax_ott158484"
+      ]
+    },
+    {
+      "id": "tax_ott417950",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000144",
+      "children": [],
+      "taxonId": "tax_ott417950"
+    },
+    {
+      "id": "tax_ott158484",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000144",
+      "children": [],
+      "taxonId": "tax_ott158484"
+    },
+    {
+      "id": "ancestor_otl_000145",
+      "type": "internal",
+      "parentId": "ancestor_otl_000133",
+      "children": [
+        "tax_ott417965"
+      ]
+    },
+    {
+      "id": "tax_ott417965",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000145",
+      "children": [],
+      "taxonId": "tax_ott417965"
+    },
+    {
+      "id": "ancestor_otl_000146",
+      "type": "internal",
+      "parentId": "ancestor_otl_000130",
+      "children": [
+        "ancestor_otl_000147"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000147",
+      "type": "internal",
+      "parentId": "ancestor_otl_000146",
+      "children": [
+        "ancestor_otl_000148"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000148",
+      "type": "internal",
+      "parentId": "ancestor_otl_000147",
+      "children": [
+        "ancestor_otl_000149"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000149",
+      "type": "internal",
+      "parentId": "ancestor_otl_000148",
+      "children": [
+        "tax_ott770295",
+        "tax_ott770302"
+      ]
+    },
+    {
+      "id": "tax_ott770295",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000149",
+      "children": [],
+      "taxonId": "tax_ott770295"
+    },
+    {
+      "id": "tax_ott770302",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000149",
+      "children": [],
+      "taxonId": "tax_ott770302"
+    },
+    {
+      "id": "ancestor_otl_000150",
+      "type": "internal",
+      "parentId": "ancestor_otl_000127",
+      "children": [
+        "ancestor_otl_000151"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000151",
+      "type": "internal",
+      "parentId": "ancestor_otl_000150",
+      "children": [
+        "ancestor_otl_000152"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000152",
+      "type": "internal",
+      "parentId": "ancestor_otl_000151",
+      "children": [
+        "ancestor_otl_000153"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000153",
+      "type": "internal",
+      "parentId": "ancestor_otl_000152",
+      "children": [
+        "ancestor_otl_000154"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000154",
+      "type": "internal",
+      "parentId": "ancestor_otl_000153",
+      "children": [
+        "tax_ott995038"
+      ]
+    },
+    {
+      "id": "tax_ott995038",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000154",
+      "children": [],
+      "taxonId": "tax_ott995038"
+    },
+    {
+      "id": "ancestor_otl_000155",
+      "type": "internal",
+      "parentId": "ancestor_otl_000093",
+      "children": [
+        "ancestor_otl_000156"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000156",
+      "type": "internal",
+      "parentId": "ancestor_otl_000155",
+      "children": [
+        "ancestor_otl_000157"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000157",
+      "type": "internal",
+      "parentId": "ancestor_otl_000156",
+      "children": [
+        "ancestor_otl_000158"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000158",
+      "type": "internal",
+      "parentId": "ancestor_otl_000157",
+      "children": [
+        "ancestor_otl_000159"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000159",
+      "type": "internal",
+      "parentId": "ancestor_otl_000158",
+      "children": [
+        "ancestor_otl_000160",
+        "ancestor_otl_000164"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000160",
+      "type": "internal",
+      "parentId": "ancestor_otl_000159",
+      "children": [
+        "ancestor_otl_000161"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000161",
+      "type": "internal",
+      "parentId": "ancestor_otl_000160",
+      "children": [
+        "ancestor_otl_000162"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000162",
+      "type": "internal",
+      "parentId": "ancestor_otl_000161",
+      "children": [
+        "ancestor_otl_000163"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000163",
+      "type": "internal",
+      "parentId": "ancestor_otl_000162",
+      "children": [
+        "tax_ott489221"
+      ]
+    },
+    {
+      "id": "tax_ott489221",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000163",
+      "children": [],
+      "taxonId": "tax_ott489221"
+    },
+    {
+      "id": "ancestor_otl_000164",
+      "type": "internal",
+      "parentId": "ancestor_otl_000159",
+      "children": [
+        "ancestor_otl_000165",
+        "ancestor_otl_000171"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000165",
+      "type": "internal",
+      "parentId": "ancestor_otl_000164",
+      "children": [
+        "ancestor_otl_000166"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000166",
+      "type": "internal",
+      "parentId": "ancestor_otl_000165",
+      "children": [
+        "ancestor_otl_000167"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000167",
+      "type": "internal",
+      "parentId": "ancestor_otl_000166",
+      "children": [
+        "ancestor_otl_000168"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000168",
+      "type": "internal",
+      "parentId": "ancestor_otl_000167",
+      "children": [
+        "ancestor_otl_000169"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000169",
+      "type": "internal",
+      "parentId": "ancestor_otl_000168",
+      "children": [
+        "ancestor_otl_000170"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000170",
+      "type": "internal",
+      "parentId": "ancestor_otl_000169",
+      "children": [
+        "tax_ott489225"
+      ]
+    },
+    {
+      "id": "tax_ott489225",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000170",
+      "children": [],
+      "taxonId": "tax_ott489225"
+    },
+    {
+      "id": "ancestor_otl_000171",
+      "type": "internal",
+      "parentId": "ancestor_otl_000164",
+      "children": [
+        "ancestor_otl_000172"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000172",
+      "type": "internal",
+      "parentId": "ancestor_otl_000171",
+      "children": [
+        "ancestor_otl_000173"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000173",
+      "type": "internal",
+      "parentId": "ancestor_otl_000172",
+      "children": [
+        "tax_ott921451"
+      ]
+    },
+    {
+      "id": "tax_ott921451",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000173",
+      "children": [],
+      "taxonId": "tax_ott921451"
+    },
+    {
+      "id": "ancestor_otl_000174",
+      "type": "internal",
+      "parentId": "ancestor_otl_000092",
+      "children": [
+        "ancestor_otl_000175"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000175",
+      "type": "internal",
+      "parentId": "ancestor_otl_000174",
+      "children": [
+        "ancestor_otl_000176"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000176",
+      "type": "internal",
+      "parentId": "ancestor_otl_000175",
+      "children": [
+        "ancestor_otl_000177"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000177",
+      "type": "internal",
+      "parentId": "ancestor_otl_000176",
+      "children": [
+        "tax_ott339031"
+      ]
+    },
+    {
+      "id": "tax_ott339031",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000177",
+      "children": [],
+      "taxonId": "tax_ott339031"
+    },
+    {
+      "id": "ancestor_otl_000178",
+      "type": "internal",
+      "parentId": "ancestor_otl_000091",
+      "children": [
+        "ancestor_otl_000179",
+        "ancestor_otl_000198"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000179",
+      "type": "internal",
+      "parentId": "ancestor_otl_000178",
+      "children": [
+        "ancestor_otl_000180",
+        "ancestor_otl_000195"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000180",
+      "type": "internal",
+      "parentId": "ancestor_otl_000179",
+      "children": [
+        "ancestor_otl_000181"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000181",
+      "type": "internal",
+      "parentId": "ancestor_otl_000180",
+      "children": [
+        "ancestor_otl_000182",
+        "ancestor_otl_000191"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000182",
+      "type": "internal",
+      "parentId": "ancestor_otl_000181",
+      "children": [
+        "ancestor_otl_000183"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000183",
+      "type": "internal",
+      "parentId": "ancestor_otl_000182",
+      "children": [
+        "ancestor_otl_000184"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000184",
+      "type": "internal",
+      "parentId": "ancestor_otl_000183",
+      "children": [
+        "ancestor_otl_000185"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000185",
+      "type": "internal",
+      "parentId": "ancestor_otl_000184",
+      "children": [
+        "ancestor_otl_000186"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000186",
+      "type": "internal",
+      "parentId": "ancestor_otl_000185",
+      "children": [
+        "ancestor_otl_000187"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000187",
+      "type": "internal",
+      "parentId": "ancestor_otl_000186",
+      "children": [
+        "ancestor_otl_000188"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000188",
+      "type": "internal",
+      "parentId": "ancestor_otl_000187",
+      "children": [
+        "ancestor_otl_000189"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000189",
+      "type": "internal",
+      "parentId": "ancestor_otl_000188",
+      "children": [
+        "ancestor_otl_000190"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000190",
+      "type": "internal",
+      "parentId": "ancestor_otl_000189",
+      "children": [
+        "tax_ott696018"
+      ]
+    },
+    {
+      "id": "tax_ott696018",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000190",
+      "children": [],
+      "taxonId": "tax_ott696018"
+    },
+    {
+      "id": "ancestor_otl_000191",
+      "type": "internal",
+      "parentId": "ancestor_otl_000181",
+      "children": [
+        "ancestor_otl_000192"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000192",
+      "type": "internal",
+      "parentId": "ancestor_otl_000191",
+      "children": [
+        "ancestor_otl_000193"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000193",
+      "type": "internal",
+      "parentId": "ancestor_otl_000192",
+      "children": [
+        "ancestor_otl_000194"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000194",
+      "type": "internal",
+      "parentId": "ancestor_otl_000193",
+      "children": [
+        "tax_ott913930"
+      ]
+    },
+    {
+      "id": "tax_ott913930",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000194",
+      "children": [],
+      "taxonId": "tax_ott913930"
+    },
+    {
+      "id": "ancestor_otl_000195",
+      "type": "internal",
+      "parentId": "ancestor_otl_000179",
+      "children": [
+        "ancestor_otl_000196"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000196",
+      "type": "internal",
+      "parentId": "ancestor_otl_000195",
+      "children": [
+        "ancestor_otl_000197"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000197",
+      "type": "internal",
+      "parentId": "ancestor_otl_000196",
+      "children": [
+        "tax_ott50727"
+      ]
+    },
+    {
+      "id": "tax_ott50727",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000197",
+      "children": [],
+      "taxonId": "tax_ott50727"
+    },
+    {
+      "id": "ancestor_otl_000198",
+      "type": "internal",
+      "parentId": "ancestor_otl_000178",
+      "children": [
+        "ancestor_otl_000199"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000199",
+      "type": "internal",
+      "parentId": "ancestor_otl_000198",
+      "children": [
+        "ancestor_otl_000200"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000200",
+      "type": "internal",
+      "parentId": "ancestor_otl_000199",
+      "children": [
+        "ancestor_otl_000201"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000201",
+      "type": "internal",
+      "parentId": "ancestor_otl_000200",
+      "children": [
+        "ancestor_otl_000202"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000202",
+      "type": "internal",
+      "parentId": "ancestor_otl_000201",
+      "children": [
+        "tax_ott339040"
+      ]
+    },
+    {
+      "id": "tax_ott339040",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000202",
+      "children": [],
+      "taxonId": "tax_ott339040"
+    },
+    {
+      "id": "ancestor_otl_000203",
+      "type": "internal",
+      "parentId": "ancestor_otl_000007",
+      "children": [
+        "ancestor_otl_000204",
+        "ancestor_otl_000585"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000204",
+      "type": "internal",
+      "parentId": "ancestor_otl_000203",
+      "children": [
+        "ancestor_otl_000205",
+        "ancestor_otl_000417"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000205",
+      "type": "internal",
+      "parentId": "ancestor_otl_000204",
+      "children": [
+        "ancestor_otl_000206",
+        "ancestor_otl_000379"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000206",
+      "type": "internal",
+      "parentId": "ancestor_otl_000205",
+      "children": [
+        "ancestor_otl_000207"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000207",
+      "type": "internal",
+      "parentId": "ancestor_otl_000206",
+      "children": [
+        "ancestor_otl_000208"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000208",
+      "type": "internal",
+      "parentId": "ancestor_otl_000207",
+      "children": [
+        "ancestor_otl_000209"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000209",
+      "type": "internal",
+      "parentId": "ancestor_otl_000208",
+      "children": [
+        "ancestor_otl_000210",
+        "ancestor_otl_000368"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000210",
+      "type": "internal",
+      "parentId": "ancestor_otl_000209",
+      "children": [
+        "ancestor_otl_000211",
+        "ancestor_otl_000361"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000211",
+      "type": "internal",
+      "parentId": "ancestor_otl_000210",
+      "children": [
+        "ancestor_otl_000212",
+        "ancestor_otl_000357"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000212",
+      "type": "internal",
+      "parentId": "ancestor_otl_000211",
+      "children": [
+        "ancestor_otl_000213",
+        "ancestor_otl_000294"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000213",
+      "type": "internal",
+      "parentId": "ancestor_otl_000212",
+      "children": [
+        "ancestor_otl_000214"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000214",
+      "type": "internal",
+      "parentId": "ancestor_otl_000213",
+      "children": [
+        "ancestor_otl_000215",
+        "ancestor_otl_000288"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000215",
+      "type": "internal",
+      "parentId": "ancestor_otl_000214",
+      "children": [
+        "ancestor_otl_000216",
+        "ancestor_otl_000235"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000216",
+      "type": "internal",
+      "parentId": "ancestor_otl_000215",
+      "children": [
+        "ancestor_otl_000217"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000217",
+      "type": "internal",
+      "parentId": "ancestor_otl_000216",
+      "children": [
+        "ancestor_otl_000218",
+        "ancestor_otl_000225"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000218",
+      "type": "internal",
+      "parentId": "ancestor_otl_000217",
+      "children": [
+        "ancestor_otl_000219"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000219",
+      "type": "internal",
+      "parentId": "ancestor_otl_000218",
+      "children": [
+        "ancestor_otl_000220"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000220",
+      "type": "internal",
+      "parentId": "ancestor_otl_000219",
+      "children": [
+        "ancestor_otl_000221"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000221",
+      "type": "internal",
+      "parentId": "ancestor_otl_000220",
+      "children": [
+        "ancestor_otl_000222"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000222",
+      "type": "internal",
+      "parentId": "ancestor_otl_000221",
+      "children": [
+        "ancestor_otl_000223"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000223",
+      "type": "internal",
+      "parentId": "ancestor_otl_000222",
+      "children": [
+        "ancestor_otl_000224"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000224",
+      "type": "internal",
+      "parentId": "ancestor_otl_000223",
+      "children": [
+        "tax_ott936014"
+      ]
+    },
+    {
+      "id": "tax_ott936014",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000224",
+      "children": [],
+      "taxonId": "tax_ott936014"
+    },
+    {
+      "id": "ancestor_otl_000225",
+      "type": "internal",
+      "parentId": "ancestor_otl_000217",
+      "children": [
+        "ancestor_otl_000226",
+        "ancestor_otl_000233"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000226",
+      "type": "internal",
+      "parentId": "ancestor_otl_000225",
+      "children": [
+        "ancestor_otl_000227",
+        "ancestor_otl_000232"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000227",
+      "type": "internal",
+      "parentId": "ancestor_otl_000226",
+      "children": [
+        "ancestor_otl_000228"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000228",
+      "type": "internal",
+      "parentId": "ancestor_otl_000227",
+      "children": [
+        "ancestor_otl_000229"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000229",
+      "type": "internal",
+      "parentId": "ancestor_otl_000228",
+      "children": [
+        "ancestor_otl_000230"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000230",
+      "type": "internal",
+      "parentId": "ancestor_otl_000229",
+      "children": [
+        "ancestor_otl_000231"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000231",
+      "type": "internal",
+      "parentId": "ancestor_otl_000230",
+      "children": [
+        "tax_ott410149",
+        "tax_ott410145"
+      ]
+    },
+    {
+      "id": "tax_ott410149",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000231",
+      "children": [],
+      "taxonId": "tax_ott410149"
+    },
+    {
+      "id": "tax_ott410145",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000231",
+      "children": [],
+      "taxonId": "tax_ott410145"
+    },
+    {
+      "id": "ancestor_otl_000232",
+      "type": "internal",
+      "parentId": "ancestor_otl_000226",
+      "children": [
+        "tax_ott410153"
+      ]
+    },
+    {
+      "id": "tax_ott410153",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000232",
+      "children": [],
+      "taxonId": "tax_ott410153"
+    },
+    {
+      "id": "ancestor_otl_000233",
+      "type": "internal",
+      "parentId": "ancestor_otl_000225",
+      "children": [
+        "ancestor_otl_000234"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000234",
+      "type": "internal",
+      "parentId": "ancestor_otl_000233",
+      "children": [
+        "tax_ott460509"
+      ]
+    },
+    {
+      "id": "tax_ott460509",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000234",
+      "children": [],
+      "taxonId": "tax_ott460509"
+    },
+    {
+      "id": "ancestor_otl_000235",
+      "type": "internal",
+      "parentId": "ancestor_otl_000215",
+      "children": [
+        "ancestor_otl_000236"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000236",
+      "type": "internal",
+      "parentId": "ancestor_otl_000235",
+      "children": [
+        "ancestor_otl_000237",
+        "ancestor_otl_000272"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000237",
+      "type": "internal",
+      "parentId": "ancestor_otl_000236",
+      "children": [
+        "ancestor_otl_000238",
+        "ancestor_otl_000269"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000238",
+      "type": "internal",
+      "parentId": "ancestor_otl_000237",
+      "children": [
+        "ancestor_otl_000239",
+        "ancestor_otl_000260"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000239",
+      "type": "internal",
+      "parentId": "ancestor_otl_000238",
+      "children": [
+        "ancestor_otl_000240"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000240",
+      "type": "internal",
+      "parentId": "ancestor_otl_000239",
+      "children": [
+        "ancestor_otl_000241",
+        "ancestor_otl_000257"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000241",
+      "type": "internal",
+      "parentId": "ancestor_otl_000240",
+      "children": [
+        "ancestor_otl_000242"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000242",
+      "type": "internal",
+      "parentId": "ancestor_otl_000241",
+      "children": [
+        "ancestor_otl_000243"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000243",
+      "type": "internal",
+      "parentId": "ancestor_otl_000242",
+      "children": [
+        "ancestor_otl_000244",
+        "ancestor_otl_000255"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000244",
+      "type": "internal",
+      "parentId": "ancestor_otl_000243",
+      "children": [
+        "ancestor_otl_000245"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000245",
+      "type": "internal",
+      "parentId": "ancestor_otl_000244",
+      "children": [
+        "ancestor_otl_000246",
+        "ancestor_otl_000254"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000246",
+      "type": "internal",
+      "parentId": "ancestor_otl_000245",
+      "children": [
+        "ancestor_otl_000247",
+        "ancestor_otl_000253"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000247",
+      "type": "internal",
+      "parentId": "ancestor_otl_000246",
+      "children": [
+        "ancestor_otl_000248"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000248",
+      "type": "internal",
+      "parentId": "ancestor_otl_000247",
+      "children": [
+        "ancestor_otl_000249"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000249",
+      "type": "internal",
+      "parentId": "ancestor_otl_000248",
+      "children": [
+        "ancestor_otl_000250"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000250",
+      "type": "internal",
+      "parentId": "ancestor_otl_000249",
+      "children": [
+        "ancestor_otl_000251"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000251",
+      "type": "internal",
+      "parentId": "ancestor_otl_000250",
+      "children": [
+        "ancestor_otl_000252"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000252",
+      "type": "internal",
+      "parentId": "ancestor_otl_000251",
+      "children": [
+        "tax_ott202967",
+        "tax_ott19017"
+      ]
+    },
+    {
+      "id": "tax_ott202967",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000252",
+      "children": [],
+      "taxonId": "tax_ott202967"
+    },
+    {
+      "id": "tax_ott19017",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000252",
+      "children": [],
+      "taxonId": "tax_ott19017"
+    },
+    {
+      "id": "ancestor_otl_000253",
+      "type": "internal",
+      "parentId": "ancestor_otl_000246",
+      "children": [
+        "tax_ott860784"
+      ]
+    },
+    {
+      "id": "tax_ott860784",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000253",
+      "children": [],
+      "taxonId": "tax_ott860784"
+    },
+    {
+      "id": "ancestor_otl_000254",
+      "type": "internal",
+      "parentId": "ancestor_otl_000245",
+      "children": [
+        "tax_ott274550"
+      ]
+    },
+    {
+      "id": "tax_ott274550",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000254",
+      "children": [],
+      "taxonId": "tax_ott274550"
+    },
+    {
+      "id": "ancestor_otl_000255",
+      "type": "internal",
+      "parentId": "ancestor_otl_000243",
+      "children": [
+        "ancestor_otl_000256"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000256",
+      "type": "internal",
+      "parentId": "ancestor_otl_000255",
+      "children": [
+        "tax_ott70819",
+        "tax_ott123206"
+      ]
+    },
+    {
+      "id": "tax_ott70819",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000256",
+      "children": [],
+      "taxonId": "tax_ott70819"
+    },
+    {
+      "id": "tax_ott123206",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000256",
+      "children": [],
+      "taxonId": "tax_ott123206"
+    },
+    {
+      "id": "ancestor_otl_000257",
+      "type": "internal",
+      "parentId": "ancestor_otl_000240",
+      "children": [
+        "ancestor_otl_000258"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000258",
+      "type": "internal",
+      "parentId": "ancestor_otl_000257",
+      "children": [
+        "ancestor_otl_000259"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000259",
+      "type": "internal",
+      "parentId": "ancestor_otl_000258",
+      "children": [
+        "tax_ott19028"
+      ]
+    },
+    {
+      "id": "tax_ott19028",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000259",
+      "children": [],
+      "taxonId": "tax_ott19028"
+    },
+    {
+      "id": "ancestor_otl_000260",
+      "type": "internal",
+      "parentId": "ancestor_otl_000238",
+      "children": [
+        "ancestor_otl_000261"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000261",
+      "type": "internal",
+      "parentId": "ancestor_otl_000260",
+      "children": [
+        "ancestor_otl_000262"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000262",
+      "type": "internal",
+      "parentId": "ancestor_otl_000261",
+      "children": [
+        "ancestor_otl_000263"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000263",
+      "type": "internal",
+      "parentId": "ancestor_otl_000262",
+      "children": [
+        "ancestor_otl_000264",
+        "ancestor_otl_000268"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000264",
+      "type": "internal",
+      "parentId": "ancestor_otl_000263",
+      "children": [
+        "ancestor_otl_000265"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000265",
+      "type": "internal",
+      "parentId": "ancestor_otl_000264",
+      "children": [
+        "ancestor_otl_000266",
+        "ancestor_otl_000267"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000266",
+      "type": "internal",
+      "parentId": "ancestor_otl_000265",
+      "children": [
+        "tax_ott128285"
+      ]
+    },
+    {
+      "id": "tax_ott128285",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000266",
+      "children": [],
+      "taxonId": "tax_ott128285"
+    },
+    {
+      "id": "ancestor_otl_000267",
+      "type": "internal",
+      "parentId": "ancestor_otl_000265",
+      "children": [
+        "tax_ott363040"
+      ]
+    },
+    {
+      "id": "tax_ott363040",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000267",
+      "children": [],
+      "taxonId": "tax_ott363040"
+    },
+    {
+      "id": "ancestor_otl_000268",
+      "type": "internal",
+      "parentId": "ancestor_otl_000263",
+      "children": [
+        "tax_ott274566"
+      ]
+    },
+    {
+      "id": "tax_ott274566",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000268",
+      "children": [],
+      "taxonId": "tax_ott274566"
+    },
+    {
+      "id": "ancestor_otl_000269",
+      "type": "internal",
+      "parentId": "ancestor_otl_000237",
+      "children": [
+        "ancestor_otl_000270"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000270",
+      "type": "internal",
+      "parentId": "ancestor_otl_000269",
+      "children": [
+        "ancestor_otl_000271"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000271",
+      "type": "internal",
+      "parentId": "ancestor_otl_000270",
+      "children": [
+        "tax_ott768679"
+      ]
+    },
+    {
+      "id": "tax_ott768679",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000271",
+      "children": [],
+      "taxonId": "tax_ott768679"
+    },
+    {
+      "id": "ancestor_otl_000272",
+      "type": "internal",
+      "parentId": "ancestor_otl_000236",
+      "children": [
+        "ancestor_otl_000273"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000273",
+      "type": "internal",
+      "parentId": "ancestor_otl_000272",
+      "children": [
+        "ancestor_otl_000274",
+        "ancestor_otl_000279"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000274",
+      "type": "internal",
+      "parentId": "ancestor_otl_000273",
+      "children": [
+        "ancestor_otl_000275"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000275",
+      "type": "internal",
+      "parentId": "ancestor_otl_000274",
+      "children": [
+        "ancestor_otl_000276"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000276",
+      "type": "internal",
+      "parentId": "ancestor_otl_000275",
+      "children": [
+        "ancestor_otl_000277"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000277",
+      "type": "internal",
+      "parentId": "ancestor_otl_000276",
+      "children": [
+        "ancestor_otl_000278"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000278",
+      "type": "internal",
+      "parentId": "ancestor_otl_000277",
+      "children": [
+        "tax_ott215885"
+      ]
+    },
+    {
+      "id": "tax_ott215885",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000278",
+      "children": [],
+      "taxonId": "tax_ott215885"
+    },
+    {
+      "id": "ancestor_otl_000279",
+      "type": "internal",
+      "parentId": "ancestor_otl_000273",
+      "children": [
+        "ancestor_otl_000280"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000280",
+      "type": "internal",
+      "parentId": "ancestor_otl_000279",
+      "children": [
+        "ancestor_otl_000281",
+        "ancestor_otl_000284"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000281",
+      "type": "internal",
+      "parentId": "ancestor_otl_000280",
+      "children": [
+        "ancestor_otl_000282",
+        "ancestor_otl_000283"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000282",
+      "type": "internal",
+      "parentId": "ancestor_otl_000281",
+      "children": [
+        "tax_ott644255"
+      ]
+    },
+    {
+      "id": "tax_ott644255",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000282",
+      "children": [],
+      "taxonId": "tax_ott644255"
+    },
+    {
+      "id": "ancestor_otl_000283",
+      "type": "internal",
+      "parentId": "ancestor_otl_000281",
+      "children": [
+        "tax_ott641187"
+      ]
+    },
+    {
+      "id": "tax_ott641187",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000283",
+      "children": [],
+      "taxonId": "tax_ott641187"
+    },
+    {
+      "id": "ancestor_otl_000284",
+      "type": "internal",
+      "parentId": "ancestor_otl_000280",
+      "children": [
+        "ancestor_otl_000285",
+        "ancestor_otl_000287"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000285",
+      "type": "internal",
+      "parentId": "ancestor_otl_000284",
+      "children": [
+        "ancestor_otl_000286"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000286",
+      "type": "internal",
+      "parentId": "ancestor_otl_000285",
+      "children": [
+        "tax_ott907693"
+      ]
+    },
+    {
+      "id": "tax_ott907693",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000286",
+      "children": [],
+      "taxonId": "tax_ott907693"
+    },
+    {
+      "id": "ancestor_otl_000287",
+      "type": "internal",
+      "parentId": "ancestor_otl_000284",
+      "children": [
+        "tax_ott490099"
+      ]
+    },
+    {
+      "id": "tax_ott490099",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000287",
+      "children": [],
+      "taxonId": "tax_ott490099"
+    },
+    {
+      "id": "ancestor_otl_000288",
+      "type": "internal",
+      "parentId": "ancestor_otl_000214",
+      "children": [
+        "ancestor_otl_000289",
+        "ancestor_otl_000292"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000289",
+      "type": "internal",
+      "parentId": "ancestor_otl_000288",
+      "children": [
+        "ancestor_otl_000290",
+        "ancestor_otl_000291"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000290",
+      "type": "internal",
+      "parentId": "ancestor_otl_000289",
+      "children": [
+        "tax_ott768674"
+      ]
+    },
+    {
+      "id": "tax_ott768674",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000290",
+      "children": [],
+      "taxonId": "tax_ott768674"
+    },
+    {
+      "id": "ancestor_otl_000291",
+      "type": "internal",
+      "parentId": "ancestor_otl_000289",
+      "children": [
+        "tax_ott207426"
+      ]
+    },
+    {
+      "id": "tax_ott207426",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000291",
+      "children": [],
+      "taxonId": "tax_ott207426"
+    },
+    {
+      "id": "ancestor_otl_000292",
+      "type": "internal",
+      "parentId": "ancestor_otl_000288",
+      "children": [
+        "ancestor_otl_000293"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000293",
+      "type": "internal",
+      "parentId": "ancestor_otl_000292",
+      "children": [
+        "tax_ott768683"
+      ]
+    },
+    {
+      "id": "tax_ott768683",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000293",
+      "children": [],
+      "taxonId": "tax_ott768683"
+    },
+    {
+      "id": "ancestor_otl_000294",
+      "type": "internal",
+      "parentId": "ancestor_otl_000212",
+      "children": [
+        "ancestor_otl_000295"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000295",
+      "type": "internal",
+      "parentId": "ancestor_otl_000294",
+      "children": [
+        "ancestor_otl_000296",
+        "ancestor_otl_000353"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000296",
+      "type": "internal",
+      "parentId": "ancestor_otl_000295",
+      "children": [
+        "ancestor_otl_000297"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000297",
+      "type": "internal",
+      "parentId": "ancestor_otl_000296",
+      "children": [
+        "ancestor_otl_000298"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000298",
+      "type": "internal",
+      "parentId": "ancestor_otl_000297",
+      "children": [
+        "ancestor_otl_000299",
+        "ancestor_otl_000332"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000299",
+      "type": "internal",
+      "parentId": "ancestor_otl_000298",
+      "children": [
+        "ancestor_otl_000300",
+        "ancestor_otl_000327"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000300",
+      "type": "internal",
+      "parentId": "ancestor_otl_000299",
+      "children": [
+        "ancestor_otl_000301"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000301",
+      "type": "internal",
+      "parentId": "ancestor_otl_000300",
+      "children": [
+        "ancestor_otl_000302",
+        "ancestor_otl_000324"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000302",
+      "type": "internal",
+      "parentId": "ancestor_otl_000301",
+      "children": [
+        "ancestor_otl_000303",
+        "ancestor_otl_000307"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000303",
+      "type": "internal",
+      "parentId": "ancestor_otl_000302",
+      "children": [
+        "ancestor_otl_000304"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000304",
+      "type": "internal",
+      "parentId": "ancestor_otl_000303",
+      "children": [
+        "ancestor_otl_000305"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000305",
+      "type": "internal",
+      "parentId": "ancestor_otl_000304",
+      "children": [
+        "ancestor_otl_000306"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000306",
+      "type": "internal",
+      "parentId": "ancestor_otl_000305",
+      "children": [
+        "tax_ott698411"
+      ]
+    },
+    {
+      "id": "tax_ott698411",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000306",
+      "children": [],
+      "taxonId": "tax_ott698411"
+    },
+    {
+      "id": "ancestor_otl_000307",
+      "type": "internal",
+      "parentId": "ancestor_otl_000302",
+      "children": [
+        "ancestor_otl_000308",
+        "ancestor_otl_000318"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000308",
+      "type": "internal",
+      "parentId": "ancestor_otl_000307",
+      "children": [
+        "ancestor_otl_000309",
+        "ancestor_otl_000317"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000309",
+      "type": "internal",
+      "parentId": "ancestor_otl_000308",
+      "children": [
+        "ancestor_otl_000310"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000310",
+      "type": "internal",
+      "parentId": "ancestor_otl_000309",
+      "children": [
+        "ancestor_otl_000311"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000311",
+      "type": "internal",
+      "parentId": "ancestor_otl_000310",
+      "children": [
+        "ancestor_otl_000312"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000312",
+      "type": "internal",
+      "parentId": "ancestor_otl_000311",
+      "children": [
+        "ancestor_otl_000313"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000313",
+      "type": "internal",
+      "parentId": "ancestor_otl_000312",
+      "children": [
+        "ancestor_otl_000314"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000314",
+      "type": "internal",
+      "parentId": "ancestor_otl_000313",
+      "children": [
+        "ancestor_otl_000315"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000315",
+      "type": "internal",
+      "parentId": "ancestor_otl_000314",
+      "children": [
+        "ancestor_otl_000316"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000316",
+      "type": "internal",
+      "parentId": "ancestor_otl_000315",
+      "children": [
+        "tax_ott124230"
+      ]
+    },
+    {
+      "id": "tax_ott124230",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000316",
+      "children": [],
+      "taxonId": "tax_ott124230"
+    },
+    {
+      "id": "ancestor_otl_000317",
+      "type": "internal",
+      "parentId": "ancestor_otl_000308",
+      "children": [
+        "tax_ott124215"
+      ]
+    },
+    {
+      "id": "tax_ott124215",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000317",
+      "children": [],
+      "taxonId": "tax_ott124215"
+    },
+    {
+      "id": "ancestor_otl_000318",
+      "type": "internal",
+      "parentId": "ancestor_otl_000307",
+      "children": [
+        "ancestor_otl_000319",
+        "ancestor_otl_000321"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000319",
+      "type": "internal",
+      "parentId": "ancestor_otl_000318",
+      "children": [
+        "ancestor_otl_000320"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000320",
+      "type": "internal",
+      "parentId": "ancestor_otl_000319",
+      "children": [
+        "tax_ott1089663"
+      ]
+    },
+    {
+      "id": "tax_ott1089663",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000320",
+      "children": [],
+      "taxonId": "tax_ott1089663"
+    },
+    {
+      "id": "ancestor_otl_000321",
+      "type": "internal",
+      "parentId": "ancestor_otl_000318",
+      "children": [
+        "ancestor_otl_000322",
+        "ancestor_otl_000323"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000322",
+      "type": "internal",
+      "parentId": "ancestor_otl_000321",
+      "children": [
+        "tax_ott306757"
+      ]
+    },
+    {
+      "id": "tax_ott306757",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000322",
+      "children": [],
+      "taxonId": "tax_ott306757"
+    },
+    {
+      "id": "ancestor_otl_000323",
+      "type": "internal",
+      "parentId": "ancestor_otl_000321",
+      "children": [
+        "tax_ott851318"
+      ]
+    },
+    {
+      "id": "tax_ott851318",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000323",
+      "children": [],
+      "taxonId": "tax_ott851318"
+    },
+    {
+      "id": "ancestor_otl_000324",
+      "type": "internal",
+      "parentId": "ancestor_otl_000301",
+      "children": [
+        "ancestor_otl_000325"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000325",
+      "type": "internal",
+      "parentId": "ancestor_otl_000324",
+      "children": [
+        "ancestor_otl_000326"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000326",
+      "type": "internal",
+      "parentId": "ancestor_otl_000325",
+      "children": [
+        "tax_ott1003906"
+      ]
+    },
+    {
+      "id": "tax_ott1003906",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000326",
+      "children": [],
+      "taxonId": "tax_ott1003906"
+    },
+    {
+      "id": "ancestor_otl_000327",
+      "type": "internal",
+      "parentId": "ancestor_otl_000299",
+      "children": [
+        "ancestor_otl_000328",
+        "ancestor_otl_000330"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000328",
+      "type": "internal",
+      "parentId": "ancestor_otl_000327",
+      "children": [
+        "ancestor_otl_000329"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000329",
+      "type": "internal",
+      "parentId": "ancestor_otl_000328",
+      "children": [
+        "tax_ott276851"
+      ]
+    },
+    {
+      "id": "tax_ott276851",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000329",
+      "children": [],
+      "taxonId": "tax_ott276851"
+    },
+    {
+      "id": "ancestor_otl_000330",
+      "type": "internal",
+      "parentId": "ancestor_otl_000327",
+      "children": [
+        "ancestor_otl_000331"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000331",
+      "type": "internal",
+      "parentId": "ancestor_otl_000330",
+      "children": [
+        "tax_ott825964"
+      ]
+    },
+    {
+      "id": "tax_ott825964",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000331",
+      "children": [],
+      "taxonId": "tax_ott825964"
+    },
+    {
+      "id": "ancestor_otl_000332",
+      "type": "internal",
+      "parentId": "ancestor_otl_000298",
+      "children": [
+        "ancestor_otl_000333"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000333",
+      "type": "internal",
+      "parentId": "ancestor_otl_000332",
+      "children": [
+        "ancestor_otl_000334"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000334",
+      "type": "internal",
+      "parentId": "ancestor_otl_000333",
+      "children": [
+        "ancestor_otl_000335"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000335",
+      "type": "internal",
+      "parentId": "ancestor_otl_000334",
+      "children": [
+        "ancestor_otl_000336"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000336",
+      "type": "internal",
+      "parentId": "ancestor_otl_000335",
+      "children": [
+        "ancestor_otl_000337"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000337",
+      "type": "internal",
+      "parentId": "ancestor_otl_000336",
+      "children": [
+        "ancestor_otl_000338"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000338",
+      "type": "internal",
+      "parentId": "ancestor_otl_000337",
+      "children": [
+        "ancestor_otl_000339"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000339",
+      "type": "internal",
+      "parentId": "ancestor_otl_000338",
+      "children": [
+        "ancestor_otl_000340"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000340",
+      "type": "internal",
+      "parentId": "ancestor_otl_000339",
+      "children": [
+        "ancestor_otl_000341"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000341",
+      "type": "internal",
+      "parentId": "ancestor_otl_000340",
+      "children": [
+        "ancestor_otl_000342"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000342",
+      "type": "internal",
+      "parentId": "ancestor_otl_000341",
+      "children": [
+        "ancestor_otl_000343"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000343",
+      "type": "internal",
+      "parentId": "ancestor_otl_000342",
+      "children": [
+        "ancestor_otl_000344"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000344",
+      "type": "internal",
+      "parentId": "ancestor_otl_000343",
+      "children": [
+        "ancestor_otl_000345",
+        "ancestor_otl_000350"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000345",
+      "type": "internal",
+      "parentId": "ancestor_otl_000344",
+      "children": [
+        "ancestor_otl_000346",
+        "ancestor_otl_000349"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000346",
+      "type": "internal",
+      "parentId": "ancestor_otl_000345",
+      "children": [
+        "ancestor_otl_000347"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000347",
+      "type": "internal",
+      "parentId": "ancestor_otl_000346",
+      "children": [
+        "ancestor_otl_000348"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000348",
+      "type": "internal",
+      "parentId": "ancestor_otl_000347",
+      "children": [
+        "tax_ott226198"
+      ]
+    },
+    {
+      "id": "tax_ott226198",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000348",
+      "children": [],
+      "taxonId": "tax_ott226198"
+    },
+    {
+      "id": "ancestor_otl_000349",
+      "type": "internal",
+      "parentId": "ancestor_otl_000345",
+      "children": [
+        "tax_ott226190"
+      ]
+    },
+    {
+      "id": "tax_ott226190",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000349",
+      "children": [],
+      "taxonId": "tax_ott226190"
+    },
+    {
+      "id": "ancestor_otl_000350",
+      "type": "internal",
+      "parentId": "ancestor_otl_000344",
+      "children": [
+        "ancestor_otl_000351"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000351",
+      "type": "internal",
+      "parentId": "ancestor_otl_000350",
+      "children": [
+        "ancestor_otl_000352"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000352",
+      "type": "internal",
+      "parentId": "ancestor_otl_000351",
+      "children": [
+        "tax_ott800320"
+      ]
+    },
+    {
+      "id": "tax_ott800320",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000352",
+      "children": [],
+      "taxonId": "tax_ott800320"
+    },
+    {
+      "id": "ancestor_otl_000353",
+      "type": "internal",
+      "parentId": "ancestor_otl_000295",
+      "children": [
+        "ancestor_otl_000354"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000354",
+      "type": "internal",
+      "parentId": "ancestor_otl_000353",
+      "children": [
+        "ancestor_otl_000355",
+        "ancestor_otl_000356"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000355",
+      "type": "internal",
+      "parentId": "ancestor_otl_000354",
+      "children": [
+        "tax_ott662806"
+      ]
+    },
+    {
+      "id": "tax_ott662806",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000355",
+      "children": [],
+      "taxonId": "tax_ott662806"
+    },
+    {
+      "id": "ancestor_otl_000356",
+      "type": "internal",
+      "parentId": "ancestor_otl_000354",
+      "children": [
+        "tax_ott510762"
+      ]
+    },
+    {
+      "id": "tax_ott510762",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000356",
+      "children": [],
+      "taxonId": "tax_ott510762"
+    },
+    {
+      "id": "ancestor_otl_000357",
+      "type": "internal",
+      "parentId": "ancestor_otl_000211",
+      "children": [
+        "ancestor_otl_000358"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000358",
+      "type": "internal",
+      "parentId": "ancestor_otl_000357",
+      "children": [
+        "ancestor_otl_000359"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000359",
+      "type": "internal",
+      "parentId": "ancestor_otl_000358",
+      "children": [
+        "ancestor_otl_000360"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000360",
+      "type": "internal",
+      "parentId": "ancestor_otl_000359",
+      "children": [
+        "tax_ott729998"
+      ],
+      "taxonId": "tax_ott730013"
+    },
+    {
+      "id": "tax_ott729998",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000360",
+      "children": [],
+      "taxonId": "tax_ott729998"
+    },
+    {
+      "id": "ancestor_otl_000361",
+      "type": "internal",
+      "parentId": "ancestor_otl_000210",
+      "children": [
+        "ancestor_otl_000362"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000362",
+      "type": "internal",
+      "parentId": "ancestor_otl_000361",
+      "children": [
+        "ancestor_otl_000363",
+        "ancestor_otl_000366"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000363",
+      "type": "internal",
+      "parentId": "ancestor_otl_000362",
+      "children": [
+        "ancestor_otl_000364",
+        "ancestor_otl_000365"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000364",
+      "type": "internal",
+      "parentId": "ancestor_otl_000363",
+      "children": [
+        "tax_ott906301"
+      ]
+    },
+    {
+      "id": "tax_ott906301",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000364",
+      "children": [],
+      "taxonId": "tax_ott906301"
+    },
+    {
+      "id": "ancestor_otl_000365",
+      "type": "internal",
+      "parentId": "ancestor_otl_000363",
+      "children": [
+        "tax_ott986973"
+      ]
+    },
+    {
+      "id": "tax_ott986973",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000365",
+      "children": [],
+      "taxonId": "tax_ott986973"
+    },
+    {
+      "id": "ancestor_otl_000366",
+      "type": "internal",
+      "parentId": "ancestor_otl_000362",
+      "children": [
+        "tax_ott510752",
+        "ancestor_otl_000367"
+      ]
+    },
+    {
+      "id": "tax_ott510752",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000366",
+      "children": [],
+      "taxonId": "tax_ott510752"
+    },
+    {
+      "id": "ancestor_otl_000367",
+      "type": "internal",
+      "parentId": "ancestor_otl_000366",
+      "children": [
+        "tax_ott510768"
+      ]
+    },
+    {
+      "id": "tax_ott510768",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000367",
+      "children": [],
+      "taxonId": "tax_ott510768"
+    },
+    {
+      "id": "ancestor_otl_000368",
+      "type": "internal",
+      "parentId": "ancestor_otl_000209",
+      "children": [
+        "ancestor_otl_000369",
+        "ancestor_otl_000375"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000369",
+      "type": "internal",
+      "parentId": "ancestor_otl_000368",
+      "children": [
+        "ancestor_otl_000370"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000370",
+      "type": "internal",
+      "parentId": "ancestor_otl_000369",
+      "children": [
+        "ancestor_otl_000371",
+        "ancestor_otl_000373",
+        "ancestor_otl_000374"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000371",
+      "type": "internal",
+      "parentId": "ancestor_otl_000370",
+      "children": [
+        "ancestor_otl_000372"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000372",
+      "type": "internal",
+      "parentId": "ancestor_otl_000371",
+      "children": [
+        "tax_ott124776"
+      ]
+    },
+    {
+      "id": "tax_ott124776",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000372",
+      "children": [],
+      "taxonId": "tax_ott124776"
+    },
+    {
+      "id": "ancestor_otl_000373",
+      "type": "internal",
+      "parentId": "ancestor_otl_000370",
+      "children": [
+        "tax_ott1068202"
+      ]
+    },
+    {
+      "id": "tax_ott1068202",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000373",
+      "children": [],
+      "taxonId": "tax_ott1068202"
+    },
+    {
+      "id": "ancestor_otl_000374",
+      "type": "internal",
+      "parentId": "ancestor_otl_000370",
+      "children": [
+        "tax_ott1068218"
+      ]
+    },
+    {
+      "id": "tax_ott1068218",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000374",
+      "children": [],
+      "taxonId": "tax_ott1068218"
+    },
+    {
+      "id": "ancestor_otl_000375",
+      "type": "internal",
+      "parentId": "ancestor_otl_000368",
+      "children": [
+        "ancestor_otl_000376"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000376",
+      "type": "internal",
+      "parentId": "ancestor_otl_000375",
+      "children": [
+        "ancestor_otl_000377",
+        "ancestor_otl_000378"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000377",
+      "type": "internal",
+      "parentId": "ancestor_otl_000376",
+      "children": [
+        "tax_ott1034204"
+      ]
+    },
+    {
+      "id": "tax_ott1034204",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000377",
+      "children": [],
+      "taxonId": "tax_ott1034204"
+    },
+    {
+      "id": "ancestor_otl_000378",
+      "type": "internal",
+      "parentId": "ancestor_otl_000376",
+      "children": [
+        "tax_ott1034198"
+      ]
+    },
+    {
+      "id": "tax_ott1034198",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000378",
+      "children": [],
+      "taxonId": "tax_ott1034198"
+    },
+    {
+      "id": "ancestor_otl_000379",
+      "type": "internal",
+      "parentId": "ancestor_otl_000205",
+      "children": [
+        "ancestor_otl_000380",
+        "ancestor_otl_000407"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000380",
+      "type": "internal",
+      "parentId": "ancestor_otl_000379",
+      "children": [
+        "ancestor_otl_000381",
+        "ancestor_otl_000396"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000381",
+      "type": "internal",
+      "parentId": "ancestor_otl_000380",
+      "children": [
+        "ancestor_otl_000382"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000382",
+      "type": "internal",
+      "parentId": "ancestor_otl_000381",
+      "children": [
+        "ancestor_otl_000383"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000383",
+      "type": "internal",
+      "parentId": "ancestor_otl_000382",
+      "children": [
+        "ancestor_otl_000384"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000384",
+      "type": "internal",
+      "parentId": "ancestor_otl_000383",
+      "children": [
+        "ancestor_otl_000385"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000385",
+      "type": "internal",
+      "parentId": "ancestor_otl_000384",
+      "children": [
+        "ancestor_otl_000386"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000386",
+      "type": "internal",
+      "parentId": "ancestor_otl_000385",
+      "children": [
+        "ancestor_otl_000387"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000387",
+      "type": "internal",
+      "parentId": "ancestor_otl_000386",
+      "children": [
+        "ancestor_otl_000388"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000388",
+      "type": "internal",
+      "parentId": "ancestor_otl_000387",
+      "children": [
+        "ancestor_otl_000389"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000389",
+      "type": "internal",
+      "parentId": "ancestor_otl_000388",
+      "children": [
+        "ancestor_otl_000390"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000390",
+      "type": "internal",
+      "parentId": "ancestor_otl_000389",
+      "children": [
+        "ancestor_otl_000391"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000391",
+      "type": "internal",
+      "parentId": "ancestor_otl_000390",
+      "children": [
+        "ancestor_otl_000392"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000392",
+      "type": "internal",
+      "parentId": "ancestor_otl_000391",
+      "children": [
+        "ancestor_otl_000393"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000393",
+      "type": "internal",
+      "parentId": "ancestor_otl_000392",
+      "children": [
+        "ancestor_otl_000394"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000394",
+      "type": "internal",
+      "parentId": "ancestor_otl_000393",
+      "children": [
+        "ancestor_otl_000395"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000395",
+      "type": "internal",
+      "parentId": "ancestor_otl_000394",
+      "children": []
+    },
+    {
+      "id": "ancestor_otl_000396",
+      "type": "internal",
+      "parentId": "ancestor_otl_000380",
+      "children": [
+        "ancestor_otl_000397"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000397",
+      "type": "internal",
+      "parentId": "ancestor_otl_000396",
+      "children": [
+        "ancestor_otl_000398"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000398",
+      "type": "internal",
+      "parentId": "ancestor_otl_000397",
+      "children": [
+        "ancestor_otl_000399"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000399",
+      "type": "internal",
+      "parentId": "ancestor_otl_000398",
+      "children": [
+        "ancestor_otl_000400"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000400",
+      "type": "internal",
+      "parentId": "ancestor_otl_000399",
+      "children": [
+        "ancestor_otl_000401"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000401",
+      "type": "internal",
+      "parentId": "ancestor_otl_000400",
+      "children": [
+        "ancestor_otl_000402"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000402",
+      "type": "internal",
+      "parentId": "ancestor_otl_000401",
+      "children": [
+        "ancestor_otl_000403"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000403",
+      "type": "internal",
+      "parentId": "ancestor_otl_000402",
+      "children": [
+        "ancestor_otl_000404"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000404",
+      "type": "internal",
+      "parentId": "ancestor_otl_000403",
+      "children": [
+        "ancestor_otl_000405"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000405",
+      "type": "internal",
+      "parentId": "ancestor_otl_000404",
+      "children": [
+        "ancestor_otl_000406"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000406",
+      "type": "internal",
+      "parentId": "ancestor_otl_000405",
+      "children": [
+        "tax_ott238431"
+      ]
+    },
+    {
+      "id": "tax_ott238431",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000406",
+      "children": [],
+      "taxonId": "tax_ott238431"
+    },
+    {
+      "id": "ancestor_otl_000407",
+      "type": "internal",
+      "parentId": "ancestor_otl_000379",
+      "children": [
+        "ancestor_otl_000408"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000408",
+      "type": "internal",
+      "parentId": "ancestor_otl_000407",
+      "children": [
+        "ancestor_otl_000409"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000409",
+      "type": "internal",
+      "parentId": "ancestor_otl_000408",
+      "children": [
+        "ancestor_otl_000410"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000410",
+      "type": "internal",
+      "parentId": "ancestor_otl_000409",
+      "children": [
+        "ancestor_otl_000411"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000411",
+      "type": "internal",
+      "parentId": "ancestor_otl_000410",
+      "children": [
+        "ancestor_otl_000412"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000412",
+      "type": "internal",
+      "parentId": "ancestor_otl_000411",
+      "children": [
+        "ancestor_otl_000413"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000413",
+      "type": "internal",
+      "parentId": "ancestor_otl_000412",
+      "children": [
+        "ancestor_otl_000414"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000414",
+      "type": "internal",
+      "parentId": "ancestor_otl_000413",
+      "children": [
+        "ancestor_otl_000415"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000415",
+      "type": "internal",
+      "parentId": "ancestor_otl_000414",
+      "children": [
+        "ancestor_otl_000416"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000416",
+      "type": "internal",
+      "parentId": "ancestor_otl_000415",
+      "children": [
+        "tax_ott813034"
+      ]
+    },
+    {
+      "id": "tax_ott813034",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000416",
+      "children": [],
+      "taxonId": "tax_ott813034"
+    },
+    {
+      "id": "ancestor_otl_000417",
+      "type": "internal",
+      "parentId": "ancestor_otl_000204",
+      "children": [
+        "ancestor_otl_000418",
+        "ancestor_otl_000582"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000418",
+      "type": "internal",
+      "parentId": "ancestor_otl_000417",
+      "children": [
+        "ancestor_otl_000419"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000419",
+      "type": "internal",
+      "parentId": "ancestor_otl_000418",
+      "children": [
+        "ancestor_otl_000420",
+        "ancestor_otl_000524"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000420",
+      "type": "internal",
+      "parentId": "ancestor_otl_000419",
+      "children": [
+        "ancestor_otl_000421",
+        "ancestor_otl_000486"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000421",
+      "type": "internal",
+      "parentId": "ancestor_otl_000420",
+      "children": [
+        "ancestor_otl_000422",
+        "ancestor_otl_000458"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000422",
+      "type": "internal",
+      "parentId": "ancestor_otl_000421",
+      "children": [
+        "ancestor_otl_000423",
+        "ancestor_otl_000454"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000423",
+      "type": "internal",
+      "parentId": "ancestor_otl_000422",
+      "children": [
+        "ancestor_otl_000424",
+        "ancestor_otl_000452"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000424",
+      "type": "internal",
+      "parentId": "ancestor_otl_000423",
+      "children": [
+        "ancestor_otl_000425",
+        "ancestor_otl_000448"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000425",
+      "type": "internal",
+      "parentId": "ancestor_otl_000424",
+      "children": [
+        "ancestor_otl_000426"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000426",
+      "type": "internal",
+      "parentId": "ancestor_otl_000425",
+      "children": [
+        "ancestor_otl_000427",
+        "ancestor_otl_000445"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000427",
+      "type": "internal",
+      "parentId": "ancestor_otl_000426",
+      "children": [
+        "ancestor_otl_000428",
+        "ancestor_otl_000435"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000428",
+      "type": "internal",
+      "parentId": "ancestor_otl_000427",
+      "children": [
+        "ancestor_otl_000429",
+        "ancestor_otl_000433"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000429",
+      "type": "internal",
+      "parentId": "ancestor_otl_000428",
+      "children": [
+        "ancestor_otl_000430"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000430",
+      "type": "internal",
+      "parentId": "ancestor_otl_000429",
+      "children": [
+        "ancestor_otl_000431"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000431",
+      "type": "internal",
+      "parentId": "ancestor_otl_000430",
+      "children": [
+        "ancestor_otl_000432"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000432",
+      "type": "internal",
+      "parentId": "ancestor_otl_000431",
+      "children": [
+        "tax_ott178247"
+      ]
+    },
+    {
+      "id": "tax_ott178247",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000432",
+      "children": [],
+      "taxonId": "tax_ott178247"
+    },
+    {
+      "id": "ancestor_otl_000433",
+      "type": "internal",
+      "parentId": "ancestor_otl_000428",
+      "children": [
+        "ancestor_otl_000434"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000434",
+      "type": "internal",
+      "parentId": "ancestor_otl_000433",
+      "children": [
+        "tax_ott923113"
+      ]
+    },
+    {
+      "id": "tax_ott923113",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000434",
+      "children": [],
+      "taxonId": "tax_ott923113"
+    },
+    {
+      "id": "ancestor_otl_000435",
+      "type": "internal",
+      "parentId": "ancestor_otl_000427",
+      "children": [
+        "ancestor_otl_000436"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000436",
+      "type": "internal",
+      "parentId": "ancestor_otl_000435",
+      "children": [
+        "ancestor_otl_000437"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000437",
+      "type": "internal",
+      "parentId": "ancestor_otl_000436",
+      "children": [
+        "ancestor_otl_000438"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000438",
+      "type": "internal",
+      "parentId": "ancestor_otl_000437",
+      "children": [
+        "ancestor_otl_000439",
+        "ancestor_otl_000444"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000439",
+      "type": "internal",
+      "parentId": "ancestor_otl_000438",
+      "children": [
+        "ancestor_otl_000440",
+        "ancestor_otl_000443"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000440",
+      "type": "internal",
+      "parentId": "ancestor_otl_000439",
+      "children": [
+        "ancestor_otl_000441"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000441",
+      "type": "internal",
+      "parentId": "ancestor_otl_000440",
+      "children": [
+        "ancestor_otl_000442"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000442",
+      "type": "internal",
+      "parentId": "ancestor_otl_000441",
+      "children": [
+        "tax_ott949676"
+      ]
+    },
+    {
+      "id": "tax_ott949676",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000442",
+      "children": [],
+      "taxonId": "tax_ott949676"
+    },
+    {
+      "id": "ancestor_otl_000443",
+      "type": "internal",
+      "parentId": "ancestor_otl_000439",
+      "children": [
+        "tax_ott656961"
+      ]
+    },
+    {
+      "id": "tax_ott656961",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000443",
+      "children": [],
+      "taxonId": "tax_ott656961"
+    },
+    {
+      "id": "ancestor_otl_000444",
+      "type": "internal",
+      "parentId": "ancestor_otl_000438",
+      "children": [
+        "tax_ott397142"
+      ]
+    },
+    {
+      "id": "tax_ott397142",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000444",
+      "children": [],
+      "taxonId": "tax_ott397142"
+    },
+    {
+      "id": "ancestor_otl_000445",
+      "type": "internal",
+      "parentId": "ancestor_otl_000426",
+      "children": [
+        "ancestor_otl_000446"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000446",
+      "type": "internal",
+      "parentId": "ancestor_otl_000445",
+      "children": [
+        "ancestor_otl_000447"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000447",
+      "type": "internal",
+      "parentId": "ancestor_otl_000446",
+      "children": [
+        "tax_ott923109"
+      ]
+    },
+    {
+      "id": "tax_ott923109",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000447",
+      "children": [],
+      "taxonId": "tax_ott923109"
+    },
+    {
+      "id": "ancestor_otl_000448",
+      "type": "internal",
+      "parentId": "ancestor_otl_000424",
+      "children": [
+        "ancestor_otl_000449"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000449",
+      "type": "internal",
+      "parentId": "ancestor_otl_000448",
+      "children": [
+        "ancestor_otl_000450"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000450",
+      "type": "internal",
+      "parentId": "ancestor_otl_000449",
+      "children": [
+        "ancestor_otl_000451"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000451",
+      "type": "internal",
+      "parentId": "ancestor_otl_000450",
+      "children": [
+        "tax_ott348040"
+      ]
+    },
+    {
+      "id": "tax_ott348040",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000451",
+      "children": [],
+      "taxonId": "tax_ott348040"
+    },
+    {
+      "id": "ancestor_otl_000452",
+      "type": "internal",
+      "parentId": "ancestor_otl_000423",
+      "children": [
+        "ancestor_otl_000453"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000453",
+      "type": "internal",
+      "parentId": "ancestor_otl_000452",
+      "children": [
+        "tax_ott872562"
+      ]
+    },
+    {
+      "id": "tax_ott872562",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000453",
+      "children": [],
+      "taxonId": "tax_ott872562"
+    },
+    {
+      "id": "ancestor_otl_000454",
+      "type": "internal",
+      "parentId": "ancestor_otl_000422",
+      "children": [
+        "ancestor_otl_000455"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000455",
+      "type": "internal",
+      "parentId": "ancestor_otl_000454",
+      "children": [
+        "ancestor_otl_000456"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000456",
+      "type": "internal",
+      "parentId": "ancestor_otl_000455",
+      "children": [
+        "ancestor_otl_000457"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000457",
+      "type": "internal",
+      "parentId": "ancestor_otl_000456",
+      "children": [
+        "tax_ott231602"
+      ]
+    },
+    {
+      "id": "tax_ott231602",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000457",
+      "children": [],
+      "taxonId": "tax_ott231602"
+    },
+    {
+      "id": "ancestor_otl_000458",
+      "type": "internal",
+      "parentId": "ancestor_otl_000421",
+      "children": [
+        "ancestor_otl_000459",
+        "ancestor_otl_000468"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000459",
+      "type": "internal",
+      "parentId": "ancestor_otl_000458",
+      "children": [
+        "ancestor_otl_000460",
+        "ancestor_otl_000467"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000460",
+      "type": "internal",
+      "parentId": "ancestor_otl_000459",
+      "children": [
+        "ancestor_otl_000461"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000461",
+      "type": "internal",
+      "parentId": "ancestor_otl_000460",
+      "children": [
+        "ancestor_otl_000462"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000462",
+      "type": "internal",
+      "parentId": "ancestor_otl_000461",
+      "children": [
+        "ancestor_otl_000463",
+        "ancestor_otl_000465"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000463",
+      "type": "internal",
+      "parentId": "ancestor_otl_000462",
+      "children": [
+        "ancestor_otl_000464"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000464",
+      "type": "internal",
+      "parentId": "ancestor_otl_000463",
+      "children": [
+        "tax_ott10732",
+        "tax_ott872567"
+      ]
+    },
+    {
+      "id": "tax_ott10732",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000464",
+      "children": [],
+      "taxonId": "tax_ott10732"
+    },
+    {
+      "id": "tax_ott872567",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000464",
+      "children": [],
+      "taxonId": "tax_ott872567"
+    },
+    {
+      "id": "ancestor_otl_000465",
+      "type": "internal",
+      "parentId": "ancestor_otl_000462",
+      "children": [
+        "ancestor_otl_000466"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000466",
+      "type": "internal",
+      "parentId": "ancestor_otl_000465",
+      "children": [
+        "tax_ott872577"
+      ]
+    },
+    {
+      "id": "tax_ott872577",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000466",
+      "children": [],
+      "taxonId": "tax_ott872577"
+    },
+    {
+      "id": "ancestor_otl_000467",
+      "type": "internal",
+      "parentId": "ancestor_otl_000459",
+      "children": [
+        "tax_ott872573"
+      ]
+    },
+    {
+      "id": "tax_ott872573",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000467",
+      "children": [],
+      "taxonId": "tax_ott872573"
+    },
+    {
+      "id": "ancestor_otl_000468",
+      "type": "internal",
+      "parentId": "ancestor_otl_000458",
+      "children": [
+        "ancestor_otl_000469",
+        "ancestor_otl_000477"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000469",
+      "type": "internal",
+      "parentId": "ancestor_otl_000468",
+      "children": [
+        "ancestor_otl_000470"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000470",
+      "type": "internal",
+      "parentId": "ancestor_otl_000469",
+      "children": [
+        "ancestor_otl_000471"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000471",
+      "type": "internal",
+      "parentId": "ancestor_otl_000470",
+      "children": [
+        "ancestor_otl_000472"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000472",
+      "type": "internal",
+      "parentId": "ancestor_otl_000471",
+      "children": [
+        "ancestor_otl_000473"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000473",
+      "type": "internal",
+      "parentId": "ancestor_otl_000472",
+      "children": [
+        "ancestor_otl_000474",
+        "ancestor_otl_000476"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000474",
+      "type": "internal",
+      "parentId": "ancestor_otl_000473",
+      "children": [
+        "ancestor_otl_000475"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000475",
+      "type": "internal",
+      "parentId": "ancestor_otl_000474",
+      "children": [
+        "tax_ott698422"
+      ]
+    },
+    {
+      "id": "tax_ott698422",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000475",
+      "children": [],
+      "taxonId": "tax_ott698422"
+    },
+    {
+      "id": "ancestor_otl_000476",
+      "type": "internal",
+      "parentId": "ancestor_otl_000473",
+      "children": [
+        "tax_ott1040694"
+      ]
+    },
+    {
+      "id": "tax_ott1040694",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000476",
+      "children": [],
+      "taxonId": "tax_ott1040694"
+    },
+    {
+      "id": "ancestor_otl_000477",
+      "type": "internal",
+      "parentId": "ancestor_otl_000468",
+      "children": [
+        "ancestor_otl_000478",
+        "ancestor_otl_000484"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000478",
+      "type": "internal",
+      "parentId": "ancestor_otl_000477",
+      "children": [
+        "ancestor_otl_000479"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000479",
+      "type": "internal",
+      "parentId": "ancestor_otl_000478",
+      "children": [
+        "ancestor_otl_000480"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000480",
+      "type": "internal",
+      "parentId": "ancestor_otl_000479",
+      "children": [
+        "ancestor_otl_000481"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000481",
+      "type": "internal",
+      "parentId": "ancestor_otl_000480",
+      "children": [
+        "ancestor_otl_000482"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000482",
+      "type": "internal",
+      "parentId": "ancestor_otl_000481",
+      "children": [
+        "ancestor_otl_000483"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000483",
+      "type": "internal",
+      "parentId": "ancestor_otl_000482",
+      "children": [
+        "tax_ott95364"
+      ]
+    },
+    {
+      "id": "tax_ott95364",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000483",
+      "children": [],
+      "taxonId": "tax_ott95364"
+    },
+    {
+      "id": "ancestor_otl_000484",
+      "type": "internal",
+      "parentId": "ancestor_otl_000477",
+      "children": [
+        "ancestor_otl_000485"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000485",
+      "type": "internal",
+      "parentId": "ancestor_otl_000484",
+      "children": [
+        "tax_ott749644"
+      ]
+    },
+    {
+      "id": "tax_ott749644",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000485",
+      "children": [],
+      "taxonId": "tax_ott749644"
+    },
+    {
+      "id": "ancestor_otl_000486",
+      "type": "internal",
+      "parentId": "ancestor_otl_000420",
+      "children": [
+        "ancestor_otl_000487"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000487",
+      "type": "internal",
+      "parentId": "ancestor_otl_000486",
+      "children": [
+        "ancestor_otl_000488"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000488",
+      "type": "internal",
+      "parentId": "ancestor_otl_000487",
+      "children": [
+        "ancestor_otl_000489"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000489",
+      "type": "internal",
+      "parentId": "ancestor_otl_000488",
+      "children": [
+        "ancestor_otl_000490"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000490",
+      "type": "internal",
+      "parentId": "ancestor_otl_000489",
+      "children": [
+        "ancestor_otl_000491"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000491",
+      "type": "internal",
+      "parentId": "ancestor_otl_000490",
+      "children": [
+        "ancestor_otl_000492"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000492",
+      "type": "internal",
+      "parentId": "ancestor_otl_000491",
+      "children": [
+        "ancestor_otl_000493"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000493",
+      "type": "internal",
+      "parentId": "ancestor_otl_000492",
+      "children": [
+        "ancestor_otl_000494"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000494",
+      "type": "internal",
+      "parentId": "ancestor_otl_000493",
+      "children": [
+        "ancestor_otl_000495",
+        "ancestor_otl_000512"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000495",
+      "type": "internal",
+      "parentId": "ancestor_otl_000494",
+      "children": [
+        "ancestor_otl_000496",
+        "ancestor_otl_000510"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000496",
+      "type": "internal",
+      "parentId": "ancestor_otl_000495",
+      "children": [
+        "ancestor_otl_000497"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000497",
+      "type": "internal",
+      "parentId": "ancestor_otl_000496",
+      "children": [
+        "ancestor_otl_000498"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000498",
+      "type": "internal",
+      "parentId": "ancestor_otl_000497",
+      "children": [
+        "ancestor_otl_000499"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000499",
+      "type": "internal",
+      "parentId": "ancestor_otl_000498",
+      "children": [
+        "ancestor_otl_000500",
+        "ancestor_otl_000508"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000500",
+      "type": "internal",
+      "parentId": "ancestor_otl_000499",
+      "children": [
+        "ancestor_otl_000501",
+        "ancestor_otl_000503"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000501",
+      "type": "internal",
+      "parentId": "ancestor_otl_000500",
+      "children": [
+        "ancestor_otl_000502"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000502",
+      "type": "internal",
+      "parentId": "ancestor_otl_000501",
+      "children": [
+        "tax_ott247333"
+      ],
+      "taxonId": "tax_ott247341"
+    },
+    {
+      "id": "tax_ott247333",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000502",
+      "children": [],
+      "taxonId": "tax_ott247333"
+    },
+    {
+      "id": "ancestor_otl_000503",
+      "type": "internal",
+      "parentId": "ancestor_otl_000500",
+      "children": [
+        "ancestor_otl_000504",
+        "ancestor_otl_000507"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000504",
+      "type": "internal",
+      "parentId": "ancestor_otl_000503",
+      "children": [
+        "ancestor_otl_000505",
+        "ancestor_otl_000506"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000505",
+      "type": "internal",
+      "parentId": "ancestor_otl_000504",
+      "children": [
+        "tax_ott684074"
+      ]
+    },
+    {
+      "id": "tax_ott684074",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000505",
+      "children": [],
+      "taxonId": "tax_ott684074"
+    },
+    {
+      "id": "ancestor_otl_000506",
+      "type": "internal",
+      "parentId": "ancestor_otl_000504",
+      "children": [
+        "tax_ott821953"
+      ]
+    },
+    {
+      "id": "tax_ott821953",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000506",
+      "children": [],
+      "taxonId": "tax_ott821953"
+    },
+    {
+      "id": "ancestor_otl_000507",
+      "type": "internal",
+      "parentId": "ancestor_otl_000503",
+      "children": [
+        "tax_ott313163"
+      ]
+    },
+    {
+      "id": "tax_ott313163",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000507",
+      "children": [],
+      "taxonId": "tax_ott313163"
+    },
+    {
+      "id": "ancestor_otl_000508",
+      "type": "internal",
+      "parentId": "ancestor_otl_000499",
+      "children": [
+        "ancestor_otl_000509"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000509",
+      "type": "internal",
+      "parentId": "ancestor_otl_000508",
+      "children": [
+        "tax_ott247331"
+      ]
+    },
+    {
+      "id": "tax_ott247331",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000509",
+      "children": [],
+      "taxonId": "tax_ott247331"
+    },
+    {
+      "id": "ancestor_otl_000510",
+      "type": "internal",
+      "parentId": "ancestor_otl_000495",
+      "children": [
+        "ancestor_otl_000511"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000511",
+      "type": "internal",
+      "parentId": "ancestor_otl_000510",
+      "children": [
+        "tax_ott837601"
+      ]
+    },
+    {
+      "id": "tax_ott837601",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000511",
+      "children": [],
+      "taxonId": "tax_ott837601"
+    },
+    {
+      "id": "ancestor_otl_000512",
+      "type": "internal",
+      "parentId": "ancestor_otl_000494",
+      "children": [
+        "ancestor_otl_000513",
+        "ancestor_otl_000522"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000513",
+      "type": "internal",
+      "parentId": "ancestor_otl_000512",
+      "children": [
+        "ancestor_otl_000514"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000514",
+      "type": "internal",
+      "parentId": "ancestor_otl_000513",
+      "children": [
+        "ancestor_otl_000515"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000515",
+      "type": "internal",
+      "parentId": "ancestor_otl_000514",
+      "children": [
+        "ancestor_otl_000516",
+        "ancestor_otl_000521"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000516",
+      "type": "internal",
+      "parentId": "ancestor_otl_000515",
+      "children": [
+        "ancestor_otl_000517",
+        "ancestor_otl_000519"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000517",
+      "type": "internal",
+      "parentId": "ancestor_otl_000516",
+      "children": [
+        "ancestor_otl_000518"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000518",
+      "type": "internal",
+      "parentId": "ancestor_otl_000517",
+      "children": [
+        "tax_ott775766"
+      ]
+    },
+    {
+      "id": "tax_ott775766",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000518",
+      "children": [],
+      "taxonId": "tax_ott775766"
+    },
+    {
+      "id": "ancestor_otl_000519",
+      "type": "internal",
+      "parentId": "ancestor_otl_000516",
+      "children": [
+        "ancestor_otl_000520"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000520",
+      "type": "internal",
+      "parentId": "ancestor_otl_000519",
+      "children": [
+        "tax_ott821964"
+      ]
+    },
+    {
+      "id": "tax_ott821964",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000520",
+      "children": [],
+      "taxonId": "tax_ott821964"
+    },
+    {
+      "id": "ancestor_otl_000521",
+      "type": "internal",
+      "parentId": "ancestor_otl_000515",
+      "children": [
+        "tax_ott315465"
+      ]
+    },
+    {
+      "id": "tax_ott315465",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000521",
+      "children": [],
+      "taxonId": "tax_ott315465"
+    },
+    {
+      "id": "ancestor_otl_000522",
+      "type": "internal",
+      "parentId": "ancestor_otl_000512",
+      "children": [
+        "ancestor_otl_000523"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000523",
+      "type": "internal",
+      "parentId": "ancestor_otl_000522",
+      "children": [
+        "tax_ott821973"
+      ]
+    },
+    {
+      "id": "tax_ott821973",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000523",
+      "children": [],
+      "taxonId": "tax_ott821973"
+    },
+    {
+      "id": "ancestor_otl_000524",
+      "type": "internal",
+      "parentId": "ancestor_otl_000419",
+      "children": [
+        "ancestor_otl_000525"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000525",
+      "type": "internal",
+      "parentId": "ancestor_otl_000524",
+      "children": [
+        "ancestor_otl_000526",
+        "ancestor_otl_000548"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000526",
+      "type": "internal",
+      "parentId": "ancestor_otl_000525",
+      "children": [
+        "ancestor_otl_000527",
+        "ancestor_otl_000539"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000527",
+      "type": "internal",
+      "parentId": "ancestor_otl_000526",
+      "children": [
+        "ancestor_otl_000528",
+        "ancestor_otl_000534"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000528",
+      "type": "internal",
+      "parentId": "ancestor_otl_000527",
+      "children": [
+        "ancestor_otl_000529",
+        "ancestor_otl_000532"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000529",
+      "type": "internal",
+      "parentId": "ancestor_otl_000528",
+      "children": [
+        "ancestor_otl_000530"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000530",
+      "type": "internal",
+      "parentId": "ancestor_otl_000529",
+      "children": [
+        "ancestor_otl_000531"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000531",
+      "type": "internal",
+      "parentId": "ancestor_otl_000530",
+      "children": [
+        "tax_ott803645"
+      ]
+    },
+    {
+      "id": "tax_ott803645",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000531",
+      "children": [],
+      "taxonId": "tax_ott803645"
+    },
+    {
+      "id": "ancestor_otl_000532",
+      "type": "internal",
+      "parentId": "ancestor_otl_000528",
+      "children": [
+        "ancestor_otl_000533"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000533",
+      "type": "internal",
+      "parentId": "ancestor_otl_000532",
+      "children": [
+        "tax_ott768514"
+      ]
+    },
+    {
+      "id": "tax_ott768514",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000533",
+      "children": [],
+      "taxonId": "tax_ott768514"
+    },
+    {
+      "id": "ancestor_otl_000534",
+      "type": "internal",
+      "parentId": "ancestor_otl_000527",
+      "children": [
+        "ancestor_otl_000535"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000535",
+      "type": "internal",
+      "parentId": "ancestor_otl_000534",
+      "children": [
+        "ancestor_otl_000536",
+        "ancestor_otl_000538"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000536",
+      "type": "internal",
+      "parentId": "ancestor_otl_000535",
+      "children": [
+        "ancestor_otl_000537"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000537",
+      "type": "internal",
+      "parentId": "ancestor_otl_000536",
+      "children": [
+        "tax_ott383901"
+      ]
+    },
+    {
+      "id": "tax_ott383901",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000537",
+      "children": [],
+      "taxonId": "tax_ott383901"
+    },
+    {
+      "id": "ancestor_otl_000538",
+      "type": "internal",
+      "parentId": "ancestor_otl_000535",
+      "children": [
+        "tax_ott397157"
+      ]
+    },
+    {
+      "id": "tax_ott397157",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000538",
+      "children": [],
+      "taxonId": "tax_ott397157"
+    },
+    {
+      "id": "ancestor_otl_000539",
+      "type": "internal",
+      "parentId": "ancestor_otl_000526",
+      "children": [
+        "ancestor_otl_000540",
+        "ancestor_otl_000544"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000540",
+      "type": "internal",
+      "parentId": "ancestor_otl_000539",
+      "children": [
+        "ancestor_otl_000541"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000541",
+      "type": "internal",
+      "parentId": "ancestor_otl_000540",
+      "children": [
+        "ancestor_otl_000542"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000542",
+      "type": "internal",
+      "parentId": "ancestor_otl_000541",
+      "children": [
+        "ancestor_otl_000543"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000543",
+      "type": "internal",
+      "parentId": "ancestor_otl_000542",
+      "children": [
+        "tax_ott768511"
+      ]
+    },
+    {
+      "id": "tax_ott768511",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000543",
+      "children": [],
+      "taxonId": "tax_ott768511"
+    },
+    {
+      "id": "ancestor_otl_000544",
+      "type": "internal",
+      "parentId": "ancestor_otl_000539",
+      "children": [
+        "ancestor_otl_000545"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000545",
+      "type": "internal",
+      "parentId": "ancestor_otl_000544",
+      "children": [
+        "ancestor_otl_000546"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000546",
+      "type": "internal",
+      "parentId": "ancestor_otl_000545",
+      "children": [
+        "ancestor_otl_000547"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000547",
+      "type": "internal",
+      "parentId": "ancestor_otl_000546",
+      "children": [
+        "tax_ott768502"
+      ]
+    },
+    {
+      "id": "tax_ott768502",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000547",
+      "children": [],
+      "taxonId": "tax_ott768502"
+    },
+    {
+      "id": "ancestor_otl_000548",
+      "type": "internal",
+      "parentId": "ancestor_otl_000525",
+      "children": [
+        "ancestor_otl_000549"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000549",
+      "type": "internal",
+      "parentId": "ancestor_otl_000548",
+      "children": [
+        "ancestor_otl_000550",
+        "ancestor_otl_000555"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000550",
+      "type": "internal",
+      "parentId": "ancestor_otl_000549",
+      "children": [
+        "ancestor_otl_000551"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000551",
+      "type": "internal",
+      "parentId": "ancestor_otl_000550",
+      "children": [
+        "ancestor_otl_000552",
+        "ancestor_otl_000553"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000552",
+      "type": "internal",
+      "parentId": "ancestor_otl_000551",
+      "children": [
+        "tax_ott42314",
+        "tax_ott532117"
+      ]
+    },
+    {
+      "id": "tax_ott42314",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000552",
+      "children": [],
+      "taxonId": "tax_ott42314"
+    },
+    {
+      "id": "tax_ott532117",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000552",
+      "children": [],
+      "taxonId": "tax_ott532117"
+    },
+    {
+      "id": "ancestor_otl_000553",
+      "type": "internal",
+      "parentId": "ancestor_otl_000551",
+      "children": [
+        "tax_ott42324",
+        "ancestor_otl_000554"
+      ]
+    },
+    {
+      "id": "tax_ott42324",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000553",
+      "children": [],
+      "taxonId": "tax_ott42324"
+    },
+    {
+      "id": "ancestor_otl_000554",
+      "type": "internal",
+      "parentId": "ancestor_otl_000553",
+      "children": [
+        "tax_ott42322"
+      ]
+    },
+    {
+      "id": "tax_ott42322",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000554",
+      "children": [],
+      "taxonId": "tax_ott42322"
+    },
+    {
+      "id": "ancestor_otl_000555",
+      "type": "internal",
+      "parentId": "ancestor_otl_000549",
+      "children": [
+        "ancestor_otl_000556"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000556",
+      "type": "internal",
+      "parentId": "ancestor_otl_000555",
+      "children": [
+        "ancestor_otl_000557",
+        "ancestor_otl_000578"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000557",
+      "type": "internal",
+      "parentId": "ancestor_otl_000556",
+      "children": [
+        "ancestor_otl_000558",
+        "ancestor_otl_000576"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000558",
+      "type": "internal",
+      "parentId": "ancestor_otl_000557",
+      "children": [
+        "ancestor_otl_000559",
+        "ancestor_otl_000573"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000559",
+      "type": "internal",
+      "parentId": "ancestor_otl_000558",
+      "children": [
+        "ancestor_otl_000560",
+        "ancestor_otl_000569"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000560",
+      "type": "internal",
+      "parentId": "ancestor_otl_000559",
+      "children": [
+        "ancestor_otl_000561",
+        "ancestor_otl_000565"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000561",
+      "type": "internal",
+      "parentId": "ancestor_otl_000560",
+      "children": [
+        "ancestor_otl_000562"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000562",
+      "type": "internal",
+      "parentId": "ancestor_otl_000561",
+      "children": [
+        "ancestor_otl_000563"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000563",
+      "type": "internal",
+      "parentId": "ancestor_otl_000562",
+      "children": [
+        "ancestor_otl_000564"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000564",
+      "type": "internal",
+      "parentId": "ancestor_otl_000563",
+      "children": [
+        "tax_ott563166"
+      ]
+    },
+    {
+      "id": "tax_ott563166",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000564",
+      "children": [],
+      "taxonId": "tax_ott563166"
+    },
+    {
+      "id": "ancestor_otl_000565",
+      "type": "internal",
+      "parentId": "ancestor_otl_000560",
+      "children": [
+        "ancestor_otl_000566",
+        "ancestor_otl_000568"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000566",
+      "type": "internal",
+      "parentId": "ancestor_otl_000565",
+      "children": [
+        "ancestor_otl_000567"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000567",
+      "type": "internal",
+      "parentId": "ancestor_otl_000566",
+      "children": [
+        "tax_ott862641"
+      ]
+    },
+    {
+      "id": "tax_ott862641",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000567",
+      "children": [],
+      "taxonId": "tax_ott862641"
+    },
+    {
+      "id": "ancestor_otl_000568",
+      "type": "internal",
+      "parentId": "ancestor_otl_000565",
+      "children": [
+        "tax_ott86183"
+      ]
+    },
+    {
+      "id": "tax_ott86183",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000568",
+      "children": [],
+      "taxonId": "tax_ott86183"
+    },
+    {
+      "id": "ancestor_otl_000569",
+      "type": "internal",
+      "parentId": "ancestor_otl_000559",
+      "children": [
+        "ancestor_otl_000570",
+        "ancestor_otl_000571"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000570",
+      "type": "internal",
+      "parentId": "ancestor_otl_000569",
+      "children": [
+        "tax_ott86162",
+        "tax_ott42307"
+      ]
+    },
+    {
+      "id": "tax_ott86162",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000570",
+      "children": [],
+      "taxonId": "tax_ott86162"
+    },
+    {
+      "id": "tax_ott42307",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000570",
+      "children": [],
+      "taxonId": "tax_ott42307"
+    },
+    {
+      "id": "ancestor_otl_000571",
+      "type": "internal",
+      "parentId": "ancestor_otl_000569",
+      "children": [
+        "ancestor_otl_000572"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000572",
+      "type": "internal",
+      "parentId": "ancestor_otl_000571",
+      "children": [
+        "tax_ott752759"
+      ]
+    },
+    {
+      "id": "tax_ott752759",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000572",
+      "children": [],
+      "taxonId": "tax_ott752759"
+    },
+    {
+      "id": "ancestor_otl_000573",
+      "type": "internal",
+      "parentId": "ancestor_otl_000558",
+      "children": [
+        "ancestor_otl_000574",
+        "tax_ott507545"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000574",
+      "type": "internal",
+      "parentId": "ancestor_otl_000573",
+      "children": [
+        "ancestor_otl_000575",
+        "tax_ott507549"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000575",
+      "type": "internal",
+      "parentId": "ancestor_otl_000574",
+      "children": [
+        "tax_ott886829"
+      ]
+    },
+    {
+      "id": "tax_ott886829",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000575",
+      "children": [],
+      "taxonId": "tax_ott886829"
+    },
+    {
+      "id": "tax_ott507549",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000574",
+      "children": [],
+      "taxonId": "tax_ott507549"
+    },
+    {
+      "id": "tax_ott507545",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000573",
+      "children": [],
+      "taxonId": "tax_ott507545"
+    },
+    {
+      "id": "ancestor_otl_000576",
+      "type": "internal",
+      "parentId": "ancestor_otl_000557",
+      "children": [
+        "ancestor_otl_000577"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000577",
+      "type": "internal",
+      "parentId": "ancestor_otl_000576",
+      "children": [
+        "tax_ott507553",
+        "tax_ott752746"
+      ]
+    },
+    {
+      "id": "tax_ott507553",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000577",
+      "children": [],
+      "taxonId": "tax_ott507553"
+    },
+    {
+      "id": "tax_ott752746",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000577",
+      "children": [],
+      "taxonId": "tax_ott752746"
+    },
+    {
+      "id": "ancestor_otl_000578",
+      "type": "internal",
+      "parentId": "ancestor_otl_000556",
+      "children": [
+        "ancestor_otl_000579",
+        "ancestor_otl_000580"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000579",
+      "type": "internal",
+      "parentId": "ancestor_otl_000578",
+      "children": [
+        "tax_ott86170"
+      ]
+    },
+    {
+      "id": "tax_ott86170",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000579",
+      "children": [],
+      "taxonId": "tax_ott86170"
+    },
+    {
+      "id": "ancestor_otl_000580",
+      "type": "internal",
+      "parentId": "ancestor_otl_000578",
+      "children": [
+        "ancestor_otl_000581"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000581",
+      "type": "internal",
+      "parentId": "ancestor_otl_000580",
+      "children": [
+        "tax_ott1033549"
+      ]
+    },
+    {
+      "id": "tax_ott1033549",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000581",
+      "children": [],
+      "taxonId": "tax_ott1033549"
+    },
+    {
+      "id": "ancestor_otl_000582",
+      "type": "internal",
+      "parentId": "ancestor_otl_000417",
+      "children": [
+        "ancestor_otl_000583"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000583",
+      "type": "internal",
+      "parentId": "ancestor_otl_000582",
+      "children": [
+        "ancestor_otl_000584"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000584",
+      "type": "internal",
+      "parentId": "ancestor_otl_000583",
+      "children": [
+        "tax_ott588292",
+        "tax_ott644245"
+      ]
+    },
+    {
+      "id": "tax_ott588292",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000584",
+      "children": [],
+      "taxonId": "tax_ott588292"
+    },
+    {
+      "id": "tax_ott644245",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000584",
+      "children": [],
+      "taxonId": "tax_ott644245"
+    },
+    {
+      "id": "ancestor_otl_000585",
+      "type": "internal",
+      "parentId": "ancestor_otl_000203",
+      "children": [
+        "ancestor_otl_000586"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000586",
+      "type": "internal",
+      "parentId": "ancestor_otl_000585",
+      "children": [
+        "ancestor_otl_000587",
+        "ancestor_otl_000595"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000587",
+      "type": "internal",
+      "parentId": "ancestor_otl_000586",
+      "children": [
+        "ancestor_otl_000588"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000588",
+      "type": "internal",
+      "parentId": "ancestor_otl_000587",
+      "children": [
+        "ancestor_otl_000589",
+        "ancestor_otl_000594"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000589",
+      "type": "internal",
+      "parentId": "ancestor_otl_000588",
+      "children": [
+        "ancestor_otl_000590"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000590",
+      "type": "internal",
+      "parentId": "ancestor_otl_000589",
+      "children": [
+        "ancestor_otl_000591"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000591",
+      "type": "internal",
+      "parentId": "ancestor_otl_000590",
+      "children": [
+        "ancestor_otl_000592"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000592",
+      "type": "internal",
+      "parentId": "ancestor_otl_000591",
+      "children": [
+        "ancestor_otl_000593"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000593",
+      "type": "internal",
+      "parentId": "ancestor_otl_000592",
+      "children": [
+        "tax_ott222362"
+      ]
+    },
+    {
+      "id": "tax_ott222362",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000593",
+      "children": [],
+      "taxonId": "tax_ott222362"
+    },
+    {
+      "id": "ancestor_otl_000594",
+      "type": "internal",
+      "parentId": "ancestor_otl_000588",
+      "children": [
+        "tax_ott292504"
+      ]
+    },
+    {
+      "id": "tax_ott292504",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000594",
+      "children": [],
+      "taxonId": "tax_ott292504"
+    },
+    {
+      "id": "ancestor_otl_000595",
+      "type": "internal",
+      "parentId": "ancestor_otl_000586",
+      "children": [
+        "ancestor_otl_000596"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000596",
+      "type": "internal",
+      "parentId": "ancestor_otl_000595",
+      "children": [
+        "ancestor_otl_000597"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000597",
+      "type": "internal",
+      "parentId": "ancestor_otl_000596",
+      "children": [
+        "tax_ott796660"
+      ]
+    },
+    {
+      "id": "tax_ott796660",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000597",
+      "children": [],
+      "taxonId": "tax_ott796660"
+    },
+    {
+      "id": "ancestor_otl_000598",
+      "type": "internal",
+      "parentId": "ancestor_otl_000006",
+      "children": [
+        "ancestor_otl_000599",
+        "ancestor_otl_000622"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000599",
+      "type": "internal",
+      "parentId": "ancestor_otl_000598",
+      "children": [
+        "ancestor_otl_000600",
+        "ancestor_otl_000613"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000600",
+      "type": "internal",
+      "parentId": "ancestor_otl_000599",
+      "children": [
+        "ancestor_otl_000601",
+        "ancestor_otl_000607"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000601",
+      "type": "internal",
+      "parentId": "ancestor_otl_000600",
+      "children": [
+        "ancestor_otl_000602"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000602",
+      "type": "internal",
+      "parentId": "ancestor_otl_000601",
+      "children": [
+        "ancestor_otl_000603",
+        "ancestor_otl_000605"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000603",
+      "type": "internal",
+      "parentId": "ancestor_otl_000602",
+      "children": [
+        "ancestor_otl_000604"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000604",
+      "type": "internal",
+      "parentId": "ancestor_otl_000603",
+      "children": [
+        "tax_ott226178"
+      ]
+    },
+    {
+      "id": "tax_ott226178",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000604",
+      "children": [],
+      "taxonId": "tax_ott226178"
+    },
+    {
+      "id": "ancestor_otl_000605",
+      "type": "internal",
+      "parentId": "ancestor_otl_000602",
+      "children": [
+        "ancestor_otl_000606"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000606",
+      "type": "internal",
+      "parentId": "ancestor_otl_000605",
+      "children": [
+        "tax_ott835324"
+      ]
+    },
+    {
+      "id": "tax_ott835324",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000606",
+      "children": [],
+      "taxonId": "tax_ott835324"
+    },
+    {
+      "id": "ancestor_otl_000607",
+      "type": "internal",
+      "parentId": "ancestor_otl_000600",
+      "children": [
+        "ancestor_otl_000608"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000608",
+      "type": "internal",
+      "parentId": "ancestor_otl_000607",
+      "children": [
+        "ancestor_otl_000609"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000609",
+      "type": "internal",
+      "parentId": "ancestor_otl_000608",
+      "children": [
+        "ancestor_otl_000610",
+        "ancestor_otl_000612"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000610",
+      "type": "internal",
+      "parentId": "ancestor_otl_000609",
+      "children": [
+        "ancestor_otl_000611"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000611",
+      "type": "internal",
+      "parentId": "ancestor_otl_000610",
+      "children": [
+        "tax_ott541928"
+      ]
+    },
+    {
+      "id": "tax_ott541928",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000611",
+      "children": [],
+      "taxonId": "tax_ott541928"
+    },
+    {
+      "id": "ancestor_otl_000612",
+      "type": "internal",
+      "parentId": "ancestor_otl_000609",
+      "children": [
+        "tax_ott541936"
+      ]
+    },
+    {
+      "id": "tax_ott541936",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000612",
+      "children": [],
+      "taxonId": "tax_ott541936"
+    },
+    {
+      "id": "ancestor_otl_000613",
+      "type": "internal",
+      "parentId": "ancestor_otl_000599",
+      "children": [
+        "ancestor_otl_000614",
+        "ancestor_otl_000619"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000614",
+      "type": "internal",
+      "parentId": "ancestor_otl_000613",
+      "children": [
+        "ancestor_otl_000615"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000615",
+      "type": "internal",
+      "parentId": "ancestor_otl_000614",
+      "children": [
+        "ancestor_otl_000616"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000616",
+      "type": "internal",
+      "parentId": "ancestor_otl_000615",
+      "children": [
+        "ancestor_otl_000617"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000617",
+      "type": "internal",
+      "parentId": "ancestor_otl_000616",
+      "children": [
+        "ancestor_otl_000618"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000618",
+      "type": "internal",
+      "parentId": "ancestor_otl_000617",
+      "children": [
+        "tax_ott347650"
+      ]
+    },
+    {
+      "id": "tax_ott347650",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000618",
+      "children": [],
+      "taxonId": "tax_ott347650"
+    },
+    {
+      "id": "ancestor_otl_000619",
+      "type": "internal",
+      "parentId": "ancestor_otl_000613",
+      "children": [
+        "ancestor_otl_000620"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000620",
+      "type": "internal",
+      "parentId": "ancestor_otl_000619",
+      "children": [
+        "ancestor_otl_000621"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000621",
+      "type": "internal",
+      "parentId": "ancestor_otl_000620",
+      "children": [
+        "tax_ott561087"
+      ]
+    },
+    {
+      "id": "tax_ott561087",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000621",
+      "children": [],
+      "taxonId": "tax_ott561087"
+    },
+    {
+      "id": "ancestor_otl_000622",
+      "type": "internal",
+      "parentId": "ancestor_otl_000598",
+      "children": [
+        "ancestor_otl_000623",
+        "ancestor_otl_000628"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000623",
+      "type": "internal",
+      "parentId": "ancestor_otl_000622",
+      "children": [
+        "ancestor_otl_000624"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000624",
+      "type": "internal",
+      "parentId": "ancestor_otl_000623",
+      "children": [
+        "ancestor_otl_000625"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000625",
+      "type": "internal",
+      "parentId": "ancestor_otl_000624",
+      "children": [
+        "ancestor_otl_000626"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000626",
+      "type": "internal",
+      "parentId": "ancestor_otl_000625",
+      "children": [
+        "ancestor_otl_000627"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000627",
+      "type": "internal",
+      "parentId": "ancestor_otl_000626",
+      "children": [
+        "tax_ott796672"
+      ]
+    },
+    {
+      "id": "tax_ott796672",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000627",
+      "children": [],
+      "taxonId": "tax_ott796672"
+    },
+    {
+      "id": "ancestor_otl_000628",
+      "type": "internal",
+      "parentId": "ancestor_otl_000622",
+      "children": [
+        "ancestor_otl_000629",
+        "ancestor_otl_000632"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000629",
+      "type": "internal",
+      "parentId": "ancestor_otl_000628",
+      "children": [
+        "ancestor_otl_000630"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000630",
+      "type": "internal",
+      "parentId": "ancestor_otl_000629",
+      "children": [
+        "ancestor_otl_000631"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000631",
+      "type": "internal",
+      "parentId": "ancestor_otl_000630",
+      "children": [
+        "tax_ott490538"
+      ]
+    },
+    {
+      "id": "tax_ott490538",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000631",
+      "children": [],
+      "taxonId": "tax_ott490538"
+    },
+    {
+      "id": "ancestor_otl_000632",
+      "type": "internal",
+      "parentId": "ancestor_otl_000628",
+      "children": [
+        "ancestor_otl_000633"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000633",
+      "type": "internal",
+      "parentId": "ancestor_otl_000632",
+      "children": [
+        "ancestor_otl_000634"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000634",
+      "type": "internal",
+      "parentId": "ancestor_otl_000633",
+      "children": [
+        "ancestor_otl_000635"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000635",
+      "type": "internal",
+      "parentId": "ancestor_otl_000634",
+      "children": [
+        "ancestor_otl_000636"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000636",
+      "type": "internal",
+      "parentId": "ancestor_otl_000635",
+      "children": [
+        "tax_ott273233"
+      ]
+    },
+    {
+      "id": "tax_ott273233",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000636",
+      "children": [],
+      "taxonId": "tax_ott273233"
+    },
+    {
+      "id": "ancestor_otl_000637",
+      "type": "internal",
+      "parentId": "ancestor_otl_000001",
+      "children": [
+        "ancestor_otl_000638"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000638",
+      "type": "internal",
+      "parentId": "ancestor_otl_000637",
+      "children": [
+        "ancestor_otl_000639",
+        "ancestor_otl_000667"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000639",
+      "type": "internal",
+      "parentId": "ancestor_otl_000638",
+      "children": [
+        "ancestor_otl_000640"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000640",
+      "type": "internal",
+      "parentId": "ancestor_otl_000639",
+      "children": [
+        "ancestor_otl_000641"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000641",
+      "type": "internal",
+      "parentId": "ancestor_otl_000640",
+      "children": [
+        "ancestor_otl_000642",
+        "ancestor_otl_000662"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000642",
+      "type": "internal",
+      "parentId": "ancestor_otl_000641",
+      "children": [
+        "ancestor_otl_000643"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000643",
+      "type": "internal",
+      "parentId": "ancestor_otl_000642",
+      "children": [
+        "ancestor_otl_000644"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000644",
+      "type": "internal",
+      "parentId": "ancestor_otl_000643",
+      "children": [
+        "ancestor_otl_000645"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000645",
+      "type": "internal",
+      "parentId": "ancestor_otl_000644",
+      "children": [
+        "ancestor_otl_000646"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000646",
+      "type": "internal",
+      "parentId": "ancestor_otl_000645",
+      "children": [
+        "ancestor_otl_000647"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000647",
+      "type": "internal",
+      "parentId": "ancestor_otl_000646",
+      "children": [
+        "ancestor_otl_000648"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000648",
+      "type": "internal",
+      "parentId": "ancestor_otl_000647",
+      "children": [
+        "ancestor_otl_000649"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000649",
+      "type": "internal",
+      "parentId": "ancestor_otl_000648",
+      "children": [
+        "ancestor_otl_000650"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000650",
+      "type": "internal",
+      "parentId": "ancestor_otl_000649",
+      "children": [
+        "ancestor_otl_000651"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000651",
+      "type": "internal",
+      "parentId": "ancestor_otl_000650",
+      "children": [
+        "ancestor_otl_000652"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000652",
+      "type": "internal",
+      "parentId": "ancestor_otl_000651",
+      "children": [
+        "ancestor_otl_000653"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000653",
+      "type": "internal",
+      "parentId": "ancestor_otl_000652",
+      "children": [
+        "ancestor_otl_000654"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000654",
+      "type": "internal",
+      "parentId": "ancestor_otl_000653",
+      "children": [
+        "ancestor_otl_000655",
+        "ancestor_otl_000660"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000655",
+      "type": "internal",
+      "parentId": "ancestor_otl_000654",
+      "children": [
+        "ancestor_otl_000656",
+        "ancestor_otl_000657"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000656",
+      "type": "internal",
+      "parentId": "ancestor_otl_000655",
+      "children": [
+        "tax_ott597239"
+      ]
+    },
+    {
+      "id": "tax_ott597239",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000656",
+      "children": [],
+      "taxonId": "tax_ott597239"
+    },
+    {
+      "id": "ancestor_otl_000657",
+      "type": "internal",
+      "parentId": "ancestor_otl_000655",
+      "children": [
+        "ancestor_otl_000658"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000658",
+      "type": "internal",
+      "parentId": "ancestor_otl_000657",
+      "children": [
+        "ancestor_otl_000659"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000659",
+      "type": "internal",
+      "parentId": "ancestor_otl_000658",
+      "children": [
+        "tax_ott897696"
+      ]
+    },
+    {
+      "id": "tax_ott897696",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000659",
+      "children": [],
+      "taxonId": "tax_ott897696"
+    },
+    {
+      "id": "ancestor_otl_000660",
+      "type": "internal",
+      "parentId": "ancestor_otl_000654",
+      "children": [
+        "ancestor_otl_000661"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000661",
+      "type": "internal",
+      "parentId": "ancestor_otl_000660",
+      "children": [
+        "tax_ott42493"
+      ]
+    },
+    {
+      "id": "tax_ott42493",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000661",
+      "children": [],
+      "taxonId": "tax_ott42493"
+    },
+    {
+      "id": "ancestor_otl_000662",
+      "type": "internal",
+      "parentId": "ancestor_otl_000641",
+      "children": [
+        "ancestor_otl_000663",
+        "ancestor_otl_000665"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000663",
+      "type": "internal",
+      "parentId": "ancestor_otl_000662",
+      "children": [
+        "ancestor_otl_000664"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000664",
+      "type": "internal",
+      "parentId": "ancestor_otl_000663",
+      "children": [
+        "tax_ott835328"
+      ]
+    },
+    {
+      "id": "tax_ott835328",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000664",
+      "children": [],
+      "taxonId": "tax_ott835328"
+    },
+    {
+      "id": "ancestor_otl_000665",
+      "type": "internal",
+      "parentId": "ancestor_otl_000662",
+      "children": [
+        "ancestor_otl_000666"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000666",
+      "type": "internal",
+      "parentId": "ancestor_otl_000665",
+      "children": [
+        "tax_ott327624"
+      ]
+    },
+    {
+      "id": "tax_ott327624",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000666",
+      "children": [],
+      "taxonId": "tax_ott327624"
+    },
+    {
+      "id": "ancestor_otl_000667",
+      "type": "internal",
+      "parentId": "ancestor_otl_000638",
+      "children": [
+        "ancestor_otl_000668"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000668",
+      "type": "internal",
+      "parentId": "ancestor_otl_000667",
+      "children": [
+        "ancestor_otl_000669"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000669",
+      "type": "internal",
+      "parentId": "ancestor_otl_000668",
+      "children": [
+        "ancestor_otl_000670"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000670",
+      "type": "internal",
+      "parentId": "ancestor_otl_000669",
+      "children": [
+        "ancestor_otl_000671"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000671",
+      "type": "internal",
+      "parentId": "ancestor_otl_000670",
+      "children": [
+        "ancestor_otl_000672"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000672",
+      "type": "internal",
+      "parentId": "ancestor_otl_000671",
+      "children": [
+        "ancestor_otl_000673"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000673",
+      "type": "internal",
+      "parentId": "ancestor_otl_000672",
+      "children": [
+        "ancestor_otl_000674"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000674",
+      "type": "internal",
+      "parentId": "ancestor_otl_000673",
+      "children": [
+        "ancestor_otl_000675"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000675",
+      "type": "internal",
+      "parentId": "ancestor_otl_000674",
+      "children": [
+        "ancestor_otl_000676"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000676",
+      "type": "internal",
+      "parentId": "ancestor_otl_000675",
+      "children": [
+        "tax_ott919171"
+      ]
+    },
+    {
+      "id": "tax_ott919171",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000676",
+      "children": [],
+      "taxonId": "tax_ott919171"
+    },
+    {
+      "id": "ancestor_otl_000677",
+      "type": "internal",
+      "parentId": "ancestor_otl_000000",
+      "children": [
+        "ancestor_otl_000678"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000678",
+      "type": "internal",
+      "parentId": "ancestor_otl_000677",
+      "children": [
+        "ancestor_otl_000679"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000679",
+      "type": "internal",
+      "parentId": "ancestor_otl_000678",
+      "children": [
+        "ancestor_otl_000680"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000680",
+      "type": "internal",
+      "parentId": "ancestor_otl_000679",
+      "children": [
+        "ancestor_otl_000681",
+        "ancestor_otl_000683"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000681",
+      "type": "internal",
+      "parentId": "ancestor_otl_000680",
+      "children": [
+        "ancestor_otl_000682"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000682",
+      "type": "internal",
+      "parentId": "ancestor_otl_000681",
+      "children": [
+        "tax_ott16038"
+      ]
+    },
+    {
+      "id": "tax_ott16038",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000682",
+      "children": [],
+      "taxonId": "tax_ott16038"
+    },
+    {
+      "id": "ancestor_otl_000683",
+      "type": "internal",
+      "parentId": "ancestor_otl_000680",
+      "children": [
+        "ancestor_otl_000684"
+      ]
+    },
+    {
+      "id": "ancestor_otl_000684",
+      "type": "internal",
+      "parentId": "ancestor_otl_000683",
+      "children": [
+        "tax_ott962377"
+      ]
+    },
+    {
+      "id": "tax_ott962377",
+      "type": "terminal",
+      "parentId": "ancestor_otl_000684",
+      "children": [],
+      "taxonId": "tax_ott962377"
+    }
+  ]
+}

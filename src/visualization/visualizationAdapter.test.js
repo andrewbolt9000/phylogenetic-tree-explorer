@@ -389,3 +389,123 @@ test('Text Layer Regression - Coordinate Updates', async (t) => {
     }
   });
 });
+
+test('Visualization Adapter - Internal Nodes with taxonId', async (t) => {
+  // Create a graph where an internal node has a taxonId
+  function createGraphWithInternalTaxon() {
+    const hypothesis = {
+      hypothesisId: 'test_h2',
+      rootNodeId: 'ancestor_h2_n0',
+      nodes: [
+        { id: 'ancestor_h2_n0', type: 'internal', parentId: null, children: ['ancestor_h2_n1', 'tax_d'] },
+        { id: 'ancestor_h2_n1', type: 'internal', parentId: 'ancestor_h2_n0', taxonId: 'genus_xy', children: ['tax_e', 'tax_f'] },
+        { id: 'tax_d', type: 'terminal', parentId: 'ancestor_h2_n0', taxonId: 'tax_d', children: [] },
+        { id: 'tax_e', type: 'terminal', parentId: 'ancestor_h2_n1', taxonId: 'tax_e', children: [] },
+        { id: 'tax_f', type: 'terminal', parentId: 'ancestor_h2_n1', taxonId: 'tax_f', children: [] }
+      ]
+    };
+
+    const taxonomy = {
+      'tax_d': { id: 'tax_d', scientificName: 'Species D', rank: 'species' },
+      'tax_e': { id: 'tax_e', scientificName: 'Species E', rank: 'species' },
+      'tax_f': { id: 'tax_f', scientificName: 'Species F', rank: 'species' },
+      'genus_xy': { id: 'genus_xy', scientificName: 'Genus XY', rank: 'genus' }
+    };
+
+    const builder = new GraphBuilder(hypothesis.hypothesisId, hypothesis.rootNodeId);
+    for (const node of hypothesis.nodes) {
+      builder.addNode(node);
+    }
+    const graph = builder.build(taxonomy);
+
+    return { graph, taxonomy, hypothesis };
+  }
+
+  await t.test('Internal node with valid taxonId resolves to taxon name', () => {
+    const { graph, taxonomy } = createGraphWithInternalTaxon();
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    const { nodes } = adapter.adapt();
+
+    const internalWithTaxon = nodes.find(n => n.id === 'ancestor_h2_n1');
+    assert.ok(internalWithTaxon, 'Internal node with taxonId should exist');
+    assert.strictEqual(internalWithTaxon.taxonId, 'genus_xy', 'Internal node should have taxonId');
+    assert.strictEqual(internalWithTaxon.label, 'Genus XY', 'Internal node with taxonId should resolve to taxon name');
+    assert.strictEqual(internalWithTaxon.scientificName, 'Genus XY', 'Internal node should have scientificName');
+  });
+
+  await t.test('Internal node with taxonId should have silhouette filename if mapping exists', () => {
+    const { graph, taxonomy } = createGraphWithInternalTaxon();
+    
+    const silhouetteMapping = {
+      'genus_xy': 'genus-xy.svg'
+    };
+    
+    const adapter = new VisualizationAdapter(graph, taxonomy, silhouetteMapping);
+    const { nodes } = adapter.adapt();
+
+    const internalWithTaxon = nodes.find(n => n.id === 'ancestor_h2_n1');
+    assert.strictEqual(internalWithTaxon.silhouetteFilename, 'genus-xy.svg', 
+      'Internal node with taxonId should resolve silhouette filename');
+  });
+
+  await t.test('Internal node without taxonId uses ancestor label', () => {
+    const { graph, taxonomy } = createGraphWithInternalTaxon();
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    const { nodes } = adapter.adapt();
+
+    const internalWithoutTaxon = nodes.find(n => n.id === 'ancestor_h2_n0');
+    assert.ok(internalWithoutTaxon, 'Internal node without taxonId should exist');
+    assert.ok(!internalWithoutTaxon.taxonId, 'Internal node should not have taxonId');
+    assert.ok(internalWithoutTaxon.label.includes('Ancestor'), 
+      'Internal node without taxonId should use ancestor label');
+  });
+
+  await t.test('Internal node with invalid taxonId does not crash', () => {
+    const hypothesis = {
+      hypothesisId: 'test_h3',
+      rootNodeId: 'ancestor_h3_n0',
+      nodes: [
+        { id: 'ancestor_h3_n0', type: 'internal', parentId: null, children: ['tax_g', 'tax_h'] },
+        { id: 'tax_g', type: 'terminal', parentId: 'ancestor_h3_n0', taxonId: 'tax_g', children: [] },
+        { id: 'tax_h', type: 'terminal', parentId: 'ancestor_h3_n0', taxonId: 'tax_h', children: [] }
+      ]
+    };
+
+    const taxonomy = {
+      'tax_g': { id: 'tax_g', scientificName: 'Species G', rank: 'species' },
+      'tax_h': { id: 'tax_h', scientificName: 'Species H', rank: 'species' }
+    };
+
+    const builder = new GraphBuilder(hypothesis.hypothesisId, hypothesis.rootNodeId);
+    for (const node of hypothesis.nodes) {
+      builder.addNode(node);
+    }
+    const graph = builder.build(taxonomy);
+
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    // Should not throw even though adaptation may not find a taxon
+    assert.doesNotThrow(() => {
+      adapter.adapt();
+    }, 'Adapter should not crash with missing or invalid taxon IDs');
+  });
+
+  await t.test('Terminal nodes still work correctly alongside internal nodes with taxonId', () => {
+    const { graph, taxonomy } = createGraphWithInternalTaxon();
+    const adapter = new VisualizationAdapter(graph, taxonomy);
+    const { nodes } = adapter.adapt();
+
+    const terminalNodes = nodes.filter(n => n.type === 'terminal');
+    for (const node of terminalNodes) {
+      assert.ok(node.commonName || node.scientificName, 
+        `Terminal node ${node.id} should have a name`);
+    }
+
+    const internalNodes = nodes.filter(n => n.type === 'internal');
+    assert.strictEqual(internalNodes.length, 2, 'Should have 2 internal nodes');
+    // One with taxonId, one without
+    const internalWithTaxon = internalNodes.find(n => n.taxonId);
+    const internalWithoutTaxon = internalNodes.find(n => !n.taxonId);
+    assert.ok(internalWithTaxon, 'Should have one internal node with taxonId');
+    assert.ok(internalWithoutTaxon, 'Should have one internal node without taxonId');
+  });
+});

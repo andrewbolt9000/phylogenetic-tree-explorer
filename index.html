@@ -562,7 +562,7 @@
             <span class="control-value" id="hover-highlight-size-value">15px</span>
           </div>
           <input type="range" id="hover-highlight-size-slider"
-                 min="5" max="100" value="15" step="1">
+                 min="0" max="200" value="15" step="1">
           <p class="info-text">
             Radius of the circle that appears when hovering over a node.
           </p>
@@ -589,6 +589,44 @@
                  min="-50" max="50" value="0" step="1">
           <p class="info-text">
             Vertical offset of highlight from node center.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Highlight Opacity</span>
+            <span class="control-value" id="hover-highlight-opacity-value">70%</span>
+          </div>
+          <input type="range" id="hover-highlight-opacity-slider"
+                 min="0" max="100" value="70" step="1">
+          <p class="info-text">
+            Opacity of the hover highlight circle.
+          </p>
+        </div>
+
+        <h2>Text Backgrounds</h2>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Background Y Offset</span>
+            <span class="control-value" id="text-background-y-offset-value">0px</span>
+          </div>
+          <input type="range" id="text-background-y-offset-slider"
+                 min="-50" max="50" value="0" step="1">
+          <p class="info-text">
+            Vertical offset of text backgrounds. Positive moves down, negative moves up.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Background Height</span>
+            <span class="control-value" id="text-background-height-value">1.2x</span>
+          </div>
+          <input type="range" id="text-background-height-slider"
+                 min="0.5" max="2.0" value="1.2" step="0.1">
+          <p class="info-text">
+            Height multiplier for text background rectangles.
           </p>
         </div>
 
@@ -757,6 +795,14 @@
         </div>
 
         <h2>Dataset</h2>
+        <div class="control-group">
+          <label for="dataset-selector" class="control-label">Select Dataset:</label>
+          <select id="dataset-selector" style="width: 100%; padding: 8px; border: 1px solid #ddd; border-radius: 3px; cursor: pointer;">
+            <option value="mammals">Mammals (21 species)</option>
+            <option value="animals">Animals (593 species)</option>
+            <option value="mammals-600">Mammals (156)</option>
+          </select>
+        </div>
         <div class="stats">
           <div>
             <span>Species:</span>
@@ -813,67 +859,33 @@
     import SettingsUI from './src/ui/SettingsUI.js';
 
     const schemaDir = './data/schemas';
-    const mammalDataDir = './data/mammals';
 
-    async function initializeVisualization() {
-      try {
-        console.log('[PhyloExplorer] Initialization starting');
-        // Show loading
-        document.getElementById('loading').style.display = 'flex';
-        document.getElementById('controls').style.display = 'none';
-        console.log('[PhyloExplorer] Loading indicators set');
+    let currentDataset = 'mammals';
+    let currentViz = null;
+    let currentSettingsUI = null;
 
-        // Load data using async loaders (browser uses fetch, no fs initialization needed)
-        console.log('[PhyloExplorer] Creating TaxonomyLoader');
-        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
-        console.log('[PhyloExplorer] Loading taxonomy data');
-        const taxonomyData = await taxonomyLoader.loadAsync(`${mammalDataDir}/taxonomy.json`);
-        console.log('[PhyloExplorer] Taxonomy loaded, taxa count:', Object.keys(taxonomyData.taxa).length);
+    async function getDataDirectory() {
+      return `./data/${currentDataset}`;
+    }
 
-        console.log('[PhyloExplorer] Creating HypothesisLoader');
-        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
-        console.log('[PhyloExplorer] Loading hypothesis data');
-        const hypothesisData = await hypothesisLoader.loadAsync(
-          `${mammalDataDir}/hypothesis.json`,
-          taxonomyData.taxa
-        );
-        console.log('[PhyloExplorer] Hypothesis loaded');
+    async function loadSilhouetteMapping(dataDir) {
+      // Load dataset-specific silhouette mapping
+      const silhouetteMappings = {};
+      const silhouetteMetadata = {};
 
-        console.log('[PhyloExplorer] Creating DivergenceLoader');
-        const divergenceLoader = new DivergenceLoader(`${schemaDir}/divergence-estimates.schema.json`);
-        console.log('[PhyloExplorer] Loading divergence data');
-        // Create a map of hypotheses for the divergence loader
-        const hypothesesMap = {};
-        hypothesesMap[hypothesisData.hypothesisId] = hypothesisData;
-        const divergenceData = await divergenceLoader.loadAsync(`${mammalDataDir}/divergence-estimates.json`, hypothesesMap);
-        console.log('[PhyloExplorer] Divergence data loaded');
-
-        // Build graph
-        const graphBuilder = new GraphBuilder(
-          hypothesisData.hypothesisId,
-          hypothesisData.rootNodeId
-        );
-
-        for (const node of hypothesisData.nodes) {
-          graphBuilder.addNode(node);
-        }
-
-        const graph = graphBuilder.build(taxonomyData.taxa);
-
-        // Load production silhouette manifest with PhyloPic metadata
-        let silhouetteMappingByTaxonId = {};
-        let silhouetteMetadata = {};  // Metadata for each taxonId
+      if (currentDataset === 'mammals') {
+        // For mammals, use the legacy PRODUCTION_MANIFEST.json format
         try {
           const manifestResponse = await fetch('./assets/silhouettes/PRODUCTION_MANIFEST.json');
           const manifestData = await manifestResponse.json();
 
-          // Create reverse mapping: taxonomyId -> filename, plus metadata
           if (manifestData.silhouetteMappings) {
             for (const [key, mapping] of Object.entries(manifestData.silhouetteMappings)) {
               if (mapping.taxonomyId && mapping.filename) {
-                silhouetteMappingByTaxonId[mapping.taxonomyId] = mapping.filename;
+                silhouetteMappings[mapping.taxonomyId] = {
+                  silhouetteFilename: mapping.filename  // Local file path
+                };
 
-                // Store metadata for diagnostic display
                 silhouetteMetadata[mapping.taxonomyId] = {
                   commonName: mapping.commonName,
                   filename: mapping.filename,
@@ -892,13 +904,103 @@
         } catch (e) {
           console.warn('[PhyloExplorer] Production manifest could not be loaded:', e.message);
         }
+      } else if (currentDataset === 'animals' || currentDataset === 'mammals-600') {
+        // For animals and mammals-600, use the silhouette-mapping.json format with PhyloPic URLs
+        try {
+          const mappingResponse = await fetch(`${dataDir}/silhouette-mapping.json`);
+          const mappingData = await mappingResponse.json();
+
+          if (mappingData.mappings) {
+            for (const [taxonId, imageData] of Object.entries(mappingData.mappings)) {
+              // Convert PhyloPic UUID to a CDN URL
+              const imageUrl = imageData.sourceUrl || 
+                `https://www.phylopic.org/images/${imageData.imageUuid}`;
+              
+              silhouetteMappings[taxonId] = {
+                silhouetteUrl: imageUrl,
+                imageUuid: imageData.imageUuid
+              };
+
+              silhouetteMetadata[taxonId] = {
+                imageUuid: imageData.imageUuid,
+                license: imageData.license,
+                contributor: imageData.contributor,
+                source: imageData.source,
+                sourceUrl: imageData.sourceUrl
+              };
+            }
+          }
+          console.log(`[PhyloExplorer] PhyloPic silhouette mapping loaded for ${currentDataset}, images:`, Object.keys(silhouetteMappings).length);
+        } catch (e) {
+          console.warn(`[PhyloExplorer] PhyloPic silhouette mapping for ${currentDataset} could not be loaded:`, e.message);
+        }
+      }
+
+      return { silhouetteMappings, silhouetteMetadata };
+    }
+
+    async function initializeVisualization() {
+      try {
+        console.log(`[PhyloExplorer] Initialization starting for dataset: ${currentDataset}`);
+        // Show loading
+        document.getElementById('loading').style.display = 'flex';
+        document.getElementById('controls').style.display = 'none';
+        console.log('[PhyloExplorer] Loading indicators set');
+
+        const dataDir = await getDataDirectory();
+
+        // Load data using async loaders (browser uses fetch, no fs initialization needed)
+        console.log('[PhyloExplorer] Creating TaxonomyLoader');
+        const taxonomyLoader = new TaxonomyLoader(`${schemaDir}/taxonomy.schema.json`);
+        console.log('[PhyloExplorer] Loading taxonomy data');
+        const taxonomyData = await taxonomyLoader.loadAsync(`${dataDir}/taxonomy.json`);
+        console.log('[PhyloExplorer] Taxonomy loaded, taxa count:', Object.keys(taxonomyData.taxa).length);
+
+        console.log('[PhyloExplorer] Creating HypothesisLoader');
+        const hypothesisLoader = new HypothesisLoader(`${schemaDir}/hypothesis.schema.json`);
+        console.log('[PhyloExplorer] Loading hypothesis data');
+        const hypothesisData = await hypothesisLoader.loadAsync(
+          `${dataDir}/hypothesis.json`,
+          taxonomyData.taxa
+        );
+        console.log('[PhyloExplorer] Hypothesis loaded');
+
+        console.log('[PhyloExplorer] Creating DivergenceLoader');
+        const divergenceLoader = new DivergenceLoader(`${schemaDir}/divergence-estimates.schema.json`);
+        console.log('[PhyloExplorer] Loading divergence data');
+        // Create a map of hypotheses for the divergence loader
+        const hypothesesMap = {};
+        hypothesesMap[hypothesisData.hypothesisId] = hypothesisData;
+        let divergenceData = null;
+        try {
+          divergenceData = await divergenceLoader.loadAsync(`${dataDir}/divergence-estimates.json`, hypothesesMap);
+          console.log('[PhyloExplorer] Divergence data loaded');
+        } catch (e) {
+          console.warn('[PhyloExplorer] Divergence data not available (optional):', e.message);
+          divergenceData = null;
+        }
+
+        // Build graph
+        const graphBuilder = new GraphBuilder(
+          hypothesisData.hypothesisId,
+          hypothesisData.rootNodeId
+        );
+
+        for (const node of hypothesisData.nodes) {
+          graphBuilder.addNode(node);
+        }
+
+        const graph = graphBuilder.build(taxonomyData.taxa);
+
+        // Load silhouette mapping (dataset-specific format)
+        const { silhouetteMappings, silhouetteMetadata } = await loadSilhouetteMapping(dataDir);
 
         // Create visualization adapter with silhouette mapping
-        const adapter = new VisualizationAdapter(graph, taxonomyData.taxa, silhouetteMappingByTaxonId);
+        const adapter = new VisualizationAdapter(graph, taxonomyData.taxa, silhouetteMappings);
         const { nodes, links } = adapter.adapt();
 
         // Create and render visualization
-        const viz = new ForceDirectedVisualization('graph', nodes, links, {
+        currentViz = new ForceDirectedVisualization('graph', nodes, links, {
           width: document.getElementById('graph').clientWidth,
           height: document.getElementById('graph').clientHeight,
           rootNodeId: hypothesisData.rootNodeId,
@@ -908,12 +1010,12 @@
           divergenceData: divergenceData  // Pass divergence data for age-based link strength calculations
         });
 
-        viz.render();
+        currentViz.render();
 
         // Initialize centralized settings management
         const settings = new VisualizationSettings();
-        const settingsUI = new SettingsUI(settings, viz);
-        await settingsUI.initialize();
+        currentSettingsUI = new SettingsUI(settings, currentViz);
+        await currentSettingsUI.initialize();
 
         // Diagnostic: Report on asset loading
         console.log('\n=== PhyloExplorer Asset Loading Diagnostic ===');
@@ -929,22 +1031,26 @@
               if (metadata.status === 'MISSING') {
                 console.log(`  ✗ ${metadata.commonName} - ${metadata.reason}`);
                 assetsMissing++;
-              } else {
+              } else if (metadata.taxonomicLevel) {
                 console.log(`  ✓ ${metadata.commonName} (${metadata.taxonomicLevel}) - ${(metadata.fileSizeBytes / 1024).toFixed(1)} KB`);
+                assetsWithPhylo++;
+              } else {
+                console.log(`  ✓ ${metadata.contributor || 'Unknown'} - ${metadata.imageUuid}`);
                 assetsWithPhylo++;
               }
             }
           }
         });
 
-        console.log(`\nAssets with PhyloPic sources: ${assetsWithPhylo}/${adapter.getTerminalCount()}`);
-        console.log(`Assets missing: ${assetsMissing}/${adapter.getTerminalCount()}`);
+        console.log(`\nAssets with sources: ${assetsWithPhylo}/${adapter.getTerminalCount()}`);
+        if (assetsMissing > 0) console.log(`Assets missing: ${assetsMissing}/${adapter.getTerminalCount()}`);
 
         // Store for runtime checking
         window.phyloExplorerAssets = {
           metadata: silhouetteMetadata,
-          manifest: silhouetteMappingByTaxonId,
-          nodes: nodes
+          mappings: silhouetteMappings,
+          nodes: nodes,
+          dataset: currentDataset
         };
         console.log('Asset metadata available at: window.phyloExplorerAssets');
         console.log('==============================================\n');
@@ -969,23 +1075,23 @@
         
         // Apply showNodeDates setting at startup (requires divergenceData)
         if (currentSettings.showNodeDates && divergenceData) {
-          viz.setShowNodeDates(true, divergenceData);
+          currentViz.setShowNodeDates(true, divergenceData);
         }
         
         // Apply nodeDateFontSize setting if showNodeDates is enabled
         if (currentSettings.showNodeDates) {
-          viz.setNodeDateFontSize(currentSettings.nodeDateFontSize);
+          currentViz.setNodeDateFontSize(currentSettings.nodeDateFontSize);
         }
         
         // Apply showAncestralLabels setting at startup (requires hypothesisData and graph)
         if (currentSettings.showAncestralLabels && hypothesisData && graph) {
-          viz.setShowAncestralLabels(true, hypothesisData, graph);
+          currentViz.setShowAncestralLabels(true, hypothesisData, graph);
         }
         
         const resetButton = document.getElementById('reset-button');
         if (resetButton) {
           resetButton.addEventListener('click', () => {
-            viz.resetView();
+            currentViz.resetView();
           });
         }
 
@@ -994,7 +1100,7 @@
         if (showNodeDatesToggle) {
           showNodeDatesToggle.addEventListener('input', (e) => {
             settings.setSetting('showNodeDates', e.target.checked);
-            viz.setShowNodeDates(e.target.checked, divergenceData);
+            currentViz.setShowNodeDates(e.target.checked, divergenceData);
           });
         }
 
@@ -1003,15 +1109,31 @@
         if (showAncestralLabelsToggle) {
           showAncestralLabelsToggle.addEventListener('input', (e) => {
             settings.setSetting('showAncestralLabels', e.target.checked);
-            viz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
+            currentViz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
           });
         }
 
         // Handle window resize
         window.addEventListener('resize', () => {
           const container = document.getElementById('graph');
-          viz.handleResize(container.clientWidth, container.clientHeight);
+          if (currentViz) {
+            currentViz.handleResize(container.clientWidth, container.clientHeight);
+          }
         });
+
+        // Handle dataset selector changes
+        const datasetSelector = document.getElementById('dataset-selector');
+        if (datasetSelector) {
+          datasetSelector.addEventListener('change', async (e) => {
+            const newDataset = e.target.value;
+            if (newDataset !== currentDataset) {
+              console.log(`[PhyloExplorer] Switching dataset from ${currentDataset} to ${newDataset}`);
+              currentDataset = newDataset;
+              // Reinitialize with new dataset
+              await initializeVisualization();
+            }
+          });
+        }
 
       } catch (error) {
         console.error('[PhyloExplorer] Error loading visualization:', error);

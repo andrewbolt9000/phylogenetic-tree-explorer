@@ -3,14 +3,23 @@
   "title": "Taxonomy Schema",
   "description": "Defines the structure of taxonomic reference data. Taxonomy is the authoritative roster of organisms with formal classification, independent of any phylogenetic hypothesis.",
   "type": "object",
-  "required": ["taxonomy", "metadata"],
+  "required": [
+    "taxonomy",
+    "metadata"
+  ],
   "properties": {
     "taxonomy": {
       "type": "array",
       "description": "Array of taxonomic records. Each taxon has a stable ID, scientific name, and parent relationship.",
       "items": {
         "type": "object",
-        "required": ["id", "scientificName", "rank", "parent", "extinct"],
+        "required": [
+          "id",
+          "scientificName",
+          "rank",
+          "parent",
+          "extinct"
+        ],
         "properties": {
           "id": {
             "type": "string",
@@ -27,16 +36,21 @@
           },
           "rank": {
             "type": "string",
-            "enum": ["domain", "kingdom", "phylum", "class", "order", "family", "subfamily", "tribe", "subtribe", "superfamily", "genus", "subgenus", "species", "subspecies"],
-            "description": "Taxonomic rank."
+            "minLength": 1,
+            "description": "Taxonomic rank (e.g., species, genus, family, etc.). Accepts any non-empty string. Common values include domain, kingdom, phylum, class, order, family, subfamily, tribe, subtribe, superfamily, genus, subgenus, species, subspecies, and many others from the Open Tree of Life taxonomy (infraorder, parvorder, cohort, section, no rank, etc.). Original rank strings from source taxonomies are preserved exactly."
           },
           "parent": {
-            "type": ["string", "null"],
+            "type": [
+              "string",
+              "null"
+            ],
             "description": "ID of parent taxon (e.g., 'tax_homo' for genus Homo). Root taxa have parent=null. Parent must exist in the taxonomy."
           },
           "synonyms": {
             "type": "array",
-            "items": { "type": "string" },
+            "items": {
+              "type": "string"
+            },
             "description": "Alternative scientific names (former names after reclassification, etc.). Optional."
           },
           "source": {
@@ -48,8 +62,11 @@
             "description": "Stable identifier in source system (e.g., ITIS TSN). Optional but recommended."
           },
           "extinct": {
-            "type": "boolean",
-            "description": "True if the taxon is entirely extinct (no extant members). False if extant members exist."
+            "type": [
+              "boolean",
+              "null"
+            ],
+            "description": "True if confirmed extinct, false if confirmed extant, null if status is unknown."
           },
           "notes": {
             "type": "string",
@@ -62,7 +79,9 @@
     },
     "metadata": {
       "type": "object",
-      "required": ["source"],
+      "required": [
+        "source"
+      ],
       "description": "Metadata about the taxonomic dataset.",
       "properties": {
         "source": {

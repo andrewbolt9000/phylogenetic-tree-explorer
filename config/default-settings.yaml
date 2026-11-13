@@ -1,6 +1,6 @@
 # PhyloExplorer Visualization Settings
 # Version: 1.0
-# Generated at: 2026-11-13T03:29:28.019Z
+# Generated at: 2026-11-13T05:27:16.356Z
 
 # FORCES
 charge: 130  # Repulsion strength for non-leaf nodes (0-1500)
@@ -39,9 +39,14 @@ gridMajorLineWidth: 2.75  # Major line width (0.25-5 px)
 gridOpacity: 0.25  # Grid opacity (0-1)
 
 # HOVER HIGHLIGHT
-hoverHighlightSize: 58  # Highlight circle radius (5-100px)
+hoverHighlightSize: 58  # Highlight circle radius (0-200px)
 hoverHighlightXOffset: 0  # Horizontal offset (px)
 hoverHighlightYOffset: -23  # Vertical offset (px)
+hoverHighlightOpacity: 70  # Highlight opacity (0-100%)
+
+# TEXT BACKGROUNDS
+textBackgroundYOffset: -2  # Vertical offset of text backgrounds (px)
+textBackgroundHeight: 0.8  # Height multiplier (0.5-2.0)
 
 # SILHOUETTE SHADOWS
 silhouetteShadowEnabled: true  # Display shadow effects

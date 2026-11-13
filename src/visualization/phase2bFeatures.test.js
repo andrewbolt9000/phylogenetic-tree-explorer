@@ -17,8 +17,8 @@ test('Phase 2B Features - Hover Highlight Settings', async (t) => {
     const schema = VisualizationSettings.getSchema();
     assert.ok(schema.hoverHighlightSize);
     assert.strictEqual(schema.hoverHighlightSize.type, 'integer');
-    assert.strictEqual(schema.hoverHighlightSize.min, 5);
-    assert.strictEqual(schema.hoverHighlightSize.max, 100);
+    assert.strictEqual(schema.hoverHighlightSize.min, 0);
+    assert.strictEqual(schema.hoverHighlightSize.max, 200);
     assert.strictEqual(schema.hoverHighlightSize.default, 15);
   });
 
@@ -45,6 +45,7 @@ test('Phase 2B Features - Hover Highlight Settings', async (t) => {
     assert.strictEqual(defaults.hoverHighlightSize, 15);
     assert.strictEqual(defaults.hoverHighlightXOffset, 0);
     assert.strictEqual(defaults.hoverHighlightYOffset, 0);
+    assert.strictEqual(defaults.hoverHighlightOpacity, 70);
   });
 
   await t.test('Hover highlight settings can be updated', () => {
@@ -52,21 +53,19 @@ test('Phase 2B Features - Hover Highlight Settings', async (t) => {
     settings.setSetting('hoverHighlightSize', 25);
     settings.setSetting('hoverHighlightXOffset', 5);
     settings.setSetting('hoverHighlightYOffset', -3);
+    settings.setSetting('hoverHighlightOpacity', 50);
 
     const current = settings.getSettings();
     assert.strictEqual(current.hoverHighlightSize, 25);
     assert.strictEqual(current.hoverHighlightXOffset, 5);
     assert.strictEqual(current.hoverHighlightYOffset, -3);
+    assert.strictEqual(current.hoverHighlightOpacity, 50);
   });
 
-  await t.test('Hover highlight size is clamped to 5-100', () => {
+  await t.test('Hover highlight size is clamped to 0-200', () => {
     const settings = new VisualizationSettings();
-    settings.setSetting('hoverHighlightSize', 200);  // Should clamp to 100
-    settings.setSetting('hoverHighlightSize', -10);  // Should clamp to 5
-
-    const current = settings.getSettings();
-    assert.strictEqual(settings.validateSetting('hoverHighlightSize', 200), 100);
-    assert.strictEqual(settings.validateSetting('hoverHighlightSize', -10), 5);
+    assert.strictEqual(settings.validateSetting('hoverHighlightSize', 300), 200);
+    assert.strictEqual(settings.validateSetting('hoverHighlightSize', -10), 0);
   });
 
   await t.test('Hover highlight offsets are clamped to ±50', () => {
@@ -262,7 +261,7 @@ test('Phase 2B Features - updateSettings Atomic Application', async (t) => {
     const settings = new VisualizationSettings();
 
     const invalidSettings = {
-      hoverHighlightSize: 200,  // Should clamp to 100
+      hoverHighlightSize: 300,  // Should clamp to 200
       hoverHighlightXOffset: 100,  // Should clamp to 50
       silhouetteShadowOpacity: 2,  // Should clamp to 1
     };
@@ -270,7 +269,7 @@ test('Phase 2B Features - updateSettings Atomic Application', async (t) => {
     settings.updateSettings(invalidSettings);
     const current = settings.getSettings();
 
-    assert.strictEqual(current.hoverHighlightSize, 100);
+    assert.strictEqual(current.hoverHighlightSize, 200);
     assert.strictEqual(current.hoverHighlightXOffset, 50);
     assert.strictEqual(current.silhouetteShadowOpacity, 1);
   });

@@ -1,0 +1,6740 @@
+{
+  "metadata": {
+    "description": "Node identity mapping for mammals-600 dataset",
+    "dataset": "data/mammals-600/",
+    "generated": "2026-11-13",
+    "source_files": [
+      "data/mammals-600/hypothesis.json",
+      "/tmp/phyloexplorer_mammals_induced_tree.json"
+    ],
+    "mapping_method": "Depth-first traversal matching of both trees",
+    "total_nodes": 839,
+    "terminals": 154,
+    "internals": 685,
+    "branching_nodes": 153,
+    "unary_nodes": 531,
+    "mrca_coverage": "420/839 (50.1%)",
+    "ott_coverage": "839/839 (100.0%)"
+  },
+  "notes": [
+    "Each generated internal node ID (ancestor_otl_NNNNNN) is mapped to original OTL identifiers",
+    "MRCA IDs enable querying ChronoSynth for divergence dates",
+    "OTT IDs reference the Open Tree of Life taxonomy",
+    "Original Newick labels are preserved for reference",
+    "Branching nodes (2+ children) are flagged separately from unary internal nodes"
+  ],
+  "nodes": {
+    "ancestor_otl_000000": {
+      "original_label": "Mus_musculus_ott542509",
+      "mrca_id": null,
+      "ott_id": "542509",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000001": {
+      "original_label": "mrcaott102ott321218",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000002": {
+      "original_label": "mrcaott102ott542521",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000003": {
+      "original_label": "mrcaott102ott348560",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000004": {
+      "original_label": "mrcaott102ott542525",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000005": {
+      "original_label": "mrcaott102ott185328",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000006": {
+      "original_label": "mrcaott102ott289304",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000007": {
+      "original_label": "mrcaott102ott23039",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000008": {
+      "original_label": "mrcaott102ott1729",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000009": {
+      "original_label": "mrcaott102ott456651",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000010": {
+      "original_label": "mrcaott102ott125766",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000011": {
+      "original_label": "mrcaott102ott38119",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000012": {
+      "original_label": "Rattus_norvegicus_ott271555",
+      "mrca_id": null,
+      "ott_id": "271555",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000013": {
+      "original_label": "mrcaott92106ott182319",
+      "mrca_id": "mrcaott92106",
+      "ott_id": "92106",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000014": {
+      "original_label": "mrcaott92106ott577539",
+      "mrca_id": "mrcaott92106",
+      "ott_id": "92106",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000015": {
+      "original_label": "mrcaott8118ott92106",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000016": {
+      "original_label": "mrcaott8118ott106786",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000017": {
+      "original_label": "mrcaott8118ott167547",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000018": {
+      "original_label": "mrcaott8118ott366063",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000019": {
+      "original_label": "mrcaott8118ott106790",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000020": {
+      "original_label": "mrcaott8118ott993024",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000021": {
+      "original_label": "mrcaott8118ott606407",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000022": {
+      "original_label": "mrcaott8118ott211375",
+      "mrca_id": "mrcaott8118",
+      "ott_id": "8118",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000023": {
+      "original_label": "mrcaott102ott8118",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000024": {
+      "original_label": "mrcaott102ott283439",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000025": {
+      "original_label": "Muridae_ott816256",
+      "mrca_id": null,
+      "ott_id": "816256",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000026": {
+      "original_label": "Mesocricetus_auratus_ott391631",
+      "mrca_id": null,
+      "ott_id": "391631",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000027": {
+      "original_label": "Mesocricetus_ott391624",
+      "mrca_id": null,
+      "ott_id": "391624",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000028": {
+      "original_label": "mrcaott9032ott391628",
+      "mrca_id": "mrcaott9032",
+      "ott_id": "9032",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000029": {
+      "original_label": "Cricetinae_ott917323",
+      "mrca_id": null,
+      "ott_id": "917323",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000030": {
+      "original_label": "mrcaott9032ott42889",
+      "mrca_id": "mrcaott9032",
+      "ott_id": "9032",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000031": {
+      "original_label": "Cricetidae_ott671049",
+      "mrca_id": null,
+      "ott_id": "671049",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000032": {
+      "original_label": "mrcaott102ott739",
+      "mrca_id": "mrcaott102",
+      "ott_id": "102",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000033": {
+      "original_label": "mrcaott42ott102",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000034": {
+      "original_label": "mrcaott42ott55942",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000035": {
+      "original_label": "mrcaott42ott45197",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000036": {
+      "original_label": "Muroidea_ott839752",
+      "mrca_id": null,
+      "ott_id": "839752",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott542509": {
+      "original_label": "Myomorpha_ott7067181",
+      "mrca_id": null,
+      "ott_id": "7067181",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000037": {
+      "original_label": "mrcaott42ott254702",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000038": {
+      "original_label": "Castor_canadensis_ott886085",
+      "mrca_id": null,
+      "ott_id": "886085",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000039": {
+      "original_label": "Castor_ott1048190",
+      "mrca_id": null,
+      "ott_id": "1048190",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000040": {
+      "original_label": "Castoridae_ott835319",
+      "mrca_id": null,
+      "ott_id": "835319",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000041": {
+      "original_label": "Castorimorpha_ott7067145",
+      "mrca_id": null,
+      "ott_id": "7067145",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000042": {
+      "original_label": "mrcaott42ott48903",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000043": {
+      "original_label": "Cavia_porcellus_ott744000",
+      "mrca_id": null,
+      "ott_id": "744000",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000044": {
+      "original_label": "mrcaott744000ott810528",
+      "mrca_id": "mrcaott744000",
+      "ott_id": "744000",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000045": {
+      "original_label": "mrcaott236059ott744000",
+      "mrca_id": "mrcaott236059",
+      "ott_id": "236059",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000046": {
+      "original_label": "Cavia_ott744006",
+      "mrca_id": null,
+      "ott_id": "744006",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott271555": {
+      "original_label": "mrcaott236057ott484314",
+      "mrca_id": "mrcaott236057",
+      "ott_id": "236057",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000047": {
+      "original_label": "mrcaott236057ott264229",
+      "mrca_id": "mrcaott236057",
+      "ott_id": "236057",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000048": {
+      "original_label": "Caviidae_ott220339",
+      "mrca_id": null,
+      "ott_id": "220339",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000049": {
+      "original_label": "Hydrochoerus_hydrochaeris_ott744018",
+      "mrca_id": null,
+      "ott_id": "744018",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000050": {
+      "original_label": "Hydrochoerus_ott744023",
+      "mrca_id": null,
+      "ott_id": "744023",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000051": {
+      "original_label": "Hydrochaeridae_ott7067179",
+      "mrca_id": null,
+      "ott_id": "7067179",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott391631": {
+      "original_label": "mrcaott236057ott744018",
+      "mrca_id": "mrcaott236057",
+      "ott_id": "236057",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000052": {
+      "original_label": "mrcaott88915ott236057",
+      "mrca_id": "mrcaott88915",
+      "ott_id": "88915",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000053": {
+      "original_label": "mrcaott67355ott88915",
+      "mrca_id": "mrcaott67355",
+      "ott_id": "67355",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000054": {
+      "original_label": "mrcaott44975ott67355",
+      "mrca_id": "mrcaott44975",
+      "ott_id": "44975",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott886085": {
+      "original_label": "mrcaott38834ott44975",
+      "mrca_id": "mrcaott38834",
+      "ott_id": "38834",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000055": {
+      "original_label": "mrcaott38834ott45520",
+      "mrca_id": "mrcaott38834",
+      "ott_id": "38834",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000056": {
+      "original_label": "mrcaott38834ott173065",
+      "mrca_id": "mrcaott38834",
+      "ott_id": "38834",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000057": {
+      "original_label": "Hystricomorpha_ott44557",
+      "mrca_id": null,
+      "ott_id": "44557",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000058": {
+      "original_label": "mrcaott42ott38834",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000059": {
+      "original_label": "Sciurus_vulgaris_ott286193",
+      "mrca_id": null,
+      "ott_id": "286193",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000060": {
+      "original_label": "mrcaott125718ott384216",
+      "mrca_id": "mrcaott125718",
+      "ott_id": "125718",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000061": {
+      "original_label": "mrcaott125718ott477824",
+      "mrca_id": "mrcaott125718",
+      "ott_id": "125718",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000062": {
+      "original_label": "Sciurus_carolinensis_ott410925",
+      "mrca_id": null,
+      "ott_id": "410925",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000063": {
+      "original_label": "mrcaott160623ott634765",
+      "mrca_id": "mrcaott160623",
+      "ott_id": "160623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000064": {
+      "original_label": "mrcaott160623ott902076",
+      "mrca_id": "mrcaott160623",
+      "ott_id": "160623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000065": {
+      "original_label": "mrcaott160623ott866976",
+      "mrca_id": "mrcaott160623",
+      "ott_id": "160623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000066": {
+      "original_label": "mrcaott160623ott634757",
+      "mrca_id": "mrcaott160623",
+      "ott_id": "160623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000067": {
+      "original_label": "mrcaott160623ott3608999",
+      "mrca_id": "mrcaott160623",
+      "ott_id": "160623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000068": {
+      "original_label": "Sciurini_ott649553",
+      "mrca_id": null,
+      "ott_id": "649553",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott744000": {
+      "original_label": "mrcaott125718ott131937",
+      "mrca_id": "mrcaott125718",
+      "ott_id": "125718",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000069": {
+      "original_label": "mrcaott43435ott125718",
+      "mrca_id": "mrcaott43435",
+      "ott_id": "43435",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000070": {
+      "original_label": "mrcaott10477ott43435",
+      "mrca_id": "mrcaott10477",
+      "ott_id": "10477",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott744018": {
+      "original_label": "Sciuridae_ott384218",
+      "mrca_id": null,
+      "ott_id": "384218",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000071": {
+      "original_label": "mrcaott10477ott829369",
+      "mrca_id": "mrcaott10477",
+      "ott_id": "10477",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000072": {
+      "original_label": "Sciuromorpha_ott44559",
+      "mrca_id": null,
+      "ott_id": "44559",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000073": {
+      "original_label": "mrcaott42ott10477",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000074": {
+      "original_label": "Rodentia_ott864593",
+      "mrca_id": null,
+      "ott_id": "864593",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000075": {
+      "original_label": "Lepus_americanus_ott923734",
+      "mrca_id": null,
+      "ott_id": "923734",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000076": {
+      "original_label": "Lepus_microtis_ott5553964",
+      "mrca_id": null,
+      "ott_id": "5553964",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000077": {
+      "original_label": "Lepus_ott864610",
+      "mrca_id": null,
+      "ott_id": "864610",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000078": {
+      "original_label": "Oryctolagus_cuniculus_ott864596",
+      "mrca_id": null,
+      "ott_id": "864596",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000079": {
+      "original_label": "Oryctolagus_ott864605",
+      "mrca_id": null,
+      "ott_id": "864605",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott286193": {
+      "original_label": "Leporidae_ott644258",
+      "mrca_id": null,
+      "ott_id": "644258",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000080": {
+      "original_label": "Lagomorpha_ott644242",
+      "mrca_id": null,
+      "ott_id": "644242",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000081": {
+      "original_label": "mrcaott42ott29157",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000082": {
+      "original_label": "Glires_ott392220",
+      "mrca_id": null,
+      "ott_id": "392220",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000083": {
+      "original_label": "mrcaott42ott30082",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000084": {
+      "original_label": "Nasalis_larvatus_ott860954",
+      "mrca_id": null,
+      "ott_id": "860954",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott410925": {
+      "original_label": "Nasalis_ott235536",
+      "mrca_id": null,
+      "ott_id": "235536",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000085": {
+      "original_label": "mrcaott621138ott860954",
+      "mrca_id": "mrcaott621138",
+      "ott_id": "621138",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000086": {
+      "original_label": "mrcaott786ott621138",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000087": {
+      "original_label": "mrcaott786ott77080",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott923734": {
+      "original_label": "mrcaott786ott43798",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott5553964": {
+      "original_label": "mrcaott786ott36154",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000088": {
+      "original_label": "Colobinae_ott741061",
+      "mrca_id": null,
+      "ott_id": "741061",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott864596": {
+      "original_label": "mrcaott786ott3607642",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000089": {
+      "original_label": "Mandrillus_sphinx_ott741047",
+      "mrca_id": null,
+      "ott_id": "741047",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000090": {
+      "original_label": "Mandrillus_ott741055",
+      "mrca_id": null,
+      "ott_id": "741055",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000091": {
+      "original_label": "mrcaott33609ott741047",
+      "mrca_id": "mrcaott33609",
+      "ott_id": "33609",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000092": {
+      "original_label": "Papio_anubis_ott115449",
+      "mrca_id": null,
+      "ott_id": "115449",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000093": {
+      "original_label": "mrcaott485691ott554291",
+      "mrca_id": "mrcaott485691",
+      "ott_id": "485691",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000094": {
+      "original_label": "mrcaott485691ott741051",
+      "mrca_id": "mrcaott485691",
+      "ott_id": "485691",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000095": {
+      "original_label": "Papio_ott115460",
+      "mrca_id": null,
+      "ott_id": "115460",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000096": {
+      "original_label": "mrcaott436611ott665522",
+      "mrca_id": "mrcaott436611",
+      "ott_id": "436611",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000097": {
+      "original_label": "mrcaott436611ott554544",
+      "mrca_id": "mrcaott436611",
+      "ott_id": "436611",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000098": {
+      "original_label": "Theropithecus_gelada_ott741053",
+      "mrca_id": null,
+      "ott_id": "741053",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000099": {
+      "original_label": "Theropithecus_ott741052",
+      "mrca_id": null,
+      "ott_id": "741052",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000100": {
+      "original_label": "mrcaott436611ott741053",
+      "mrca_id": "mrcaott436611",
+      "ott_id": "436611",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000101": {
+      "original_label": "mrcaott33609ott436611",
+      "mrca_id": "mrcaott33609",
+      "ott_id": "33609",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000102": {
+      "original_label": "Macaca_fuscata_ott689660",
+      "mrca_id": null,
+      "ott_id": "689660",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000103": {
+      "original_label": "Macaca_mulatta_ott689650",
+      "mrca_id": null,
+      "ott_id": "689650",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000104": {
+      "original_label": "mrcaott689663ott5560516",
+      "mrca_id": "mrcaott689663",
+      "ott_id": "689663",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000105": {
+      "original_label": "mrcaott689663ott1067495",
+      "mrca_id": "mrcaott689663",
+      "ott_id": "689663",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000106": {
+      "original_label": "mrcaott575292ott689663",
+      "mrca_id": "mrcaott575292",
+      "ott_id": "575292",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000107": {
+      "original_label": "mrcaott115446ott575292",
+      "mrca_id": "mrcaott115446",
+      "ott_id": "115446",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott860954": {
+      "original_label": "mrcaott111862ott115446",
+      "mrca_id": "mrcaott111862",
+      "ott_id": "111862",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000108": {
+      "original_label": "Macaca_ott268324",
+      "mrca_id": null,
+      "ott_id": "268324",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000109": {
+      "original_label": "mrcaott33609ott111862",
+      "mrca_id": "mrcaott33609",
+      "ott_id": "33609",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000110": {
+      "original_label": "Cercopithecinae_ott842860",
+      "mrca_id": null,
+      "ott_id": "842860",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000111": {
+      "original_label": "mrcaott786ott5512",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000112": {
+      "original_label": "Cercopithecidae_ott842868",
+      "mrca_id": null,
+      "ott_id": "842868",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott741047": {
+      "original_label": "Cercopithecoidea_ott386194",
+      "mrca_id": null,
+      "ott_id": "386194",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000113": {
+      "original_label": "Homo_sapiens_ott770315",
+      "mrca_id": null,
+      "ott_id": "770315",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000114": {
+      "original_label": "mrcaott83926ott3607676",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000115": {
+      "original_label": "mrcaott83926ott3607681",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000116": {
+      "original_label": "mrcaott83926ott3607671",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000117": {
+      "original_label": "mrcaott83926ott3607678",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000118": {
+      "original_label": "Homo_ott770309",
+      "mrca_id": null,
+      "ott_id": "770309",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott115449": {
+      "original_label": "mrcaott83926ott3607732",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000119": {
+      "original_label": "mrcaott83926ott3607689",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott741053": {
+      "original_label": "mrcaott83926ott3607716",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000120": {
+      "original_label": "mrcaott83926ott3607687",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000121": {
+      "original_label": "Pan_troglodytes_ott417950",
+      "mrca_id": null,
+      "ott_id": "417950",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000122": {
+      "original_label": "Pan_paniscus_ott158484",
+      "mrca_id": null,
+      "ott_id": "158484",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000123": {
+      "original_label": "Pan_ott417957",
+      "mrca_id": null,
+      "ott_id": "417957",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000124": {
+      "original_label": "mrcaott83926ott84217",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000125": {
+      "original_label": "Gorilla_gorilla_ott417965",
+      "mrca_id": null,
+      "ott_id": "417965",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott689660": {
+      "original_label": "Gorilla_ott417969",
+      "mrca_id": null,
+      "ott_id": "417969",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott689650": {
+      "original_label": "Homininae_ott312031",
+      "mrca_id": null,
+      "ott_id": "312031",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000126": {
+      "original_label": "mrcaott83926ott3607873",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000127": {
+      "original_label": "mrcaott83926ott3607876",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000128": {
+      "original_label": "Pongo_abelii_ott770295",
+      "mrca_id": null,
+      "ott_id": "770295",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000129": {
+      "original_label": "Pongo_pygmaeus_ott770302",
+      "mrca_id": null,
+      "ott_id": "770302",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000130": {
+      "original_label": "Pongo_ott417949",
+      "mrca_id": null,
+      "ott_id": "417949",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000131": {
+      "original_label": "Ponginae_ott1082538",
+      "mrca_id": null,
+      "ott_id": "1082538",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000132": {
+      "original_label": "mrcaott770295ott3607692",
+      "mrca_id": "mrcaott770295",
+      "ott_id": "770295",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000133": {
+      "original_label": "mrcaott770295ott3607719",
+      "mrca_id": "mrcaott770295",
+      "ott_id": "770295",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000134": {
+      "original_label": "mrcaott83926ott770295",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000135": {
+      "original_label": "mrcaott83926ott3607728",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000136": {
+      "original_label": "mrcaott83926ott6145147",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000137": {
+      "original_label": "Hylobates_lar_ott995038",
+      "mrca_id": null,
+      "ott_id": "995038",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000138": {
+      "original_label": "mrcaott96938ott96939",
+      "mrca_id": "mrcaott96938",
+      "ott_id": "96938",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000139": {
+      "original_label": "Hylobates_ott166552",
+      "mrca_id": null,
+      "ott_id": "166552",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000140": {
+      "original_label": "mrcaott96938ott1055751",
+      "mrca_id": "mrcaott96938",
+      "ott_id": "96938",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000141": {
+      "original_label": "mrcaott96938ott251578",
+      "mrca_id": "mrcaott96938",
+      "ott_id": "96938",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000142": {
+      "original_label": "Hylobatidae_ott166544",
+      "mrca_id": null,
+      "ott_id": "166544",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000143": {
+      "original_label": "mrcaott83926ott96938",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott770315": {
+      "original_label": "mrcaott83926ott3607702",
+      "mrca_id": "mrcaott83926",
+      "ott_id": "83926",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000144": {
+      "original_label": "mrcaott786ott83926",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "tax_ott417950": {
+      "original_label": "mrcaott786ott3607729",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott158484": {
+      "original_label": "Catarrhini_ott842867",
+      "mrca_id": null,
+      "ott_id": "842867",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000145": {
+      "original_label": "Saguinus_imperator_ott489221",
+      "mrca_id": null,
+      "ott_id": "489221",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott417965": {
+      "original_label": "mrcaott429031ott809273",
+      "mrca_id": "mrcaott429031",
+      "ott_id": "429031",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000146": {
+      "original_label": "mrcaott429031ott920962",
+      "mrca_id": "mrcaott429031",
+      "ott_id": "429031",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000147": {
+      "original_label": "mrcaott2025ott429031",
+      "mrca_id": "mrcaott2025",
+      "ott_id": "2025",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000148": {
+      "original_label": "Saguinus_ott1015243",
+      "mrca_id": null,
+      "ott_id": "1015243",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000149": {
+      "original_label": "Callithrix_pygmaea_ott489225",
+      "mrca_id": null,
+      "ott_id": "489225",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott770295": {
+      "original_label": "Cebuella_ott3607843",
+      "mrca_id": null,
+      "ott_id": "3607843",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott770302": {
+      "original_label": "mrcaott298261ott489225",
+      "mrca_id": "mrcaott298261",
+      "ott_id": "298261",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000150": {
+      "original_label": "mrcaott298261ott341884",
+      "mrca_id": "mrcaott298261",
+      "ott_id": "298261",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000151": {
+      "original_label": "mrcaott274346ott298261",
+      "mrca_id": "mrcaott274346",
+      "ott_id": "274346",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000152": {
+      "original_label": "mrcaott172747ott172749",
+      "mrca_id": "mrcaott172747",
+      "ott_id": "172747",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000153": {
+      "original_label": "mrcaott172747ott489230",
+      "mrca_id": "mrcaott172747",
+      "ott_id": "172747",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000154": {
+      "original_label": "Leontopithecus_rosalia_ott921451",
+      "mrca_id": null,
+      "ott_id": "921451",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott995038": {
+      "original_label": "mrcaott921451ott3607559",
+      "mrca_id": "mrcaott921451",
+      "ott_id": "921451",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000155": {
+      "original_label": "mrcaott566865ott921451",
+      "mrca_id": "mrcaott566865",
+      "ott_id": "566865",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000156": {
+      "original_label": "Leontopithecus_ott532396",
+      "mrca_id": null,
+      "ott_id": "532396",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000157": {
+      "original_label": "mrcaott172747ott341890",
+      "mrca_id": "mrcaott172747",
+      "ott_id": "172747",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000158": {
+      "original_label": "Callitrichinae_ott1015234",
+      "mrca_id": null,
+      "ott_id": "1015234",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000159": {
+      "original_label": "mrcaott2025ott56003",
+      "mrca_id": "mrcaott2025",
+      "ott_id": "2025",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000160": {
+      "original_label": "mrcaott2025ott93900",
+      "mrca_id": "mrcaott2025",
+      "ott_id": "2025",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000161": {
+      "original_label": "mrcaott2025ott57134",
+      "mrca_id": "mrcaott2025",
+      "ott_id": "2025",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000162": {
+      "original_label": "Platyrrhini_ott339033",
+      "mrca_id": null,
+      "ott_id": "339033",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000163": {
+      "original_label": "Simiiformes_ott386195",
+      "mrca_id": null,
+      "ott_id": "386195",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott489221": {
+      "original_label": "Carlito_syrichta_ott339031",
+      "mrca_id": null,
+      "ott_id": "339031",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000164": {
+      "original_label": "Carlito_ott5925594",
+      "mrca_id": null,
+      "ott_id": "5925594",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000165": {
+      "original_label": "mrcaott339031ott7067587",
+      "mrca_id": "mrcaott339031",
+      "ott_id": "339031",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000166": {
+      "original_label": "Tarsiidae_ott933322",
+      "mrca_id": null,
+      "ott_id": "933322",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000167": {
+      "original_label": "Tarsiiformes_ott702151",
+      "mrca_id": null,
+      "ott_id": "702151",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000168": {
+      "original_label": "Haplorrhini_ott702152",
+      "mrca_id": null,
+      "ott_id": "702152",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000169": {
+      "original_label": "Propithecus_verreauxi_ott696018",
+      "mrca_id": null,
+      "ott_id": "696018",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000170": {
+      "original_label": "mrcaott672751ott729086",
+      "mrca_id": "mrcaott672751",
+      "ott_id": "672751",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott489225": {
+      "original_label": "mrcaott672751ott1046413",
+      "mrca_id": "mrcaott672751",
+      "ott_id": "672751",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000171": {
+      "original_label": "mrcaott311205ott672751",
+      "mrca_id": "mrcaott311205",
+      "ott_id": "311205",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000172": {
+      "original_label": "Propithecus_ott311203",
+      "mrca_id": null,
+      "ott_id": "311203",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000173": {
+      "original_label": "mrcaott132960ott311205",
+      "mrca_id": "mrcaott132960",
+      "ott_id": "132960",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott921451": {
+      "original_label": "mrcaott132960ott4941433",
+      "mrca_id": "mrcaott132960",
+      "ott_id": "132960",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000174": {
+      "original_label": "mrcaott132960ott696022",
+      "mrca_id": "mrcaott132960",
+      "ott_id": "132960",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000175": {
+      "original_label": "Indriidae_ott1058643",
+      "mrca_id": null,
+      "ott_id": "1058643",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000176": {
+      "original_label": "mrcaott3428ott132960",
+      "mrca_id": "mrcaott3428",
+      "ott_id": "3428",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000177": {
+      "original_label": "Lemur_catta_ott913930",
+      "mrca_id": null,
+      "ott_id": "913930",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott339031": {
+      "original_label": "Lemur_ott913932",
+      "mrca_id": null,
+      "ott_id": "913932",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000178": {
+      "original_label": "mrcaott97009ott913930",
+      "mrca_id": "mrcaott97009",
+      "ott_id": "97009",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000179": {
+      "original_label": "mrcaott22554ott97009",
+      "mrca_id": "mrcaott22554",
+      "ott_id": "22554",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000180": {
+      "original_label": "Lemuridae_ott913933",
+      "mrca_id": null,
+      "ott_id": "913933",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000181": {
+      "original_label": "mrcaott3428ott22554",
+      "mrca_id": "mrcaott3428",
+      "ott_id": "3428",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000182": {
+      "original_label": "Lemuriformes_ott702142",
+      "mrca_id": null,
+      "ott_id": "702142",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000183": {
+      "original_label": "Daubentonia_madagascariensis_ott50727",
+      "mrca_id": null,
+      "ott_id": "50727",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000184": {
+      "original_label": "Daubentonia_ott190075",
+      "mrca_id": null,
+      "ott_id": "190075",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000185": {
+      "original_label": "Daubentoniidae_ott915769",
+      "mrca_id": null,
+      "ott_id": "915769",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000186": {
+      "original_label": "Chiromyiformes_ott702144",
+      "mrca_id": null,
+      "ott_id": "702144",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000187": {
+      "original_label": "mrcaott3428ott50727",
+      "mrca_id": "mrcaott3428",
+      "ott_id": "3428",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000188": {
+      "original_label": "Perodicticus_potto_ott339040",
+      "mrca_id": null,
+      "ott_id": "339040",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000189": {
+      "original_label": "Perodicticus_ott339045",
+      "mrca_id": null,
+      "ott_id": "339045",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000190": {
+      "original_label": "mrcaott323051ott323063",
+      "mrca_id": "mrcaott323051",
+      "ott_id": "323051",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott696018": {
+      "original_label": "Lorisidae_ott863755",
+      "mrca_id": null,
+      "ott_id": "863755",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000191": {
+      "original_label": "mrcaott101793ott173071",
+      "mrca_id": "mrcaott101793",
+      "ott_id": "101793",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000192": {
+      "original_label": "Lorisiformes_ott702145",
+      "mrca_id": null,
+      "ott_id": "702145",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000193": {
+      "original_label": "Strepsirrhini_ott702147",
+      "mrca_id": null,
+      "ott_id": "702147",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000194": {
+      "original_label": "mrcaott786ott3428",
+      "mrca_id": "mrcaott786",
+      "ott_id": "786",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott913930": {
+      "original_label": "Primates_ott913935",
+      "mrca_id": null,
+      "ott_id": "913935",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000195": {
+      "original_label": "Primatomorpha_ott6520519",
+      "mrca_id": null,
+      "ott_id": "6520519",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000196": {
+      "original_label": "Euarchontoglires_ott392222",
+      "mrca_id": null,
+      "ott_id": "392222",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000197": {
+      "original_label": "Cervus_elaphus_ott936014",
+      "mrca_id": null,
+      "ott_id": "936014",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott50727": {
+      "original_label": "mrcaott1548ott64872",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000198": {
+      "original_label": "mrcaott1548ott76720",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000199": {
+      "original_label": "mrcaott1548ott543086",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000200": {
+      "original_label": "mrcaott1548ott62976",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000201": {
+      "original_label": "mrcaott1548ott640742",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000202": {
+      "original_label": "Cervinae_ott534970",
+      "mrca_id": null,
+      "ott_id": "534970",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott339040": {
+      "original_label": "mrcaott1548ott57105",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000203": {
+      "original_label": "Odocoileus_hemionus_ott410149",
+      "mrca_id": null,
+      "ott_id": "410149",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000204": {
+      "original_label": "Odocoileus_virginianus_ott410145",
+      "mrca_id": null,
+      "ott_id": "410145",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000205": {
+      "original_label": "mrcaott90636ott410142",
+      "mrca_id": "mrcaott90636",
+      "ott_id": "90636",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000206": {
+      "original_label": "Odocoileus_ott410156",
+      "mrca_id": null,
+      "ott_id": "410156",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000207": {
+      "original_label": "mrcaott90636ott1063456",
+      "mrca_id": "mrcaott90636",
+      "ott_id": "90636",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000208": {
+      "original_label": "mrcaott90636ott345506",
+      "mrca_id": "mrcaott90636",
+      "ott_id": "90636",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000209": {
+      "original_label": "mrcaott15447ott90636",
+      "mrca_id": "mrcaott15447",
+      "ott_id": "15447",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000210": {
+      "original_label": "Rangifer_tarandus_ott410153",
+      "mrca_id": null,
+      "ott_id": "410153",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000211": {
+      "original_label": "Rangifer_ott936000",
+      "mrca_id": null,
+      "ott_id": "936000",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000212": {
+      "original_label": "mrcaott15447ott114864",
+      "mrca_id": "mrcaott15447",
+      "ott_id": "15447",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000213": {
+      "original_label": "Alces_alces_ott460509",
+      "mrca_id": null,
+      "ott_id": "460509",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000214": {
+      "original_label": "Alces_ott460507",
+      "mrca_id": null,
+      "ott_id": "460507",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000215": {
+      "original_label": "mrcaott54038ott256566",
+      "mrca_id": "mrcaott54038",
+      "ott_id": "54038",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000216": {
+      "original_label": "mrcaott15447ott54038",
+      "mrca_id": "mrcaott15447",
+      "ott_id": "15447",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000217": {
+      "original_label": "Cervidae_ott460505",
+      "mrca_id": null,
+      "ott_id": "460505",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000218": {
+      "original_label": "mrcaott1548ott7655692",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000219": {
+      "original_label": "Capra_falconeri_ott202967",
+      "mrca_id": null,
+      "ott_id": "202967",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000220": {
+      "original_label": "Capra hircus (species in domain Eukaryota) ott19017",
+      "mrca_id": null,
+      "ott_id": "19017",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000221": {
+      "original_label": "mrcaott88864ott7067657",
+      "mrca_id": "mrcaott88864",
+      "ott_id": "88864",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000222": {
+      "original_label": "mrcaott88864ott698611",
+      "mrca_id": "mrcaott88864",
+      "ott_id": "88864",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000223": {
+      "original_label": "mrcaott88864ott556488",
+      "mrca_id": "mrcaott88864",
+      "ott_id": "88864",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000224": {
+      "original_label": "mrcaott88864ott698614",
+      "mrca_id": "mrcaott88864",
+      "ott_id": "88864",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott936014": {
+      "original_label": "mrcaott88864ott143624",
+      "mrca_id": "mrcaott88864",
+      "ott_id": "88864",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000225": {
+      "original_label": "mrcaott20474ott88864",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000226": {
+      "original_label": "Budorcas_taxicolor_ott860784",
+      "mrca_id": null,
+      "ott_id": "860784",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000227": {
+      "original_label": "Budorcas_ott860783",
+      "mrca_id": null,
+      "ott_id": "860783",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000228": {
+      "original_label": "mrcaott20474ott346628",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000229": {
+      "original_label": "Oreamnos_americanus_ott274550",
+      "mrca_id": null,
+      "ott_id": "274550",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000230": {
+      "original_label": "Oreamnos_ott274554",
+      "mrca_id": null,
+      "ott_id": "274554",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000231": {
+      "original_label": "mrcaott20474ott274550",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "tax_ott410149": {
+      "original_label": "mrcaott20474ott768699",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott410145": {
+      "original_label": "Ovis_aries_ott70819",
+      "mrca_id": null,
+      "ott_id": "70819",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000232": {
+      "original_label": "Ovis_canadensis_ott123206",
+      "mrca_id": null,
+      "ott_id": "123206",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott410153": {
+      "original_label": "Ovis_ott540244",
+      "mrca_id": null,
+      "ott_id": "540244",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000233": {
+      "original_label": "mrcaott132224ott185299",
+      "mrca_id": "mrcaott132224",
+      "ott_id": "132224",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000234": {
+      "original_label": "mrcaott20474ott132224",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott460509": {
+      "original_label": "Caprinae_ott122647",
+      "mrca_id": null,
+      "ott_id": "122647",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000235": {
+      "original_label": "mrcaott20474ott938450",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000236": {
+      "original_label": "Connochaetes_taurinus_ott19028",
+      "mrca_id": null,
+      "ott_id": "19028",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000237": {
+      "original_label": "Connochaetes_ott19027",
+      "mrca_id": null,
+      "ott_id": "19027",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000238": {
+      "original_label": "Alcelaphinae_ott385449",
+      "mrca_id": null,
+      "ott_id": "385449",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000239": {
+      "original_label": "mrcaott98208ott222869",
+      "mrca_id": "mrcaott98208",
+      "ott_id": "98208",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000240": {
+      "original_label": "mrcaott20474ott98208",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000241": {
+      "original_label": "mrcaott20474ott23046",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000242": {
+      "original_label": "Litocranius_walleri_ott128285",
+      "mrca_id": null,
+      "ott_id": "128285",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000243": {
+      "original_label": "Litocranius_ott128284",
+      "mrca_id": null,
+      "ott_id": "128284",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000244": {
+      "original_label": "Antidorcas_marsupialis_ott363040",
+      "mrca_id": null,
+      "ott_id": "363040",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000245": {
+      "original_label": "Antidorcas_ott363039",
+      "mrca_id": null,
+      "ott_id": "363039",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000246": {
+      "original_label": "mrcaott128285ott363040",
+      "mrca_id": "mrcaott128285",
+      "ott_id": "128285",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000247": {
+      "original_label": "mrcaott21273ott128285",
+      "mrca_id": "mrcaott21273",
+      "ott_id": "21273",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000248": {
+      "original_label": "Saiga_tatarica_ott274566",
+      "mrca_id": null,
+      "ott_id": "274566",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000249": {
+      "original_label": "Saiga_ott274567",
+      "mrca_id": null,
+      "ott_id": "274567",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000250": {
+      "original_label": "mrcaott21273ott386540",
+      "mrca_id": "mrcaott21273",
+      "ott_id": "21273",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000251": {
+      "original_label": "mrcaott21273ott938432",
+      "mrca_id": "mrcaott21273",
+      "ott_id": "21273",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000252": {
+      "original_label": "mrcaott21273ott40128",
+      "mrca_id": "mrcaott21273",
+      "ott_id": "21273",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott202967": {
+      "original_label": "mrcaott21273ott95603",
+      "mrca_id": "mrcaott21273",
+      "ott_id": "21273",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott19017": {
+      "original_label": "mrcaott20474ott21273",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000253": {
+      "original_label": "Aepyceros_melampus_ott768679",
+      "mrca_id": null,
+      "ott_id": "768679",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott860784": {
+      "original_label": "Aepyceros_ott768678",
+      "mrca_id": null,
+      "ott_id": "768678",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000254": {
+      "original_label": "Aepycerotinae_ott910691",
+      "mrca_id": null,
+      "ott_id": "910691",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott274550": {
+      "original_label": "mrcaott561127ott920662",
+      "mrca_id": "mrcaott561127",
+      "ott_id": "561127",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000255": {
+      "original_label": "mrcaott20474ott561127",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000256": {
+      "original_label": "Tragelaphus_eurycerus_ott215885",
+      "mrca_id": null,
+      "ott_id": "215885",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott70819": {
+      "original_label": "mrcaott401076ott886257",
+      "mrca_id": "mrcaott401076",
+      "ott_id": "401076",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott123206": {
+      "original_label": "mrcaott24247ott401076",
+      "mrca_id": "mrcaott24247",
+      "ott_id": "24247",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000257": {
+      "original_label": "mrcaott24247ott70832",
+      "mrca_id": "mrcaott24247",
+      "ott_id": "24247",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000258": {
+      "original_label": "mrcaott24247ott40135",
+      "mrca_id": "mrcaott24247",
+      "ott_id": "24247",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000259": {
+      "original_label": "mrcaott24247ott70829",
+      "mrca_id": "mrcaott24247",
+      "ott_id": "24247",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott19028": {
+      "original_label": "Syncerus_caffer_ott644255",
+      "mrca_id": null,
+      "ott_id": "644255",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000260": {
+      "original_label": "Syncerus_ott122649",
+      "mrca_id": null,
+      "ott_id": "122649",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000261": {
+      "original_label": "Bubalus_bubalis_ott641187",
+      "mrca_id": null,
+      "ott_id": "641187",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000262": {
+      "original_label": "Bubalus_ott756071",
+      "mrca_id": null,
+      "ott_id": "756071",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000263": {
+      "original_label": "mrcaott73074ott116346",
+      "mrca_id": "mrcaott73074",
+      "ott_id": "73074",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000264": {
+      "original_label": "Bison_bison_ott907693",
+      "mrca_id": null,
+      "ott_id": "907693",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000265": {
+      "original_label": "mrcaott354607ott381164",
+      "mrca_id": "mrcaott354607",
+      "ott_id": "354607",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000266": {
+      "original_label": "mrcaott354607ott583891",
+      "mrca_id": "mrcaott354607",
+      "ott_id": "354607",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott128285": {
+      "original_label": "Bos_taurus_ott490099",
+      "mrca_id": null,
+      "ott_id": "490099",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000267": {
+      "original_label": "mrcaott490099ott6146187",
+      "mrca_id": "mrcaott490099",
+      "ott_id": "490099",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott363040": {
+      "original_label": "mrcaott354607ott374748",
+      "mrca_id": "mrcaott354607",
+      "ott_id": "354607",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000268": {
+      "original_label": "mrcaott73074ott354607",
+      "mrca_id": "mrcaott73074",
+      "ott_id": "73074",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott274566": {
+      "original_label": "mrcaott73074ott1054629",
+      "mrca_id": "mrcaott73074",
+      "ott_id": "73074",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000269": {
+      "original_label": "mrcaott24247ott73074",
+      "mrca_id": "mrcaott24247",
+      "ott_id": "24247",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000270": {
+      "original_label": "Bovinae_ott346071",
+      "mrca_id": null,
+      "ott_id": "346071",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000271": {
+      "original_label": "Bovidae_ott768677",
+      "mrca_id": null,
+      "ott_id": "768677",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott768679": {
+      "original_label": "mrcaott20474ott233507",
+      "mrca_id": "mrcaott20474",
+      "ott_id": "20474",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000272": {
+      "original_label": "mrcaott1548ott20474",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000273": {
+      "original_label": "Giraffa_camelopardalis_ott768674",
+      "mrca_id": null,
+      "ott_id": "768674",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000274": {
+      "original_label": "Giraffa_ott768687",
+      "mrca_id": null,
+      "ott_id": "768687",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000275": {
+      "original_label": "Okapia_johnstoni_ott207426",
+      "mrca_id": null,
+      "ott_id": "207426",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000276": {
+      "original_label": "Okapia_ott207428",
+      "mrca_id": null,
+      "ott_id": "207428",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000277": {
+      "original_label": "Giraffidae_ott768685",
+      "mrca_id": null,
+      "ott_id": "768685",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000278": {
+      "original_label": "Antilocapra_americana_ott768683",
+      "mrca_id": null,
+      "ott_id": "768683",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott215885": {
+      "original_label": "Antilocapra_ott768682",
+      "mrca_id": null,
+      "ott_id": "768682",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000279": {
+      "original_label": "Antilocapridae_ott194522",
+      "mrca_id": null,
+      "ott_id": "194522",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000280": {
+      "original_label": "mrcaott108126ott736438",
+      "mrca_id": "mrcaott108126",
+      "ott_id": "108126",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000281": {
+      "original_label": "Pecora_ott403912",
+      "mrca_id": null,
+      "ott_id": "403912",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000282": {
+      "original_label": "Ruminantia_ott986971",
+      "mrca_id": null,
+      "ott_id": "986971",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott644255": {
+      "original_label": "Inia_geoffrensis_ott698411",
+      "mrca_id": null,
+      "ott_id": "698411",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000283": {
+      "original_label": "Inia_ott698410",
+      "mrca_id": null,
+      "ott_id": "698410",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott641187": {
+      "original_label": "Iniidae_ott935329",
+      "mrca_id": null,
+      "ott_id": "935329",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000284": {
+      "original_label": "mrcaott86868ott140448",
+      "mrca_id": "mrcaott86868",
+      "ott_id": "86868",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000285": {
+      "original_label": "mrcaott5269ott86868",
+      "mrca_id": "mrcaott5269",
+      "ott_id": "5269",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000286": {
+      "original_label": "Tursiops_truncatus_ott124230",
+      "mrca_id": null,
+      "ott_id": "124230",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott907693": {
+      "original_label": "Tursiops_ott124235",
+      "mrca_id": null,
+      "ott_id": "124235",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000287": {
+      "original_label": "mrcaott124220ott246130",
+      "mrca_id": "mrcaott124220",
+      "ott_id": "124220",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott490099": {
+      "original_label": "mrcaott124220ott124224",
+      "mrca_id": "mrcaott124220",
+      "ott_id": "124220",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000288": {
+      "original_label": "mrcaott124220ott155492",
+      "mrca_id": "mrcaott124220",
+      "ott_id": "124220",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000289": {
+      "original_label": "mrcaott124220ott250045",
+      "mrca_id": "mrcaott124220",
+      "ott_id": "124220",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000290": {
+      "original_label": "mrcaott111103ott124220",
+      "mrca_id": "mrcaott111103",
+      "ott_id": "111103",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott768674": {
+      "original_label": "mrcaott111103ott825969",
+      "mrca_id": "mrcaott111103",
+      "ott_id": "111103",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000291": {
+      "original_label": "mrcaott47843ott111103",
+      "mrca_id": "mrcaott47843",
+      "ott_id": "47843",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott207426": {
+      "original_label": "Orcinus_orca_ott124215",
+      "mrca_id": null,
+      "ott_id": "124215",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000292": {
+      "original_label": "Orcinus_ott124219",
+      "mrca_id": null,
+      "ott_id": "124219",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000293": {
+      "original_label": "Delphinidae_ott698406",
+      "mrca_id": null,
+      "ott_id": "698406",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott768683": {
+      "original_label": "Phocoena_sinus_ott1089663",
+      "mrca_id": null,
+      "ott_id": "1089663",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000294": {
+      "original_label": "mrcaott423943ott1089663",
+      "mrca_id": "mrcaott423943",
+      "ott_id": "423943",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000295": {
+      "original_label": "Phocoenidae_ott851308",
+      "mrca_id": null,
+      "ott_id": "851308",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000296": {
+      "original_label": "Monodon_monoceros_ott306757",
+      "mrca_id": null,
+      "ott_id": "306757",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000297": {
+      "original_label": "Monodon_ott306759",
+      "mrca_id": null,
+      "ott_id": "306759",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000298": {
+      "original_label": "Delphinapterus_leucas_ott851318",
+      "mrca_id": null,
+      "ott_id": "851318",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000299": {
+      "original_label": "Delphinapterus_ott851317",
+      "mrca_id": null,
+      "ott_id": "851317",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000300": {
+      "original_label": "Monodontidae_ott851307",
+      "mrca_id": null,
+      "ott_id": "851307",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000301": {
+      "original_label": "mrcaott194312ott306757",
+      "mrca_id": "mrcaott194312",
+      "ott_id": "194312",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000302": {
+      "original_label": "mrcaott47843ott194312",
+      "mrca_id": "mrcaott47843",
+      "ott_id": "47843",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000303": {
+      "original_label": "mrcaott5269ott47843",
+      "mrca_id": "mrcaott5269",
+      "ott_id": "5269",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000304": {
+      "original_label": "Berardius_bairdii_ott1003906",
+      "mrca_id": null,
+      "ott_id": "1003906",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000305": {
+      "original_label": "Berardius_ott1003909",
+      "mrca_id": null,
+      "ott_id": "1003909",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000306": {
+      "original_label": "mrcaott6470ott1003906",
+      "mrca_id": "mrcaott6470",
+      "ott_id": "6470",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott698411": {
+      "original_label": "Ziphiidae_ott276849",
+      "mrca_id": null,
+      "ott_id": "276849",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000307": {
+      "original_label": "mrcaott5269ott6470",
+      "mrca_id": "mrcaott5269",
+      "ott_id": "5269",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000308": {
+      "original_label": "mrcaott5256ott5269",
+      "mrca_id": "mrcaott5256",
+      "ott_id": "5256",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000309": {
+      "original_label": "Physeter_catodon_ott276851",
+      "mrca_id": null,
+      "ott_id": "276851",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000310": {
+      "original_label": "Physeter_ott276856",
+      "mrca_id": null,
+      "ott_id": "276856",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000311": {
+      "original_label": "Physeteridae_ott276861",
+      "mrca_id": null,
+      "ott_id": "276861",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000312": {
+      "original_label": "Kogia_breviceps_ott825964",
+      "mrca_id": null,
+      "ott_id": "825964",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000313": {
+      "original_label": "Kogia_ott276860",
+      "mrca_id": null,
+      "ott_id": "276860",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000314": {
+      "original_label": "Kogiidae_ott3612363",
+      "mrca_id": null,
+      "ott_id": "3612363",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000315": {
+      "original_label": "mrcaott276851ott276857",
+      "mrca_id": "mrcaott276851",
+      "ott_id": "276851",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000316": {
+      "original_label": "Odontoceti_ott698417",
+      "mrca_id": null,
+      "ott_id": "698417",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott124230": {
+      "original_label": "Megaptera_novaeangliae_ott226198",
+      "mrca_id": null,
+      "ott_id": "226198",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000317": {
+      "original_label": "Megaptera (genus in Deuterostomia) ott226201",
+      "mrca_id": null,
+      "ott_id": "226201",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott124215": {
+      "original_label": "mrcaott226193ott226198",
+      "mrca_id": "mrcaott226193",
+      "ott_id": "226193",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000318": {
+      "original_label": "mrcaott44568ott226193",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000319": {
+      "original_label": "Balaenoptera_musculus_ott226190",
+      "mrca_id": null,
+      "ott_id": "226190",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000320": {
+      "original_label": "mrcaott226190ott313151",
+      "mrca_id": "mrcaott226190",
+      "ott_id": "226190",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1089663": {
+      "original_label": "mrcaott44568ott226190",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000321": {
+      "original_label": "Eschrichtius_robustus_ott800320",
+      "mrca_id": null,
+      "ott_id": "800320",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000322": {
+      "original_label": "Eschrichtius_ott800310",
+      "mrca_id": null,
+      "ott_id": "800310",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott306757": {
+      "original_label": "mrcaott800320ott3612262",
+      "mrca_id": "mrcaott800320",
+      "ott_id": "800320",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000323": {
+      "original_label": "Eschrichtiidae_ott800309",
+      "mrca_id": null,
+      "ott_id": "800309",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott851318": {
+      "original_label": "mrcaott44568ott800320",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000324": {
+      "original_label": "mrcaott44568ott3612210",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000325": {
+      "original_label": "mrcaott44568ott3612259",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000326": {
+      "original_label": "mrcaott44568ott4118749",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1003906": {
+      "original_label": "mrcaott44568ott6145900",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000327": {
+      "original_label": "mrcaott44568ott6146026",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000328": {
+      "original_label": "mrcaott44568ott3615459",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000329": {
+      "original_label": "mrcaott44568ott397243",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott276851": {
+      "original_label": "mrcaott44568ott3615461",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000330": {
+      "original_label": "Mysticeti_ott800314",
+      "mrca_id": null,
+      "ott_id": "800314",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000331": {
+      "original_label": "mrcaott44568ott3616017",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott825964": {
+      "original_label": "mrcaott44568ott4119411",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000332": {
+      "original_label": "mrcaott44568ott6145853",
+      "mrca_id": "mrcaott44568",
+      "ott_id": "44568",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000333": {
+      "original_label": "mrcaott5256ott44568",
+      "mrca_id": "mrcaott5256",
+      "ott_id": "5256",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000334": {
+      "original_label": "mrcaott5256ott3615450",
+      "mrca_id": "mrcaott5256",
+      "ott_id": "5256",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000335": {
+      "original_label": "Cetacea_ott698424",
+      "mrca_id": null,
+      "ott_id": "698424",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000336": {
+      "original_label": "Hexaprotodon_liberiensis_ott662806",
+      "mrca_id": null,
+      "ott_id": "662806",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000337": {
+      "original_label": "Hexaprotodon_ott662802",
+      "mrca_id": null,
+      "ott_id": "662802",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000338": {
+      "original_label": "Hippopotamus_amphibius_ott510762",
+      "mrca_id": null,
+      "ott_id": "510762",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000339": {
+      "original_label": "Hippopotamus_ott510761",
+      "mrca_id": null,
+      "ott_id": "510761",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000340": {
+      "original_label": "Hippopotamidae_ott510764",
+      "mrca_id": null,
+      "ott_id": "510764",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000341": {
+      "original_label": "Ancodonta_ott7655792",
+      "mrca_id": null,
+      "ott_id": "7655792",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000342": {
+      "original_label": "Whippomorpha_ott7655791",
+      "mrca_id": null,
+      "ott_id": "7655791",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000343": {
+      "original_label": "mrcaott5256ott4944931",
+      "mrca_id": "mrcaott5256",
+      "ott_id": "5256",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000344": {
+      "original_label": "mrcaott1548ott5256",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000345": {
+      "original_label": "Sus_scrofa_domesticus_ott729998",
+      "mrca_id": null,
+      "ott_id": "729998",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000346": {
+      "original_label": "Sus_scrofa_ott730013",
+      "mrca_id": null,
+      "ott_id": "730013",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000347": {
+      "original_label": "Sus_ott730021",
+      "mrca_id": null,
+      "ott_id": "730021",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000348": {
+      "original_label": "Suidae_ott730008",
+      "mrca_id": null,
+      "ott_id": "730008",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott226198": {
+      "original_label": "Suina_ott916745",
+      "mrca_id": null,
+      "ott_id": "916745",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000349": {
+      "original_label": "mrcaott1548ott21987",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott226190": {
+      "original_label": "Vicugna_pacos_ott906301",
+      "mrca_id": null,
+      "ott_id": "906301",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000350": {
+      "original_label": "Vicugna_ott906305",
+      "mrca_id": null,
+      "ott_id": "906305",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000351": {
+      "original_label": "Lama_glama_ott986973",
+      "mrca_id": null,
+      "ott_id": "986973",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000352": {
+      "original_label": "Lama_ott510759",
+      "mrca_id": null,
+      "ott_id": "510759",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott800320": {
+      "original_label": "mrcaott143004ott143016",
+      "mrca_id": "mrcaott143004",
+      "ott_id": "143004",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000353": {
+      "original_label": "Camelus_dromedarius_ott510752",
+      "mrca_id": null,
+      "ott_id": "510752",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000354": {
+      "original_label": "Camelus_bactrianus_ott510768",
+      "mrca_id": null,
+      "ott_id": "510768",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000355": {
+      "original_label": "mrcaott510768ott596642",
+      "mrca_id": "mrcaott510768",
+      "ott_id": "510768",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott662806": {
+      "original_label": "Camelus_ott510767",
+      "mrca_id": null,
+      "ott_id": "510767",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000356": {
+      "original_label": "Camelidae_ott510775",
+      "mrca_id": null,
+      "ott_id": "510775",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott510762": {
+      "original_label": "Tylopoda_ott510773",
+      "mrca_id": null,
+      "ott_id": "510773",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000357": {
+      "original_label": "Artiodactyla_ott622916",
+      "mrca_id": null,
+      "ott_id": "622916",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000358": {
+      "original_label": "Equus_burchellii_quagga_ott124776",
+      "mrca_id": null,
+      "ott_id": "124776",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000359": {
+      "original_label": "Equus_burchellii_ott1068214",
+      "mrca_id": null,
+      "ott_id": "1068214",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000360": {
+      "original_label": "Hippotigris_ott615440",
+      "mrca_id": null,
+      "ott_id": "615440",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott729998": {
+      "original_label": "Equus_asinus_ott1068202",
+      "mrca_id": null,
+      "ott_id": "1068202",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000361": {
+      "original_label": "Asinus_ott615436",
+      "mrca_id": null,
+      "ott_id": "615436",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000362": {
+      "original_label": "Equus_caballus_ott1068218",
+      "mrca_id": null,
+      "ott_id": "1068218",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000363": {
+      "original_label": "Equus_subgenus_Equus_ott94003",
+      "mrca_id": null,
+      "ott_id": "94003",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000364": {
+      "original_label": "Equus_ott541951",
+      "mrca_id": null,
+      "ott_id": "541951",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott906301": {
+      "original_label": "Equidae_ott1070066",
+      "mrca_id": null,
+      "ott_id": "1070066",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000365": {
+      "original_label": "Diceros_bicornis_ott1034204",
+      "mrca_id": null,
+      "ott_id": "1034204",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott986973": {
+      "original_label": "Diceros (genus in Opisthokonta) ott397576",
+      "mrca_id": null,
+      "ott_id": "397576",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000366": {
+      "original_label": "Ceratotherium_simum_ott1034198",
+      "mrca_id": null,
+      "ott_id": "1034198",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott510752": {
+      "original_label": "Ceratotherium_ott1034201",
+      "mrca_id": null,
+      "ott_id": "1034201",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000367": {
+      "original_label": "Rhinocerotidae_ott1034218",
+      "mrca_id": null,
+      "ott_id": "1034218",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott510768": {
+      "original_label": "mrcaott9419ott277746",
+      "mrca_id": "mrcaott9419",
+      "ott_id": "9419",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000368": {
+      "original_label": "Perissodactyla_ott541948",
+      "mrca_id": null,
+      "ott_id": "541948",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000369": {
+      "original_label": "mrcaott1548ott3021",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000370": {
+      "original_label": "mrcaott1548ott4942547",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 3
+    },
+    "ancestor_otl_000371": {
+      "original_label": "mrcaott1548ott4942380",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000372": {
+      "original_label": "mrcaott1548ott3607484",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott124776": {
+      "original_label": "mrcaott307132ott864246",
+      "mrca_id": "mrcaott307132",
+      "ott_id": "307132",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000373": {
+      "original_label": "mrcaott307132ott498123",
+      "mrca_id": "mrcaott307132",
+      "ott_id": "307132",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1068202": {
+      "original_label": "mrcaott217241ott307132",
+      "mrca_id": "mrcaott217241",
+      "ott_id": "217241",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000374": {
+      "original_label": "mrcaott217241ott878680",
+      "mrca_id": "mrcaott217241",
+      "ott_id": "217241",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1068218": {
+      "original_label": "mrcaott61869ott217241",
+      "mrca_id": "mrcaott61869",
+      "ott_id": "61869",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000375": {
+      "original_label": "mrcaott61869ott6146533",
+      "mrca_id": "mrcaott61869",
+      "ott_id": "61869",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000376": {
+      "original_label": "mrcaott61869ott292390",
+      "mrca_id": "mrcaott61869",
+      "ott_id": "61869",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000377": {
+      "original_label": "mrcaott31968ott61869",
+      "mrca_id": "mrcaott31968",
+      "ott_id": "31968",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1034204": {
+      "original_label": "mrcaott31968ott620441",
+      "mrca_id": "mrcaott31968",
+      "ott_id": "31968",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000378": {
+      "original_label": "mrcaott6790ott31968",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1034198": {
+      "original_label": "mrcaott6790ott10323",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000379": {
+      "original_label": "mrcaott6790ott488515",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000380": {
+      "original_label": "Vespertilionidae_ott238434",
+      "mrca_id": null,
+      "ott_id": "238434",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000381": {
+      "original_label": "mrcaott6790ott130215",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000382": {
+      "original_label": "mrcaott6790ott6795",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000383": {
+      "original_label": "Desmodus_rotundus_ott238431",
+      "mrca_id": null,
+      "ott_id": "238431",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000384": {
+      "original_label": "Desmodus_ott456414",
+      "mrca_id": null,
+      "ott_id": "456414",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000385": {
+      "original_label": "mrcaott238431ott1060472",
+      "mrca_id": "mrcaott238431",
+      "ott_id": "238431",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000386": {
+      "original_label": "Desmodontinae_ott1039975",
+      "mrca_id": null,
+      "ott_id": "1039975",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000387": {
+      "original_label": "mrcaott9379ott238431",
+      "mrca_id": "mrcaott9379",
+      "ott_id": "9379",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000388": {
+      "original_label": "mrcaott9379ott201782",
+      "mrca_id": "mrcaott9379",
+      "ott_id": "9379",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000389": {
+      "original_label": "Phyllostomidae_ott289151",
+      "mrca_id": null,
+      "ott_id": "289151",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000390": {
+      "original_label": "mrcaott9379ott167316",
+      "mrca_id": "mrcaott9379",
+      "ott_id": "9379",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000391": {
+      "original_label": "mrcaott9379ott263938",
+      "mrca_id": "mrcaott9379",
+      "ott_id": "9379",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000392": {
+      "original_label": "mrcaott9379ott604409",
+      "mrca_id": "mrcaott9379",
+      "ott_id": "9379",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000393": {
+      "original_label": "mrcaott6794ott9379",
+      "mrca_id": "mrcaott6794",
+      "ott_id": "6794",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000394": {
+      "original_label": "mrcaott6794ott73572",
+      "mrca_id": "mrcaott6794",
+      "ott_id": "6794",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000395": {
+      "original_label": "mrcaott6790ott6794",
+      "mrca_id": "mrcaott6790",
+      "ott_id": "6790",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000396": {
+      "original_label": "Rousettus_aegyptiacus_ott813034",
+      "mrca_id": null,
+      "ott_id": "813034",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000397": {
+      "original_label": "mrcaott20425ott37742",
+      "mrca_id": "mrcaott20425",
+      "ott_id": "20425",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000398": {
+      "original_label": "mrcaott20425ott813050",
+      "mrca_id": "mrcaott20425",
+      "ott_id": "20425",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000399": {
+      "original_label": "mrcaott20425ott146354",
+      "mrca_id": "mrcaott20425",
+      "ott_id": "20425",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000400": {
+      "original_label": "mrcaott15293ott20425",
+      "mrca_id": "mrcaott15293",
+      "ott_id": "15293",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000401": {
+      "original_label": "mrcaott15293ott89715",
+      "mrca_id": "mrcaott15293",
+      "ott_id": "15293",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000402": {
+      "original_label": "mrcaott15293ott663912",
+      "mrca_id": "mrcaott15293",
+      "ott_id": "15293",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000403": {
+      "original_label": "mrcaott15293ott37727",
+      "mrca_id": "mrcaott15293",
+      "ott_id": "15293",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000404": {
+      "original_label": "Pteropodidae_ott574742",
+      "mrca_id": null,
+      "ott_id": "574742",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000405": {
+      "original_label": "Megachiroptera_ott754606",
+      "mrca_id": null,
+      "ott_id": "754606",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000406": {
+      "original_label": "mrcaott10730ott31957",
+      "mrca_id": "mrcaott10730",
+      "ott_id": "10730",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott238431": {
+      "original_label": "Chiroptera_ott574724",
+      "mrca_id": null,
+      "ott_id": "574724",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000407": {
+      "original_label": "mrcaott1548ott6790",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000408": {
+      "original_label": "Gulo_gulo_ott178247",
+      "mrca_id": null,
+      "ott_id": "178247",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000409": {
+      "original_label": "Gulo_ott752563",
+      "mrca_id": null,
+      "ott_id": "752563",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000410": {
+      "original_label": "mrcaott80402ott178247",
+      "mrca_id": "mrcaott80402",
+      "ott_id": "80402",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000411": {
+      "original_label": "mrcaott4697ott80402",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000412": {
+      "original_label": "Martinae_ott67323",
+      "mrca_id": null,
+      "ott_id": "67323",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000413": {
+      "original_label": "Meles_meles_ott923113",
+      "mrca_id": null,
+      "ott_id": "923113",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000414": {
+      "original_label": "Meles_ott923115",
+      "mrca_id": null,
+      "ott_id": "923115",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000415": {
+      "original_label": "Melinae_ott693052",
+      "mrca_id": null,
+      "ott_id": "693052",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000416": {
+      "original_label": "mrcaott4697ott135341",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott813034": {
+      "original_label": "Enhydra_lutris_ott949676",
+      "mrca_id": null,
+      "ott_id": "949676",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000417": {
+      "original_label": "Enhydra_ott949684",
+      "mrca_id": null,
+      "ott_id": "949684",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000418": {
+      "original_label": "mrcaott167828ott310493",
+      "mrca_id": "mrcaott167828",
+      "ott_id": "167828",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000419": {
+      "original_label": "mrcaott4709ott167828",
+      "mrca_id": "mrcaott4709",
+      "ott_id": "4709",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000420": {
+      "original_label": "Lontra_canadensis_ott656961",
+      "mrca_id": null,
+      "ott_id": "656961",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000421": {
+      "original_label": "Lontra_ott1088408",
+      "mrca_id": null,
+      "ott_id": "1088408",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000422": {
+      "original_label": "mrcaott4709ott399808",
+      "mrca_id": "mrcaott4709",
+      "ott_id": "4709",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000423": {
+      "original_label": "Pteronura_brasiliensis_ott397142",
+      "mrca_id": null,
+      "ott_id": "397142",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000424": {
+      "original_label": "Pteronura_ott397141",
+      "mrca_id": null,
+      "ott_id": "397141",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000425": {
+      "original_label": "Lutrinae_ott306281",
+      "mrca_id": null,
+      "ott_id": "306281",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000426": {
+      "original_label": "mrcaott4709ott39395",
+      "mrca_id": "mrcaott4709",
+      "ott_id": "4709",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000427": {
+      "original_label": "mrcaott4709ott111024",
+      "mrca_id": "mrcaott4709",
+      "ott_id": "4709",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000428": {
+      "original_label": "mrcaott4709ott157033",
+      "mrca_id": "mrcaott4709",
+      "ott_id": "4709",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000429": {
+      "original_label": "mrcaott4697ott4709",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000430": {
+      "original_label": "Mellivora_capensis_ott923109",
+      "mrca_id": null,
+      "ott_id": "923109",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000431": {
+      "original_label": "Mellivora_ott923112",
+      "mrca_id": null,
+      "ott_id": "923112",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000432": {
+      "original_label": "Mellivoriane_ott693048",
+      "mrca_id": null,
+      "ott_id": "693048",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott178247": {
+      "original_label": "mrcaott901933ott923109",
+      "mrca_id": "mrcaott901933",
+      "ott_id": "901933",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000433": {
+      "original_label": "mrcaott4697ott901933",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000434": {
+      "original_label": "Mustelidae_ott348043",
+      "mrca_id": null,
+      "ott_id": "348043",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott923113": {
+      "original_label": "Procyon_lotor_ott348040",
+      "mrca_id": null,
+      "ott_id": "348040",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000435": {
+      "original_label": "Procyon_ott348029",
+      "mrca_id": null,
+      "ott_id": "348029",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000436": {
+      "original_label": "mrcaott203417ott685103",
+      "mrca_id": "mrcaott203417",
+      "ott_id": "203417",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000437": {
+      "original_label": "mrcaott203417ott348027",
+      "mrca_id": "mrcaott203417",
+      "ott_id": "203417",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000438": {
+      "original_label": "Procyonidae_ott872571",
+      "mrca_id": null,
+      "ott_id": "872571",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000439": {
+      "original_label": "mrcaott4697ott203417",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000440": {
+      "original_label": "Ailurus_fulgens_ott872562",
+      "mrca_id": null,
+      "ott_id": "872562",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000441": {
+      "original_label": "Ailurus_ott872565",
+      "mrca_id": null,
+      "ott_id": "872565",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000442": {
+      "original_label": "Ailuridae_ott827257",
+      "mrca_id": null,
+      "ott_id": "827257",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott949676": {
+      "original_label": "mrcaott4697ott638813",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000443": {
+      "original_label": "Mephitis_mephitis_ott231602",
+      "mrca_id": null,
+      "ott_id": "231602",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott656961": {
+      "original_label": "Mephitis_ott231606",
+      "mrca_id": null,
+      "ott_id": "231606",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000444": {
+      "original_label": "mrcaott231602ott736282",
+      "mrca_id": "mrcaott231602",
+      "ott_id": "231602",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott397142": {
+      "original_label": "mrcaott231602ott231608",
+      "mrca_id": "mrcaott231602",
+      "ott_id": "231602",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000445": {
+      "original_label": "Mephitidae_ott445986",
+      "mrca_id": null,
+      "ott_id": "445986",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000446": {
+      "original_label": "mrcaott4697ott231602",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000447": {
+      "original_label": "Ursus_maritimus_ott10732",
+      "mrca_id": null,
+      "ott_id": "10732",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott923109": {
+      "original_label": "Ursus_arctos_ott872567",
+      "mrca_id": null,
+      "ott_id": "872567",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000448": {
+      "original_label": "mrcaott10732ott350099",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000449": {
+      "original_label": "mrcaott10732ott7067610",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000450": {
+      "original_label": "Ursus_americanus_ott872577",
+      "mrca_id": null,
+      "ott_id": "872577",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000451": {
+      "original_label": "mrcaott300426ott391593",
+      "mrca_id": "mrcaott300426",
+      "ott_id": "300426",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott348040": {
+      "original_label": "mrcaott300426ott679701",
+      "mrca_id": "mrcaott300426",
+      "ott_id": "300426",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000452": {
+      "original_label": "mrcaott10732ott300426",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000453": {
+      "original_label": "mrcaott10732ott297463",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott872562": {
+      "original_label": "mrcaott10732ott679667",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000454": {
+      "original_label": "Ailuropoda_melanoleuca_ott872573",
+      "mrca_id": null,
+      "ott_id": "872573",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000455": {
+      "original_label": "Ailuropoda_ott872566",
+      "mrca_id": null,
+      "ott_id": "872566",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000456": {
+      "original_label": "Ursidae_ott297458",
+      "mrca_id": null,
+      "ott_id": "297458",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000457": {
+      "original_label": "Phoca_vitulina_ott698422",
+      "mrca_id": null,
+      "ott_id": "698422",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott231602": {
+      "original_label": "mrcaott22069ott89833",
+      "mrca_id": "mrcaott22069",
+      "ott_id": "22069",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000458": {
+      "original_label": "mrcaott22064ott22069",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000459": {
+      "original_label": "Halichoerus_grypus_ott1040694",
+      "mrca_id": null,
+      "ott_id": "1040694",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000460": {
+      "original_label": "Halichoerus_ott1040699",
+      "mrca_id": null,
+      "ott_id": "1040699",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000461": {
+      "original_label": "mrcaott22064ott6145546",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000462": {
+      "original_label": "mrcaott22064ott664062",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000463": {
+      "original_label": "mrcaott22064ott132779",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000464": {
+      "original_label": "mrcaott22064ott931413",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott10732": {
+      "original_label": "Phocidae_ott749626",
+      "mrca_id": null,
+      "ott_id": "749626",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott872567": {
+      "original_label": "Zalophus_californianus_ott95364",
+      "mrca_id": null,
+      "ott_id": "95364",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000465": {
+      "original_label": "mrcaott95364ott842211",
+      "mrca_id": "mrcaott95364",
+      "ott_id": "95364",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000466": {
+      "original_label": "Zalophus_ott749640",
+      "mrca_id": null,
+      "ott_id": "749640",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott872577": {
+      "original_label": "mrcaott95364ott949686",
+      "mrca_id": "mrcaott95364",
+      "ott_id": "95364",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000467": {
+      "original_label": "mrcaott95364ott180381",
+      "mrca_id": "mrcaott95364",
+      "ott_id": "95364",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott872573": {
+      "original_label": "mrcaott95364ott273179",
+      "mrca_id": "mrcaott95364",
+      "ott_id": "95364",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000468": {
+      "original_label": "Otariidae_ott749638",
+      "mrca_id": null,
+      "ott_id": "749638",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000469": {
+      "original_label": "Odobenus_rosmarus_ott749644",
+      "mrca_id": null,
+      "ott_id": "749644",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000470": {
+      "original_label": "Odobenus_ott749643",
+      "mrca_id": null,
+      "ott_id": "749643",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000471": {
+      "original_label": "Odobenidae_ott95367",
+      "mrca_id": null,
+      "ott_id": "95367",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000472": {
+      "original_label": "mrcaott95364ott433857",
+      "mrca_id": "mrcaott95364",
+      "ott_id": "95364",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000473": {
+      "original_label": "mrcaott22064ott95364",
+      "mrca_id": "mrcaott22064",
+      "ott_id": "22064",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000474": {
+      "original_label": "mrcaott10732ott22064",
+      "mrca_id": "mrcaott10732",
+      "ott_id": "10732",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000475": {
+      "original_label": "mrcaott4697ott10732",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott698422": {
+      "original_label": "Canis_lupus_familiaris_ott247333",
+      "mrca_id": null,
+      "ott_id": "247333",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000476": {
+      "original_label": "Canis_lupus_ott247341",
+      "mrca_id": null,
+      "ott_id": "247341",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1040694": {
+      "original_label": "mrcaott47497ott3612500",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000477": {
+      "original_label": "Speothos_venaticus_ott684074",
+      "mrca_id": null,
+      "ott_id": "684074",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000478": {
+      "original_label": "Speothos_ott684073",
+      "mrca_id": null,
+      "ott_id": "684073",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000479": {
+      "original_label": "Lycaon_pictus_ott821953",
+      "mrca_id": null,
+      "ott_id": "821953",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000480": {
+      "original_label": "Lycaon_ott821959",
+      "mrca_id": null,
+      "ott_id": "821959",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000481": {
+      "original_label": "mrcaott684074ott821953",
+      "mrca_id": "mrcaott684074",
+      "ott_id": "684074",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000482": {
+      "original_label": "Cuon_alpinus_ott313163",
+      "mrca_id": null,
+      "ott_id": "313163",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000483": {
+      "original_label": "Cuon_ott837603",
+      "mrca_id": null,
+      "ott_id": "837603",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott95364": {
+      "original_label": "mrcaott684074ott5340003",
+      "mrca_id": "mrcaott684074",
+      "ott_id": "684074",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000484": {
+      "original_label": "mrcaott47497ott684074",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000485": {
+      "original_label": "Canis_latrans_ott247331",
+      "mrca_id": null,
+      "ott_id": "247331",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott749644": {
+      "original_label": "mrcaott247331ott621168",
+      "mrca_id": "mrcaott247331",
+      "ott_id": "247331",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000486": {
+      "original_label": "mrcaott247331ott3612509",
+      "mrca_id": "mrcaott247331",
+      "ott_id": "247331",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000487": {
+      "original_label": "mrcaott47497ott247331",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000488": {
+      "original_label": "mrcaott47497ott3612503",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000489": {
+      "original_label": "mrcaott47497ott3612501",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000490": {
+      "original_label": "mrcaott47497ott3612579",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000491": {
+      "original_label": "Chrysocyon_brachyurus_ott837601",
+      "mrca_id": null,
+      "ott_id": "837601",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000492": {
+      "original_label": "Chrysocyon_ott621163",
+      "mrca_id": null,
+      "ott_id": "621163",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000493": {
+      "original_label": "mrcaott110766ott837601",
+      "mrca_id": "mrcaott110766",
+      "ott_id": "110766",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000494": {
+      "original_label": "mrcaott47497ott110766",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000495": {
+      "original_label": "Vulpes_lagopus_ott775766",
+      "mrca_id": null,
+      "ott_id": "775766",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000496": {
+      "original_label": "mrcaott609054ott610095",
+      "mrca_id": "mrcaott609054",
+      "ott_id": "609054",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000497": {
+      "original_label": "mrcaott297455ott609054",
+      "mrca_id": "mrcaott297455",
+      "ott_id": "297455",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000498": {
+      "original_label": "Vulpes_vulpes_ott821964",
+      "mrca_id": null,
+      "ott_id": "821964",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000499": {
+      "original_label": "mrcaott419501ott815800",
+      "mrca_id": "mrcaott419501",
+      "ott_id": "419501",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000500": {
+      "original_label": "mrcaott419501ott523960",
+      "mrca_id": "mrcaott419501",
+      "ott_id": "419501",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000501": {
+      "original_label": "mrcaott297455ott419501",
+      "mrca_id": "mrcaott297455",
+      "ott_id": "297455",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000502": {
+      "original_label": "Vulpes_zerda_ott315465",
+      "mrca_id": null,
+      "ott_id": "315465",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott247333": {
+      "original_label": "mrcaott315465ott996571",
+      "mrca_id": "mrcaott315465",
+      "ott_id": "315465",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000503": {
+      "original_label": "mrcaott297455ott315465",
+      "mrca_id": "mrcaott297455",
+      "ott_id": "297455",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000504": {
+      "original_label": "mrcaott297455ott821968",
+      "mrca_id": "mrcaott297455",
+      "ott_id": "297455",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000505": {
+      "original_label": "mrcaott77889ott297455",
+      "mrca_id": "mrcaott77889",
+      "ott_id": "77889",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott684074": {
+      "original_label": "Otocyon_megalotis_ott821973",
+      "mrca_id": null,
+      "ott_id": "821973",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000506": {
+      "original_label": "Otocyon_ott821952",
+      "mrca_id": null,
+      "ott_id": "821952",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott821953": {
+      "original_label": "mrcaott685113ott821973",
+      "mrca_id": "mrcaott685113",
+      "ott_id": "685113",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000507": {
+      "original_label": "mrcaott77889ott685113",
+      "mrca_id": "mrcaott77889",
+      "ott_id": "77889",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott313163": {
+      "original_label": "mrcaott47497ott77889",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000508": {
+      "original_label": "mrcaott47497ott3612592",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000509": {
+      "original_label": "mrcaott47497ott3612591",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott247331": {
+      "original_label": "mrcaott47497ott3612589",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000510": {
+      "original_label": "mrcaott47497ott3612516",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000511": {
+      "original_label": "mrcaott47497ott3612596",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott837601": {
+      "original_label": "mrcaott47497ott3612529",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000512": {
+      "original_label": "mrcaott47497ott3612617",
+      "mrca_id": "mrcaott47497",
+      "ott_id": "47497",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000513": {
+      "original_label": "Canidae_ott770319",
+      "mrca_id": null,
+      "ott_id": "770319",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000514": {
+      "original_label": "Caniformia_ott827263",
+      "mrca_id": null,
+      "ott_id": "827263",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000515": {
+      "original_label": "Suricata_suricatta_ott803645",
+      "mrca_id": null,
+      "ott_id": "803645",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000516": {
+      "original_label": "Suricata_ott418480",
+      "mrca_id": null,
+      "ott_id": "418480",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000517": {
+      "original_label": "mrcaott6940ott803645",
+      "mrca_id": "mrcaott6940",
+      "ott_id": "6940",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000518": {
+      "original_label": "Herpestidae_ott42311",
+      "mrca_id": null,
+      "ott_id": "42311",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott775766": {
+      "original_label": "Cryptoprocta_ferox_ott768514",
+      "mrca_id": null,
+      "ott_id": "768514",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000519": {
+      "original_label": "Cryptoprocta_ott768510",
+      "mrca_id": null,
+      "ott_id": "768510",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000520": {
+      "original_label": "Eupleridae_ott827269",
+      "mrca_id": null,
+      "ott_id": "827269",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott821964": {
+      "original_label": "mrcaott6940ott44171",
+      "mrca_id": "mrcaott6940",
+      "ott_id": "6940",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000521": {
+      "original_label": "Hyaena_hyaena_ott383901",
+      "mrca_id": null,
+      "ott_id": "383901",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott315465": {
+      "original_label": "Hyaena_ott383900",
+      "mrca_id": null,
+      "ott_id": "383900",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000522": {
+      "original_label": "mrcaott383901ott742313",
+      "mrca_id": "mrcaott383901",
+      "ott_id": "383901",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000523": {
+      "original_label": "Crocuta_crocuta_ott397157",
+      "mrca_id": null,
+      "ott_id": "397157",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott821973": {
+      "original_label": "Crocuta (genus in Deuterostomia) ott397140",
+      "mrca_id": null,
+      "ott_id": "397140",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000524": {
+      "original_label": "mrcaott383901ott397157",
+      "mrca_id": "mrcaott383901",
+      "ott_id": "383901",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000525": {
+      "original_label": "Hyaenidae_ott397138",
+      "mrca_id": null,
+      "ott_id": "397138",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000526": {
+      "original_label": "mrcaott6940ott383901",
+      "mrca_id": "mrcaott6940",
+      "ott_id": "6940",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000527": {
+      "original_label": "Civettictis_civetta_ott768511",
+      "mrca_id": null,
+      "ott_id": "768511",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000528": {
+      "original_label": "Civettictis_ott768507",
+      "mrca_id": null,
+      "ott_id": "768507",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000529": {
+      "original_label": "mrcaott373464ott768511",
+      "mrca_id": "mrcaott373464",
+      "ott_id": "373464",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000530": {
+      "original_label": "mrcaott194346ott373464",
+      "mrca_id": "mrcaott194346",
+      "ott_id": "194346",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000531": {
+      "original_label": "Viverrinae_ott5681",
+      "mrca_id": null,
+      "ott_id": "5681",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott803645": {
+      "original_label": "Arctictis_binturong_ott768502",
+      "mrca_id": null,
+      "ott_id": "768502",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000532": {
+      "original_label": "Arctictis_ott445403",
+      "mrca_id": null,
+      "ott_id": "445403",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000533": {
+      "original_label": "mrcaott220532ott7067619",
+      "mrca_id": "mrcaott220532",
+      "ott_id": "220532",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott768514": {
+      "original_label": "mrcaott126631ott220532",
+      "mrca_id": "mrcaott126631",
+      "ott_id": "126631",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000534": {
+      "original_label": "mrcaott126631ott768505",
+      "mrca_id": "mrcaott126631",
+      "ott_id": "126631",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000535": {
+      "original_label": "mrcaott45845ott126631",
+      "mrca_id": "mrcaott45845",
+      "ott_id": "45845",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000536": {
+      "original_label": "mrcaott6940ott45845",
+      "mrca_id": "mrcaott6940",
+      "ott_id": "6940",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000537": {
+      "original_label": "Panthera_tigris_ott42314",
+      "mrca_id": null,
+      "ott_id": "42314",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott383901": {
+      "original_label": "Panthera_uncia_ott532117",
+      "mrca_id": null,
+      "ott_id": "532117",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000538": {
+      "original_label": "mrcaott19397ott532117",
+      "mrca_id": "mrcaott19397",
+      "ott_id": "19397",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott397157": {
+      "original_label": "Panthera_pardus_ott42324",
+      "mrca_id": null,
+      "ott_id": "42324",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000539": {
+      "original_label": "Panthera_onca_ott42322",
+      "mrca_id": null,
+      "ott_id": "42322",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000540": {
+      "original_label": "mrcaott371429ott735488",
+      "mrca_id": "mrcaott371429",
+      "ott_id": "371429",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000541": {
+      "original_label": "mrcaott42318ott371429",
+      "mrca_id": "mrcaott42318",
+      "ott_id": "42318",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000542": {
+      "original_label": "Panthera_ott563154",
+      "mrca_id": null,
+      "ott_id": "563154",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000543": {
+      "original_label": "mrcaott19397ott882765",
+      "mrca_id": "mrcaott19397",
+      "ott_id": "19397",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott768511": {
+      "original_label": "Felis_catus_ott563166",
+      "mrca_id": null,
+      "ott_id": "563166",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000544": {
+      "original_label": "mrcaott54737ott563166",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000545": {
+      "original_label": "mrcaott54737ott983177",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000546": {
+      "original_label": "mrcaott54737ott983179",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000547": {
+      "original_label": "Felis_ott563165",
+      "mrca_id": null,
+      "ott_id": "563165",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott768502": {
+      "original_label": "Prionailurus_viverrinus_ott862641",
+      "mrca_id": null,
+      "ott_id": "862641",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000548": {
+      "original_label": "mrcaott198595ott862641",
+      "mrca_id": "mrcaott198595",
+      "ott_id": "198595",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000549": {
+      "original_label": "Prionailurus_ott570215",
+      "mrca_id": null,
+      "ott_id": "570215",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000550": {
+      "original_label": "Otocolobus_manul_ott86183",
+      "mrca_id": null,
+      "ott_id": "86183",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000551": {
+      "original_label": "Otocolobus_ott86182",
+      "mrca_id": null,
+      "ott_id": "86182",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000552": {
+      "original_label": "mrcaott86166ott86183",
+      "mrca_id": "mrcaott86166",
+      "ott_id": "86166",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "tax_ott42314": {
+      "original_label": "mrcaott54737ott86166",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "tax_ott532117": {
+      "original_label": "Puma_yagouaroundi_ott86162",
+      "mrca_id": null,
+      "ott_id": "86162",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000553": {
+      "original_label": "Puma_concolor_ott42307",
+      "mrca_id": null,
+      "ott_id": "42307",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott42324": {
+      "original_label": "Puma_ott86161",
+      "mrca_id": null,
+      "ott_id": "86161",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000554": {
+      "original_label": "Acinonyx_jubatus_ott752759",
+      "mrca_id": null,
+      "ott_id": "752759",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott42322": {
+      "original_label": "Acinonyx_ott752758",
+      "mrca_id": null,
+      "ott_id": "752758",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000555": {
+      "original_label": "Acinonychinae_ott626920",
+      "mrca_id": null,
+      "ott_id": "626920",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000556": {
+      "original_label": "mrcaott86162ott752759",
+      "mrca_id": "mrcaott86162",
+      "ott_id": "86162",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000557": {
+      "original_label": "mrcaott54737ott86162",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000558": {
+      "original_label": "Lynx_lynx_ott886829",
+      "mrca_id": null,
+      "ott_id": "886829",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000559": {
+      "original_label": "mrcaott442049ott886829",
+      "mrca_id": "mrcaott442049",
+      "ott_id": "442049",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000560": {
+      "original_label": "Lynx_canadensis_ott507549",
+      "mrca_id": null,
+      "ott_id": "507549",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000561": {
+      "original_label": "mrcaott442049ott507549",
+      "mrca_id": "mrcaott442049",
+      "ott_id": "442049",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000562": {
+      "original_label": "Lynx_rufus_ott507545",
+      "mrca_id": null,
+      "ott_id": "507545",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000563": {
+      "original_label": "Lynx_ott886828",
+      "mrca_id": null,
+      "ott_id": "886828",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000564": {
+      "original_label": "mrcaott54737ott442049",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott563166": {
+      "original_label": "Leopardus_wiedii_ott507553",
+      "mrca_id": null,
+      "ott_id": "507553",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000565": {
+      "original_label": "Leopardus_pardalis_ott752746",
+      "mrca_id": null,
+      "ott_id": "752746",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000566": {
+      "original_label": "mrcaott507553ott743811",
+      "mrca_id": "mrcaott507553",
+      "ott_id": "507553",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000567": {
+      "original_label": "Leopardus_ott774314",
+      "mrca_id": null,
+      "ott_id": "774314",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott862641": {
+      "original_label": "mrcaott54737ott86175",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000568": {
+      "original_label": "Leptailurus_serval_ott86170",
+      "mrca_id": null,
+      "ott_id": "86170",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott86183": {
+      "original_label": "Leptailurus_ott86169",
+      "mrca_id": null,
+      "ott_id": "86169",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000569": {
+      "original_label": "Caracal_caracal_ott1033549",
+      "mrca_id": null,
+      "ott_id": "1033549",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000570": {
+      "original_label": "Caracal_ott1033548",
+      "mrca_id": null,
+      "ott_id": "1033548",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott86162": {
+      "original_label": "mrcaott660447ott1033549",
+      "mrca_id": "mrcaott660447",
+      "ott_id": "660447",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott42307": {
+      "original_label": "mrcaott86170ott660447",
+      "mrca_id": "mrcaott86170",
+      "ott_id": "86170",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000571": {
+      "original_label": "mrcaott54737ott86170",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000572": {
+      "original_label": "mrcaott54737ott660452",
+      "mrca_id": "mrcaott54737",
+      "ott_id": "54737",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott752759": {
+      "original_label": "Felidae_ott563159",
+      "mrca_id": null,
+      "ott_id": "563159",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000573": {
+      "original_label": "mrcaott19397ott194349",
+      "mrca_id": "mrcaott19397",
+      "ott_id": "19397",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000574": {
+      "original_label": "mrcaott6940ott19397",
+      "mrca_id": "mrcaott6940",
+      "ott_id": "6940",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000575": {
+      "original_label": "Feliformia_ott827259",
+      "mrca_id": null,
+      "ott_id": "827259",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott886829": {
+      "original_label": "mrcaott4697ott6940",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "tax_ott507549": {
+      "original_label": "Carnivora_ott44565",
+      "mrca_id": null,
+      "ott_id": "44565",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott507545": {
+      "original_label": "Manis_pentadactyla_ott588292",
+      "mrca_id": null,
+      "ott_id": "588292",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000576": {
+      "original_label": "Manis_javanica_ott644245",
+      "mrca_id": null,
+      "ott_id": "644245",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000577": {
+      "original_label": "Manis_ott644247",
+      "mrca_id": null,
+      "ott_id": "644247",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "tax_ott507553": {
+      "original_label": "Manidae_ott644249",
+      "mrca_id": null,
+      "ott_id": "644249",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott752746": {
+      "original_label": "Pholidota (order in Opisthokonta) ott644252",
+      "mrca_id": null,
+      "ott_id": "644252",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000578": {
+      "original_label": "mrcaott4697ott263949",
+      "mrca_id": "mrcaott4697",
+      "ott_id": "4697",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000579": {
+      "original_label": "mrcaott1548ott4697",
+      "mrca_id": "mrcaott1548",
+      "ott_id": "1548",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott86170": {
+      "original_label": "Talpa_europaea_ott222362",
+      "mrca_id": null,
+      "ott_id": "222362",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000580": {
+      "original_label": "mrcaott222362ott366965",
+      "mrca_id": "mrcaott222362",
+      "ott_id": "222362",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000581": {
+      "original_label": "mrcaott222362ott353440",
+      "mrca_id": "mrcaott222362",
+      "ott_id": "222362",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott1033549": {
+      "original_label": "mrcaott222362ott850321",
+      "mrca_id": "mrcaott222362",
+      "ott_id": "222362",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000582": {
+      "original_label": "mrcaott222362ott5835560",
+      "mrca_id": "mrcaott222362",
+      "ott_id": "222362",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000583": {
+      "original_label": "Talpa_ott222367",
+      "mrca_id": null,
+      "ott_id": "222367",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000584": {
+      "original_label": "Condylura_cristata_ott292504",
+      "mrca_id": null,
+      "ott_id": "292504",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "tax_ott588292": {
+      "original_label": "Condylura_ott733072",
+      "mrca_id": null,
+      "ott_id": "733072",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "tax_ott644245": {
+      "original_label": "Talpidae_ott222358",
+      "mrca_id": null,
+      "ott_id": "222358",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000585": {
+      "original_label": "mrcaott3285ott60434",
+      "mrca_id": "mrcaott3285",
+      "ott_id": "3285",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000586": {
+      "original_label": "Erinaceus_europaeus_ott796660",
+      "mrca_id": null,
+      "ott_id": "796660",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000587": {
+      "original_label": "Erinaceus_ott796658",
+      "mrca_id": null,
+      "ott_id": "796658",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000588": {
+      "original_label": "Erinaceinae_ott805540",
+      "mrca_id": null,
+      "ott_id": "805540",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000589": {
+      "original_label": "Erinaceidae_ott796668",
+      "mrca_id": null,
+      "ott_id": "796668",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000590": {
+      "original_label": "mrcaott3285ott17250",
+      "mrca_id": "mrcaott3285",
+      "ott_id": "3285",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000591": {
+      "original_label": "Eulipotyphla_ott796664",
+      "mrca_id": null,
+      "ott_id": "796664",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000592": {
+      "original_label": "Laurasiatheria_ott392223",
+      "mrca_id": null,
+      "ott_id": "392223",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000593": {
+      "original_label": "Boreoeutheria_ott5334778",
+      "mrca_id": null,
+      "ott_id": "5334778",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott222362": {
+      "original_label": "Trichechus_manatus_ott226178",
+      "mrca_id": null,
+      "ott_id": "226178",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000594": {
+      "original_label": "Trichechus_ott226189",
+      "mrca_id": null,
+      "ott_id": "226189",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott292504": {
+      "original_label": "Trichechidae_ott226181",
+      "mrca_id": null,
+      "ott_id": "226181",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000595": {
+      "original_label": "Dugong_dugon_ott835324",
+      "mrca_id": null,
+      "ott_id": "835324",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000596": {
+      "original_label": "Dugong_ott835323",
+      "mrca_id": null,
+      "ott_id": "835323",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000597": {
+      "original_label": "Dugongidae_ott835321",
+      "mrca_id": null,
+      "ott_id": "835321",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott796660": {
+      "original_label": "Sirenia_ott226183",
+      "mrca_id": null,
+      "ott_id": "226183",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000598": {
+      "original_label": "mrcaott72667ott3607245",
+      "mrca_id": "mrcaott72667",
+      "ott_id": "72667",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000599": {
+      "original_label": "Elephas_maximus_ott541928",
+      "mrca_id": null,
+      "ott_id": "541928",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000600": {
+      "original_label": "Elephas_ott541927",
+      "mrca_id": null,
+      "ott_id": "541927",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000601": {
+      "original_label": "mrcaott106258ott298128",
+      "mrca_id": "mrcaott106258",
+      "ott_id": "106258",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000602": {
+      "original_label": "Loxodonta_africana_ott541936",
+      "mrca_id": null,
+      "ott_id": "541936",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000603": {
+      "original_label": "Loxodonta_ott541933",
+      "mrca_id": null,
+      "ott_id": "541933",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000604": {
+      "original_label": "Elephantidae_ott541924",
+      "mrca_id": null,
+      "ott_id": "541924",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott226178": {
+      "original_label": "Proboscidea (order in Deuterostomia) ott226176",
+      "mrca_id": null,
+      "ott_id": "226176",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000605": {
+      "original_label": "mrcaott90404ott106258",
+      "mrca_id": "mrcaott90404",
+      "ott_id": "90404",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000606": {
+      "original_label": "mrcaott72667ott90404",
+      "mrca_id": "mrcaott72667",
+      "ott_id": "72667",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott835324": {
+      "original_label": "Chrysospalax_trevelyani_ott347650",
+      "mrca_id": null,
+      "ott_id": "347650",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000607": {
+      "original_label": "Chrysospalax_ott347642",
+      "mrca_id": null,
+      "ott_id": "347642",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000608": {
+      "original_label": "Chrysochlorinae_ott702190",
+      "mrca_id": null,
+      "ott_id": "702190",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000609": {
+      "original_label": "Chrysochloridae_ott54168",
+      "mrca_id": null,
+      "ott_id": "54168",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000610": {
+      "original_label": "Afrosoricida_ott3616708",
+      "mrca_id": null,
+      "ott_id": "3616708",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000611": {
+      "original_label": "mrcaott82081ott334233",
+      "mrca_id": "mrcaott82081",
+      "ott_id": "82081",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott541928": {
+      "original_label": "Orycteropus_afer_ott561087",
+      "mrca_id": null,
+      "ott_id": "561087",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000612": {
+      "original_label": "Orycteropus_ott561106",
+      "mrca_id": null,
+      "ott_id": "561106",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott541936": {
+      "original_label": "Orycteropodidae_ott561103",
+      "mrca_id": null,
+      "ott_id": "561103",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000613": {
+      "original_label": "Tubulidentata_ott561100",
+      "mrca_id": null,
+      "ott_id": "561100",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000614": {
+      "original_label": "mrcaott82081ott292026",
+      "mrca_id": "mrcaott82081",
+      "ott_id": "82081",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000615": {
+      "original_label": "Afrotheria_ott746703",
+      "mrca_id": null,
+      "ott_id": "746703",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000616": {
+      "original_label": "Dasypus_novemcinctus_ott796672",
+      "mrca_id": null,
+      "ott_id": "796672",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000617": {
+      "original_label": "mrcaott796672ott4119191",
+      "mrca_id": "mrcaott796672",
+      "ott_id": "796672",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000618": {
+      "original_label": "mrcaott796672ott4119193",
+      "mrca_id": "mrcaott796672",
+      "ott_id": "796672",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott347650": {
+      "original_label": "Dasypus_ott796671",
+      "mrca_id": null,
+      "ott_id": "796671",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000619": {
+      "original_label": "Dasypodidae_ott273244",
+      "mrca_id": null,
+      "ott_id": "273244",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000620": {
+      "original_label": "Cingulata (order in Deuterostomia) ott495017",
+      "mrca_id": null,
+      "ott_id": "495017",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000621": {
+      "original_label": "Myrmecophaga_tridactyla_ott490538",
+      "mrca_id": null,
+      "ott_id": "490538",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott561087": {
+      "original_label": "Myrmecophaga_ott490533",
+      "mrca_id": null,
+      "ott_id": "490533",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000622": {
+      "original_label": "Myrmecophagidae_ott847766",
+      "mrca_id": null,
+      "ott_id": "847766",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000623": {
+      "original_label": "Vermilingua_ott495016",
+      "mrca_id": null,
+      "ott_id": "495016",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000624": {
+      "original_label": "Bradypus_variegatus_ott273233",
+      "mrca_id": null,
+      "ott_id": "273233",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000625": {
+      "original_label": "mrcaott527342ott726530",
+      "mrca_id": "mrcaott527342",
+      "ott_id": "527342",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000626": {
+      "original_label": "mrcaott527342ott736497",
+      "mrca_id": "mrcaott527342",
+      "ott_id": "527342",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000627": {
+      "original_label": "Bradypus_ott527308",
+      "mrca_id": null,
+      "ott_id": "527308",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott796672": {
+      "original_label": "Bradypodidae_ott273225",
+      "mrca_id": null,
+      "ott_id": "273225",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000628": {
+      "original_label": "Folivora_ott495015",
+      "mrca_id": null,
+      "ott_id": "495015",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000629": {
+      "original_label": "Pilosa (order in Deuterostomia) ott495018",
+      "mrca_id": null,
+      "ott_id": "495018",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000630": {
+      "original_label": "Xenarthra_ott847764",
+      "mrca_id": null,
+      "ott_id": "847764",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000631": {
+      "original_label": "Atlantogenata_ott6520513",
+      "mrca_id": null,
+      "ott_id": "6520513",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott490538": {
+      "original_label": "mrcaott42ott72667",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000632": {
+      "original_label": "mrcaott42ott3607455",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000633": {
+      "original_label": "mrcaott42ott3607429",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000634": {
+      "original_label": "mrcaott42ott3607383",
+      "mrca_id": "mrcaott42",
+      "ott_id": "42",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000635": {
+      "original_label": "Eutheria (in Deuterostomia) ott683263",
+      "mrca_id": null,
+      "ott_id": "683263",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000636": {
+      "original_label": "Macropus_giganteus_ott597239",
+      "mrca_id": null,
+      "ott_id": "597239",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott273233": {
+      "original_label": "mrcaott42481ott901181",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000637": {
+      "original_label": "Osphranter_rufus_ott897696",
+      "mrca_id": null,
+      "ott_id": "897696",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000638": {
+      "original_label": "mrcaott398453ott897696",
+      "mrca_id": "mrcaott398453",
+      "ott_id": "398453",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000639": {
+      "original_label": "mrcaott398453ott412086",
+      "mrca_id": "mrcaott398453",
+      "ott_id": "398453",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000640": {
+      "original_label": "Osphranter_ott7068051",
+      "mrca_id": null,
+      "ott_id": "7068051",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000641": {
+      "original_label": "mrcaott42481ott398453",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000642": {
+      "original_label": "Notamacropus_agilis_ott42493",
+      "mrca_id": null,
+      "ott_id": "42493",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000643": {
+      "original_label": "mrcaott42493ott7068049",
+      "mrca_id": "mrcaott42493",
+      "ott_id": "42493",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000644": {
+      "original_label": "mrcaott42493ott58575",
+      "mrca_id": "mrcaott42493",
+      "ott_id": "42493",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000645": {
+      "original_label": "mrcaott42481ott42493",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000646": {
+      "original_label": "mrcaott42481ott836770",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000647": {
+      "original_label": "mrcaott42481ott234941",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000648": {
+      "original_label": "mrcaott42481ott733444",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000649": {
+      "original_label": "mrcaott42481ott317154",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000650": {
+      "original_label": "mrcaott42481ott65579",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000651": {
+      "original_label": "mrcaott42481ott42818",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000652": {
+      "original_label": "mrcaott42481ott46393",
+      "mrca_id": "mrcaott42481",
+      "ott_id": "42481",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000653": {
+      "original_label": "Macropodidae_ott196582",
+      "mrca_id": null,
+      "ott_id": "196582",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000654": {
+      "original_label": "mrcaott34417ott42481",
+      "mrca_id": "mrcaott34417",
+      "ott_id": "34417",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000655": {
+      "original_label": "mrcaott34417ott262996",
+      "mrca_id": "mrcaott34417",
+      "ott_id": "34417",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000656": {
+      "original_label": "mrcaott6735ott34417",
+      "mrca_id": "mrcaott6735",
+      "ott_id": "6735",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott597239": {
+      "original_label": "mrcaott6735ott44497",
+      "mrca_id": "mrcaott6735",
+      "ott_id": "6735",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000657": {
+      "original_label": "Vombatus_ursinus_ott835328",
+      "mrca_id": null,
+      "ott_id": "835328",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000658": {
+      "original_label": "Vombatus_ott835327",
+      "mrca_id": null,
+      "ott_id": "835327",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000659": {
+      "original_label": "Vombatidae_ott323250",
+      "mrca_id": null,
+      "ott_id": "323250",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott897696": {
+      "original_label": "Phascolarctos_cinereus_ott327624",
+      "mrca_id": null,
+      "ott_id": "327624",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000660": {
+      "original_label": "Phascolarctos_ott327630",
+      "mrca_id": null,
+      "ott_id": "327630",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000661": {
+      "original_label": "Phascolarctidae_ott327628",
+      "mrca_id": null,
+      "ott_id": "327628",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott42493": {
+      "original_label": "mrcaott461135ott985451",
+      "mrca_id": "mrcaott461135",
+      "ott_id": "461135",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    },
+    "ancestor_otl_000662": {
+      "original_label": "Diprotodontia_ott277679",
+      "mrca_id": null,
+      "ott_id": "277679",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 2
+    },
+    "ancestor_otl_000663": {
+      "original_label": "mrcaott6735ott70811",
+      "mrca_id": "mrcaott6735",
+      "ott_id": "6735",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000664": {
+      "original_label": "mrcaott6735ott905267",
+      "mrca_id": "mrcaott6735",
+      "ott_id": "6735",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott835328": {
+      "original_label": "Didelphis_virginiana_ott919171",
+      "mrca_id": null,
+      "ott_id": "919171",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000665": {
+      "original_label": "Didelphis_ott762047",
+      "mrca_id": null,
+      "ott_id": "762047",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000666": {
+      "original_label": "mrcaott84809ott442489",
+      "mrca_id": "mrcaott84809",
+      "ott_id": "84809",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott327624": {
+      "original_label": "mrcaott84809ott327618",
+      "mrca_id": "mrcaott84809",
+      "ott_id": "84809",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000667": {
+      "original_label": "mrcaott84809ott440151",
+      "mrca_id": "mrcaott84809",
+      "ott_id": "84809",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000668": {
+      "original_label": "mrcaott84809ott7068040",
+      "mrca_id": "mrcaott84809",
+      "ott_id": "84809",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000669": {
+      "original_label": "mrcaott79410ott84809",
+      "mrca_id": "mrcaott79410",
+      "ott_id": "79410",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000670": {
+      "original_label": "Didelphinae_ott608046",
+      "mrca_id": null,
+      "ott_id": "608046",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000671": {
+      "original_label": "mrcaott29033ott606428",
+      "mrca_id": "mrcaott29033",
+      "ott_id": "29033",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000672": {
+      "original_label": "Didelphidae_ott16069",
+      "mrca_id": null,
+      "ott_id": "16069",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000673": {
+      "original_label": "Didelphimorphia_ott277697",
+      "mrca_id": null,
+      "ott_id": "277697",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000674": {
+      "original_label": "mrcaott6735ott29033",
+      "mrca_id": "mrcaott6735",
+      "ott_id": "6735",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "ancestor_otl_000675": {
+      "original_label": "Metatheria_ott16033",
+      "mrca_id": null,
+      "ott_id": "16033",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000676": {
+      "original_label": "Theria (subclass in Deuterostomia) ott229558",
+      "mrca_id": null,
+      "ott_id": "229558",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott919171": {
+      "original_label": "Tachyglossus_aculeatus_ott16038",
+      "mrca_id": null,
+      "ott_id": "16038",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000677": {
+      "original_label": "Tachyglossus_ott16047",
+      "mrca_id": null,
+      "ott_id": "16047",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000678": {
+      "original_label": "Tachyglossidae_ott344064",
+      "mrca_id": null,
+      "ott_id": "344064",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000679": {
+      "original_label": "Ornithorhynchus_anatinus_ott962377",
+      "mrca_id": null,
+      "ott_id": "962377",
+      "is_terminal": true,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000680": {
+      "original_label": "Ornithorhynchus_ott962391",
+      "mrca_id": null,
+      "ott_id": "962391",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 2
+    },
+    "ancestor_otl_000681": {
+      "original_label": "Ornithorhynchidae_ott344066",
+      "mrca_id": null,
+      "ott_id": "344066",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000682": {
+      "original_label": "mrcaott79623ott962377",
+      "mrca_id": "mrcaott79623",
+      "ott_id": "79623",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 1
+    },
+    "tax_ott16038": {
+      "original_label": "mrcaott79623ott3615208",
+      "mrca_id": "mrcaott79623",
+      "ott_id": "79623",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 0
+    },
+    "ancestor_otl_000683": {
+      "original_label": "Monotremata_ott962396",
+      "mrca_id": null,
+      "ott_id": "962396",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "ancestor_otl_000684": {
+      "original_label": "Prototheria_ott962395",
+      "mrca_id": null,
+      "ott_id": "962395",
+      "is_terminal": false,
+      "is_branching": false,
+      "child_count": 1
+    },
+    "tax_ott962377": {
+      "original_label": "Mammalia_ott244265",
+      "mrca_id": null,
+      "ott_id": "244265",
+      "is_terminal": false,
+      "is_branching": true,
+      "child_count": 0
+    }
+  }
+}
