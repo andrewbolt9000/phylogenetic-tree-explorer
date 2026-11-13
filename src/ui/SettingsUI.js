@@ -1,6 +1,6 @@
 /**
  * SettingsUI - Bridges between VisualizationSettings and the HTML control panel
- * 
+ *
  * Responsibilities:
  * - Load and apply default settings on startup
  * - Wire UI sliders/toggles to VisualizationSettings
@@ -14,9 +14,61 @@ class SettingsUI {
   constructor(settings, visualization) {
     this.settings = settings;  // VisualizationSettings instance
     this.viz = visualization;  // ForceDirectedVisualization instance
-    
+
     // Track which UI elements are currently being updated to avoid feedback loops
     this.updatingUI = false;
+  }
+
+  /**
+   * Control mappings defining how HTML elements connect to settings.
+   * Each entry specifies: element ID → { setting name, transform, display element ID, suffix }
+   * This is the source of truth for control wiring and display updates.
+   * @static
+   */
+  static getControlMap() {
+    return {
+      // Force/physics controls
+      'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
+      'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v), display: 'link-value' },
+      'root-link-strength-slider': { setting: 'rootLinkStrength', transform: v => parseInt(v), display: 'root-link-strength-value' },
+      'age-link-strength-slider': { setting: 'ageLinkStrength', transform: v => parseFloat(v), display: 'age-link-strength-value', suffix: '' },
+      'edge-thickness-slider': { setting: 'edgeThickness', transform: v => parseFloat(v), display: 'edge-thickness-value' },
+
+      // Topology repulsion equation: F = B * (A + X) / D
+      'topology-repulsion-a-slider': { setting: 'topologyRepulsionA', transform: v => parseFloat(v), display: 'topology-repulsion-a-value' },
+      'topology-repulsion-b-slider': { setting: 'topologyRepulsionB', transform: v => parseFloat(v), display: 'topology-repulsion-b-value' },
+      'topology-repulsion-x-slider': { setting: 'topologyRepulsionX', transform: v => parseInt(v), display: 'topology-repulsion-x-value' },
+
+      // Root positioning and wind controls
+      'lock-root-position-toggle': { setting: 'lockRootPosition', transform: v => v.checked, isToggle: true },
+      'wind-direction-slider': { setting: 'windDirection', transform: v => parseInt(v), display: 'wind-direction-value', suffix: '°' },
+      'wind-strength-slider': { setting: 'windStrength', transform: v => parseInt(v), display: 'wind-strength-value' },
+
+      // Appearance controls
+      'background-white-level-slider': { setting: 'backgroundWhiteLevel', transform: v => parseInt(v), display: 'background-white-level-value', suffix: '%' },
+      'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
+      'font-size-slider': { setting: 'graphFontSize', transform: v => parseInt(v), display: 'font-size-value' },
+      'sidebar-font-size-slider': { setting: 'sidebarFontSize', transform: v => parseInt(v), display: 'sidebar-font-size-value' },
+
+      // Silhouette controls
+      'silhouette-size-slider': { setting: 'silhouetteSizePercent', transform: v => parseInt(v), display: 'silhouette-size-value', suffix: '%' },
+      'silhouette-x-offset-slider': { setting: 'silhouetteXOffset', transform: v => parseInt(v), display: 'silhouette-x-offset-value', suffix: 'px' },
+      'silhouette-y-offset-slider': { setting: 'silhouetteYOffset', transform: v => parseInt(v), display: 'silhouette-y-offset-value', suffix: 'px' },
+      'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
+      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
+
+      // Grid controls
+      'show-grid-toggle': { setting: 'showGrid', transform: v => v.checked, isToggle: true },
+      'grid-spacing-slider': { setting: 'gridSpacing', transform: v => parseInt(v), display: 'grid-spacing-value' },
+      'grid-minor-width-slider': { setting: 'gridMinorLineWidth', transform: v => parseFloat(v), display: 'grid-minor-width-value' },
+      'grid-medium-width-slider': { setting: 'gridMediumLineWidth', transform: v => parseFloat(v), display: 'grid-medium-width-value' },
+      'grid-major-width-slider': { setting: 'gridMajorLineWidth', transform: v => parseFloat(v), display: 'grid-major-width-value' },
+      'grid-opacity-slider': { setting: 'gridOpacity', transform: v => parseFloat(v), display: 'grid-opacity-value' },
+
+      // Toggle controls
+      'show-node-dates-toggle': { setting: 'showNodeDates', transform: v => v.checked, isToggle: true },
+      'show-ancestral-labels-toggle': { setting: 'showAncestralLabels', transform: v => v.checked, isToggle: true },
+    };
   }
 
   /**
@@ -25,10 +77,10 @@ class SettingsUI {
   async initialize() {
     // Load default settings from repository config
     await this._loadDefaultSettings();
-    
+
     // Wire all existing controls to the settings system
     this._wireControls();
-    
+
     // Listen for settings changes and update UI
     this.settings.onChange((newSettings) => {
       if (!this.updatingUI) {
@@ -37,13 +89,13 @@ class SettingsUI {
 
       this._applySettingsToVisualization(newSettings);
     });
-    
+
     // Apply initial settings explicitly
     // Settings loaded before listener registration may not have been applied
     const current = this.settings.getSettings();
     this._updateUIFromSettings(current);
     this._applySettingsToVisualization(current);
-    
+
     // Add import/export buttons
     this._addImportExportButtons();
   }
@@ -60,15 +112,13 @@ class SettingsUI {
         // Use in-code defaults
         return;
       }
-      
+
       const yamlText = await response.text();
       const defaultSettings = VisualizationSettings.parseYAML(yamlText);
-      
-      // Apply defaults (but don't overwrite any user-provided settings)
-      Object.entries(defaultSettings).forEach(([key, value]) => {
-        this.settings.setSetting(key, value);
-      });
-      
+
+      // Apply all defaults atomically in a single update
+      this.settings.updateSettings(defaultSettings);
+
       console.log('[Settings] Loaded defaults from config/default-settings.yaml');
     } catch (error) {
       console.error('[Settings] Error loading defaults:', error);
@@ -81,53 +131,11 @@ class SettingsUI {
    * @private
    */
   _wireControls() {
-    const controlMap = {
-      // Force/physics controls
-      'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
-      'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v), display: 'link-value' },
-      'root-link-strength-slider': { setting: 'rootLinkStrength', transform: v => parseInt(v), display: 'root-link-strength-value' },
-      'age-link-strength-slider': { setting: 'ageLinkStrength', transform: v => parseFloat(v), display: 'age-link-strength-value', suffix: '' },
-      'edge-thickness-slider': { setting: 'edgeThickness', transform: v => parseFloat(v), display: 'edge-thickness-value' },
-      
-      // Topology repulsion equation: F = B * (A + X) / D
-      'topology-repulsion-a-slider': { setting: 'topologyRepulsionA', transform: v => parseFloat(v), display: 'topology-repulsion-a-value' },
-      'topology-repulsion-b-slider': { setting: 'topologyRepulsionB', transform: v => parseFloat(v), display: 'topology-repulsion-b-value' },
-      'topology-repulsion-x-slider': { setting: 'topologyRepulsionX', transform: v => parseInt(v), display: 'topology-repulsion-x-value' },
-      
-      // Root positioning and wind controls
-      'lock-root-position-toggle': { setting: 'lockRootPosition', transform: v => v.checked, isToggle: true },
-      'wind-direction-slider': { setting: 'windDirection', transform: v => parseInt(v), display: 'wind-direction-value', suffix: '°' },
-      'wind-strength-slider': { setting: 'windStrength', transform: v => parseInt(v), display: 'wind-strength-value' },
-      
-      // Appearance controls
-      'background-white-level-slider': { setting: 'backgroundWhiteLevel', transform: v => parseInt(v), display: 'background-white-level-value', suffix: '%' },
-      'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
-      'font-size-slider': { setting: 'graphFontSize', transform: v => parseInt(v), display: 'font-size-value' },
-      'sidebar-font-size-slider': { setting: 'sidebarFontSize', transform: v => parseInt(v), display: 'sidebar-font-size-value' },
-      
-      // Silhouette controls
-      'silhouette-size-slider': { setting: 'silhouetteSizePercent', transform: v => parseInt(v), display: 'silhouette-size-value', suffix: '%' },
-      'silhouette-x-offset-slider': { setting: 'silhouetteXOffset', transform: v => parseInt(v), display: 'silhouette-x-offset-value', suffix: 'px' },
-      'silhouette-y-offset-slider': { setting: 'silhouetteYOffset', transform: v => parseInt(v), display: 'silhouette-y-offset-value', suffix: 'px' },
-      'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
-      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
-      
-      // Grid controls
-      'show-grid-toggle': { setting: 'showGrid', transform: v => v.checked, isToggle: true },
-      'grid-spacing-slider': { setting: 'gridSpacing', transform: v => parseInt(v), display: 'grid-spacing-value' },
-      'grid-minor-width-slider': { setting: 'gridMinorLineWidth', transform: v => parseFloat(v), display: 'grid-minor-width-value' },
-      'grid-medium-width-slider': { setting: 'gridMediumLineWidth', transform: v => parseFloat(v), display: 'grid-medium-width-value' },
-      'grid-major-width-slider': { setting: 'gridMajorLineWidth', transform: v => parseFloat(v), display: 'grid-major-width-value' },
-      'grid-opacity-slider': { setting: 'gridOpacity', transform: v => parseFloat(v), display: 'grid-opacity-value' },
-      
-      // Toggle controls
-      'show-node-dates-toggle': { setting: 'showNodeDates', transform: v => v.checked, isToggle: true },
-      'show-ancestral-labels-toggle': { setting: 'showAncestralLabels', transform: v => v.checked, isToggle: true },
-    };
-    
+    const controlMap = SettingsUI.getControlMap();
+
     let wiredCount = 0;
     let skippedCount = 0;
-    
+
     Object.entries(controlMap).forEach(([elementId, config]) => {
       const element = document.getElementById(elementId);
       if (!element) {
@@ -135,9 +143,9 @@ class SettingsUI {
         skippedCount++;
         return;
       }
-      
+
       wiredCount++;
-      
+
       // Wire control to settings
       element.addEventListener('input', (e) => {
         try {
@@ -147,7 +155,7 @@ class SettingsUI {
           );
           this.settings.setSetting(config.setting, value);
           this.updatingUI = false;
-          
+
           // Update display if this control has a value display
           if (config.display) {
             const displayElement = document.getElementById(config.display);
@@ -167,67 +175,51 @@ class SettingsUI {
         }
       });
     });
-    
+
     console.log(`[SettingsUI] Wired ${wiredCount} controls, skipped ${skippedCount} missing controls`);
   }
 
   /**
    * Update UI controls from settings
+   * Synchronizes slider values and display labels with current settings.
    * @private
    */
   _updateUIFromSettings(settings) {
-    const sliderMap = {
-      backgroundWhiteLevel: 'background-white-level-slider',
-      charge: 'charge-slider',
-      linkStrength: 'link-slider',
-      rootLinkStrength: 'root-link-strength-slider',
-      ageLinkStrength: 'age-link-strength-slider',
-      edgeThickness: 'edge-thickness-slider',
-      topologyRepulsionA: 'topology-repulsion-a-slider',
-      topologyRepulsionB: 'topology-repulsion-b-slider',
-      topologyRepulsionX: 'topology-repulsion-x-slider',
-      windDirection: 'wind-direction-slider',
-      windStrength: 'wind-strength-slider',
-      nodeCircleSize: 'node-circle-slider',
-      graphFontSize: 'font-size-slider',
-      sidebarFontSize: 'sidebar-font-size-slider',
-      silhouetteSizePercent: 'silhouette-size-slider',
-      silhouetteXOffset: 'silhouette-x-offset-slider',
-      silhouetteYOffset: 'silhouette-y-offset-slider',
-      silhouetteGrayscale: 'silhouette-grayscale-slider',
-      silhouetteOpacity: 'silhouette-opacity-slider',
-      gridSpacing: 'grid-spacing-slider',
-      gridMinorLineWidth: 'grid-minor-width-slider',
-      gridMediumLineWidth: 'grid-medium-width-slider',
-      gridMajorLineWidth: 'grid-major-width-slider',
-      gridOpacity: 'grid-opacity-slider',
-    };
-    
-    const toggleMap = {
-      lockRootPosition: 'lock-root-position-toggle',
-      showNodeDates: 'show-node-dates-toggle',
-      showAncestralLabels: 'show-ancestral-labels-toggle',
-      showGrid: 'show-grid-toggle',
-    };
-    
-    // Update sliders
-    Object.entries(sliderMap).forEach(([settingKey, elementId]) => {
+    const controlMap = SettingsUI.getControlMap();
+
+    // Update all controls based on controlMap
+    Object.entries(controlMap).forEach(([elementId, config]) => {
       const element = document.getElementById(elementId);
-      if (element && settings[settingKey] !== undefined) {
-        let displayValue = settings[settingKey];
-        // For opacity, convert from 0-1 to 0-100 for display
-        if (settingKey === 'silhouetteOpacity') {
-          displayValue = Math.round(displayValue * 100);
+      if (!element) return;
+
+      const settingValue = settings[config.setting];
+      if (settingValue === undefined) return;
+
+      if (config.isToggle) {
+        // Toggle control
+        element.checked = settingValue;
+      } else {
+        // Slider control: update value and display label
+        let sliderValue = settingValue;
+
+        // For silhouetteOpacity, convert from 0-1 to 0-100 for slider display
+        if (config.setting === 'silhouetteOpacity') {
+          sliderValue = Math.round(settingValue * 100);
         }
-        element.value = displayValue;
-      }
-    });
-    
-    // Update toggles
-    Object.entries(toggleMap).forEach(([settingKey, elementId]) => {
-      const element = document.getElementById(elementId);
-      if (element && settings[settingKey] !== undefined) {
-        element.checked = settings[settingKey];
+
+        element.value = sliderValue;
+
+        // Update display label if this control has one
+        if (config.display) {
+          const displayElement = document.getElementById(config.display);
+          if (displayElement) {
+            let displayValue = element.value;  // Use slider value, not transformed value
+            if (config.suffix) {
+              displayValue = displayValue + config.suffix;
+            }
+            displayElement.textContent = displayValue;
+          }
+        }
       }
     });
   }
@@ -238,7 +230,7 @@ class SettingsUI {
    */
   _applySettingsToVisualization(settings) {
     if (!this.viz) return;
-    
+
     // Apply force parameters
     if (settings.charge !== undefined) {
       this.viz.setChargeStrength(-settings.charge);  // Negate for repulsion
@@ -261,7 +253,7 @@ class SettingsUI {
     if (settings.windStrength !== undefined) {
       this.viz.setWindStrength(settings.windStrength);
     }
-    
+
     // Apply topology repulsion parameters (A, B, X)
     if (settings.topologyRepulsionA !== undefined) {
       this.viz.setTopologyRepulsionA(settings.topologyRepulsionA);
@@ -272,7 +264,7 @@ class SettingsUI {
     if (settings.topologyRepulsionX !== undefined) {
       this.viz.setTopologyRepulsionX(settings.topologyRepulsionX);
     }
-    
+
     // Apply appearance parameters
     if (settings.backgroundWhiteLevel !== undefined) {
       this.viz.setBackgroundWhiteLevel(settings.backgroundWhiteLevel);
@@ -286,7 +278,7 @@ class SettingsUI {
     if (settings.graphFontSize !== undefined) {
       this.viz.setGraphFontSize(settings.graphFontSize);
     }
-    
+
     // Apply silhouette parameters
     if (settings.silhouetteSizePercent !== undefined) {
       this.viz.setSilhouetteSize(settings.silhouetteSizePercent);
@@ -303,17 +295,17 @@ class SettingsUI {
     if (settings.silhouetteGrayscale !== undefined) {
       this.viz.setSilhouetteGrayscale(settings.silhouetteGrayscale);
     }
-    
+
     // Apply CSS-based parameters
     if (settings.sidebarFontSize !== undefined) {
       document.documentElement.style.setProperty('--sidebar-font-size', settings.sidebarFontSize + 'px');
     }
-    
+
     // Apply toggle parameters
     if (settings.showNodeDates !== undefined) {
       // Note: these require additional data, handled separately
     }
-    
+
     // Apply grid parameters
     if (settings.showGrid !== undefined) {
       this.viz.setShowGrid(settings.showGrid);
@@ -344,15 +336,15 @@ class SettingsUI {
    */
   _addImportExportButtons() {
     // Find the settings panel (look for a good place to put these buttons)
-    const panel = document.querySelector('.settings-panel') || 
-                  document.querySelector('aside') ||
-                  document.querySelector('#sidebar');
-    
+    const panel = document.querySelector('.settings-panel') ||
+      document.querySelector('.sidebar') ||
+      document.querySelector('aside') ||
+      document.querySelector('#sidebar');
     if (!panel) {
       console.warn('[SettingsUI] Could not find panel for import/export buttons');
       return;
     }
-    
+
     // Create a settings management section
     const section = document.createElement('div');
     section.className = 'settings-management';
@@ -365,14 +357,14 @@ class SettingsUI {
         Import a previously exported file to restore settings.
       </p>
     `;
-    
+
     panel.appendChild(section);
-    
+
     // Wire export button
     document.getElementById('export-settings-btn').addEventListener('click', () => {
       this._exportSettings();
     });
-    
+
     // Wire import button
     document.getElementById('import-settings-btn').addEventListener('click', () => {
       this._showImportDialog();
@@ -385,7 +377,7 @@ class SettingsUI {
    */
   _exportSettings() {
     const yamlContent = this.settings.toYAML();
-    
+
     // Create a blob and download
     const blob = new Blob([yamlContent], { type: 'text/yaml' });
     const url = URL.createObjectURL(blob);
@@ -396,7 +388,7 @@ class SettingsUI {
     link.click();
     document.body.removeChild(link);
     URL.revokeObjectURL(url);
-    
+
     console.log('[SettingsUI] Settings exported');
   }
 
@@ -408,17 +400,17 @@ class SettingsUI {
     const input = document.createElement('input');
     input.type = 'file';
     input.accept = '.yaml,.yml';
-    
+
     input.addEventListener('change', (e) => {
       const file = e.target.files[0];
       if (!file) return;
-      
+
       const reader = new FileReader();
       reader.onload = (event) => {
         try {
           const yamlContent = event.target.result;
           const importedSettings = this.settings.parseYAML(yamlContent);
-          
+
           // Validate all settings before applying any
           const errors = [];
           for (const [key, value] of Object.entries(importedSettings)) {
@@ -428,13 +420,13 @@ class SettingsUI {
               errors.push(`${key}: ${error.message}`);
             }
           }
-          
+
           if (errors.length > 0) {
             alert('Settings import cancelled due to validation errors:\n' + errors.join('\n'));
             console.log('[SettingsUI] Import validation failed; no settings changed');
             return;
           }
-          
+
           // All settings validated; apply atomically
           this.settings.updateSettings(importedSettings);
           alert('Settings imported successfully!');
@@ -444,10 +436,10 @@ class SettingsUI {
           console.error('[SettingsUI] Import error:', error);
         }
       };
-      
+
       reader.readAsText(file);
     });
-    
+
     document.body.appendChild(input);
     input.click();
     document.body.removeChild(input);
