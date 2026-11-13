@@ -56,7 +56,7 @@ class VisualizationSettings {
       gridOpacity: 0.3,               // Grid line opacity (0-1)
 
       // Toggle parameters
-      showNodeDates: false,           // Display divergence age estimates
+      showNodeDates: true,            // Display divergence age estimates
       showAncestralLabels: false,     // Display clade names on ancestral nodes
 
       // Root-proximity edge weighting
@@ -337,7 +337,7 @@ class VisualizationSettings {
       // Toggles
       showNodeDates: {
         type: 'boolean',
-        default: false,
+        default: true,
         description: 'Display divergence age estimates on nodes',
         category: 'controls',
       },
