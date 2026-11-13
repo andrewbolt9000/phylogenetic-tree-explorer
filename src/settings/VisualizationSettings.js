@@ -71,6 +71,17 @@ class VisualizationSettings {
       lockRootPosition: true,
       windDirection: 0,
       windStrength: 0,
+
+      // Hover highlight settings
+      hoverHighlightSize: 15,         // Radius of hover highlight circle (5-100px)
+      hoverHighlightXOffset: 0,       // Horizontal offset in pixels (-50 to 50)
+      hoverHighlightYOffset: 0,       // Vertical offset in pixels (-50 to 50)
+
+      // Silhouette shadow settings
+      silhouetteShadowEnabled: true,  // Whether to display shadows
+      silhouetteShadowXOffset: 2,     // Horizontal offset in pixels (-20 to 20)
+      silhouetteShadowYOffset: 2,     // Vertical offset in pixels (-20 to 20)
+      silhouetteShadowOpacity: 0.3,   // Shadow opacity (0-1)
     };
   }
 
@@ -455,6 +466,64 @@ class VisualizationSettings {
         description: 'Opacity of grid lines (0-1)',
         category: 'appearance',
       },
+
+      // Hover highlight settings
+      hoverHighlightSize: {
+        type: 'integer',
+        min: 5,
+        max: 100,
+        default: 15,
+        description: 'Radius of the hover highlight circle in pixels',
+        category: 'appearance',
+      },
+      hoverHighlightXOffset: {
+        type: 'integer',
+        min: -50,
+        max: 50,
+        default: 0,
+        description: 'Horizontal offset of hover highlight in pixels',
+        category: 'appearance',
+      },
+      hoverHighlightYOffset: {
+        type: 'integer',
+        min: -50,
+        max: 50,
+        default: 0,
+        description: 'Vertical offset of hover highlight in pixels',
+        category: 'appearance',
+      },
+
+      // Silhouette shadow settings
+      silhouetteShadowEnabled: {
+        type: 'boolean',
+        default: true,
+        description: 'Display shadow effects beneath silhouettes',
+        category: 'appearance',
+      },
+      silhouetteShadowXOffset: {
+        type: 'integer',
+        min: -20,
+        max: 20,
+        default: 2,
+        description: 'Horizontal offset of silhouette shadow in pixels',
+        category: 'appearance',
+      },
+      silhouetteShadowYOffset: {
+        type: 'integer',
+        min: -20,
+        max: 20,
+        default: 2,
+        description: 'Vertical offset of silhouette shadow in pixels',
+        category: 'appearance',
+      },
+      silhouetteShadowOpacity: {
+        type: 'number',
+        min: 0,
+        max: 1,
+        default: 0.3,
+        description: 'Opacity of silhouette shadows (0-1)',
+        category: 'appearance',
+      },
     };
   }
 
@@ -509,6 +578,17 @@ class VisualizationSettings {
       `gridMediumLineWidth: ${this.settings.gridMediumLineWidth.toFixed(2)}  # Medium line width (0.25-5 px)`,
       `gridMajorLineWidth: ${this.settings.gridMajorLineWidth.toFixed(2)}  # Major line width (0.25-5 px)`,
       `gridOpacity: ${this.settings.gridOpacity.toFixed(2)}  # Grid opacity (0-1)`,
+      '',
+      '# HOVER HIGHLIGHT',
+      `hoverHighlightSize: ${this.settings.hoverHighlightSize}  # Highlight circle radius (5-100px)`,
+      `hoverHighlightXOffset: ${this.settings.hoverHighlightXOffset}  # Horizontal offset (px)`,
+      `hoverHighlightYOffset: ${this.settings.hoverHighlightYOffset}  # Vertical offset (px)`,
+      '',
+      '# SILHOUETTE SHADOWS',
+      `silhouetteShadowEnabled: ${this.settings.silhouetteShadowEnabled}  # Display shadow effects`,
+      `silhouetteShadowXOffset: ${this.settings.silhouetteShadowXOffset}  # Horizontal offset (px)`,
+      `silhouetteShadowYOffset: ${this.settings.silhouetteShadowYOffset}  # Vertical offset (px)`,
+      `silhouetteShadowOpacity: ${this.settings.silhouetteShadowOpacity.toFixed(2)}  # Shadow opacity (0-1)`,
       '',
       '# TOGGLES',
       `showNodeDates: ${this.settings.showNodeDates}  # Show divergence estimates`,

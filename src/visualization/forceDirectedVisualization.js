@@ -95,6 +95,19 @@ class ForceDirectedVisualization {
     this.silhouetteOpacity = 1.0;  // Opacity (0-1)
     this.silhouetteGrayscale = 50;  // Grayscale (0=black, 50=gray, 100=white)
 
+    // Hover highlight settings
+    this.hoverHighlightSize = 15;
+    this.hoverHighlightXOffset = 0;
+    this.hoverHighlightYOffset = 0;
+    this.hoverHighlightCircle = null;  // D3 selection for hover highlight element
+    this.currentHoveredNodeId = null;
+
+    // Silhouette shadow settings
+    this.silhouetteShadowEnabled = true;
+    this.silhouetteShadowXOffset = 2;
+    this.silhouetteShadowYOffset = 2;
+    this.silhouetteShadowOpacity = 0.3;
+
     // Grid parameters
     this.showGrid = true;
     this.gridSpacing = 50;  // Distance between minor grid lines in pixels
@@ -317,13 +330,35 @@ class ForceDirectedVisualization {
     // Add drag behavior to the entire node group
     nodeGroups.call(this._addDragBehavior.bind(this));
 
-    // Add hover effect to grey circles
+    // Create hover highlight circle
+    this.hoverHighlightCircle = this.g.insert('circle', ':first-child')
+      .attr('class', 'hover-highlight')
+      .attr('r', this.hoverHighlightSize)
+      .attr('fill', '#333')
+      .attr('opacity', 0)
+      .attr('pointer-events', 'none');
+
+    // Add hover event handling for nodes
     this.nodeCircles
-      .on('mouseenter', function() {
-        d3.select(this).attr('opacity', 0.8);
+      .on('mouseenter', (event, d) => {
+        this.currentHoveredNodeId = d.id;
+        d3.select(event.target).attr('opacity', 0.8);
+        // Position and show hover highlight
+        this.hoverHighlightCircle
+          .attr('cx', d.x + this.hoverHighlightXOffset)
+          .attr('cy', d.y + this.hoverHighlightYOffset)
+          .transition()
+          .duration(100)
+          .attr('opacity', 0.2);
       })
-      .on('mouseleave', function() {
-        d3.select(this).attr('opacity', 0.6);
+      .on('mouseleave', (event, d) => {
+        this.currentHoveredNodeId = null;
+        d3.select(event.target).attr('opacity', 0.6);
+        // Hide hover highlight
+        this.hoverHighlightCircle
+          .transition()
+          .duration(100)
+          .attr('opacity', 0);
       });
   }
 
@@ -345,6 +380,33 @@ class ForceDirectedVisualization {
         // Base size is 5x the node circle, adjusted by silhouetteSizePercent
         const baseSize = this._getNodeCircleRadius(d) * 5;
         const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+        
+        // Create shadow image first (so it renders behind the main silhouette)
+        if (this.silhouetteShadowEnabled) {
+          const shadowGroup = group
+            .append('g')
+            .attr('class', 'silhouette-shadow-group')
+            .attr('transform', `translate(${this.silhouetteXOffset + this.silhouetteShadowXOffset},${this.silhouetteYOffset + this.silhouetteShadowYOffset})`);
+          
+          shadowGroup
+            .append('image')
+            .attr('class', 'silhouette-shadow')
+            .attr('x', -silhouetteSize / 2)
+            .attr('y', -silhouetteSize / 2)
+            .attr('width', silhouetteSize)
+            .attr('height', silhouetteSize)
+            .attr('preserveAspectRatio', 'xMidYMid meet')
+            .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
+            .attr('opacity', this.silhouetteShadowOpacity)
+            .attr('pointer-events', 'none')
+            .style('mix-blend-mode', 'multiply')
+            .on('load', function() {
+              console.log(`[Silhouette Shadow] Loaded: ${d.silhouetteFilename}`);
+            })
+            .on('error', function() {
+              console.warn(`[Silhouette Shadow] Failed to load: ${d.silhouetteFilename}`);
+            });
+        }
         
         // Create an image element with SVG-specific attributes
         // Use <image> with proper scaling and SVG support
@@ -668,6 +730,16 @@ class ForceDirectedVisualization {
     this.g.selectAll('g.node-group')
       .attr('transform', d => `translate(${d.x},${d.y})`);
 
+    // Update hover highlight position if a node is hovered
+    if (this.currentHoveredNodeId !== null) {
+      const hoveredNode = this.nodes.find(n => n.id === this.currentHoveredNodeId);
+      if (hoveredNode) {
+        this.hoverHighlightCircle
+          .attr('cx', hoveredNode.x + this.hoverHighlightXOffset)
+          .attr('cy', hoveredNode.y + this.hoverHighlightYOffset);
+      }
+    }
+
     // Update text positions (text layer elements track their corresponding nodes)
     // Text layer inherits viewport zoom/pan transform, but needs individual node coordinates
     if (this.textLayer) {
@@ -685,6 +757,38 @@ class ForceDirectedVisualization {
         // Note: offset is applied via translate, not by moving the image x/y
         return `translate(${this.silhouetteXOffset},${this.silhouetteYOffset})`;
       });
+
+    // Update silhouette shadow transforms if shadows are enabled
+    if (this.silhouetteShadowEnabled) {
+      this.g.selectAll('g.silhouette-shadow-group')
+        .attr('transform', d => {
+          const baseSize = this._getNodeCircleRadius(d) * 5;
+          const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+          return `translate(${this.silhouetteXOffset + this.silhouetteShadowXOffset},${this.silhouetteYOffset + this.silhouetteShadowYOffset})`;
+        });
+
+      // Update shadow image sizes
+      this.g.selectAll('image.silhouette-shadow')
+        .attr('x', d => {
+          const baseSize = this._getNodeCircleRadius(d) * 5;
+          const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+          return -silhouetteSize / 2;
+        })
+        .attr('y', d => {
+          const baseSize = this._getNodeCircleRadius(d) * 5;
+          const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
+          return -silhouetteSize / 2;
+        })
+        .attr('width', d => {
+          const baseSize = this._getNodeCircleRadius(d) * 5;
+          return baseSize * (this.silhouetteSizePercent / 100);
+        })
+        .attr('height', d => {
+          const baseSize = this._getNodeCircleRadius(d) * 5;
+          return baseSize * (this.silhouetteSizePercent / 100);
+        })
+        .attr('opacity', this.silhouetteShadowOpacity);
+    }
 
     // Update silhouette image sizes within the group
     this.g.selectAll('image.silhouette')
@@ -1701,6 +1805,71 @@ class ForceDirectedVisualization {
   setGridOpacity(opacity) {
     this.gridOpacity = Math.max(0, Math.min(1, Number(opacity)));
     this._updateGridAppearance();
+  }
+
+  /**
+   * Set hover highlight circle size.
+   * @param {number} size - Radius in pixels
+   */
+  setHoverHighlightSize(size) {
+    this.hoverHighlightSize = Math.max(5, Math.min(100, Number(size)));
+    if (this.hoverHighlightCircle) {
+      this.hoverHighlightCircle.attr('r', this.hoverHighlightSize);
+    }
+  }
+
+  /**
+   * Set hover highlight X offset.
+   * @param {number} offset - X offset in pixels
+   */
+  setHoverHighlightXOffset(offset) {
+    this.hoverHighlightXOffset = Math.max(-50, Math.min(50, Number(offset)));
+    // Position will be updated on next tick if hovering
+  }
+
+  /**
+   * Set hover highlight Y offset.
+   * @param {number} offset - Y offset in pixels
+   */
+  setHoverHighlightYOffset(offset) {
+    this.hoverHighlightYOffset = Math.max(-50, Math.min(50, Number(offset)));
+    // Position will be updated on next tick if hovering
+  }
+
+  /**
+   * Set silhouette shadow enabled/disabled.
+   * @param {boolean} enabled - Whether to show shadows
+   */
+  setSilhouetteShadowEnabled(enabled) {
+    this.silhouetteShadowEnabled = Boolean(enabled);
+    // Shadows are updated on next tick or re-render
+  }
+
+  /**
+   * Set silhouette shadow X offset.
+   * @param {number} offset - X offset in pixels
+   */
+  setSilhouetteShadowXOffset(offset) {
+    this.silhouetteShadowXOffset = Math.max(-20, Math.min(20, Number(offset)));
+    // Position will be updated on next tick
+  }
+
+  /**
+   * Set silhouette shadow Y offset.
+   * @param {number} offset - Y offset in pixels
+   */
+  setSilhouetteShadowYOffset(offset) {
+    this.silhouetteShadowYOffset = Math.max(-20, Math.min(20, Number(offset)));
+    // Position will be updated on next tick
+  }
+
+  /**
+   * Set silhouette shadow opacity.
+   * @param {number} opacity - Opacity (0-1)
+   */
+  setSilhouetteShadowOpacity(opacity) {
+    this.silhouetteShadowOpacity = Math.max(0, Math.min(1, Number(opacity)));
+    // Opacity will be updated on next tick
   }
 
   /**

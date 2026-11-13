@@ -57,6 +57,17 @@ class SettingsUI {
       'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
       'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
 
+      // Hover highlight controls
+      'hover-highlight-size-slider': { setting: 'hoverHighlightSize', transform: v => parseInt(v), display: 'hover-highlight-size-value', suffix: 'px' },
+      'hover-highlight-x-offset-slider': { setting: 'hoverHighlightXOffset', transform: v => parseInt(v), display: 'hover-highlight-x-offset-value', suffix: 'px' },
+      'hover-highlight-y-offset-slider': { setting: 'hoverHighlightYOffset', transform: v => parseInt(v), display: 'hover-highlight-y-offset-value', suffix: 'px' },
+
+      // Silhouette shadow controls
+      'silhouette-shadow-enabled-toggle': { setting: 'silhouetteShadowEnabled', transform: v => v.checked, isToggle: true },
+      'silhouette-shadow-x-offset-slider': { setting: 'silhouetteShadowXOffset', transform: v => parseInt(v), display: 'silhouette-shadow-x-offset-value', suffix: 'px' },
+      'silhouette-shadow-y-offset-slider': { setting: 'silhouetteShadowYOffset', transform: v => parseInt(v), display: 'silhouette-shadow-y-offset-value', suffix: 'px' },
+      'silhouette-shadow-opacity-slider': { setting: 'silhouetteShadowOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-shadow-opacity-value', suffix: '%' },
+
       // Grid controls
       'show-grid-toggle': { setting: 'showGrid', transform: v => v.checked, isToggle: true },
       'grid-spacing-slider': { setting: 'gridSpacing', transform: v => parseInt(v), display: 'grid-spacing-value' },
@@ -333,6 +344,32 @@ class SettingsUI {
     if (settings.gridOpacity !== undefined) {
       this.viz.setGridOpacity(settings.gridOpacity);
     }
+    
+    // Apply hover highlight parameters
+    if (settings.hoverHighlightSize !== undefined) {
+      this.viz.setHoverHighlightSize(settings.hoverHighlightSize);
+    }
+    if (settings.hoverHighlightXOffset !== undefined) {
+      this.viz.setHoverHighlightXOffset(settings.hoverHighlightXOffset);
+    }
+    if (settings.hoverHighlightYOffset !== undefined) {
+      this.viz.setHoverHighlightYOffset(settings.hoverHighlightYOffset);
+    }
+
+    // Apply silhouette shadow parameters
+    if (settings.silhouetteShadowEnabled !== undefined) {
+      this.viz.setSilhouetteShadowEnabled(settings.silhouetteShadowEnabled);
+    }
+    if (settings.silhouetteShadowXOffset !== undefined) {
+      this.viz.setSilhouetteShadowXOffset(settings.silhouetteShadowXOffset);
+    }
+    if (settings.silhouetteShadowYOffset !== undefined) {
+      this.viz.setSilhouetteShadowYOffset(settings.silhouetteShadowYOffset);
+    }
+    if (settings.silhouetteShadowOpacity !== undefined) {
+      this.viz.setSilhouetteShadowOpacity(settings.silhouetteShadowOpacity);
+    }
+
     if (settings.showAncestralLabels !== undefined) {
       // Note: these require additional data, handled separately
     }

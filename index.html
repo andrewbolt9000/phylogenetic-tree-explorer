@@ -542,6 +542,92 @@
           </p>
         </div>
 
+        <h2>Hover Highlight</h2>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Highlight Size</span>
+            <span class="control-value" id="hover-highlight-size-value">15px</span>
+          </div>
+          <input type="range" id="hover-highlight-size-slider"
+                 min="5" max="100" value="15" step="1">
+          <p class="info-text">
+            Radius of the circle that appears when hovering over a node.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Highlight X Offset</span>
+            <span class="control-value" id="hover-highlight-x-offset-value">0px</span>
+          </div>
+          <input type="range" id="hover-highlight-x-offset-slider"
+                 min="-50" max="50" value="0" step="1">
+          <p class="info-text">
+            Horizontal offset of highlight from node center.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Highlight Y Offset</span>
+            <span class="control-value" id="hover-highlight-y-offset-value">0px</span>
+          </div>
+          <input type="range" id="hover-highlight-y-offset-slider"
+                 min="-50" max="50" value="0" step="1">
+          <p class="info-text">
+            Vertical offset of highlight from node center.
+          </p>
+        </div>
+
+        <h2>Silhouette Shadows</h2>
+
+        <div class="control-group">
+          <label class="checkbox-label">
+            <input type="checkbox" id="silhouette-shadow-enabled-toggle" checked>
+            <span>Enable Shadows</span>
+          </label>
+          <p class="info-text">
+            Display shadow effects beneath animal silhouettes.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Shadow X Offset</span>
+            <span class="control-value" id="silhouette-shadow-x-offset-value">2px</span>
+          </div>
+          <input type="range" id="silhouette-shadow-x-offset-slider"
+                 min="-20" max="20" value="2" step="1">
+          <p class="info-text">
+            Horizontal offset of shadow from silhouette.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Shadow Y Offset</span>
+            <span class="control-value" id="silhouette-shadow-y-offset-value">2px</span>
+          </div>
+          <input type="range" id="silhouette-shadow-y-offset-slider"
+                 min="-20" max="20" value="2" step="1">
+          <p class="info-text">
+            Vertical offset of shadow from silhouette.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Shadow Opacity</span>
+            <span class="control-value" id="silhouette-shadow-opacity-value">30%</span>
+          </div>
+          <input type="range" id="silhouette-shadow-opacity-slider"
+                 min="0" max="100" value="30" step="5">
+          <p class="info-text">
+            Transparency of shadow: 0% = invisible, 100% = fully opaque.
+          </p>
+        </div>
+
         <h2>Grid</h2>
 
         <div class="control-group">

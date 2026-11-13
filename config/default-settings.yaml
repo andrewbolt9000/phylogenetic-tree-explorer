@@ -37,6 +37,17 @@ gridMediumLineWidth: 1.50  # Medium line width (0.25-5 px)
 gridMajorLineWidth: 2.75  # Major line width (0.25-5 px)
 gridOpacity: 0.25  # Grid opacity (0-1)
 
+# HOVER HIGHLIGHT
+hoverHighlightSize: 15  # Highlight circle radius (5-100px)
+hoverHighlightXOffset: 0  # Horizontal offset (px)
+hoverHighlightYOffset: 0  # Vertical offset (px)
+
+# SILHOUETTE SHADOWS
+silhouetteShadowEnabled: true  # Display shadow effects
+silhouetteShadowXOffset: 2  # Horizontal offset (px)
+silhouetteShadowYOffset: 2  # Vertical offset (px)
+silhouetteShadowOpacity: 0.30  # Shadow opacity (0-1)
+
 # TOGGLES
 showNodeDates: true  # Show divergence estimates
 nodeDateFontSize: 8  # Node date font size (6-16px)
