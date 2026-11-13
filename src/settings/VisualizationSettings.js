@@ -46,6 +46,14 @@ class VisualizationSettings {
       silhouetteGrayscale: 50,        // Grayscale amount (0-100, 0=black, 100=white)
       silhouetteOpacity: 1.0,         // Opacity (0-1)
 
+      // Grid parameters
+      showGrid: true,                 // Whether to display the grid
+      gridSpacing: 50,                // Distance between minor grid lines (10-200 pixels)
+      gridMinorLineWidth: 0.5,        // Width of ordinary grid lines (0.25-5 px)
+      gridMediumLineWidth: 1.0,       // Width of every-fifth-line (0.25-5 px)
+      gridMajorLineWidth: 1.5,        // Width of every-tenth-line (0.25-5 px)
+      gridOpacity: 0.3,               // Grid line opacity (0-1)
+
       // Toggle parameters
       showNodeDates: false,           // Display divergence age estimates
       showAncestralLabels: false,     // Display clade names on ancestral nodes
@@ -374,6 +382,54 @@ class VisualizationSettings {
         description: 'Directional wind force (UI 0-2000, internal 0-1.0 via /2000 conversion; 0 disables wind). Wind applies constant acceleration independent of simulation cooling.',
         category: 'forces',
       },
+
+      // Grid parameters
+      showGrid: {
+        type: 'boolean',
+        default: true,
+        description: 'Display the background grid',
+        category: 'appearance',
+      },
+      gridSpacing: {
+        type: 'integer',
+        min: 10,
+        max: 200,
+        default: 50,
+        description: 'Distance between minor grid lines in pixels',
+        category: 'appearance',
+      },
+      gridMinorLineWidth: {
+        type: 'number',
+        min: 0.25,
+        max: 5,
+        default: 0.5,
+        description: 'Stroke width of ordinary grid lines',
+        category: 'appearance',
+      },
+      gridMediumLineWidth: {
+        type: 'number',
+        min: 0.25,
+        max: 5,
+        default: 1.0,
+        description: 'Stroke width of every-fifth grid line',
+        category: 'appearance',
+      },
+      gridMajorLineWidth: {
+        type: 'number',
+        min: 0.25,
+        max: 5,
+        default: 1.5,
+        description: 'Stroke width of every-tenth grid line',
+        category: 'appearance',
+      },
+      gridOpacity: {
+        type: 'number',
+        min: 0,
+        max: 1,
+        default: 0.3,
+        description: 'Opacity of grid lines (0-1)',
+        category: 'appearance',
+      },
     };
   }
 
@@ -419,6 +475,14 @@ class VisualizationSettings {
       `silhouetteYOffset: ${this.settings.silhouetteYOffset}  # Vertical offset (px)`,
       `silhouetteGrayscale: ${this.settings.silhouetteGrayscale}  # Grayscale (0-100, 0=black, 100=white)`,
       `silhouetteOpacity: ${this.settings.silhouetteOpacity.toFixed(2)}  # Opacity (0-1)`,
+      '',
+      '# GRID',
+      `showGrid: ${this.settings.showGrid}  # Display the background grid`,
+      `gridSpacing: ${this.settings.gridSpacing}  # Distance between minor lines (10-200 px)`,
+      `gridMinorLineWidth: ${this.settings.gridMinorLineWidth.toFixed(2)}  # Minor line width (0.25-5 px)`,
+      `gridMediumLineWidth: ${this.settings.gridMediumLineWidth.toFixed(2)}  # Medium line width (0.25-5 px)`,
+      `gridMajorLineWidth: ${this.settings.gridMajorLineWidth.toFixed(2)}  # Major line width (0.25-5 px)`,
+      `gridOpacity: ${this.settings.gridOpacity.toFixed(2)}  # Grid opacity (0-1)`,
       '',
       '# TOGGLES',
       `showNodeDates: ${this.settings.showNodeDates}  # Show divergence estimates`,

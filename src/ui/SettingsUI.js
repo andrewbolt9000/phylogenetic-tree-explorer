@@ -111,6 +111,14 @@ class SettingsUI {
       'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
       'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
       
+      // Grid controls
+      'show-grid-toggle': { setting: 'showGrid', transform: v => v.checked, isToggle: true },
+      'grid-spacing-slider': { setting: 'gridSpacing', transform: v => parseInt(v), display: 'grid-spacing-value' },
+      'grid-minor-width-slider': { setting: 'gridMinorLineWidth', transform: v => parseFloat(v), display: 'grid-minor-width-value' },
+      'grid-medium-width-slider': { setting: 'gridMediumLineWidth', transform: v => parseFloat(v), display: 'grid-medium-width-value' },
+      'grid-major-width-slider': { setting: 'gridMajorLineWidth', transform: v => parseFloat(v), display: 'grid-major-width-value' },
+      'grid-opacity-slider': { setting: 'gridOpacity', transform: v => parseFloat(v), display: 'grid-opacity-value' },
+      
       // Toggle controls
       'show-node-dates-toggle': { setting: 'showNodeDates', transform: v => v.checked, isToggle: true },
       'show-ancestral-labels-toggle': { setting: 'showAncestralLabels', transform: v => v.checked, isToggle: true },
@@ -186,12 +194,18 @@ class SettingsUI {
       silhouetteYOffset: 'silhouette-y-offset-slider',
       silhouetteGrayscale: 'silhouette-grayscale-slider',
       silhouetteOpacity: 'silhouette-opacity-slider',
+      gridSpacing: 'grid-spacing-slider',
+      gridMinorLineWidth: 'grid-minor-width-slider',
+      gridMediumLineWidth: 'grid-medium-width-slider',
+      gridMajorLineWidth: 'grid-major-width-slider',
+      gridOpacity: 'grid-opacity-slider',
     };
     
     const toggleMap = {
       lockRootPosition: 'lock-root-position-toggle',
       showNodeDates: 'show-node-dates-toggle',
       showAncestralLabels: 'show-ancestral-labels-toggle',
+      showGrid: 'show-grid-toggle',
     };
     
     // Update sliders
@@ -293,6 +307,26 @@ class SettingsUI {
     // Apply toggle parameters
     if (settings.showNodeDates !== undefined) {
       // Note: these require additional data, handled separately
+    }
+    
+    // Apply grid parameters
+    if (settings.showGrid !== undefined) {
+      this.viz.setShowGrid(settings.showGrid);
+    }
+    if (settings.gridSpacing !== undefined) {
+      this.viz.setGridSpacing(settings.gridSpacing);
+    }
+    if (settings.gridMinorLineWidth !== undefined) {
+      this.viz.setGridMinorLineWidth(settings.gridMinorLineWidth);
+    }
+    if (settings.gridMediumLineWidth !== undefined) {
+      this.viz.setGridMediumLineWidth(settings.gridMediumLineWidth);
+    }
+    if (settings.gridMajorLineWidth !== undefined) {
+      this.viz.setGridMajorLineWidth(settings.gridMajorLineWidth);
+    }
+    if (settings.gridOpacity !== undefined) {
+      this.viz.setGridOpacity(settings.gridOpacity);
     }
     if (settings.showAncestralLabels !== undefined) {
       // Note: these require additional data, handled separately

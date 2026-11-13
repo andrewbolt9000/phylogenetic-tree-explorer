@@ -94,6 +94,15 @@ class ForceDirectedVisualization {
     this.silhouetteOpacity = 1.0;  // Opacity (0-1)
     this.silhouetteGrayscale = 50;  // Grayscale (0=black, 50=gray, 100=white)
 
+    // Grid parameters
+    this.showGrid = true;
+    this.gridSpacing = 50;  // Distance between minor grid lines in pixels
+    this.gridMinorLineWidth = 0.5;  // Width of ordinary grid lines
+    this.gridMediumLineWidth = 1.0;  // Width of every fifth line
+    this.gridMajorLineWidth = 1.5;  // Width of every tenth line
+    this.gridOpacity = 0.3;  // Opacity of grid (0-1)
+    this.gridElement = null;  // SVG group containing grid lines
+
     // Node date display
     this.showNodeDates = false;
     this.divergenceData = this.options.divergenceData || null;  // Can be set during construction or later
@@ -169,15 +178,18 @@ class ForceDirectedVisualization {
     // Clear any existing SVG
     d3.select(`#${this.containerId}`).selectAll('svg').remove();
 
-    // Create SVG
+    // Create SVG with light blue background
     this.svg = d3.select(`#${this.containerId}`)
       .append('svg')
       .attr('width', this.options.width)
       .attr('height', this.options.height)
-      .attr('style', 'border: 1px solid #ccc; background: #fafafa;');
+      .attr('style', 'border: 1px solid #ccc; background: #e8f4f8;');
 
     // Add a group for the graph content (for panning)
     this.g = this.svg.append('g');
+
+    // Render grid as the first element in this.g so it appears behind everything
+    this._renderGrid();
 
     // Compute node depths for root link strength modifiers
     this.nodeDepths = this._computeNodeDepths();
@@ -1519,6 +1531,197 @@ class ForceDirectedVisualization {
     // Use a small alphaTarget to maintain gentle cooling while wind persists.
     this.simulation.alphaTarget(0.1);
     this.simulation.alpha(0.3).restart();
+  }
+
+  /**
+   * Render the graph-paper grid as the first element in this.g.
+   * The grid participates in zoom/pan transforms and uses SVG patterns
+   * to avoid visible edge artifacts.
+   * @private
+   */
+  _renderGrid() {
+    // Remove existing grid if present
+    d3.select(this.g).selectAll('g.grid-container').remove();
+
+    if (!this.showGrid) {
+      this.gridElement = null;
+      return;
+    }
+
+    // Create a grid container group
+    this.gridElement = d3.select(this.g)
+      .insert('g', ':first-child')
+      .attr('class', 'grid-container')
+      .attr('opacity', this.gridOpacity);
+
+    // Create pattern definitions for grid lines
+    const defs = this.svg.selectAll('defs').data([null]).enter().append('defs');
+    
+    // Remove old patterns
+    defs.selectAll('pattern.grid-pattern').remove();
+
+    // Create a pattern for the grid
+    const pattern = defs.append('pattern')
+      .attr('class', 'grid-pattern')
+      .attr('id', 'grid-pattern')
+      .attr('x', this.gridSpacing)
+      .attr('y', this.gridSpacing)
+      .attr('width', this.gridSpacing)
+      .attr('height', this.gridSpacing)
+      .attr('patternUnits', 'userSpaceOnUse');
+
+    // Draw vertical line in the pattern
+    pattern.append('line')
+      .attr('x1', this.gridSpacing)
+      .attr('y1', 0)
+      .attr('x2', this.gridSpacing)
+      .attr('y2', this.gridSpacing)
+      .attr('stroke', '#4a9fb5')
+      .attr('stroke-width', this.gridMinorLineWidth);
+
+    // Draw horizontal line in the pattern
+    pattern.append('line')
+      .attr('x1', 0)
+      .attr('y1', this.gridSpacing)
+      .attr('x2', this.gridSpacing)
+      .attr('y2', this.gridSpacing)
+      .attr('stroke', '#4a9fb5')
+      .attr('stroke-width', this.gridMinorLineWidth);
+
+    // Add medium and major grid lines using explicit line rendering
+    // This allows finer control over which lines get which widths
+    const range = 5000; // Large enough to cover panned and zoomed viewports
+    
+    // Draw minor grid lines
+    for (let x = -range; x <= range; x += this.gridSpacing) {
+      let lineWidth = this.gridMinorLineWidth;
+      
+      // Determine if this is a medium (every 5th) or major (every 10th) line
+      const lineIndex = Math.round(x / this.gridSpacing);
+      if (lineIndex % 10 === 0) {
+        lineWidth = this.gridMajorLineWidth;
+      } else if (lineIndex % 5 === 0) {
+        lineWidth = this.gridMediumLineWidth;
+      }
+
+      this.gridElement.append('line')
+        .attr('class', `grid-line grid-line-${lineIndex % 10 === 0 ? 'major' : lineIndex % 5 === 0 ? 'medium' : 'minor'}`)
+        .attr('x1', x)
+        .attr('y1', -range)
+        .attr('x2', x)
+        .attr('y2', range)
+        .attr('stroke', '#4a9fb5')
+        .attr('stroke-width', lineWidth);
+    }
+
+    // Draw horizontal grid lines
+    for (let y = -range; y <= range; y += this.gridSpacing) {
+      let lineWidth = this.gridMinorLineWidth;
+      
+      const lineIndex = Math.round(y / this.gridSpacing);
+      if (lineIndex % 10 === 0) {
+        lineWidth = this.gridMajorLineWidth;
+      } else if (lineIndex % 5 === 0) {
+        lineWidth = this.gridMediumLineWidth;
+      }
+
+      this.gridElement.append('line')
+        .attr('class', `grid-line grid-line-${lineIndex % 10 === 0 ? 'major' : lineIndex % 5 === 0 ? 'medium' : 'minor'}`)
+        .attr('x1', -range)
+        .attr('y1', y)
+        .attr('x2', range)
+        .attr('y2', y)
+        .attr('stroke', '#4a9fb5')
+        .attr('stroke-width', lineWidth);
+    }
+  }
+
+  /**
+   * Update grid appearance (spacing, line widths, opacity).
+   * Called when any grid setting changes.
+   * @private
+   */
+  _updateGridAppearance() {
+    if (!this.gridElement) return;
+
+    // Update all minor grid lines
+    d3.selectAll('line.grid-line-minor')
+      .attr('stroke-width', this.gridMinorLineWidth);
+
+    // Update all medium grid lines
+    d3.selectAll('line.grid-line-medium')
+      .attr('stroke-width', this.gridMediumLineWidth);
+
+    // Update all major grid lines
+    d3.selectAll('line.grid-line-major')
+      .attr('stroke-width', this.gridMajorLineWidth);
+
+    // Update opacity
+    d3.select(this.g).selectAll('g.grid-container')
+      .attr('opacity', this.gridOpacity);
+  }
+
+  /**
+   * Set whether the grid is visible.
+   * @param {boolean} show - Whether to show the grid
+   */
+  setShowGrid(show) {
+    this.showGrid = Boolean(show);
+    if (this.showGrid) {
+      this._renderGrid();
+    } else {
+      // Hide without removing, so re-enabling is quick
+      if (this.gridElement) {
+        d3.select(this.g).selectAll('g.grid-container')
+          .style('display', 'none');
+      }
+    }
+  }
+
+  /**
+   * Set the spacing between minor grid lines.
+   * @param {number} spacing - Distance in pixels
+   */
+  setGridSpacing(spacing) {
+    this.gridSpacing = Math.max(10, Math.min(200, Number(spacing)));
+    // Re-render the entire grid when spacing changes
+    this._renderGrid();
+  }
+
+  /**
+   * Set the width of minor grid lines.
+   * @param {number} width - Stroke width in pixels
+   */
+  setGridMinorLineWidth(width) {
+    this.gridMinorLineWidth = Math.max(0.25, Math.min(5, Number(width)));
+    this._updateGridAppearance();
+  }
+
+  /**
+   * Set the width of medium grid lines (every 5th).
+   * @param {number} width - Stroke width in pixels
+   */
+  setGridMediumLineWidth(width) {
+    this.gridMediumLineWidth = Math.max(0.25, Math.min(5, Number(width)));
+    this._updateGridAppearance();
+  }
+
+  /**
+   * Set the width of major grid lines (every 10th).
+   * @param {number} width - Stroke width in pixels
+   */
+  setGridMajorLineWidth(width) {
+    this.gridMajorLineWidth = Math.max(0.25, Math.min(5, Number(width)));
+    this._updateGridAppearance();
+  }
+
+  /**
+   * Set the opacity of all grid lines.
+   * @param {number} opacity - Opacity value (0-1)
+   */
+  setGridOpacity(opacity) {
+    this.gridOpacity = Math.max(0, Math.min(1, Number(opacity)));
+    this._updateGridAppearance();
   }
 
   /**
