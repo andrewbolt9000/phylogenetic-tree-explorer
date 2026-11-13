@@ -39,4 +39,6 @@ gridOpacity: 0.25  # Grid opacity (0-1)
 
 # TOGGLES
 showNodeDates: true  # Show divergence estimates
+nodeDateFontSize: 8  # Node date font size (6-16px)
+showSpeciesEstablishmentDates: false  # Show species establishment dates (data pending)
 showAncestralLabels: false  # Show clade names

@@ -67,6 +67,8 @@ class SettingsUI {
 
       // Toggle controls
       'show-node-dates-toggle': { setting: 'showNodeDates', transform: v => v.checked, isToggle: true },
+      'node-date-font-size-slider': { setting: 'nodeDateFontSize', transform: v => parseInt(v), display: 'node-date-font-size-display', suffix: 'px' },
+      'show-species-establishment-dates-toggle': { setting: 'showSpeciesEstablishmentDates', transform: v => v.checked, isToggle: true },
       'show-ancestral-labels-toggle': { setting: 'showAncestralLabels', transform: v => v.checked, isToggle: true },
     };
   }
@@ -304,6 +306,12 @@ class SettingsUI {
     // Apply toggle parameters
     if (settings.showNodeDates !== undefined) {
       // Note: these require additional data, handled separately
+    }
+    if (settings.nodeDateFontSize !== undefined) {
+      this.viz.setNodeDateFontSize(settings.nodeDateFontSize);
+    }
+    if (settings.showSpeciesEstablishmentDates !== undefined) {
+      // Placeholder: data sources not yet available
     }
 
     // Apply grid parameters

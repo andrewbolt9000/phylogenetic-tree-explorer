@@ -57,6 +57,8 @@ class VisualizationSettings {
 
       // Toggle parameters
       showNodeDates: true,            // Display divergence age estimates
+      nodeDateFontSize: 8,            // Independent font size for node date labels (6-16px)
+      showSpeciesEstablishmentDates: false,  // Display species/taxon establishment/description dates (placeholder, data not yet available)
       showAncestralLabels: false,     // Display clade names on ancestral nodes
 
       // Root-proximity edge weighting
@@ -341,6 +343,20 @@ class VisualizationSettings {
         description: 'Display divergence age estimates on nodes',
         category: 'controls',
       },
+      nodeDateFontSize: {
+        type: 'integer',
+        min: 6,
+        max: 16,
+        default: 8,
+        description: 'Font size for node date labels in pixels',
+        category: 'appearance',
+      },
+      showSpeciesEstablishmentDates: {
+        type: 'boolean',
+        default: false,
+        description: 'Display species/taxon establishment/description dates (data not yet available)',
+        category: 'controls',
+      },
       showAncestralLabels: {
         type: 'boolean',
         default: false,
@@ -496,6 +512,8 @@ class VisualizationSettings {
       '',
       '# TOGGLES',
       `showNodeDates: ${this.settings.showNodeDates}  # Show divergence estimates`,
+      `nodeDateFontSize: ${this.settings.nodeDateFontSize}  # Node date font size (6-16px)`,
+      `showSpeciesEstablishmentDates: ${this.settings.showSpeciesEstablishmentDates}  # Show species establishment dates (data pending)`,
       `showAncestralLabels: ${this.settings.showAncestralLabels}  # Show clade names`,
     ];
 

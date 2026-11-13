@@ -106,6 +106,7 @@ class ForceDirectedVisualization {
 
     // Node date display
     this.showNodeDates = false;
+    this.nodeDateFontSize = 8;  // Font size in pixels (6-16)
     this.divergenceData = this.options.divergenceData || null;  // Can be set during construction or later
     this.hypothesisId = this.options.hypothesisId || null;  // The active hypothesis ID for data lookups (passed independently of display toggles)
     this.nodeDateLabels = null;
@@ -449,7 +450,7 @@ class ForceDirectedVisualization {
           d3.select(element).append('text')
             .attr('class', 'node-date-label')
             .attr('font-family', 'Jost, sans-serif')
-            .attr('font-size', `${this.fontSizeBase * 0.75}px`)
+            .attr('font-size', `${this.nodeDateFontSize}px`)
             .attr('text-anchor', 'middle')
             .attr('dy', '1.2em')
             .attr('fill', '#999')
@@ -458,11 +459,14 @@ class ForceDirectedVisualization {
         } else {
           // Update existing
           existingText
-            .attr('font-size', `${this.fontSizeBase * 0.75}px`)
+            .attr('font-size', `${this.nodeDateFontSize}px`)
             .text(datesByNodeId[d.id]);
         }
       }
     });
+    
+    // Store reference to all node date labels for font size updates
+    this.nodeDateLabels = this.g.selectAll('text.node-date-label');
     
     // Remove date labels from nodes that no longer have them
     this.g.selectAll('g.node-group').each((d, i, nodes) => {
@@ -1113,6 +1117,26 @@ class ForceDirectedVisualization {
     }
     
     this._renderDateLabels();
+  }
+
+  /**
+   * Set the font size for node date labels independently.
+   * @param {number} sizePixels - Font size in pixels (6-16)
+   */
+  setNodeDateFontSize(sizePixels) {
+    sizePixels = Math.max(6, Math.min(16, parseInt(sizePixels)));
+    this.nodeDateFontSize = sizePixels;
+    this._updateNodeDateFontSize();
+  }
+
+  /**
+   * Update font size of all node date labels.
+   * @private
+   */
+  _updateNodeDateFontSize() {
+    if (this.nodeDateLabels) {
+      this.nodeDateLabels.attr('font-size', `${this.nodeDateFontSize}px`);
+    }
   }
 
   /**
