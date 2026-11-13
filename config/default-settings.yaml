@@ -1,23 +1,23 @@
 # PhyloExplorer Visualization Settings
 # Version: 1.0
-# Generated at: 2026-11-13T00:53:40.213Z
+# Generated at: 2026-11-13T01:09:37.433Z
 
 # FORCES
-charge: 230  # Repulsion strength (0-1500)
+charge: 130  # Repulsion strength (0-1500)
 linkStrength: 0.45  # Link stiffness (0-1)
-rootLinkStrength: 971  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
+rootLinkStrength: 1058  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
 ageLinkStrength: 0.00  # Age-based modifier (UI 0-500, per Ma)
 topologyRepulsionX: 0  # Master control; 0 disables (UI 0-100, internal 0-10)
 topologyRepulsionA: 10  # Baseline offset (UI 0-100, internal 0-10)
 topologyRepulsionB: 10  # Force scale (UI 0-100, internal 0-10)
 lockRootPosition: true  # Keep root fixed in place
 windDirection: 0  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)
-windStrength: 0  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)
+windStrength: 38  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)
 
 # APPEARANCE
 backgroundWhiteLevel: 100  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)
-edgeThickness: 11.00  # Stroke width (0.5-11)
-nodeCircleSize: 1.70  # Node circle radius (0.5-2)
+edgeThickness: 8.25  # Stroke width (0.5-11)
+nodeCircleSize: 1.60  # Node circle radius (0.5-2)
 graphFontSize: 11  # Node label font (8-20px)
 sidebarFontSize: 15  # Sidebar font (10-20px)
 rootProximityWeighting: 0.00  # Edge thickness near root (0-1)
@@ -25,17 +25,17 @@ rootProximityWeighting: 0.00  # Edge thickness near root (0-1)
 # SILHOUETTES
 silhouetteSizePercent: 100  # Size relative to default (30-300%)
 silhouetteXOffset: 0  # Horizontal offset (px)
-silhouetteYOffset: -17  # Vertical offset (px)
-silhouetteGrayscale: 75  # Grayscale (0-100, 0=black, 100=white)
+silhouetteYOffset: -24  # Vertical offset (px)
+silhouetteGrayscale: 90  # Grayscale (0-100, 0=black, 100=white)
 silhouetteOpacity: 1.00  # Opacity (0-1)
 
 # GRID
 showGrid: true  # Display the background grid
-gridSpacing: 15  # Distance between minor lines (10-200 px)
+gridSpacing: 20  # Distance between minor lines (10-200 px)
 gridMinorLineWidth: 0.50  # Minor line width (0.25-5 px)
-gridMediumLineWidth: 3.75  # Medium line width (0.25-5 px)
-gridMajorLineWidth: 1.50  # Major line width (0.25-5 px)
-gridOpacity: 0.30  # Grid opacity (0-1)
+gridMediumLineWidth: 1.50  # Medium line width (0.25-5 px)
+gridMajorLineWidth: 2.75  # Major line width (0.25-5 px)
+gridOpacity: 0.25  # Grid opacity (0-1)
 
 # TOGGLES
 showNodeDates: true  # Show divergence estimates
