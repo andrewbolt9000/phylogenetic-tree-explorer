@@ -206,13 +206,17 @@ class ForceDirectedVisualization {
     // Add zoom behavior
     this._addZoomBehavior();
 
-    // Create dedicated text layer early (before rendering text)
-    this.textLayer = this.g.append('g')
-      .attr('class', 'text-layer');
-
     // Render graph elements
     this._renderLinks();
     this._renderNodes();
+
+    // Create dedicated text layer as FINAL SIBLING of this.g (outside zoom transform)
+    // This ensures text is painted last and stays at highest z-order
+    // Create it BEFORE rendering text so all text methods can use it
+    this.textLayer = this.svg.append('g')
+      .attr('class', 'text-layer');
+
+    // Now render all text elements into the text layer
     this._renderLabels();
     this._renderRootLabel();
     this._renderDateLabels();
@@ -377,18 +381,9 @@ class ForceDirectedVisualization {
    * @private
    */
   _renderLabels() {
-    // Find or create text layer selection
-    let textLayerSelection = this.textLayer;
-    if (!textLayerSelection) {
-      textLayerSelection = this.g.selectAll('g.text-layer');
-    }
-
-    // Filter terminal nodes with common names
-    const terminalsWithCommonNames = this.nodes.filter(d => d.type === 'terminal' && d.commonName);
-    
     // Render common names (top line)
-    const commonNameLabels = textLayerSelection.selectAll('text.node-label-common')
-      .data(terminalsWithCommonNames, d => d.id)
+    const commonNameLabels = this.textLayer.selectAll('text.node-label-common')
+      .data(this.nodes.filter(d => d.type === 'terminal' && d.commonName), d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-common')
         .attr('font-family', 'Jost, sans-serif')
@@ -400,12 +395,9 @@ class ForceDirectedVisualization {
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.commonName);
 
-    // Filter terminal nodes with scientific names
-    const terminalsWithScientificNames = this.nodes.filter(d => d.type === 'terminal' && d.scientificName);
-
     // Render scientific names (bottom line, italic)
-    const scientificNameLabels = textLayerSelection.selectAll('text.node-label-scientific')
-      .data(terminalsWithScientificNames, d => d.id)
+    const scientificNameLabels = this.textLayer.selectAll('text.node-label-scientific')
+      .data(this.nodes.filter(d => d.type === 'terminal' && d.scientificName), d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-scientific')
         .attr('font-family', 'Jost, sans-serif')
@@ -430,13 +422,13 @@ class ForceDirectedVisualization {
    */
   _renderDateLabels() {
     if (!this.showNodeDates || !this.divergenceData) {
-      const existing = this.g.selectAll('g.node-group').selectAll('text.node-date-label');
-      existing.remove();
+      if (this.textLayer) {
+        this.textLayer.selectAll('text.node-date-label').remove();
+      }
       return;
     }
 
     // Extract central estimate for each node from divergenceData
-    // Use helper that returns null for 0 or multiple estimates (never silently selects)
     const datesByNodeId = {};
     if (this.hypothesisId) {
       const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
@@ -453,50 +445,20 @@ class ForceDirectedVisualization {
       }
     }
 
-    // Render date labels for ancestral nodes that have dates
-    // Find or create text layer selection
-    let textLayerSelection = this.textLayer;
-    if (!textLayerSelection) {
-      textLayerSelection = this.g.selectAll('g.text-layer');
-    }
-
-    // For each internal node with a date, add or update a text element in the text layer
-    let addedCount = 0;
+    // Render date labels using data binding
+    const nodesWithDates = this.nodes.filter(d => d.type === 'internal' && datesByNodeId[d.id]);
     
-    this.nodes.forEach(d => {
-      if (d.type === 'internal' && datesByNodeId[d.id]) {
-        addedCount++;
-        
-        // Look for existing text element with this node's data
-        const existingText = textLayerSelection.selectAll('text.node-date-label').filter(textData => textData && textData.id === d.id);
-        
-        if (existingText.empty()) {
-          // Create new text in text layer
-          textLayerSelection.append('text')
-            .attr('class', 'node-date-label')
-            .attr('font-family', 'Jost, sans-serif')
-            .attr('font-size', `${this.nodeDateFontSize}px`)
-            .attr('text-anchor', 'middle')
-            .attr('dy', '1.2em')
-            .attr('fill', '#999')
-            .attr('pointer-events', 'none')
-            .text(datesByNodeId[d.id])
-            .datum(d);  // Bind node data for positioning
-        } else {
-          // Update existing
-          existingText
-            .attr('font-size', `${this.nodeDateFontSize}px`)
-            .text(datesByNodeId[d.id]);
-        }
-      }
-    });
-    
-    // Remove date labels from nodes that no longer have them
-    textLayerSelection.selectAll('text.node-date-label').filter(d => !datesByNodeId[d.id]).remove();
-    
-    // Store reference to all node date labels for font size updates
-    this.nodeDateLabels = this.textLayer ? this.textLayer.selectAll('text.node-date-label') 
-                                          : this.g.selectAll('text.node-date-label');
+    this.nodeDateLabels = this.textLayer.selectAll('text.node-date-label')
+      .data(nodesWithDates, d => d.id)
+      .join(enter => enter.append('text')
+        .attr('class', 'node-date-label')
+        .attr('font-family', 'Jost, sans-serif')
+        .attr('text-anchor', 'middle')
+        .attr('dy', '1.2em')
+        .attr('fill', '#999')
+        .attr('pointer-events', 'none'))
+      .attr('font-size', `${this.nodeDateFontSize}px`)
+      .text(d => datesByNodeId[d.id]);
   }
 
   /**
@@ -561,15 +523,9 @@ class ForceDirectedVisualization {
   }
 
   _renderAncestralLabels() {
-    // Find or create text layer selection
-    let textLayerSelection = this.textLayer;
-    if (!textLayerSelection) {
-      textLayerSelection = this.g.selectAll('g.text-layer');
-    }
-
     if (!this.showAncestralLabels || !this.hypothesisData) {
       // Remove all ancestral labels
-      textLayerSelection.selectAll('text.ancestral-label').remove();
+      this.textLayer.selectAll('text.ancestral-label').remove();
       return;
     }
 
@@ -583,40 +539,34 @@ class ForceDirectedVisualization {
       }
     }
 
-    // Render ancestral labels for internal nodes
+    // Build array of ancestral nodes with labels
+    const ancestralNodesWithLabels = [];
     this.nodes.forEach(d => {
       if (d.type === 'internal' && d.id !== this.rootNodeId) {
         const hypothesisNode = hypothesisNodesByNodeId[d.id];
         const label = this._generateAncestralLabel(d.id, hypothesisNode);
-
         if (label) {
-          // Look for existing text element with this node's data
-          const existingText = textLayerSelection.selectAll('text.ancestral-label').filter(textData => textData && textData.id === d.id);
-          
-          if (existingText.empty()) {
-            // Create new text in text layer
-            textLayerSelection.append('text')
-              .attr('class', 'ancestral-label')
-              .attr('font-family', 'Jost, sans-serif')
-              .attr('font-size', `${this.fontSizeBase * 0.85}px`)
-              .attr('text-anchor', 'middle')
-              .attr('dy', '1.0em')
-              .attr('fill', '#555')
-              .attr('pointer-events', 'none')
-              .text(label)
-              .datum(d);  // Bind node data for positioning
-          } else {
-            // Update existing
-            existingText
-              .attr('font-size', `${this.fontSizeBase * 0.85}px`)
-              .text(label);
-          }
-        } else {
-          // Remove label if it exists
-          textLayerSelection.selectAll('text.ancestral-label').filter(textData => textData && textData.id === d.id).remove();
+          ancestralNodesWithLabels.push({...d, label});
         }
       }
     });
+
+    // Use D3 data binding to render ancestral labels
+    this.textLayer.selectAll('text.ancestral-label')
+      .data(ancestralNodesWithLabels, d => d.id)
+      .join(
+        enter => enter.append('text')
+          .attr('class', 'ancestral-label')
+          .attr('font-family', 'Jost, sans-serif')
+          .attr('text-anchor', 'middle')
+          .attr('dy', '1.0em')
+          .attr('fill', '#555')
+          .attr('pointer-events', 'none'),
+        update => update,
+        exit => exit.remove()
+      )
+      .attr('font-size', `${this.fontSizeBase * 0.85}px`)
+      .text(d => d.label);
   }
 
   /**
@@ -630,31 +580,20 @@ class ForceDirectedVisualization {
     const rootVizNode = this.nodes.find(n => n.id === this.rootNodeId);
     if (!rootVizNode) return;
 
-    // Find or create text layer selection
-    let textLayerSelection = this.textLayer;
-    if (!textLayerSelection) {
-      textLayerSelection = this.g.selectAll('g.text-layer');
-    }
-
     const label = rootVizNode.scientificName || rootVizNode.label || 'Root';
     
-    // Look for existing root label
-    const existingLabel = textLayerSelection.selectAll('text.root-label').filter(d => d && d.id === this.rootNodeId);
-    
-    if (existingLabel.empty()) {
-      // Create new root label in text layer
-      textLayerSelection.append('text')
+    this.textLayer.selectAll('text.root-label')
+      .data([rootVizNode], d => d.id)
+      .join(enter => enter.append('text')
         .attr('class', 'root-label')
         .attr('font-family', 'Jost, sans-serif')
-        .attr('font-size', `${this.fontSizeBase}px`)
         .attr('font-weight', 'bold')
         .attr('text-anchor', 'middle')
         .attr('dy', '0.3em')
         .attr('fill', '#222')
-        .attr('pointer-events', 'none')
-        .text(label)
-        .datum(rootVizNode);  // Bind node data for positioning
-    }
+        .attr('pointer-events', 'none'))
+      .attr('font-size', `${this.fontSizeBase}px`)
+      .text(label);
   }
 
   /**
