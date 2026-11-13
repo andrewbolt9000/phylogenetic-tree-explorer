@@ -83,6 +83,7 @@ class ForceDirectedVisualization {
     this.windForce = null;
 
     // Appearance parameters
+    this.backgroundWhiteLevel = 0;  // 0-100 blend from light blue to white
     this.edgeThickness = 1.5;
     this.nodeCircleScale = 1.0;
     this.fontSizeBase = 11;
@@ -1695,6 +1696,55 @@ class ForceDirectedVisualization {
   setGridOpacity(opacity) {
     this.gridOpacity = Math.max(0, Math.min(1, Number(opacity)));
     this._updateGridAppearance();
+  }
+
+  /**
+   * Interpolate between two hex colors.
+   * @param {string} color1 - Start color (e.g. '#e8f4f8')
+   * @param {string} color2 - End color (e.g. '#ffffff')
+   * @param {number} t - Blend factor (0-1; 0 returns color1, 1 returns color2)
+   * @returns {string} Interpolated color as hex string
+   * @private
+   */
+  _blendColors(color1, color2, t) {
+    t = Math.max(0, Math.min(1, Number(t)));
+    
+    // Parse hex colors
+    const hex1 = color1.replace('#', '');
+    const hex2 = color2.replace('#', '');
+    
+    const r1 = parseInt(hex1.substring(0, 2), 16);
+    const g1 = parseInt(hex1.substring(2, 4), 16);
+    const b1 = parseInt(hex1.substring(4, 6), 16);
+    
+    const r2 = parseInt(hex2.substring(0, 2), 16);
+    const g2 = parseInt(hex2.substring(2, 4), 16);
+    const b2 = parseInt(hex2.substring(4, 6), 16);
+    
+    // Interpolate
+    const r = Math.round(r1 + (r2 - r1) * t);
+    const g = Math.round(g1 + (g2 - g1) * t);
+    const b = Math.round(b1 + (b2 - b1) * t);
+    
+    // Return as hex
+    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
+  }
+
+  /**
+   * Set the background white level (0-100 blend from light blue to white).
+   * @param {number} level - White level (0-100; 0=light blue #e8f4f8, 100=white #ffffff)
+   */
+  setBackgroundWhiteLevel(level) {
+    this.backgroundWhiteLevel = Math.max(0, Math.min(100, Number(level)));
+    
+    // Calculate blend factor (0-1)
+    const t = this.backgroundWhiteLevel / 100;
+    const color = this._blendColors('#e8f4f8', '#ffffff', t);
+    
+    // Update SVG background color
+    if (this.svg) {
+      this.svg.attr('style', `border: 1px solid #ccc; background: ${color};`);
+    }
   }
 
   /**

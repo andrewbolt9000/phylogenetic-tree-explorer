@@ -30,7 +30,8 @@ windStrength: 0  # Directional wind force (UI: 0-2000, internal: 0-1.0 via /2000
 # APPEARANCE
 # Controls for visual styling of edges, nodes, and text
 
-edgeThickness: 11  # Stroke width of phylogenetic edges (0.5-3)
+backgroundWhiteLevel: 0  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)
+edgeThickness: 11  # Stroke width of phylogenetic edges (0.5-11)
 nodeCircleSize: 1.4  # Radius multiplier for node background circles (0.5-2)
 graphFontSize: 11  # Font size for node labels (8-20px)
 sidebarFontSize: 14  # Font size for sidebar controls (10-20px)

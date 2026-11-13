@@ -34,7 +34,8 @@ class VisualizationSettings {
       topologyRepulsionB: 10,          // Topology repulsion force scale (UI 0-100, internal 0-10)
 
       // Appearance parameters
-      edgeThickness: 1.5,             // Stroke width of edges (0.5-3)
+      backgroundWhiteLevel: 0,        // Background color blend (0=#e8f4f8 light blue, 100=#ffffff white)
+      edgeThickness: 1.5,             // Stroke width of edges (0.5-11)
       nodeCircleSize: 1.0,            // Radius multiplier for node circles (0.5-2)
       graphFontSize: 11,              // Font size for node labels (8-20px)
       sidebarFontSize: 14,            // Font size for sidebar controls (10-20px)
@@ -250,10 +251,18 @@ class VisualizationSettings {
       },
 
       // Appearance
+      backgroundWhiteLevel: {
+        type: 'integer',
+        min: 0,
+        max: 100,
+        default: 0,
+        description: 'Background color blend (0=#e8f4f8 light blue, 100=#ffffff white)',
+        category: 'appearance',
+      },
       edgeThickness: {
         type: 'number',
         min: 0.5,
-        max: 3,
+        max: 11,
         default: 1.5,
         description: 'Stroke width of phylogenetic edges',
         category: 'appearance',
@@ -463,7 +472,8 @@ class VisualizationSettings {
       `windStrength: ${this.settings.windStrength}  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)`,
       '',
       '# APPEARANCE',
-      `edgeThickness: ${this.settings.edgeThickness.toFixed(2)}  # Stroke width (0.5-3)`,
+      `backgroundWhiteLevel: ${this.settings.backgroundWhiteLevel}  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)`,
+      `edgeThickness: ${this.settings.edgeThickness.toFixed(2)}  # Stroke width (0.5-11)`,
       `nodeCircleSize: ${this.settings.nodeCircleSize.toFixed(2)}  # Node circle radius (0.5-2)`,
       `graphFontSize: ${this.settings.graphFontSize}  # Node label font (8-20px)`,
       `sidebarFontSize: ${this.settings.sidebarFontSize}  # Sidebar font (10-20px)`,

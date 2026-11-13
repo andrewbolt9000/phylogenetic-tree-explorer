@@ -100,6 +100,7 @@ class SettingsUI {
       'wind-strength-slider': { setting: 'windStrength', transform: v => parseInt(v), display: 'wind-strength-value' },
       
       // Appearance controls
+      'background-white-level-slider': { setting: 'backgroundWhiteLevel', transform: v => parseInt(v), display: 'background-white-level-value', suffix: '%' },
       'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
       'font-size-slider': { setting: 'graphFontSize', transform: v => parseInt(v), display: 'font-size-value' },
       'sidebar-font-size-slider': { setting: 'sidebarFontSize', transform: v => parseInt(v), display: 'sidebar-font-size-value' },
@@ -176,6 +177,7 @@ class SettingsUI {
    */
   _updateUIFromSettings(settings) {
     const sliderMap = {
+      backgroundWhiteLevel: 'background-white-level-slider',
       charge: 'charge-slider',
       linkStrength: 'link-slider',
       rootLinkStrength: 'root-link-strength-slider',
@@ -272,6 +274,9 @@ class SettingsUI {
     }
     
     // Apply appearance parameters
+    if (settings.backgroundWhiteLevel !== undefined) {
+      this.viz.setBackgroundWhiteLevel(settings.backgroundWhiteLevel);
+    }
     if (settings.edgeThickness !== undefined) {
       this.viz.setEdgeThickness(settings.edgeThickness);
     }
@@ -414,22 +419,26 @@ class SettingsUI {
           const yamlContent = event.target.result;
           const importedSettings = this.settings.parseYAML(yamlContent);
           
-          // Validate by attempting to apply settings
+          // Validate all settings before applying any
           const errors = [];
-          Object.entries(importedSettings).forEach(([key, value]) => {
+          for (const [key, value] of Object.entries(importedSettings)) {
             try {
-              this.settings.setSetting(key, value);
+              this.settings.validateSetting(key, value);
             } catch (error) {
               errors.push(`${key}: ${error.message}`);
             }
-          });
+          }
           
           if (errors.length > 0) {
-            alert('Some settings could not be imported:\n' + errors.join('\n'));
-          } else {
-            alert('Settings imported successfully!');
-            console.log('[SettingsUI] Settings imported from file');
+            alert('Settings import cancelled due to validation errors:\n' + errors.join('\n'));
+            console.log('[SettingsUI] Import validation failed; no settings changed');
+            return;
           }
+          
+          // All settings validated; apply atomically
+          this.settings.updateSettings(importedSettings);
+          alert('Settings imported successfully!');
+          console.log('[SettingsUI] Settings imported from file');
         } catch (error) {
           alert('Error parsing YAML file: ' + error.message);
           console.error('[SettingsUI] Import error:', error);
