@@ -190,10 +190,12 @@ class ForceDirectedVisualization {
       .attr('height', this.options.height)
       .attr('style', 'border: 1px solid #ccc; background: #e8f4f8;');
 
-    // Add a group for the graph content (for panning)
-    this.g = this.svg.append('g');
+    // Create a single viewport group that receives the zoom/pan transform.
+    // All child layers inherit this transform automatically, improving performance.
+    this.g = this.svg.append('g')
+      .attr('class', 'viewport');
 
-    // Render grid as the first element in this.g so it appears behind everything
+    // Render grid as the first element in viewport
     this._renderGrid();
 
     // Compute node depths for root link strength modifiers
@@ -206,21 +208,15 @@ class ForceDirectedVisualization {
     // Add zoom behavior
     this._addZoomBehavior();
 
-    // Render graph elements
+    // Render graph elements (links and nodes in the viewport)
     this._renderLinks();
     this._renderNodes();
 
-    // Create dedicated text layer as FINAL SIBLING of this.g (outside zoom transform)
-    // This ensures text is painted last and stays at highest z-order
-    // Create it BEFORE rendering text so all text methods can use it
-    this.textLayer = this.svg.append('g')
+    // Create text layer as the FINAL CHILD of the viewport group.
+    // It inherits the viewport's zoom/pan transform automatically.
+    // This eliminates the need for separate transform synchronization.
+    this.textLayer = this.g.append('g')
       .attr('class', 'text-layer');
-    
-    // Initialize text layer with current zoom transform (will be identity if no zoom yet)
-    if (this.zoom && this.zoom.transform) {
-      const currentTransform = d3.zoomTransform(this.svg.node());
-      this.textLayer.attr('transform', currentTransform);
-    }
 
     // Now render all text elements into the text layer
     this._renderLabels();
@@ -675,12 +671,9 @@ class ForceDirectedVisualization {
     this.g.selectAll('g.node-group')
       .attr('transform', d => `translate(${d.x},${d.y})`);
 
-    // Update text positions (text layer elements need to track their nodes)
-    if (this.textLayer) {
-      this.textLayer.selectAll('text')
-        .attr('x', d => d.x || 0)
-        .attr('y', d => d.y || 0);
-    }
+    // Text elements are now in the text layer within the viewport group.
+    // They inherit the viewport's transform and are positioned via their node groups.
+    // No separate text positioning needed here.
 
     // Update silhouette-group transforms (size and offset)
     // The group contains the image element and controls overall sizing and positioning
