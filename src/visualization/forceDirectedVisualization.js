@@ -1,6 +1,6 @@
 /**
  * Force-Directed Graph Visualization
- * 
+ *
  * Renders an immutable PhyloGraph using D3.js force simulation.
  * All visualization state (node positions, velocities, etc.) is kept separate
  * from the scientific graph data.
@@ -12,7 +12,7 @@ let d3;
 class ForceDirectedVisualization {
   /**
    * Initialize the force-directed visualization.
-   * 
+   *
    * @param {string} containerId - ID of the HTML container element
    * @param {Array} nodes - Visualization node objects
    * @param {Array} links - Visualization link objects
@@ -30,12 +30,12 @@ class ForceDirectedVisualization {
         );
       }
     }
-    
+
     this.containerId = containerId;
     this.container = document.getElementById(containerId);
     this.nodes = nodes;
     this.links = links;
-    
+
     // Default options
     this.options = {
       width: this.container?.clientWidth || 1000,
@@ -60,10 +60,11 @@ class ForceDirectedVisualization {
 
     // Current force parameters
     this.currentChargeStrength = this.options.chargeStrength;
+    this.currentLeafChargeStrength = this.options.chargeStrength;  // Same as charge by default
     this.currentLinkStrength = this.options.linkStrength;
     this.currentRootLinkStrength = 0;  // Root-proximity modifier (UI 0-1000, internal 0-10 via /100 in _computePerLinkStrength)
     this.currentAgeLinkStrength = 0;   // Age-based modifier (UI 0-100, produces per-Ma coefficient via /1000 in _computePerLinkStrength)
-    
+
     // Topology repulsion equation: F_topology = B * (A + X) / D
     // Internal values are 0-10; UI values are 0-100 (divided by 10 when setting)
     this.topologyRepulsionX = 0;  // Master control strength (internal: 0, UI: 0 disables)
@@ -137,7 +138,7 @@ class ForceDirectedVisualization {
     // Topology-aware repulsion
     this.graphDistances = null;  // Precomputed shortest-path distances
     this.topoRepulsionForce = null;
-    
+
     // Asset metadata for diagnostics
     this.assetMetadata = this.options.assetMetadata;
 
@@ -151,7 +152,7 @@ class ForceDirectedVisualization {
    * Initialize the phyloGraph and precompute distance cache.
    * Called during construction if phyloGraph is provided in options,
    * or when setShowAncestralLabels receives a new graph.
-   * 
+   *
    * @param {PhyloGraph} phyloGraph - The scientific phylogenetic graph
    * @throws {Error} If graph is invalid
    * @private
@@ -203,6 +204,9 @@ class ForceDirectedVisualization {
       .attr('height', this.options.height)
       .attr('style', 'border: 1px solid #ccc; background: #e8f4f8;');
 
+    // Create defs for gradients and other SVG definitions
+    this._createSVGDefs();
+
     // Create a single viewport group that receives the zoom/pan transform.
     // All child layers inherit this transform automatically, improving performance.
     this.g = this.svg.append('g')
@@ -252,13 +256,13 @@ class ForceDirectedVisualization {
       // Start with basic forces
       this.simulation = d3.forceSimulation(this.nodes)
         .force('charge', d3.forceManyBody()
-          .strength(this.currentChargeStrength))
+          .strength(d => this._getNodeCharge(d)))
         .force('collision', d3.forceCollide()
           .radius(d => d.type === 'terminal' ? 8 : 6))
         .alpha(1)
         .alphaDecay(0.02)
         .velocityDecay(0.4);
-      
+
       // Add link force
       if (this.links.length > 0) {
         this.simulation.force('link', d3.forceLink(this.links)
@@ -275,6 +279,45 @@ class ForceDirectedVisualization {
       console.error('[ForceDirectedVisualization] Error creating simulation:', e.message);
       throw e;
     }
+  }
+
+  /**
+   * Get the charge strength for a node based on its type.
+   * @private
+   */
+  _getNodeCharge(d) {
+    if (d.type === 'terminal') {
+      return this.currentLeafChargeStrength;
+    } else {
+      return this.currentChargeStrength;
+    }
+  }
+
+  /**
+   * Create SVG gradient definitions.
+   * @private
+   */
+  _createSVGDefs() {
+    const defs = this.svg.append('defs');
+
+    // Create radial gradient for hover highlight
+    // Gradient ID: hoverHighlightGradient
+    // White center that gradually fades to transparent at edges
+    defs.append('radialGradient')
+      .attr('id', 'hoverHighlightGradient')
+      .attr('cx', '50%')
+      .attr('cy', '50%')
+      .attr('r', '50%')
+      .selectAll('stop')
+      .data([
+        { offset: '0%', color: '#ffffff', opacity: 1 },
+        { offset: '100%', color: '#ffffff', opacity: 0 }
+      ])
+      .enter()
+      .append('stop')
+      .attr('offset', d => d.offset)
+      .attr('stop-color', d => d.color)
+      .attr('stop-opacity', d => d.opacity);
   }
 
   /**
@@ -334,31 +377,36 @@ class ForceDirectedVisualization {
     this.hoverHighlightCircle = this.g.insert('circle', ':first-child')
       .attr('class', 'hover-highlight')
       .attr('r', this.hoverHighlightSize)
-      .attr('fill', '#333')
+      .attr('fill', 'url(#hoverHighlightGradient)')
       .attr('opacity', 0)
       .attr('pointer-events', 'none');
 
     // Add hover event handling for nodes
     this.nodeCircles
       .on('mouseenter', (event, d) => {
-        this.currentHoveredNodeId = d.id;
-        d3.select(event.target).attr('opacity', 0.8);
-        // Position and show hover highlight
-        this.hoverHighlightCircle
-          .attr('cx', d.x + this.hoverHighlightXOffset)
-          .attr('cy', d.y + this.hoverHighlightYOffset)
-          .transition()
-          .duration(100)
-          .attr('opacity', 0.2);
+        // Only show hover highlight for terminal (leaf) nodes
+        if (d.type === 'terminal') {
+          this.currentHoveredNodeId = d.id;
+          d3.select(event.target).attr('opacity', 0.8);
+          // Position and show hover highlight
+          this.hoverHighlightCircle
+            .attr('cx', d.x + this.hoverHighlightXOffset)
+            .attr('cy', d.y + this.hoverHighlightYOffset)
+            .transition()
+            .duration(100)
+            .attr('opacity', 0.2);
+        }
       })
       .on('mouseleave', (event, d) => {
-        this.currentHoveredNodeId = null;
-        d3.select(event.target).attr('opacity', 0.6);
-        // Hide hover highlight
-        this.hoverHighlightCircle
-          .transition()
-          .duration(100)
-          .attr('opacity', 0);
+        if (d.type === 'terminal') {
+          this.currentHoveredNodeId = null;
+          d3.select(event.target).attr('opacity', 0.6);
+          // Hide hover highlight
+          this.hoverHighlightCircle
+            .transition()
+            .duration(100)
+            .attr('opacity', 0);
+        }
       });
   }
 
@@ -375,19 +423,19 @@ class ForceDirectedVisualization {
       if (d.type === 'terminal' && d.silhouetteFilename) {
         silhouetteCount++;
         const group = d3.select(nodes[i]);
-        
+
         // Create a group for silhouette that will contain an image element
         // Base size is 5x the node circle, adjusted by silhouetteSizePercent
         const baseSize = this._getNodeCircleRadius(d) * 5;
         const silhouetteSize = baseSize * (this.silhouetteSizePercent / 100);
-        
+
         // Create shadow image first (so it renders behind the main silhouette)
         if (this.silhouetteShadowEnabled) {
           const shadowGroup = group
             .append('g')
             .attr('class', 'silhouette-shadow-group')
             .attr('transform', `translate(${this.silhouetteXOffset + this.silhouetteShadowXOffset},${this.silhouetteYOffset + this.silhouetteShadowYOffset})`);
-          
+
           shadowGroup
             .append('image')
             .attr('class', 'silhouette-shadow')
@@ -399,22 +447,22 @@ class ForceDirectedVisualization {
             .attr('href', `./assets/silhouettes/${d.silhouetteFilename}`)
             .attr('opacity', this.silhouetteShadowOpacity)
             .attr('pointer-events', 'none')
-            .style('mix-blend-mode', 'multiply')
-            .on('load', function() {
+            .style('filter', 'brightness(0) saturate(100%) invert(60%)')
+            .on('load', function () {
               console.log(`[Silhouette Shadow] Loaded: ${d.silhouetteFilename}`);
             })
             .on('error', function() {
               console.warn(`[Silhouette Shadow] Failed to load: ${d.silhouetteFilename}`);
             });
         }
-        
+
         // Create an image element with SVG-specific attributes
         // Use <image> with proper scaling and SVG support
         const silhouetteGroup = group
           .append('g')
           .attr('class', 'silhouette-group')
           .attr('transform', `translate(${this.silhouetteXOffset},${this.silhouetteYOffset})`);
-        
+
         silhouetteGroup
           .append('image')
           .attr('class', 'silhouette')
@@ -497,7 +545,7 @@ class ForceDirectedVisualization {
     if (this.hypothesisId) {
       const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
       const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
-      
+
       if (hypothesisEstimates) {
         for (const nodeId in hypothesisEstimates) {
           const divergenceAge = this._getDivergenceEstimate(nodeId);
@@ -511,7 +559,7 @@ class ForceDirectedVisualization {
 
     // Render date labels using data binding
     const nodesWithDates = this.nodes.filter(d => d.type === 'internal' && datesByNodeId[d.id]);
-    
+
     this.nodeDateLabels = this.textLayer.selectAll('text.node-date-label')
       .data(nodesWithDates, d => d.id)
       .join(enter => enter.append('text')
@@ -645,7 +693,7 @@ class ForceDirectedVisualization {
     if (!rootVizNode) return;
 
     const label = rootVizNode.scientificName || rootVizNode.label || 'Root';
-    
+
     this.textLayer.selectAll('text.root-label')
       .data([rootVizNode], d => d.id)
       .join(enter => enter.append('text')
@@ -733,10 +781,13 @@ class ForceDirectedVisualization {
     // Update hover highlight position if a node is hovered
     if (this.currentHoveredNodeId !== null) {
       const hoveredNode = this.nodes.find(n => n.id === this.currentHoveredNodeId);
+
       if (hoveredNode) {
         this.hoverHighlightCircle
           .attr('cx', hoveredNode.x + this.hoverHighlightXOffset)
-          .attr('cy', hoveredNode.y + this.hoverHighlightYOffset);
+          .attr('cy', hoveredNode.y + this.hoverHighlightYOffset)
+          .attr('fill', '#ffffff')
+          .attr('fill-opacity', 1);
       }
     }
 
@@ -821,7 +872,7 @@ class ForceDirectedVisualization {
    */
   _updateSilhouettesImmediate() {
     if (!this.g) return; // Visualization not yet rendered
-    
+
     // Update silhouette-group transforms (size and offset)
     this.g.selectAll('g.silhouette-group')
       .attr('transform', d => {
@@ -856,11 +907,11 @@ class ForceDirectedVisualization {
 
   /**
    * Get the divergence age (Ma) for a node.
-   * 
+   *
    * Returns the central estimate only when exactly one estimate is available.
    * Returns null when there are zero or multiple estimates (never silently selects first).
    * Returns null if divergence data is unavailable.
-   * 
+   *
    * @param {string} nodeId - The node ID
    * @returns {number|null} Central estimate in Ma, or null if unavailable or ambiguous
    * @private
@@ -871,28 +922,28 @@ class ForceDirectedVisualization {
     }
 
     const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
-    
+
     // Navigate: hypothesisId -> nodeId -> {estimates: [...]}
     const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
     if (!hypothesisEstimates) {
       return null;
     }
-    
+
     const nodeData = hypothesisEstimates[nodeId];
     if (!nodeData) {
       return null;
     }
-    
+
     const estimates = nodeData.estimates;
     if (!Array.isArray(estimates)) {
       return null;
     }
-    
+
     // Only return if exactly one estimate exists
     if (estimates.length === 1) {
       return estimates[0].centralEstimate || null;
     }
-    
+
     // Multiple estimates: return null (don't silently select first)
     // Zero estimates: return null
     return null;
@@ -900,12 +951,12 @@ class ForceDirectedVisualization {
 
   /**
    * Compute per-link strength using base strength, root-proximity modifier, and age modifier.
-   * 
+   *
    * Formula:
    * rootContribution = baseLinkStrength * (rootLinkStrength / 100) * (1 - childDepth / maxDepth)
    * ageContribution = (ageLinkStrength / 1000) * (divergenceAgeMa / 100)
    * edgeStrength = baseLinkStrength + rootContribution + ageContribution
-   * 
+   *
    * Scaling:
    * - rootLinkStrength: UI 0-1000 → internal 0-10 via /100 conversion
    * - ageLinkStrength: UI 0-100 → coefficient scaled by age/100 normalization
@@ -938,11 +989,11 @@ class ForceDirectedVisualization {
     // ageLinkStrength is UI 0-100, normalized by age in hundreds of Ma
     if (ageLinkStrength > 0 && this.divergenceData) {
       const targetId = typeof link.target === 'object' ? link.target.id : link.target;
-      
+
       // Get the divergence age for this node using the helper
       // Returns null if zero or multiple estimates (never silently selects)
       const divergenceAgeMa = this._getDivergenceEstimate(targetId);
-      
+
       if (divergenceAgeMa !== null && divergenceAgeMa > 0) {
         // Scale: (ageLinkStrength / 1000) * (age / 100)
         // Normalizes ages to roughly 0-3.2 range (since max age ~320 Ma)
@@ -955,13 +1006,25 @@ class ForceDirectedVisualization {
   }
 
   /**
-   * Update the charge/repulsion force.
+   * Update the charge/repulsion force for non-leaf nodes.
    */
   setChargeStrength(strength) {
     this.currentChargeStrength = strength;
     if (this.simulation) {
       this.simulation.force('charge', d3.forceManyBody()
-        .strength(strength));
+        .strength(d => this._getNodeCharge(d)));
+      this.simulation.alpha(0.3).restart();
+    }
+  }
+
+  /**
+   * Update the charge/repulsion force for leaf nodes.
+   */
+  setLeafChargeStrength(strength) {
+    this.currentLeafChargeStrength = strength;
+    if (this.simulation) {
+      this.simulation.force('charge', d3.forceManyBody()
+        .strength(d => this._getNodeCharge(d)));
       this.simulation.alpha(0.3).restart();
     }
   }
@@ -979,11 +1042,11 @@ class ForceDirectedVisualization {
       if (linkForce) {
         // Use per-link strength accessor if modifiers are active
         if (this.currentRootLinkStrength > 0 || this.currentAgeLinkStrength > 0) {
-          linkForce.strength(link => 
+          linkForce.strength(link =>
             this._computePerLinkStrength(
-              link, 
-              strength, 
-              this.currentRootLinkStrength, 
+              link,
+              strength,
+              this.currentRootLinkStrength,
               this.currentAgeLinkStrength
             )
           );
@@ -995,11 +1058,11 @@ class ForceDirectedVisualization {
         // Fallback: if no link force exists, create one
         this.simulation.force('link', d3.forceLink(this.links)
           .id(d => d.id)
-          .strength(link => 
+          .strength(link =>
             this._computePerLinkStrength(
-              link, 
-              strength, 
-              this.currentRootLinkStrength, 
+              link,
+              strength,
+              this.currentRootLinkStrength,
               this.currentAgeLinkStrength
             )
           ));
@@ -1011,7 +1074,7 @@ class ForceDirectedVisualization {
   /**
    * Set root-proximity link strength modifier.
    * Strengthens edges near the root; affects parent-child pulling.
-   * 
+   *
    * @param {number} value - UI value (0-100), converted to internal 0-10
    */
   setRootLinkStrength(value) {
@@ -1028,7 +1091,7 @@ class ForceDirectedVisualization {
    * Set age-based link strength modifier.
    * Adds strength based on divergence age (Ma), normalized by age/100.
    * Formula: ageContribution = (ageLinkStrength / 1000) * (divergenceAgeMa / 100)
-   * 
+   *
    * @param {number} value - UI coefficient 0-100 (produces scaled age contribution)
    */
   setAgeLinkStrength(value) {
@@ -1058,7 +1121,7 @@ class ForceDirectedVisualization {
   handleResize(width, height) {
     this.options.width = width;
     this.options.height = height;
-    
+
     if (this.svg) {
       this.svg
         .attr('width', width)
@@ -1184,23 +1247,23 @@ class ForceDirectedVisualization {
 
   /**
    * Toggle display of node date labels.
-   * 
+   *
    * Note: This controls label visibility only. Divergence data is passed during
    * construction (divergenceData option) and is independent of this toggle.
    * The divergence data is used for force calculations regardless of label visibility.
-   * 
+   *
    * @param {boolean} show - Whether to show date labels
    * @param {Object} divergenceData - (Optional) If provided, store this as the current data
    */
   setShowNodeDates(show, divergenceData) {
     this.showNodeDates = show;
-    
+
     // If new divergence data is provided, update it
     // (For backward compatibility with existing code that passes data here)
     if (divergenceData) {
       this.divergenceData = divergenceData;
     }
-    
+
     this._renderDateLabels();
   }
 
@@ -1230,21 +1293,21 @@ class ForceDirectedVisualization {
   setShowAncestralLabels(show, hypothesisData, phyloGraph) {
     this.showAncestralLabels = show;
     this.hypothesisData = hypothesisData;
-    
+
     // If a different graph is supplied, update both phyloGraph and graphDistances together
     if (phyloGraph && phyloGraph !== this.phyloGraph) {
       this._initializeGraphAndCache(phyloGraph);
     }
-    
+
     this._renderAncestralLabels();
   }
 
   /**
    * Compute shortest-path distances between all pairs of nodes in the phylogenetic graph.
    * Uses BFS (breadth-first search) from each node.
-   * 
+   *
    * Requires a valid PhyloGraph with getNodes() and getChildren(nodeId) methods.
-   * 
+   *
    * @param {PhyloGraph} phyloGraph - The immutable phylogenetic graph object
    * @returns {Object} Map of node ID -> Map of node ID -> distance
    * @throws {Error} If phyloGraph is missing required methods
@@ -1314,13 +1377,13 @@ class ForceDirectedVisualization {
   /**
    * Compute depth (distance from root) for each visualization node.
    * Depth is the number of edges from root to this node.
-   * 
+   *
    * @returns {Object} Map of nodeId to depth
    * @private
    */
   _computeNodeDepths() {
     const depths = {};
-    
+
     if (!this.rootNodeId) {
       console.warn('[ForceDirectedVisualization] No root node set; cannot compute depths');
       return depths;
@@ -1334,18 +1397,18 @@ class ForceDirectedVisualization {
     while (queue.length > 0) {
       const [nodeId, depth] = queue.shift();
       const vizNode = this.nodes.find(n => n.id === nodeId);
-      
+
       if (!vizNode) continue;
 
       // For each child of this node (in visualization links),
       // find the next depth level
-      const childLinks = this.links.filter(l => 
+      const childLinks = this.links.filter(l =>
         (typeof l.source === 'object' ? l.source.id : l.source) === nodeId
       );
 
       for (const link of childLinks) {
         const childId = typeof link.target === 'object' ? link.target.id : link.target;
-        
+
         if (!visited.has(childId)) {
           visited.add(childId);
           depths[childId] = depth + 1;
@@ -1360,10 +1423,10 @@ class ForceDirectedVisualization {
   /**
    * Calculate topology-aware repulsion force strength based on graph distance.
    * Uses inverse-square distance decay: strength = scaleFactor / (1 + distance^2)
-   * 
+   *
    * This creates stronger repulsion for nodes close in the phylogenetic tree,
    * and weaker repulsion for nodes farther apart.
-   * 
+   *
    * @param {number} graphDistance - Shortest-path distance in the phylogenetic graph
    * @param {number} scaleFactor - Scaling factor (slider value / 100)
    * @returns {number} Repulsion force strength
@@ -1372,7 +1435,7 @@ class ForceDirectedVisualization {
   _calculateTopoRepulsion(graphDistance, scaleFactor) {
     if (graphDistance === 0) return 0;  // Same node, no force
     if (scaleFactor === 0) return 0;    // Feature disabled
-    
+
     // Inverse-square distance decay: stronger at small distances, weaker at large
     // Bounded to prevent numerical instability
     const decayFactor = 1 + (graphDistance * graphDistance);
@@ -1382,7 +1445,7 @@ class ForceDirectedVisualization {
   /**
    * Set topology repulsion baseline parameter (A).
    * Part of equation: F_topology = B * (A + X) / D
-   * 
+   *
    * @param {number} value - UI value (0-100), converted to internal 0-10
    */
   setTopologyRepulsionA(value) {
@@ -1393,7 +1456,7 @@ class ForceDirectedVisualization {
   /**
    * Set topology repulsion force scale multiplier (B).
    * Part of equation: F_topology = B * (A + X) / D
-   * 
+   *
    * @param {number} value - UI value (0-100), converted to internal 0-10
    */
   setTopologyRepulsionB(value) {
@@ -1405,7 +1468,7 @@ class ForceDirectedVisualization {
    * Set topology repulsion master strength (X).
    * Part of equation: F_topology = B * (A + X) / D
    * When X = 0, topology repulsion is completely disabled.
-   * 
+   *
    * @param {number} value - UI value (0-100), converted to internal 0-10
    */
   setTopologyRepulsionX(value) {
@@ -1448,8 +1511,8 @@ class ForceDirectedVisualization {
           const b = this.nodes[j];
 
           // Get graph distance between nodes
-          const graphDist = (this.graphDistances[a.id] && this.graphDistances[a.id][b.id]) || 
-                           (this.graphDistances[b.id] && this.graphDistances[b.id][a.id]) || 
+          const graphDist = (this.graphDistances[a.id] && this.graphDistances[a.id][b.id]) ||
+                           (this.graphDistances[b.id] && this.graphDistances[b.id][a.id]) ||
                            Infinity;
 
           if (graphDist === Infinity) continue;  // Not connected in graph
@@ -1498,14 +1561,14 @@ class ForceDirectedVisualization {
 
   /**
    * Legacy: Set topology-aware repulsion strength and reapply the force.
-   * 
+   *
    * Topology repulsion adds additional distance-based repulsion on top of
    * the ordinary D3 many-body charge force. Nodes close together in the
    * phylogenetic graph experience stronger additional repulsion.
-   * 
+   *
    * This method is maintained for backward compatibility but no longer used.
    * Use setTopologyRepulsionX() instead.
-   * 
+   *
    * @param {number} strength - Slider value (0-100), where 0 disables this force
    * @param {Object} phyloGraph - The immutable PhyloGraph object
    * @deprecated
@@ -1589,21 +1652,21 @@ class ForceDirectedVisualization {
 
   /**
    * Update or register the wind force in the D3 simulation.
-   * 
+   *
    * Wind applies constant directional acceleration independently of simulation alpha,
    * ensuring it remains active even as the simulation cools.
-   * 
+   *
    * Conversion: UI range 0-2000 → force magnitude 0-1.0
    * Formula: magnitude = (windStrength / 2000)
    * This produces the same max magnitude (1.0) as the previous 0-100 UI range with /100 conversion.
-   * 
+   *
    * Root participation:
    * - If lockRootPosition is true: root is excluded from wind (remains pinned)
    * - If lockRootPosition is false: root participates in wind like other nodes
-   * 
+   *
    * When wind strength is zero, the force is removed and alphaTarget is cleared to allow
    * normal simulation cooling.
-   * 
+   *
    * @private
    */
   _updateWindForce() {
@@ -1667,11 +1730,11 @@ class ForceDirectedVisualization {
     // Draw grid lines using explicit SVG rendering for fine control
     // Large range covers panned and zoomed viewports
     const range = 5000;
-    
+
     // Draw vertical grid lines
     for (let x = -range; x <= range; x += this.gridSpacing) {
       let lineWidth = this.gridMinorLineWidth;
-      
+
       // Determine if this is a medium (every 5th) or major (every 10th) line
       const lineIndex = Math.round(x / this.gridSpacing);
       if (lineIndex % 10 === 0) {
@@ -1693,7 +1756,7 @@ class ForceDirectedVisualization {
     // Draw horizontal grid lines
     for (let y = -range; y <= range; y += this.gridSpacing) {
       let lineWidth = this.gridMinorLineWidth;
-      
+
       const lineIndex = Math.round(y / this.gridSpacing);
       if (lineIndex % 10 === 0) {
         lineWidth = this.gridMajorLineWidth;
@@ -1744,7 +1807,7 @@ class ForceDirectedVisualization {
    */
   setShowGrid(show) {
     this.showGrid = Boolean(show);
-    
+
     if (this.showGrid) {
       // If grid doesn't exist, render it
       if (!this.gridElement) {
@@ -1882,24 +1945,24 @@ class ForceDirectedVisualization {
    */
   _blendColors(color1, color2, t) {
     t = Math.max(0, Math.min(1, Number(t)));
-    
+
     // Parse hex colors
     const hex1 = color1.replace('#', '');
     const hex2 = color2.replace('#', '');
-    
+
     const r1 = parseInt(hex1.substring(0, 2), 16);
     const g1 = parseInt(hex1.substring(2, 4), 16);
     const b1 = parseInt(hex1.substring(4, 6), 16);
-    
+
     const r2 = parseInt(hex2.substring(0, 2), 16);
     const g2 = parseInt(hex2.substring(2, 4), 16);
     const b2 = parseInt(hex2.substring(4, 6), 16);
-    
+
     // Interpolate
     const r = Math.round(r1 + (r2 - r1) * t);
     const g = Math.round(g1 + (g2 - g1) * t);
     const b = Math.round(b1 + (b2 - b1) * t);
-    
+
     // Return as hex
     return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('');
   }
@@ -1910,11 +1973,11 @@ class ForceDirectedVisualization {
    */
   setBackgroundWhiteLevel(level) {
     this.backgroundWhiteLevel = Math.max(0, Math.min(100, Number(level)));
-    
+
     // Calculate blend factor (0-1)
     const t = this.backgroundWhiteLevel / 100;
     const color = this._blendColors('#e8f4f8', '#ffffff', t);
-    
+
     // Update SVG background color
     if (this.svg) {
       this.svg.attr('style', `border: 1px solid #ccc; background: ${color};`);

@@ -29,6 +29,7 @@ class SettingsUI {
     return {
       // Force/physics controls
       'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
+      'leafCharge-slider': { setting: 'leafCharge', transform: v => parseInt(v), display: 'leafCharge-value' },
       'link-slider': { setting: 'linkStrength', transform: v => parseFloat(v), display: 'link-value' },
       'root-link-strength-slider': { setting: 'rootLinkStrength', transform: v => parseInt(v), display: 'root-link-strength-value' },
       'age-link-strength-slider': { setting: 'ageLinkStrength', transform: v => parseFloat(v), display: 'age-link-strength-value', suffix: '' },
@@ -247,6 +248,9 @@ class SettingsUI {
     // Apply force parameters
     if (settings.charge !== undefined) {
       this.viz.setChargeStrength(-settings.charge);  // Negate for repulsion
+    }
+    if (settings.leafCharge !== undefined) {
+      this.viz.setLeafChargeStrength(-settings.leafCharge);  // Negate for repulsion
     }
     if (settings.linkStrength !== undefined) {
       this.viz.setLinkStrength(settings.linkStrength);

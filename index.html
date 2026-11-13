@@ -303,6 +303,18 @@
         </div>
 
         <div class="control-group">
+          <div class="control-label">
+            <span>Leaf Repulsion (Charge)</span>
+            <span class="control-value" id="leafCharge-value">300</span>
+          </div>
+          <input type="range" id="leafCharge-slider"
+                 min="0" max="1500" value="300" step="10">
+          <p class="info-text">
+            Repulsion for terminal/leaf nodes only. Use different values to separate leaves from internal nodes.
+          </p>
+        </div>
+
+        <div class="control-group">
           <div class="equation-display">
             <strong>Topology Repulsion Equation:</strong>
             <code>F<sub>topology</sub> = B × (A + X) / D</code>

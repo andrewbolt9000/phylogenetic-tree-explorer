@@ -25,7 +25,8 @@ class VisualizationSettings {
       version: '1.0',
 
       // Force parameters
-      charge: 300,                    // Repulsion strength (0-1500)
+      charge: 300,                    // Repulsion strength for non-leaf nodes (0-1500)
+      leafCharge: 300,                // Repulsion strength for leaf/terminal nodes (0-1500)
       linkStrength: 0.5,              // Link/edge stiffness (0-1)
       rootLinkStrength: 0, // Root-proximity link strength modifier (UI 0-2000, internal 0-20 via /100)
       ageLinkStrength: 0,             // Age-based link strength modifier (UI 0-500, per Ma)
@@ -211,7 +212,15 @@ class VisualizationSettings {
         min: 0,
         max: 1500,
         default: 300,
-        description: 'Repulsion strength between nodes',
+        description: 'Repulsion strength for non-leaf nodes',
+        category: 'forces',
+      },
+      leafCharge: {
+        type: 'integer',
+        min: 0,
+        max: 1500,
+        default: 300,
+        description: 'Repulsion strength for leaf/terminal nodes',
         category: 'forces',
       },
       linkStrength: {
@@ -545,7 +554,8 @@ class VisualizationSettings {
       '# Generated at: ' + new Date().toISOString(),
       '',
       '# FORCES',
-      `charge: ${this.settings.charge}  # Repulsion strength (0-1500)`,
+      `charge: ${this.settings.charge}  # Repulsion strength for non-leaf nodes (0-1500)`,
+      `leafCharge: ${this.settings.leafCharge}  # Repulsion strength for leaf/terminal nodes (0-1500)`,
       `linkStrength: ${this.settings.linkStrength.toFixed(2)}  # Link stiffness (0-1)`,
       `rootLinkStrength: ${this.settings.rootLinkStrength}  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)`,
       `ageLinkStrength: ${this.settings.ageLinkStrength.toFixed(2)}  # Age-based modifier (UI 0-500, per Ma)`,
@@ -661,10 +671,17 @@ class VisualizationSettings {
    * Load settings from YAML string.
    * Validates all values before updating.
    * Throws on validation error; leaves existing settings unchanged.
+   * Handles backward compatibility for new settings like leafCharge.
    */
   loadFromYAML(yamlString) {
     // Parse YAML
     const parsed = VisualizationSettings.parseYAML(yamlString);
+
+    // Backward compatibility: if leafCharge is not in YAML but charge is,
+    // use charge value for leafCharge (preserves old behavior)
+    if (!('leafCharge' in parsed) && 'charge' in parsed) {
+      parsed.leafCharge = parsed.charge;
+    }
 
     // Validate all parsed values
     const validated = {};
