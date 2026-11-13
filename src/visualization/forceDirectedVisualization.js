@@ -643,11 +643,8 @@ class ForceDirectedVisualization {
   _addZoomBehavior() {
     this.zoom = d3.zoom()
       .on('zoom', (event) => {
+        // Apply transform to viewport group. All children, including text layer, inherit it.
         this.g.attr('transform', event.transform);
-        // Apply the same transform to the text layer so it moves with the graph
-        if (this.textLayer) {
-          this.textLayer.attr('transform', event.transform);
-        }
       });
 
     this.svg.call(this.zoom);
