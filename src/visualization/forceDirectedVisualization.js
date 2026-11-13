@@ -668,9 +668,13 @@ class ForceDirectedVisualization {
     this.g.selectAll('g.node-group')
       .attr('transform', d => `translate(${d.x},${d.y})`);
 
-    // Text elements are now in the text layer within the viewport group.
-    // They inherit the viewport's transform and are positioned via their node groups.
-    // No separate text positioning needed here.
+    // Update text positions (text layer elements track their corresponding nodes)
+    // Text layer inherits viewport zoom/pan transform, but needs individual node coordinates
+    if (this.textLayer) {
+      this.textLayer.selectAll('text')
+        .attr('x', d => d.x || 0)
+        .attr('y', d => d.y || 0);
+    }
 
     // Update silhouette-group transforms (size and offset)
     // The group contains the image element and controls overall sizing and positioning
