@@ -1535,8 +1535,8 @@ class ForceDirectedVisualization {
 
   /**
    * Render the graph-paper grid as the first element in this.g.
-   * The grid participates in zoom/pan transforms and uses SVG patterns
-   * to avoid visible edge artifacts.
+   * The grid participates in zoom/pan transforms and covers a large range
+   * to avoid visible edges when panning.
    * @private
    */
   _renderGrid() {
@@ -1548,51 +1548,17 @@ class ForceDirectedVisualization {
       return;
     }
 
-    // Create a grid container group
+    // Create a grid container group as the first child of this.g
     this.gridElement = d3.select(this.g)
       .insert('g', ':first-child')
       .attr('class', 'grid-container')
       .attr('opacity', this.gridOpacity);
 
-    // Create pattern definitions for grid lines
-    const defs = this.svg.selectAll('defs').data([null]).enter().append('defs');
+    // Draw grid lines using explicit SVG rendering for fine control
+    // Large range covers panned and zoomed viewports
+    const range = 5000;
     
-    // Remove old patterns
-    defs.selectAll('pattern.grid-pattern').remove();
-
-    // Create a pattern for the grid
-    const pattern = defs.append('pattern')
-      .attr('class', 'grid-pattern')
-      .attr('id', 'grid-pattern')
-      .attr('x', this.gridSpacing)
-      .attr('y', this.gridSpacing)
-      .attr('width', this.gridSpacing)
-      .attr('height', this.gridSpacing)
-      .attr('patternUnits', 'userSpaceOnUse');
-
-    // Draw vertical line in the pattern
-    pattern.append('line')
-      .attr('x1', this.gridSpacing)
-      .attr('y1', 0)
-      .attr('x2', this.gridSpacing)
-      .attr('y2', this.gridSpacing)
-      .attr('stroke', '#4a9fb5')
-      .attr('stroke-width', this.gridMinorLineWidth);
-
-    // Draw horizontal line in the pattern
-    pattern.append('line')
-      .attr('x1', 0)
-      .attr('y1', this.gridSpacing)
-      .attr('x2', this.gridSpacing)
-      .attr('y2', this.gridSpacing)
-      .attr('stroke', '#4a9fb5')
-      .attr('stroke-width', this.gridMinorLineWidth);
-
-    // Add medium and major grid lines using explicit line rendering
-    // This allows finer control over which lines get which widths
-    const range = 5000; // Large enough to cover panned and zoomed viewports
-    
-    // Draw minor grid lines
+    // Draw vertical grid lines
     for (let x = -range; x <= range; x += this.gridSpacing) {
       let lineWidth = this.gridMinorLineWidth;
       
@@ -1644,36 +1610,43 @@ class ForceDirectedVisualization {
   _updateGridAppearance() {
     if (!this.gridElement) return;
 
-    // Update all minor grid lines
-    d3.selectAll('line.grid-line-minor')
+    // Update all minor grid lines (scoped to this visualization's grid)
+    this.gridElement.selectAll('line.grid-line-minor')
       .attr('stroke-width', this.gridMinorLineWidth);
 
-    // Update all medium grid lines
-    d3.selectAll('line.grid-line-medium')
+    // Update all medium grid lines (scoped to this visualization's grid)
+    this.gridElement.selectAll('line.grid-line-medium')
       .attr('stroke-width', this.gridMediumLineWidth);
 
-    // Update all major grid lines
-    d3.selectAll('line.grid-line-major')
+    // Update all major grid lines (scoped to this visualization's grid)
+    this.gridElement.selectAll('line.grid-line-major')
       .attr('stroke-width', this.gridMajorLineWidth);
 
-    // Update opacity
-    d3.select(this.g).selectAll('g.grid-container')
-      .attr('opacity', this.gridOpacity);
+    // Update opacity of the grid container
+    this.gridElement.attr('opacity', this.gridOpacity);
   }
 
   /**
    * Set whether the grid is visible.
+   * When disabling, hides the grid without removing it.
+   * When enabling, shows the grid or re-renders if needed.
    * @param {boolean} show - Whether to show the grid
    */
   setShowGrid(show) {
     this.showGrid = Boolean(show);
+    
     if (this.showGrid) {
-      this._renderGrid();
+      // If grid doesn't exist, render it
+      if (!this.gridElement) {
+        this._renderGrid();
+      } else {
+        // If it exists, just show it
+        this.gridElement.style('display', null);
+      }
     } else {
-      // Hide without removing, so re-enabling is quick
+      // Hide the grid without removing or regenerating
       if (this.gridElement) {
-        d3.select(this.g).selectAll('g.grid-container')
-          .style('display', 'none');
+        this.gridElement.style('display', 'none');
       }
     }
   }
