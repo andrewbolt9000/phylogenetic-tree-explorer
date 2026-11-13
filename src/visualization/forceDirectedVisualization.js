@@ -215,6 +215,12 @@ class ForceDirectedVisualization {
     // Create it BEFORE rendering text so all text methods can use it
     this.textLayer = this.svg.append('g')
       .attr('class', 'text-layer');
+    
+    // Initialize text layer with current zoom transform (will be identity if no zoom yet)
+    if (this.zoom && this.zoom.transform) {
+      const currentTransform = d3.zoomTransform(this.svg.node());
+      this.textLayer.attr('transform', currentTransform);
+    }
 
     // Now render all text elements into the text layer
     this._renderLabels();
@@ -642,6 +648,10 @@ class ForceDirectedVisualization {
     this.zoom = d3.zoom()
       .on('zoom', (event) => {
         this.g.attr('transform', event.transform);
+        // Apply the same transform to the text layer so it moves with the graph
+        if (this.textLayer) {
+          this.textLayer.attr('transform', event.transform);
+        }
       });
 
     this.svg.call(this.zoom);
