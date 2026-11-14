@@ -15,6 +15,8 @@ This builder:
 """
 
 import json
+import sys
+import subprocess
 from Bio import Phylo
 from io import StringIO
 from pathlib import Path
@@ -355,7 +357,38 @@ def main():
         json.dump(silhouettes, f, indent=2)
     print(f"  ✓ silhouette-mapping.json")
     
-    # Stage 6: Report
+    # Stage 6: Enrich with node ages
+    print(f"\nEnriching hypothesis with node ages...")
+    enrichment_script = REPO_ROOT / 'scripts' / 'add_node_ages_tetrapods.py'
+    try:
+        result = subprocess.run(
+            [sys.executable, str(enrichment_script)],
+            capture_output=True,
+            text=True,
+            check=True
+        )
+        print(result.stdout, end='')
+    except subprocess.CalledProcessError as e:
+        print(f"✗ Age enrichment failed with exit code {e.returncode}")
+        print(f"stderr:\n{e.stderr}")
+        sys.exit(1)
+    except FileNotFoundError:
+        print(f"✗ Enrichment script not found: {enrichment_script}")
+        sys.exit(1)
+    
+    # Reload and validate enriched hypothesis
+    with open(TETRAPODS_DIR / 'hypothesis.json') as f:
+        enriched_hypothesis = json.load(f)
+    
+    # Verify all nodes have age_ma
+    nodes_with_ages = sum(1 for n in enriched_hypothesis['nodes'] if 'age_ma' in n)
+    total_nodes = len(enriched_hypothesis['nodes'])
+    if nodes_with_ages < total_nodes:
+        print(f"✗ Age enrichment incomplete: {nodes_with_ages}/{total_nodes} nodes have age_ma")
+        sys.exit(1)
+    print(f"  ✓ All {total_nodes} nodes enriched with age_ma")
+    
+    # Stage 7: Report
     print(f"\n" + "=" * 80)
     print("COMPLETION REPORT")
     print("=" * 80)
