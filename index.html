@@ -355,6 +355,41 @@
       </div>
 
       <div id="controls" style="display: none;">
+        <h2>Tree Manipulation</h2>
+        <button id="collapse-entire-tree" style="width: 100%; padding: 8px; margin-bottom: 12px; background: #a0326d; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 500;">
+          Collapse Entire Tree
+        </button>
+
+        <div style="margin-bottom: 12px;">
+          <label for="max-sampled-species" style="display: block; margin-bottom: 4px;">
+            Max Sampled Species:
+            <span id="max-species-value" style="font-weight: bold;">10</span>
+          </label>
+          <input type="range" id="max-sampled-species" min="1" max="50" value="10"
+            style="width: 100%; cursor: pointer;">
+        </div>
+
+        <h2>Interaction</h2>
+        <div class="info-text">
+          <p><strong>Drag Node:</strong> Click and drag node to reposition</p>
+          <p><strong>Shift-Click:</strong> Expand entire subtree</p>
+          <p><strong>Alt-Click (Expanded):</strong> Collapse node</p>
+          <p><strong>Alt-Click (Collapsed):</strong> Show random sample</p>
+          <p><strong>Alt-Click (Root):</strong> Collapse entire tree</p>
+        </div>
+
+        <h2>Legend</h2>
+        <div class="legend">
+          <div class="legend-item">
+            <div class="legend-dot legend-terminal"></div>
+            <span>Terminal Species</span>
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot legend-ancestor"></div>
+            <span>Ancestral Node</span>
+          </div>
+        </div>
+
         <h2>Dataset</h2>
         <div class="control-group">
           <label for="dataset-selector" class="control-label">Select Dataset:</label>
@@ -889,25 +924,6 @@
             Display clade names and descriptive labels on ancestral nodes.
           </p>
         </div>
-
-        <h2>Legend</h2>
-        <div class="legend">
-          <div class="legend-item">
-            <div class="legend-dot legend-terminal"></div>
-            <span>Terminal Species</span>
-          </div>
-          <div class="legend-item">
-            <div class="legend-dot legend-ancestor"></div>
-            <span>Ancestral Node</span>
-          </div>
-        </div>
-
-        <h2>Interaction</h2>
-        <div class="info-text">
-          <p><strong>Zoom:</strong> Scroll wheel or pinch</p>
-          <p><strong>Pan:</strong> Click and drag background</p>
-          <p><strong>Drag Node:</strong> Click and drag node</p>
-        </div>
       </div>
 
       <div class="sidebar-bottom-logo">
@@ -938,12 +954,17 @@
     import { ForceDirectedVisualization } from './src/visualization/forceDirectedVisualization.js';
     import { VisualizationSettings } from './src/settings/VisualizationSettings.js';
     import SettingsUI from './src/ui/SettingsUI.js';
+    import { TreeVisibilityState } from './src/graph/TreeVisibilityState.js';
+    import { TreeManipulation } from './src/interaction/TreeManipulation.js';
 
     const schemaDir = './data/schemas';
 
     let currentDataset = 'mammals';
     let currentViz = null;
     let currentSettingsUI = null;
+    let currentGraph = null;
+    let currentVisibilityState = null;
+    let currentTreeManipulation = null;
 
     async function getDataDirectory() {
       return `./data/${currentDataset}`;
@@ -1261,6 +1282,47 @@
           showAncestralLabelsToggle.addEventListener('input', (e) => {
             settings.setSetting('showAncestralLabels', e.target.checked);
             currentViz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
+          });
+        }
+
+        // Initialize tree manipulation engine
+        currentGraph = graph;
+        currentVisibilityState = new TreeVisibilityState(graph);
+        currentTreeManipulation = new TreeManipulation(
+          graph,
+          currentVisibilityState,
+          currentViz,
+          nodes,
+          links
+        );
+
+        // Wire node click handler
+        currentViz.setNodeClickHandler((nodeData, event) => {
+          currentTreeManipulation.handleNodeClick(nodeData, event);
+        });
+
+        // Wire drag state callbacks
+        currentViz.setDragStateCallbacks(
+          () => currentTreeManipulation.setDragging(true),
+          () => currentTreeManipulation.setDragging(false)
+        );
+
+        // Wire "Collapse Entire Tree" button
+        const collapseEntireTreeBtn = document.getElementById('collapse-entire-tree');
+        if (collapseEntireTreeBtn) {
+          collapseEntireTreeBtn.addEventListener('click', () => {
+            currentTreeManipulation.collapseEntireTree();
+          });
+        }
+
+        // Wire "Max Sampled Species" slider
+        const maxSampledSpeciesSlider = document.getElementById('max-sampled-species');
+        const maxSpeciesValue = document.getElementById('max-species-value');
+        if (maxSampledSpeciesSlider && maxSpeciesValue) {
+          maxSampledSpeciesSlider.addEventListener('input', (e) => {
+            const value = parseInt(e.target.value, 10);
+            maxSpeciesValue.textContent = value;
+            currentTreeManipulation.setMaxSampledSpecies(value);
           });
         }
 

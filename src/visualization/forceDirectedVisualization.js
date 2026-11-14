@@ -44,6 +44,9 @@ class ForceDirectedVisualization {
       linkStrength: 0.5,
       rootNodeId: null,
       assetMetadata: {},  // Asset source metadata
+      onNodeClick: null,  // Optional callback for node click events
+      onDragStart: null,  // Optional callback when node drag starts
+      onDragEnd: null,    // Optional callback when node drag ends
       ...options
     };
 
@@ -476,6 +479,17 @@ class ForceDirectedVisualization {
             .duration(100)
             .attr('opacity', 0);
           this._restoreHoveredNodeFromForeground();
+        }
+      })
+      .on('click', (event, d) => {
+        // Prevent context menu on Alt-click
+        if (event.altKey) {
+          event.preventDefault();
+        }
+
+        // Call the optional click handler callback if set
+        if (typeof this.options.onNodeClick === 'function') {
+          this.options.onNodeClick(d, event);
         }
       });
   }
@@ -1059,6 +1073,11 @@ class ForceDirectedVisualization {
         if (!event.active) this.simulation.alphaTarget(0.3).restart();
         d.fx = d.x;
         d.fy = d.y;
+
+        // Notify TreeManipulation that dragging has started
+        if (typeof this.options.onDragStart === 'function') {
+          this.options.onDragStart();
+        }
       })
       .on('drag', (event, d) => {
         d.fx = event.x;
@@ -1074,6 +1093,11 @@ class ForceDirectedVisualization {
         } else {
           d.fx = null;
           d.fy = null;
+        }
+
+        // Notify TreeManipulation that dragging has ended
+        if (typeof this.options.onDragEnd === 'function') {
+          this.options.onDragEnd();
         }
       }));
   }
@@ -2537,6 +2561,231 @@ class ForceDirectedVisualization {
     });
 
     this._hoveredNodeGroup = null;
+  }
+
+  /**
+   * Update visibility to show only specified nodes and their connecting links.
+   * Filters visualization nodes/links and updates D3 simulation.
+   * Removes all text labels and visual elements for hidden nodes.
+   *
+   * @param {Set<string>} visibleNodeIds - Set of node IDs that should be visible
+   * @param {Array} allNodes - Original complete node list
+   * @param {Array} allLinks - Original complete link list
+   * @public
+   */
+  updateVisibility(visibleNodeIds, allNodes, allLinks) {
+    if (!visibleNodeIds || visibleNodeIds.size === 0) {
+      console.warn('[ForceDirectedVisualization] updateVisibility called with empty visible set');
+      return;
+    }
+
+    // Filter nodes to only visible ones
+    const filteredNodes = allNodes.filter(n => visibleNodeIds.has(n.id));
+
+    // Filter links to only those between visible nodes
+    const filteredLinks = allLinks.filter(l =>
+      visibleNodeIds.has(l.sourceId) && visibleNodeIds.has(l.targetId)
+    );
+
+    // Update internal references
+    this.nodes = filteredNodes;
+    this.links = filteredLinks;
+
+    // Remove all text labels associated with hidden nodes from all text layers
+    if (this.textLayer) {
+      // Remove node name labels (common names and scientific names)
+      this.textLayer.selectAll('text.node-label-common').data(filteredNodes, d => d.id).exit().remove();
+      this.textLayer.selectAll('text.node-label-scientific').data(filteredNodes, d => d.id).exit().remove();
+      this.textLayer.selectAll('text.node-date-label').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
+      this.textLayer.selectAll('text.node-taxonomy-label').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
+      this.textLayer.selectAll('text.node-label-ancestral').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
+    }
+
+    // Remove background rectangles for hidden node labels
+    if (this.textBackgroundsLayer) {
+      this.textBackgroundsLayer.selectAll('rect.node-label-common-bg').data(filteredNodes, d => d.id).exit().remove();
+      this.textBackgroundsLayer.selectAll('rect.node-label-scientific-bg').data(filteredNodes, d => d.id).exit().remove();
+      this.textBackgroundsLayer.selectAll('rect.node-date-label-bg').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
+      this.textBackgroundsLayer.selectAll('rect.node-label-ancestral-bg').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
+    }
+
+    // Stop current simulation
+    this.simulation.stop();
+
+    // Recreate simulation with filtered data
+    this.simulation = d3.forceSimulation(this.nodes)
+      .force('charge', d3.forceManyBody()
+        .strength(d => this._getNodeCharge(d)))
+      .force('collision', d3.forceCollide()
+        .radius(d => d.type === 'terminal' ? 8 : 6))
+      .alpha(1)
+      .alphaDecay(0.02)
+      .velocityDecay(0.4);
+
+    // Add link force if there are any links
+    if (this.links.length > 0) {
+      this.simulation.force('link', d3.forceLink(this.links)
+        .id(d => d.id)
+        .strength(this.currentLinkStrength));
+    }
+
+    // Reapply root lock
+    this._applyRootLock();
+
+    // Update D3 selections with new data
+    // Update links
+    this.linkElements = this.g.selectAll('line.link')
+      .data(this.links, d => `${d.sourceId}-${d.targetId}`)
+      .join(
+        enter => enter
+          .append('line')
+          .attr('class', 'link')
+          .attr('stroke', '#999')
+          .attr('stroke-opacity', 0.3)
+          .attr('stroke-width', this.edgeThickness),
+        update => update,
+        exit => exit.remove()
+      );
+
+    // Update node groups
+    const nodeGroups = this.g.selectAll('g.node-group')
+      .data(this.nodes, d => d.id)
+      .join(
+        enter => {
+          const groups = enter
+            .append('g')
+            .attr('class', 'node-group');
+
+          // Background circle
+          groups.append('circle')
+            .attr('class', 'node-circle')
+            .attr('r', d => this._getNodeCircleRadius(d))
+            .attr('fill', '#ccc')
+            .attr('opacity', 0.6)
+            .attr('pointer-events', 'all');
+
+          // Colored node circle
+          groups.append('circle')
+            .attr('class', 'node-marker')
+            .attr('r', d => d.type === 'terminal' ? 6 : 4)
+            .attr('fill', d => d.type === 'terminal' ? '#1d81b0' : '#a0326d')
+            .attr('opacity', 0.8)
+            .attr('stroke', '#fff')
+            .attr('stroke-width', 1.5)
+            .attr('pointer-events', 'none');
+
+          return groups;
+        },
+        update => update,
+        exit => exit.remove()
+      );
+
+    // Re-render silhouettes for entering nodes
+    this._renderSilhouettes(nodeGroups);
+
+    // Re-render date labels if enabled
+    if (this.showNodeDates) {
+      this._renderDateLabels();
+    }
+
+    // Re-render ancestral labels if enabled
+    if (this.showAncestralLabels) {
+      this._renderAncestralLabels();
+    }
+
+    // Update drag behavior
+    nodeGroups.call(this._addDragBehavior.bind(this));
+
+    // Add mouse and click event handlers
+    nodeGroups.select('circle.node-circle')
+      .on('mouseenter', (event, d) => {
+        if (this.currentHoveredNodeId !== null &&
+          this.currentHoveredNodeId !== d.id) {
+          this._restoreHoveredNodeFromForeground();
+        }
+
+        this.currentHoveredNodeId = d.id;
+        d3.select(event.target).attr('opacity', 0.8);
+
+        const hoveredNodeGroup = d3.select(event.currentTarget.parentNode);
+        this._moveNodeTextToForeground(d.id, hoveredNodeGroup);
+
+        // The highlight sits above ordinary nodes but behind the promoted node.
+        this.hoverHighlightLayer.raise();
+        this.foregroundLayer.raise();
+
+        this.hoverHighlightCircle.interrupt();
+
+        if (d.type === 'terminal') {
+          this.hoverHighlightCircle
+            .attr('cx', d.x + this.hoverHighlightXOffset)
+            .attr('cy', d.y + this.hoverHighlightYOffset)
+            .transition()
+            .duration(100)
+            .attr('opacity', this.hoverHighlightOpacity);
+        } else {
+          this.hoverHighlightCircle.attr('opacity', 0);
+        }
+      })
+      .on('mouseleave', (event, d) => {
+        d3.select(event.target).attr('opacity', 0.6);
+
+        if (this.currentHoveredNodeId === d.id) {
+          this.currentHoveredNodeId = null;
+          this.hoverHighlightCircle
+            .interrupt()
+            .transition()
+            .duration(100)
+            .attr('opacity', 0);
+          this._restoreHoveredNodeFromForeground();
+        }
+      })
+      .on('click', (event, d) => {
+        // Prevent context menu on Alt-click
+        if (event.altKey) {
+          event.preventDefault();
+        }
+
+        // Call the optional click handler callback if set
+        if (typeof this.options.onNodeClick === 'function') {
+          this.options.onNodeClick(d, event);
+        }
+      });
+
+    // Re-register simulation listeners
+    this.simulation.on('tick', () => this._onTick());
+
+    // Reapply topology repulsion if enabled
+    if (this.topoRepulsionEnabled) {
+      this._updateTopologyRepulsionForce();
+    }
+
+    // Reapply wind force if enabled
+    this._updateWindForce();
+  }
+
+  /**
+   * Set the node click handler callback after construction.
+   * @param {Function} callback - Function to call when a node is clicked, receives (nodeId, event)
+   */
+  setNodeClickHandler(callback) {
+    if (typeof callback === 'function') {
+      this.options.onNodeClick = callback;
+    }
+  }
+
+  /**
+   * Set the drag state callbacks after construction.
+   * @param {Function} onStart - Called when node drag starts
+   * @param {Function} onEnd - Called when node drag ends
+   */
+  setDragStateCallbacks(onStart, onEnd) {
+    if (typeof onStart === 'function') {
+      this.options.onDragStart = onStart;
+    }
+    if (typeof onEnd === 'function') {
+      this.options.onDragEnd = onEnd;
+    }
   }
 
   /**
