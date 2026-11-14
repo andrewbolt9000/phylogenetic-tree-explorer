@@ -134,6 +134,97 @@
               "null"
             ],
             "description": "Age of this node in millions of years ago (Ma), calculated as the root age minus the accumulated branch lengths from the root. Computed from ultrametric source tree. Only present when age data has been explicitly added to the hypothesis."
+          },
+          "descendant_species_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Total number of terminal descendants (terminal species) beneath this node. Present only for internal nodes."
+          },
+          "descendant_composition": {
+            "type": "object",
+            "description": "Count of descendants by taxonomic group. Present only for internal nodes.",
+            "required": [
+              "mammals",
+              "birds",
+              "reptiles",
+              "amphibians"
+            ],
+            "properties": {
+              "mammals": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "birds": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "reptiles": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "amphibians": {
+                "type": "integer",
+                "minimum": 0
+              }
+            },
+            "additionalProperties": false
+          },
+          "immediate_child_count": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "Number of immediate (direct) children. Present only for internal nodes."
+          },
+          "child_branch_species_counts": {
+            "type": "array",
+            "items": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "description": "Array of terminal descendant counts for each immediate child, in child order. Sum must equal descendant_species_count. Present only for internal nodes."
+          },
+          "taxonomic_summary": {
+            "type": "object",
+            "description": "Deepest shared taxonomic classification of descendants. Present only for internal nodes with at least 2 descendants sharing a classification.",
+            "required": [
+              "name",
+              "rank",
+              "method",
+              "source",
+              "descendant_species_count"
+            ],
+            "properties": {
+              "name": {
+                "type": "string",
+                "description": "The shared taxonomic name (e.g., 'Mammalia', 'Chordata')."
+              },
+              "rank": {
+                "type": "string",
+                "enum": [
+                  "Kingdom",
+                  "Phylum",
+                  "Class",
+                  "Order",
+                  "Family"
+                ],
+                "description": "Taxonomic rank of the shared classification."
+              },
+              "method": {
+                "type": "string",
+                "const": "deepest_shared_descendant_taxon",
+                "description": "Method used to derive this summary. Currently only 'deepest_shared_descendant_taxon' is supported."
+              },
+              "source": {
+                "type": "string",
+                "const": "GBIF",
+                "description": "Data source for taxonomic classification."
+              },
+              "descendant_species_count": {
+                "type": "integer",
+                "minimum": 2,
+                "description": "Number of descendants sharing this classification."
+              }
+            },
+            "additionalProperties": false
           }
         },
         "additionalProperties": false,

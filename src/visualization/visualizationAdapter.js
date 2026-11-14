@@ -97,6 +97,9 @@ class VisualizationAdapter {
       silhouetteFilename: this._getSilhouetteFilename(graphNode),
       silhouetteUrl: this._getSilhouetteUrl(graphNode),
 
+      // Taxonomic metadata for ancestor nodes (if available)
+      taxonomic_summary: this._copyTaxonomicSummary(graphNode),
+
       // Mutable layout properties (D3 will set these)
       x: Math.random() * 800,
       y: Math.random() * 600,
@@ -201,6 +204,19 @@ class VisualizationAdapter {
       }
     }
     return null;
+  }
+
+  /**
+   * Copy taxonomic_summary from graph node if present.
+   * Returns a shallow copy to ensure independence from the source object.
+   * @private
+   */
+  _copyTaxonomicSummary(graphNode) {
+    if (graphNode.taxonomic_summary && typeof graphNode.taxonomic_summary === 'object') {
+      // Shallow copy: all properties (name, rank, method, source, descendant_species_count) are primitives
+      return Object.assign({}, graphNode.taxonomic_summary);
+    }
+    return undefined;
   }
 
   /**

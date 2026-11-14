@@ -679,24 +679,37 @@ class ForceDirectedVisualization {
     if (!this.showNodeDates || (!hasNodeAges && !hasLegacyDivergenceData)) {
       if (this.textLayer) {
         this.textLayer.selectAll('text.node-date-label').remove();
+        this.textLayer.selectAll('text.node-taxonomy-label').remove();
+      }
+      if (this.textBackgroundsLayer) {
+        this.textBackgroundsLayer.selectAll('rect.node-date-label-bg').remove();
       }
       return;
     }
 
-    // Extract central estimate for each node (from either stored ages or divergence data)
-    const datesByNodeId = {};
+    // Extract central estimate for each node and build label data
+    const labelDataByNodeId = {};
 
-    // First, add dates from node-level ages
+    // First, add labels from node-level ages and taxonomy
     if (hasNodeAges) {
       for (const node of this.nodes) {
         if (node.type === 'internal' && typeof node.age_ma === 'number' && isFinite(node.age_ma)) {
           const unit = 'Ma';
-          datesByNodeId[node.id] = `${Math.round(node.age_ma)}${unit}`;
+          const dateText = `${Math.round(node.age_ma)}${unit}`;
+          
+          // Check if node has taxonomic summary
+          const taxonomyLine = this._buildTaxonomyLabel(node);
+          
+          labelDataByNodeId[node.id] = {
+            date: dateText,
+            taxonomy: taxonomyLine,
+            isTwoLine: taxonomyLine !== null
+          };
         }
       }
     }
 
-    // Then, add dates from legacy divergence data (only if not already set from node ages)
+    // Then, add labels from legacy divergence data (only if not already set from node ages)
     if (hasLegacyDivergenceData) {
       const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
       const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
@@ -704,11 +717,16 @@ class ForceDirectedVisualization {
       if (hypothesisEstimates) {
         for (const nodeId in hypothesisEstimates) {
           // Only add if not already populated from node ages
-          if (!datesByNodeId[nodeId]) {
+          if (!labelDataByNodeId[nodeId]) {
             const divergenceAge = this._getDivergenceEstimate(nodeId);
             if (divergenceAge !== null) {
               const unit = 'Ma';
-              datesByNodeId[nodeId] = `${Math.round(divergenceAge)}${unit}`;
+              const dateText = `${Math.round(divergenceAge)}${unit}`;
+              labelDataByNodeId[nodeId] = {
+                date: dateText,
+                taxonomy: null,
+                isTwoLine: false
+              };
             }
           }
         }
@@ -716,9 +734,9 @@ class ForceDirectedVisualization {
     }
 
     // Render date labels using data binding
-    const nodesWithDates = this.nodes.filter(d => d.type === 'internal' && datesByNodeId[d.id]);
+    const nodesWithDates = this.nodes.filter(d => d.type === 'internal' && labelDataByNodeId[d.id]);
 
-    // Render date label backgrounds
+    // Render date label backgrounds (expanded height for two-line labels)
     const dateBackgrounds = this.textBackgroundsLayer.selectAll('rect.node-date-label-bg')
       .data(nodesWithDates, d => d.id)
       .join(enter => enter.append('rect')
@@ -727,16 +745,51 @@ class ForceDirectedVisualization {
         .attr('fill', 'url(#textBackgroundGradient)')
         .attr('pointer-events', 'none'))
       .attr('x', d => {
-        const dims = this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize);
+        const labelData = labelDataByNodeId[d.id];
+        const textToMeasure = labelData.taxonomy || labelData.date;
+        const dims = this._estimateTextDimensions(textToMeasure, this.nodeDateFontSize);
         return dims.x;
       })
       .attr('y', d => {
-        const dims = this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize);
-        return dims.y + (this.nodeDateFontSize * 1.2) + this.textBackgroundYOffset;
+        const labelData = labelDataByNodeId[d.id];
+        const textToMeasure = labelData.taxonomy || labelData.date;
+        const dims = this._estimateTextDimensions(textToMeasure, this.nodeDateFontSize);
+        const lineHeight = this.nodeDateFontSize * 1.2;
+        // For two-line labels, add extra height
+        const extraHeight = labelData.isTwoLine ? lineHeight : 0;
+        return dims.y + lineHeight + this.textBackgroundYOffset - extraHeight;
       })
-      .attr('width', d => this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize).width)
-      .attr('height', d => this._estimateTextDimensions(datesByNodeId[d.id], this.nodeDateFontSize).height * this.textBackgroundHeight);
+      .attr('width', d => {
+        const labelData = labelDataByNodeId[d.id];
+        const textToMeasure = labelData.taxonomy || labelData.date;
+        return this._estimateTextDimensions(textToMeasure, this.nodeDateFontSize).width;
+      })
+      .attr('height', d => {
+        const labelData = labelDataByNodeId[d.id];
+        const baseHeight = this._estimateTextDimensions(labelData.date, this.nodeDateFontSize).height * this.textBackgroundHeight;
+        // For two-line labels, double the height
+        return labelData.isTwoLine ? baseHeight * 2 : baseHeight;
+      });
 
+    // Render taxonomy labels (first line, if present)
+    this.nodeTaxonomyLabels = this.textLayer.selectAll('text.node-taxonomy-label')
+      .data(nodesWithDates.filter(d => labelDataByNodeId[d.id].taxonomy), d => d.id)
+      .join(
+        enter => enter.append('text')
+          .attr('class', 'node-taxonomy-label')
+          .attr('data-node-id', d => d.id)
+          .attr('font-family', 'Jost, sans-serif')
+          .attr('text-anchor', 'middle')
+          .attr('dy', '0.5em')
+          .attr('fill', '#767676')
+          .attr('font-size', `${this.nodeDateFontSize}px`)
+          .attr('pointer-events', 'none'),
+        update => update,
+        exit => exit.remove()
+      )
+      .text(d => labelDataByNodeId[d.id].taxonomy);
+
+    // Render date labels (second line for two-line labels, only line for single-line)
     this.nodeDateLabels = this.textLayer.selectAll('text.node-date-label')
       .data(nodesWithDates, d => d.id)
       .join(enter => enter.append('text')
@@ -744,14 +797,32 @@ class ForceDirectedVisualization {
         .attr('data-node-id', d => d.id)
         .attr('font-family', 'Jost, sans-serif')
         .attr('text-anchor', 'middle')
-        .attr('dy', '1.2em')
+        .attr('dy', d => labelDataByNodeId[d.id].isTwoLine ? '1.2em' : '1.2em')
         .attr('fill', '#767676')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.nodeDateFontSize}px`)
-      .text(d => datesByNodeId[d.id]);
+      .text(d => labelDataByNodeId[d.id].date);
 
     this.dateBackgrounds = dateBackgrounds;
   }
+
+  /**
+   * Build a taxonomy label from a node's taxonomic summary.
+   * Returns "Rank: Name" or null if no taxonomic summary.
+   * @private
+   */
+  _buildTaxonomyLabel(node) {
+    if (!node.taxonomic_summary) {
+      return null;
+    }
+    
+    const summary = node.taxonomic_summary;
+    const rank = summary.rank || 'Unknown';
+    const name = summary.name || '';
+    
+    return `${rank}: ${name}`;
+  }
+
 
   /**
    * Get all descendant taxa (terminal nodes) for a given ancestral node.

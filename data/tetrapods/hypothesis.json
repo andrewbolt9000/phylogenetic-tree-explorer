@@ -31,7 +31,26 @@
         "ancestor_phylo_tetrapods_00029"
       ],
       "branch_length": 0.0,
-      "age_ma": 352.08192
+      "age_ma": 352.08192,
+      "descendant_species_count": 57,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 12,
+        "birds": 14,
+        "reptiles": 16,
+        "amphibians": 15
+      },
+      "child_branch_species_counts": [
+        15,
+        42
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 57
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00000",
@@ -42,7 +61,26 @@
         "ancestor_phylo_tetrapods_00002"
       ],
       "branch_length": 35.12762,
-      "age_ma": 316.9543
+      "age_ma": 316.9543,
+      "descendant_species_count": 15,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 15
+      },
+      "child_branch_species_counts": [
+        1,
+        14
+      ],
+      "taxonomic_summary": {
+        "name": "Amphibia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 15
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00001",
@@ -52,7 +90,18 @@
         "tax_amphibian_020"
       ],
       "branch_length": 128.85298,
-      "age_ma": 188.10132
+      "age_ma": 188.10132,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_020",
@@ -73,7 +122,26 @@
         "ancestor_phylo_tetrapods_00012"
       ],
       "branch_length": 27.00592,
-      "age_ma": 289.94838
+      "age_ma": 289.94838,
+      "descendant_species_count": 14,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 14
+      },
+      "child_branch_species_counts": [
+        5,
+        9
+      ],
+      "taxonomic_summary": {
+        "name": "Amphibia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 14
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00003",
@@ -84,7 +152,26 @@
         "ancestor_phylo_tetrapods_00005"
       ],
       "branch_length": 93.83167,
-      "age_ma": 196.11671
+      "age_ma": 196.11671,
+      "descendant_species_count": 5,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 5
+      },
+      "child_branch_species_counts": [
+        1,
+        4
+      ],
+      "taxonomic_summary": {
+        "name": "Caudata",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 5
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00004",
@@ -94,7 +181,18 @@
         "tax_amphibian_003"
       ],
       "branch_length": 47.25769,
-      "age_ma": 148.85902
+      "age_ma": 148.85902,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_003",
@@ -115,7 +213,26 @@
         "ancestor_phylo_tetrapods_00011"
       ],
       "branch_length": 7.24115,
-      "age_ma": 188.87556
+      "age_ma": 188.87556,
+      "descendant_species_count": 4,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 4
+      },
+      "child_branch_species_counts": [
+        3,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Caudata",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 4
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00006",
@@ -126,7 +243,26 @@
         "ancestor_phylo_tetrapods_00010"
       ],
       "branch_length": 102.08044000000001,
-      "age_ma": 86.79512
+      "age_ma": 86.79512,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 3
+      },
+      "child_branch_species_counts": [
+        2,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Salamandridae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00007",
@@ -137,7 +273,26 @@
         "ancestor_phylo_tetrapods_00009"
       ],
       "branch_length": 28.18703,
-      "age_ma": 58.60809
+      "age_ma": 58.60809,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 2
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Salamandridae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00008",
@@ -147,7 +302,18 @@
         "tax_amphibian_005"
       ],
       "branch_length": 8.38019,
-      "age_ma": 50.2279
+      "age_ma": 50.2279,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_005",
@@ -167,7 +333,18 @@
         "tax_amphibian_006"
       ],
       "branch_length": 17.76364,
-      "age_ma": 40.84445
+      "age_ma": 40.84445,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_006",
@@ -187,7 +364,18 @@
         "tax_amphibian_004"
       ],
       "branch_length": 21.76958,
-      "age_ma": 65.02554
+      "age_ma": 65.02554,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_004",
@@ -207,7 +395,18 @@
         "tax_amphibian_001"
       ],
       "branch_length": 92.65585,
-      "age_ma": 96.21971
+      "age_ma": 96.21971,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_001",
@@ -228,7 +427,26 @@
         "ancestor_phylo_tetrapods_00016"
       ],
       "branch_length": 70.93456,
-      "age_ma": 219.01382
+      "age_ma": 219.01382,
+      "descendant_species_count": 9,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 9
+      },
+      "child_branch_species_counts": [
+        2,
+        7
+      ],
+      "taxonomic_summary": {
+        "name": "Anura",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 9
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00013",
@@ -239,7 +457,26 @@
         "ancestor_phylo_tetrapods_00015"
       ],
       "branch_length": 50.93155,
-      "age_ma": 168.08227
+      "age_ma": 168.08227,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 2
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Pipidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00014",
@@ -249,7 +486,18 @@
         "tax_amphibian_016"
       ],
       "branch_length": 45.95551,
-      "age_ma": 122.12676
+      "age_ma": 122.12676,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_016",
@@ -269,7 +517,18 @@
         "tax_amphibian_009"
       ],
       "branch_length": 100.81359,
-      "age_ma": 67.26868
+      "age_ma": 67.26868,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_009",
@@ -290,7 +549,26 @@
         "ancestor_phylo_tetrapods_00018"
       ],
       "branch_length": 33.24583,
-      "age_ma": 185.76799
+      "age_ma": 185.76799,
+      "descendant_species_count": 7,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 7
+      },
+      "child_branch_species_counts": [
+        1,
+        6
+      ],
+      "taxonomic_summary": {
+        "name": "Anura",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 7
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00017",
@@ -300,7 +578,18 @@
         "tax_amphibian_007"
       ],
       "branch_length": 58.12673,
-      "age_ma": 127.64126
+      "age_ma": 127.64126,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_007",
@@ -321,7 +610,26 @@
         "ancestor_phylo_tetrapods_00028"
       ],
       "branch_length": 46.70049,
-      "age_ma": 139.0675
+      "age_ma": 139.0675,
+      "descendant_species_count": 6,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 6
+      },
+      "child_branch_species_counts": [
+        5,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Anura",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 6
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00019",
@@ -332,7 +640,26 @@
         "ancestor_phylo_tetrapods_00027"
       ],
       "branch_length": 74.20062999999999,
-      "age_ma": 64.86687
+      "age_ma": 64.86687,
+      "descendant_species_count": 5,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 5
+      },
+      "child_branch_species_counts": [
+        4,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Anura",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 5
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00020",
@@ -343,7 +670,26 @@
         "ancestor_phylo_tetrapods_00024"
       ],
       "branch_length": 0.0,
-      "age_ma": 64.86687
+      "age_ma": 64.86687,
+      "descendant_species_count": 4,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 4
+      },
+      "child_branch_species_counts": [
+        2,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Anura",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 4
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00021",
@@ -354,7 +700,26 @@
         "ancestor_phylo_tetrapods_00023"
       ],
       "branch_length": 11.17306,
-      "age_ma": 53.69381
+      "age_ma": 53.69381,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 2
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Bufonidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00022",
@@ -364,7 +729,18 @@
         "tax_amphibian_013"
       ],
       "branch_length": 27.08459,
-      "age_ma": 26.60922
+      "age_ma": 26.60922,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_013",
@@ -384,7 +760,18 @@
         "tax_amphibian_014"
       ],
       "branch_length": 29.400129999999997,
-      "age_ma": 24.29368
+      "age_ma": 24.29368,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_014",
@@ -405,7 +792,26 @@
         "ancestor_phylo_tetrapods_00026"
       ],
       "branch_length": 23.434359999999998,
-      "age_ma": 41.43251
+      "age_ma": 41.43251,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 2
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Dendrobatidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00025",
@@ -415,7 +821,18 @@
         "tax_amphibian_011"
       ],
       "branch_length": 31.2221,
-      "age_ma": 10.21041
+      "age_ma": 10.21041,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_011",
@@ -435,7 +852,18 @@
         "tax_amphibian_012"
       ],
       "branch_length": 32.17732,
-      "age_ma": 9.25519
+      "age_ma": 9.25519,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_012",
@@ -455,7 +883,18 @@
         "tax_amphibian_017"
       ],
       "branch_length": 0.0,
-      "age_ma": 64.86687
+      "age_ma": 64.86687,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_017",
@@ -475,7 +914,18 @@
         "tax_amphibian_015"
       ],
       "branch_length": 75.98074,
-      "age_ma": 63.08676
+      "age_ma": 63.08676,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 1
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_amphibian_015",
@@ -496,7 +946,26 @@
         "ancestor_phylo_tetrapods_00052"
       ],
       "branch_length": 33.25704,
-      "age_ma": 318.82488
+      "age_ma": 318.82488,
+      "descendant_species_count": 42,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 12,
+        "birds": 14,
+        "reptiles": 16,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        12,
+        30
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 42
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00030",
@@ -507,7 +976,26 @@
         "ancestor_phylo_tetrapods_00050"
       ],
       "branch_length": 137.63296,
-      "age_ma": 181.19192
+      "age_ma": 181.19192,
+      "descendant_species_count": 12,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 12,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        10,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Mammalia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 12
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00031",
@@ -518,7 +1006,26 @@
         "ancestor_phylo_tetrapods_00035"
       ],
       "branch_length": 22.03374,
-      "age_ma": 159.15818
+      "age_ma": 159.15818,
+      "descendant_species_count": 10,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 10,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        8
+      ],
+      "taxonomic_summary": {
+        "name": "Mammalia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 10
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00032",
@@ -529,7 +1036,26 @@
         "ancestor_phylo_tetrapods_00034"
       ],
       "branch_length": 88.91732,
-      "age_ma": 70.24086
+      "age_ma": 70.24086,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 2,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Diprotodontia",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00033",
@@ -539,7 +1065,18 @@
         "tax_mammal_005"
       ],
       "branch_length": 35.8514,
-      "age_ma": 34.38946
+      "age_ma": 34.38946,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_005",
@@ -559,7 +1096,18 @@
         "tax_mammal_004"
       ],
       "branch_length": 26.7884,
-      "age_ma": 43.45246
+      "age_ma": 43.45246,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_004",
@@ -580,7 +1128,26 @@
         "ancestor_phylo_tetrapods_00047"
       ],
       "branch_length": 67.05389,
-      "age_ma": 92.10429
+      "age_ma": 92.10429,
+      "descendant_species_count": 8,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 8,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        6,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Mammalia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 8
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00036",
@@ -591,7 +1158,26 @@
         "ancestor_phylo_tetrapods_00042"
       ],
       "branch_length": 9.97476,
-      "age_ma": 82.12953
+      "age_ma": 82.12953,
+      "descendant_species_count": 6,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 6,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        3,
+        3
+      ],
+      "taxonomic_summary": {
+        "name": "Mammalia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 6
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00037",
@@ -602,7 +1188,26 @@
         "ancestor_phylo_tetrapods_00041"
       ],
       "branch_length": 8.92886,
-      "age_ma": 73.20067
+      "age_ma": 73.20067,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 3,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Carnivora",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00038",
@@ -613,7 +1218,26 @@
         "ancestor_phylo_tetrapods_00040"
       ],
       "branch_length": 27.853720000000003,
-      "age_ma": 45.34695
+      "age_ma": 45.34695,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 2,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Felidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00039",
@@ -623,7 +1247,18 @@
         "tax_mammal_014"
       ],
       "branch_length": 33.48885,
-      "age_ma": 11.8581
+      "age_ma": 11.8581,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_014",
@@ -643,7 +1278,18 @@
         "tax_mammal_015"
       ],
       "branch_length": 36.05946,
-      "age_ma": 9.28749
+      "age_ma": 9.28749,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_015",
@@ -663,7 +1309,18 @@
         "tax_mammal_013"
       ],
       "branch_length": 28.25821,
-      "age_ma": 44.94246
+      "age_ma": 44.94246,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_013",
@@ -684,7 +1341,26 @@
         "ancestor_phylo_tetrapods_00044"
       ],
       "branch_length": 18.963620000000002,
-      "age_ma": 63.16591
+      "age_ma": 63.16591,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 3,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Mammalia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00043",
@@ -694,7 +1370,18 @@
         "tax_mammal_012"
       ],
       "branch_length": 28.38923,
-      "age_ma": 34.77668
+      "age_ma": 34.77668,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_012",
@@ -715,7 +1402,26 @@
         "ancestor_phylo_tetrapods_00046"
       ],
       "branch_length": 6.403689999999999,
-      "age_ma": 56.76222
+      "age_ma": 56.76222,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 2,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Cetacea",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00045",
@@ -725,7 +1431,18 @@
         "tax_mammal_018"
       ],
       "branch_length": 24.04604,
-      "age_ma": 32.71618
+      "age_ma": 32.71618,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_018",
@@ -745,7 +1462,18 @@
         "tax_mammal_017"
       ],
       "branch_length": 32.43288,
-      "age_ma": 24.32934
+      "age_ma": 24.32934,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_017",
@@ -766,7 +1494,26 @@
         "ancestor_phylo_tetrapods_00049"
       ],
       "branch_length": 8.59033,
-      "age_ma": 83.51396
+      "age_ma": 83.51396,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 2,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Hominidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00048",
@@ -776,7 +1523,18 @@
         "tax_mammal_007"
       ],
       "branch_length": 74.79581999999999,
-      "age_ma": 8.71814
+      "age_ma": 8.71814,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_007",
@@ -796,7 +1554,18 @@
         "tax_mammal_008"
       ],
       "branch_length": 79.43392999999998,
-      "age_ma": 4.08003
+      "age_ma": 4.08003,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_008",
@@ -817,7 +1586,26 @@
         "tax_mammal_001"
       ],
       "branch_length": 134.11212,
-      "age_ma": 47.0798
+      "age_ma": 47.0798,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 2,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Monotremata",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00051",
@@ -827,7 +1615,18 @@
         "tax_mammal_002"
       ],
       "branch_length": 35.60181,
-      "age_ma": 11.47799
+      "age_ma": 11.47799,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 1,
+        "birds": 0,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_mammal_002",
@@ -858,7 +1657,26 @@
         "ancestor_phylo_tetrapods_00073"
       ],
       "branch_length": 38.13991,
-      "age_ma": 280.68497
+      "age_ma": 280.68497,
+      "descendant_species_count": 30,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 14,
+        "reptiles": 16,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        11,
+        19
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 30
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00053",
@@ -869,7 +1687,26 @@
         "tax_reptile_001"
       ],
       "branch_length": 35.70308,
-      "age_ma": 244.98189
+      "age_ma": 244.98189,
+      "descendant_species_count": 11,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 11,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        10,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 11
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00054",
@@ -880,7 +1717,26 @@
         "ancestor_phylo_tetrapods_00056"
       ],
       "branch_length": 22.42686,
-      "age_ma": 222.55503
+      "age_ma": 222.55503,
+      "descendant_species_count": 10,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 10,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        9
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 10
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00055",
@@ -890,7 +1746,18 @@
         "tax_reptile_007"
       ],
       "branch_length": 112.84029000000001,
-      "age_ma": 109.71474
+      "age_ma": 109.71474,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_007",
@@ -911,7 +1778,26 @@
         "ancestor_phylo_tetrapods_00062"
       ],
       "branch_length": 42.64072,
-      "age_ma": 179.91431
+      "age_ma": 179.91431,
+      "descendant_species_count": 9,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 9,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        3,
+        6
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 9
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00057",
@@ -922,7 +1808,26 @@
         "ancestor_phylo_tetrapods_00061"
       ],
       "branch_length": 52.395140000000005,
-      "age_ma": 127.51917
+      "age_ma": 127.51917,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 3,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00058",
@@ -933,7 +1838,26 @@
         "ancestor_phylo_tetrapods_00060"
       ],
       "branch_length": 88.28695,
-      "age_ma": 39.23222
+      "age_ma": 39.23222,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Viperidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00059",
@@ -943,7 +1867,18 @@
         "tax_reptile_016"
       ],
       "branch_length": 8.0801,
-      "age_ma": 31.15212
+      "age_ma": 31.15212,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_016",
@@ -963,7 +1898,18 @@
         "tax_reptile_017"
       ],
       "branch_length": 5.58232,
-      "age_ma": 33.6499
+      "age_ma": 33.6499,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_017",
@@ -983,7 +1929,18 @@
         "tax_reptile_015"
       ],
       "branch_length": 75.10174,
-      "age_ma": 52.41743
+      "age_ma": 52.41743,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_015",
@@ -1004,7 +1961,26 @@
         "ancestor_phylo_tetrapods_00070"
       ],
       "branch_length": 20.23464,
-      "age_ma": 159.67967
+      "age_ma": 159.67967,
+      "descendant_species_count": 6,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 6,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        4,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 6
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00063",
@@ -1015,7 +1991,26 @@
         "ancestor_phylo_tetrapods_00069"
       ],
       "branch_length": 53.69465,
-      "age_ma": 105.98502
+      "age_ma": 105.98502,
+      "descendant_species_count": 4,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 4,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        3,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 4
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00064",
@@ -1026,7 +2021,26 @@
         "ancestor_phylo_tetrapods_00068"
       ],
       "branch_length": 0.0,
-      "age_ma": 105.98502
+      "age_ma": 105.98502,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 3,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00065",
@@ -1037,7 +2051,26 @@
         "ancestor_phylo_tetrapods_00067"
       ],
       "branch_length": 0.0,
-      "age_ma": 105.98502
+      "age_ma": 105.98502,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00066",
@@ -1047,7 +2080,18 @@
         "tax_reptile_018"
       ],
       "branch_length": 0.0,
-      "age_ma": 105.98502
+      "age_ma": 105.98502,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_018",
@@ -1067,7 +2111,18 @@
         "tax_reptile_010"
       ],
       "branch_length": 16.66495,
-      "age_ma": 89.32007
+      "age_ma": 89.32007,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_010",
@@ -1087,7 +2142,18 @@
         "tax_reptile_008"
       ],
       "branch_length": 55.84569,
-      "age_ma": 50.13933
+      "age_ma": 50.13933,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_008",
@@ -1107,7 +2173,18 @@
         "tax_reptile_019"
       ],
       "branch_length": 53.58952,
-      "age_ma": 52.3955
+      "age_ma": 52.3955,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_019",
@@ -1128,7 +2205,26 @@
         "ancestor_phylo_tetrapods_00072"
       ],
       "branch_length": 35.86653,
-      "age_ma": 123.81314
+      "age_ma": 123.81314,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Squamata",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00071",
@@ -1138,7 +2234,18 @@
         "tax_reptile_009"
       ],
       "branch_length": 17.09053,
-      "age_ma": 106.72261
+      "age_ma": 106.72261,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_009",
@@ -1158,7 +2265,18 @@
         "tax_reptile_011"
       ],
       "branch_length": 24.87335,
-      "age_ma": 98.93979
+      "age_ma": 98.93979,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_011",
@@ -1189,7 +2307,26 @@
         "ancestor_phylo_tetrapods_00105"
       ],
       "branch_length": 23.85013,
-      "age_ma": 256.83484
+      "age_ma": 256.83484,
+      "descendant_species_count": 19,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 14,
+        "reptiles": 5,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        16,
+        3
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 19
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00074",
@@ -1200,7 +2337,26 @@
         "ancestor_phylo_tetrapods_00078"
       ],
       "branch_length": 13.53926,
-      "age_ma": 243.29558
+      "age_ma": 243.29558,
+      "descendant_species_count": 16,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 14,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        14
+      ],
+      "taxonomic_summary": {
+        "name": "Chordata",
+        "rank": "Phylum",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 16
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00075",
@@ -1211,7 +2367,26 @@
         "ancestor_phylo_tetrapods_00077"
       ],
       "branch_length": 155.25556,
-      "age_ma": 88.04002
+      "age_ma": 88.04002,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Crocodylia",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00076",
@@ -1221,7 +2396,18 @@
         "tax_reptile_002"
       ],
       "branch_length": 21.39113,
-      "age_ma": 66.64889
+      "age_ma": 66.64889,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_002",
@@ -1241,7 +2427,18 @@
         "tax_reptile_003"
       ],
       "branch_length": 35.43997,
-      "age_ma": 52.60005
+      "age_ma": 52.60005,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_003",
@@ -1262,7 +2459,26 @@
         "ancestor_phylo_tetrapods_00082"
       ],
       "branch_length": 135.74028,
-      "age_ma": 107.5553
+      "age_ma": 107.5553,
+      "descendant_species_count": 14,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 14,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        12
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 14
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00079",
@@ -1273,7 +2489,26 @@
         "ancestor_phylo_tetrapods_00081"
       ],
       "branch_length": 30.78346,
-      "age_ma": 76.77184
+      "age_ma": 76.77184,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 2,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00080",
@@ -1283,7 +2518,18 @@
         "tax_bird_001"
       ],
       "branch_length": 32.81812,
-      "age_ma": 43.95372
+      "age_ma": 43.95372,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_001",
@@ -1303,7 +2549,18 @@
         "tax_bird_003"
       ],
       "branch_length": 12.979000000000001,
-      "age_ma": 63.79284
+      "age_ma": 63.79284,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_003",
@@ -1324,7 +2581,26 @@
         "ancestor_phylo_tetrapods_00084"
       ],
       "branch_length": 11.1486,
-      "age_ma": 96.4067
+      "age_ma": 96.4067,
+      "descendant_species_count": 12,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 12,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        11
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 12
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00083",
@@ -1334,7 +2610,18 @@
         "tax_bird_004"
       ],
       "branch_length": 17.59092,
-      "age_ma": 78.81578
+      "age_ma": 78.81578,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_004",
@@ -1355,7 +2642,26 @@
         "ancestor_phylo_tetrapods_00086"
       ],
       "branch_length": 18.33621,
-      "age_ma": 78.07049
+      "age_ma": 78.07049,
+      "descendant_species_count": 11,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 11,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        10
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 11
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00085",
@@ -1365,7 +2671,18 @@
         "tax_bird_015"
       ],
       "branch_length": 15.16227,
-      "age_ma": 62.90822
+      "age_ma": 62.90822,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_015",
@@ -1386,7 +2703,26 @@
         "ancestor_phylo_tetrapods_00094"
       ],
       "branch_length": 0.0,
-      "age_ma": 78.07049
+      "age_ma": 78.07049,
+      "descendant_species_count": 10,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 10,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        4,
+        6
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 10
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00087",
@@ -1397,7 +2733,26 @@
         "ancestor_phylo_tetrapods_00091"
       ],
       "branch_length": 9.34127,
-      "age_ma": 68.72922
+      "age_ma": 68.72922,
+      "descendant_species_count": 4,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 4,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 4
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00088",
@@ -1408,7 +2763,26 @@
         "ancestor_phylo_tetrapods_00090"
       ],
       "branch_length": 5.9856799999999994,
-      "age_ma": 62.74354
+      "age_ma": 62.74354,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 2,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Spheniscidae",
+        "rank": "Family",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00089",
@@ -1418,7 +2792,18 @@
         "tax_bird_007"
       ],
       "branch_length": 53.84833999999999,
-      "age_ma": 8.8952
+      "age_ma": 8.8952,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_007",
@@ -1438,7 +2823,18 @@
         "tax_bird_008"
       ],
       "branch_length": 35.20764,
-      "age_ma": 27.5359
+      "age_ma": 27.5359,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_008",
@@ -1459,7 +2855,26 @@
         "ancestor_phylo_tetrapods_00093"
       ],
       "branch_length": 5.07889,
-      "age_ma": 63.65033
+      "age_ma": 63.65033,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 2,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00092",
@@ -1469,7 +2884,18 @@
         "tax_bird_011"
       ],
       "branch_length": 12.82517,
-      "age_ma": 50.82516
+      "age_ma": 50.82516,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_011",
@@ -1489,7 +2915,18 @@
         "tax_bird_010"
       ],
       "branch_length": 0.61362,
-      "age_ma": 63.03671
+      "age_ma": 63.03671,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_010",
@@ -1510,7 +2947,26 @@
         "ancestor_phylo_tetrapods_00102"
       ],
       "branch_length": 7.42134,
-      "age_ma": 70.64915
+      "age_ma": 70.64915,
+      "descendant_species_count": 6,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 6,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        4,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 6
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00095",
@@ -1521,7 +2977,26 @@
         "ancestor_phylo_tetrapods_00101"
       ],
       "branch_length": 0.0,
-      "age_ma": 70.64915
+      "age_ma": 70.64915,
+      "descendant_species_count": 4,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 4,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        3,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 4
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00096",
@@ -1532,7 +3007,26 @@
         "ancestor_phylo_tetrapods_00100"
       ],
       "branch_length": 26.29759,
-      "age_ma": 44.35156
+      "age_ma": 44.35156,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 3,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        2,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Passeriformes",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00097",
@@ -1543,7 +3037,26 @@
         "ancestor_phylo_tetrapods_00099"
       ],
       "branch_length": 13.74554,
-      "age_ma": 30.60602
+      "age_ma": 30.60602,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 2,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Passeriformes",
+        "rank": "Order",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00098",
@@ -1553,7 +3066,18 @@
         "tax_bird_018"
       ],
       "branch_length": 6.73402,
-      "age_ma": 23.872
+      "age_ma": 23.872,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_018",
@@ -1573,7 +3097,18 @@
         "tax_bird_017"
       ],
       "branch_length": 4.89675,
-      "age_ma": 25.70927
+      "age_ma": 25.70927,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_017",
@@ -1593,7 +3128,18 @@
         "tax_bird_019"
       ],
       "branch_length": 18.3723,
-      "age_ma": 25.97926
+      "age_ma": 25.97926,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_019",
@@ -1613,7 +3159,18 @@
         "tax_bird_016"
       ],
       "branch_length": 34.43604,
-      "age_ma": 36.21311
+      "age_ma": 36.21311,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_016",
@@ -1634,7 +3191,26 @@
         "ancestor_phylo_tetrapods_00104"
       ],
       "branch_length": 1.56821,
-      "age_ma": 69.08094
+      "age_ma": 69.08094,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 2,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Aves",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00103",
@@ -1644,7 +3220,18 @@
         "tax_bird_013"
       ],
       "branch_length": 0.0,
-      "age_ma": 69.08094
+      "age_ma": 69.08094,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_013",
@@ -1664,7 +3251,18 @@
         "tax_bird_014"
       ],
       "branch_length": 1.58195,
-      "age_ma": 67.49899
+      "age_ma": 67.49899,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 1,
+        "reptiles": 0,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_bird_014",
@@ -1685,7 +3283,26 @@
         "ancestor_phylo_tetrapods_00107"
       ],
       "branch_length": 59.10948,
-      "age_ma": 197.72536
+      "age_ma": 197.72536,
+      "descendant_species_count": 3,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 3,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        2
+      ],
+      "taxonomic_summary": {
+        "name": "Testudines",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 3
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00106",
@@ -1695,7 +3312,18 @@
         "tax_reptile_006"
       ],
       "branch_length": 118.23236,
-      "age_ma": 79.493
+      "age_ma": 79.493,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_006",
@@ -1716,7 +3344,26 @@
         "tax_reptile_005"
       ],
       "branch_length": 97.8694,
-      "age_ma": 99.85596
+      "age_ma": 99.85596,
+      "descendant_species_count": 2,
+      "immediate_child_count": 2,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 2,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1,
+        1
+      ],
+      "taxonomic_summary": {
+        "name": "Testudines",
+        "rank": "Class",
+        "method": "deepest_shared_descendant_taxon",
+        "source": "GBIF",
+        "descendant_species_count": 2
+      }
     },
     {
       "id": "ancestor_phylo_tetrapods_00108",
@@ -1726,7 +3373,18 @@
         "tax_reptile_004"
       ],
       "branch_length": 67.83624999999999,
-      "age_ma": 32.01971
+      "age_ma": 32.01971,
+      "descendant_species_count": 1,
+      "immediate_child_count": 1,
+      "descendant_composition": {
+        "mammals": 0,
+        "birds": 0,
+        "reptiles": 1,
+        "amphibians": 0
+      },
+      "child_branch_species_counts": [
+        1
+      ]
     },
     {
       "id": "tax_reptile_004",
