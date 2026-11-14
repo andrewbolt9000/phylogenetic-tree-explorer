@@ -7,7 +7,16 @@
     "url": "http://www.timetree.org/",
     "version": "1.0",
     "accessDate": "2025-01-13",
-    "description": "Pruned to 57 species with complete TimeTree terminal match, GBIF species-rank match, and PhyloPic verified species-level image"
+    "description": "Pruned to 57 species with complete TimeTree terminal match, GBIF species-rank match, and PhyloPic verified species-level image",
+    "ageData": {
+      "source": "TimeTree 6",
+      "url": "http://www.timetree.org/",
+      "rootAge_ma": 352.08192,
+      "rootAgeUnit": "millions of years ago",
+      "ultrametric": true,
+      "ageCalculationMethod": "Accumulated branch lengths from root (root_age - sum(branch_lengths))",
+      "notes": "All root-to-tip distances in original TimeTree are equal (352.08192 Ma). Age represents divergence time in millions of years before present (0 Ma)."
+    }
   },
   "terminalIdPrefix": "tax_",
   "internalIdPrefix": "ancestor_phylo_tetrapods_",
@@ -21,7 +30,8 @@
         "ancestor_phylo_tetrapods_00000",
         "ancestor_phylo_tetrapods_00029"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 352.08192
     },
     {
       "id": "ancestor_phylo_tetrapods_00000",
@@ -31,7 +41,8 @@
         "ancestor_phylo_tetrapods_00001",
         "ancestor_phylo_tetrapods_00002"
       ],
-      "branch_length": 35.12762
+      "branch_length": 35.12762,
+      "age_ma": 316.9543
     },
     {
       "id": "ancestor_phylo_tetrapods_00001",
@@ -40,7 +51,8 @@
       "children": [
         "tax_amphibian_020"
       ],
-      "branch_length": 128.85298
+      "branch_length": 128.85298,
+      "age_ma": 188.10132
     },
     {
       "id": "tax_amphibian_020",
@@ -49,7 +61,8 @@
       "children": [],
       "branch_length": 188.10131999999996,
       "original_name": "Siphonops_annulatus",
-      "taxonId": "tax_amphibian_020"
+      "taxonId": "tax_amphibian_020",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00002",
@@ -59,7 +72,8 @@
         "ancestor_phylo_tetrapods_00003",
         "ancestor_phylo_tetrapods_00012"
       ],
-      "branch_length": 27.00592
+      "branch_length": 27.00592,
+      "age_ma": 289.94838
     },
     {
       "id": "ancestor_phylo_tetrapods_00003",
@@ -69,7 +83,8 @@
         "ancestor_phylo_tetrapods_00004",
         "ancestor_phylo_tetrapods_00005"
       ],
-      "branch_length": 93.83167
+      "branch_length": 93.83167,
+      "age_ma": 196.11671
     },
     {
       "id": "ancestor_phylo_tetrapods_00004",
@@ -78,7 +93,8 @@
       "children": [
         "tax_amphibian_003"
       ],
-      "branch_length": 47.25769
+      "branch_length": 47.25769,
+      "age_ma": 148.85902
     },
     {
       "id": "tax_amphibian_003",
@@ -87,7 +103,8 @@
       "children": [],
       "branch_length": 148.85902,
       "original_name": "Andrias_japonicus",
-      "taxonId": "tax_amphibian_003"
+      "taxonId": "tax_amphibian_003",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00005",
@@ -97,7 +114,8 @@
         "ancestor_phylo_tetrapods_00006",
         "ancestor_phylo_tetrapods_00011"
       ],
-      "branch_length": 7.24115
+      "branch_length": 7.24115,
+      "age_ma": 188.87556
     },
     {
       "id": "ancestor_phylo_tetrapods_00006",
@@ -107,7 +125,8 @@
         "ancestor_phylo_tetrapods_00007",
         "ancestor_phylo_tetrapods_00010"
       ],
-      "branch_length": 102.08044000000001
+      "branch_length": 102.08044000000001,
+      "age_ma": 86.79512
     },
     {
       "id": "ancestor_phylo_tetrapods_00007",
@@ -117,7 +136,8 @@
         "ancestor_phylo_tetrapods_00008",
         "ancestor_phylo_tetrapods_00009"
       ],
-      "branch_length": 28.18703
+      "branch_length": 28.18703,
+      "age_ma": 58.60809
     },
     {
       "id": "ancestor_phylo_tetrapods_00008",
@@ -126,7 +146,8 @@
       "children": [
         "tax_amphibian_005"
       ],
-      "branch_length": 8.38019
+      "branch_length": 8.38019,
+      "age_ma": 50.2279
     },
     {
       "id": "tax_amphibian_005",
@@ -135,7 +156,8 @@
       "children": [],
       "branch_length": 50.2279,
       "original_name": "Triturus_cristatus",
-      "taxonId": "tax_amphibian_005"
+      "taxonId": "tax_amphibian_005",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00009",
@@ -144,7 +166,8 @@
       "children": [
         "tax_amphibian_006"
       ],
-      "branch_length": 17.76364
+      "branch_length": 17.76364,
+      "age_ma": 40.84445
     },
     {
       "id": "tax_amphibian_006",
@@ -153,7 +176,8 @@
       "children": [],
       "branch_length": 40.844449999999995,
       "original_name": "Pleurodeles_waltl",
-      "taxonId": "tax_amphibian_006"
+      "taxonId": "tax_amphibian_006",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00010",
@@ -162,7 +186,8 @@
       "children": [
         "tax_amphibian_004"
       ],
-      "branch_length": 21.76958
+      "branch_length": 21.76958,
+      "age_ma": 65.02554
     },
     {
       "id": "tax_amphibian_004",
@@ -171,7 +196,8 @@
       "children": [],
       "branch_length": 65.02553999999999,
       "original_name": "Salamandra_salamandra",
-      "taxonId": "tax_amphibian_004"
+      "taxonId": "tax_amphibian_004",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00011",
@@ -180,7 +206,8 @@
       "children": [
         "tax_amphibian_001"
       ],
-      "branch_length": 92.65585
+      "branch_length": 92.65585,
+      "age_ma": 96.21971
     },
     {
       "id": "tax_amphibian_001",
@@ -189,7 +216,8 @@
       "children": [],
       "branch_length": 96.21971,
       "original_name": "Ambystoma_mexicanum",
-      "taxonId": "tax_amphibian_001"
+      "taxonId": "tax_amphibian_001",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00012",
@@ -199,7 +227,8 @@
         "ancestor_phylo_tetrapods_00013",
         "ancestor_phylo_tetrapods_00016"
       ],
-      "branch_length": 70.93456
+      "branch_length": 70.93456,
+      "age_ma": 219.01382
     },
     {
       "id": "ancestor_phylo_tetrapods_00013",
@@ -209,7 +238,8 @@
         "ancestor_phylo_tetrapods_00014",
         "ancestor_phylo_tetrapods_00015"
       ],
-      "branch_length": 50.93155
+      "branch_length": 50.93155,
+      "age_ma": 168.08227
     },
     {
       "id": "ancestor_phylo_tetrapods_00014",
@@ -218,7 +248,8 @@
       "children": [
         "tax_amphibian_016"
       ],
-      "branch_length": 45.95551
+      "branch_length": 45.95551,
+      "age_ma": 122.12676
     },
     {
       "id": "tax_amphibian_016",
@@ -227,7 +258,8 @@
       "children": [],
       "branch_length": 122.12676,
       "original_name": "Pipa_pipa",
-      "taxonId": "tax_amphibian_016"
+      "taxonId": "tax_amphibian_016",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00015",
@@ -236,7 +268,8 @@
       "children": [
         "tax_amphibian_009"
       ],
-      "branch_length": 100.81359
+      "branch_length": 100.81359,
+      "age_ma": 67.26868
     },
     {
       "id": "tax_amphibian_009",
@@ -245,7 +278,8 @@
       "children": [],
       "branch_length": 67.26867999999999,
       "original_name": "Xenopus_laevis",
-      "taxonId": "tax_amphibian_009"
+      "taxonId": "tax_amphibian_009",
+      "age_ma": -0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00016",
@@ -255,7 +289,8 @@
         "ancestor_phylo_tetrapods_00017",
         "ancestor_phylo_tetrapods_00018"
       ],
-      "branch_length": 33.24583
+      "branch_length": 33.24583,
+      "age_ma": 185.76799
     },
     {
       "id": "ancestor_phylo_tetrapods_00017",
@@ -264,7 +299,8 @@
       "children": [
         "tax_amphibian_007"
       ],
-      "branch_length": 58.12673
+      "branch_length": 58.12673,
+      "age_ma": 127.64126
     },
     {
       "id": "tax_amphibian_007",
@@ -273,7 +309,8 @@
       "children": [],
       "branch_length": 127.64126,
       "original_name": "Rana_temporaria",
-      "taxonId": "tax_amphibian_007"
+      "taxonId": "tax_amphibian_007",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00018",
@@ -283,7 +320,8 @@
         "ancestor_phylo_tetrapods_00019",
         "ancestor_phylo_tetrapods_00028"
       ],
-      "branch_length": 46.70049
+      "branch_length": 46.70049,
+      "age_ma": 139.0675
     },
     {
       "id": "ancestor_phylo_tetrapods_00019",
@@ -293,7 +331,8 @@
         "ancestor_phylo_tetrapods_00020",
         "ancestor_phylo_tetrapods_00027"
       ],
-      "branch_length": 74.20062999999999
+      "branch_length": 74.20062999999999,
+      "age_ma": 64.86687
     },
     {
       "id": "ancestor_phylo_tetrapods_00020",
@@ -303,7 +342,8 @@
         "ancestor_phylo_tetrapods_00021",
         "ancestor_phylo_tetrapods_00024"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 64.86687
     },
     {
       "id": "ancestor_phylo_tetrapods_00021",
@@ -313,7 +353,8 @@
         "ancestor_phylo_tetrapods_00022",
         "ancestor_phylo_tetrapods_00023"
       ],
-      "branch_length": 11.17306
+      "branch_length": 11.17306,
+      "age_ma": 53.69381
     },
     {
       "id": "ancestor_phylo_tetrapods_00022",
@@ -322,7 +363,8 @@
       "children": [
         "tax_amphibian_013"
       ],
-      "branch_length": 27.08459
+      "branch_length": 27.08459,
+      "age_ma": 26.60922
     },
     {
       "id": "tax_amphibian_013",
@@ -331,7 +373,8 @@
       "children": [],
       "branch_length": 26.60922,
       "original_name": "Bufo_bufo",
-      "taxonId": "tax_amphibian_013"
+      "taxonId": "tax_amphibian_013",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00023",
@@ -340,7 +383,8 @@
       "children": [
         "tax_amphibian_014"
       ],
-      "branch_length": 29.400129999999997
+      "branch_length": 29.400129999999997,
+      "age_ma": 24.29368
     },
     {
       "id": "tax_amphibian_014",
@@ -349,7 +393,8 @@
       "children": [],
       "branch_length": 24.293680000000002,
       "original_name": "Rhinella_marina",
-      "taxonId": "tax_amphibian_014"
+      "taxonId": "tax_amphibian_014",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00024",
@@ -359,7 +404,8 @@
         "ancestor_phylo_tetrapods_00025",
         "ancestor_phylo_tetrapods_00026"
       ],
-      "branch_length": 23.434359999999998
+      "branch_length": 23.434359999999998,
+      "age_ma": 41.43251
     },
     {
       "id": "ancestor_phylo_tetrapods_00025",
@@ -368,7 +414,8 @@
       "children": [
         "tax_amphibian_011"
       ],
-      "branch_length": 31.2221
+      "branch_length": 31.2221,
+      "age_ma": 10.21041
     },
     {
       "id": "tax_amphibian_011",
@@ -377,7 +424,8 @@
       "children": [],
       "branch_length": 10.210410000000001,
       "original_name": "Dendrobates_tinctorius",
-      "taxonId": "tax_amphibian_011"
+      "taxonId": "tax_amphibian_011",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00026",
@@ -386,7 +434,8 @@
       "children": [
         "tax_amphibian_012"
       ],
-      "branch_length": 32.17732
+      "branch_length": 32.17732,
+      "age_ma": 9.25519
     },
     {
       "id": "tax_amphibian_012",
@@ -395,7 +444,8 @@
       "children": [],
       "branch_length": 9.25519,
       "original_name": "Oophaga_pumilio",
-      "taxonId": "tax_amphibian_012"
+      "taxonId": "tax_amphibian_012",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00027",
@@ -404,7 +454,8 @@
       "children": [
         "tax_amphibian_017"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 64.86687
     },
     {
       "id": "tax_amphibian_017",
@@ -413,7 +464,8 @@
       "children": [],
       "branch_length": 64.86687,
       "original_name": "Ceratophrys_ornata",
-      "taxonId": "tax_amphibian_017"
+      "taxonId": "tax_amphibian_017",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00028",
@@ -422,7 +474,8 @@
       "children": [
         "tax_amphibian_015"
       ],
-      "branch_length": 75.98074
+      "branch_length": 75.98074,
+      "age_ma": 63.08676
     },
     {
       "id": "tax_amphibian_015",
@@ -431,7 +484,8 @@
       "children": [],
       "branch_length": 63.08676,
       "original_name": "Hyla_arborea",
-      "taxonId": "tax_amphibian_015"
+      "taxonId": "tax_amphibian_015",
+      "age_ma": -0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00029",
@@ -441,7 +495,8 @@
         "ancestor_phylo_tetrapods_00030",
         "ancestor_phylo_tetrapods_00052"
       ],
-      "branch_length": 33.25704
+      "branch_length": 33.25704,
+      "age_ma": 318.82488
     },
     {
       "id": "ancestor_phylo_tetrapods_00030",
@@ -451,7 +506,8 @@
         "ancestor_phylo_tetrapods_00031",
         "ancestor_phylo_tetrapods_00050"
       ],
-      "branch_length": 137.63296
+      "branch_length": 137.63296,
+      "age_ma": 181.19192
     },
     {
       "id": "ancestor_phylo_tetrapods_00031",
@@ -461,7 +517,8 @@
         "ancestor_phylo_tetrapods_00032",
         "ancestor_phylo_tetrapods_00035"
       ],
-      "branch_length": 22.03374
+      "branch_length": 22.03374,
+      "age_ma": 159.15818
     },
     {
       "id": "ancestor_phylo_tetrapods_00032",
@@ -471,7 +528,8 @@
         "ancestor_phylo_tetrapods_00033",
         "ancestor_phylo_tetrapods_00034"
       ],
-      "branch_length": 88.91732
+      "branch_length": 88.91732,
+      "age_ma": 70.24086
     },
     {
       "id": "ancestor_phylo_tetrapods_00033",
@@ -480,7 +538,8 @@
       "children": [
         "tax_mammal_005"
       ],
-      "branch_length": 35.8514
+      "branch_length": 35.8514,
+      "age_ma": 34.38946
     },
     {
       "id": "tax_mammal_005",
@@ -489,7 +548,8 @@
       "children": [],
       "branch_length": 34.38946,
       "original_name": "Vombatus_ursinus",
-      "taxonId": "tax_mammal_005"
+      "taxonId": "tax_mammal_005",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00034",
@@ -498,7 +558,8 @@
       "children": [
         "tax_mammal_004"
       ],
-      "branch_length": 26.7884
+      "branch_length": 26.7884,
+      "age_ma": 43.45246
     },
     {
       "id": "tax_mammal_004",
@@ -507,7 +568,8 @@
       "children": [],
       "branch_length": 43.45246,
       "original_name": "Macropus_giganteus",
-      "taxonId": "tax_mammal_004"
+      "taxonId": "tax_mammal_004",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00035",
@@ -517,7 +579,8 @@
         "ancestor_phylo_tetrapods_00036",
         "ancestor_phylo_tetrapods_00047"
       ],
-      "branch_length": 67.05389
+      "branch_length": 67.05389,
+      "age_ma": 92.10429
     },
     {
       "id": "ancestor_phylo_tetrapods_00036",
@@ -527,7 +590,8 @@
         "ancestor_phylo_tetrapods_00037",
         "ancestor_phylo_tetrapods_00042"
       ],
-      "branch_length": 9.97476
+      "branch_length": 9.97476,
+      "age_ma": 82.12953
     },
     {
       "id": "ancestor_phylo_tetrapods_00037",
@@ -537,7 +601,8 @@
         "ancestor_phylo_tetrapods_00038",
         "ancestor_phylo_tetrapods_00041"
       ],
-      "branch_length": 8.92886
+      "branch_length": 8.92886,
+      "age_ma": 73.20067
     },
     {
       "id": "ancestor_phylo_tetrapods_00038",
@@ -547,7 +612,8 @@
         "ancestor_phylo_tetrapods_00039",
         "ancestor_phylo_tetrapods_00040"
       ],
-      "branch_length": 27.853720000000003
+      "branch_length": 27.853720000000003,
+      "age_ma": 45.34695
     },
     {
       "id": "ancestor_phylo_tetrapods_00039",
@@ -556,7 +622,8 @@
       "children": [
         "tax_mammal_014"
       ],
-      "branch_length": 33.48885
+      "branch_length": 33.48885,
+      "age_ma": 11.8581
     },
     {
       "id": "tax_mammal_014",
@@ -565,7 +632,8 @@
       "children": [],
       "branch_length": 11.8581,
       "original_name": "Felis_catus",
-      "taxonId": "tax_mammal_014"
+      "taxonId": "tax_mammal_014",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00040",
@@ -574,7 +642,8 @@
       "children": [
         "tax_mammal_015"
       ],
-      "branch_length": 36.05946
+      "branch_length": 36.05946,
+      "age_ma": 9.28749
     },
     {
       "id": "tax_mammal_015",
@@ -583,7 +652,8 @@
       "children": [],
       "branch_length": 9.28749,
       "original_name": "Panthera_leo",
-      "taxonId": "tax_mammal_015"
+      "taxonId": "tax_mammal_015",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00041",
@@ -592,7 +662,8 @@
       "children": [
         "tax_mammal_013"
       ],
-      "branch_length": 28.25821
+      "branch_length": 28.25821,
+      "age_ma": 44.94246
     },
     {
       "id": "tax_mammal_013",
@@ -601,7 +672,8 @@
       "children": [],
       "branch_length": 44.942460000000004,
       "original_name": "Canis_lupus",
-      "taxonId": "tax_mammal_013"
+      "taxonId": "tax_mammal_013",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00042",
@@ -611,7 +683,8 @@
         "ancestor_phylo_tetrapods_00043",
         "ancestor_phylo_tetrapods_00044"
       ],
-      "branch_length": 18.963620000000002
+      "branch_length": 18.963620000000002,
+      "age_ma": 63.16591
     },
     {
       "id": "ancestor_phylo_tetrapods_00043",
@@ -620,7 +693,8 @@
       "children": [
         "tax_mammal_012"
       ],
-      "branch_length": 28.38923
+      "branch_length": 28.38923,
+      "age_ma": 34.77668
     },
     {
       "id": "tax_mammal_012",
@@ -629,7 +703,8 @@
       "children": [],
       "branch_length": 34.77668,
       "original_name": "Sus_scrofa",
-      "taxonId": "tax_mammal_012"
+      "taxonId": "tax_mammal_012",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00044",
@@ -639,7 +714,8 @@
         "ancestor_phylo_tetrapods_00045",
         "ancestor_phylo_tetrapods_00046"
       ],
-      "branch_length": 6.403689999999999
+      "branch_length": 6.403689999999999,
+      "age_ma": 56.76222
     },
     {
       "id": "ancestor_phylo_tetrapods_00045",
@@ -648,7 +724,8 @@
       "children": [
         "tax_mammal_018"
       ],
-      "branch_length": 24.04604
+      "branch_length": 24.04604,
+      "age_ma": 32.71618
     },
     {
       "id": "tax_mammal_018",
@@ -657,7 +734,8 @@
       "children": [],
       "branch_length": 32.716179999999994,
       "original_name": "Tursiops_truncatus",
-      "taxonId": "tax_mammal_018"
+      "taxonId": "tax_mammal_018",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00046",
@@ -666,7 +744,8 @@
       "children": [
         "tax_mammal_017"
       ],
-      "branch_length": 32.43288
+      "branch_length": 32.43288,
+      "age_ma": 24.32934
     },
     {
       "id": "tax_mammal_017",
@@ -675,7 +754,8 @@
       "children": [],
       "branch_length": 24.32934,
       "original_name": "Balaenoptera_musculus",
-      "taxonId": "tax_mammal_017"
+      "taxonId": "tax_mammal_017",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00047",
@@ -685,7 +765,8 @@
         "ancestor_phylo_tetrapods_00048",
         "ancestor_phylo_tetrapods_00049"
       ],
-      "branch_length": 8.59033
+      "branch_length": 8.59033,
+      "age_ma": 83.51396
     },
     {
       "id": "ancestor_phylo_tetrapods_00048",
@@ -694,7 +775,8 @@
       "children": [
         "tax_mammal_007"
       ],
-      "branch_length": 74.79581999999999
+      "branch_length": 74.79581999999999,
+      "age_ma": 8.71814
     },
     {
       "id": "tax_mammal_007",
@@ -703,7 +785,8 @@
       "children": [],
       "branch_length": 8.71814,
       "original_name": "Pan_troglodytes",
-      "taxonId": "tax_mammal_007"
+      "taxonId": "tax_mammal_007",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00049",
@@ -712,7 +795,8 @@
       "children": [
         "tax_mammal_008"
       ],
-      "branch_length": 79.43392999999998
+      "branch_length": 79.43392999999998,
+      "age_ma": 4.08003
     },
     {
       "id": "tax_mammal_008",
@@ -721,7 +805,8 @@
       "children": [],
       "branch_length": 4.08003,
       "original_name": "Pongo_pygmaeus",
-      "taxonId": "tax_mammal_008"
+      "taxonId": "tax_mammal_008",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00050",
@@ -731,7 +816,8 @@
         "ancestor_phylo_tetrapods_00051",
         "tax_mammal_001"
       ],
-      "branch_length": 134.11212
+      "branch_length": 134.11212,
+      "age_ma": 47.0798
     },
     {
       "id": "ancestor_phylo_tetrapods_00051",
@@ -740,7 +826,8 @@
       "children": [
         "tax_mammal_002"
       ],
-      "branch_length": 35.60181
+      "branch_length": 35.60181,
+      "age_ma": 11.47799
     },
     {
       "id": "tax_mammal_002",
@@ -749,7 +836,8 @@
       "children": [],
       "branch_length": 11.47799,
       "original_name": "Tachyglossus_aculeatus",
-      "taxonId": "tax_mammal_002"
+      "taxonId": "tax_mammal_002",
+      "age_ma": 0.0
     },
     {
       "id": "tax_mammal_001",
@@ -758,7 +846,8 @@
       "children": [],
       "branch_length": 47.0798,
       "original_name": "Ornithorhynchus_anatinus",
-      "taxonId": "tax_mammal_001"
+      "taxonId": "tax_mammal_001",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00052",
@@ -768,7 +857,8 @@
         "ancestor_phylo_tetrapods_00053",
         "ancestor_phylo_tetrapods_00073"
       ],
-      "branch_length": 38.13991
+      "branch_length": 38.13991,
+      "age_ma": 280.68497
     },
     {
       "id": "ancestor_phylo_tetrapods_00053",
@@ -778,7 +868,8 @@
         "ancestor_phylo_tetrapods_00054",
         "tax_reptile_001"
       ],
-      "branch_length": 35.70308
+      "branch_length": 35.70308,
+      "age_ma": 244.98189
     },
     {
       "id": "ancestor_phylo_tetrapods_00054",
@@ -788,7 +879,8 @@
         "ancestor_phylo_tetrapods_00055",
         "ancestor_phylo_tetrapods_00056"
       ],
-      "branch_length": 22.42686
+      "branch_length": 22.42686,
+      "age_ma": 222.55503
     },
     {
       "id": "ancestor_phylo_tetrapods_00055",
@@ -797,7 +889,8 @@
       "children": [
         "tax_reptile_007"
       ],
-      "branch_length": 112.84029000000001
+      "branch_length": 112.84029000000001,
+      "age_ma": 109.71474
     },
     {
       "id": "tax_reptile_007",
@@ -806,7 +899,8 @@
       "children": [],
       "branch_length": 109.71474000000002,
       "original_name": "Gekko_gecko",
-      "taxonId": "tax_reptile_007"
+      "taxonId": "tax_reptile_007",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00056",
@@ -816,7 +910,8 @@
         "ancestor_phylo_tetrapods_00057",
         "ancestor_phylo_tetrapods_00062"
       ],
-      "branch_length": 42.64072
+      "branch_length": 42.64072,
+      "age_ma": 179.91431
     },
     {
       "id": "ancestor_phylo_tetrapods_00057",
@@ -826,7 +921,8 @@
         "ancestor_phylo_tetrapods_00058",
         "ancestor_phylo_tetrapods_00061"
       ],
-      "branch_length": 52.395140000000005
+      "branch_length": 52.395140000000005,
+      "age_ma": 127.51917
     },
     {
       "id": "ancestor_phylo_tetrapods_00058",
@@ -836,7 +932,8 @@
         "ancestor_phylo_tetrapods_00059",
         "ancestor_phylo_tetrapods_00060"
       ],
-      "branch_length": 88.28695
+      "branch_length": 88.28695,
+      "age_ma": 39.23222
     },
     {
       "id": "ancestor_phylo_tetrapods_00059",
@@ -845,7 +942,8 @@
       "children": [
         "tax_reptile_016"
       ],
-      "branch_length": 8.0801
+      "branch_length": 8.0801,
+      "age_ma": 31.15212
     },
     {
       "id": "tax_reptile_016",
@@ -854,7 +952,8 @@
       "children": [],
       "branch_length": 31.15212,
       "original_name": "Vipera_berus",
-      "taxonId": "tax_reptile_016"
+      "taxonId": "tax_reptile_016",
+      "age_ma": -0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00060",
@@ -863,7 +962,8 @@
       "children": [
         "tax_reptile_017"
       ],
-      "branch_length": 5.58232
+      "branch_length": 5.58232,
+      "age_ma": 33.6499
     },
     {
       "id": "tax_reptile_017",
@@ -872,7 +972,8 @@
       "children": [],
       "branch_length": 33.6499,
       "original_name": "Crotalus_atrox",
-      "taxonId": "tax_reptile_017"
+      "taxonId": "tax_reptile_017",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00061",
@@ -881,7 +982,8 @@
       "children": [
         "tax_reptile_015"
       ],
-      "branch_length": 75.10174
+      "branch_length": 75.10174,
+      "age_ma": 52.41743
     },
     {
       "id": "tax_reptile_015",
@@ -890,7 +992,8 @@
       "children": [],
       "branch_length": 52.41743,
       "original_name": "Ophiophagus_hannah",
-      "taxonId": "tax_reptile_015"
+      "taxonId": "tax_reptile_015",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00062",
@@ -900,7 +1003,8 @@
         "ancestor_phylo_tetrapods_00063",
         "ancestor_phylo_tetrapods_00070"
       ],
-      "branch_length": 20.23464
+      "branch_length": 20.23464,
+      "age_ma": 159.67967
     },
     {
       "id": "ancestor_phylo_tetrapods_00063",
@@ -910,7 +1014,8 @@
         "ancestor_phylo_tetrapods_00064",
         "ancestor_phylo_tetrapods_00069"
       ],
-      "branch_length": 53.69465
+      "branch_length": 53.69465,
+      "age_ma": 105.98502
     },
     {
       "id": "ancestor_phylo_tetrapods_00064",
@@ -920,7 +1025,8 @@
         "ancestor_phylo_tetrapods_00065",
         "ancestor_phylo_tetrapods_00068"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 105.98502
     },
     {
       "id": "ancestor_phylo_tetrapods_00065",
@@ -930,7 +1036,8 @@
         "ancestor_phylo_tetrapods_00066",
         "ancestor_phylo_tetrapods_00067"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 105.98502
     },
     {
       "id": "ancestor_phylo_tetrapods_00066",
@@ -939,7 +1046,8 @@
       "children": [
         "tax_reptile_018"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 105.98502
     },
     {
       "id": "tax_reptile_018",
@@ -948,7 +1056,8 @@
       "children": [],
       "branch_length": 105.98501999999999,
       "original_name": "Chamaeleo_calyptratus",
-      "taxonId": "tax_reptile_018"
+      "taxonId": "tax_reptile_018",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00067",
@@ -957,7 +1066,8 @@
       "children": [
         "tax_reptile_010"
       ],
-      "branch_length": 16.66495
+      "branch_length": 16.66495,
+      "age_ma": 89.32007
     },
     {
       "id": "tax_reptile_010",
@@ -966,7 +1076,8 @@
       "children": [],
       "branch_length": 89.32007,
       "original_name": "Iguana_iguana",
-      "taxonId": "tax_reptile_010"
+      "taxonId": "tax_reptile_010",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00068",
@@ -975,7 +1086,8 @@
       "children": [
         "tax_reptile_008"
       ],
-      "branch_length": 55.84569
+      "branch_length": 55.84569,
+      "age_ma": 50.13933
     },
     {
       "id": "tax_reptile_008",
@@ -984,7 +1096,8 @@
       "children": [],
       "branch_length": 50.139329999999994,
       "original_name": "Anolis_carolinensis",
-      "taxonId": "tax_reptile_008"
+      "taxonId": "tax_reptile_008",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00069",
@@ -993,7 +1106,8 @@
       "children": [
         "tax_reptile_019"
       ],
-      "branch_length": 53.58952
+      "branch_length": 53.58952,
+      "age_ma": 52.3955
     },
     {
       "id": "tax_reptile_019",
@@ -1002,7 +1116,8 @@
       "children": [],
       "branch_length": 52.395500000000006,
       "original_name": "Sceloporus_occidentalis",
-      "taxonId": "tax_reptile_019"
+      "taxonId": "tax_reptile_019",
+      "age_ma": -0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00070",
@@ -1012,7 +1127,8 @@
         "ancestor_phylo_tetrapods_00071",
         "ancestor_phylo_tetrapods_00072"
       ],
-      "branch_length": 35.86653
+      "branch_length": 35.86653,
+      "age_ma": 123.81314
     },
     {
       "id": "ancestor_phylo_tetrapods_00071",
@@ -1021,7 +1137,8 @@
       "children": [
         "tax_reptile_009"
       ],
-      "branch_length": 17.09053
+      "branch_length": 17.09053,
+      "age_ma": 106.72261
     },
     {
       "id": "tax_reptile_009",
@@ -1030,7 +1147,8 @@
       "children": [],
       "branch_length": 106.72261,
       "original_name": "Varanus_komodoensis",
-      "taxonId": "tax_reptile_009"
+      "taxonId": "tax_reptile_009",
+      "age_ma": -0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00072",
@@ -1039,7 +1157,8 @@
       "children": [
         "tax_reptile_011"
       ],
-      "branch_length": 24.87335
+      "branch_length": 24.87335,
+      "age_ma": 98.93979
     },
     {
       "id": "tax_reptile_011",
@@ -1048,7 +1167,8 @@
       "children": [],
       "branch_length": 98.93979,
       "original_name": "Heloderma_suspectum",
-      "taxonId": "tax_reptile_011"
+      "taxonId": "tax_reptile_011",
+      "age_ma": 0.0
     },
     {
       "id": "tax_reptile_001",
@@ -1057,7 +1177,8 @@
       "children": [],
       "branch_length": 244.98189,
       "original_name": "Sphenodon_punctatus",
-      "taxonId": "tax_reptile_001"
+      "taxonId": "tax_reptile_001",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00073",
@@ -1067,7 +1188,8 @@
         "ancestor_phylo_tetrapods_00074",
         "ancestor_phylo_tetrapods_00105"
       ],
-      "branch_length": 23.85013
+      "branch_length": 23.85013,
+      "age_ma": 256.83484
     },
     {
       "id": "ancestor_phylo_tetrapods_00074",
@@ -1077,7 +1199,8 @@
         "ancestor_phylo_tetrapods_00075",
         "ancestor_phylo_tetrapods_00078"
       ],
-      "branch_length": 13.53926
+      "branch_length": 13.53926,
+      "age_ma": 243.29558
     },
     {
       "id": "ancestor_phylo_tetrapods_00075",
@@ -1087,7 +1210,8 @@
         "ancestor_phylo_tetrapods_00076",
         "ancestor_phylo_tetrapods_00077"
       ],
-      "branch_length": 155.25556
+      "branch_length": 155.25556,
+      "age_ma": 88.04002
     },
     {
       "id": "ancestor_phylo_tetrapods_00076",
@@ -1096,7 +1220,8 @@
       "children": [
         "tax_reptile_002"
       ],
-      "branch_length": 21.39113
+      "branch_length": 21.39113,
+      "age_ma": 66.64889
     },
     {
       "id": "tax_reptile_002",
@@ -1105,7 +1230,8 @@
       "children": [],
       "branch_length": 66.64889,
       "original_name": "Alligator_mississippiensis",
-      "taxonId": "tax_reptile_002"
+      "taxonId": "tax_reptile_002",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00077",
@@ -1114,7 +1240,8 @@
       "children": [
         "tax_reptile_003"
       ],
-      "branch_length": 35.43997
+      "branch_length": 35.43997,
+      "age_ma": 52.60005
     },
     {
       "id": "tax_reptile_003",
@@ -1123,7 +1250,8 @@
       "children": [],
       "branch_length": 52.600049999999996,
       "original_name": "Crocodylus_niloticus",
-      "taxonId": "tax_reptile_003"
+      "taxonId": "tax_reptile_003",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00078",
@@ -1133,7 +1261,8 @@
         "ancestor_phylo_tetrapods_00079",
         "ancestor_phylo_tetrapods_00082"
       ],
-      "branch_length": 135.74028
+      "branch_length": 135.74028,
+      "age_ma": 107.5553
     },
     {
       "id": "ancestor_phylo_tetrapods_00079",
@@ -1143,7 +1272,8 @@
         "ancestor_phylo_tetrapods_00080",
         "ancestor_phylo_tetrapods_00081"
       ],
-      "branch_length": 30.78346
+      "branch_length": 30.78346,
+      "age_ma": 76.77184
     },
     {
       "id": "ancestor_phylo_tetrapods_00080",
@@ -1152,7 +1282,8 @@
       "children": [
         "tax_bird_001"
       ],
-      "branch_length": 32.81812
+      "branch_length": 32.81812,
+      "age_ma": 43.95372
     },
     {
       "id": "tax_bird_001",
@@ -1161,7 +1292,8 @@
       "children": [],
       "branch_length": 43.95372,
       "original_name": "Struthio_camelus",
-      "taxonId": "tax_bird_001"
+      "taxonId": "tax_bird_001",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00081",
@@ -1170,7 +1302,8 @@
       "children": [
         "tax_bird_003"
       ],
-      "branch_length": 12.979000000000001
+      "branch_length": 12.979000000000001,
+      "age_ma": 63.79284
     },
     {
       "id": "tax_bird_003",
@@ -1179,7 +1312,8 @@
       "children": [],
       "branch_length": 63.792840000000005,
       "original_name": "Apteryx_australis",
-      "taxonId": "tax_bird_003"
+      "taxonId": "tax_bird_003",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00082",
@@ -1189,7 +1323,8 @@
         "ancestor_phylo_tetrapods_00083",
         "ancestor_phylo_tetrapods_00084"
       ],
-      "branch_length": 11.1486
+      "branch_length": 11.1486,
+      "age_ma": 96.4067
     },
     {
       "id": "ancestor_phylo_tetrapods_00083",
@@ -1198,7 +1333,8 @@
       "children": [
         "tax_bird_004"
       ],
-      "branch_length": 17.59092
+      "branch_length": 17.59092,
+      "age_ma": 78.81578
     },
     {
       "id": "tax_bird_004",
@@ -1207,7 +1343,8 @@
       "children": [],
       "branch_length": 78.81578,
       "original_name": "Anas_platyrhynchos",
-      "taxonId": "tax_bird_004"
+      "taxonId": "tax_bird_004",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00084",
@@ -1217,7 +1354,8 @@
         "ancestor_phylo_tetrapods_00085",
         "ancestor_phylo_tetrapods_00086"
       ],
-      "branch_length": 18.33621
+      "branch_length": 18.33621,
+      "age_ma": 78.07049
     },
     {
       "id": "ancestor_phylo_tetrapods_00085",
@@ -1226,7 +1364,8 @@
       "children": [
         "tax_bird_015"
       ],
-      "branch_length": 15.16227
+      "branch_length": 15.16227,
+      "age_ma": 62.90822
     },
     {
       "id": "tax_bird_015",
@@ -1235,7 +1374,8 @@
       "children": [],
       "branch_length": 62.90822000000001,
       "original_name": "Columba_livia",
-      "taxonId": "tax_bird_015"
+      "taxonId": "tax_bird_015",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00086",
@@ -1245,7 +1385,8 @@
         "ancestor_phylo_tetrapods_00087",
         "ancestor_phylo_tetrapods_00094"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 78.07049
     },
     {
       "id": "ancestor_phylo_tetrapods_00087",
@@ -1255,7 +1396,8 @@
         "ancestor_phylo_tetrapods_00088",
         "ancestor_phylo_tetrapods_00091"
       ],
-      "branch_length": 9.34127
+      "branch_length": 9.34127,
+      "age_ma": 68.72922
     },
     {
       "id": "ancestor_phylo_tetrapods_00088",
@@ -1265,7 +1407,8 @@
         "ancestor_phylo_tetrapods_00089",
         "ancestor_phylo_tetrapods_00090"
       ],
-      "branch_length": 5.9856799999999994
+      "branch_length": 5.9856799999999994,
+      "age_ma": 62.74354
     },
     {
       "id": "ancestor_phylo_tetrapods_00089",
@@ -1274,7 +1417,8 @@
       "children": [
         "tax_bird_007"
       ],
-      "branch_length": 53.84833999999999
+      "branch_length": 53.84833999999999,
+      "age_ma": 8.8952
     },
     {
       "id": "tax_bird_007",
@@ -1283,7 +1427,8 @@
       "children": [],
       "branch_length": 8.8952,
       "original_name": "Aptenodytes_forsteri",
-      "taxonId": "tax_bird_007"
+      "taxonId": "tax_bird_007",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00090",
@@ -1292,7 +1437,8 @@
       "children": [
         "tax_bird_008"
       ],
-      "branch_length": 35.20764
+      "branch_length": 35.20764,
+      "age_ma": 27.5359
     },
     {
       "id": "tax_bird_008",
@@ -1301,7 +1447,8 @@
       "children": [],
       "branch_length": 27.535899999999998,
       "original_name": "Spheniscus_demersus",
-      "taxonId": "tax_bird_008"
+      "taxonId": "tax_bird_008",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00091",
@@ -1311,7 +1458,8 @@
         "ancestor_phylo_tetrapods_00092",
         "ancestor_phylo_tetrapods_00093"
       ],
-      "branch_length": 5.07889
+      "branch_length": 5.07889,
+      "age_ma": 63.65033
     },
     {
       "id": "ancestor_phylo_tetrapods_00092",
@@ -1320,7 +1468,8 @@
       "children": [
         "tax_bird_011"
       ],
-      "branch_length": 12.82517
+      "branch_length": 12.82517,
+      "age_ma": 50.82516
     },
     {
       "id": "tax_bird_011",
@@ -1329,7 +1478,8 @@
       "children": [],
       "branch_length": 50.825160000000004,
       "original_name": "Ciconia_ciconia",
-      "taxonId": "tax_bird_011"
+      "taxonId": "tax_bird_011",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00093",
@@ -1338,7 +1488,8 @@
       "children": [
         "tax_bird_010"
       ],
-      "branch_length": 0.61362
+      "branch_length": 0.61362,
+      "age_ma": 63.03671
     },
     {
       "id": "tax_bird_010",
@@ -1347,7 +1498,8 @@
       "children": [],
       "branch_length": 63.03670999999999,
       "original_name": "Pelecanus_occidentalis",
-      "taxonId": "tax_bird_010"
+      "taxonId": "tax_bird_010",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00094",
@@ -1357,7 +1509,8 @@
         "ancestor_phylo_tetrapods_00095",
         "ancestor_phylo_tetrapods_00102"
       ],
-      "branch_length": 7.42134
+      "branch_length": 7.42134,
+      "age_ma": 70.64915
     },
     {
       "id": "ancestor_phylo_tetrapods_00095",
@@ -1367,7 +1520,8 @@
         "ancestor_phylo_tetrapods_00096",
         "ancestor_phylo_tetrapods_00101"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 70.64915
     },
     {
       "id": "ancestor_phylo_tetrapods_00096",
@@ -1377,7 +1531,8 @@
         "ancestor_phylo_tetrapods_00097",
         "ancestor_phylo_tetrapods_00100"
       ],
-      "branch_length": 26.29759
+      "branch_length": 26.29759,
+      "age_ma": 44.35156
     },
     {
       "id": "ancestor_phylo_tetrapods_00097",
@@ -1387,7 +1542,8 @@
         "ancestor_phylo_tetrapods_00098",
         "ancestor_phylo_tetrapods_00099"
       ],
-      "branch_length": 13.74554
+      "branch_length": 13.74554,
+      "age_ma": 30.60602
     },
     {
       "id": "ancestor_phylo_tetrapods_00098",
@@ -1396,7 +1552,8 @@
       "children": [
         "tax_bird_018"
       ],
-      "branch_length": 6.73402
+      "branch_length": 6.73402,
+      "age_ma": 23.872
     },
     {
       "id": "tax_bird_018",
@@ -1405,7 +1562,8 @@
       "children": [],
       "branch_length": 23.872,
       "original_name": "Passer_domesticus",
-      "taxonId": "tax_bird_018"
+      "taxonId": "tax_bird_018",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00099",
@@ -1414,7 +1572,8 @@
       "children": [
         "tax_bird_017"
       ],
-      "branch_length": 4.89675
+      "branch_length": 4.89675,
+      "age_ma": 25.70927
     },
     {
       "id": "tax_bird_017",
@@ -1423,7 +1582,8 @@
       "children": [],
       "branch_length": 25.709270000000004,
       "original_name": "Corvus_corax",
-      "taxonId": "tax_bird_017"
+      "taxonId": "tax_bird_017",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00100",
@@ -1432,7 +1592,8 @@
       "children": [
         "tax_bird_019"
       ],
-      "branch_length": 18.3723
+      "branch_length": 18.3723,
+      "age_ma": 25.97926
     },
     {
       "id": "tax_bird_019",
@@ -1441,7 +1602,8 @@
       "children": [],
       "branch_length": 25.97926,
       "original_name": "Troglodytes_troglodytes",
-      "taxonId": "tax_bird_019"
+      "taxonId": "tax_bird_019",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00101",
@@ -1450,7 +1612,8 @@
       "children": [
         "tax_bird_016"
       ],
-      "branch_length": 34.43604
+      "branch_length": 34.43604,
+      "age_ma": 36.21311
     },
     {
       "id": "tax_bird_016",
@@ -1459,7 +1622,8 @@
       "children": [],
       "branch_length": 36.21310999999999,
       "original_name": "Psittacus_erithacus",
-      "taxonId": "tax_bird_016"
+      "taxonId": "tax_bird_016",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00102",
@@ -1469,7 +1633,8 @@
         "ancestor_phylo_tetrapods_00103",
         "ancestor_phylo_tetrapods_00104"
       ],
-      "branch_length": 1.56821
+      "branch_length": 1.56821,
+      "age_ma": 69.08094
     },
     {
       "id": "ancestor_phylo_tetrapods_00103",
@@ -1478,7 +1643,8 @@
       "children": [
         "tax_bird_013"
       ],
-      "branch_length": 0.0
+      "branch_length": 0.0,
+      "age_ma": 69.08094
     },
     {
       "id": "tax_bird_013",
@@ -1487,7 +1653,8 @@
       "children": [],
       "branch_length": 69.08094,
       "original_name": "Aquila_chrysaetos",
-      "taxonId": "tax_bird_013"
+      "taxonId": "tax_bird_013",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00104",
@@ -1496,7 +1663,8 @@
       "children": [
         "tax_bird_014"
       ],
-      "branch_length": 1.58195
+      "branch_length": 1.58195,
+      "age_ma": 67.49899
     },
     {
       "id": "tax_bird_014",
@@ -1505,7 +1673,8 @@
       "children": [],
       "branch_length": 67.49898999999999,
       "original_name": "Bubo_bubo",
-      "taxonId": "tax_bird_014"
+      "taxonId": "tax_bird_014",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00105",
@@ -1515,7 +1684,8 @@
         "ancestor_phylo_tetrapods_00106",
         "ancestor_phylo_tetrapods_00107"
       ],
-      "branch_length": 59.10948
+      "branch_length": 59.10948,
+      "age_ma": 197.72536
     },
     {
       "id": "ancestor_phylo_tetrapods_00106",
@@ -1524,7 +1694,8 @@
       "children": [
         "tax_reptile_006"
       ],
-      "branch_length": 118.23236
+      "branch_length": 118.23236,
+      "age_ma": 79.493
     },
     {
       "id": "tax_reptile_006",
@@ -1533,7 +1704,8 @@
       "children": [],
       "branch_length": 79.493,
       "original_name": "Testudo_graeca",
-      "taxonId": "tax_reptile_006"
+      "taxonId": "tax_reptile_006",
+      "age_ma": 0.0
     },
     {
       "id": "ancestor_phylo_tetrapods_00107",
@@ -1543,7 +1715,8 @@
         "ancestor_phylo_tetrapods_00108",
         "tax_reptile_005"
       ],
-      "branch_length": 97.8694
+      "branch_length": 97.8694,
+      "age_ma": 99.85596
     },
     {
       "id": "ancestor_phylo_tetrapods_00108",
@@ -1552,7 +1725,8 @@
       "children": [
         "tax_reptile_004"
       ],
-      "branch_length": 67.83624999999999
+      "branch_length": 67.83624999999999,
+      "age_ma": 32.01971
     },
     {
       "id": "tax_reptile_004",
@@ -1561,7 +1735,8 @@
       "children": [],
       "branch_length": 32.01971,
       "original_name": "Chelonia_mydas",
-      "taxonId": "tax_reptile_004"
+      "taxonId": "tax_reptile_004",
+      "age_ma": 0.0
     },
     {
       "id": "tax_reptile_005",
@@ -1570,7 +1745,8 @@
       "children": [],
       "branch_length": 99.85596,
       "original_name": "Dermochelys_coriacea",
-      "taxonId": "tax_reptile_005"
+      "taxonId": "tax_reptile_005",
+      "age_ma": 0.0
     }
   ]
 }

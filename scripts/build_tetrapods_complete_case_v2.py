@@ -376,19 +376,101 @@ def main():
         print(f"✗ Enrichment script not found: {enrichment_script}")
         sys.exit(1)
     
-    # Reload and validate enriched hypothesis
+    # Stage 7: Comprehensive post-enrichment validation
+    print(f"\nValidating enriched hypothesis...")
     with open(TETRAPODS_DIR / 'hypothesis.json') as f:
         enriched_hypothesis = json.load(f)
     
-    # Verify all nodes have age_ma
+    nodes_by_id = {n['id']: n for n in enriched_hypothesis['nodes']}
+    
+    # Validation 1: All nodes have age_ma
     nodes_with_ages = sum(1 for n in enriched_hypothesis['nodes'] if 'age_ma' in n)
     total_nodes = len(enriched_hypothesis['nodes'])
     if nodes_with_ages < total_nodes:
         print(f"✗ Age enrichment incomplete: {nodes_with_ages}/{total_nodes} nodes have age_ma")
         sys.exit(1)
-    print(f"  ✓ All {total_nodes} nodes enriched with age_ma")
+    print(f"  ✓ All {total_nodes} nodes have age_ma")
     
-    # Stage 7: Report
+    # Validation 2: Root age is correct
+    root_id = enriched_hypothesis.get('rootNodeId')
+    root_node = nodes_by_id[root_id]
+    root_age = root_node.get('age_ma', 0)
+    expected_root_age = 352.08192
+    
+    if abs(root_age - expected_root_age) > 1e-5:
+        print(f"✗ Root age incorrect: {root_age} != {expected_root_age}")
+        sys.exit(1)
+    print(f"  ✓ Root age correct: {root_age} Ma")
+    
+    # Validation 3: All terminal ages are ~0
+    terminals = [n for n in enriched_hypothesis['nodes'] if n['type'] == 'terminal']
+    terminal_ages = [n.get('age_ma', 0) for n in terminals]
+    max_terminal_age = max(terminal_ages)
+    
+    if max_terminal_age > 1e-5:
+        print(f"✗ Terminal ages incorrect: max = {max_terminal_age} Ma (should be ~0)")
+        sys.exit(1)
+    print(f"  ✓ All {len(terminals)} terminal ages ≈ 0 (max deviation: {max_terminal_age:.8f})")
+    
+    # Validation 4: Verify ages match accumulated branch lengths
+    TIMETREE_ROOT_AGE = 352.08192
+    branch_mismatches = []
+    
+    for node in enriched_hypothesis['nodes']:
+        stored_age = node['age_ma']
+        
+        # Calculate accumulated distance from root
+        accumulated_distance = 0.0
+        current = node
+        
+        while current['parentId'] is not None:
+            parent = nodes_by_id[current['parentId']]
+            if current['branch_length'] is not None:
+                accumulated_distance += current['branch_length']
+            current = parent
+        
+        # Expected age from accumulated distance
+        expected_age = TIMETREE_ROOT_AGE - accumulated_distance
+        expected_age_rounded = round(expected_age, 5)
+        
+        # Check match
+        if abs(stored_age - expected_age_rounded) > 1e-5:
+            branch_mismatches.append({
+                'node': node['id'],
+                'stored': stored_age,
+                'expected': expected_age_rounded,
+                'error': abs(stored_age - expected_age_rounded)
+            })
+    
+    if branch_mismatches:
+        print(f"✗ Found {len(branch_mismatches)} age-to-branch-length mismatches:")
+        for m in branch_mismatches[:3]:
+            print(f"    {m['node']}: stored={m['stored']}, expected={m['expected']}, error={m['error']:.8f}")
+        sys.exit(1)
+    print(f"  ✓ All ages verified against branch lengths")
+    
+    # Validation 5: Verify parent ages >= child ages
+    temporal_violations = []
+    
+    for node in enriched_hypothesis['nodes']:
+        if node['parentId'] is not None:
+            parent = nodes_by_id[node['parentId']]
+            if parent['age_ma'] < node['age_ma'] - 1e-5:
+                temporal_violations.append({
+                    'child': node['id'],
+                    'child_age': node['age_ma'],
+                    'parent': parent['id'],
+                    'parent_age': parent['age_ma']
+                })
+    
+    if temporal_violations:
+        print(f"✗ Found {len(temporal_violations)} temporal inconsistencies:")
+        for v in temporal_violations[:3]:
+            print(f"    {v['parent']} ({v['parent_age']}) < {v['child']} ({v['child_age']})")
+        sys.exit(1)
+    print(f"  ✓ Temporal consistency verified")
+    
+    # Stage 8: Report
     print(f"\n" + "=" * 80)
     print("COMPLETION REPORT")
     print("=" * 80)

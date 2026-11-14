@@ -3,12 +3,12 @@
   "version": "1.0",
   "created": "2026-11-13",
   "mappings": {
-    "tax_mammal_005": {
-      "imageUuid": "458f0c9f-22a5-4f60-bed2-0d5f7f46beac",
+    "tax_amphibian_017": {
+      "imageUuid": "45cd000c-8dab-4d27-94f0-5e731c93a567",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Michael Scroggie",
+      "contributor": "Margot Michaud",
       "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/458f0c9f-22a5-4f60-bed2-0d5f7f46beac"
+      "sourceUrl": "https://www.phylopic.org/images/45cd000c-8dab-4d27-94f0-5e731c93a567"
     },
     "tax_mammal_013": {
       "imageUuid": "98e693d8-b353-4952-9547-e60ec8fe8386",
@@ -17,173 +17,12 @@
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/98e693d8-b353-4952-9547-e60ec8fe8386"
     },
-    "tax_reptile_017": {
-      "imageUuid": "8748e7ab-6dc8-4384-a72b-37361ae8f60b",
+    "tax_amphibian_003": {
+      "imageUuid": "ae9d3ddc-b36e-4e2b-9f92-a01b409dbb7f",
       "license": "https://creativecommons.org/licenses/by/4.0/",
-      "contributor": "Gabriela Palomo-Munoz",
+      "contributor": "Sandy Kawano",
       "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/8748e7ab-6dc8-4384-a72b-37361ae8f60b"
-    },
-    "tax_bird_001": {
-      "imageUuid": "df5979fc-7cdd-41c7-ac47-7107ba3f7e1a",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Ferran Sayol",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/df5979fc-7cdd-41c7-ac47-7107ba3f7e1a"
-    },
-    "tax_amphibian_014": {
-      "imageUuid": "411ddd2c-12e8-4e92-9399-be8406d00356",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Dennis Murphy",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/411ddd2c-12e8-4e92-9399-be8406d00356"
-    },
-    "tax_reptile_001": {
-      "imageUuid": "9f520fca-0497-40f6-9bc3-6fc03cd47e57",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Beth Reinke",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/9f520fca-0497-40f6-9bc3-6fc03cd47e57"
-    },
-    "tax_mammal_007": {
-      "imageUuid": "7133ab33-cc79-4d7c-9656-48717359abb4",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Jonathan Lawley",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/7133ab33-cc79-4d7c-9656-48717359abb4"
-    },
-    "tax_reptile_011": {
-      "imageUuid": "9cae2028-126b-416f-9094-250782c5bc22",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Nicolas Mongiardino Koch",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/9cae2028-126b-416f-9094-250782c5bc22"
-    },
-    "tax_bird_010": {
-      "imageUuid": "06ef4ac4-6118-4caf-87d5-108a699dd43f",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Caleb M. Gordon",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/06ef4ac4-6118-4caf-87d5-108a699dd43f"
-    },
-    "tax_reptile_019": {
-      "imageUuid": "66fc277e-6b42-4926-891e-e767c6fed6ce",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/66fc277e-6b42-4926-891e-e767c6fed6ce"
-    },
-    "tax_bird_011": {
-      "imageUuid": "2babc63a-873c-4274-a4c0-2d8d32a09d6d",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/2babc63a-873c-4274-a4c0-2d8d32a09d6d"
-    },
-    "tax_amphibian_017": {
-      "imageUuid": "45cd000c-8dab-4d27-94f0-5e731c93a567",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Margot Michaud",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/45cd000c-8dab-4d27-94f0-5e731c93a567"
-    },
-    "tax_amphibian_004": {
-      "imageUuid": "0a948f02-6e35-42d5-a835-b9360f450d39",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Beth Reinke",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/0a948f02-6e35-42d5-a835-b9360f450d39"
-    },
-    "tax_bird_016": {
-      "imageUuid": "d791cad7-c2bc-41ed-9ec2-d49e0e3152bb",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Cameron Dunn",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/d791cad7-c2bc-41ed-9ec2-d49e0e3152bb"
-    },
-    "tax_mammal_002": {
-      "imageUuid": "329c20fd-6f16-4d66-80e0-8f2c8db5cd91",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Caleb M. Gordon",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/329c20fd-6f16-4d66-80e0-8f2c8db5cd91"
-    },
-    "tax_mammal_012": {
-      "imageUuid": "3d8acaf6-4355-491e-8e86-4a411b53b98b",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Steven Traver",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/3d8acaf6-4355-491e-8e86-4a411b53b98b"
-    },
-    "tax_amphibian_015": {
-      "imageUuid": "14cabf9a-8f66-47e5-a5f1-9692f65e3619",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "contributor": "Luca Leicht",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/14cabf9a-8f66-47e5-a5f1-9692f65e3619"
-    },
-    "tax_reptile_008": {
-      "imageUuid": "2237fc17-b2cd-4604-af08-6aad65b3289a",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/2237fc17-b2cd-4604-af08-6aad65b3289a"
-    },
-    "tax_reptile_015": {
-      "imageUuid": "7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e",
-      "license": "https://creativecommons.org/licenses/by/3.0/",
-      "contributor": "Deepak Veerappan",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e"
-    },
-    "tax_bird_014": {
-      "imageUuid": "d7d457c1-4c08-4e7e-9af4-f537020c2775",
-      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
-      "contributor": "T. Michael Keesey",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/d7d457c1-4c08-4e7e-9af4-f537020c2775"
-    },
-    "tax_mammal_017": {
-      "imageUuid": "16969246-31e0-48e3-90ff-cad9a8746073",
-      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
-      "contributor": "T. Michael Keesey",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073"
-    },
-    "tax_mammal_015": {
-      "imageUuid": "9e2e1fe6-694c-43db-bd98-a9b945724815",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Margot Michaud",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/9e2e1fe6-694c-43db-bd98-a9b945724815"
-    },
-    "tax_mammal_001": {
-      "imageUuid": "162021b6-349b-4a64-906f-33d4a191b30e",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Rachel T Mason",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e"
-    },
-    "tax_reptile_005": {
-      "imageUuid": "1c65c811-4caa-4be3-9936-7a16e6905131",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Ray Chatterji",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/1c65c811-4caa-4be3-9936-7a16e6905131"
-    },
-    "tax_reptile_010": {
-      "imageUuid": "99e98767-3788-41a8-80ac-2394a7e51315",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Amy Beauvois",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/99e98767-3788-41a8-80ac-2394a7e51315"
-    },
-    "tax_amphibian_011": {
-      "imageUuid": "4679516b-405b-444f-974d-9775876716e2",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Steven Traver",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/4679516b-405b-444f-974d-9775876716e2"
+      "sourceUrl": "https://www.phylopic.org/images/ae9d3ddc-b36e-4e2b-9f92-a01b409dbb7f"
     },
     "tax_bird_013": {
       "imageUuid": "7779e472-9159-4219-8e8e-68197bb73557",
@@ -199,173 +38,12 @@
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/09e1c81c-459f-4b44-b475-546380fa1998"
     },
-    "tax_amphibian_003": {
-      "imageUuid": "ae9d3ddc-b36e-4e2b-9f92-a01b409dbb7f",
-      "license": "https://creativecommons.org/licenses/by/4.0/",
-      "contributor": "Sandy Kawano",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/ae9d3ddc-b36e-4e2b-9f92-a01b409dbb7f"
-    },
-    "tax_mammal_014": {
-      "imageUuid": "08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+    "tax_bird_016": {
+      "imageUuid": "d791cad7-c2bc-41ed-9ec2-d49e0e3152bb",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Margot Michaud",
+      "contributor": "Cameron Dunn",
       "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464"
-    },
-    "tax_amphibian_020": {
-      "imageUuid": "3af2605e-49a6-46d3-a9b1-32042629dfac",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Yan Wong",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/3af2605e-49a6-46d3-a9b1-32042629dfac"
-    },
-    "tax_mammal_008": {
-      "imageUuid": "2f701a27-2f0b-4a97-9caa-206251edfe90",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Rowan Sherwood",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90"
-    },
-    "tax_bird_018": {
-      "imageUuid": "3a4cdd72-e553-40ad-838e-3b23037b2010",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/3a4cdd72-e553-40ad-838e-3b23037b2010"
-    },
-    "tax_amphibian_006": {
-      "imageUuid": "b29b9cba-66c2-4f67-839d-d090292e75e8",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Nick Leigh",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/b29b9cba-66c2-4f67-839d-d090292e75e8"
-    },
-    "tax_reptile_016": {
-      "imageUuid": "a1cd1814-e0b4-409c-af18-8cb2f841569c",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Beth Reinke",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/a1cd1814-e0b4-409c-af18-8cb2f841569c"
-    },
-    "tax_reptile_009": {
-      "imageUuid": "ce6a78bc-3ef1-4d60-ab40-113eb84c7802",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Steven Traver",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/ce6a78bc-3ef1-4d60-ab40-113eb84c7802"
-    },
-    "tax_bird_008": {
-      "imageUuid": "0fd4eee8-0b5d-494f-9dac-fcef225983a4",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/0fd4eee8-0b5d-494f-9dac-fcef225983a4"
-    },
-    "tax_amphibian_013": {
-      "imageUuid": "35ff35a9-fa6c-496f-a279-22908ac7e7ec",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Beth Reinke",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/35ff35a9-fa6c-496f-a279-22908ac7e7ec"
-    },
-    "tax_amphibian_016": {
-      "imageUuid": "a86a5a93-99e3-431f-8890-d59c0a1f2baf",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Guillaume Dera",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/a86a5a93-99e3-431f-8890-d59c0a1f2baf"
-    },
-    "tax_mammal_004": {
-      "imageUuid": "624e3d80-cba2-4465-8f3a-c9ae4025198b",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Michael Scroggie",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/624e3d80-cba2-4465-8f3a-c9ae4025198b"
-    },
-    "tax_bird_015": {
-      "imageUuid": "310b4994-af54-4d7b-93ac-27bbf80f7706",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Amy Beauvois",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/310b4994-af54-4d7b-93ac-27bbf80f7706"
-    },
-    "tax_reptile_007": {
-      "imageUuid": "264fa655-afd7-451c-8f27-e0a9557376e6",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Birgit Szabo",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/264fa655-afd7-451c-8f27-e0a9557376e6"
-    },
-    "tax_amphibian_009": {
-      "imageUuid": "ece07f70-61bc-47e2-afb3-3aa6965f414f",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/ece07f70-61bc-47e2-afb3-3aa6965f414f"
-    },
-    "tax_amphibian_012": {
-      "imageUuid": "34e1829e-1666-4849-93c0-821df1fd3f05",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Chuanxin Yu",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/34e1829e-1666-4849-93c0-821df1fd3f05"
-    },
-    "tax_bird_004": {
-      "imageUuid": "1c044a03-f1ba-49fd-857e-f10aa8778e30",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/1c044a03-f1ba-49fd-857e-f10aa8778e30"
-    },
-    "tax_bird_017": {
-      "imageUuid": "b6585013-ed25-4c6a-8ed9-82c4786951fc",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Andy Wilson",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/b6585013-ed25-4c6a-8ed9-82c4786951fc"
-    },
-    "tax_reptile_006": {
-      "imageUuid": "d57e095a-eae7-4fca-90da-1355cad04dfa",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Matthew Speight",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/d57e095a-eae7-4fca-90da-1355cad04dfa"
-    },
-    "tax_reptile_018": {
-      "imageUuid": "6e8933c0-d49b-49e8-a8fd-5dbb40ab77f3",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Margot Michaud",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/6e8933c0-d49b-49e8-a8fd-5dbb40ab77f3"
-    },
-    "tax_reptile_003": {
-      "imageUuid": "2fa0c118-f96c-407e-91eb-522065829f14",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Guillaume Dera",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/2fa0c118-f96c-407e-91eb-522065829f14"
-    },
-    "tax_bird_003": {
-      "imageUuid": "ad7d0f80-889e-4dba-a89d-c864f2f48184",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Steven Traver",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/ad7d0f80-889e-4dba-a89d-c864f2f48184"
-    },
-    "tax_amphibian_001": {
-      "imageUuid": "575eaa51-6c9b-4d36-9881-b8463c68ebbc",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Jake Warner",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/575eaa51-6c9b-4d36-9881-b8463c68ebbc"
-    },
-    "tax_bird_007": {
-      "imageUuid": "f2e02022-2700-484d-a66d-b2a900030371",
-      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "contributor": "Guillaume Dera",
-      "source": "PhyloPic",
-      "sourceUrl": "https://www.phylopic.org/images/f2e02022-2700-484d-a66d-b2a900030371"
+      "sourceUrl": "https://www.phylopic.org/images/d791cad7-c2bc-41ed-9ec2-d49e0e3152bb"
     },
     "tax_reptile_002": {
       "imageUuid": "eefc0a4d-24b5-4c91-b687-8bd28c414295",
@@ -374,12 +52,250 @@
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/eefc0a4d-24b5-4c91-b687-8bd28c414295"
     },
+    "tax_reptile_007": {
+      "imageUuid": "264fa655-afd7-451c-8f27-e0a9557376e6",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Birgit Szabo",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/264fa655-afd7-451c-8f27-e0a9557376e6"
+    },
+    "tax_amphibian_012": {
+      "imageUuid": "34e1829e-1666-4849-93c0-821df1fd3f05",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Chuanxin Yu",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/34e1829e-1666-4849-93c0-821df1fd3f05"
+    },
+    "tax_mammal_012": {
+      "imageUuid": "3d8acaf6-4355-491e-8e86-4a411b53b98b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3d8acaf6-4355-491e-8e86-4a411b53b98b"
+    },
+    "tax_reptile_011": {
+      "imageUuid": "9cae2028-126b-416f-9094-250782c5bc22",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Nicolas Mongiardino Koch",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9cae2028-126b-416f-9094-250782c5bc22"
+    },
+    "tax_reptile_008": {
+      "imageUuid": "2237fc17-b2cd-4604-af08-6aad65b3289a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2237fc17-b2cd-4604-af08-6aad65b3289a"
+    },
+    "tax_reptile_017": {
+      "imageUuid": "8748e7ab-6dc8-4384-a72b-37361ae8f60b",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Gabriela Palomo-Munoz",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/8748e7ab-6dc8-4384-a72b-37361ae8f60b"
+    },
+    "tax_bird_008": {
+      "imageUuid": "0fd4eee8-0b5d-494f-9dac-fcef225983a4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0fd4eee8-0b5d-494f-9dac-fcef225983a4"
+    },
+    "tax_amphibian_004": {
+      "imageUuid": "0a948f02-6e35-42d5-a835-b9360f450d39",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/0a948f02-6e35-42d5-a835-b9360f450d39"
+    },
+    "tax_reptile_019": {
+      "imageUuid": "66fc277e-6b42-4926-891e-e767c6fed6ce",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/66fc277e-6b42-4926-891e-e767c6fed6ce"
+    },
+    "tax_bird_011": {
+      "imageUuid": "2babc63a-873c-4274-a4c0-2d8d32a09d6d",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2babc63a-873c-4274-a4c0-2d8d32a09d6d"
+    },
+    "tax_bird_003": {
+      "imageUuid": "ad7d0f80-889e-4dba-a89d-c864f2f48184",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ad7d0f80-889e-4dba-a89d-c864f2f48184"
+    },
+    "tax_reptile_016": {
+      "imageUuid": "a1cd1814-e0b4-409c-af18-8cb2f841569c",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a1cd1814-e0b4-409c-af18-8cb2f841569c"
+    },
+    "tax_reptile_015": {
+      "imageUuid": "7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e",
+      "license": "https://creativecommons.org/licenses/by/3.0/",
+      "contributor": "Deepak Veerappan",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7d7ef734-8a79-4dcf-ad8e-f2cbcd1bf43e"
+    },
+    "tax_mammal_001": {
+      "imageUuid": "162021b6-349b-4a64-906f-33d4a191b30e",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Rachel T Mason",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/162021b6-349b-4a64-906f-33d4a191b30e"
+    },
+    "tax_mammal_002": {
+      "imageUuid": "329c20fd-6f16-4d66-80e0-8f2c8db5cd91",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Caleb M. Gordon",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/329c20fd-6f16-4d66-80e0-8f2c8db5cd91"
+    },
+    "tax_bird_010": {
+      "imageUuid": "06ef4ac4-6118-4caf-87d5-108a699dd43f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Caleb M. Gordon",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/06ef4ac4-6118-4caf-87d5-108a699dd43f"
+    },
+    "tax_mammal_015": {
+      "imageUuid": "9e2e1fe6-694c-43db-bd98-a9b945724815",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9e2e1fe6-694c-43db-bd98-a9b945724815"
+    },
+    "tax_reptile_006": {
+      "imageUuid": "d57e095a-eae7-4fca-90da-1355cad04dfa",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Matthew Speight",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d57e095a-eae7-4fca-90da-1355cad04dfa"
+    },
+    "tax_reptile_009": {
+      "imageUuid": "ce6a78bc-3ef1-4d60-ab40-113eb84c7802",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ce6a78bc-3ef1-4d60-ab40-113eb84c7802"
+    },
+    "tax_amphibian_011": {
+      "imageUuid": "4679516b-405b-444f-974d-9775876716e2",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Steven Traver",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/4679516b-405b-444f-974d-9775876716e2"
+    },
+    "tax_amphibian_020": {
+      "imageUuid": "3af2605e-49a6-46d3-a9b1-32042629dfac",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Yan Wong",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3af2605e-49a6-46d3-a9b1-32042629dfac"
+    },
+    "tax_amphibian_015": {
+      "imageUuid": "14cabf9a-8f66-47e5-a5f1-9692f65e3619",
+      "license": "https://creativecommons.org/licenses/by/4.0/",
+      "contributor": "Luca Leicht",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/14cabf9a-8f66-47e5-a5f1-9692f65e3619"
+    },
+    "tax_bird_018": {
+      "imageUuid": "3a4cdd72-e553-40ad-838e-3b23037b2010",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/3a4cdd72-e553-40ad-838e-3b23037b2010"
+    },
+    "tax_reptile_001": {
+      "imageUuid": "9f520fca-0497-40f6-9bc3-6fc03cd47e57",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/9f520fca-0497-40f6-9bc3-6fc03cd47e57"
+    },
     "tax_amphibian_005": {
       "imageUuid": "f65e780a-f29a-48a5-9838-aa5a17ca596c",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "contributor": "Steven Traver",
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/f65e780a-f29a-48a5-9838-aa5a17ca596c"
+    },
+    "tax_mammal_008": {
+      "imageUuid": "2f701a27-2f0b-4a97-9caa-206251edfe90",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Rowan Sherwood",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2f701a27-2f0b-4a97-9caa-206251edfe90"
+    },
+    "tax_bird_001": {
+      "imageUuid": "df5979fc-7cdd-41c7-ac47-7107ba3f7e1a",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ferran Sayol",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/df5979fc-7cdd-41c7-ac47-7107ba3f7e1a"
+    },
+    "tax_amphibian_006": {
+      "imageUuid": "b29b9cba-66c2-4f67-839d-d090292e75e8",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Nick Leigh",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b29b9cba-66c2-4f67-839d-d090292e75e8"
+    },
+    "tax_bird_007": {
+      "imageUuid": "f2e02022-2700-484d-a66d-b2a900030371",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Guillaume Dera",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/f2e02022-2700-484d-a66d-b2a900030371"
+    },
+    "tax_mammal_017": {
+      "imageUuid": "16969246-31e0-48e3-90ff-cad9a8746073",
+      "license": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/16969246-31e0-48e3-90ff-cad9a8746073"
+    },
+    "tax_amphibian_013": {
+      "imageUuid": "35ff35a9-fa6c-496f-a279-22908ac7e7ec",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Beth Reinke",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/35ff35a9-fa6c-496f-a279-22908ac7e7ec"
+    },
+    "tax_bird_014": {
+      "imageUuid": "d7d457c1-4c08-4e7e-9af4-f537020c2775",
+      "license": "https://creativecommons.org/publicdomain/mark/1.0/",
+      "contributor": "T. Michael Keesey",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/d7d457c1-4c08-4e7e-9af4-f537020c2775"
+    },
+    "tax_amphibian_001": {
+      "imageUuid": "575eaa51-6c9b-4d36-9881-b8463c68ebbc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jake Warner",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/575eaa51-6c9b-4d36-9881-b8463c68ebbc"
+    },
+    "tax_mammal_005": {
+      "imageUuid": "458f0c9f-22a5-4f60-bed2-0d5f7f46beac",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Michael Scroggie",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/458f0c9f-22a5-4f60-bed2-0d5f7f46beac"
+    },
+    "tax_reptile_003": {
+      "imageUuid": "2fa0c118-f96c-407e-91eb-522065829f14",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Guillaume Dera",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/2fa0c118-f96c-407e-91eb-522065829f14"
     },
     "tax_amphibian_007": {
       "imageUuid": "e73c5c1c-7727-4687-bf0b-3957343edfc3",
@@ -388,12 +304,96 @@
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/e73c5c1c-7727-4687-bf0b-3957343edfc3"
     },
+    "tax_bird_004": {
+      "imageUuid": "1c044a03-f1ba-49fd-857e-f10aa8778e30",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1c044a03-f1ba-49fd-857e-f10aa8778e30"
+    },
+    "tax_amphibian_014": {
+      "imageUuid": "411ddd2c-12e8-4e92-9399-be8406d00356",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Dennis Murphy",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/411ddd2c-12e8-4e92-9399-be8406d00356"
+    },
+    "tax_bird_015": {
+      "imageUuid": "310b4994-af54-4d7b-93ac-27bbf80f7706",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Amy Beauvois",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/310b4994-af54-4d7b-93ac-27bbf80f7706"
+    },
+    "tax_amphibian_016": {
+      "imageUuid": "a86a5a93-99e3-431f-8890-d59c0a1f2baf",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Guillaume Dera",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/a86a5a93-99e3-431f-8890-d59c0a1f2baf"
+    },
     "tax_mammal_018": {
       "imageUuid": "10af79a9-36b4-4be3-8a5d-dadea9cea810",
       "license": "https://creativecommons.org/publicdomain/zero/1.0/",
       "contributor": "Guillaume Dera",
       "source": "PhyloPic",
       "sourceUrl": "https://www.phylopic.org/images/10af79a9-36b4-4be3-8a5d-dadea9cea810"
+    },
+    "tax_reptile_010": {
+      "imageUuid": "99e98767-3788-41a8-80ac-2394a7e51315",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Amy Beauvois",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/99e98767-3788-41a8-80ac-2394a7e51315"
+    },
+    "tax_mammal_007": {
+      "imageUuid": "7133ab33-cc79-4d7c-9656-48717359abb4",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Jonathan Lawley",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/7133ab33-cc79-4d7c-9656-48717359abb4"
+    },
+    "tax_mammal_014": {
+      "imageUuid": "08db8ea0-95b9-4729-8bdb-ee03f86f8464",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/08db8ea0-95b9-4729-8bdb-ee03f86f8464"
+    },
+    "tax_reptile_005": {
+      "imageUuid": "1c65c811-4caa-4be3-9936-7a16e6905131",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Ray Chatterji",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/1c65c811-4caa-4be3-9936-7a16e6905131"
+    },
+    "tax_mammal_004": {
+      "imageUuid": "624e3d80-cba2-4465-8f3a-c9ae4025198b",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Michael Scroggie",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/624e3d80-cba2-4465-8f3a-c9ae4025198b"
+    },
+    "tax_bird_017": {
+      "imageUuid": "b6585013-ed25-4c6a-8ed9-82c4786951fc",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/b6585013-ed25-4c6a-8ed9-82c4786951fc"
+    },
+    "tax_amphibian_009": {
+      "imageUuid": "ece07f70-61bc-47e2-afb3-3aa6965f414f",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Andy Wilson",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/ece07f70-61bc-47e2-afb3-3aa6965f414f"
+    },
+    "tax_reptile_018": {
+      "imageUuid": "6e8933c0-d49b-49e8-a8fd-5dbb40ab77f3",
+      "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "contributor": "Margot Michaud",
+      "source": "PhyloPic",
+      "sourceUrl": "https://www.phylopic.org/images/6e8933c0-d49b-49e8-a8fd-5dbb40ab77f3"
     },
     "tax_bird_019": {
       "imageUuid": "e38c264a-8989-4e69-a6c1-7778b919980d",
