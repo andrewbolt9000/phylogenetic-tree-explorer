@@ -1015,6 +1015,76 @@
         } catch (e) {
           console.warn(`[PhyloExplorer] PhyloPic silhouette mapping for ${currentDataset} could not be loaded:`, e.message);
         }
+      } else if (currentDataset === 'tetrapods') {
+        // For tetrapods, use local downloaded PhyloPic SVG files
+        try {
+          // Load mapping and inventory
+          const [mappingResponse, inventoryResponse] = await Promise.all([
+            fetch(`${dataDir}/silhouette-mapping.json`),
+            fetch(`${dataDir}/phylopic_inventory.json`)
+          ]);
+
+          const mappingData = await mappingResponse.json();
+          const inventoryData = await inventoryResponse.json();
+
+          // Build UUID-to-file lookup from inventory
+          const uuidToFile = {};
+          for (const species of inventoryData.species || []) {
+            for (const image of species.images || []) {
+              const uuid = image.image_uuid;
+              const localFile = image.local_file;
+              if (uuid && localFile) {
+                uuidToFile[uuid] = localFile;
+              }
+            }
+          }
+
+          // Process each mapping entry
+          let resolvedCount = 0;
+          let unresolvedCount = 0;
+          const unresolvedUuids = [];
+
+          if (mappingData.mappings) {
+            for (const [taxonId, imageData] of Object.entries(mappingData.mappings)) {
+              const imageUuid = imageData.imageUuid;
+              const localFile = uuidToFile[imageUuid];
+
+              if (localFile) {
+                // Convert local file path to browser-relative URL
+                // Inventory paths are like "data/tetrapods/phylopic_images/..."
+                // Already in the correct format for browser access
+                silhouetteMappings[taxonId] = {
+                  silhouetteFilename: localFile
+                };
+
+                silhouetteMetadata[taxonId] = {
+                  imageUuid: imageUuid,
+                  license: imageData.license,
+                  contributor: imageData.contributor,
+                  source: imageData.source,
+                  sourceUrl: imageData.sourceUrl,
+                  localFile: localFile
+                };
+
+                resolvedCount++;
+              } else {
+                unresolvedCount++;
+                unresolvedUuids.push({ taxonId, imageUuid });
+              }
+            }
+          }
+
+          if (unresolvedCount > 0) {
+            console.warn(`[PhyloExplorer] Tetrapods: ${unresolvedCount} mappings could not be resolved to local files`);
+            for (const { taxonId, imageUuid } of unresolvedUuids.slice(0, 3)) {
+              console.warn(`  ${taxonId}: UUID ${imageUuid} not found in inventory`);
+            }
+          }
+
+          console.log(`[PhyloExplorer] Tetrapods silhouette mapping loaded: ${resolvedCount} local images resolved`);
+        } catch (e) {
+          console.warn('[PhyloExplorer] Tetrapods silhouette mapping could not be loaded:', e.message);
+        }
       }
 
       return { silhouetteMappings, silhouetteMetadata };

@@ -369,7 +369,7 @@ class ForceDirectedVisualization {
       .selectAll('stop')
       .data([
         { offset: '0%', color: '#ffffff', opacity: 0 },
-        { offset: '50%', color: '#c6c6c6', opacity: 0.9 },
+        { offset: '50%', color: '#c6c6c6', opacity: 0.0 },
         { offset: '100%', color: '#ffffff', opacity: 0 }
       ])
       .enter()
@@ -494,10 +494,22 @@ class ForceDirectedVisualization {
         silhouetteCount++;
         const group = d3.select(nodes[i]);
 
-        // Determine the image URL to use (prefer silhouetteUrl over filename)
-        const imageUrl = d.silhouetteUrl
-          ? d.silhouetteUrl
-          : `./assets/silhouettes/${d.silhouetteFilename}`;
+        // Determine the image URL to use
+        // Prefer silhouetteUrl; if not available, handle silhouetteFilename
+        // Support both legacy format (plain filename in assets/silhouettes/) and
+        // full paths like data/tetrapods/phylopic_images/...
+        let imageUrl;
+        if (d.silhouetteUrl) {
+          imageUrl = d.silhouetteUrl;
+        } else if (d.silhouetteFilename) {
+          // If filename starts with a path component (contains /), use it as-is
+          // Otherwise, treat it as a legacy filename in assets/silhouettes/
+          if (d.silhouetteFilename.includes('/')) {
+            imageUrl = `./${d.silhouetteFilename}`;
+          } else {
+            imageUrl = `./assets/silhouettes/${d.silhouetteFilename}`;
+          }
+        }
 
         // Create a group for silhouette that will contain an image element
         // Base size is 5x the node circle, adjusted by silhouetteSizePercent
@@ -603,7 +615,9 @@ class ForceDirectedVisualization {
         .attr('text-anchor', 'middle')
         .attr('dy', '-0.4em')  // Offset upward
         .attr('fill', '#000000')
-        .style('filter', 'drop-shadow(0 0 4px #ffffff)')
+        .style('filter', 'drop-shadow(0 0 8px #ffffff)')
+        .style('filter', 'drop-shadow(0 0 3px #ffffff)')
+        .style('filter', 'drop-shadow(0 0 1px #fafafa)')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.commonName);
@@ -677,7 +691,7 @@ class ForceDirectedVisualization {
       for (const node of this.nodes) {
         if (node.type === 'internal' && typeof node.age_ma === 'number' && isFinite(node.age_ma)) {
           const unit = 'Ma';
-          datesByNodeId[node.id] = `${node.age_ma}${unit}`;
+          datesByNodeId[node.id] = `${Math.round(node.age_ma)}${unit}`;
         }
       }
     }
@@ -694,7 +708,7 @@ class ForceDirectedVisualization {
             const divergenceAge = this._getDivergenceEstimate(nodeId);
             if (divergenceAge !== null) {
               const unit = 'Ma';
-              datesByNodeId[nodeId] = `${divergenceAge}${unit}`;
+              datesByNodeId[nodeId] = `${Math.round(divergenceAge)}${unit}`;
             }
           }
         }
