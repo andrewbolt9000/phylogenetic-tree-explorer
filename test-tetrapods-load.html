@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetrapods Dataset Load Test</title>
+    <style>
+        body { font-family: monospace; margin: 20px; }
+        .result { margin: 10px 0; padding: 10px; border: 1px solid #ccc; }
+        .pass { background: #efe; }
+        .fail { background: #fee; }
+        .info { background: #eef; }
+    </style>
+</head>
+<body>
+    <h1>Tetrapods Dataset Load Test</h1>
+    <div id="results"></div>
+    
+    <script>
+        const results = document.getElementById('results');
+        
+        async function test() {
+            try {
+                // Test 1: Load hypothesis
+                const hyp = await fetch('data/tetrapods/hypothesis.json').then(r => r.json());
+                addResult(`hypothesis.json loaded: ${hyp.nodes.length} nodes`, 'pass');
+                
+                // Test 2: Load taxonomy
+                const tax = await fetch('data/tetrapods/taxonomy.json').then(r => r.json());
+                addResult(`taxonomy.json loaded: ${tax.taxonomy.length} taxa`, 'pass');
+                
+                // Test 3: Load silhouettes
+                const sil = await fetch('data/tetrapods/silhouette-mapping.json').then(r => r.json());
+                const mappedCount = Object.keys(sil.mappings).length;
+                addResult(`silhouette-mapping.json loaded: ${mappedCount} images mapped`, 'pass');
+                
+                // Test 4: Verify structure
+                const root = hyp.nodes.find(n => n.id === 'ancestor_phylo_tetrapods_root');
+                if (root && root.type === 'internal') {
+                    addResult(`Root node valid`, 'pass');
+                } else {
+                    addResult(`Root node invalid`, 'fail');
+                }
+                
+                // Test 5: Count node types
+                const terminals = hyp.nodes.filter(n => n.type === 'terminal').length;
+                const internals = hyp.nodes.filter(n => n.type === 'internal').length;
+                addResult(`Node types: ${terminals} terminals, ${internals} internal`, 'info');
+                
+                // Test 6: Verify taxonomy IDs match
+                const mismatches = [];
+                for (const node of hyp.nodes) {
+                    if (node.type === 'terminal' && !tax.taxonomy.find(t => t.id === node.id)) {
+                        mismatches.push(node.id);
+                    }
+                }
+                if (mismatches.length === 0) {
+                    addResult(`All terminal nodes have taxonomy records`, 'pass');
+                } else {
+                    addResult(`${mismatches.length} terminals missing from taxonomy`, 'fail');
+                }
+                
+            } catch (e) {
+                addResult(`Error: ${e.message}`, 'fail');
+                console.error(e);
+            }
+        }
+        
+        function addResult(msg, className) {
+            const div = document.createElement('div');
+            div.className = `result ${className}`;
+            div.textContent = msg;
+            results.appendChild(div);
+        }
+        
+        test();
+    </script>
+</body>
+</html>

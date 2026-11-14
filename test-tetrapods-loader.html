@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tetrapods Dataset Loader Test</title>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Tetrapods Dataset Loader Test</h1>
+    <div id="status">Loading...</div>
+    <div id="results"></div>
+
+    <script type="module">
+        import { HypothesisLoader } from './src/data/hypothesisLoader.js?t=1794613748';
+        import { TaxonomyLoader } from './src/data/taxonomyLoader.js?t=1794613748';
+
+        async function test() {
+            const statusDiv = document.getElementById('status');
+            const resultsDiv = document.getElementById('results');
+            
+            try {
+                statusDiv.textContent = 'Loading taxonomy...';
+                const taxonomyLoader = new TaxonomyLoader('./data/schemas/taxonomy.schema.json');
+                const taxonomy = await taxonomyLoader.loadAsync('./data/tetrapods/taxonomy.json');
+                const taxCount = Object.keys(taxonomy).length;
+                resultsDiv.innerHTML += `<p>✓ Taxonomy loaded: ${taxCount} taxa</p>`;
+                
+                statusDiv.textContent = 'Loading hypothesis...';
+                const hypothesisLoader = new HypothesisLoader('./data/schemas/hypothesis.schema.json');
+                const hypothesis = await hypothesisLoader.loadAsync('./data/tetrapods/hypothesis.json', taxonomy);
+                resultsDiv.innerHTML += `<p>✓ Hypothesis loaded: ${hypothesis.nodes.length} nodes</p>`;
+                
+                const terminals = hypothesis.nodes.filter(n => n.type === 'terminal');
+                const internals = hypothesis.nodes.filter(n => n.type === 'internal');
+                
+                resultsDiv.innerHTML += `<p>  - Terminals: ${terminals.length}</p>`;
+                resultsDiv.innerHTML += `<p>  - Internals: ${internals.length}</p>`;
+                
+                const withBranchLength = hypothesis.nodes.filter(n => n.branch_length !== undefined && n.branch_length !== null);
+                resultsDiv.innerHTML += `<p>  - Nodes with branch_length: ${withBranchLength.length}</p>`;
+                
+                const root = hypothesis.nodes.find(n => n.id === hypothesis.rootNodeId);
+                resultsDiv.innerHTML += `<p>  - Root node: ${root.id}</p>`;
+                
+                statusDiv.textContent = '✓ All tests passed!';
+                statusDiv.style.color = 'green';
+                
+            } catch (error) {
+                statusDiv.textContent = '✗ Error: ' + error.message;
+                statusDiv.style.color = 'red';
+                resultsDiv.innerHTML += `<p style="color: red;">Error: ${error.message}</p>`;
+                console.error(error);
+            }
+        }
+
+        test();
+    </script>
+</body>
+</html>

@@ -437,7 +437,9 @@ test('Visualization Adapter - Internal Nodes with taxonId', async (t) => {
     const { graph, taxonomy } = createGraphWithInternalTaxon();
     
     const silhouetteMapping = {
-      'genus_xy': 'genus-xy.svg'
+      'genus_xy': {
+        silhouetteFilename: 'genus-xy.svg'
+      }
     };
     
     const adapter = new VisualizationAdapter(graph, taxonomy, silhouetteMapping);

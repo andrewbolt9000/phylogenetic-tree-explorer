@@ -105,6 +105,35 @@
           "taxonId": {
             "type": "string",
             "description": "Taxonomic ID this node represents. Required for terminal nodes. Optional for internal nodes (e.g., when an internal node has been designated as an animal taxon). Must match a taxon in taxonomy when present."
+          },
+          "branch_length": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Branch length from parent to this node. Represents evolutionary time (typically in millions of years for paleontological sources). Preserved from source hypothesis."
+          },
+          "confidence": {
+            "type": [
+              "number",
+              "string",
+              "null"
+            ],
+            "description": "Confidence or bootstrap value for this node, if available from the source. Format depends on the source."
+          },
+          "original_name": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "description": "Original label or clade name from the source hypothesis. Useful for provenance and debugging."
+          },
+          "age_ma": {
+            "type": [
+              "number",
+              "null"
+            ],
+            "description": "Age of this node in millions of years ago (Ma), calculated as the root age minus the accumulated branch lengths from the root. Computed from ultrametric source tree. Only present when age data has been explicitly added to the hypothesis."
           }
         },
         "additionalProperties": false,

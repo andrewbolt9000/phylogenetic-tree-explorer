@@ -1,0 +1,1675 @@
+{
+  "hypothesisId": "phylo_tetrapods",
+  "hypothesisName": "Tetrapod Dataset - TimeTree-derived 76-species phylogeny",
+  "source": "TimeTree of Life (TT6 Tetrapods)",
+  "sourceMetadata": {
+    "source_url": "http://www.timetree.org/",
+    "methodology": "Pruned from full TimeTree to 76 selected species with exact matches",
+    "pruning_date": "2026-11-13T15:43:41.479429"
+  },
+  "rootNodeId": "ancestor_phylo_tetrapods_root",
+  "terminalIdPrefix": "tax_",
+  "internalIdPrefix": "ancestor_phylo_tetrapods_",
+  "nodes": [
+    {
+      "id": "ancestor_phylo_tetrapods_root",
+      "type": "internal",
+      "original_name": null,
+      "parentId": null,
+      "children": [
+        "ancestor_phylo_tetrapods_00001",
+        "ancestor_phylo_tetrapods_00019"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00001",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_root",
+      "children": [
+        "ancestor_phylo_tetrapods_00002",
+        "ancestor_phylo_tetrapods_00003"
+      ],
+      "branch_length": 35.12762,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00002",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00001",
+      "children": [
+        "tax_amphibian_019",
+        "tax_amphibian_020"
+      ],
+      "branch_length": 147.10824,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_019",
+      "type": "terminal",
+      "original_name": "Ichthyophis_glutinosus",
+      "parentId": "ancestor_phylo_tetrapods_00002",
+      "children": [],
+      "branch_length": 169.84606,
+      "confidence": null,
+      "taxonId": "tax_amphibian_019"
+    },
+    {
+      "id": "tax_amphibian_020",
+      "type": "terminal",
+      "original_name": "Siphonops_annulatus",
+      "parentId": "ancestor_phylo_tetrapods_00002",
+      "children": [],
+      "branch_length": 169.84605999999997,
+      "confidence": null,
+      "taxonId": "tax_amphibian_020"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00003",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00001",
+      "children": [
+        "ancestor_phylo_tetrapods_00004",
+        "ancestor_phylo_tetrapods_00009"
+      ],
+      "branch_length": 27.00592,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00004",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00003",
+      "children": [
+        "tax_amphibian_003",
+        "ancestor_phylo_tetrapods_00005"
+      ],
+      "branch_length": 93.83167,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_003",
+      "type": "terminal",
+      "original_name": "Andrias_japonicus",
+      "parentId": "ancestor_phylo_tetrapods_00004",
+      "children": [],
+      "branch_length": 196.11670999999998,
+      "confidence": null,
+      "taxonId": "tax_amphibian_003"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00005",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00004",
+      "children": [
+        "ancestor_phylo_tetrapods_00006",
+        "ancestor_phylo_tetrapods_00008"
+      ],
+      "branch_length": 48.08062999999999,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00006",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00005",
+      "children": [
+        "ancestor_phylo_tetrapods_00007",
+        "tax_amphibian_004"
+      ],
+      "branch_length": 61.24096,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00007",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00006",
+      "children": [
+        "tax_amphibian_005",
+        "tax_amphibian_006"
+      ],
+      "branch_length": 28.18703,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_005",
+      "type": "terminal",
+      "original_name": "Triturus_cristatus",
+      "parentId": "ancestor_phylo_tetrapods_00007",
+      "children": [],
+      "branch_length": 58.60809,
+      "confidence": null,
+      "taxonId": "tax_amphibian_005"
+    },
+    {
+      "id": "tax_amphibian_006",
+      "type": "terminal",
+      "original_name": "Pleurodeles_waltl",
+      "parentId": "ancestor_phylo_tetrapods_00007",
+      "children": [],
+      "branch_length": 58.60808999999999,
+      "confidence": null,
+      "taxonId": "tax_amphibian_006"
+    },
+    {
+      "id": "tax_amphibian_004",
+      "type": "terminal",
+      "original_name": "Salamandra_salamandra",
+      "parentId": "ancestor_phylo_tetrapods_00006",
+      "children": [],
+      "branch_length": 86.79512,
+      "confidence": null,
+      "taxonId": "tax_amphibian_004"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00008",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00005",
+      "children": [
+        "tax_amphibian_001",
+        "tax_amphibian_002"
+      ],
+      "branch_length": 123.15343000000001,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_001",
+      "type": "terminal",
+      "original_name": "Ambystoma_mexicanum",
+      "parentId": "ancestor_phylo_tetrapods_00008",
+      "children": [],
+      "branch_length": 24.88265,
+      "confidence": null,
+      "taxonId": "tax_amphibian_001"
+    },
+    {
+      "id": "tax_amphibian_002",
+      "type": "terminal",
+      "original_name": "Ambystoma_maculatum",
+      "parentId": "ancestor_phylo_tetrapods_00008",
+      "children": [],
+      "branch_length": 24.882649999999998,
+      "confidence": null,
+      "taxonId": "tax_amphibian_002"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00009",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00003",
+      "children": [
+        "ancestor_phylo_tetrapods_00010",
+        "ancestor_phylo_tetrapods_00012"
+      ],
+      "branch_length": 94.30369,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00010",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00009",
+      "children": [
+        "ancestor_phylo_tetrapods_00011",
+        "tax_amphibian_009"
+      ],
+      "branch_length": 61.17256999999999,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00011",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00010",
+      "children": [
+        "tax_amphibian_016",
+        "tax_amphibian_010"
+      ],
+      "branch_length": 12.34536,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_016",
+      "type": "terminal",
+      "original_name": "Pipa_pipa",
+      "parentId": "ancestor_phylo_tetrapods_00011",
+      "children": [],
+      "branch_length": 122.12676,
+      "confidence": null,
+      "taxonId": "tax_amphibian_016"
+    },
+    {
+      "id": "tax_amphibian_010",
+      "type": "terminal",
+      "original_name": "Hymenochirus_boettgeri",
+      "parentId": "ancestor_phylo_tetrapods_00011",
+      "children": [],
+      "branch_length": 122.12675999999999,
+      "confidence": null,
+      "taxonId": "tax_amphibian_010"
+    },
+    {
+      "id": "tax_amphibian_009",
+      "type": "terminal",
+      "original_name": "Xenopus_laevis",
+      "parentId": "ancestor_phylo_tetrapods_00010",
+      "children": [],
+      "branch_length": 134.47212,
+      "confidence": null,
+      "taxonId": "tax_amphibian_009"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00012",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00009",
+      "children": [
+        "tax_amphibian_007",
+        "ancestor_phylo_tetrapods_00013"
+      ],
+      "branch_length": 52.5056,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_007",
+      "type": "terminal",
+      "original_name": "Rana_temporaria",
+      "parentId": "ancestor_phylo_tetrapods_00012",
+      "children": [],
+      "branch_length": 143.13909,
+      "confidence": null,
+      "taxonId": "tax_amphibian_007"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00013",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00012",
+      "children": [
+        "tax_amphibian_018",
+        "ancestor_phylo_tetrapods_00014"
+      ],
+      "branch_length": 76.99968,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_018",
+      "type": "terminal",
+      "original_name": "Gastrotheca_riobambae",
+      "parentId": "ancestor_phylo_tetrapods_00013",
+      "children": [],
+      "branch_length": 66.13941,
+      "confidence": null,
+      "taxonId": "tax_amphibian_018"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00014",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00013",
+      "children": [
+        "ancestor_phylo_tetrapods_00015",
+        "tax_amphibian_015"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00015",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00014",
+      "children": [
+        "ancestor_phylo_tetrapods_00016",
+        "tax_amphibian_017"
+      ],
+      "branch_length": 1.27254,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00016",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00015",
+      "children": [
+        "ancestor_phylo_tetrapods_00017",
+        "ancestor_phylo_tetrapods_00018"
+      ],
+      "branch_length": 7.79625,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00017",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00016",
+      "children": [
+        "tax_amphibian_013",
+        "tax_amphibian_014"
+      ],
+      "branch_length": 27.872589999999995,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_013",
+      "type": "terminal",
+      "original_name": "Bufo_bufo",
+      "parentId": "ancestor_phylo_tetrapods_00017",
+      "children": [],
+      "branch_length": 29.19803,
+      "confidence": null,
+      "taxonId": "tax_amphibian_013"
+    },
+    {
+      "id": "tax_amphibian_014",
+      "type": "terminal",
+      "original_name": "Rhinella_marina",
+      "parentId": "ancestor_phylo_tetrapods_00017",
+      "children": [],
+      "branch_length": 29.198030000000003,
+      "confidence": null,
+      "taxonId": "tax_amphibian_014"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00018",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00016",
+      "children": [
+        "tax_amphibian_011",
+        "tax_amphibian_012"
+      ],
+      "branch_length": 35.40276,
+      "confidence": null
+    },
+    {
+      "id": "tax_amphibian_011",
+      "type": "terminal",
+      "original_name": "Dendrobates_tinctorius",
+      "parentId": "ancestor_phylo_tetrapods_00018",
+      "children": [],
+      "branch_length": 21.66786,
+      "confidence": null,
+      "taxonId": "tax_amphibian_011"
+    },
+    {
+      "id": "tax_amphibian_012",
+      "type": "terminal",
+      "original_name": "Oophaga_pumilio",
+      "parentId": "ancestor_phylo_tetrapods_00018",
+      "children": [],
+      "branch_length": 21.66786,
+      "confidence": null,
+      "taxonId": "tax_amphibian_012"
+    },
+    {
+      "id": "tax_amphibian_017",
+      "type": "terminal",
+      "original_name": "Ceratophrys_ornata",
+      "parentId": "ancestor_phylo_tetrapods_00015",
+      "children": [],
+      "branch_length": 64.86687,
+      "confidence": null,
+      "taxonId": "tax_amphibian_017"
+    },
+    {
+      "id": "tax_amphibian_015",
+      "type": "terminal",
+      "original_name": "Hyla_arborea",
+      "parentId": "ancestor_phylo_tetrapods_00014",
+      "children": [],
+      "branch_length": 66.13941,
+      "confidence": null,
+      "taxonId": "tax_amphibian_015"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00019",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_root",
+      "children": [
+        "ancestor_phylo_tetrapods_00020",
+        "ancestor_phylo_tetrapods_00039"
+      ],
+      "branch_length": 33.25704,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00020",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00019",
+      "children": [
+        "ancestor_phylo_tetrapods_00021",
+        "ancestor_phylo_tetrapods_00038"
+      ],
+      "branch_length": 137.63296,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00021",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00020",
+      "children": [
+        "ancestor_phylo_tetrapods_00022",
+        "ancestor_phylo_tetrapods_00024"
+      ],
+      "branch_length": 22.03374,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00022",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00021",
+      "children": [
+        "tax_mammal_003",
+        "ancestor_phylo_tetrapods_00023"
+      ],
+      "branch_length": 88.91732,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_003",
+      "type": "terminal",
+      "original_name": "Didelphis_virginiana",
+      "parentId": "ancestor_phylo_tetrapods_00022",
+      "children": [],
+      "branch_length": 70.24086,
+      "confidence": null,
+      "taxonId": "tax_mammal_003"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00023",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00022",
+      "children": [
+        "tax_mammal_005",
+        "tax_mammal_004"
+      ],
+      "branch_length": 22.51583,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_005",
+      "type": "terminal",
+      "original_name": "Vombatus_ursinus",
+      "parentId": "ancestor_phylo_tetrapods_00023",
+      "children": [],
+      "branch_length": 47.725030000000004,
+      "confidence": null,
+      "taxonId": "tax_mammal_005"
+    },
+    {
+      "id": "tax_mammal_004",
+      "type": "terminal",
+      "original_name": "Macropus_giganteus",
+      "parentId": "ancestor_phylo_tetrapods_00023",
+      "children": [],
+      "branch_length": 47.725030000000004,
+      "confidence": null,
+      "taxonId": "tax_mammal_004"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00024",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00021",
+      "children": [
+        "ancestor_phylo_tetrapods_00025",
+        "tax_mammal_009"
+      ],
+      "branch_length": 67.05389,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00025",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00024",
+      "children": [
+        "ancestor_phylo_tetrapods_00026",
+        "ancestor_phylo_tetrapods_00035"
+      ],
+      "branch_length": 2.62362,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00026",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00025",
+      "children": [
+        "tax_mammal_019",
+        "ancestor_phylo_tetrapods_00027"
+      ],
+      "branch_length": 10.17824,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_019",
+      "type": "terminal",
+      "original_name": "Myotis_lucifugus",
+      "parentId": "ancestor_phylo_tetrapods_00026",
+      "children": [],
+      "branch_length": 79.30242999999999,
+      "confidence": null,
+      "taxonId": "tax_mammal_019"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00027",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00026",
+      "children": [
+        "ancestor_phylo_tetrapods_00028",
+        "ancestor_phylo_tetrapods_00032"
+      ],
+      "branch_length": 3.34822,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00028",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00027",
+      "children": [
+        "tax_mammal_010",
+        "ancestor_phylo_tetrapods_00029"
+      ],
+      "branch_length": 2.75354,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_010",
+      "type": "terminal",
+      "original_name": "Equus_caballus",
+      "parentId": "ancestor_phylo_tetrapods_00028",
+      "children": [],
+      "branch_length": 73.20067,
+      "confidence": null,
+      "taxonId": "tax_mammal_010"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00029",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00028",
+      "children": [
+        "ancestor_phylo_tetrapods_00030",
+        "ancestor_phylo_tetrapods_00031"
+      ],
+      "branch_length": 19.5378,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00030",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00029",
+      "children": [
+        "tax_mammal_014",
+        "tax_mammal_015"
+      ],
+      "branch_length": 39.85888,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_014",
+      "type": "terminal",
+      "original_name": "Felis_catus",
+      "parentId": "ancestor_phylo_tetrapods_00030",
+      "children": [],
+      "branch_length": 13.80399,
+      "confidence": null,
+      "taxonId": "tax_mammal_014"
+    },
+    {
+      "id": "tax_mammal_015",
+      "type": "terminal",
+      "original_name": "Panthera_leo",
+      "parentId": "ancestor_phylo_tetrapods_00030",
+      "children": [],
+      "branch_length": 13.803989999999999,
+      "confidence": null,
+      "taxonId": "tax_mammal_015"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00031",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00029",
+      "children": [
+        "tax_mammal_013",
+        "tax_mammal_016"
+      ],
+      "branch_length": 8.72041,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_013",
+      "type": "terminal",
+      "original_name": "Canis_lupus",
+      "parentId": "ancestor_phylo_tetrapods_00031",
+      "children": [],
+      "branch_length": 44.942460000000004,
+      "confidence": null,
+      "taxonId": "tax_mammal_013"
+    },
+    {
+      "id": "tax_mammal_016",
+      "type": "terminal",
+      "original_name": "Ursus_arctos",
+      "parentId": "ancestor_phylo_tetrapods_00031",
+      "children": [],
+      "branch_length": 44.94246,
+      "confidence": null,
+      "taxonId": "tax_mammal_016"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00032",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00027",
+      "children": [
+        "tax_mammal_012",
+        "ancestor_phylo_tetrapods_00033"
+      ],
+      "branch_length": 16.99906,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_012",
+      "type": "terminal",
+      "original_name": "Sus_scrofa",
+      "parentId": "ancestor_phylo_tetrapods_00032",
+      "children": [],
+      "branch_length": 58.95515,
+      "confidence": null,
+      "taxonId": "tax_mammal_012"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00033",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00032",
+      "children": [
+        "tax_mammal_011",
+        "ancestor_phylo_tetrapods_00034"
+      ],
+      "branch_length": 2.19293,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_011",
+      "type": "terminal",
+      "original_name": "Bos_taurus",
+      "parentId": "ancestor_phylo_tetrapods_00033",
+      "children": [],
+      "branch_length": 56.76222,
+      "confidence": null,
+      "taxonId": "tax_mammal_011"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00034",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00033",
+      "children": [
+        "tax_mammal_018",
+        "tax_mammal_017"
+      ],
+      "branch_length": 23.21451,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_018",
+      "type": "terminal",
+      "original_name": "Tursiops_truncatus",
+      "parentId": "ancestor_phylo_tetrapods_00034",
+      "children": [],
+      "branch_length": 33.547709999999995,
+      "confidence": null,
+      "taxonId": "tax_mammal_018"
+    },
+    {
+      "id": "tax_mammal_017",
+      "type": "terminal",
+      "original_name": "Balaenoptera_musculus",
+      "parentId": "ancestor_phylo_tetrapods_00034",
+      "children": [],
+      "branch_length": 33.547709999999995,
+      "confidence": null,
+      "taxonId": "tax_mammal_017"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00035",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00025",
+      "children": [
+        "tax_mammal_020",
+        "ancestor_phylo_tetrapods_00036"
+      ],
+      "branch_length": 5.96671,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_020",
+      "type": "terminal",
+      "original_name": "Mus_musculus",
+      "parentId": "ancestor_phylo_tetrapods_00035",
+      "children": [],
+      "branch_length": 83.51396,
+      "confidence": null,
+      "taxonId": "tax_mammal_020"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00036",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00035",
+      "children": [
+        "ancestor_phylo_tetrapods_00037",
+        "tax_mammal_008"
+      ],
+      "branch_length": 67.87992,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00037",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00036",
+      "children": [
+        "tax_mammal_007",
+        "tax_mammal_006"
+      ],
+      "branch_length": 9.1812,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_007",
+      "type": "terminal",
+      "original_name": "Pan_troglodytes",
+      "parentId": "ancestor_phylo_tetrapods_00037",
+      "children": [],
+      "branch_length": 6.45284,
+      "confidence": null,
+      "taxonId": "tax_mammal_007"
+    },
+    {
+      "id": "tax_mammal_006",
+      "type": "terminal",
+      "original_name": "Homo_sapiens",
+      "parentId": "ancestor_phylo_tetrapods_00037",
+      "children": [],
+      "branch_length": 6.45284,
+      "confidence": null,
+      "taxonId": "tax_mammal_006"
+    },
+    {
+      "id": "tax_mammal_008",
+      "type": "terminal",
+      "original_name": "Pongo_pygmaeus",
+      "parentId": "ancestor_phylo_tetrapods_00036",
+      "children": [],
+      "branch_length": 15.634039999999999,
+      "confidence": null,
+      "taxonId": "tax_mammal_008"
+    },
+    {
+      "id": "tax_mammal_009",
+      "type": "terminal",
+      "original_name": "Loxodonta_africana",
+      "parentId": "ancestor_phylo_tetrapods_00024",
+      "children": [],
+      "branch_length": 92.10428999999999,
+      "confidence": null,
+      "taxonId": "tax_mammal_009"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00038",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00020",
+      "children": [
+        "tax_mammal_002",
+        "tax_mammal_001"
+      ],
+      "branch_length": 134.11212,
+      "confidence": null
+    },
+    {
+      "id": "tax_mammal_002",
+      "type": "terminal",
+      "original_name": "Tachyglossus_aculeatus",
+      "parentId": "ancestor_phylo_tetrapods_00038",
+      "children": [],
+      "branch_length": 47.0798,
+      "confidence": null,
+      "taxonId": "tax_mammal_002"
+    },
+    {
+      "id": "tax_mammal_001",
+      "type": "terminal",
+      "original_name": "Ornithorhynchus_anatinus",
+      "parentId": "ancestor_phylo_tetrapods_00038",
+      "children": [],
+      "branch_length": 47.0798,
+      "confidence": null,
+      "taxonId": "tax_mammal_001"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00039",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00019",
+      "children": [
+        "ancestor_phylo_tetrapods_00040",
+        "ancestor_phylo_tetrapods_00053"
+      ],
+      "branch_length": 38.13991,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00040",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00039",
+      "children": [
+        "ancestor_phylo_tetrapods_00041",
+        "tax_reptile_001"
+      ],
+      "branch_length": 35.70308,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00041",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00040",
+      "children": [
+        "ancestor_phylo_tetrapods_00042",
+        "ancestor_phylo_tetrapods_00043"
+      ],
+      "branch_length": 44.85373,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00042",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00041",
+      "children": [
+        "tax_reptile_020",
+        "tax_reptile_007"
+      ],
+      "branch_length": 90.41342,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_020",
+      "type": "terminal",
+      "original_name": "Eublepharis_macularius",
+      "parentId": "ancestor_phylo_tetrapods_00042",
+      "children": [],
+      "branch_length": 109.71473999999999,
+      "confidence": null,
+      "taxonId": "tax_reptile_020"
+    },
+    {
+      "id": "tax_reptile_007",
+      "type": "terminal",
+      "original_name": "Gekko_gecko",
+      "parentId": "ancestor_phylo_tetrapods_00042",
+      "children": [],
+      "branch_length": 109.71474000000002,
+      "confidence": null,
+      "taxonId": "tax_reptile_007"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00043",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00041",
+      "children": [
+        "ancestor_phylo_tetrapods_00044",
+        "ancestor_phylo_tetrapods_00048"
+      ],
+      "branch_length": 37.89135,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00044",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00043",
+      "children": [
+        "tax_reptile_012",
+        "ancestor_phylo_tetrapods_00045"
+      ],
+      "branch_length": 78.8383,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_012",
+      "type": "terminal",
+      "original_name": "Python_bivittatus",
+      "parentId": "ancestor_phylo_tetrapods_00044",
+      "children": [],
+      "branch_length": 83.39850999999999,
+      "confidence": null,
+      "taxonId": "tax_reptile_012"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00045",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00044",
+      "children": [
+        "ancestor_phylo_tetrapods_00046",
+        "ancestor_phylo_tetrapods_00047"
+      ],
+      "branch_length": 27.28143,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00046",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00045",
+      "children": [
+        "tax_reptile_016",
+        "tax_reptile_017"
+      ],
+      "branch_length": 16.88486,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_016",
+      "type": "terminal",
+      "original_name": "Vipera_berus",
+      "parentId": "ancestor_phylo_tetrapods_00046",
+      "children": [],
+      "branch_length": 39.23222,
+      "confidence": null,
+      "taxonId": "tax_reptile_016"
+    },
+    {
+      "id": "tax_reptile_017",
+      "type": "terminal",
+      "original_name": "Crotalus_atrox",
+      "parentId": "ancestor_phylo_tetrapods_00046",
+      "children": [],
+      "branch_length": 39.232220000000005,
+      "confidence": null,
+      "taxonId": "tax_reptile_017"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00047",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00045",
+      "children": [
+        "tax_reptile_015",
+        "tax_reptile_014"
+      ],
+      "branch_length": 28.28897,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_015",
+      "type": "terminal",
+      "original_name": "Ophiophagus_hannah",
+      "parentId": "ancestor_phylo_tetrapods_00047",
+      "children": [],
+      "branch_length": 27.828110000000002,
+      "confidence": null,
+      "taxonId": "tax_reptile_015"
+    },
+    {
+      "id": "tax_reptile_014",
+      "type": "terminal",
+      "original_name": "Naja_naja",
+      "parentId": "ancestor_phylo_tetrapods_00047",
+      "children": [],
+      "branch_length": 27.82811,
+      "confidence": null,
+      "taxonId": "tax_reptile_014"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00048",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00043",
+      "children": [
+        "ancestor_phylo_tetrapods_00049",
+        "ancestor_phylo_tetrapods_00052"
+      ],
+      "branch_length": 2.55714,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00049",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00048",
+      "children": [
+        "ancestor_phylo_tetrapods_00050",
+        "tax_reptile_019"
+      ],
+      "branch_length": 53.69465,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00050",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00049",
+      "children": [
+        "ancestor_phylo_tetrapods_00051",
+        "tax_reptile_008"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00051",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00050",
+      "children": [
+        "tax_reptile_018",
+        "tax_reptile_010"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_018",
+      "type": "terminal",
+      "original_name": "Chamaeleo_calyptratus",
+      "parentId": "ancestor_phylo_tetrapods_00051",
+      "children": [],
+      "branch_length": 105.98501999999999,
+      "confidence": null,
+      "taxonId": "tax_reptile_018"
+    },
+    {
+      "id": "tax_reptile_010",
+      "type": "terminal",
+      "original_name": "Iguana_iguana",
+      "parentId": "ancestor_phylo_tetrapods_00051",
+      "children": [],
+      "branch_length": 105.98502,
+      "confidence": null,
+      "taxonId": "tax_reptile_010"
+    },
+    {
+      "id": "tax_reptile_008",
+      "type": "terminal",
+      "original_name": "Anolis_carolinensis",
+      "parentId": "ancestor_phylo_tetrapods_00050",
+      "children": [],
+      "branch_length": 105.98501999999999,
+      "confidence": null,
+      "taxonId": "tax_reptile_008"
+    },
+    {
+      "id": "tax_reptile_019",
+      "type": "terminal",
+      "original_name": "Sceloporus_occidentalis",
+      "parentId": "ancestor_phylo_tetrapods_00049",
+      "children": [],
+      "branch_length": 105.98502,
+      "confidence": null,
+      "taxonId": "tax_reptile_019"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00052",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00048",
+      "children": [
+        "tax_reptile_009",
+        "tax_reptile_011"
+      ],
+      "branch_length": 35.86653,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_009",
+      "type": "terminal",
+      "original_name": "Varanus_komodoensis",
+      "parentId": "ancestor_phylo_tetrapods_00052",
+      "children": [],
+      "branch_length": 123.81314,
+      "confidence": null,
+      "taxonId": "tax_reptile_009"
+    },
+    {
+      "id": "tax_reptile_011",
+      "type": "terminal",
+      "original_name": "Heloderma_suspectum",
+      "parentId": "ancestor_phylo_tetrapods_00052",
+      "children": [],
+      "branch_length": 123.81314,
+      "confidence": null,
+      "taxonId": "tax_reptile_011"
+    },
+    {
+      "id": "tax_reptile_001",
+      "type": "terminal",
+      "original_name": "Sphenodon_punctatus",
+      "parentId": "ancestor_phylo_tetrapods_00040",
+      "children": [],
+      "branch_length": 244.98189,
+      "confidence": null,
+      "taxonId": "tax_reptile_001"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00053",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00039",
+      "children": [
+        "ancestor_phylo_tetrapods_00054",
+        "ancestor_phylo_tetrapods_00073"
+      ],
+      "branch_length": 23.85013,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00054",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00053",
+      "children": [
+        "ancestor_phylo_tetrapods_00055",
+        "ancestor_phylo_tetrapods_00056"
+      ],
+      "branch_length": 13.53926,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00055",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00054",
+      "children": [
+        "tax_reptile_002",
+        "tax_reptile_003"
+      ],
+      "branch_length": 155.25556,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_002",
+      "type": "terminal",
+      "original_name": "Alligator_mississippiensis",
+      "parentId": "ancestor_phylo_tetrapods_00055",
+      "children": [],
+      "branch_length": 88.04002,
+      "confidence": null,
+      "taxonId": "tax_reptile_002"
+    },
+    {
+      "id": "tax_reptile_003",
+      "type": "terminal",
+      "original_name": "Crocodylus_niloticus",
+      "parentId": "ancestor_phylo_tetrapods_00055",
+      "children": [],
+      "branch_length": 88.04002,
+      "confidence": null,
+      "taxonId": "tax_reptile_003"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00056",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00054",
+      "children": [
+        "ancestor_phylo_tetrapods_00057",
+        "ancestor_phylo_tetrapods_00059"
+      ],
+      "branch_length": 135.74028,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00057",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00056",
+      "children": [
+        "tax_bird_001",
+        "ancestor_phylo_tetrapods_00058"
+      ],
+      "branch_length": 42.03078,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_001",
+      "type": "terminal",
+      "original_name": "Struthio_camelus",
+      "parentId": "ancestor_phylo_tetrapods_00057",
+      "children": [],
+      "branch_length": 65.52452,
+      "confidence": null,
+      "taxonId": "tax_bird_001"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00058",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00057",
+      "children": [
+        "tax_bird_002",
+        "tax_bird_003"
+      ],
+      "branch_length": 4.88017,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_002",
+      "type": "terminal",
+      "original_name": "Dromaius_novaehollandiae",
+      "parentId": "ancestor_phylo_tetrapods_00058",
+      "children": [],
+      "branch_length": 60.64435,
+      "confidence": null,
+      "taxonId": "tax_bird_002"
+    },
+    {
+      "id": "tax_bird_003",
+      "type": "terminal",
+      "original_name": "Apteryx_australis",
+      "parentId": "ancestor_phylo_tetrapods_00058",
+      "children": [],
+      "branch_length": 60.64435,
+      "confidence": null,
+      "taxonId": "tax_bird_003"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00059",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00056",
+      "children": [
+        "ancestor_phylo_tetrapods_00060",
+        "ancestor_phylo_tetrapods_00062"
+      ],
+      "branch_length": 11.1486,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00060",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00059",
+      "children": [
+        "tax_bird_004",
+        "ancestor_phylo_tetrapods_00061"
+      ],
+      "branch_length": 17.59092,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_004",
+      "type": "terminal",
+      "original_name": "Anas_platyrhynchos",
+      "parentId": "ancestor_phylo_tetrapods_00060",
+      "children": [],
+      "branch_length": 78.81578,
+      "confidence": null,
+      "taxonId": "tax_bird_004"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00061",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00060",
+      "children": [
+        "tax_bird_005",
+        "tax_bird_006"
+      ],
+      "branch_length": 46.74034999999999,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_005",
+      "type": "terminal",
+      "original_name": "Gallus_gallus",
+      "parentId": "ancestor_phylo_tetrapods_00061",
+      "children": [],
+      "branch_length": 32.07543,
+      "confidence": null,
+      "taxonId": "tax_bird_005"
+    },
+    {
+      "id": "tax_bird_006",
+      "type": "terminal",
+      "original_name": "Meleagris_gallopavo",
+      "parentId": "ancestor_phylo_tetrapods_00061",
+      "children": [],
+      "branch_length": 32.07543,
+      "confidence": null,
+      "taxonId": "tax_bird_006"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00062",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00059",
+      "children": [
+        "tax_bird_015",
+        "ancestor_phylo_tetrapods_00063"
+      ],
+      "branch_length": 18.33621,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_015",
+      "type": "terminal",
+      "original_name": "Columba_livia",
+      "parentId": "ancestor_phylo_tetrapods_00062",
+      "children": [],
+      "branch_length": 78.07049,
+      "confidence": null,
+      "taxonId": "tax_bird_015"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00063",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00062",
+      "children": [
+        "ancestor_phylo_tetrapods_00064",
+        "ancestor_phylo_tetrapods_00067"
+      ],
+      "branch_length": 7.42134,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00064",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00063",
+      "children": [
+        "ancestor_phylo_tetrapods_00065",
+        "ancestor_phylo_tetrapods_00066"
+      ],
+      "branch_length": 3.2751599999999996,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00065",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00064",
+      "children": [
+        "tax_bird_007",
+        "tax_bird_008"
+      ],
+      "branch_length": 39.838089999999994,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_007",
+      "type": "terminal",
+      "original_name": "Aptenodytes_forsteri",
+      "parentId": "ancestor_phylo_tetrapods_00065",
+      "children": [],
+      "branch_length": 27.535899999999998,
+      "confidence": null,
+      "taxonId": "tax_bird_007"
+    },
+    {
+      "id": "tax_bird_008",
+      "type": "terminal",
+      "original_name": "Spheniscus_demersus",
+      "parentId": "ancestor_phylo_tetrapods_00065",
+      "children": [],
+      "branch_length": 27.535899999999998,
+      "confidence": null,
+      "taxonId": "tax_bird_008"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00066",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00064",
+      "children": [
+        "tax_bird_011",
+        "tax_bird_010"
+      ],
+      "branch_length": 3.72366,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_011",
+      "type": "terminal",
+      "original_name": "Ciconia_ciconia",
+      "parentId": "ancestor_phylo_tetrapods_00066",
+      "children": [],
+      "branch_length": 63.650330000000004,
+      "confidence": null,
+      "taxonId": "tax_bird_011"
+    },
+    {
+      "id": "tax_bird_010",
+      "type": "terminal",
+      "original_name": "Pelecanus_occidentalis",
+      "parentId": "ancestor_phylo_tetrapods_00066",
+      "children": [],
+      "branch_length": 63.65032999999999,
+      "confidence": null,
+      "taxonId": "tax_bird_010"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00067",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00063",
+      "children": [
+        "ancestor_phylo_tetrapods_00068",
+        "ancestor_phylo_tetrapods_00071"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00068",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00067",
+      "children": [
+        "ancestor_phylo_tetrapods_00069",
+        "tax_bird_016"
+      ],
+      "branch_length": 0,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00069",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00068",
+      "children": [
+        "ancestor_phylo_tetrapods_00070",
+        "tax_bird_019"
+      ],
+      "branch_length": 40.04313,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00070",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00069",
+      "children": [
+        "tax_bird_018",
+        "tax_bird_017"
+      ],
+      "branch_length": 1.54791,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_018",
+      "type": "terminal",
+      "original_name": "Passer_domesticus",
+      "parentId": "ancestor_phylo_tetrapods_00070",
+      "children": [],
+      "branch_length": 29.05811,
+      "confidence": null,
+      "taxonId": "tax_bird_018"
+    },
+    {
+      "id": "tax_bird_017",
+      "type": "terminal",
+      "original_name": "Corvus_corax",
+      "parentId": "ancestor_phylo_tetrapods_00070",
+      "children": [],
+      "branch_length": 29.058110000000003,
+      "confidence": null,
+      "taxonId": "tax_bird_017"
+    },
+    {
+      "id": "tax_bird_019",
+      "type": "terminal",
+      "original_name": "Troglodytes_troglodytes",
+      "parentId": "ancestor_phylo_tetrapods_00069",
+      "children": [],
+      "branch_length": 30.60602,
+      "confidence": null,
+      "taxonId": "tax_bird_019"
+    },
+    {
+      "id": "tax_bird_016",
+      "type": "terminal",
+      "original_name": "Psittacus_erithacus",
+      "parentId": "ancestor_phylo_tetrapods_00068",
+      "children": [],
+      "branch_length": 70.64914999999999,
+      "confidence": null,
+      "taxonId": "tax_bird_016"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00071",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00067",
+      "children": [
+        "ancestor_phylo_tetrapods_00072",
+        "tax_bird_014"
+      ],
+      "branch_length": 1.56821,
+      "confidence": null
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00072",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00071",
+      "children": [
+        "tax_bird_012",
+        "tax_bird_013"
+      ],
+      "branch_length": 43.86629,
+      "confidence": null
+    },
+    {
+      "id": "tax_bird_012",
+      "type": "terminal",
+      "original_name": "Haliaeetus_leucocephalus",
+      "parentId": "ancestor_phylo_tetrapods_00072",
+      "children": [],
+      "branch_length": 25.214650000000002,
+      "confidence": null,
+      "taxonId": "tax_bird_012"
+    },
+    {
+      "id": "tax_bird_013",
+      "type": "terminal",
+      "original_name": "Aquila_chrysaetos",
+      "parentId": "ancestor_phylo_tetrapods_00072",
+      "children": [],
+      "branch_length": 25.21465,
+      "confidence": null,
+      "taxonId": "tax_bird_013"
+    },
+    {
+      "id": "tax_bird_014",
+      "type": "terminal",
+      "original_name": "Bubo_bubo",
+      "parentId": "ancestor_phylo_tetrapods_00071",
+      "children": [],
+      "branch_length": 69.08094,
+      "confidence": null,
+      "taxonId": "tax_bird_014"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00073",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00053",
+      "children": [
+        "tax_reptile_006",
+        "ancestor_phylo_tetrapods_00074"
+      ],
+      "branch_length": 156.97888,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_006",
+      "type": "terminal",
+      "original_name": "Testudo_graeca",
+      "parentId": "ancestor_phylo_tetrapods_00073",
+      "children": [],
+      "branch_length": 99.85596,
+      "confidence": null,
+      "taxonId": "tax_reptile_006"
+    },
+    {
+      "id": "ancestor_phylo_tetrapods_00074",
+      "type": "internal",
+      "original_name": null,
+      "parentId": "ancestor_phylo_tetrapods_00073",
+      "children": [
+        "tax_reptile_004",
+        "tax_reptile_005"
+      ],
+      "branch_length": 43.28997,
+      "confidence": null
+    },
+    {
+      "id": "tax_reptile_004",
+      "type": "terminal",
+      "original_name": "Chelonia_mydas",
+      "parentId": "ancestor_phylo_tetrapods_00074",
+      "children": [],
+      "branch_length": 56.56599,
+      "confidence": null,
+      "taxonId": "tax_reptile_004"
+    },
+    {
+      "id": "tax_reptile_005",
+      "type": "terminal",
+      "original_name": "Dermochelys_coriacea",
+      "parentId": "ancestor_phylo_tetrapods_00074",
+      "children": [],
+      "branch_length": 56.56599,
+      "confidence": null,
+      "taxonId": "tax_reptile_005"
+    }
+  ]
+}
