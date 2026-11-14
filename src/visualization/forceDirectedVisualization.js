@@ -615,9 +615,9 @@ class ForceDirectedVisualization {
         .attr('text-anchor', 'middle')
         .attr('dy', '-0.4em')  // Offset upward
         .attr('fill', '#000000')
-        .style('filter', 'drop-shadow(0 0 8px #ffffff)')
+        // .style('filter', 'drop-shadow(0 0 8px #ffffff)')
         .style('filter', 'drop-shadow(0 0 3px #ffffff)')
-        .style('filter', 'drop-shadow(0 0 1px #fafafa)')
+        // .style('filter', 'drop-shadow(0 0 1px #fafafa)')
         .attr('pointer-events', 'none'))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.commonName);
@@ -696,10 +696,10 @@ class ForceDirectedVisualization {
         if (node.type === 'internal' && typeof node.age_ma === 'number' && isFinite(node.age_ma)) {
           const unit = 'Ma';
           const dateText = `${Math.round(node.age_ma)}${unit}`;
-          
+
           // Check if node has taxonomic summary
           const taxonomyLine = this._buildTaxonomyLabel(node);
-          
+
           labelDataByNodeId[node.id] = {
             date: dateText,
             taxonomy: taxonomyLine,
@@ -815,11 +815,11 @@ class ForceDirectedVisualization {
     if (!node.taxonomic_summary) {
       return null;
     }
-    
+
     const summary = node.taxonomic_summary;
     const rank = summary.rank || 'Unknown';
     const name = summary.name || '';
-    
+
     return `${rank}: ${name}`;
   }
 
