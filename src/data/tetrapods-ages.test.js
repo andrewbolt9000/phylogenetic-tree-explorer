@@ -124,15 +124,30 @@ test('Tetrapods Node Ages - TimeTree 6', async (t) => {
       `Oldest terminal (${max_terminal_age} Ma) should be < root (${TIMETREE_ROOT_AGE} Ma)`);
   });
 
-  await t.test('Pruned tree is not ultrametric (terminals at different times)', () => {
+  await t.test('Pruned tree remains ultrametric (all extant terminals at present)', () => {
     const terminals = hypothesis.nodes.filter(n => n.type === 'terminal');
+    assert(terminals.length > 0, 'There should be at least one terminal node');
+
+    // Verify each terminal has a finite numeric age
+    for (const terminal of terminals) {
+      assert(typeof terminal.age_ma === 'number', `Terminal ${terminal.id} should have numeric age_ma`);
+      assert(isFinite(terminal.age_ma), `Terminal ${terminal.id} age_ma should be finite`);
+    }
+
+    // All retained extant terminals should remain at approximately 0 Ma
     const ages = terminals.map(n => n.age_ma);
     const min_age = Math.min(...ages);
     const max_age = Math.max(...ages);
-    const variance = max_age - min_age;
-    
-    // Original tree was ultrametric (variance 0), but after pruning it should have variance
-    assert(variance > 1, 
-      `Pruned tree should show variance in terminal ages (${variance} Ma); suggests successful pruning`);
+    const age_range = max_age - min_age;
+    const tolerance = 0.00001;
+
+    assert(age_range < tolerance,
+      `All terminal ages should be within ${tolerance} Ma of each other; range is ${age_range} Ma`);
+
+    // Verify all terminal ages are within tolerance of zero
+    for (const terminal of terminals) {
+      assert(Math.abs(terminal.age_ma) <= tolerance,
+        `Terminal ${terminal.id} age (${terminal.age_ma} Ma) should be within ${tolerance} Ma of zero`);
+    }
   });
 });

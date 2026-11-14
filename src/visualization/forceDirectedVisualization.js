@@ -495,8 +495,8 @@ class ForceDirectedVisualization {
         const group = d3.select(nodes[i]);
 
         // Determine the image URL to use (prefer silhouetteUrl over filename)
-        const imageUrl = d.silhouetteUrl 
-          ? d.silhouetteUrl 
+        const imageUrl = d.silhouetteUrl
+          ? d.silhouetteUrl
           : `./assets/silhouettes/${d.silhouetteFilename}`;
 
         // Create a group for silhouette that will contain an image element
@@ -658,25 +658,44 @@ class ForceDirectedVisualization {
    * @private
    */
   _renderDateLabels() {
-    if (!this.showNodeDates || !this.divergenceData) {
+    // Check if we can show dates: either have stored node ages or legacy divergence data
+    const hasNodeAges = this.nodes && this.nodes.some(n => n.type === 'internal' && typeof n.age_ma === 'number' && isFinite(n.age_ma));
+    const hasLegacyDivergenceData = this.divergenceData && this.hypothesisId;
+
+    if (!this.showNodeDates || (!hasNodeAges && !hasLegacyDivergenceData)) {
       if (this.textLayer) {
         this.textLayer.selectAll('text.node-date-label').remove();
       }
       return;
     }
 
-    // Extract central estimate for each node from divergenceData
+    // Extract central estimate for each node (from either stored ages or divergence data)
     const datesByNodeId = {};
-    if (this.hypothesisId) {
+
+    // First, add dates from node-level ages
+    if (hasNodeAges) {
+      for (const node of this.nodes) {
+        if (node.type === 'internal' && typeof node.age_ma === 'number' && isFinite(node.age_ma)) {
+          const unit = 'Ma';
+          datesByNodeId[node.id] = `${node.age_ma}${unit}`;
+        }
+      }
+    }
+
+    // Then, add dates from legacy divergence data (only if not already set from node ages)
+    if (hasLegacyDivergenceData) {
       const estimatesByHypothesis = this.divergenceData.estimatesByHypothesis || {};
       const hypothesisEstimates = estimatesByHypothesis[this.hypothesisId];
 
       if (hypothesisEstimates) {
         for (const nodeId in hypothesisEstimates) {
-          const divergenceAge = this._getDivergenceEstimate(nodeId);
-          if (divergenceAge !== null) {
-            const unit = 'Ma';
-            datesByNodeId[nodeId] = `${divergenceAge}${unit}`;
+          // Only add if not already populated from node ages
+          if (!datesByNodeId[nodeId]) {
+            const divergenceAge = this._getDivergenceEstimate(nodeId);
+            if (divergenceAge !== null) {
+              const unit = 'Ma';
+              datesByNodeId[nodeId] = `${divergenceAge}${unit}`;
+            }
           }
         }
       }
@@ -1229,7 +1248,18 @@ class ForceDirectedVisualization {
    * @private
    */
   _getDivergenceEstimate(nodeId) {
-    if (!this.divergenceData || !nodeId || !this.hypothesisId) {
+    if (!nodeId) {
+      return null;
+    }
+
+    // First, check if the node has a stored age_ma value (e.g., from Tetrapods hypothesis)
+    const node = this.nodes.find(n => n.id === nodeId);
+    if (node && typeof node.age_ma === 'number' && isFinite(node.age_ma)) {
+      return node.age_ma;
+    }
+
+    // Fall back to legacy divergence data lookup
+    if (!this.divergenceData || !this.hypothesisId) {
       return null;
     }
 
@@ -1297,9 +1327,9 @@ class ForceDirectedVisualization {
       strength += rootContribution;
     }
 
-    // Age-based contribution
+    // Age-based contribution (supports both stored node ages and legacy divergence data)
     // ageLinkStrength is UI 0-100, normalized by age in hundreds of Ma
-    if (ageLinkStrength > 0 && this.divergenceData) {
+    if (ageLinkStrength > 0) {
       const targetId = typeof link.target === 'object' ? link.target.id : link.target;
 
       // Get the divergence age for this node using the helper

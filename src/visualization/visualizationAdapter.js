@@ -1,9 +1,9 @@
 /**
  * Visualization Adapter
- * 
+ *
  * Transforms an immutable PhyloGraph into independent, mutable visualization objects
  * suitable for D3 force simulation.
- * 
+ *
  * CRITICAL: The adapter ensures that D3 mutations (to x, y, vx, vy, fx, fy, index, etc.)
  * never affect the underlying scientific graph or taxonomy data. This is achieved by
  * creating separate, deep copies of all visualization data.
@@ -14,7 +14,7 @@ import { resolveDisplayName } from '../taxonomy/displayNameResolver.js';
 class VisualizationAdapter {
   /**
    * Construct a visualization adapter from a PhyloGraph.
-   * 
+   *
    * @param {PhyloGraph} graph - The immutable phylogenetic graph
    * @param {Object} taxonomy - The taxonomy map (id -> taxon)
    * @param {Object} silhouetteMapping - Map of taxonId to silhouette filename (optional)
@@ -30,7 +30,7 @@ class VisualizationAdapter {
 
   /**
    * Produce visualization nodes and links independent of the scientific graph.
-   * 
+   *
    * This creates fresh copies of all data, ensuring that D3 force simulation
    * mutations cannot affect the underlying graph or taxonomy.
    */
@@ -65,13 +65,13 @@ class VisualizationAdapter {
 
   /**
    * Create an independent visualization node object.
-   * 
+   *
    * Contains:
    * - Stable reference back to scientific node ID (for tracing)
    * - Scientific node metadata (type, taxonId, etc.) - COPIED, not referenced
    * - Mutable layout properties (x, y, vx, vy, fx, fy) for D3 to modify
    * - Index for D3 simulation
-   * 
+   *
    * @private
    */
   _createVisualizationNode(nodeId, graphNode) {
@@ -82,18 +82,21 @@ class VisualizationAdapter {
       parentId: graphNode.parentId ? String(graphNode.parentId) : null,
       taxonId: graphNode.taxonId ? String(graphNode.taxonId) : null,
       sourceLabel: graphNode.sourceLabel ? String(graphNode.sourceLabel) : null,
-      
+
+      // Age data (if available on the graph node - e.g., from Tetrapods hypothesis)
+      age_ma: typeof graphNode.age_ma === 'number' && isFinite(graphNode.age_ma) ? graphNode.age_ma : undefined,
+
       // Get taxon name if this is a terminal node
       label: this._getNodeLabel(nodeId, graphNode),
-      
+
       // Terminal species: common name and scientific name (for two-line labels)
       commonName: this._getCommonName(graphNode),
       scientificName: this._getScientificName(graphNode),
-      
+
       // Silhouette asset for terminal species (if available)
       silhouetteFilename: this._getSilhouetteFilename(graphNode),
       silhouetteUrl: this._getSilhouetteUrl(graphNode),
-      
+
       // Mutable layout properties (D3 will set these)
       x: Math.random() * 800,
       y: Math.random() * 600,
@@ -103,16 +106,16 @@ class VisualizationAdapter {
       fy: null,
       index: undefined  // D3 sets this during simulation
     };
-    
+
     return vizNode;
   }
 
   /**
    * Create an independent visualization link object.
-   * 
+   *
    * D3's forceLink() resolves source/target IDs to actual node objects using the .id() accessor.
    * We store node IDs here and D3 will resolve them to node references during force simulation.
-   * 
+   *
    * @private
    */
   _createVisualizationLink(childNodeId, parentNodeId, parentNode) {
@@ -120,28 +123,28 @@ class VisualizationAdapter {
       // Scientific node IDs (immutable reference, for validation/debugging)
       sourceId: parentNodeId,
       targetId: childNodeId,
-      
+
       // D3 forceLink uses source/target IDs to resolve node references
       // The .id() accessor in forceLink will match these against node.id
       source: parentNodeId,
       target: childNodeId
     };
-    
+
     return link;
   }
 
   /**
    * Get a human-readable label for a node.
-   * 
+   *
    * Uses resolveDisplayName for taxonomy-aware naming.
    * Falls back to ancestor labels for internal nodes without taxon association.
-   * 
+   *
    * @private
    */
   _getNodeLabel(nodeId, graphNode) {
     // Try to resolve from taxonomy using the resolver
     const displayName = resolveDisplayName(graphNode, this.taxonomy, { preferCommonName: false });
-    
+
     // If resolver returned a generic "Unidentified node", generate ancestor label
     if (displayName === 'Unidentified node') {
       const idStr = String(nodeId || '');
@@ -151,7 +154,7 @@ class VisualizationAdapter {
       }
       return idStr;
     }
-    
+
     return displayName;
   }
 

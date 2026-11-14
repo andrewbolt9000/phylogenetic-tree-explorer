@@ -994,9 +994,9 @@
           if (mappingData.mappings) {
             for (const [taxonId, imageData] of Object.entries(mappingData.mappings)) {
               // Convert PhyloPic UUID to a CDN URL
-              const imageUrl = imageData.sourceUrl || 
+              const imageUrl = imageData.sourceUrl ||
                 `https://www.phylopic.org/images/${imageData.imageUuid}`;
-              
+
               silhouetteMappings[taxonId] = {
                 silhouetteUrl: imageUrl,
                 imageUuid: imageData.imageUuid
@@ -1150,25 +1150,25 @@
         // Note: SettingsUI.initialize() (called above) already wired all controls
         // including topology repulsion A/B/X sliders, charge, link, appearance, and silhouette controls.
         // All settings updates go through SettingsUI -> VisualizationSettings -> onChange callbacks.
-        
+
         // Initialize settings-dependent visualization features
         const currentSettings = settings.getSettings();
-        
-        // Apply showNodeDates setting at startup (requires divergenceData)
-        if (currentSettings.showNodeDates && divergenceData) {
+
+        // Apply showNodeDates setting at startup (supports both stored node ages and legacy divergence data)
+        if (currentSettings.showNodeDates) {
           currentViz.setShowNodeDates(true, divergenceData);
         }
-        
+
         // Apply nodeDateFontSize setting if showNodeDates is enabled
         if (currentSettings.showNodeDates) {
           currentViz.setNodeDateFontSize(currentSettings.nodeDateFontSize);
         }
-        
+
         // Apply showAncestralLabels setting at startup (requires hypothesisData and graph)
         if (currentSettings.showAncestralLabels && hypothesisData && graph) {
           currentViz.setShowAncestralLabels(true, hypothesisData, graph);
         }
-        
+
         const resetButton = document.getElementById('reset-button');
         if (resetButton) {
           resetButton.addEventListener('click', () => {
