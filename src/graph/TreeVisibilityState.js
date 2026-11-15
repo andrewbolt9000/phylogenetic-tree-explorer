@@ -105,6 +105,8 @@ class TreeVisibilityState {
   /**
    * Expand a collapsed node one level: reveal its immediate children.
    * Do not automatically reveal their descendants.
+   * Newly revealed internal children are marked as collapsed.
+   * Terminal children are not marked as collapsed (they have no descendants).
    * If the node is not collapsed, this is a no-op.
    * If the node is not currently visible, this is a no-op (prevents revealing children of hidden nodes).
    *
@@ -129,10 +131,18 @@ class TreeVisibilityState {
     // Mark as expanded
     this.collapsedNodeIds.delete(nodeId);
 
-    // Make immediate children visible (they retain their collapsed state)
+    // Make immediate children visible and mark newly revealed internal children as collapsed
     const children = this.graph.getChildren(nodeId);
     for (const childId of children) {
       this.visibleNodeIds.add(childId);
+
+      // Check if this child is internal (has children of its own)
+      const childChildren = this.graph.getChildren(childId);
+      if (childChildren.length > 0) {
+        // It's an internal node; mark it as collapsed so it can be expanded independently
+        this.collapsedNodeIds.add(childId);
+      }
+      // Terminal nodes are not marked as collapsed (they have no descendants to expand)
     }
   }
 

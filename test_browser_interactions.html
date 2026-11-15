@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Browser Interactions</title>
+  <style>
+    body { font-family: Arial; margin: 20px; }
+    .test-section { margin: 20px 0; padding: 10px; border: 1px solid #ccc; }
+    .test-result { margin: 10px 0; padding: 10px; }
+    .pass { background: #d4edda; }
+    .fail { background: #f8d7da; }
+  </style>
+</head>
+<body>
+  <h1>PhyloExplorer Interaction Tests</h1>
+  <div id="results"></div>
+
+  <script type="module">
+    import('./index.js').catch(e => {
+      console.error('Failed to load index:', e);
+      document.getElementById('results').innerHTML = '<p>Failed to load application</p>';
+    });
+
+    // Wait for app to load, then run tests
+    window.addEventListener('load', async () => {
+      await new Promise(resolve => setTimeout(resolve, 2000));
+      runInteractionTests();
+    });
+
+    async function runInteractionTests() {
+      const results = document.getElementById('results');
+      const tests = [];
+
+      try {
+        // Test 1: Alt-click on collapsed node creates sample
+        tests.push({
+          name: 'Alt-click on collapsed node creates abbreviated connections',
+          testFn: async () => {
+            // Find a collapsed internal node
+            const nodeElement = document.querySelector('[data-node-id="n1"]');
+            if (!nodeElement) return 'SKIP: No test node found';
+            
+            const altClickEvent = new MouseEvent('click', {
+              bubbles: true,
+              altKey: true
+            });
+            nodeElement.dispatchEvent(altClickEvent);
+            
+            // Check if sampled terminals became visible
+            const terminals = document.querySelectorAll('[data-node-type="terminal"]');
+            if (terminals.length > 0) {
+              return 'PASS';
+            }
+            return 'FAIL: No terminals visible after Alt-click';
+          }
+        });
+
+        // Display results
+        for (const test of tests) {
+          const result = await test.testFn();
+          const className = result.startsWith('PASS') ? 'pass' : 'fail';
+          results.innerHTML += `<div class="test-result ${className}">${test.name}: ${result}</div>`;
+        }
+      } catch (e) {
+        results.innerHTML += `<div class="test-result fail">Error running tests: ${e.message}</div>`;
+      }
+    }
+  </script>
+</body>
+</html>

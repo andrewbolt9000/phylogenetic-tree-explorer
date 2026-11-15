@@ -170,6 +170,55 @@ test('TreeVisibilityState - Collapse and Expand', async (t) => {
     assert.strictEqual(visibleIds.size, 5, 'Should have all 5 nodes visible after expanding');
   });
 
+  await t.test('Newly revealed internal children are marked as collapsed', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+
+    // Collapse root (hiding everything except root)
+    visibility.collapseToRoot();
+    assert.strictEqual(visibility.getVisibleNodeIds().size, 1, 'Only root visible after collapseToRoot');
+
+    // Expand root one level (reveals n1, n2)
+    visibility.expandNodeOneLevel('root');
+
+    const visibleIds = visibility.getVisibleNodeIds();
+    assert.strictEqual(visibleIds.has('root'), true, 'root should be visible');
+    assert.strictEqual(visibleIds.has('n1'), true, 'n1 should be visible');
+    assert.strictEqual(visibleIds.has('n2'), true, 'n2 should be visible (terminal)');
+    assert.strictEqual(visibleIds.has('t1'), false, 't1 should be hidden (descendant of collapsed n1)');
+    assert.strictEqual(visibleIds.has('t2'), false, 't2 should be hidden (descendant of collapsed n1)');
+
+    // n1 should be marked as collapsed (internal node)
+    assert.strictEqual(visibility.isNodeCollapsed('n1'), true, 'n1 should be marked as collapsed');
+    // n2 should not be marked as collapsed (terminal node)
+    assert.strictEqual(visibility.isNodeCollapsed('n2'), false, 'n2 (terminal) should not be marked as collapsed');
+    // root should be marked as expanded
+    assert.strictEqual(visibility.isNodeCollapsed('root'), false, 'root should be marked as expanded');
+  });
+
+  await t.test('Command-click reveals one level, then next command-click reveals next level', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+
+    // Start with only root visible
+    visibility.collapseToRoot();
+    assert.strictEqual(visibility.getVisibleNodeIds().size, 1, 'Only root visible');
+
+    // First command-click on root: reveals n1, n2
+    visibility.expandNodeOneLevel('root');
+    let visibleIds = visibility.getVisibleNodeIds();
+    assert.strictEqual(visibleIds.size, 3, 'After first expand: root, n1, n2');
+    assert.strictEqual(visibility.isNodeCollapsed('n1'), true, 'n1 is collapsed after reveal');
+
+    // Second command-click on n1: reveals t1, t2
+    visibility.expandNodeOneLevel('n1');
+    visibleIds = visibility.getVisibleNodeIds();
+    assert.strictEqual(visibleIds.size, 5, 'After second expand: all nodes visible');
+    assert.strictEqual(visibleIds.has('t1'), true, 't1 now visible');
+    assert.strictEqual(visibleIds.has('t2'), true, 't2 now visible');
+    assert.strictEqual(visibility.isNodeCollapsed('n1'), false, 'n1 is now expanded');
+  });
+
   await t.test('Expand non-collapsed node is a no-op', () => {
     const { graph } = createSimpleTestGraph();
     const visibility = new TreeVisibilityState(graph);
