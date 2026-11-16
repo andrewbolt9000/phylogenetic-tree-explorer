@@ -52,7 +52,7 @@ class TreeManipulation {
    * - Command-click (event.metaKey): expand one level
    * - Control-click (event.ctrlKey): expand one level (Windows compatibility)
    * - Shift-click (event.shiftKey): recursively expand entire descendant subtree
-   * - Alt-click (event.altKey): collapse or show random sample (depends on state)
+   * - Alt-click (event.altKey): minimize, sample, reduce, reshuffle, or extend (depends on state)
    *
    * Normal clicks do nothing (allows D3 drag to work independently).
    *
@@ -289,22 +289,23 @@ class TreeManipulation {
   }
 
   /**
-   * Alt-click behavior depends on node's actual projected connections and the configured sample limit.
-   * Root Alt-click is disabled.
+   * Alt-click behavior depends on the node's displayed state. Root Alt-click is disabled.
    *
-   * STATE A (direct biological only): Collapse all descendants.
-   * STATE B (abbreviated only): Reshuffle the sample with a new branch-fair random selection.
-   * STATE C (both types): Keep biological children visible; add to sample if below max, reshuffle if at max.
-   * STATE D (neither type): Generate a new branch-fair sample.
+   * - Expanded or mixed (node is expanded and has a visible child): minimize. Every
+   *   represented descendant leaf (ordinary or abbreviated) is preserved and consolidated
+   *   into one sample owned by the node, with no size limit.
+   * - Empty (collapsed, no represented descendant leaves): generate a branch-fair sample
+   *   of up to the maximum, without revealing intermediate ancestors.
+   * - Minimized (collapsed, with represented descendant leaves): consolidate the leaves
+   *   into the node's sample, then by count n relative to the maximum:
+   *     n > max: reduce to the maximum, choosing only from the existing leaves;
+   *     n = max: generate a completely new sample;
+   *     n < max: keep existing leaves and add unrepresented leaves up to the maximum.
    *
-   * Samples are never toggled off in Alt-click unless collapsing (STATE A).
-   * Existing sampled terminal IDs are preserved when adding to a sample.
-   * 
    * @private
    */
   _handleAltClick(nodeId) {
     if (nodeId === this.visibilityState.rootNodeId) {
-      // Alt-click on root: DISABLED - do nothing
       return;
     }
 
@@ -312,71 +313,54 @@ class TreeManipulation {
       return;
     }
 
-    // Classify node by its actual projected connections
-    const connectionState = this._classifyNodeConnections(nodeId);
+    const isExpanded = !this.visibilityState.isNodeCollapsed(nodeId) &&
+      this._hasVisibleBiologicalChildren(nodeId);
+    const representedLeaves = this.projection.getRepresentedLeaves(nodeId);
 
-    if (connectionState.hasBiological && !connectionState.hasAbbreviated) {
-      // STATE A: Direct biological connections only
-      // Collapse all descendants and clear any sample
-      this.visibilityState.collapseNode(nodeId);
-      this.projection.invalidateSampleIfAncestorChanged(nodeId);
-      this._removeOldSampledTerminals();
-    } else if (!connectionState.hasBiological && connectionState.hasAbbreviated) {
-      // STATE B: Abbreviated connections only
-      // Reshuffle: replace the sample with a new branch-fair random one
+    if (isExpanded) {
+      this._minimizeNode(nodeId, representedLeaves);
+    } else if (representedLeaves.size === 0) {
+      this.visibilityState.collapsedNodeIds.add(nodeId);
       this.projection.reshuffleSample(nodeId);
-      this._removeOldSampledTerminals();
-      
-      // Ensure new sampled terminals are visible
-      const sample = this.projection.getSampleForAncestor(nodeId);
-      if (sample) {
-        for (const terminalId of sample.terminalIds) {
-          this.visibilityState.visibleNodeIds.add(terminalId);
-        }
-      }
-    } else if (connectionState.hasBiological && connectionState.hasAbbreviated) {
-      // STATE C: Both biological and abbreviated connections
-      // Keep biological children visible
-      // If sample is below max, add to it; if at max, reshuffle it
-      const currentSample = this.projection.getSampleForAncestor(nodeId);
-      if (currentSample && currentSample.terminalIds.size >= this.options.maxSampledSpecies) {
-        // At max: reshuffle instead of adding
-        this.projection.reshuffleSample(nodeId);
-        this._removeOldSampledTerminals();
-      } else {
-        // Below max or no sample: add to it
-        this.projection.addToSample(nodeId);
-      }
-
-      // Ensure sampled terminals are visible
-      const sample = this.projection.getSampleForAncestor(nodeId);
-      if (sample) {
-        for (const terminalId of sample.terminalIds) {
-          this.visibilityState.visibleNodeIds.add(terminalId);
-        }
-      }
-      // Keep biological children visible - do NOT collapse
     } else {
-      // STATE D: Neither type of connection
-      // Generate a branch-fair sample, keeping ancestor collapsed in biological tree
-      const currentSample = this.projection.getSampleForAncestor(nodeId);
-      if (currentSample && currentSample.terminalIds.size >= this.options.maxSampledSpecies) {
-        // At max: reshuffle
+      this.visibilityState.collapsedNodeIds.add(nodeId);
+      this.projection.consolidateSample(nodeId, representedLeaves);
+
+      const max = this.options.maxSampledSpecies;
+      if (representedLeaves.size > max) {
+        this.projection.reduceSample(nodeId);
+      } else if (representedLeaves.size === max) {
         this.projection.reshuffleSample(nodeId);
-        this._removeOldSampledTerminals();
       } else {
-        // Below max or no sample: add to it
         this.projection.addToSample(nodeId);
       }
+    }
 
-      // Add sampled terminals to visibility state so they are rendered
-      const sample = this.projection.getSampleForAncestor(nodeId);
-      if (sample) {
-        for (const terminalId of sample.terminalIds) {
-          this.visibilityState.visibleNodeIds.add(terminalId);
-        }
-        // Mark the node as not collapsed (it's now showing sampled descendants)
-        this.visibilityState.collapsedNodeIds.delete(nodeId);
+    this._showSampleTerminals(nodeId);
+    this._removeOldSampledTerminals();
+  }
+
+  /**
+   * Collapse a node's visible descendant structure while keeping every represented leaf,
+   * consolidated into one sample owned by the node.
+   * @private
+   */
+  _minimizeNode(nodeId, representedLeaves) {
+    // Clear the collapsed flag first so collapseNode() always hides the descendants.
+    this.visibilityState.collapsedNodeIds.delete(nodeId);
+    this.visibilityState.collapseNode(nodeId);
+    this.projection.consolidateSample(nodeId, representedLeaves);
+  }
+
+  /**
+   * Mark the terminals of a node's sample visible so they are rendered.
+   * @private
+   */
+  _showSampleTerminals(nodeId) {
+    const sample = this.projection.getSampleForAncestor(nodeId);
+    if (sample) {
+      for (const terminalId of sample.terminalIds) {
+        this.visibilityState.visibleNodeIds.add(terminalId);
       }
     }
   }
@@ -615,9 +599,16 @@ class TreeManipulation {
     // Get abbreviated links from projection for display
     const abbreviatedLinks = this.projection.getAbbreviatedLinks();
 
+    // Pass only original links the projection treats as biological, so a sampled leaf
+    // under a collapsed (minimized) parent is drawn as an abbreviated link.
+    const biologicalKeys = new Set(
+      this.projection.getBiologicalLinks().map(l => `${l.sourceId}|${l.targetId}`)
+    );
+
     // Update visualization to show only visible nodes and links
     if (typeof this.visualization.updateVisibility === 'function' && this.allNodes && this.allLinks) {
-      this.visualization.updateVisibility(visibleNodeIds, this.allNodes, this.allLinks, abbreviatedLinks);
+      const biologicalLinks = this.allLinks.filter(l => biologicalKeys.has(`${l.sourceId}|${l.targetId}`));
+      this.visualization.updateVisibility(visibleNodeIds, this.allNodes, biologicalLinks, abbreviatedLinks);
     }
   }
 

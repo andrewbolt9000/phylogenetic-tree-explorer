@@ -455,7 +455,7 @@ test('TreeManipulation - Shift-Click Full Expansion', async (t) => {
 });
 
 test('TreeManipulation - Alt-Click Collapse', async (t) => {
-  await t.test('Alt-click on expanded node collapses all descendants', () => {
+  await t.test('Alt-click on expanded node minimizes it, keeping its leaves as abbreviated links', () => {
     const { graph } = createSimpleTestGraph();
     const visibility = new TreeVisibilityState(graph);
     const manipulation = new TreeManipulation(graph, visibility, null);
@@ -468,10 +468,15 @@ test('TreeManipulation - Alt-Click Collapse', async (t) => {
     const event = createMockClickEvent(false, true);
     manipulation.handleNodeClick(vizNode, event);
 
-    // Should collapse n1
+    // n1 is collapsed; its visible leaves are preserved through abbreviated links
     assert.strictEqual(visibility.isNodeCollapsed('n1'), true, 'n1 collapsed');
-    assert.strictEqual(visibility.isNodeVisible('t1'), false, 't1 hidden');
-    assert.strictEqual(visibility.isNodeVisible('t2'), false, 't2 hidden');
+    const projection = manipulation.projection.getProjection();
+    assert.deepStrictEqual(
+      projection.abbreviatedLinks.map(l => `${l.sourceId}>${l.targetId}`).sort(),
+      ['n1>t1', 'n1>t2'],
+      'Both leaves represented by abbreviated links from n1'
+    );
+    assert(!projection.biologicalLinks.some(l => l.sourceId === 'n1'), 'No biological links from minimized n1');
   });
 
   await t.test('Alt-click on root does nothing', () => {
@@ -811,9 +816,8 @@ test('TreeManipulation - Nested Sample Re-Anchoring', async (t) => {
     const nodeAVizNode = { id: 'A', x: 100, y: 100, children: ['t1', 't2'] };
     manipulation.handleNodeClick(nodeAVizNode, createMockClickEvent(false, true));
     
-    // A should be marked as not collapsed (it's now showing sampled descendants)
-    // This is necessary so that subsequent collapseNode calls can properly hide descendants
-    assert(!visibility.isNodeCollapsed('A'), 'Node A should not be marked collapsed after sampling (showing sample)');
+    // A stays collapsed: its sample is shown through abbreviated links, not by revealing children
+    assert(visibility.isNodeCollapsed('A'), 'Node A should remain collapsed after sampling (minimized)');
     
     const sampleA = manipulation.projection.getSampleForAncestor('A');
     assert(sampleA, 'Sample A should exist after Alt-click');
@@ -826,19 +830,20 @@ test('TreeManipulation - Nested Sample Re-Anchoring', async (t) => {
     for (const terminal of aTerminals) {
       assert(projection1.visibleNodeIds.has(terminal), 
         `A-sampled terminal ${terminal} should be visible in projection`);
+      assert(projection1.abbreviatedLinks.some(l => l.sourceId === 'A' && l.targetId === terminal),
+        `A-sampled terminal ${terminal} should be anchored to A by an abbreviated link`);
     }
     
-    // Step 4: Collapse A again
+    // Step 4: A remains collapsed; its children are not ordinarily revealed
     visibility.collapseNode('A');
     assert(visibility.isNodeCollapsed('A'), 'A should be collapsed');
-    assert(!visibility.isNodeVisible('t1'), 't1 should be hidden when A collapsed');
     
     // Step 5: Alt-click C to create another sample
     const nodeCVizNode = { id: 'C', x: 200, y: 100, children: ['t3', 't4'] };
     manipulation.handleNodeClick(nodeCVizNode, createMockClickEvent(false, true));
     
-    // C should be marked as not collapsed (showing sample)
-    assert(!visibility.isNodeCollapsed('C'), 'Node C should not be marked collapsed after sampling (showing sample)');
+    // C should remain collapsed (minimized with a sample)
+    assert(visibility.isNodeCollapsed('C'), 'Node C should remain collapsed after sampling (minimized)');
     const sampleC = manipulation.projection.getSampleForAncestor('C');
     assert(sampleC, 'Sample C should exist after Alt-click');
     assert(sampleC.terminalIds.size > 0, 'Sample C should have terminals');
@@ -906,7 +911,7 @@ test('TreeManipulation - Command-Click Toggle Behavior', async (t) => {
     const n1VizNode = { id: 'n1', x: 100, y: 100 };
     manipulation.handleNodeClick(n1VizNode, createMockClickEvent(false, true));
 
-    assert(!visibility.isNodeCollapsed('n1'), 'n1 marked not collapsed after Alt-click sampling');
+    assert(visibility.isNodeCollapsed('n1'), 'n1 remains collapsed after Alt-click sampling (minimized)');
     const sampleN1Before = manipulation.projection.getSampleForAncestor('n1');
     assert(sampleN1Before, 'Sample n1 should exist after Alt-click');
     // Note: After Alt-click with sample, some nodes may be visible through the sample
@@ -1301,7 +1306,7 @@ test('TreeManipulation - Four-State Command-Click Behavior', async (t) => {
  * Tests for four-state node connection classification - Alt-Click
  */
 test('TreeManipulation - Four-State Alt-Click Behavior', async (t) => {
-  await t.test('STATE A: Biological children only - Alt-click collapses', () => {
+  await t.test('STATE A: Biological children only - Alt-click minimizes', () => {
     const { graph } = createSimpleTestGraph();
     const visibility = new TreeVisibilityState(graph, 'root');
     const manipulation = new TreeManipulation(graph, visibility);
@@ -1315,9 +1320,9 @@ test('TreeManipulation - Four-State Alt-Click Behavior', async (t) => {
     const event = createMockClickEvent(false, true, false, false);  // altKey = true
     manipulation.handleNodeClick(vizNode, event);
 
-    // Should collapse
+    // Should collapse, keeping the visible leaves as n1's sample
     assert(visibility.isNodeCollapsed('n1'), 'n1 collapsed after Alt-click on biological node');
-    assert(!visibility.isNodeVisible('t1'), 't1 hidden');
+    assert.deepStrictEqual([...manipulation.projection.getSampleForAncestor('n1').terminalIds].sort(), ['t1', 't2']);
   });
 
   await t.test('STATE D: Neither - Alt-click generates sample', () => {
@@ -1345,8 +1350,9 @@ test('TreeManipulation - Four-State Alt-Click Behavior', async (t) => {
     // Regenerate projection to properly set up display
     projection.regenerate();
     
-    // After Alt-click with sampling, node should be marked as not collapsed
-    assert(!visibility.isNodeCollapsed('n1'), 'n1 marked as not collapsed after sampling');
+    // After Alt-click sampling, the node stays collapsed and shows all available leaves
+    assert(visibility.isNodeCollapsed('n1'), 'n1 remains collapsed after sampling');
+    assert.strictEqual(sample.terminalIds.size, 2, 'both available leaves sampled (max 2)');
   });
 
   await t.test('STATE B: Abbreviated only - Alt-click reshuffles sample', () => {
@@ -1600,8 +1606,13 @@ test('TreeManipulation - Alt-Click Four-State Behavior with Samples', async (t) 
     assert(sample !== null, 'sample generated after Alt-click on STATE D');
     assert(sample.terminalIds.size > 0, 'sample has terminals');
 
-    // n1 should be marked as not collapsed (showing sample)
-    assert(!visibility.isNodeCollapsed('n1'), 'n1 marked not collapsed after sampling');
+    // n1 stays collapsed (minimized); the sample is shown through abbreviated links
+    assert(visibility.isNodeCollapsed('n1'), 'n1 remains collapsed after sampling');
+    assert.deepStrictEqual(
+      manipulation.projection.getAbbreviatedLinks().map(l => `${l.sourceId}>${l.targetId}`).sort(),
+      [...sample.terminalIds].map(id => `n1>${id}`).sort(),
+      'one abbreviated link from n1 per sampled leaf'
+    );
   });
 });
 
@@ -1649,3 +1660,425 @@ test('TreeManipulation - No Floating Nodes After Sample Changes', async (t) => {
   });
 });
 
+/**
+ * Tests for Alt-click behavior and abbreviated link generation
+ */
+test('TreeManipulation - Alt-click State D (Collapsed ancestor with no visible children)', async (t) => {
+  await t.test('Alt-click State D creates sample and abbreviated links', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+    const manipulation = new TreeManipulation(graph, visibility, null);  // null visualization
+    
+    // Setup: Collapse n1 to create State D (no visible descendants)
+    visibility.collapseNode('n1');
+    manipulation.projection.regenerate();
+    
+    // Verify State D preconditions
+    assert(!visibility.isNodeVisible('t1'), 'Pre-condition: t1 hidden (collapsed)');
+    assert(!visibility.isNodeVisible('t2'), 'Pre-condition: t2 hidden (collapsed)');
+    assert(visibility.isNodeCollapsed('n1'), 'Pre-condition: n1 is collapsed');
+    
+    // Alt-click on n1 (State D: neither biological nor abbreviated connections)
+    const vizNode = { id: 'n1', x: 100, y: 100 };
+    manipulation.handleNodeClick(vizNode, createMockClickEvent(false, true));
+    
+    // Verify sample was created
+    const sample = manipulation.projection.getSampleForAncestor('n1');
+    assert(sample, 'Sample created after Alt-click');
+    assert(sample.terminalIds.size > 0, 'Sample contains at least one terminal');
+    
+    // Verify sampled terminals are now visible
+    for (const terminalId of sample.terminalIds) {
+      assert(visibility.isNodeVisible(terminalId), 
+        `Sampled terminal ${terminalId} is visible`);
+    }
+    
+    // Critical: n1 must remain collapsed to generate abbreviated links
+    assert(visibility.isNodeCollapsed('n1'), 
+      'CRITICAL: n1 remains collapsed after Alt-click (State D requirement)');
+    
+    // Verify abbreviated links were created
+    manipulation.projection.regenerate();
+    const abbreviatedLinks = manipulation.projection.getAbbreviatedLinks();
+    assert(abbreviatedLinks.length > 0, 'Abbreviated links generated from sampled terminals');
+    
+    // Each sampled terminal should have an abbreviated link
+    const linkedTerminals = new Set();
+    for (const link of abbreviatedLinks) {
+      linkedTerminals.add(link.targetId);
+    }
+    
+    for (const terminalId of sample.terminalIds) {
+      assert(linkedTerminals.has(terminalId), 
+        `Abbreviated link created for sampled terminal ${terminalId}`);
+    }
+  });
+
+  await t.test('Alt-click State D abbreviated links originate from collapsed ancestor', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+    const manipulation = new TreeManipulation(graph, visibility, null);
+    
+    // Setup: Collapse n1 (State D)
+    visibility.collapseNode('n1');
+    manipulation.projection.regenerate();
+    
+    // Alt-click on n1
+    manipulation.handleNodeClick({ id: 'n1', x: 100, y: 100 }, createMockClickEvent(false, true));
+    
+    // Get abbreviated links
+    manipulation.projection.regenerate();
+    const abbreviatedLinks = manipulation.projection.getAbbreviatedLinks();
+    
+    // All abbreviated links should originate from n1 (the sampled ancestor)
+    for (const link of abbreviatedLinks) {
+      assert(link.sourceId === 'n1', 
+        `Abbreviated link from n1 to ${link.targetId}, not from ${link.sourceId}`);
+      assert(link.type === 'abbreviated', `Link is marked as abbreviated type`);
+    }
+  });
+
+  await t.test('Alt-click State B reshuffles sample without expanding', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+    const manipulation = new TreeManipulation(graph, visibility, null);
+    
+    // Setup: n1 collapsed, then Alt-click to create sample (State D → State B)
+    visibility.collapseNode('n1');
+    manipulation.projection.regenerate();
+    assert(visibility.isNodeCollapsed('n1'), 'Setup: n1 is collapsed');
+    
+    // First Alt-click creates sample
+    manipulation.handleNodeClick({ id: 'n1', x: 100, y: 100 }, createMockClickEvent(false, true));
+    assert(visibility.isNodeCollapsed('n1'), 'After first Alt-click: n1 still collapsed');
+    
+    // Second Alt-click reshuffles (State B behavior)
+    manipulation.handleNodeClick({ id: 'n1', x: 100, y: 100 }, createMockClickEvent(false, true));
+    
+    // Verify n1 remains collapsed after reshuffle
+    assert(visibility.isNodeCollapsed('n1'), 
+      'n1 remains collapsed after State B reshuffle');
+    
+    // Verify sample still exists
+    const sample = manipulation.projection.getSampleForAncestor('n1');
+    assert(sample && sample.terminalIds.size > 0, 'Sample remains after reshuffle');
+  });
+
+  await t.test('Alt-click root is disabled', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+    const manipulation = new TreeManipulation(graph, visibility, null);
+    
+    // Precondition: root node 'root' exists and is visible
+    assert(visibility.isNodeVisible('root'), 'Precondition: root is visible');
+    
+    // Collapse root first to create a valid state for testing
+    visibility.collapseNode('root');
+    assert(visibility.isNodeCollapsed('root'), 'Setup: root is collapsed');
+    
+    // Attempt Alt-click on root
+    const sampleBefore = manipulation.projection.getSampleForAncestor('root');
+    manipulation.handleNodeClick({ id: 'root', x: 100, y: 100 }, createMockClickEvent(false, true));
+    const sampleAfter = manipulation.projection.getSampleForAncestor('root');
+    
+    // Verify root Alt-click had no effect (no sample created)
+    assert(sampleBefore === null || sampleBefore === undefined, 'Precondition: no sample before Alt-click on root');
+    assert(sampleAfter === null || sampleAfter === undefined, 'Root Alt-click disabled: no sample created');
+  });
+
+  await t.test('Alt-click root is disabled', () => {
+    const { graph } = createSimpleTestGraph();
+    const visibility = new TreeVisibilityState(graph);
+    const manipulation = new TreeManipulation(graph, visibility, null);
+    
+    // Alt-click on root
+    const rootNode = { id: 'root', x: 100, y: 100 };
+    manipulation.handleNodeClick(rootNode, createMockClickEvent(false, true));
+    
+    // Root should have no sample
+    const rootSample = manipulation.projection.getSampleForAncestor('root');
+    assert(!rootSample, 'Alt-click on root creates no sample');
+    
+    // Root biological children should still be visible (normal state)
+    assert(visibility.isNodeVisible('n1'), 'root child n1 still visible');
+    assert(visibility.isNodeVisible('n2'), 'root child n2 still visible');
+  });
+});
+
+
+/**
+ * Alt-click sampling and minimization specification.
+ *
+ *            root
+ *          /      \
+ *         A        Z
+ *       /   \      |
+ *      B     C     S
+ *    b1-b5  / \   / \
+ *         C1  c6 P   Q
+ *       c1-c4   p1-p3 q1-q3
+ */
+test('TreeManipulation - Alt-click sampling and minimization', async (t) => {
+  const SPEC = {
+    root: ['A', 'Z'], A: ['B', 'C'], B: ['b1', 'b2', 'b3', 'b4', 'b5'], C: ['C1', 'c6'],
+    C1: ['c1', 'c2', 'c3', 'c4'], Z: ['S'], S: ['P', 'Q'], P: ['p1', 'p2', 'p3'], Q: ['q1', 'q2', 'q3']
+  };
+  const PARENT = {};
+  for (const [p, cs] of Object.entries(SPEC)) cs.forEach(c => { PARENT[c] = p; });
+  const isUnder = (id, ancestor) => {
+    for (let p = PARENT[id]; p; p = PARENT[p]) if (p === ancestor) return true;
+    return false;
+  };
+  const B_LEAVES = SPEC.B;
+  const C_LEAVES = ['c1', 'c2', 'c3', 'c4', 'c6'];
+
+  function setup(max) {
+    const builder = new GraphBuilder('alt_spec', 'root');
+    const taxonomy = {};
+    for (const id of new Set([...Object.keys(SPEC), ...Object.keys(PARENT)])) {
+      const children = SPEC[id] || [];
+      const isTerminal = children.length === 0;
+      builder.addNode({
+        id, type: isTerminal ? 'terminal' : 'internal', parentId: PARENT[id] || null, children,
+        ...(isTerminal ? { taxonId: id } : {})
+      });
+      if (isTerminal) taxonomy[id] = { id, scientificName: id, rank: 'species' };
+    }
+    const graph = builder.build(taxonomy);
+    const visibility = new TreeVisibilityState(graph);
+    visibility.collapseToRoot();
+    visibility.expandRootOneLevel();
+    const manipulation = new TreeManipulation(graph, visibility, null, [], [], { maxSampledSpecies: max });
+    return { manipulation, visibility };
+  }
+
+  const click = (m, id, event) => m.handleNodeClick({ id }, createMockClickEvent(...event));
+  const alt = (m, id) => click(m, id, [false, true]);
+  const cmd = (m, id) => click(m, id, [false, false, true]);
+  const shift = (m, id) => click(m, id, [true]);
+  const sampleOf = (m, id) => {
+    const s = m.projection.getSampleForAncestor(id);
+    return s ? [...s.terminalIds].sort() : null;
+  };
+  const abbreviatedFrom = (m, id) => {
+    m.projection.regenerate();
+    return m.projection.getAbbreviatedLinks().filter(l => l.sourceId === id).map(l => l.targetId).sort();
+  };
+
+  // Projection-wide invariants: unique links, no biological/abbreviated duplicates,
+  // deepest-visible-ancestor anchoring, and each leaf owned by at most one sample.
+  function assertConsistent(m) {
+    m.projection.regenerate();
+    const { visibleNodeIds, biologicalLinks, abbreviatedLinks } = m.projection.getProjection();
+    const keys = abbreviatedLinks.map(l => `${l.sourceId}>${l.targetId}`);
+    assert.strictEqual(new Set(keys).size, keys.length, 'abbreviated links are unique');
+    const bioKeys = new Set(biologicalLinks.map(l => `${l.sourceId}>${l.targetId}`));
+    for (const key of keys) assert(!bioKeys.has(key), `${key} is not also a biological link`);
+
+    const owners = new Map();
+    for (const [ancestorId, sample] of m.projection.getAllActiveSamples()) {
+      for (const leaf of sample.terminalIds) {
+        assert(!owners.has(leaf), `${leaf} owned by both ${owners.get(leaf)} and ${ancestorId}`);
+        owners.set(leaf, ancestorId);
+      }
+    }
+    for (const link of abbreviatedLinks) {
+      assert(owners.has(link.targetId), `abbreviated target ${link.targetId} belongs to a sample`);
+      let anchor = PARENT[link.targetId];
+      while (!visibleNodeIds.has(anchor)) anchor = PARENT[anchor];
+      assert.strictEqual(link.sourceId, anchor, `${link.targetId} anchored to deepest visible ancestor`);
+    }
+    for (const leaf of owners.keys()) assert(visibleNodeIds.has(leaf), `sampled ${leaf} is visible`);
+  }
+
+  await t.test('Empty node: branch-fair sample up to the maximum without revealing ancestors', () => {
+    const { manipulation: m } = setup(4);
+    alt(m, 'A');
+
+    const leaves = abbreviatedFrom(m, 'A');
+    assert.strictEqual(leaves.length, 4);
+    assert.deepStrictEqual(sampleOf(m, 'A'), leaves);
+    assert.strictEqual(leaves.filter(id => B_LEAVES.includes(id)).length, 2, 'two leaves from branch B');
+    assert.strictEqual(leaves.filter(id => C_LEAVES.includes(id)).length, 2, 'two leaves from branch C');
+    const visible = m.projection.getVisibleNodeIds();
+    for (const id of ['B', 'C', 'C1']) assert(!visible.has(id), `${id} not revealed`);
+    assertConsistent(m);
+  });
+
+  await t.test('Two branches of three leaves: all six represented when the maximum is larger', () => {
+    for (let i = 0; i < 25; i++) {
+      const { manipulation: m } = setup(10);
+      cmd(m, 'Z');
+      alt(m, 'S');
+      assert.deepStrictEqual(abbreviatedFrom(m, 'S'), ['p1', 'p2', 'p3', 'q1', 'q2', 'q3']);
+      assertConsistent(m);
+    }
+  });
+
+  await t.test('Fewer available leaves than the maximum: every leaf stays represented on repeat', () => {
+    const { manipulation: m } = setup(10);
+    cmd(m, 'Z');
+    alt(m, 'S');
+    alt(m, 'S');
+    assert.deepStrictEqual(sampleOf(m, 'S'), ['p1', 'p2', 'p3', 'q1', 'q2', 'q3']);
+    assertConsistent(m);
+  });
+
+  await t.test('Expanded node: minimization keeps every visible leaf, ignoring the maximum', () => {
+    const { manipulation: m, visibility } = setup(4);
+    shift(m, 'A');
+    alt(m, 'A');
+
+    const all = [...B_LEAVES, ...C_LEAVES].sort();
+    assert.deepStrictEqual(sampleOf(m, 'A'), all, 'all 10 leaves kept with max 4');
+    assert.deepStrictEqual(abbreviatedFrom(m, 'A'), all);
+    assert(visibility.isNodeCollapsed('A'));
+    for (const id of ['B', 'C', 'C1']) assert(!visibility.isNodeVisible(id), `${id} hidden`);
+    assertConsistent(m);
+  });
+
+  await t.test('Mixed direct and abbreviated descendants: all represented leaves preserved, nested sample folded', () => {
+    const { manipulation: m } = setup(4);
+    cmd(m, 'A');
+    cmd(m, 'B');
+    alt(m, 'C');
+    const cSample = sampleOf(m, 'C');
+    assert.strictEqual(cSample.length, 4);
+
+    alt(m, 'A');
+    const expected = [...B_LEAVES, ...cSample].sort();
+    assert.deepStrictEqual(sampleOf(m, 'A'), expected);
+    assert.strictEqual(sampleOf(m, 'C'), null, 'nested sample removed');
+    assert.deepStrictEqual(abbreviatedFrom(m, 'A'), expected);
+    assertConsistent(m);
+  });
+
+  await t.test('Nested sample under a collapsed ancestor is consolidated into the clicked node', () => {
+    const { manipulation: m } = setup(10);
+    cmd(m, 'A');
+    alt(m, 'C');
+    const cSample = sampleOf(m, 'C');
+    cmd(m, 'A'); // collapses A; C's leaves re-anchor to A
+    assert.deepStrictEqual(abbreviatedFrom(m, 'A'), cSample);
+
+    alt(m, 'A'); // 5 represented < max 10: keep them and add more
+    assert.strictEqual(sampleOf(m, 'C'), null, 'nested sample folded into A');
+    const aSample = sampleOf(m, 'A');
+    for (const leaf of cSample) assert(aSample.includes(leaf), `${leaf} preserved`);
+    assert.strictEqual(aSample.length, 10);
+    assertConsistent(m);
+  });
+
+  await t.test('Leaves represented through an enclosing sample move to the clicked node only', () => {
+    const { manipulation: m } = setup(4);
+    alt(m, 'A');
+    cmd(m, 'A'); // A expanded with its sample re-anchored to B and C
+    const aCLeaves = sampleOf(m, 'A').filter(id => C_LEAVES.includes(id));
+
+    alt(m, 'C');
+    const cSample = sampleOf(m, 'C');
+    for (const leaf of aCLeaves) assert(cSample.includes(leaf), `${leaf} preserved under C`);
+    assert(sampleOf(m, 'A').every(id => B_LEAVES.includes(id)), 'A keeps only its B leaves');
+    assertConsistent(m);
+  });
+
+  await t.test('Minimized above maximum: reduces to the maximum using only existing leaves', () => {
+    for (let i = 0; i < 25; i++) {
+      const { manipulation: m } = setup(4);
+      shift(m, 'A');
+      alt(m, 'C'); // minimize C: c1-c4, c6 (5 > 4)
+      const before = sampleOf(m, 'C');
+      assert.strictEqual(before.length, 5);
+
+      alt(m, 'C');
+      const after = sampleOf(m, 'C');
+      assert.strictEqual(after.length, 4);
+      assert(after.every(id => before.includes(id)), 'no new leaves introduced');
+      assert(after.includes('c6'), 'branch-fair: the single-leaf branch is kept');
+      assertConsistent(m);
+    }
+  });
+
+  await t.test('Minimized at exactly the maximum: a fresh branch-fair sample is drawn', () => {
+    const { manipulation: m } = setup(4);
+    alt(m, 'A');
+    let changed = false;
+    for (let i = 0; i < 30 && !changed; i++) {
+      const before = sampleOf(m, 'A');
+      alt(m, 'A');
+      const after = sampleOf(m, 'A');
+      assert.strictEqual(after.length, 4);
+      assert.strictEqual(after.filter(id => B_LEAVES.includes(id)).length, 2);
+      changed = after.join() !== before.join();
+      assertConsistent(m);
+    }
+    assert(changed, 'reshuffle produced a different sample within 30 attempts');
+  });
+
+  await t.test('Minimized below maximum: existing leaves kept, unrepresented leaves added', () => {
+    const { manipulation: m } = setup(4);
+    cmd(m, 'A');
+    cmd(m, 'C'); // c6 visible, C1 collapsed
+    alt(m, 'C'); // minimize: only c6 represented
+    assert.deepStrictEqual(sampleOf(m, 'C'), ['c6']);
+
+    alt(m, 'C');
+    const after = sampleOf(m, 'C');
+    assert.strictEqual(after.length, 4);
+    assert(after.includes('c6'), 'existing leaf preserved');
+    assert.strictEqual(new Set(after).size, 4, 'no duplicates');
+    assertConsistent(m);
+  });
+
+  await t.test('Unrelated branches and samples are unchanged', () => {
+    const { manipulation: m, visibility } = setup(4);
+    cmd(m, 'Z');
+    alt(m, 'S');
+    const sSample = sampleOf(m, 'S');
+    const zVisible = ['Z', 'S', 'P', 'Q'].map(id => visibility.isNodeVisible(id));
+
+    shift(m, 'A');
+    alt(m, 'A');
+    alt(m, 'A');
+    alt(m, 'C');
+
+    assert.deepStrictEqual(sampleOf(m, 'S'), sSample);
+    assert.deepStrictEqual(['Z', 'S', 'P', 'Q'].map(id => visibility.isNodeVisible(id)), zVisible);
+    assert.deepStrictEqual(abbreviatedFrom(m, 'S'), sSample);
+    for (const leaf of sSample) assert(isUnder(leaf, 'S'));
+    assertConsistent(m);
+  });
+});
+
+test('TreeManipulation - Minimized node passes sampled direct children to the renderer as abbreviated links', () => {
+  const { graph } = createSimpleTestGraph();
+  const visibility = new TreeVisibilityState(graph);
+  const edges = [['root', 'n1'], ['root', 'n2'], ['n1', 't1'], ['n1', 't2']];
+  const allLinks = edges.map(([s, t]) => ({ sourceId: s, targetId: t, source: s, target: t }));
+  const calls = [];
+  const visualization = { updateVisibility: (...args) => calls.push(args) };
+  const manipulation = new TreeManipulation(graph, visibility, visualization, [], allLinks);
+
+  manipulation.handleNodeClick({ id: 'n1' }, createMockClickEvent(false, true));
+
+  const [visibleNodeIds, , biologicalLinks, abbreviatedLinks] = calls.at(-1);
+  assert(visibleNodeIds.has('t1') && visibleNodeIds.has('t2'), 'leaves stay visible');
+  assert.deepStrictEqual(biologicalLinks.map(l => `${l.sourceId}>${l.targetId}`).sort(), ['root>n1', 'root>n2']);
+  assert.deepStrictEqual(abbreviatedLinks.map(l => `${l.sourceId}>${l.targetId}`).sort(), ['n1>t1', 'n1>t2']);
+  assert.strictEqual(biologicalLinks[0], allLinks.find(l => l.targetId === biologicalLinks[0].targetId),
+    'original link objects are passed through');
+});
+
+test('TreeManipulation - Shift-click on a minimized node leaves no orphaned sampled leaves', () => {
+  const { graph } = createSimpleTestGraph();
+  const visibility = new TreeVisibilityState(graph);
+  const manipulation = new TreeManipulation(graph, visibility, null);
+
+  manipulation.handleNodeClick({ id: 'n1' }, createMockClickEvent(false, true));
+  manipulation.handleNodeClick({ id: 'n1' }, createMockClickEvent(true));
+
+  manipulation.projection.regenerate();
+  const { visibleNodeIds, abbreviatedLinks } = manipulation.projection.getProjection();
+  assert.deepStrictEqual([...visibleNodeIds].sort(), ['n1', 'n2', 'root']);
+  assert.strictEqual(abbreviatedLinks.length, 0);
+});

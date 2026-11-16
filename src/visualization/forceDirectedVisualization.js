@@ -9,6 +9,13 @@
 // Get d3 from global scope (loaded from CDN in browser)
 let d3;
 
+const LABEL_HALO_COLOR = '#ffffff';
+const LABEL_OUTLINE_WIDTH_PX = 2;
+const LABEL_SHADOW_BLUR_PX = 6;
+
+const DEFAULT_VELOCITY_DECAY = 0.4;
+const DEFAULT_ALPHA_DECAY = 0.02;
+
 class ForceDirectedVisualization {
   /**
    * Initialize the force-directed visualization.
@@ -90,6 +97,10 @@ class ForceDirectedVisualization {
     this.windDirection = 0; // Degrees: 0 = right
     this.windStrength = 0;  // UI range 0-2000
     this.windForce = null;
+
+    // Simulation damping: friction on node velocity, and how fast the simulation cools
+    this.velocityDecay = DEFAULT_VELOCITY_DECAY;
+    this.alphaDecay = DEFAULT_ALPHA_DECAY;
 
     // Appearance parameters
     this.backgroundWhiteLevel = 0;  // 0-100 blend from light blue to white
@@ -242,41 +253,13 @@ class ForceDirectedVisualization {
     // Add zoom behavior
     this._addZoomBehavior();
 
-    // Render graph elements (links and nodes in the viewport)
+    this._createLayers();
+
+    // Render graph elements into their dedicated layers
     this._renderLinks();
     this._renderNodes();
 
-    // Create hover highlight layer (positioned between nodes and text)
-    // This allows the hover highlight to be behind the text layer while above other nodes
-    this.hoverHighlightLayer = this.g.append('g')
-      .attr('class', 'hover-highlight-layer');
-
-    // Create hover highlight circle in its own layer
-    this.hoverHighlightCircle = this.hoverHighlightLayer.append('circle')
-      .attr('class', 'hover-highlight')
-      .attr('r', this.hoverHighlightSize)
-      .attr('fill', '#ffffff')
-      .attr('stroke', '#000000')
-      .attr('stroke-width', 2)
-      .attr('opacity', 0)
-      .attr('pointer-events', 'none');
-
-    // Create text layer as the FINAL CHILD of the viewport group.
-    // It inherits the viewport's zoom/pan transform automatically.
-    // This eliminates the need for separate transform synchronization.
-    this.textLayer = this.g.append('g')
-      .attr('class', 'text-layer');
-
-    // Create text-backgrounds group as first child of text layer.
-    // SVG renders earlier elements behind later elements, so backgrounds will appear behind text.
-    this.textBackgroundsLayer = this.textLayer.append('g')
-      .attr('class', 'text-backgrounds');
-
-    // Foreground overlay for the complete hovered node and its labels.
-    this.foregroundLayer = this.g.append('g')
-      .attr('class', 'foreground-overlay');
-
-    // Now render all text elements into the text layer
+    // Render all text elements into the text layer
     this._renderLabels();
     this._renderRootLabel();
     this._renderDateLabels();
@@ -286,6 +269,66 @@ class ForceDirectedVisualization {
     this.simulation.on('tick', () => this._onTick());
 
     return this;
+  }
+
+  /**
+   * Create the fixed, ordered layers of the viewport group. SVG paints later siblings on
+   * top, so the order below is the z-order:
+   *   grid → links → nodes → hover highlight → text (backgrounds → ancestor labels →
+   *   species labels) → foreground (hovered node).
+   * Every renderer appends into its own layer, so elements entering during later D3
+   * joins (e.g. in updateVisibility) can never be painted above the labels.
+   * @private
+   */
+  _createLayers() {
+    this.linkLayer = this.g.append('g')
+      .attr('class', 'link-layer');
+
+    this.nodeLayer = this.g.append('g')
+      .attr('class', 'node-layer');
+
+    this.hoverHighlightLayer = this.g.append('g')
+      .attr('class', 'hover-highlight-layer');
+
+    this.hoverHighlightCircle = this.hoverHighlightLayer.append('circle')
+      .attr('class', 'hover-highlight')
+      .attr('r', this.hoverHighlightSize)
+      .attr('fill', '#ffffff')
+      .attr('stroke', '#000000')
+      .attr('stroke-width', 2)
+      .attr('opacity', 0)
+      .attr('pointer-events', 'none');
+
+    this.textLayer = this.g.append('g')
+      .attr('class', 'text-layer');
+
+    this.textBackgroundsLayer = this.textLayer.append('g')
+      .attr('class', 'text-backgrounds');
+
+    // Date, taxonomy, ancestral, and root labels.
+    this.ancestorLabelLayer = this.textLayer.append('g')
+      .attr('class', 'ancestor-labels');
+
+    // Common and scientific names, painted above ancestor labels where they overlap.
+    this.speciesLabelLayer = this.textLayer.append('g')
+      .attr('class', 'species-labels');
+
+    // Foreground overlay for the complete hovered node and its labels.
+    this.foregroundLayer = this.g.append('g')
+      .attr('class', 'foreground-overlay');
+  }
+
+  /**
+   * Give node labels a white halo: an outline painted behind the fill plus a soft shadow.
+   * @private
+   */
+  _applyLabelHalo(selection) {
+    return selection
+      .attr('stroke', LABEL_HALO_COLOR)
+      .attr('stroke-width', `${LABEL_OUTLINE_WIDTH_PX}px`)
+      .attr('stroke-linejoin', 'round')
+      .attr('paint-order', 'stroke fill')
+      .style('filter', `drop-shadow(0 0 ${LABEL_SHADOW_BLUR_PX}px ${LABEL_HALO_COLOR})`);
   }
 
   /**
@@ -301,8 +344,8 @@ class ForceDirectedVisualization {
         .force('collision', d3.forceCollide()
           .radius(d => d.type === 'terminal' ? 8 : 6))
         .alpha(1)
-        .alphaDecay(0.02)
-        .velocityDecay(0.4);
+        .alphaDecay(this.alphaDecay)
+        .velocityDecay(this.velocityDecay);
 
       // Add link force
       if (this.links.length > 0) {
@@ -387,7 +430,7 @@ class ForceDirectedVisualization {
    * @private
    */
   _renderLinks() {
-    this.linkElements = this.g.selectAll('line.link')
+    this.linkElements = this.linkLayer.selectAll('line.link')
       .data(this.links, d => `${d.sourceId}-${d.targetId}`)
       .enter()
       .append('line')
@@ -403,7 +446,7 @@ class ForceDirectedVisualization {
    */
   _renderNodes() {
     // Create groups for each node (will contain circle + silhouette + label)
-    const nodeGroups = this.g.selectAll('g.node-group')
+    const nodeGroups = this.nodeLayer.selectAll('g.node-group')
       .data(this.nodes, d => d.id)
       .enter()
       .append('g')
@@ -619,7 +662,7 @@ class ForceDirectedVisualization {
       .attr('height', d => this._estimateTextDimensions(d.commonName, this.fontSizeBase).height * this.textBackgroundHeight);
 
     // Render common names (top line)
-    const commonNameLabels = this.textLayer.selectAll('text.node-label-common')
+    const commonNameLabels = this.speciesLabelLayer.selectAll('text.node-label-common')
       .data(commonNameData, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-common')
@@ -629,10 +672,8 @@ class ForceDirectedVisualization {
         .attr('text-anchor', 'middle')
         .attr('dy', '-0.4em')  // Offset upward
         .attr('fill', '#000000')
-        // .style('filter', 'drop-shadow(0 0 8px #ffffff)')
-        .style('filter', 'drop-shadow(0 0 3px #ffffff)')
-        // .style('filter', 'drop-shadow(0 0 1px #fafafa)')
         .attr('pointer-events', 'none'))
+      .call(selection => this._applyLabelHalo(selection))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.commonName);
 
@@ -657,7 +698,7 @@ class ForceDirectedVisualization {
       .attr('height', d => this._estimateTextDimensions(d.scientificName, this.fontSizeBase).height * this.textBackgroundHeight);
 
     // Render scientific names (bottom line, italic)
-    const scientificNameLabels = this.textLayer.selectAll('text.node-label-scientific')
+    const scientificNameLabels = this.speciesLabelLayer.selectAll('text.node-label-scientific')
       .data(scientificNameData, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-label-scientific')
@@ -667,8 +708,8 @@ class ForceDirectedVisualization {
         .attr('text-anchor', 'middle')
         .attr('dy', '0.8em')  // Offset downward
         .attr('fill', '#343434')
-        .style('filter', 'drop-shadow(0 0 4px #ffffff)')
         .attr('pointer-events', 'none'))
+      .call(selection => this._applyLabelHalo(selection))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(d => d.scientificName);
 
@@ -786,7 +827,7 @@ class ForceDirectedVisualization {
       });
 
     // Render taxonomy labels (first line, if present)
-    this.nodeTaxonomyLabels = this.textLayer.selectAll('text.node-taxonomy-label')
+    this.nodeTaxonomyLabels = this.ancestorLabelLayer.selectAll('text.node-taxonomy-label')
       .data(nodesWithDates.filter(d => labelDataByNodeId[d.id].taxonomy), d => d.id)
       .join(
         enter => enter.append('text')
@@ -801,10 +842,11 @@ class ForceDirectedVisualization {
         update => update,
         exit => exit.remove()
       )
+      .call(selection => this._applyLabelHalo(selection))
       .text(d => labelDataByNodeId[d.id].taxonomy);
 
     // Render date labels (second line for two-line labels, only line for single-line)
-    this.nodeDateLabels = this.textLayer.selectAll('text.node-date-label')
+    this.nodeDateLabels = this.ancestorLabelLayer.selectAll('text.node-date-label')
       .data(nodesWithDates, d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'node-date-label')
@@ -814,6 +856,7 @@ class ForceDirectedVisualization {
         .attr('dy', d => labelDataByNodeId[d.id].isTwoLine ? '1.2em' : '1.2em')
         .attr('fill', '#767676')
         .attr('pointer-events', 'none'))
+      .call(selection => this._applyLabelHalo(selection))
       .attr('font-size', `${this.nodeDateFontSize}px`)
       .text(d => labelDataByNodeId[d.id].date);
 
@@ -953,7 +996,7 @@ class ForceDirectedVisualization {
       .attr('height', d => this._estimateTextDimensions(d.label, this.fontSizeBase * 0.85).height * this.textBackgroundHeight);
 
     // Use D3 data binding to render ancestral labels
-    this.textLayer.selectAll('text.ancestral-label')
+    this.ancestorLabelLayer.selectAll('text.ancestral-label')
       .data(ancestralNodesWithLabels, d => d.id)
       .join(
         enter => enter.append('text')
@@ -967,6 +1010,7 @@ class ForceDirectedVisualization {
         update => update,
         exit => exit.remove()
       )
+      .call(selection => this._applyLabelHalo(selection))
       .attr('font-size', `${this.fontSizeBase * 0.85}px`)
       .text(d => d.label);
 
@@ -1005,7 +1049,7 @@ class ForceDirectedVisualization {
       .attr('width', () => this._estimateTextDimensions(label, this.fontSizeBase).width)
       .attr('height', () => this._estimateTextDimensions(label, this.fontSizeBase).height * this.textBackgroundHeight);
 
-    this.textLayer.selectAll('text.root-label')
+    this.ancestorLabelLayer.selectAll('text.root-label')
       .data([rootVizNode], d => d.id)
       .join(enter => enter.append('text')
         .attr('class', 'root-label')
@@ -1016,6 +1060,7 @@ class ForceDirectedVisualization {
         .attr('dy', '0.3em')
         .attr('fill', '#320384')
         .attr('pointer-events', 'none'))
+      .call(selection => this._applyLabelHalo(selection))
       .attr('font-size', `${this.fontSizeBase}px`)
       .text(label);
 
@@ -1491,35 +1536,32 @@ class ForceDirectedVisualization {
       // This preserves D3's internal state and ensures idempotent updates
       const linkForce = this.simulation.force('link');
       if (linkForce) {
-        // Use per-link strength accessor if modifiers are active
-        if (this.currentRootLinkStrength > 0 || this.currentAgeLinkStrength > 0) {
-          linkForce.strength(link =>
-            this._computePerLinkStrength(
-              link,
-              strength,
-              this.currentRootLinkStrength,
-              this.currentAgeLinkStrength
-            )
-          );
-        } else {
-          // Use scalar value when no modifiers are active
-          linkForce.strength(strength);
-        }
+        linkForce.strength(this._getLinkStrengthAccessor(strength));
       } else {
         // Fallback: if no link force exists, create one
         this.simulation.force('link', d3.forceLink(this.links)
           .id(d => d.id)
-          .strength(link =>
-            this._computePerLinkStrength(
-              link,
-              strength,
-              this.currentRootLinkStrength,
-              this.currentAgeLinkStrength
-            )
-          ));
+          .strength(this._getLinkStrengthAccessor(strength)));
       }
       this.simulation.alpha(0.3).restart();
     }
+  }
+
+  /**
+   * Link strength for d3.forceLink().strength(): a per-link accessor when the
+   * root-proximity or age modifiers are active, otherwise the scalar base strength.
+   * @private
+   */
+  _getLinkStrengthAccessor(strength) {
+    if (this.currentRootLinkStrength > 0 || this.currentAgeLinkStrength > 0) {
+      return link => this._computePerLinkStrength(
+        link,
+        strength,
+        this.currentRootLinkStrength,
+        this.currentAgeLinkStrength
+      );
+    }
+    return strength;
   }
 
   /**
@@ -2082,6 +2124,38 @@ class ForceDirectedVisualization {
   }
 
   /**
+   * Set velocity decay (friction). Higher values damp node motion faster; lower values let
+   * nodes keep momentum. Applied to the existing simulation without recreating it.
+   * @param {number} decay - D3 velocityDecay (0-1, clamped)
+   */
+  setVelocityDecay(decay) {
+    const value = Number(decay);
+    if (!Number.isFinite(value)) return;
+    const clamped = Math.max(0, Math.min(1, value));
+    if (clamped === this.velocityDecay) return;
+    this.velocityDecay = clamped;
+    if (this.simulation) {
+      this.simulation.velocityDecay(this.velocityDecay).alpha(0.3).restart();
+    }
+  }
+
+  /**
+   * Set alpha decay (cooling rate). Higher values make the simulation settle and stop
+   * sooner; lower values keep it active longer. Applied to the existing simulation.
+   * @param {number} decay - D3 alphaDecay (0-1, clamped)
+   */
+  setAlphaDecay(decay) {
+    const value = Number(decay);
+    if (!Number.isFinite(value)) return;
+    const clamped = Math.max(0, Math.min(1, value));
+    if (clamped === this.alphaDecay) return;
+    this.alphaDecay = clamped;
+    if (this.simulation) {
+      this.simulation.alphaDecay(this.alphaDecay).alpha(0.3).restart();
+    }
+  }
+
+  /**
    * Set the wind direction in degrees.
    * 0° = right, 90° = down, 180° = left, 270° = up
    * @param {number} degrees - Wind direction (0-360)
@@ -2571,9 +2645,10 @@ class ForceDirectedVisualization {
    * @param {Set<string>} visibleNodeIds - Set of node IDs that should be visible
    * @param {Array} allNodes - Original complete node list
    * @param {Array} allLinks - Original complete link list
+   * @param {Array} abbreviatedLinks - Projection links ({ sourceId, targetId, type: 'abbreviated' })
    * @public
    */
-  updateVisibility(visibleNodeIds, allNodes, allLinks) {
+  updateVisibility(visibleNodeIds, allNodes, allLinks, abbreviatedLinks = []) {
     if (!visibleNodeIds || visibleNodeIds.size === 0) {
       console.warn('[ForceDirectedVisualization] updateVisibility called with empty visible set');
       return;
@@ -2587,9 +2662,15 @@ class ForceDirectedVisualization {
       visibleNodeIds.has(l.sourceId) && visibleNodeIds.has(l.targetId)
     );
 
+    // Merge biological and abbreviated links with endpoints resolved for d3.forceLink()
+    const allFilteredLinks = buildSimulationLinks(filteredNodes, filteredLinks, abbreviatedLinks);
+
     // Update internal references
     this.nodes = filteredNodes;
-    this.links = filteredLinks;
+    this.links = allFilteredLinks;
+
+    // Return the hovered node to its layers so the joins below see (and don't duplicate) it.
+    this._restoreHoveredNodeFromForeground();
 
     // Remove all text labels associated with hidden nodes from all text layers
     if (this.textLayer) {
@@ -2609,46 +2690,43 @@ class ForceDirectedVisualization {
       this.textBackgroundsLayer.selectAll('rect.node-label-ancestral-bg').data(filteredNodes.filter(d => d.type === 'internal'), d => d.id).exit().remove();
     }
 
-    // Stop current simulation
-    this.simulation.stop();
-
-    // Recreate simulation with filtered data
-    this.simulation = d3.forceSimulation(this.nodes)
-      .force('charge', d3.forceManyBody()
-        .strength(d => this._getNodeCharge(d)))
-      .force('collision', d3.forceCollide()
-        .radius(d => d.type === 'terminal' ? 8 : 6))
-      .alpha(1)
-      .alphaDecay(0.02)
-      .velocityDecay(0.4);
-
-    // Add link force if there are any links
-    if (this.links.length > 0) {
+    // Update the existing simulation in place so every registered force (charge, collision,
+    // link strength accessors, topology repulsion, center, wind) and its configuration survive.
+    // Links are swapped first; simulation.nodes() then re-initializes every force, including
+    // the link force, against the new node indices. buildSimulationLinks() has already resolved
+    // endpoints to node objects, so the link force never looks up IDs among stale nodes.
+    const linkForce = this.simulation.force('link');
+    if (linkForce) {
+      linkForce.links(this.links);
+    } else if (this.links.length > 0) {
       this.simulation.force('link', d3.forceLink(this.links)
         .id(d => d.id)
-        .strength(this.currentLinkStrength));
+        .strength(this._getLinkStrengthAccessor(this.currentLinkStrength)));
     }
+    this.simulation.nodes(this.nodes);
 
     // Reapply root lock
     this._applyRootLock();
 
     // Update D3 selections with new data
-    // Update links
-    this.linkElements = this.g.selectAll('line.link')
-      .data(this.links, d => `${d.sourceId}-${d.targetId}`)
+    // Update links with support for both biological and abbreviated links
+    this.linkElements = this.linkLayer.selectAll('line.link')
+      .data(this.links, d => `${d.sourceId}-${d.targetId}-${d.type || 'biological'}`)
       .join(
         enter => enter
           .append('line')
-          .attr('class', 'link')
+          .attr('class', d => `link ${d.type === 'abbreviated' ? 'abbreviated-link' : 'biological-link'}`)
           .attr('stroke', '#999')
-          .attr('stroke-opacity', 0.3)
-          .attr('stroke-width', this.edgeThickness),
-        update => update,
+          .attr('stroke-opacity', d => d.type === 'abbreviated' ? 0.5 : 0.3)
+          .attr('stroke-width', d => d.type === 'abbreviated' ? this.edgeThickness * 0.8 : this.edgeThickness)
+          .attr('stroke-dasharray', d => d.type === 'abbreviated' ? '5,5' : 'none'),
+        update => update
+          .attr('stroke-dasharray', d => d.type === 'abbreviated' ? '5,5' : 'none'),
         exit => exit.remove()
       );
 
     // Update node groups
-    const nodeGroups = this.g.selectAll('g.node-group')
+    const nodeGroups = this.nodeLayer.selectAll('g.node-group')
       .data(this.nodes, d => d.id)
       .join(
         enter => {
@@ -2682,6 +2760,9 @@ class ForceDirectedVisualization {
 
     // Re-render silhouettes for entering nodes
     this._renderSilhouettes(nodeGroups);
+
+    // Re-render common name and scientific name labels for newly visible nodes
+    this._renderLabels();
 
     // Re-render date labels if enabled
     if (this.showNodeDates) {
@@ -2752,16 +2833,29 @@ class ForceDirectedVisualization {
         }
       });
 
-    // Re-register simulation listeners
-    this.simulation.on('tick', () => this._onTick());
+    this._repromoteHoveredNode(nodeGroups);
 
-    // Reapply topology repulsion if enabled
-    if (this.topoRepulsionEnabled) {
-      this._updateTopologyRepulsionForce();
+    // Reheat the retained simulation; alphaTarget (e.g. wind's) is left unchanged.
+    this.simulation.alpha(0.3).restart();
+  }
+
+  /**
+   * After a visibility update, move the still-hovered node back into the foreground, or
+   * clear the hover state if that node is no longer visible.
+   * @private
+   */
+  _repromoteHoveredNode(nodeGroups) {
+    if (this.currentHoveredNodeId === null) return;
+
+    const hoveredGroup = nodeGroups.filter(d => d.id === this.currentHoveredNodeId);
+    if (hoveredGroup.empty()) {
+      this.currentHoveredNodeId = null;
+      if (this.hoverHighlightCircle) {
+        this.hoverHighlightCircle.interrupt().attr('opacity', 0);
+      }
+      return;
     }
-
-    // Reapply wind force if enabled
-    this._updateWindForce();
+    this._moveNodeTextToForeground(this.currentHoveredNodeId, hoveredGroup);
   }
 
   /**
@@ -2799,4 +2893,47 @@ class ForceDirectedVisualization {
   }
 }
 
-export { ForceDirectedVisualization };
+/**
+ * Build the link array passed to d3.forceLink() from biological and abbreviated links.
+ *
+ * Projection links are D3-independent ({ sourceId, targetId, type }), but d3.forceLink()
+ * resolves only `source`/`target` and throws "node not found" when they are missing.
+ * Every returned link therefore has `source`/`target` set to node objects from `nodes`.
+ *
+ * Biological link objects are reused (D3 already mutates them in place) so their identity
+ * is preserved across updates. Abbreviated links are copied so projection output is never
+ * mutated, and are dropped when a biological link already connects the same pair.
+ * Links whose endpoints are not in `nodes` are dropped.
+ *
+ * @param {Array} nodes - Simulation node objects
+ * @param {Array} biologicalLinks - Visualization links with sourceId/targetId
+ * @param {Array} abbreviatedLinks - Projection links with sourceId/targetId/type
+ * @returns {Array} Links with resolved source/target node objects
+ */
+function buildSimulationLinks(nodes, biologicalLinks = [], abbreviatedLinks = []) {
+  const nodeById = new Map(nodes.map(node => [node.id, node]));
+  const links = [];
+  const biologicalPairs = new Set();
+
+  for (const link of biologicalLinks || []) {
+    const source = nodeById.get(link.sourceId);
+    const target = nodeById.get(link.targetId);
+    if (!source || !target) continue;
+    link.source = source;
+    link.target = target;
+    links.push(link);
+    biologicalPairs.add(`${link.sourceId}|${link.targetId}`);
+  }
+
+  for (const link of abbreviatedLinks || []) {
+    if (biologicalPairs.has(`${link.sourceId}|${link.targetId}`)) continue;
+    const source = nodeById.get(link.sourceId);
+    const target = nodeById.get(link.targetId);
+    if (!source || !target || source === target) continue;
+    links.push({ ...link, source, target });
+  }
+
+  return links;
+}
+
+export { ForceDirectedVisualization, buildSimulationLinks };

@@ -326,38 +326,110 @@ class TreeDisplayProjection {
     }
 
     // Collect available terminals for each branch (excluding already-sampled)
-    const branchTerminals = [];
-    for (const childId of children) {
-      const terminals = this._getTerminalDescendantsOf(childId);
-      const available = terminals.filter(t => !currentTerminals.has(t));
-      if (available.length > 0) {
-        branchTerminals.push({ childId, terminals: available });
-      }
-    }
+    const branchTerminals = this._getBranchTerminals(ancestorId, t => !currentTerminals.has(t));
 
     if (branchTerminals.length === 0) {
       return; // No additional terminals available
     }
 
-    // Distribute additional slots fairly across branches
-    const toAdd = [];
-    let slotIndex = 0;
-    while (toAdd.length < additionalSlots && branchTerminals.some(b => slotIndex < b.terminals.length)) {
-      for (const branch of branchTerminals) {
-        if (toAdd.length >= additionalSlots) {
-          break;
-        }
-        if (slotIndex < branch.terminals.length) {
-          toAdd.push(branch.terminals[slotIndex]);
-        }
-      }
-      slotIndex++;
-    }
+    // Distribute additional slots fairly and randomly across branches
+    const toAdd = this._distributeSampleAcrossBranches(branchTerminals, additionalSlots);
 
     // Add new terminals to existing sample
     for (const terminalId of toAdd) {
       currentTerminals.add(terminalId);
     }
+  }
+
+  /**
+   * Get every terminal beneath a node that is currently represented in the display,
+   * whether through ordinary visible structure or abbreviated links from any sample.
+   *
+   * @param {string} nodeId - The ancestor node
+   * @returns {Set} Represented terminal descendant IDs
+   */
+  getRepresentedLeaves(nodeId) {
+    this._projection = this._generateProjection();
+    const descendants = new Set(this._getTerminalDescendantsOf(nodeId));
+    descendants.delete(nodeId);
+    const represented = new Set();
+    for (const id of this._projection.visibleNodeIds) {
+      if (descendants.has(id)) {
+        represented.add(id);
+      }
+    }
+    return represented;
+  }
+
+  /**
+   * Make an ancestor the sole owner of a set of its represented leaves.
+   * Samples of descendant nodes are removed, and the leaves are removed from any other
+   * sample (e.g. an enclosing ancestor's), so each leaf belongs to one effective sample.
+   * The size limit is NOT applied: this is consolidation, not random sampling.
+   *
+   * @param {string} ancestorId - The ancestor that takes ownership
+   * @param {Iterable} terminalIds - Leaves to consolidate (all must descend from ancestorId)
+   */
+  consolidateSample(ancestorId, terminalIds) {
+    const leaves = new Set(terminalIds);
+    const subtree = this._getDescendantIds(ancestorId);
+
+    for (const [otherId, sample] of Array.from(this._activeSamples.entries())) {
+      if (otherId === ancestorId) continue;
+      if (subtree.has(otherId)) {
+        this._activeSamples.delete(otherId);
+        continue;
+      }
+      for (const leafId of leaves) {
+        sample.terminalIds.delete(leafId);
+      }
+      if (sample.terminalIds.size === 0) {
+        this._activeSamples.delete(otherId);
+      }
+    }
+
+    if (leaves.size > 0) {
+      this._activeSamples.set(ancestorId, { terminalIds: leaves });
+    } else {
+      this._activeSamples.delete(ancestorId);
+    }
+
+    this._projection = this._generateProjection();
+  }
+
+  /**
+   * Reduce an existing sample to at most the configured maximum, choosing branch-fairly
+   * and randomly from the leaves already in the sample. Never introduces new leaves.
+   *
+   * @param {string} ancestorId - The ancestor whose sample to reduce
+   */
+  reduceSample(ancestorId) {
+    const sample = this._activeSamples.get(ancestorId);
+    const max = this.options.maxSampledSpecies;
+    if (!sample || sample.terminalIds.size <= max) {
+      return;
+    }
+
+    const branchTerminals = this._getBranchTerminals(ancestorId, t => sample.terminalIds.has(t));
+    const kept = this._distributeSampleAcrossBranches(branchTerminals, max);
+    this._activeSamples.set(ancestorId, { terminalIds: new Set(kept) });
+
+    this._projection = this._generateProjection();
+  }
+
+  /**
+   * All descendant IDs (internal and terminal) of a node, excluding the node itself.
+   * @private
+   */
+  _getDescendantIds(nodeId) {
+    const descendants = new Set();
+    const toVisit = [...this.graph.getChildren(nodeId)];
+    while (toVisit.length > 0) {
+      const current = toVisit.pop();
+      descendants.add(current);
+      toVisit.push(...this.graph.getChildren(current));
+    }
+    return descendants;
   }
 
   /**
@@ -409,29 +481,19 @@ class TreeDisplayProjection {
    * @private
    */
   _getVisibleNodeIds() {
-    // If no active samples, return all visibility state nodes as-is
-    if (this._activeSamples.size === 0) {
-      return new Set(this.visibilityState.getVisibleNodeIds());
-    }
-    
-    // With active samples, exclude non-sampled terminals that are direct children of sampled collapsed ancestors
     const visible = new Set();
-    const sampledAncestorIds = new Set(this._activeSamples.keys());
-    
-    // Add nodes from visibility state, except non-sampled terminals that are direct children of sampled collapsed ancestors
-    for (const nodeId of this.visibilityState.getVisibleNodeIds()) {
+    const stateVisible = this.visibilityState.getVisibleNodeIds();
+
+    // A terminal is shown through ordinary structure only when its parent is visible and
+    // expanded. Otherwise it can only be represented by a sample (added below); this drops
+    // stale terminals left in the visibility state after their sample is cleared.
+    for (const nodeId of stateVisible) {
       const parent = this.graph.getParent(nodeId);
-      const children = this.graph.getChildren(nodeId);
-      
-      // Include if:
-      // - It's an internal node (has children), OR
-      // - Its parent is not a sampled ancestor, OR
-      // - Its parent is sampled but NOT collapsed (e.g., STATE C where we want both bio and abbreviated)
-      const isInternal = children.length > 0;
-      const parentIsSampled = parent && sampledAncestorIds.has(parent);
-      const parentIsCollapsed = parent && this.visibilityState.isNodeCollapsed(parent);
-      
-      if (isInternal || !parentIsSampled || (parentIsSampled && !parentIsCollapsed)) {
+      const isInternal = this.graph.getChildren(nodeId).length > 0;
+      const parentShowsChildren = !parent ||
+        (stateVisible.has(parent) && !this.visibilityState.isNodeCollapsed(parent));
+
+      if (isInternal || parentShowsChildren) {
         visible.add(nodeId);
       }
     }
@@ -452,6 +514,7 @@ class TreeDisplayProjection {
    * A biological link exists if and only if:
    * 1. There is an actual edge in the original PhyloGraph (parent-child)
    * 2. Both the parent and child nodes are currently visible
+   * 3. The parent is not collapsed (sampled children of a collapsed parent use abbreviated links)
    *
    * @returns {Array} Array of { sourceId, targetId, type: 'biological' }
    * @private
@@ -464,8 +527,9 @@ class TreeDisplayProjection {
       // Get the parent of this child (from the original graph)
       const parentId = this.graph.getParent(childId);
 
-      // If the parent exists and is also visible, add a biological link
-      if (parentId && visibleNodeIds.has(parentId)) {
+      // If the parent exists, is visible, and is expanded, add a biological link.
+      // A collapsed parent shows descendants only through sample (abbreviated) links.
+      if (parentId && visibleNodeIds.has(parentId) && !this.visibilityState.isNodeCollapsed(parentId)) {
         links.push({
           sourceId: parentId,
           targetId: childId,
@@ -581,13 +645,7 @@ class TreeDisplayProjection {
     }
 
     // For each branch, collect all terminal descendants
-    const branchTerminals = [];
-    for (const childId of children) {
-      const terminals = this._getTerminalDescendantsOf(childId);
-      if (terminals.length > 0) {
-        branchTerminals.push({ childId, terminals });
-      }
-    }
+    const branchTerminals = this._getBranchTerminals(ancestorId);
 
     if (branchTerminals.length === 0) {
       // No terminals found; remove sample if it exists
@@ -615,41 +673,46 @@ class TreeDisplayProjection {
    */
   _distributeSampleAcrossBranches(branchTerminals, maxSample) {
     const sampled = [];
-    const usedIndices = new Set();
 
-    // Randomize order of branches to avoid bias
-    const shuffledBranches = this._shuffleArray([...branchTerminals]);
+    // Randomize branch order and each branch's terminal order, then take one terminal
+    // per branch per round until the maximum is reached or every branch is exhausted.
+    const queues = this._shuffleArray(branchTerminals)
+      .map(branch => this._shuffleArray(branch.terminals));
 
-    // Round-robin selection across branches
     let round = 0;
     while (sampled.length < maxSample) {
       let foundAny = false;
-
-      for (const branch of shuffledBranches) {
+      for (const queue of queues) {
         if (sampled.length >= maxSample) break;
-
-        // Get all unused terminals from this branch
-        const available = branch.terminals.filter((_, idx) => !usedIndices.has(`${branch.childId}:${idx}`));
-
-        if (available.length > round) {
-          // Select from this branch in this round
-          const randomIdx = Math.floor(Math.random() * available.length);
-          const selectedTerminal = available[randomIdx];
-          sampled.push(selectedTerminal);
-
-          // Mark as used
-          const originalIdx = branch.terminals.indexOf(selectedTerminal);
-          usedIndices.add(`${branch.childId}:${originalIdx}`);
-
+        if (round < queue.length) {
+          sampled.push(queue[round]);
           foundAny = true;
         }
       }
-
-      if (!foundAny) break; // No more terminals available
+      if (!foundAny) break; // Every branch exhausted
       round++;
     }
 
     return sampled;
+  }
+
+  /**
+   * Group terminal IDs by the immediate child branch of an ancestor they descend from.
+   *
+   * @param {string} ancestorId - The ancestor whose child branches define the groups
+   * @param {Function} includeTerminal - Predicate selecting which terminals to include
+   * @returns {Array} Array of { childId, terminals: Array } for non-empty branches
+   * @private
+   */
+  _getBranchTerminals(ancestorId, includeTerminal = () => true) {
+    const branchTerminals = [];
+    for (const childId of this.graph.getChildren(ancestorId)) {
+      const terminals = this._getTerminalDescendantsOf(childId).filter(includeTerminal);
+      if (terminals.length > 0) {
+        branchTerminals.push({ childId, terminals });
+      }
+    }
+    return branchTerminals;
   }
 
   /**

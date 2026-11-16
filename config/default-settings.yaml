@@ -1,12 +1,18 @@
 # PhyloExplorer Visualization Settings
 # Version: 1.0
-# Generated at: 2026-11-13T05:27:16.356Z
+# Generated at: 2026-11-16T17:56:26.365Z
+
+# DATASET
+dataset: tetrapods  # Dataset loaded by default (mammals, animals, mammals-600, tetrapods)
+
+# TREE MANIPULATION
+maxSampledSpecies: 3  # Maximum leaves in a fresh Alt-click sample (1-50)
 
 # FORCES
-charge: 130  # Repulsion strength for non-leaf nodes (0-1500)
-leafCharge: 130  # Repulsion strength for leaf/terminal nodes (0-1500)
-linkStrength: 0.45  # Link stiffness (0-1)
-rootLinkStrength: 1058  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
+charge: 210  # Repulsion strength for non-leaf nodes (0-1500)
+leafCharge: 400  # Repulsion strength for leaf/terminal nodes (0-1500)
+linkStrength: 0.15  # Link stiffness (0-1)
+rootLinkStrength: 931  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
 ageLinkStrength: 0.00  # Age-based modifier (UI 0-500, per Ma)
 topologyRepulsionX: 0  # Master control; 0 disables (UI 0-100, internal 0-10)
 topologyRepulsionA: 10  # Baseline offset (UI 0-100, internal 0-10)
@@ -14,14 +20,17 @@ topologyRepulsionB: 10  # Force scale (UI 0-100, internal 0-10)
 lockRootPosition: true  # Keep root fixed in place
 windDirection: 0  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)
 windStrength: 38  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)
+velocityDecay: 0.40  # Friction on node velocity (0.05-0.9)
+alphaDecay: 0.020  # Simulation cooling rate (0.001-0.1)
 
 # APPEARANCE
 backgroundWhiteLevel: 100  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)
 edgeThickness: 8.25  # Stroke width (0.5-11)
-nodeCircleSize: 1.60  # Node circle radius (0.5-2)
-graphFontSize: 11  # Node label font (8-20px)
-sidebarFontSize: 15  # Sidebar font (10-20px)
+nodeCircleSize: 1.60  # Node circle radius (0.5-8)
+graphFontSize: 11  # Node label font (8-38px)
+sidebarFontSize: 15  # Sidebar font (10-24px)
 rootProximityWeighting: 0.00  # Edge thickness near root (0-1)
+edgeElasticityC: 0.00  # Root elasticity adjustment (0-10)
 
 # SILHOUETTES
 silhouetteSizePercent: 100  # Size relative to default (30-300%)

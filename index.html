@@ -562,6 +562,30 @@
           </p>
         </div>
 
+        <div class="control-group">
+          <div class="control-label">
+            <span>Friction (Velocity Decay)</span>
+            <span class="control-value" id="velocity-decay-value">0.4</span>
+          </div>
+          <input type="range" id="velocity-decay-slider"
+                 min="0.05" max="0.9" value="0.4" step="0.01">
+          <p class="info-text">
+            How quickly moving nodes slow down. Higher values stop motion sooner; lower values let nodes keep their momentum.
+          </p>
+        </div>
+
+        <div class="control-group">
+          <div class="control-label">
+            <span>Cooling (Alpha Decay)</span>
+            <span class="control-value" id="alpha-decay-value">0.02</span>
+          </div>
+          <input type="range" id="alpha-decay-slider"
+                 min="0.001" max="0.1" value="0.02" step="0.001">
+          <p class="info-text">
+            How quickly the whole simulation loses energy and stops. Higher values settle the layout sooner; lower values keep it adjusting longer.
+          </p>
+        </div>
+
         <button id="reset-button">Reset View</button>
 
         <h2>Appearance</h2>
@@ -967,6 +991,62 @@
     let currentVisibilityState = null;
     let currentTreeManipulation = null;
 
+    // One settings instance for the page lifetime, so imported settings
+    // (including the dataset choice) survive dataset switches.
+    const settings = new VisualizationSettings();
+    let datasetContext = null;       // Loaded data needed by dataset-dependent settings
+    let appliedAppSettings = {};     // Values last applied by applyApplicationSettings()
+    let datasetSwitchInProgress = false;
+
+    /**
+     * Apply settings that need application state rather than just the visualization:
+     * dataset selection, Alt-click sample size, node dates, and ancestral labels.
+     * Registered once with settings.onChange, so sidebar edits and YAML imports
+     * take the same path.
+     */
+    function applyApplicationSettings(current) {
+      if (currentViz && datasetContext) {
+        if (current.showNodeDates !== appliedAppSettings.showNodeDates) {
+          currentViz.setShowNodeDates(current.showNodeDates, datasetContext.divergenceData);
+          if (current.showNodeDates) {
+            currentViz.setNodeDateFontSize(current.nodeDateFontSize);
+          }
+          appliedAppSettings.showNodeDates = current.showNodeDates;
+        }
+        if (current.showAncestralLabels !== appliedAppSettings.showAncestralLabels &&
+            datasetContext.hypothesisData && datasetContext.graph) {
+          currentViz.setShowAncestralLabels(
+            current.showAncestralLabels, datasetContext.hypothesisData, datasetContext.graph
+          );
+          appliedAppSettings.showAncestralLabels = current.showAncestralLabels;
+        }
+      }
+
+      if (currentTreeManipulation && current.maxSampledSpecies !== appliedAppSettings.maxSampledSpecies) {
+        currentTreeManipulation.setMaxSampledSpecies(current.maxSampledSpecies);
+        appliedAppSettings.maxSampledSpecies = current.maxSampledSpecies;
+      }
+
+      if (current.dataset !== currentDataset) {
+        syncDatasetWithSettings();
+      }
+    }
+
+    async function syncDatasetWithSettings() {
+      if (datasetSwitchInProgress) return;  // The running loop picks up the latest value
+      datasetSwitchInProgress = true;
+      try {
+        while (settings.getSettings().dataset !== currentDataset) {
+          const nextDataset = settings.getSettings().dataset;
+          console.log(`[PhyloExplorer] Switching dataset from ${currentDataset} to ${nextDataset}`);
+          currentDataset = nextDataset;
+          await initializeVisualization();
+        }
+      } finally {
+        datasetSwitchInProgress = false;
+      }
+    }
+
     async function getDataDirectory() {
       return `./data/${currentDataset}`;
     }
@@ -1185,10 +1265,18 @@
 
         currentViz.render();
 
-        // Initialize centralized settings management
-        const settings = new VisualizationSettings();
-        currentSettingsUI = new SettingsUI(settings, currentViz);
-        await currentSettingsUI.initialize();
+        // State tied to the previous dataset is no longer valid.
+        datasetContext = null;
+        currentTreeManipulation = null;
+
+        // Initialize centralized settings management once; later datasets reuse it.
+        if (!currentSettingsUI) {
+          currentSettingsUI = new SettingsUI(settings, currentViz);
+          await currentSettingsUI.initialize();
+          settings.onChange(applyApplicationSettings);
+        } else {
+          currentSettingsUI.setVisualization(currentViz);
+        }
 
         // Diagnostic: Report on asset loading
         console.log('\n=== PhyloExplorer Asset Loading Diagnostic ===');
@@ -1243,46 +1331,10 @@
         // including topology repulsion A/B/X sliders, charge, link, appearance, and silhouette controls.
         // All settings updates go through SettingsUI -> VisualizationSettings -> onChange callbacks.
 
-        // Initialize settings-dependent visualization features
-        const currentSettings = settings.getSettings();
-
-        // Apply showNodeDates setting at startup (supports both stored node ages and legacy divergence data)
-        if (currentSettings.showNodeDates) {
-          currentViz.setShowNodeDates(true, divergenceData);
-        }
-
-        // Apply nodeDateFontSize setting if showNodeDates is enabled
-        if (currentSettings.showNodeDates) {
-          currentViz.setNodeDateFontSize(currentSettings.nodeDateFontSize);
-        }
-
-        // Apply showAncestralLabels setting at startup (requires hypothesisData and graph)
-        if (currentSettings.showAncestralLabels && hypothesisData && graph) {
-          currentViz.setShowAncestralLabels(true, hypothesisData, graph);
-        }
-
         const resetButton = document.getElementById('reset-button');
         if (resetButton) {
           resetButton.addEventListener('click', () => {
             currentViz.resetView();
-          });
-        }
-
-        // Show node dates toggle (requires divergenceData)
-        const showNodeDatesToggle = document.getElementById('show-node-dates-toggle');
-        if (showNodeDatesToggle) {
-          showNodeDatesToggle.addEventListener('input', (e) => {
-            settings.setSetting('showNodeDates', e.target.checked);
-            currentViz.setShowNodeDates(e.target.checked, divergenceData);
-          });
-        }
-
-        // Show ancestral labels toggle (requires hypothesisData and graph)
-        const showAncestralLabelsToggle = document.getElementById('show-ancestral-labels-toggle');
-        if (showAncestralLabelsToggle) {
-          showAncestralLabelsToggle.addEventListener('input', (e) => {
-            settings.setSetting('showAncestralLabels', e.target.checked);
-            currentViz.setShowAncestralLabels(e.target.checked, hypothesisData, graph);
           });
         }
 
@@ -1294,7 +1346,8 @@
           currentVisibilityState,
           currentViz,
           nodes,
-          links
+          links,
+          { maxSampledSpecies: settings.getSettings().maxSampledSpecies }
         );
 
         // Wire node click handler
@@ -1316,17 +1369,6 @@
           });
         }
 
-        // Wire "Max Sampled Species" slider
-        const maxSampledSpeciesSlider = document.getElementById('max-sampled-species');
-        const maxSpeciesValue = document.getElementById('max-species-value');
-        if (maxSampledSpeciesSlider && maxSpeciesValue) {
-          maxSampledSpeciesSlider.addEventListener('input', (e) => {
-            const value = parseInt(e.target.value, 10);
-            maxSpeciesValue.textContent = value;
-            currentTreeManipulation.setMaxSampledSpecies(value);
-          });
-        }
-
         // Handle window resize
         window.addEventListener('resize', () => {
           const container = document.getElementById('graph');
@@ -1335,19 +1377,18 @@
           }
         });
 
-        // Handle dataset selector changes
-        const datasetSelector = document.getElementById('dataset-selector');
-        if (datasetSelector) {
-          datasetSelector.addEventListener('change', async (e) => {
-            const newDataset = e.target.value;
-            if (newDataset !== currentDataset) {
-              console.log(`[PhyloExplorer] Switching dataset from ${currentDataset} to ${newDataset}`);
-              currentDataset = newDataset;
-              // Reinitialize with new dataset
-              await initializeVisualization();
-            }
-          });
-        }
+        // Settings that depend on the loaded dataset and tree manipulation.
+        // The dataset selector, max-sampled-species slider, and date/ancestral-label
+        // toggles are wired by SettingsUI and applied through applyApplicationSettings().
+        // A fresh visualization starts with node dates and ancestral labels hidden.
+        datasetContext = { divergenceData, hypothesisData, graph };
+        appliedAppSettings = {
+          showNodeDates: false,
+          showAncestralLabels: false,
+          maxSampledSpecies: settings.getSettings().maxSampledSpecies
+        };
+        // Also switches dataset if the loaded settings select a different one.
+        applyApplicationSettings(settings.getSettings());
 
       } catch (error) {
         console.error('[PhyloExplorer] Error loading visualization:', error);

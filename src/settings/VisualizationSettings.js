@@ -10,7 +10,20 @@
  * All visualization controls and updates flow through this module.
  */
 
+// Must match the <option> values of #dataset-selector in index.html.
+const DATASET_IDS = ['mammals', 'animals', 'mammals-600', 'tetrapods'];
+
+// Formats with the conventional fixed precision unless that would lose information.
+function formatNumber(value, digits) {
+  const fixed = value.toFixed(digits);
+  return Number(fixed) === value ? fixed : String(value);
+}
+
 class VisualizationSettings {
+  static get DATASET_IDS() {
+    return [...DATASET_IDS];
+  }
+
   constructor() {
     this.settings = this.getDefaults();
     this.listeners = [];
@@ -23,6 +36,10 @@ class VisualizationSettings {
   static getDefaults() {
     return {
       version: '1.0',
+
+      // Dataset and tree manipulation
+      dataset: 'mammals',             // Dataset loaded by default (see DATASET_IDS)
+      maxSampledSpecies: 10,          // Maximum leaves in a fresh Alt-click sample (1-50)
 
       // Force parameters
       charge: 300,                    // Repulsion strength for non-leaf nodes (0-1500)
@@ -37,14 +54,14 @@ class VisualizationSettings {
       // Appearance parameters
       backgroundWhiteLevel: 0,        // Background color blend (0=#e8f4f8 light blue, 100=#ffffff white)
       edgeThickness: 1.5,             // Stroke width of edges (0.5-11)
-      nodeCircleSize: 1.0,            // Radius multiplier for node circles (0.5-2)
-      graphFontSize: 11,              // Font size for node labels (8-20px)
-      sidebarFontSize: 14,            // Font size for sidebar controls (10-20px)
+      nodeCircleSize: 1.0,            // Radius multiplier for node circles (0.5-8)
+      graphFontSize: 11,              // Font size for node labels (8-38px)
+      sidebarFontSize: 14,            // Font size for sidebar controls (10-24px)
 
       // Silhouette parameters
       silhouetteSizePercent: 100,     // Size relative to default (30-300%)
-      silhouetteXOffset: 0,           // Horizontal offset in pixels (-50 to 50)
-      silhouetteYOffset: 0,           // Vertical offset in pixels (-50 to 50)
+      silhouetteXOffset: 0,           // Horizontal offset in pixels (-100 to 100)
+      silhouetteYOffset: 0,           // Vertical offset in pixels (-100 to 100)
       silhouetteGrayscale: 50,        // Grayscale amount (0-100, 0=black, 100=white)
       silhouetteOpacity: 1.0,         // Opacity (0-1)
 
@@ -72,6 +89,10 @@ class VisualizationSettings {
       lockRootPosition: true,
       windDirection: 0,
       windStrength: 0,
+
+      // Simulation damping (D3 defaults used by this app)
+      velocityDecay: 0.4,             // Friction applied to node velocity each tick (0.05-0.9)
+      alphaDecay: 0.02,               // Simulation cooling rate per tick (0.001-0.1)
 
       // Hover highlight settings
       hoverHighlightSize: 15,         // Radius of hover highlight circle (0-200px)
@@ -180,7 +201,22 @@ class VisualizationSettings {
         throw new Error(`${key} must be a number, got ${value}`);
       }
     } else if (spec.type === 'boolean') {
-      validated = Boolean(value);
+      if (typeof value === 'string') {
+        const normalized = value.trim().toLowerCase();
+        if (normalized !== 'true' && normalized !== 'false') {
+          throw new Error(`${key} must be true or false, got ${value}`);
+        }
+        validated = normalized === 'true';
+      } else {
+        validated = Boolean(value);
+      }
+    } else if (spec.type === 'string') {
+      if (typeof value !== 'string') {
+        throw new Error(`${key} must be a string, got ${value}`);
+      }
+      if (spec.enum && !spec.enum.includes(value)) {
+        throw new Error(`${key} must be one of ${spec.enum.join(', ')}, got ${value}`);
+      }
     } else if (spec.type === 'integer') {
       validated = Math.round(Number(value));
       if (isNaN(validated)) {
@@ -209,6 +245,23 @@ class VisualizationSettings {
         type: 'string',
         description: 'Settings format version',
         category: 'metadata',
+      },
+
+      // Dataset and tree manipulation
+      dataset: {
+        type: 'string',
+        enum: DATASET_IDS,
+        default: 'mammals',
+        description: 'Dataset loaded by default',
+        category: 'dataset',
+      },
+      maxSampledSpecies: {
+        type: 'integer',
+        min: 1,
+        max: 50,
+        default: 10,
+        description: 'Maximum number of leaves in a fresh Alt-click sample',
+        category: 'treeManipulation',
       },
 
       // Forces
@@ -297,7 +350,7 @@ class VisualizationSettings {
       nodeCircleSize: {
         type: 'number',
         min: 0.5,
-        max: 2,
+        max: 8,
         default: 1.0,
         description: 'Radius multiplier for node background circles',
         category: 'appearance',
@@ -305,7 +358,7 @@ class VisualizationSettings {
       graphFontSize: {
         type: 'integer',
         min: 8,
-        max: 20,
+        max: 38,
         default: 11,
         description: 'Font size for node labels in pixels',
         category: 'appearance',
@@ -313,7 +366,7 @@ class VisualizationSettings {
       sidebarFontSize: {
         type: 'integer',
         min: 10,
-        max: 20,
+        max: 24,
         default: 14,
         description: 'Font size for sidebar controls in pixels',
         category: 'appearance',
@@ -330,16 +383,16 @@ class VisualizationSettings {
       },
       silhouetteXOffset: {
         type: 'integer',
-        min: -50,
-        max: 50,
+        min: -100,
+        max: 100,
         default: 0,
         description: 'Horizontal offset for silhouettes (pixels)',
         category: 'silhouettes',
       },
       silhouetteYOffset: {
         type: 'integer',
-        min: -50,
-        max: 50,
+        min: -100,
+        max: 100,
         default: 0,
         description: 'Vertical offset for silhouettes (pixels)',
         category: 'silhouettes',
@@ -430,6 +483,24 @@ class VisualizationSettings {
         max: 2000,
         default: 0,
         description: 'Directional wind force (UI 0-2000, internal 0-1.0 via /2000 conversion; 0 disables wind). Wind applies constant acceleration independent of simulation cooling.',
+        category: 'forces',
+      },
+
+      // Simulation damping
+      velocityDecay: {
+        type: 'number',
+        min: 0.05,
+        max: 0.9,
+        default: 0.4,
+        description: 'Friction: fraction of node velocity removed each tick. Higher values stop motion sooner; lower values preserve momentum.',
+        category: 'forces',
+      },
+      alphaDecay: {
+        type: 'number',
+        min: 0.001,
+        max: 0.1,
+        default: 0.02,
+        description: 'Cooling: how fast the simulation energy (alpha) decays. Higher values settle sooner; lower values keep the layout active longer.',
         category: 'forces',
       },
 
@@ -584,41 +655,50 @@ class VisualizationSettings {
       `# Version: ${this.settings.version}`,
       '# Generated at: ' + new Date().toISOString(),
       '',
+      '# DATASET',
+      `dataset: ${this.settings.dataset}  # Dataset loaded by default (${DATASET_IDS.join(', ')})`,
+      '',
+      '# TREE MANIPULATION',
+      `maxSampledSpecies: ${this.settings.maxSampledSpecies}  # Maximum leaves in a fresh Alt-click sample (1-50)`,
+      '',
       '# FORCES',
       `charge: ${this.settings.charge}  # Repulsion strength for non-leaf nodes (0-1500)`,
       `leafCharge: ${this.settings.leafCharge}  # Repulsion strength for leaf/terminal nodes (0-1500)`,
-      `linkStrength: ${this.settings.linkStrength.toFixed(2)}  # Link stiffness (0-1)`,
+      `linkStrength: ${formatNumber(this.settings.linkStrength, 2)}  # Link stiffness (0-1)`,
       `rootLinkStrength: ${this.settings.rootLinkStrength}  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)`,
-      `ageLinkStrength: ${this.settings.ageLinkStrength.toFixed(2)}  # Age-based modifier (UI 0-500, per Ma)`,
+      `ageLinkStrength: ${formatNumber(this.settings.ageLinkStrength, 2)}  # Age-based modifier (UI 0-500, per Ma)`,
       `topologyRepulsionX: ${this.settings.topologyRepulsionX}  # Master control; 0 disables (UI 0-100, internal 0-10)`,
       `topologyRepulsionA: ${this.settings.topologyRepulsionA}  # Baseline offset (UI 0-100, internal 0-10)`,
       `topologyRepulsionB: ${this.settings.topologyRepulsionB}  # Force scale (UI 0-100, internal 0-10)`,
       `lockRootPosition: ${this.settings.lockRootPosition}  # Keep root fixed in place`,
       `windDirection: ${this.settings.windDirection}  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)`,
       `windStrength: ${this.settings.windStrength}  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)`,
+      `velocityDecay: ${formatNumber(this.settings.velocityDecay, 2)}  # Friction on node velocity (0.05-0.9)`,
+      `alphaDecay: ${formatNumber(this.settings.alphaDecay, 3)}  # Simulation cooling rate (0.001-0.1)`,
       '',
       '# APPEARANCE',
       `backgroundWhiteLevel: ${this.settings.backgroundWhiteLevel}  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)`,
-      `edgeThickness: ${this.settings.edgeThickness.toFixed(2)}  # Stroke width (0.5-11)`,
-      `nodeCircleSize: ${this.settings.nodeCircleSize.toFixed(2)}  # Node circle radius (0.5-2)`,
-      `graphFontSize: ${this.settings.graphFontSize}  # Node label font (8-20px)`,
-      `sidebarFontSize: ${this.settings.sidebarFontSize}  # Sidebar font (10-20px)`,
-      `rootProximityWeighting: ${this.settings.rootProximityWeighting.toFixed(2)}  # Edge thickness near root (0-1)`,
+      `edgeThickness: ${formatNumber(this.settings.edgeThickness, 2)}  # Stroke width (0.5-11)`,
+      `nodeCircleSize: ${formatNumber(this.settings.nodeCircleSize, 2)}  # Node circle radius (0.5-8)`,
+      `graphFontSize: ${this.settings.graphFontSize}  # Node label font (8-38px)`,
+      `sidebarFontSize: ${this.settings.sidebarFontSize}  # Sidebar font (10-24px)`,
+      `rootProximityWeighting: ${formatNumber(this.settings.rootProximityWeighting, 2)}  # Edge thickness near root (0-1)`,
+      `edgeElasticityC: ${formatNumber(this.settings.edgeElasticityC, 2)}  # Root elasticity adjustment (0-10)`,
       '',
       '# SILHOUETTES',
       `silhouetteSizePercent: ${this.settings.silhouetteSizePercent}  # Size relative to default (30-300%)`,
       `silhouetteXOffset: ${this.settings.silhouetteXOffset}  # Horizontal offset (px)`,
       `silhouetteYOffset: ${this.settings.silhouetteYOffset}  # Vertical offset (px)`,
       `silhouetteGrayscale: ${this.settings.silhouetteGrayscale}  # Grayscale (0-100, 0=black, 100=white)`,
-      `silhouetteOpacity: ${this.settings.silhouetteOpacity.toFixed(2)}  # Opacity (0-1)`,
+      `silhouetteOpacity: ${formatNumber(this.settings.silhouetteOpacity, 2)}  # Opacity (0-1)`,
       '',
       '# GRID',
       `showGrid: ${this.settings.showGrid}  # Display the background grid`,
       `gridSpacing: ${this.settings.gridSpacing}  # Distance between minor lines (10-200 px)`,
-      `gridMinorLineWidth: ${this.settings.gridMinorLineWidth.toFixed(2)}  # Minor line width (0.25-5 px)`,
-      `gridMediumLineWidth: ${this.settings.gridMediumLineWidth.toFixed(2)}  # Medium line width (0.25-5 px)`,
-      `gridMajorLineWidth: ${this.settings.gridMajorLineWidth.toFixed(2)}  # Major line width (0.25-5 px)`,
-      `gridOpacity: ${this.settings.gridOpacity.toFixed(2)}  # Grid opacity (0-1)`,
+      `gridMinorLineWidth: ${formatNumber(this.settings.gridMinorLineWidth, 2)}  # Minor line width (0.25-5 px)`,
+      `gridMediumLineWidth: ${formatNumber(this.settings.gridMediumLineWidth, 2)}  # Medium line width (0.25-5 px)`,
+      `gridMajorLineWidth: ${formatNumber(this.settings.gridMajorLineWidth, 2)}  # Major line width (0.25-5 px)`,
+      `gridOpacity: ${formatNumber(this.settings.gridOpacity, 2)}  # Grid opacity (0-1)`,
       '',
       '# HOVER HIGHLIGHT',
       `hoverHighlightSize: ${this.settings.hoverHighlightSize}  # Highlight circle radius (0-200px)`,
@@ -628,13 +708,13 @@ class VisualizationSettings {
       '',
       '# TEXT BACKGROUNDS',
       `textBackgroundYOffset: ${this.settings.textBackgroundYOffset}  # Vertical offset of text backgrounds (px)`,
-      `textBackgroundHeight: ${this.settings.textBackgroundHeight.toFixed(1)}  # Height multiplier (0.5-2.0)`,
+      `textBackgroundHeight: ${formatNumber(this.settings.textBackgroundHeight, 1)}  # Height multiplier (0.5-2.0)`,
       '',
       '# SILHOUETTE SHADOWS',
       `silhouetteShadowEnabled: ${this.settings.silhouetteShadowEnabled}  # Display shadow effects`,
       `silhouetteShadowXOffset: ${this.settings.silhouetteShadowXOffset}  # Horizontal offset (px)`,
       `silhouetteShadowYOffset: ${this.settings.silhouetteShadowYOffset}  # Vertical offset (px)`,
-      `silhouetteShadowOpacity: ${this.settings.silhouetteShadowOpacity.toFixed(2)}  # Shadow opacity (0-1)`,
+      `silhouetteShadowOpacity: ${formatNumber(this.settings.silhouetteShadowOpacity, 2)}  # Shadow opacity (0-1)`,
       '',
       '# TOGGLES',
       `showNodeDates: ${this.settings.showNodeDates}  # Show divergence estimates`,
@@ -687,13 +767,16 @@ class VisualizationSettings {
       const spec = schema[key];
       try {
         if (spec.type === 'boolean') {
-          settings[key] = value.toLowerCase() === 'true';
+          // Anything other than true/false is left as text so validation rejects it.
+          const normalized = value.toLowerCase();
+          settings[key] = normalized === 'true' ? true : normalized === 'false' ? false : value;
         } else if (spec.type === 'integer') {
           settings[key] = Math.round(parseFloat(value));
         } else if (spec.type === 'number') {
           settings[key] = parseFloat(value);
         } else {
-          settings[key] = value;
+          // Strings may optionally be quoted.
+          settings[key] = value.replace(/^(['"])(.*)\1$/, '$2');
         }
       } catch (e) {
         throw new Error(`Failed to parse ${key}: ${value}`);
@@ -727,6 +810,37 @@ class VisualizationSettings {
 
     // Update settings
     this.updateSettings(validated);
+  }
+
+  /**
+   * Resolve a complete settings object from an imported YAML file without
+   * changing the current settings.
+   * Fields missing from the file take their values from baseSettings (the
+   * application defaults), so older files remain importable. Every present
+   * value is validated; invalid values are reported rather than replaced.
+   * @param {string} yamlString
+   * @param {Object} baseSettings - Values used for fields absent from the file
+   * @returns {{settings: Object, errors: string[]}}
+   */
+  prepareImport(yamlString, baseSettings = this.getDefaults()) {
+    const parsed = VisualizationSettings.parseYAML(yamlString);
+
+    // Same leafCharge backward compatibility as loadFromYAML.
+    if (!('leafCharge' in parsed) && 'charge' in parsed) {
+      parsed.leafCharge = parsed.charge;
+    }
+
+    const settings = { ...baseSettings };
+    const errors = [];
+    for (const [key, value] of Object.entries(parsed)) {
+      try {
+        settings[key] = this.validateSetting(key, value);
+      } catch (error) {
+        errors.push(`${key}: ${error.message}`);
+      }
+    }
+
+    return { settings, errors };
   }
 
   /**

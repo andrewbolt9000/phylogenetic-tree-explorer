@@ -15,6 +15,10 @@ class SettingsUI {
     this.settings = settings;  // VisualizationSettings instance
     this.viz = visualization;  // ForceDirectedVisualization instance
 
+    // Settings in effect after loading config/default-settings.yaml.
+    // Imported files fall back to these for fields they do not contain.
+    this.applicationDefaults = VisualizationSettings.getDefaults();
+
     // Track which UI elements are currently being updated to avoid feedback loops
     this.updatingUI = false;
   }
@@ -22,11 +26,16 @@ class SettingsUI {
   /**
    * Control mappings defining how HTML elements connect to settings.
    * Each entry specifies: element ID → { setting name, transform, display element ID, suffix }
+   * uiScale: slider value = setting value × uiScale (transform must divide by the same factor).
    * This is the source of truth for control wiring and display updates.
    * @static
    */
   static getControlMap() {
     return {
+      // Dataset and tree manipulation controls (applied by index.html via settings.onChange)
+      'dataset-selector': { setting: 'dataset', transform: v => v },
+      'max-sampled-species': { setting: 'maxSampledSpecies', transform: v => parseInt(v), display: 'max-species-value' },
+
       // Force/physics controls
       'charge-slider': { setting: 'charge', transform: v => parseInt(v), display: 'charge-value' },
       'leafCharge-slider': { setting: 'leafCharge', transform: v => parseInt(v), display: 'leafCharge-value' },
@@ -45,6 +54,10 @@ class SettingsUI {
       'wind-direction-slider': { setting: 'windDirection', transform: v => parseInt(v), display: 'wind-direction-value', suffix: '°' },
       'wind-strength-slider': { setting: 'windStrength', transform: v => parseInt(v), display: 'wind-strength-value' },
 
+      // Simulation damping controls
+      'velocity-decay-slider': { setting: 'velocityDecay', transform: v => parseFloat(v), display: 'velocity-decay-value' },
+      'alpha-decay-slider': { setting: 'alphaDecay', transform: v => parseFloat(v), display: 'alpha-decay-value' },
+
       // Appearance controls
       'background-white-level-slider': { setting: 'backgroundWhiteLevel', transform: v => parseInt(v), display: 'background-white-level-value', suffix: '%' },
       'node-circle-slider': { setting: 'nodeCircleSize', transform: v => parseFloat(v), display: 'node-circle-value' },
@@ -56,7 +69,7 @@ class SettingsUI {
       'silhouette-x-offset-slider': { setting: 'silhouetteXOffset', transform: v => parseInt(v), display: 'silhouette-x-offset-value', suffix: 'px' },
       'silhouette-y-offset-slider': { setting: 'silhouetteYOffset', transform: v => parseInt(v), display: 'silhouette-y-offset-value', suffix: 'px' },
       'silhouette-grayscale-slider': { setting: 'silhouetteGrayscale', transform: v => parseInt(v), display: 'silhouette-grayscale-value', suffix: '%' },
-      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-opacity-value', suffix: '%' },
+      'silhouette-opacity-slider': { setting: 'silhouetteOpacity', transform: v => parseFloat(v) / 100, uiScale: 100, display: 'silhouette-opacity-value', suffix: '%' },
 
       // Hover highlight controls
       'hover-highlight-size-slider': { setting: 'hoverHighlightSize', transform: v => parseInt(v), display: 'hover-highlight-size-value', suffix: 'px' },
@@ -72,7 +85,7 @@ class SettingsUI {
       'silhouette-shadow-enabled-toggle': { setting: 'silhouetteShadowEnabled', transform: v => v.checked, isToggle: true },
       'silhouette-shadow-x-offset-slider': { setting: 'silhouetteShadowXOffset', transform: v => parseInt(v), display: 'silhouette-shadow-x-offset-value', suffix: 'px' },
       'silhouette-shadow-y-offset-slider': { setting: 'silhouetteShadowYOffset', transform: v => parseInt(v), display: 'silhouette-shadow-y-offset-value', suffix: 'px' },
-      'silhouette-shadow-opacity-slider': { setting: 'silhouetteShadowOpacity', transform: v => parseFloat(v) / 100, display: 'silhouette-shadow-opacity-value', suffix: '%' },
+      'silhouette-shadow-opacity-slider': { setting: 'silhouetteShadowOpacity', transform: v => parseFloat(v) / 100, uiScale: 100, display: 'silhouette-shadow-opacity-value', suffix: '%' },
 
       // Grid controls
       'show-grid-toggle': { setting: 'showGrid', transform: v => v.checked, isToggle: true },
@@ -96,6 +109,7 @@ class SettingsUI {
   async initialize() {
     // Load default settings from repository config
     await this._loadDefaultSettings();
+    this.applicationDefaults = this.settings.getSettings();
 
     // Wire all existing controls to the settings system
     this._wireControls();
@@ -125,7 +139,7 @@ class SettingsUI {
    */
   async _loadDefaultSettings() {
     try {
-      const response = await fetch('./config/default-settings.yaml');
+      const response = await fetch('./config/default-settings.yaml', { cache: 'no-cache' });
       if (!response.ok) {
         console.warn('Could not load default settings: HTTP', response.status);
         // Use in-code defaults
@@ -165,7 +179,7 @@ class SettingsUI {
 
       wiredCount++;
 
-      // Wire control to settings
+      // Wire control to settings (<select> also fires 'input' on change)
       element.addEventListener('input', (e) => {
         try {
           this.updatingUI = true;
@@ -221,9 +235,9 @@ class SettingsUI {
         // Slider control: update value and display label
         let sliderValue = settingValue;
 
-        // For silhouetteOpacity, convert from 0-1 to 0-100 for slider display
-        if (config.setting === 'silhouetteOpacity') {
-          sliderValue = Math.round(settingValue * 100);
+        // Opacity settings are stored as 0-1 but shown on 0-100 sliders
+        if (config.uiScale) {
+          sliderValue = Math.round(settingValue * config.uiScale);
         }
 
         element.value = sliderValue;
@@ -244,7 +258,34 @@ class SettingsUI {
   }
 
   /**
-   * Apply settings to visualization
+   * Point the settings at a new visualization (e.g. after a dataset switch)
+   * and apply the current settings to it.
+   */
+  setVisualization(visualization) {
+    this.viz = visualization;
+    this._applySettingsToVisualization(this.settings.getSettings());
+  }
+
+  /**
+   * Import settings from YAML text.
+   * Missing fields use the application defaults; if any present value is
+   * invalid, nothing is changed.
+   * @param {string} yamlContent
+   * @returns {{success: boolean, errors: string[]}}
+   */
+  importYAML(yamlContent) {
+    const { settings, errors } = this.settings.prepareImport(yamlContent, this.applicationDefaults);
+    if (errors.length > 0) {
+      return { success: false, errors };
+    }
+    this.settings.updateSettings(settings);
+    return { success: true, errors: [] };
+  }
+
+  /**
+   * Apply settings to visualization.
+   * dataset, maxSampledSpecies, showNodeDates and showAncestralLabels need
+   * application state (loaded data, TreeManipulation) and are applied by index.html.
    * @private
    */
   _applySettingsToVisualization(settings) {
@@ -274,6 +315,12 @@ class SettingsUI {
     }
     if (settings.windStrength !== undefined) {
       this.viz.setWindStrength(settings.windStrength);
+    }
+    if (settings.velocityDecay !== undefined) {
+      this.viz.setVelocityDecay(settings.velocityDecay);
+    }
+    if (settings.alphaDecay !== undefined) {
+      this.viz.setAlphaDecay(settings.alphaDecay);
     }
 
     // Apply topology repulsion parameters (A, B, X)
@@ -477,27 +524,14 @@ class SettingsUI {
       const reader = new FileReader();
       reader.onload = (event) => {
         try {
-          const yamlContent = event.target.result;
-          const importedSettings = this.settings.parseYAML(yamlContent);
+          const { success, errors } = this.importYAML(event.target.result);
 
-          // Validate all settings before applying any
-          const errors = [];
-          for (const [key, value] of Object.entries(importedSettings)) {
-            try {
-              this.settings.validateSetting(key, value);
-            } catch (error) {
-              errors.push(`${key}: ${error.message}`);
-            }
-          }
-
-          if (errors.length > 0) {
+          if (!success) {
             alert('Settings import cancelled due to validation errors:\n' + errors.join('\n'));
             console.log('[SettingsUI] Import validation failed; no settings changed');
             return;
           }
 
-          // All settings validated; apply atomically
-          this.settings.updateSettings(importedSettings);
           alert('Settings imported successfully!');
           console.log('[SettingsUI] Settings imported from file');
         } catch (error) {
