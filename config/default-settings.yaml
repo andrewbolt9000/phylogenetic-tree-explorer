@@ -1,6 +1,6 @@
 # PhyloExplorer Visualization Settings
 # Version: 1.0
-# Generated at: 2026-11-16T17:56:26.365Z
+# Generated at: 2026-11-17T18:01:09.068Z
 
 # DATASET
 dataset: tetrapods  # Dataset loaded by default (mammals, animals, mammals-600, tetrapods)
@@ -9,10 +9,10 @@ dataset: tetrapods  # Dataset loaded by default (mammals, animals, mammals-600, 
 maxSampledSpecies: 3  # Maximum leaves in a fresh Alt-click sample (1-50)
 
 # FORCES
-charge: 210  # Repulsion strength for non-leaf nodes (0-1500)
-leafCharge: 400  # Repulsion strength for leaf/terminal nodes (0-1500)
-linkStrength: 0.15  # Link stiffness (0-1)
-rootLinkStrength: 931  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
+charge: 450  # Repulsion strength for non-leaf nodes (0-1500)
+leafCharge: 590  # Repulsion strength for leaf/terminal nodes (0-1500)
+linkStrength: 0.10  # Link stiffness (0-1)
+rootLinkStrength: 258  # Root-proximity modifier (UI 0-2000, internal 0-20 via /100)
 ageLinkStrength: 0.00  # Age-based modifier (UI 0-500, per Ma)
 topologyRepulsionX: 0  # Master control; 0 disables (UI 0-100, internal 0-10)
 topologyRepulsionA: 10  # Baseline offset (UI 0-100, internal 0-10)
@@ -20,8 +20,8 @@ topologyRepulsionB: 10  # Force scale (UI 0-100, internal 0-10)
 lockRootPosition: true  # Keep root fixed in place
 windDirection: 0  # Wind direction (0-360°, 0=right, 90=down, 180=left, 270=up)
 windStrength: 38  # Wind force (UI 0-2000, internal 0-1.0 via /2000; 0 disables)
-velocityDecay: 0.40  # Friction on node velocity (0.05-0.9)
-alphaDecay: 0.020  # Simulation cooling rate (0.001-0.1)
+velocityDecay: 0.15  # Friction on node velocity (0.05-0.9)
+alphaDecay: 0.053  # Simulation cooling rate (0.001-0.1)
 
 # APPEARANCE
 backgroundWhiteLevel: 100  # Background color blend (0=light blue #e8f4f8, 100=white #ffffff)

@@ -834,9 +834,10 @@ class ForceDirectedVisualization {
           .attr('class', 'node-taxonomy-label')
           .attr('data-node-id', d => d.id)
           .attr('font-family', 'Jost, sans-serif')
+          .attr('font-style', 'italic')
           .attr('text-anchor', 'middle')
-          .attr('dy', '0.5em')
-          .attr('fill', '#767676')
+          .attr('dy', 'calc(0.5em - 4px)')
+          .attr('fill', '#000000')
           .attr('font-size', `${this.nodeDateFontSize}px`)
           .attr('pointer-events', 'none'),
         update => update,
